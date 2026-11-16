@@ -1,0 +1,198 @@
+[
+  {
+    "name": "real ROS2 state discovery",
+    "passed": true
+  },
+  {
+    "name": "stamped tracking retains groundstation schema",
+    "passed": true
+  },
+  {
+    "name": "ArUco matched source stamps are valid",
+    "passed": true
+  },
+  {
+    "name": "transient-local landing schema received",
+    "passed": true
+  },
+  {
+    "name": "mismatched marker metrics rejected",
+    "passed": true
+  },
+  {
+    "name": "republished old marker rejected",
+    "passed": true
+  },
+  {
+    "name": "wrong marker frame rejected",
+    "passed": true
+  },
+  {
+    "name": "old latched landing row rejected",
+    "passed": true
+  },
+  {
+    "name": "old stamped tracking omitted",
+    "passed": true
+  },
+  {
+    "name": "old FC source omitted",
+    "passed": true
+  },
+  {
+    "name": "FC recovers with fresh source",
+    "passed": true
+  },
+  {
+    "name": "DDS session has publisher GID",
+    "passed": true
+  },
+  {
+    "name": "alignment matches current publisher",
+    "passed": true
+  },
+  {
+    "name": "native mission validator used",
+    "passed": true
+  },
+  {
+    "name": "90 degree LIO to FC transform",
+    "passed": true
+  },
+  {
+    "name": "map mission retains automatic workflow",
+    "passed": true
+  },
+  {
+    "name": "nonfinite map input rejected",
+    "passed": true
+  },
+  {
+    "name": "old map protocol rejected",
+    "passed": true
+  },
+  {
+    "name": "multiple LIO publishers invalidate session",
+    "passed": true
+  },
+  {
+    "name": "session recovers to unique publisher",
+    "passed": true
+  },
+  {
+    "name": "publisher restart changes map session",
+    "passed": true
+  },
+  {
+    "name": "old selected map session refused",
+    "passed": true
+  },
+  {
+    "name": "ROS2 control publisher detected",
+    "passed": true
+  },
+  {
+    "name": "start refuses competing controller",
+    "passed": true
+  },
+  {
+    "name": "controller removal visible",
+    "passed": true
+  },
+  {
+    "name": "start refuses active OFFBOARD",
+    "passed": true
+  },
+  {
+    "name": "waypoint native launch loads",
+    "passed": true
+  },
+  {
+    "name": "aruco native launch loads",
+    "passed": true
+  },
+  {
+    "name": "tracking native launch loads",
+    "passed": true
+  },
+  {
+    "name": "real native waypoint launch owned",
+    "passed": true
+  },
+  {
+    "name": "mission snapshot separate from source",
+    "passed": true
+  },
+  {
+    "name": "idle native task sends no commands",
+    "passed": true
+  },
+  {
+    "name": "same task start is idempotent",
+    "passed": true
+  },
+  {
+    "name": "different task requires owned task stop",
+    "passed": true
+  },
+  {
+    "name": "stop waits for pilot takeover",
+    "passed": true
+  },
+  {
+    "name": "stop observes stable takeover interval",
+    "passed": true
+  },
+  {
+    "name": "owned group exits after takeover",
+    "passed": true
+  },
+  {
+    "name": "stop completion reports stopped",
+    "passed": true
+  },
+  {
+    "name": "map selection prepares actual native task",
+    "passed": true
+  },
+  {
+    "name": "executed map snapshot has transformed ENU goal",
+    "passed": true
+  },
+  {
+    "name": "mapped task snapshots alignment evidence",
+    "passed": true
+  },
+  {
+    "name": "mapped idle task stops through owned worker",
+    "passed": true
+  },
+  {
+    "name": "manager never calls control services",
+    "passed": true
+  },
+  {
+    "name": "malformed JSON array refused",
+    "passed": true
+  },
+  {
+    "name": "malformed JSON NaN refused",
+    "passed": true
+  },
+  {
+    "name": "malformed JSON overflow refused",
+    "passed": true
+  },
+  {
+    "name": "finite JSON preserved",
+    "passed": true
+  },
+  {
+    "name": "watch owns native identity helper",
+    "passed": true
+  },
+  {
+    "name": "parent death removes identity helper",
+    "passed": true
+  }
+]

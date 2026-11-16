@@ -25,3 +25,7 @@ EGO机载代码提交c33f78b；机载临时构建/测试/日志目录清理，�
 2026-11-16：再次断电后恢复，.224 根分区/mmcblk1p2可写、NoMachine active，GitHub HEAD仍374fc55。root读取orangepi Git触发ownership保护，改为所属用户执行，不改safe.directory。继续航点原生迁移，参考源码及RC/任务流程已检查。
 
 2026-11-16：断电恢复后继续完成waypoint_mission/waypoint_photo原生ROS2迁移。最终93/93联合检查、6/6无响应服务/取消检查通过，launch参数解析通过；原有任务YAML及RC门保留。首轮DDS基线等待、次轮反例fixture问题及首次Humble API编译错误均保存。机载代码6357385；不接真实飞控控制，不切生产。剩余任务管理器/Qt地面站、录制、位姿转发、物理雷达和整链地面验证继续待办。
+
+2026-11-16：继续地面站任务入口适配。只读核对.235 gcs_task_manager.py摘要0612ca8f与电脑参考一致；电脑Qt附带管理器另有时刻/ArUco配置增强。ROS2以原部署流程为基线，地图会话改DDS发布端GID；原生ArUco metrics尚缺与Pose关联的源时刻，需增加字段后验证，不能直接声称显示有效。
+
+2026-11-16：原生gcs_task_manager后端与只读LIO身份辅助节点完成，机载5859393。保留JSON CLI、进程所属关系、任务快照、地图自动起飞/返航策略及飞手接管后停止；真实ROS2图/原生任务49项通过，图像→ArUco→地面站状态10项通过，四组合成检测指标配对及CLI JSON检查通过。Humble无Python来源GID、非法UUID话题命名和测试图像构造时延均记录并修正。Qt远程启动硬编码Noetic、规划数据/视频/录制仍待适配；整体目标保持进行中。测试记录仅在电脑/GitHub，机载临时目录将清理。

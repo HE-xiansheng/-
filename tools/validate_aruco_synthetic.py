@@ -108,7 +108,10 @@ def main():
                     bool(samples) and all(z < 0 for z in samples) and -1 in ids[start_ids:])
                 if name == 'wrong_resolution':
                     passed = passed and any(m['reason'] == 'resolution_mismatch' for m in metrics[start_metrics:])
-                cases.append({'case': name, 'passed': passed, 'source_stamps_preserved': len(matched),
+                expected={sec*1000000000+nsec for sec,nsec in poses}
+                pairs=[m for m in metrics[start_metrics:] if m.get('pose_stamp_ns') in expected]
+                passed=passed and bool(pairs)
+                cases.append({'case': name, 'passed': passed, 'source_stamps_preserved': len(matched), 'metric_pose_pairs':len(pairs),
                               'valid_depths': positive, 'ids': sorted(set(ids[start_ids:]))})
             result = {'passed': all(c['passed'] for c in cases) and bool(previews),
                       'cases': cases, 'annotated_preview_received': bool(previews),

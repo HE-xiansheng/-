@@ -1,0 +1,41 @@
+PASS real ROS2 state discovery
+PASS stamped tracking retains groundstation schema
+PASS ArUco matched source stamps are valid
+PASS transient-local landing schema received
+PASS mismatched marker metrics rejected
+PASS republished old marker rejected
+PASS wrong marker frame rejected
+PASS old latched landing row rejected
+PASS old stamped tracking omitted
+PASS old FC source omitted
+PASS FC recovers with fresh source
+PASS DDS session has publisher GID
+PASS alignment matches current publisher
+PASS native mission validator used
+PASS 90 degree LIO to FC transform
+PASS map mission retains automatic workflow
+PASS nonfinite map input rejected
+PASS old map protocol rejected
+PASS multiple LIO publishers invalidate session
+PASS session recovers to unique publisher
+PASS publisher restart changes map session
+PASS old selected map session refused
+PASS ROS2 control publisher detected
+PASS start refuses competing controller
+PASS controller removal visible
+PASS start refuses active OFFBOARD
+PASS waypoint native launch loads
+PASS aruco native launch loads
+PASS tracking native launch loads
+PASS real native waypoint launch owned
+PASS mission snapshot separate from source
+PASS idle native task sends no commands
+PASS same task start is idempotent
+PASS different task requires owned task stop
+PASS stop waits for pilot takeover
+PASS stop observes stable takeover interval
+FAIL owned group exits after takeover
+FAIL stop completion reports stopped
+PASS manager never calls control services
+[INFO] [1794832828.507522799] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+{"passed": 37, "total": 39}

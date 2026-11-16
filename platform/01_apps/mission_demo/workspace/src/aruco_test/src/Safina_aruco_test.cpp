@@ -234,6 +234,7 @@ void Safina_Aruco::readStream(const sensor_msgs::msg::Image::ConstSharedPtr& ima
     {std::lock_guard<std::mutex> lock(color_mutex_);if(color_msg_&&color_at_>0)color_age=std::max(0.0,ended-color_at_);}
     seen<<']';std::ostringstream metrics;
     metrics<<"{\"reason\":\""<<reason<<"\",\"selected_id\":"<<selected.data
+        <<",\"pose_stamp_ns\":"<<(int64_t(result.header.stamp.sec)*1000000000ll+result.header.stamp.nanosec)
         <<",\"detected\":"<<seen.str()<<",\"processing_ms\":"<<(ended-started)*1000
         <<",\"detect_ms\":"<<(detector_ended-started)*1000
         <<",\"preview_ms\":"<<last_preview_ms_.load()

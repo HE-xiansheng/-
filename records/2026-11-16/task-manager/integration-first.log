@@ -1,0 +1,40 @@
+Exception in thread Thread-1 (spin):
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 323, in spin
+    self.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 812, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 809, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 309, in _execute_coroutine_step
+    result = coro.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 488, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 407, in _execute_subscription
+    await await_or_execute(sub.callback, msg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 110, in await_or_execute
+    return callback(*args)
+TypeError: RosState.__init__.<locals>.sub.<locals>.receive() missing 1 required positional argument: 'info'
+FAIL real ROS2 state discovery
+FAIL stamped tracking retains groundstation schema
+FAIL ArUco matched source stamps are valid
+FAIL transient-local landing schema received
+PASS mismatched marker metrics rejected
+PASS republished old marker rejected
+PASS wrong marker frame rejected
+PASS old latched landing row rejected
+PASS old stamped tracking omitted
+PASS old FC source omitted
+FAIL FC recovers with fresh source
+PASS DDS session has publisher GID
+{"passed": 7, "total": 12}
+Traceback (most recent call last):
+  File "/tmp/test_task_manager_ros2.py", line 72, in <module>
+    lio,fc=ros.map_alignment();check('alignment matches current publisher',lio['frame']=='camera_init' and fc['frame']=='map')
+  File "/home/orangepi/drone_platform/01_apps/mission_demo/tools/gcs_task_manager.py", line 214, in map_alignment
+    raise RuntimeError('未取得同步的FAST-LIO与飞控位姿，无法转换地图航点')
+RuntimeError: 未取得同步的FAST-LIO与飞控位姿，无法转换地图航点

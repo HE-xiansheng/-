@@ -1,0 +1,6 @@
+[master 5859393] Port ROS2 task management and correlate native perception sessions
+ 5 files changed, 483 insertions(+)
+ create mode 100644 01_apps/mission_demo/tools/gcs_task_manager.py
+ create mode 100644 01_apps/mission_demo/workspace/src/platform_gcs_support/CMakeLists.txt
+ create mode 100644 01_apps/mission_demo/workspace/src/platform_gcs_support/package.xml
+ create mode 100644 01_apps/mission_demo/workspace/src/platform_gcs_support/src/lio_identity.cpp

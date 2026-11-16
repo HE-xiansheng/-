@@ -1,0 +1,89 @@
+{
+  "marker": [
+    {
+      "x": -7.823282767278172e-05,
+      "y": -8.279074815983595e-06,
+      "z": 1.4949437290242127,
+      "stamp": 1794833059.122359,
+      "stamp_ns": 1794833059122359143,
+      "frame": "gimbal_camera_optical_frame"
+    },
+    8177.868239913,
+    1794833059.122359,
+    null
+  ],
+  "detector": [
+    {
+      "reason": "selected_pose_valid",
+      "selected_id": 0,
+      "pose_stamp_ns": 1794833059122359143,
+      "detected": [
+        {
+          "family": "ORIGINAL",
+          "id": 0
+        }
+      ],
+      "processing_ms": 79.2892,
+      "detect_ms": 78.8607,
+      "preview_ms": 0,
+      "processed_fps": 2.86017,
+      "search_mode": "full_scaled",
+      "source_stamp_known": true,
+      "input_age_seconds": 0.354263,
+      "encoding": "mono8",
+      "color_age_ms": -1,
+      "width": 1920,
+      "height": 1080,
+      "original_id": 0,
+      "five_id": 231,
+      "five_size_m": 0.195,
+      "preview_hz": 15,
+      "adaptive_max": [
+        53,
+        23
+      ]
+    },
+    8177.86722463,
+    null,
+    null
+  ],
+  "summary": {
+    "id": -1,
+    "valid": false,
+    "reason": "marker_source_or_pair_invalid",
+    "offset": {},
+    "detector": {
+      "reason": "selected_pose_valid",
+      "selected_id": 0,
+      "pose_stamp_ns": 1794833059122359143,
+      "detected": [
+        {
+          "family": "ORIGINAL",
+          "id": 0
+        }
+      ],
+      "processing_ms": 79.2892,
+      "detect_ms": 78.8607,
+      "preview_ms": 0,
+      "processed_fps": 2.86017,
+      "search_mode": "full_scaled",
+      "source_stamp_known": true,
+      "input_age_seconds": 0.354263,
+      "encoding": "mono8",
+      "color_age_ms": -1,
+      "width": 1920,
+      "height": 1080,
+      "original_id": 0,
+      "five_id": 231,
+      "five_size_m": 0.195,
+      "preview_hz": 15,
+      "adaptive_max": [
+        53,
+        23
+      ]
+    },
+    "landing": {},
+    "landing_fresh": false,
+    "source_stamp_known": true
+  }
+}

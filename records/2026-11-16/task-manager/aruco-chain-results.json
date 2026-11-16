@@ -1,0 +1,42 @@
+[
+  {
+    "name": "native detector discovered",
+    "passed": true
+  },
+  {
+    "name": "real image produces valid groundstation marker",
+    "passed": true
+  },
+  {
+    "name": "metrics exactly pair with native pose",
+    "passed": true
+  },
+  {
+    "name": "old image source never reported valid",
+    "passed": true
+  },
+  {
+    "name": "future image source never reported valid",
+    "passed": true
+  },
+  {
+    "name": "wrong optical frame rejected",
+    "passed": true
+  },
+  {
+    "name": "fresh correctly framed image recovers",
+    "passed": true
+  },
+  {
+    "name": "blank image clears marker validity",
+    "passed": true
+  },
+  {
+    "name": "image/status chain has no flight outputs",
+    "passed": true
+  },
+  {
+    "name": "detector normal exit",
+    "passed": true
+  }
+]

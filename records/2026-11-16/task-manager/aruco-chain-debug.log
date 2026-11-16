@@ -1,0 +1,12 @@
+PASS native detector discovered
+FAIL real image produces valid groundstation marker
+FAIL metrics exactly pair with native pose
+PASS old image source never reported valid
+PASS future image source never reported valid
+PASS wrong optical frame rejected
+FAIL fresh correctly framed image recovers
+PASS blank image clears marker validity
+PASS image/status chain has no flight outputs
+PASS detector normal exit
+[INFO] [1794833069.216541737] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+{"passed": 7, "total": 10}
