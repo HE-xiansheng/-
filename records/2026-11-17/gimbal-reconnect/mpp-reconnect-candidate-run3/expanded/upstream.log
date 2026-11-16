@@ -1,0 +1,46 @@
+2026/11/17 01:50:46 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:50:46 INF configuration loaded from /tmp/mpp-reconnect-check/upstream.yml
+2026/11/17 01:50:46 INF [RTSP] started with listeners on 127.0.0.1:18555 (TCP/RTSP)
+2026/11/17 01:50:47 INF [RTSP] [conn 127.0.0.1:37228] opened
+2026/11/17 01:50:47 INF [RTSP] [session e2f3924e] created by 127.0.0.1:37228
+2026/11/17 01:50:47 INF [path upstream] stream is available and online, 1 track (H264)
+2026/11/17 01:50:47 INF [RTSP] [session e2f3924e] is publishing to path 'upstream'
+2026/11/17 01:50:47 INF [path upstream] RTP packets are too big (1460 > 1188), remuxing them into smaller ones
+2026/11/17 01:50:51 INF [RTSP] [conn 127.0.0.1:37238] opened
+2026/11/17 01:50:51 INF [RTSP] [session 136a41b9] created by 127.0.0.1:37238
+2026/11/17 01:50:51 INF [RTSP] [session 136a41b9] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:51:00 INF [RTSP] [session 136a41b9] destroyed: torn down by 127.0.0.1:37238
+2026/11/17 01:51:00 INF [RTSP] [conn 127.0.0.1:37238] closed: EOF
+2026/11/17 01:51:05 INF [RTSP] [conn 127.0.0.1:58562] opened
+2026/11/17 01:51:05 INF [RTSP] [session f2d33eda] created by 127.0.0.1:58562
+2026/11/17 01:51:05 INF [RTSP] [session f2d33eda] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:51:21 WAR [RTSP] [session f2d33eda] reader is too slow, discarding 954 frames
+2026/11/17 01:51:22 WAR [RTSP] [session f2d33eda] reader is too slow, discarding 1670 frames
+2026/11/17 01:51:22 INF [RTSP] [session f2d33eda] destroyed: torn down by 127.0.0.1:58562
+2026/11/17 01:51:22 INF [RTSP] [conn 127.0.0.1:58562] closed: EOF
+2026/11/17 01:51:27 INF [RTSP] [conn 127.0.0.1:48184] opened
+2026/11/17 01:51:27 INF [RTSP] [session 94d1e98c] created by 127.0.0.1:48184
+2026/11/17 01:51:27 INF [RTSP] [session 94d1e98c] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:51:40 INF [RTSP] [session 94d1e98c] destroyed: torn down by 127.0.0.1:48184
+2026/11/17 01:51:40 INF [RTSP] [conn 127.0.0.1:48184] closed: EOF
+2026/11/17 01:51:40 INF [RTSP] [session e2f3924e] destroyed: torn down by 127.0.0.1:37228
+2026/11/17 01:51:40 INF [RTSP] [conn 127.0.0.1:37228] closed: EOF
+2026/11/17 01:51:40 INF [RTSP] [conn 127.0.0.1:45376] opened
+2026/11/17 01:51:40 INF [RTSP] [session edcc4d4a] created by 127.0.0.1:45376
+2026/11/17 01:51:40 INF [path upstream] stream is available and online, 1 track (H264)
+2026/11/17 01:51:40 INF [RTSP] [session edcc4d4a] is publishing to path 'upstream'
+2026/11/17 01:51:40 INF [path upstream] RTP packets are too big (1460 > 1188), remuxing them into smaller ones
+2026/11/17 01:51:41 INF [RTSP] [conn 127.0.0.1:45386] opened
+2026/11/17 01:51:41 INF [RTSP] [session 71c9cc2c] created by 127.0.0.1:45386
+2026/11/17 01:51:41 INF [RTSP] [session 71c9cc2c] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:51:51 INF [RTSP] [session edcc4d4a] destroyed: torn down by 127.0.0.1:45376
+2026/11/17 01:51:51 INF [RTSP] [conn 127.0.0.1:45386] closed: terminated
+2026/11/17 01:51:51 INF [RTSP] [session 71c9cc2c] destroyed: terminated
+2026/11/17 01:51:51 INF [RTSP] [conn 127.0.0.1:45376] closed: EOF
+2026/11/17 01:51:56 INF [RTSP] [conn 127.0.0.1:41494] opened
+2026/11/17 01:51:56 INF [RTSP] [conn 127.0.0.1:41494] closed: no stream is available on path 'upstream'
+2026/11/17 01:52:01 INF [RTSP] [conn 127.0.0.1:41506] opened
+2026/11/17 01:52:01 INF [RTSP] [conn 127.0.0.1:41506] closed: no stream is available on path 'upstream'
+2026/11/17 01:52:03 INF shutting down gracefully
+2026/11/17 01:52:03 INF [RTSP] closing
+2026/11/17 01:52:03 INF waiting for running hooks

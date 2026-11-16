@@ -1,0 +1,10 @@
+[master 623e8d5] Recover MPP RTSP streams after disconnect and bound fractional preview scaling
+ 1 file changed, 122 insertions(+), 43 deletions(-)
+{
+  "head": "623e8d5",
+  "sha256": {
+    "01_apps/mission_demo/workspace/src/rtsp_test/src/rtsp_hw_pub_ultra.cpp": "e63eba8d537b4c9a533d6ad06bf61adce07492279cfd92f12ad5e0e3caeda8be",
+    "01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra": "9b208175f65baa3307c20220d58e42e883a4762a56d3dca7dd7070b9bfce0686"
+  },
+  "status": ""
+}

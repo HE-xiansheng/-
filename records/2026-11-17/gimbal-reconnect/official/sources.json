@@ -1,0 +1,5 @@
+{
+  "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/n4.4.2/libavformat/avio.h",
+  "installed_libavformat": "7:4.4.2-0ubuntu0.22.04.1",
+  "purpose": "AVIOInterruptCB aborts blocking operations and returns AVERROR_EXIT"
+}

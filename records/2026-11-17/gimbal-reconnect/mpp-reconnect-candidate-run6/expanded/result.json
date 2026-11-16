@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "completed": true,
+  "candidate": true,
+  "default_timeouts": true,
+  "checks": {
+    "stays_alive_without_initial_rtsp": true,
+    "initial_stream": true,
+    "alive_while_source_closed": true,
+    "no_stale_frames_when_closed": true,
+    "reconnect_after_closed_connection": true,
+    "alive_during_stalled_tcp": true,
+    "no_repeated_frames_when_stalled": true,
+    "reconnect_after_stalled_tcp": true,
+    "reconnect_with_new_resolution": true,
+    "same_decoder_process": true,
+    "publisher_drained_before_shutdown": true,
+    "bounded_shutdown_during_stall": true,
+    "reliable_raw_all_source_stamps": true,
+    "reliable_raw_headers_and_buffers": true,
+    "reliable_raw_stamps_increase": true,
+    "reliable_color_all_source_stamps": true,
+    "reliable_color_headers_and_buffers": true,
+    "reliable_color_stamps_increase": true,
+    "best_effort_raw_all_source_stamps": true,
+    "best_effort_raw_headers_and_buffers": true,
+    "best_effort_raw_stamps_increase": true,
+    "best_effort_color_all_source_stamps": true,
+    "best_effort_color_headers_and_buffers": true,
+    "best_effort_color_stamps_increase": true,
+    "color_uses_decoded_frame_stamp": true,
+    "native_observer_clean_exit": true
+  },
+  "phases": [
+    {
+      "name": "startup silent RTSP listener",
+      "start_ns": 26981848738801,
+      "end_ns": 26985860689880,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "tail_3s_messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "tail_3s_messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "initial stream",
+      "start_ns": 26985983847629,
+      "end_ns": 26995014354137,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 182,
+          "tail_3s_messages": 82,
+          "sizes": [
+            [
+              1920,
+              1080
+            ]
+          ]
+        },
+        "color": {
+          "messages": 91,
+          "tail_3s_messages": 41,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed source",
+      "start_ns": 26995038790888,
+      "end_ns": 26999051775835,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "tail_3s_messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "tail_3s_messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "stream restored",
+      "start_ns": 26999172244978,
+      "end_ns": 27011172290208,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 273,
+          "tail_3s_messages": 77,
+          "sizes": [
+            [
+              1920,
+              1080
+            ]
+          ]
+        },
+        "color": {
+          "messages": 137,
+          "tail_3s_messages": 39,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "open TCP but stalled",
+      "start_ns": 27011196229171,
+      "end_ns": 27016211671829,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "tail_3s_messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "tail_3s_messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "stalled TCP resumed",
+      "start_ns": 27016226130731,
+      "end_ns": 27034232272951,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 619,
+          "tail_3s_messages": 89,
+          "sizes": [
+            [
+              1920,
+              1080
+            ]
+          ]
+        },
+        "color": {
+          "messages": 269,
+          "tail_3s_messages": 44,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "resolution changed",
+      "start_ns": 27035467977985,
+      "end_ns": 27045513939234,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 221,
+          "tail_3s_messages": 73,
+          "sizes": [
+            [
+              1280,
+              720
+            ]
+          ]
+        },
+        "color": {
+          "messages": 111,
+          "tail_3s_messages": 37,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "source_counts": {
+    "raw": 1344,
+    "color": 635
+  },
+  "returncodes": [
+    0,
+    255,
+    0,
+    0,
+    0,
+    0,
+    0,
+    255,
+    0
+  ],
+  "scope": "synthetic source, actual MPP and native subscribers, localhost domain80; no flight controller or physical gimbal commands"
+}

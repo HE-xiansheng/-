@@ -1,0 +1,20 @@
+2026/11/17 01:54:31 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:54:31 INF configuration loaded from /tmp/mpp-reconnect-check/relay.yml
+2026/11/17 01:54:31 INF [path gimbal] [RTSP source] started
+2026/11/17 01:54:31 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 01:54:31 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:54:32 INF [RTSP] [conn 127.0.0.1:46960] opened
+2026/11/17 01:54:32 INF [RTSP] [session 02e08799] created by 127.0.0.1:46960
+2026/11/17 01:54:32 INF [RTSP] [session 02e08799] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:54:41 WAR [RTSP] [session 02e08799] reader is too slow, discarding 728 frames
+2026/11/17 01:54:41 ERR [path gimbal] [RTSP source] EOF
+2026/11/17 01:54:41 INF [RTSP] [conn 127.0.0.1:46960] closed: terminated
+2026/11/17 01:54:41 INF [RTSP] [session 02e08799] destroyed: terminated
+2026/11/17 01:54:47 ERR [path gimbal] [RTSP source] bad status code: 404 (Not Found)
+2026/11/17 01:54:52 ERR [path gimbal] [RTSP source] bad status code: 404 (Not Found)
+2026/11/17 01:54:53 INF [RTSP] [conn 127.0.0.1:41118] opened
+2026/11/17 01:54:53 INF [RTSP] [conn 127.0.0.1:41118] closed: no stream is available on path 'gimbal'
+2026/11/17 01:54:54 INF shutting down gracefully
+2026/11/17 01:54:54 INF [RTSP] closing
+2026/11/17 01:54:54 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 01:54:54 INF waiting for running hooks

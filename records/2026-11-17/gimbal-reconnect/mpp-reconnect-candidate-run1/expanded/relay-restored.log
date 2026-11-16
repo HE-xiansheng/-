@@ -1,0 +1,90 @@
+2026/11/17 01:44:35 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:44:35 INF configuration loaded from /tmp/mpp-reconnect-check/relay.yml
+2026/11/17 01:44:35 INF [path gimbal] [RTSP source] started
+2026/11/17 01:44:35 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 01:44:35 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:44:35 INF [RTSP] [conn 127.0.0.1:40746] opened
+2026/11/17 01:44:35 INF [RTSP] [session 7d136b6a] created by 127.0.0.1:40746
+2026/11/17 01:44:35 INF [RTSP] [session 7d136b6a] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:36 INF [RTSP] [conn 127.0.0.1:40746] closed: received unexpected response
+2026/11/17 01:44:36 INF [RTSP] [session 7d136b6a] destroyed: not in use
+2026/11/17 01:44:37 INF [RTSP] [conn 127.0.0.1:40750] opened
+2026/11/17 01:44:37 INF [RTSP] [session 029a7b90] created by 127.0.0.1:40750
+2026/11/17 01:44:37 INF [RTSP] [session 029a7b90] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:38 INF [RTSP] [conn 127.0.0.1:40750] closed: received unexpected response
+2026/11/17 01:44:38 INF [RTSP] [session 029a7b90] destroyed: not in use
+2026/11/17 01:44:38 INF [RTSP] [conn 127.0.0.1:40764] opened
+2026/11/17 01:44:38 INF [RTSP] [session 44d0a20f] created by 127.0.0.1:40764
+2026/11/17 01:44:38 INF [RTSP] [session 44d0a20f] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:39 INF [RTSP] [conn 127.0.0.1:40764] closed: received unexpected response
+2026/11/17 01:44:39 INF [RTSP] [session 44d0a20f] destroyed: not in use
+2026/11/17 01:44:39 INF [RTSP] [conn 127.0.0.1:40770] opened
+2026/11/17 01:44:39 INF [RTSP] [session 9f5e421a] created by 127.0.0.1:40770
+2026/11/17 01:44:39 INF [RTSP] [session 9f5e421a] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:40 INF [RTSP] [conn 127.0.0.1:40770] closed: received unexpected response
+2026/11/17 01:44:40 INF [RTSP] [session 9f5e421a] destroyed: not in use
+2026/11/17 01:44:41 INF [RTSP] [conn 127.0.0.1:40776] opened
+2026/11/17 01:44:41 INF [RTSP] [session 86a3494e] created by 127.0.0.1:40776
+2026/11/17 01:44:41 INF [RTSP] [session 86a3494e] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48346] opened
+2026/11/17 01:44:52 INF [RTSP] [session 86a3494e] destroyed: not in use
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48338] opened
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:40776] closed: EOF
+2026/11/17 01:44:52 ERR [path gimbal] [RTSP source] TCP timeout
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48338] closed: EOF
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48346] closed: EOF
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48348] opened
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48348] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48364] opened
+2026/11/17 01:44:52 INF [RTSP] [conn 127.0.0.1:48364] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48374] opened
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48374] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48376] opened
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48376] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48382] opened
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48382] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48392] opened
+2026/11/17 01:44:53 INF [RTSP] [conn 127.0.0.1:48392] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:54 INF [RTSP] [conn 127.0.0.1:59970] opened
+2026/11/17 01:44:54 INF [RTSP] [conn 127.0.0.1:59970] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:54 INF [RTSP] [conn 127.0.0.1:59980] opened
+2026/11/17 01:44:54 INF [RTSP] [conn 127.0.0.1:59980] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:54 INF [RTSP] [conn 127.0.0.1:59990] opened
+2026/11/17 01:44:54 INF [RTSP] [conn 127.0.0.1:59990] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60004] opened
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60004] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60006] opened
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60006] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60012] opened
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60012] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60014] opened
+2026/11/17 01:44:55 INF [RTSP] [conn 127.0.0.1:60014] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60024] opened
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60024] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60028] opened
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60028] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60032] opened
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60032] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60036] opened
+2026/11/17 01:44:56 INF [RTSP] [conn 127.0.0.1:60036] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60038] opened
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60038] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60054] opened
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60054] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60070] opened
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60070] closed: no stream is available on path 'gimbal'
+2026/11/17 01:44:57 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:44:57 INF [RTSP] [conn 127.0.0.1:60072] opened
+2026/11/17 01:44:57 INF [RTSP] [session 30ea2e34] created by 127.0.0.1:60072
+2026/11/17 01:44:57 INF [RTSP] [session 30ea2e34] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:58 INF [RTSP] [conn 127.0.0.1:60072] closed: received unexpected response
+2026/11/17 01:44:58 INF [RTSP] [session 30ea2e34] destroyed: not in use
+2026/11/17 01:44:59 INF [RTSP] [conn 127.0.0.1:60078] opened
+2026/11/17 01:44:59 INF [RTSP] [session 2f3947ff] created by 127.0.0.1:60078
+2026/11/17 01:44:59 INF [RTSP] [session 2f3947ff] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:45:01 INF shutting down gracefully
+2026/11/17 01:45:01 INF [RTSP] closing
+2026/11/17 01:45:01 INF [RTSP] [conn 127.0.0.1:60078] closed: terminated
+2026/11/17 01:45:01 INF [RTSP] [session 2f3947ff] destroyed: terminated
+2026/11/17 01:45:01 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 01:45:01 INF waiting for running hooks

@@ -1,0 +1,680 @@
+[INFO] [1794851059.509210401] [rtsp_hw_pub_ultra]: Fast DDS profile: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/config/fastdds_large_images.xml
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851059.515186902] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851059.772553493] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851060.029047214] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851060.287790253] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851060.543121066] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851060.799359539] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851061.059396486] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851061.315638917] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851061.571844974] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851061.829659811] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47a80a0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851062.087004151] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[INFO] [1794851063.367606229] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47a98b0] CSeq 4 expected, 0 received.
+[WARN] [1794851063.467394053] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851064.756702738] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[NULL @ 0x55a47bfd30] missing picture in access unit with size 46494
+[WARN] [1794851064.824544236] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851066.055728315] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[DEBUG] [1794851066.268454083] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066245823528
+[DEBUG] [1794851066.311529749] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066245823528
+[DEBUG] [1794851066.315858345] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066312941990
+[DEBUG] [1794851066.328010554] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066312941990
+[DEBUG] [1794851066.331762237] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066329190921
+[DEBUG] [1794851066.352173224] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066348605581
+[DEBUG] [1794851066.382393936] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066379293249
+[DEBUG] [1794851066.400575729] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066379293249
+[DEBUG] [1794851066.412573940] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066410045790
+[DEBUG] [1794851066.453875535] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066451177053
+[DEBUG] [1794851066.473167988] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066451177053
+[DEBUG] [1794851066.484404078] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066481955553
+[DEBUG] [1794851066.517185398] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066514024919
+[DEBUG] [1794851066.535102652] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066514024919
+[DEBUG] [1794851066.547106112] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066544490171
+[DEBUG] [1794851066.589489075] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066586559303
+[DEBUG] [1794851066.604346474] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066586559303
+[DEBUG] [1794851066.634786352] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066617688092
+[DEBUG] [1794851066.685298593] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066617688092
+[DEBUG] [1794851066.688930693] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066686271003
+[DEBUG] [1794851066.693572245] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066690352850
+[DEBUG] [1794851066.724500619] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066721560056
+[DEBUG] [1794851066.742085083] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066721560056
+[DEBUG] [1794851066.753519214] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066750926023
+[DEBUG] [1794851066.790202174] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066783391804
+[DEBUG] [1794851066.804713367] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066783391804
+[DEBUG] [1794851066.815549877] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066813057019
+[DEBUG] [1794851066.851723132] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066847932366
+[DEBUG] [1794851066.867427943] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066847932366
+[DEBUG] [1794851066.879570235] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066876958962
+[DEBUG] [1794851066.954567561] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066951202042
+[DEBUG] [1794851066.971100574] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066951202042
+[DEBUG] [1794851066.975540877] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066972268399
+[DEBUG] [1794851066.988855579] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851066972268399
+[DEBUG] [1794851066.993474381] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851066989909947
+[DEBUG] [1794851067.014599363] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067011945214
+[DEBUG] [1794851067.056127373] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067052792562
+[DEBUG] [1794851067.074573790] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067052792562
+[DEBUG] [1794851067.088073782] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067085271759
+[DEBUG] [1794851067.152440679] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067148273666
+[DEBUG] [1794851067.205177947] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067148273666
+[DEBUG] [1794851067.215298712] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067212363107
+[DEBUG] [1794851067.228993536] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067212363107
+[DEBUG] [1794851067.232773218] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067230080862
+[DEBUG] [1794851067.236493985] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067233788503
+[DEBUG] [1794851067.248860568] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067233788503
+[DEBUG] [1794851067.255003026] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067251427217
+[DEBUG] [1794851067.289216919] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067283717290
+[DEBUG] [1794851067.320287792] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067314904537
+[DEBUG] [1794851067.346459282] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067314904537
+[DEBUG] [1794851067.350111799] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067347435192
+[DEBUG] [1794851067.389321158] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067385394185
+[DEBUG] [1794851067.403872601] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067385394185
+[DEBUG] [1794851067.419267539] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067416044936
+[DEBUG] [1794851067.455697125] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067451389530
+[DEBUG] [1794851067.472537261] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067451389530
+[DEBUG] [1794851067.499050540] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067481762115
+[DEBUG] [1794851067.551874641] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067526761144
+[DEBUG] [1794851067.587130777] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067526761144
+[DEBUG] [1794851067.594340728] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067591167125
+[DEBUG] [1794851067.637683560] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067591167125
+[DEBUG] [1794851067.641223786] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067638605512
+[DEBUG] [1794851067.655142316] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067638605512
+[DEBUG] [1794851067.658733875] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067656114435
+[DEBUG] [1794851067.662277601] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067659631619
+[DEBUG] [1794851067.720628706] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067714947661
+[DEBUG] [1794851067.735786812] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067714947661
+[DEBUG] [1794851067.739611994] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067736899221
+[DEBUG] [1794851067.749690759] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067747266151
+[DEBUG] [1794851067.782281872] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067778841687
+[DEBUG] [1794851067.798002474] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067778841687
+[DEBUG] [1794851067.823220886] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067819240913
+[DEBUG] [1794851067.856251204] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067850432910
+[DEBUG] [1794851067.871549892] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067850432910
+[DEBUG] [1794851067.882773441] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067880359333
+[DEBUG] [1794851067.919139570] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067913581608
+[DEBUG] [1794851067.935314502] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851067913581608
+[DEBUG] [1794851067.959708545] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851067955381408
+[DEBUG] [1794851068.047863448] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068021403502
+[DEBUG] [1794851068.112713051] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068021403502
+[DEBUG] [1794851068.116503817] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068113806502
+[DEBUG] [1794851068.133191995] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068113806502
+[DEBUG] [1794851068.136966720] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068134356321
+[DEBUG] [1794851068.149848091] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068134356321
+[DEBUG] [1794851068.153475525] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068150850834
+[DEBUG] [1794851068.157105000] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068154449393
+[DEBUG] [1794851068.161657886] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068158538240
+[DEBUG] [1794851068.185421850] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068182441912
+[DEBUG] [1794851068.201388867] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068182441912
+[DEBUG] [1794851068.218964414] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068213240787
+[DEBUG] [1794851068.260262593] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068254666131
+[DEBUG] [1794851068.283887850] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068254666131
+[DEBUG] [1794851068.287844198] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068285089217
+[DEBUG] [1794851068.319443401] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068316380338
+[DEBUG] [1794851068.333050142] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068316380338
+[DEBUG] [1794851068.381893686] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068378276752
+[DEBUG] [1794851068.396906918] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068378276752
+[DEBUG] [1794851068.400752517] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068398079701
+[DEBUG] [1794851068.422204663] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068418918185
+[DEBUG] [1794851068.466627071] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068450428014
+[DEBUG] [1794851068.490470367] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068450428014
+[DEBUG] [1794851068.494706214] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068491868025
+[DEBUG] [1794851068.517080479] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068513832792
+[DEBUG] [1794851068.562943293] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068513832792
+[DEBUG] [1794851068.566802309] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068563882454
+[DEBUG] [1794851068.590654647] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068586711341
+[DEBUG] [1794851068.604403429] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068586711341
+[DEBUG] [1794851068.619441661] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068616867136
+[DEBUG] [1794851068.658148648] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068651884608
+[DEBUG] [1794851068.671983471] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068651884608
+[DEBUG] [1794851068.681137368] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068678461636
+[DEBUG] [1794851068.725308944] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068720140645
+[DEBUG] [1794851068.739026809] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068720140645
+[DEBUG] [1794851068.749379447] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068746716257
+[DEBUG] [1794851068.783937922] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068777909504
+[DEBUG] [1794851068.803958369] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068777909504
+[DEBUG] [1794851068.823894401] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068819653596
+[DEBUG] [1794851068.872673571] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068851411340
+[DEBUG] [1794851068.894899295] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068851411340
+[DEBUG] [1794851068.898707269] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068896129245
+[DEBUG] [1794851068.914847702] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068911912388
+[DEBUG] [1794851068.965179694] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068911912388
+[DEBUG] [1794851068.968830753] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068966122063
+[DEBUG] [1794851068.983210114] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851068966122063
+[DEBUG] [1794851068.987746958] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851068984375606
+[DEBUG] [1794851069.016676595] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069013923281
+[DEBUG] [1794851069.090703302] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069087185243
+[DEBUG] [1794851069.110585501] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069087185243
+[DEBUG] [1794851069.121980340] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069111965367
+[DEBUG] [1794851069.141160502] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069111965367
+[DEBUG] [1794851069.144808353] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069142160037
+[DEBUG] [1794851069.150449439] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069147991289
+[DEBUG] [1794851069.183555007] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069179246244
+[DEBUG] [1794851069.201661551] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069179246244
+[DEBUG] [1794851069.213535054] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069210176993
+[DEBUG] [1794851069.257871545] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069252215583
+[DEBUG] [1794851069.273929228] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069252215583
+[DEBUG] [1794851069.289779037] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069283043916
+[DEBUG] [1794851069.316846812] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069312451134
+[DEBUG] [1794851069.332207500] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069312451134
+[DEBUG] [1794851069.375479540] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069355145261
+[DEBUG] [1794851069.397114060] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069355145261
+[DEBUG] [1794851069.404398386] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069398681175
+[DEBUG] [1794851069.418931038] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069415338895
+[DEBUG] [1794851069.480922868] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069477460808
+[DEBUG] [1794851069.508246891] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069477460808
+[DEBUG] [1794851069.515915756] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069509899463
+[DEBUG] [1794851069.557031144] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069509899463
+[INFO] [1794851069.557420808] [rtsp_hw_pub_ultra]: RTSP decode: gray 9.8 Hz, color 5.0 Hz, subscribers gray=2 color=2
+[DEBUG] [1794851069.565313838] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069561230824
+[DEBUG] [1794851069.569031688] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069566294123
+[DEBUG] [1794851069.586947775] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069566294123
+[DEBUG] [1794851069.591563660] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069588977178
+[DEBUG] [1794851069.614830419] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069611352235
+[DEBUG] [1794851069.656871385] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069653481366
+[DEBUG] [1794851069.676481002] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069653481366
+[DEBUG] [1794851069.686056020] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069683534871
+[DEBUG] [1794851069.723660057] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069717092643
+[DEBUG] [1794851069.738292292] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069717092643
+[DEBUG] [1794851069.748103600] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069745540451
+[DEBUG] [1794851069.794180996] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069789172989
+[DEBUG] [1794851069.811059632] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069789172989
+[DEBUG] [1794851069.820782858] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069818273375
+[DEBUG] [1794851069.857990939] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069853775801
+[DEBUG] [1794851069.902583554] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069853775801
+[DEBUG] [1794851069.906215071] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069903535256
+[DEBUG] [1794851069.922504252] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851069903535256
+[DEBUG] [1794851069.926317476] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069923628036
+[DEBUG] [1794851069.958071220] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851069954752159
+[DEBUG] [1794851070.018632310] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070015786246
+[DEBUG] [1794851070.032742756] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070015786246
+[DEBUG] [1794851070.037350183] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070034615243
+[DEBUG] [1794851070.049852681] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070034615243
+[DEBUG] [1794851070.086822056] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070083319746
+[DEBUG] [1794851070.092416185] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070088952083
+[DEBUG] [1794851070.158123907] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070151690658
+[DEBUG] [1794851070.173129680] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070151690658
+[DEBUG] [1794851070.178638351] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070175855870
+[DEBUG] [1794851070.192563007] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070175855870
+[DEBUG] [1794851070.220539609] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070213505448
+[DEBUG] [1794851070.224868205] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070221903141
+[DEBUG] [1794851070.297808211] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070292158374
+[DEBUG] [1794851070.312798901] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070292158374
+[DEBUG] [1794851070.316489042] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070313817394
+[DEBUG] [1794851070.357857596] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070313817394
+[DEBUG] [1794851070.361550654] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070358824172
+[DEBUG] [1794851070.365179838] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070362547564
+[DEBUG] [1794851070.380074570] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070377530087
+[DEBUG] [1794851070.393989767] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070377530087
+[DEBUG] [1794851070.424900100] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070419833134
+[DEBUG] [1794851070.491773647] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070484979026
+[DEBUG] [1794851070.507117543] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070484979026
+[DEBUG] [1794851070.510793685] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070508099578
+[DEBUG] [1794851070.524084553] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070508099578
+[DEBUG] [1794851070.530818507] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070526695535
+[DEBUG] [1794851070.548000183] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070543710962
+[DEBUG] [1794851070.624302499] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070619083951
+[DEBUG] [1794851070.639192065] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070619083951
+[DEBUG] [1794851070.643406912] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070640788638
+[DEBUG] [1794851070.655932743] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070640788638
+[DEBUG] [1794851070.686675077] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070681256239
+[DEBUG] [1794851070.694821855] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070689869680
+[DEBUG] [1794851070.760079663] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070754330369
+[DEBUG] [1794851070.776670426] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070754330369
+[DEBUG] [1794851070.780480733] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070777769710
+[DEBUG] [1794851070.793691394] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070777769710
+[DEBUG] [1794851070.797287619] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070794688595
+[DEBUG] [1794851070.822473449] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070816487239
+[DEBUG] [1794851070.850527217] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070847717611
+[DEBUG] [1794851070.864699288] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070847717611
+[DEBUG] [1794851070.881739548] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070878144905
+[DEBUG] [1794851070.959043732] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070953505312
+[DEBUG] [1794851070.971216650] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070953505312
+[DEBUG] [1794851070.974802376] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070972233101
+[DEBUG] [1794851070.991607512] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851070972233101
+[DEBUG] [1794851070.999036211] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851070995526027
+[DEBUG] [1794851071.017712168] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071013851986
+[DEBUG] [1794851071.051516564] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071045191816
+[DEBUG] [1794851071.068176160] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851071045191816
+[DEBUG] [1794851071.095016603] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071088600563
+[DEBUG] [1794851071.126866512] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071119954643
+[DEBUG] [1794851071.141932619] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851071119954643
+[DEBUG] [1794851071.152506339] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071149242611
+[DEBUG] [1794851071.189285090] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071182582052
+[DEBUG] [1794851071.239567707] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851071182582052
+[DEBUG] [1794851071.243257558] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071240573659
+[DEBUG] [1794851071.256240720] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851071240573659
+[DEBUG] [1794851071.260291359] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071257445878
+[DEBUG] [1794851071.289008081] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071282320501
+[DEBUG] [1794851071.319645290] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071314132828
+[DEBUG] [1794851071.334665563] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851071314132828
+[DEBUG] [1794851071.346445317] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071344053958
+[DEBUG] [1794851071.391148098] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071387216749
+[DEBUG] [1794851071.404670173] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851071387216749
+[DEBUG] [1794851071.407784277] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851071404995087
+[WARN] [1794851071.408001567] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851071.674710510] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851071.931906227] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851072.187245664] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851072.443959301] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851072.702218968] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851072.961142090] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851073.219258217] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851073.475957145] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851073.732751197] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851073.989526833] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851074.246082638] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851074.501200868] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851074.757026677] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851075.013725814] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851075.276062537] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[INFO] [1794851076.547511968] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[WARN] [1794851076.787153595] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851078.046768856] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[WARN] [1794851078.170516059] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851079.446325044] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[WARN] [1794851079.535934271] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851080.820747027] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[WARN] [1794851080.930322119] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[rtsp @ 0x55a47ad550] decoding for stream 0 failed
+[INFO] [1794851082.201064388] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[INFO] [1794851082.212067146] [rtsp_hw_pub_ultra]: RTSP decode: gray 4.6 Hz, color 2.2 Hz, subscribers gray=2 color=2
+[DEBUG] [1794851083.332195185] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083305895780
+[DEBUG] [1794851083.389897461] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083305895780
+[DEBUG] [1794851083.396955455] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083394678721
+[DEBUG] [1794851083.411056276] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083394678721
+[DEBUG] [1794851083.415713578] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083412300810
+[DEBUG] [1794851083.419440470] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083416671697
+[DEBUG] [1794851083.423111653] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083420532754
+[DEBUG] [1794851083.426739962] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083424109146
+[DEBUG] [1794851083.452122957] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083449170143
+[DEBUG] [1794851083.466071237] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083449170143
+[DEBUG] [1794851083.489607411] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083480990469
+[DEBUG] [1794851083.515306404] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083511045474
+[DEBUG] [1794851083.530685591] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083511045474
+[DEBUG] [1794851083.559561104] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083552280153
+[DEBUG] [1794851083.590204938] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083587143334
+[DEBUG] [1794851083.608298941] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083587143334
+[DEBUG] [1794851083.616646967] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083614127568
+[DEBUG] [1794851083.649045956] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083646132226
+[DEBUG] [1794851083.702067389] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083646132226
+[DEBUG] [1794851083.711624366] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083705734489
+[DEBUG] [1794851083.726936762] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083705734489
+[DEBUG] [1794851083.730879485] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083728339378
+[DEBUG] [1794851083.752988252] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083746881960
+[DEBUG] [1794851083.785751905] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083781313352
+[DEBUG] [1794851083.800118433] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083781313352
+[DEBUG] [1794851083.828881488] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083822524948
+[DEBUG] [1794851083.855189185] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083851836208
+[DEBUG] [1794851083.870968162] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083851836208
+[DEBUG] [1794851083.885824978] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083882983580
+[DEBUG] [1794851083.918160884] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083914109661
+[DEBUG] [1794851083.933382781] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083914109661
+[DEBUG] [1794851083.966001101] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083948863467
+[DEBUG] [1794851083.987392373] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851083984476601
+[DEBUG] [1794851084.000839282] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851083984476601
+[DEBUG] [1794851084.050603695] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084047146593
+[DEBUG] [1794851084.065808592] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084047146593
+[DEBUG] [1794851084.069780190] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084067071209
+[DEBUG] [1794851084.080254453] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084077719303
+[DEBUG] [1794851084.156909683] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084152607338
+[DEBUG] [1794851084.217529856] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084152607338
+[DEBUG] [1794851084.221769786] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084219197887
+[DEBUG] [1794851084.234517866] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084219197887
+[DEBUG] [1794851084.237983718] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084235482693
+[DEBUG] [1794851084.253131323] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084235482693
+[DEBUG] [1794851084.256682633] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084254117150
+[DEBUG] [1794851084.260188151] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084257622668
+[DEBUG] [1794851084.290134239] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084287277967
+[DEBUG] [1794851084.323585471] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084320605825
+[DEBUG] [1794851084.337619501] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084320605825
+[DEBUG] [1794851084.351752114] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084347844974
+[DEBUG] [1794851084.387619996] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084381344622
+[DEBUG] [1794851084.406609826] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084381344622
+[DEBUG] [1794851084.412447328] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084410033511
+[DEBUG] [1794851084.462963652] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084454958040
+[DEBUG] [1794851084.480263660] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084454958040
+[DEBUG] [1794851084.487202947] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084484796421
+[DEBUG] [1794851084.516093793] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084513222645
+[DEBUG] [1794851084.533434133] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084513222645
+[DEBUG] [1794851084.592353318] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084586724772
+[DEBUG] [1794851084.618966887] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084586724772
+[DEBUG] [1794851084.622505655] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084619898756
+[DEBUG] [1794851084.626166339] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084623471065
+[DEBUG] [1794851084.653703861] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084647543319
+[DEBUG] [1794851084.669719752] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084647543319
+[DEBUG] [1794851084.682907079] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084679273229
+[DEBUG] [1794851084.727806734] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084722220188
+[DEBUG] [1794851084.784431892] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084722220188
+[DEBUG] [1794851084.789068194] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084786169630
+[DEBUG] [1794851084.802778476] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084786169630
+[DEBUG] [1794851084.806620575] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084804014259
+[DEBUG] [1794851084.821863555] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084813671860
+[DEBUG] [1794851084.849309036] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084846200474
+[DEBUG] [1794851084.864336642] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084846200474
+[DEBUG] [1794851084.894672979] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084889406973
+[DEBUG] [1794851084.953158957] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084947617620
+[DEBUG] [1794851084.972784783] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084947617620
+[DEBUG] [1794851084.977822415] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851084973904484
+[DEBUG] [1794851084.991770613] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851084973904484
+[DEBUG] [1794851085.026378670] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085023455315
+[DEBUG] [1794851085.031309262] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085028210324
+[DEBUG] [1794851085.056587882] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085051617916
+[DEBUG] [1794851085.069887209] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085051617916
+[DEBUG] [1794851085.086033766] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085083047119
+[DEBUG] [1794851085.122082313] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085117749093
+[DEBUG] [1794851085.136413258] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085117749093
+[DEBUG] [1794851085.161934210] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085145830236
+[DEBUG] [1794851085.190919806] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085186993999
+[DEBUG] [1794851085.238099778] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085186993999
+[DEBUG] [1794851085.245550644] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085241707087
+[DEBUG] [1794851085.263217483] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085241707087
+[DEBUG] [1794851085.267960242] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085264476891
+[DEBUG] [1794851085.278972168] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085276398518
+[DEBUG] [1794851085.322751913] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085317086034
+[DEBUG] [1794851085.339870005] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085317086034
+[DEBUG] [1794851085.349825396] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085347361121
+[DEBUG] [1794851085.383622334] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085377995830
+[DEBUG] [1794851085.407665129] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085377995830
+[DEBUG] [1794851085.435589690] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085419367300
+[DEBUG] [1794851085.456254425] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085419367300
+[DEBUG] [1794851085.461868971] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085459068115
+[DEBUG] [1794851085.487290465] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085481848585
+[DEBUG] [1794851085.516616308] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085513244664
+[DEBUG] [1794851085.532250702] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085513244664
+[DEBUG] [1794851085.558104444] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085553487392
+[DEBUG] [1794851085.585622132] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085582704319
+[DEBUG] [1794851085.633985388] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085582704319
+[DEBUG] [1794851085.637713446] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085634984340
+[DEBUG] [1794851085.650652275] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085634984340
+[DEBUG] [1794851085.654259293] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085651585602
+[DEBUG] [1794851085.696415049] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085692982155
+[DEBUG] [1794851085.720515011] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085714878590
+[DEBUG] [1794851085.736423861] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085714878590
+[DEBUG] [1794851085.747621160] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085744775971
+[DEBUG] [1794851085.790264705] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085786790395
+[DEBUG] [1794851085.808968870] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085786790395
+[DEBUG] [1794851085.819770838] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085816859441
+[DEBUG] [1794851085.850137549] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085847024612
+[DEBUG] [1794851085.864022830] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085847024612
+[DEBUG] [1794851085.880914883] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085878225151
+[DEBUG] [1794851085.939032822] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085919610287
+[DEBUG] [1794851085.968744704] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085919610287
+[DEBUG] [1794851085.978138183] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851085970955523
+[DEBUG] [1794851086.028651132] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851085970955523
+[DEBUG] [1794851086.035729834] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086032386773
+[DEBUG] [1794851086.050085570] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086032386773
+[DEBUG] [1794851086.054877621] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086051864142
+[DEBUG] [1794851086.059364882] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086056023572
+[DEBUG] [1794851086.085641538] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086081632023
+[DEBUG] [1794851086.124672398] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086118033402
+[DEBUG] [1794851086.138947177] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086118033402
+[DEBUG] [1794851086.145365258] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086142892817
+[DEBUG] [1794851086.193652931] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086186840769
+[DEBUG] [1794851086.211223104] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086186840769
+[DEBUG] [1794851086.217135439] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086214659206
+[DEBUG] [1794851086.257678581] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086249441970
+[DEBUG] [1794851086.271401405] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086249441970
+[DEBUG] [1794851086.280058013] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086277305573
+[DEBUG] [1794851086.345439737] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086325939702
+[DEBUG] [1794851086.374017043] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086325939702
+[DEBUG] [1794851086.384888261] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086376221445
+[DEBUG] [1794851086.431764027] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086376221445
+[DEBUG] [1794851086.441072797] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086435369003
+[DEBUG] [1794851086.461144578] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086435369003
+[DEBUG] [1794851086.464904428] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086462199238
+[DEBUG] [1794851086.468523695] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086465815880
+[DEBUG] [1794851086.486110784] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086483514968
+[DEBUG] [1794851086.523521697] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086517777278
+[DEBUG] [1794851086.538311805] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086517777278
+[DEBUG] [1794851086.548753401] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086545775797
+[DEBUG] [1794851086.584829490] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086581735011
+[DEBUG] [1794851086.599309184] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086581735011
+[DEBUG] [1794851086.622129613] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086619166133
+[DEBUG] [1794851086.656719920] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086652066993
+[DEBUG] [1794851086.674931297] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086652066993
+[DEBUG] [1794851086.687334463] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086683710237
+[DEBUG] [1794851086.721434857] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086713463494
+[DEBUG] [1794851086.735432720] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086713463494
+[DEBUG] [1794851086.759319142] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086755722166
+[DEBUG] [1794851086.790892303] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086787286453
+[DEBUG] [1794851086.805739786] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086787286453
+[DEBUG] [1794851086.818741906] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086815513761
+[DEBUG] [1794851086.869090857] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086852702718
+[DEBUG] [1794851086.900869642] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086852702718
+[DEBUG] [1794851086.906848768] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086902839253
+[DEBUG] [1794851086.955551688] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086902839253
+[DEBUG] [1794851086.958941415] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086956613639
+[DEBUG] [1794851086.962237809] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086959918783
+[DEBUG] [1794851086.988839088] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851086981986717
+[DEBUG] [1794851087.003207949] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851086981986717
+[DEBUG] [1794851087.013045215] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087010009278
+[DEBUG] [1794851087.056643087] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087052784071
+[DEBUG] [1794851087.070581284] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087052784071
+[DEBUG] [1794851087.086911298] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087083906569
+[DEBUG] [1794851087.123516467] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087117864297
+[DEBUG] [1794851087.137796954] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087117864297
+[DEBUG] [1794851087.148914628] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087146262688
+[DEBUG] [1794851087.192147252] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087187761490
+[DEBUG] [1794851087.205401371] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087187761490
+[DEBUG] [1794851087.221770927] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087218401033
+[DEBUG] [1794851087.259807627] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087252880591
+[DEBUG] [1794851087.273309661] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087252880591
+[DEBUG] [1794851087.297343415] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087281011359
+[DEBUG] [1794851087.320941422] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087313982594
+[DEBUG] [1794851087.365832784] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087313982594
+[DEBUG] [1794851087.372533781] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087368510266
+[DEBUG] [1794851087.389951121] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087368510266
+[DEBUG] [1794851087.394467257] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087391469236
+[DEBUG] [1794851087.419217048] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087414726287
+[DEBUG] [1794851087.451730286] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087447404024
+[DEBUG] [1794851087.477255321] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087447404024
+[DEBUG] [1794851087.489544697] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087487053880
+[DEBUG] [1794851087.524223170] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087520418987
+[DEBUG] [1794851087.541123972] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087520418987
+[DEBUG] [1794851087.558126815] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087550845990
+[DEBUG] [1794851087.585304506] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851087581496824
+[DEBUG] [1794851087.603054219] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851087581496824
+[DEBUG] [1794851088.623375101] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851088605707512
+[DEBUG] [1794851088.686411132] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851088605707512
+[WARN] [1794851089.689396506] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[WARN] [1794851090.964100915] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[WARN] [1794851092.220590239] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851092.658135109] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851092.920486457] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851093.182894763] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851093.444321285] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851093.707413086] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851093.970337056] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851094.227329107] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851094.488321089] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851094.750057567] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851095.014333818] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851095.278095824] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851095.536516615] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851095.794938407] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851096.051884833] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851096.309631421] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851096.568528084] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851096.827179958] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851097.081252320] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851097.340616522] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47ad550] method DESCRIBE failed: 404 Not Found
+[WARN] [1794851097.605085814] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[INFO] [1794851098.886121513] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[rtsp @ 0x55a47ad550] CSeq 4 expected, 0 received.
+[NULL @ 0x55a47bfd30] missing picture in access unit with size 10838
+[INFO] [1794851099.062990066] [rtsp_hw_pub_ultra]: RTSP decode: gray 7.8 Hz, color 3.9 Hz, subscribers gray=2 color=2
+[WARN] [1794851099.063086315] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[rtsp @ 0x55a47ad550] decoding for stream 0 failed
+[INFO] [1794851100.323735861] [rtsp_hw_pub_ultra]: RTSP stream connected: 1920x1080
+[DEBUG] [1794851101.266874015] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101245265745
+[DEBUG] [1794851101.315831392] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101245265745
+[DEBUG] [1794851101.320316611] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101317131925
+[DEBUG] [1794851101.368782241] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101317131925
+[DEBUG] [1794851101.373179087] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101369947442
+[DEBUG] [1794851101.388000028] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101369947442
+[DEBUG] [1794851101.391589254] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101388994604
+[DEBUG] [1794851101.395187229] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101392517039
+[DEBUG] [1794851101.424988069] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101419513814
+[DEBUG] [1794851101.486224821] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101482796011
+[DEBUG] [1794851101.503192998] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101482796011
+[DEBUG] [1794851101.512481643] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101504890486
+[DEBUG] [1794851101.529181488] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101504890486
+[DEBUG] [1794851101.532831380] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101530281648
+[DEBUG] [1794851101.587137513] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101580191601
+[DEBUG] [1794851101.605038558] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101580191601
+[DEBUG] [1794851101.613634958] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101610928601
+[DEBUG] [1794851101.617831138] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101614816200
+[DEBUG] [1794851101.664863111] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101658822735
+[DEBUG] [1794851101.679266389] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851101658822735
+[DEBUG] [1794851101.687355417] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101684728977
+[DEBUG] [1794851101.692544132] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851101689803359
+[WARN] [1794851101.692747422] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851101.956478220] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851102.212256821] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851102.468779917] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[tcp @ 0x55a47bfca0] Connection to tcp://127.0.0.1:18554?timeout=0 failed: Connection refused
+[WARN] [1794851102.724879016] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying
+[rtsp @ 0x55a47c2af0] decoding for stream 0 failed
+[INFO] [1794851103.990171405] [rtsp_hw_pub_ultra]: RTSP stream connected: 1280x720
+[rtsp @ 0x55a47c2af0] CSeq 4 expected, 0 received.
+[WARN] [1794851104.078814429] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851105.345208894] [rtsp_hw_pub_ultra]: RTSP stream connected: 1280x720
+[rtsp @ 0x55a47c2af0] CSeq 4 expected, 0 received.
+[WARN] [1794851105.482385507] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851106.743098969] [rtsp_hw_pub_ultra]: RTSP stream connected: 1280x720
+[rtsp @ 0x55a47c2af0] CSeq 4 expected, 0 received.
+[WARN] [1794851106.845719566] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851108.111202412] [rtsp_hw_pub_ultra]: RTSP stream connected: 1280x720
+[rtsp @ 0x55a47f3a90] CSeq 4 expected, 0 received.
+[WARN] [1794851108.188124683] [rtsp_hw_pub_ultra]: RTSP read failed or timed out; reconnecting
+[INFO] [1794851109.452781743] [rtsp_hw_pub_ultra]: RTSP stream connected: 1280x720
+[INFO] [1794851109.506362046] [rtsp_hw_pub_ultra]: RTSP decode: gray 1.4 Hz, color 0.7 Hz, subscribers gray=2 color=2
+[DEBUG] [1794851109.954267971] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851109946818563
+[DEBUG] [1794851110.067445830] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851109946818563
+[DEBUG] [1794851110.072517296] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110069986229
+[DEBUG] [1794851110.171242585] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110069986229
+[DEBUG] [1794851110.176439467] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110172450077
+[DEBUG] [1794851110.263563210] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110172450077
+[DEBUG] [1794851110.265316698] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110264184164
+[DEBUG] [1794851110.350961118] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110264184164
+[DEBUG] [1794851110.352690981] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110351534239
+[DEBUG] [1794851110.444535026] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110351534239
+[DEBUG] [1794851110.446411305] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110445162688
+[DEBUG] [1794851110.534531083] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110445162688
+[DEBUG] [1794851110.536470070] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110535153787
+[DEBUG] [1794851110.631658925] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110535153787
+[DEBUG] [1794851110.633511288] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110632261213
+[DEBUG] [1794851110.724482963] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110632261213
+[DEBUG] [1794851110.726470367] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110725126376
+[DEBUG] [1794851110.815768762] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110725126376
+[DEBUG] [1794851110.818236245] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110816512507
+[DEBUG] [1794851110.905428530] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110816512507
+[DEBUG] [1794851110.907171809] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110906040150
+[DEBUG] [1794851110.997789112] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110906040150
+[DEBUG] [1794851110.999567684] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851110998331317
+[DEBUG] [1794851111.095281536] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851110998331317
+[DEBUG] [1794851111.097151398] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111095905115
+[DEBUG] [1794851111.190450849] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111095905115
+[DEBUG] [1794851111.192323920] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111191054012
+[DEBUG] [1794851111.281469191] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111191054012
+[DEBUG] [1794851111.283336137] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111282114645
+[DEBUG] [1794851111.374544061] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111282114645
+[DEBUG] [1794851111.376431715] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111375147807
+[DEBUG] [1794851111.465428529] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111375147807
+[DEBUG] [1794851111.467329016] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111465993775
+[DEBUG] [1794851111.565216353] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111465993775
+[DEBUG] [1794851111.567136090] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111565856849
+[DEBUG] [1794851111.655942738] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111565856849
+[DEBUG] [1794851111.657841184] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111656625526
+[DEBUG] [1794851111.743385271] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111656625526
+[DEBUG] [1794851111.747631617] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111744003600
+[DEBUG] [1794851111.842192227] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111744003600
+[DEBUG] [1794851111.844171172] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111842797431
+[DEBUG] [1794851111.933990772] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111842797431
+[DEBUG] [1794851111.938557074] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851111934594810
+[DEBUG] [1794851112.032262232] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851111934594810
+[DEBUG] [1794851112.034194218] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112032867727
+[DEBUG] [1794851112.125523475] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112032867727
+[DEBUG] [1794851112.127465962] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112126182345
+[DEBUG] [1794851112.218594845] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112126182345
+[DEBUG] [1794851112.220551623] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112219201799
+[DEBUG] [1794851112.310201766] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112219201799
+[DEBUG] [1794851112.312090878] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112310807262
+[DEBUG] [1794851112.410597419] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112310807262
+[DEBUG] [1794851112.412487990] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112411242290
+[DEBUG] [1794851112.501637928] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112411242290
+[DEBUG] [1794851112.504102786] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112502575921
+[DEBUG] [1794851112.599243808] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112502575921
+[DEBUG] [1794851112.601202337] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112599898887
+[DEBUG] [1794851112.691430851] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112599898887
+[DEBUG] [1794851112.693324338] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112692083013
+[DEBUG] [1794851112.788190612] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112692083013
+[DEBUG] [1794851112.790097807] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112788821774
+[DEBUG] [1794851112.880517362] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112788821774
+[DEBUG] [1794851112.882446140] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112881160191
+[DEBUG] [1794851112.979540149] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112881160191
+[DEBUG] [1794851112.981559636] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851112980329977
+[DEBUG] [1794851113.074687588] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851112980329977
+[DEBUG] [1794851113.076617825] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851113075363959
+[DEBUG] [1794851113.163378446] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851113075363959
+[DEBUG] [1794851113.168290079] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851113164385564
+[DEBUG] [1794851113.263159562] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851113164385564
+[DEBUG] [1794851113.265150757] [rtsp_hw_pub_ultra.frames]: published_raw stamp_ns=1794851113263794224
+[INFO] [1794851113.291772160] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[DEBUG] [1794851113.354626192] [rtsp_hw_pub_ultra.frames]: published_color stamp_ns=1794851113263794224

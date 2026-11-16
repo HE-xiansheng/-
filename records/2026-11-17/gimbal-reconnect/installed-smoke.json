@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "shutdown_seconds": 0.1947422529992764,
+  "output": "[INFO] [1794852012.190308440] [rtsp_hw_pub_ultra]: Fast DDS profile: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/config/fastdds_large_images.xml\n[tcp @ 0x559387f8e0] Connection to tcp://127.0.0.1:18559?timeout=0 failed: Connection refused\n[WARN] [1794852012.195972277] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying\n[tcp @ 0x559387f8e0] Connection to tcp://127.0.0.1:18559?timeout=0 failed: Connection refused\n[WARN] [1794852013.196740736] [rtsp_hw_pub_ultra]: RTSP connect failed or timed out; retrying\n[INFO] [1794852013.963661576] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n"
+}

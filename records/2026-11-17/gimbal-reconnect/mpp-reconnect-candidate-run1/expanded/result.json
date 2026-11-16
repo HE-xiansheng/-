@@ -1,0 +1,191 @@
+{
+  "passed": false,
+  "completed": true,
+  "candidate": true,
+  "checks": {
+    "stays_alive_without_initial_rtsp": true,
+    "initial_stream": true,
+    "alive_while_source_closed": true,
+    "no_stale_frames_when_closed": true,
+    "reconnect_after_closed_connection": true,
+    "alive_during_stalled_tcp": true,
+    "no_repeated_frames_when_stalled": true,
+    "reconnect_after_stalled_tcp": false,
+    "reconnect_with_new_resolution": false,
+    "same_decoder_process": true,
+    "bounded_shutdown_during_stall": true,
+    "reliable_raw_all_source_stamps": true,
+    "reliable_raw_headers_and_buffers": true,
+    "reliable_raw_stamps_increase": true,
+    "reliable_color_all_source_stamps": false,
+    "reliable_color_headers_and_buffers": true,
+    "reliable_color_stamps_increase": true,
+    "best_effort_raw_all_source_stamps": true,
+    "best_effort_raw_headers_and_buffers": true,
+    "best_effort_raw_stamps_increase": true,
+    "best_effort_color_all_source_stamps": false,
+    "best_effort_color_headers_and_buffers": true,
+    "best_effort_color_stamps_increase": true,
+    "color_uses_decoded_frame_stamp": true,
+    "native_observer_clean_exit": true
+  },
+  "phases": [
+    {
+      "name": "startup unavailable",
+      "start_ns": 26177558121300,
+      "end_ns": 26180565486391,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "initial stream",
+      "start_ns": 26180668022197,
+      "end_ns": 26189690296052,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 141,
+          "sizes": [
+            [
+              1920,
+              1080
+            ]
+          ]
+        },
+        "color": {
+          "messages": 71,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed source",
+      "start_ns": 26189728120796,
+      "end_ns": 26193746191458,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "stream restored",
+      "start_ns": 26193852517405,
+      "end_ns": 26205898207534,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 128,
+          "sizes": [
+            [
+              1920,
+              1080
+            ]
+          ]
+        },
+        "color": {
+          "messages": 63,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "open TCP but stalled",
+      "start_ns": 26205920127886,
+      "end_ns": 26210939126936,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "stalled TCP resumed",
+      "start_ns": 26210961021913,
+      "end_ns": 26219992269874,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "resolution changed",
+      "start_ns": 26221150894319,
+      "end_ns": 26231195153294,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 31,
+          "sizes": [
+            [
+              1280,
+              720
+            ]
+          ]
+        },
+        "color": {
+          "messages": 31,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "source_counts": {
+    "raw": 339,
+    "color": 187
+  },
+  "returncodes": [
+    0,
+    255,
+    0,
+    0,
+    0,
+    0,
+    255,
+    0
+  ],
+  "scope": "synthetic source, actual MPP and native subscribers, localhost domain80; no flight controller or physical gimbal commands"
+}

@@ -3,6 +3,9 @@
 #include <cstdlib>
 #include <fstream>
 #include <stdexcept>
+#include <chrono>
+#include <thread>
+#include <cmath>
 #include <sensor_msgs/msg/image.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/opencv.hpp>
@@ -60,6 +63,7 @@ static void dec_buf_mgr_deinit(MppBufferGroup buf_mgr) {
 // ---- 解码器初始化 / 销毁 ----
 static int send_extradata_to_decoder(DecoderContext *dec) {
     if (!dec->extradata || dec->extradata_sent) return 0;
+    if (dec->packet) mpp_packet_deinit(&dec->packet);
     MPP_RET ret = mpp_packet_init(&dec->packet, dec->extradata, dec->extradata_size);
     if (ret != MPP_OK) { mpp_err("extradata packet init fail\n"); return -1; }
     ret = dec->mpi->decode_put_packet(dec->ctx, dec->packet);
@@ -78,6 +82,7 @@ static int init_decoder(DecoderContext *dec, MppCodingType type, RK_U32 width, R
 
     if (extradata && extradata_size > 0) {
         dec->extradata = (uint8_t*)malloc(extradata_size);
+        if (!dec->extradata) return -1;
         memcpy(dec->extradata, extradata, extradata_size);
         dec->extradata_size = extradata_size;
     }
@@ -90,10 +95,12 @@ static int init_decoder(DecoderContext *dec, MppCodingType type, RK_U32 width, R
     if (dec->buf_mgr) dec->mpi->control(dec->ctx, MPP_DEC_SET_EXT_BUF_GROUP, dec->buf_mgr);
     if (mpp_packet_init(&dec->packet, NULL, 0) != MPP_OK) return -1;
 
-    dec->parser = av_parser_init(AV_CODEC_ID_H264);
+    dec->parser = av_parser_init(type == MPP_VIDEO_CodingHEVC ? AV_CODEC_ID_HEVC : AV_CODEC_ID_H264);
     dec->parser_ctx = avcodec_alloc_context3(NULL);
+    if (!dec->parser || !dec->parser_ctx) return -1;
     if (dec->parser_ctx && extradata && extradata_size > 0) {
         dec->parser_ctx->extradata = (uint8_t*)av_mallocz(extradata_size + AV_INPUT_BUFFER_PADDING_SIZE);
+        if (!dec->parser_ctx->extradata) return -1;
         memcpy(dec->parser_ctx->extradata, extradata, extradata_size);
         dec->parser_ctx->extradata_size = extradata_size;
     }
@@ -145,7 +152,7 @@ static int decode_frame(DecoderContext *dec, uint8_t *data, size_t len,
             int out_size = 0;
             int consumed = av_parser_parse2(dec->parser, dec->parser_ctx, &out_data, &out_size,
                                             parse_data, parse_len, AV_NOPTS_VALUE, AV_NOPTS_VALUE, 0);
-            if (consumed < 0) break;
+            if (consumed < 0 || (consumed == 0 && out_size == 0)) break;
             parse_data += consumed;
             parse_len -= consumed;
             if (out_size > 0) {
@@ -221,46 +228,78 @@ int main(int argc, char **argv) {
     FrameRateGate color_gate(color_hz);
     // RTSP URL is a declared ROS2 parameter; --ros-args is never treated as a URL.
 
-    AVFormatContext *fmt_ctx = NULL;
+    const double connect_timeout_s = nh->declare_parameter("connect_timeout_s", 5.0);
+    const double read_timeout_s = nh->declare_parameter("read_timeout_s", 3.0);
+    const double reconnect_delay_s = nh->declare_parameter("reconnect_delay_s", 1.0);
+    const double frame_timeout_s = nh->declare_parameter("frame_timeout_s", 3.0);
+    for (double value : {connect_timeout_s, read_timeout_s, reconnect_delay_s, frame_timeout_s})
+        if (!std::isfinite(value) || value < 0.1 || value > 60.0)
+            throw std::invalid_argument("RTSP timeouts and reconnect delay must be finite, within [0.1,60] seconds");
+
+    using Clock = std::chrono::steady_clock;
+    auto after = [](double seconds) {
+        return Clock::now() + std::chrono::duration_cast<Clock::duration>(std::chrono::duration<double>(seconds));
+    };
+    struct Deadline { Clock::time_point at; } io_deadline{after(connect_timeout_s)};
+    AVFormatContext *fmt_ctx = nullptr;
     AVPacket *pkt = av_packet_alloc();
-    DecoderContext dec;
+    if (!pkt) throw std::bad_alloc();
+    DecoderContext dec{};
     int video_idx = -1;
-    AVDictionary *opts = NULL;
-
     avformat_network_init();
-    fmt_ctx = avformat_alloc_context();
-    fmt_ctx->interrupt_callback.callback = [](void*) -> int { return rclcpp::ok() ? 0 : 1; };
-    av_dict_set(&opts, "rtsp_transport", "tcp", 0);
-    av_dict_set(&opts, "max_delay", "50000", 0);
-    av_dict_set(&opts, "buffer_size", "512000", 0);
-    av_dict_set(&opts, "fflags", "nobuffer", 0);
-    av_dict_set(&opts, "flags", "low_delay", 0);
-
-    if (avformat_open_input(&fmt_ctx, url.c_str(), NULL, &opts) < 0) {
-        mpp_err("Failed to open RTSP stream\n");
-        return -1;
-    }
-    avformat_find_stream_info(fmt_ctx, NULL);
-
-    for (unsigned i = 0; i < fmt_ctx->nb_streams; i++) {
-        if (fmt_ctx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
-            video_idx = i;
-            break;
+    auto close_stream = [&]() {
+        // Every new connection owns a fresh parser, MPP context and stride state.
+        av_packet_unref(pkt);
+        avformat_close_input(&fmt_ctx);
+        destroy_decoder(&dec);
+        dec = DecoderContext{};
+        video_idx = -1;
+    };
+    auto open_stream = [&]() {
+        io_deadline.at = after(connect_timeout_s);
+        fmt_ctx = avformat_alloc_context();
+        if (!fmt_ctx) return false;
+        fmt_ctx->interrupt_callback = {[](void* opaque) -> int {
+            const auto* deadline = static_cast<Deadline*>(opaque);
+            return !rclcpp::ok() || Clock::now() >= deadline->at;
+        }, &io_deadline};
+        AVDictionary *opts = nullptr;
+        av_dict_set(&opts, "rtsp_transport", "tcp", 0);
+        av_dict_set(&opts, "max_delay", "50000", 0);
+        av_dict_set(&opts, "buffer_size", "512000", 0);
+        av_dict_set(&opts, "fflags", "nobuffer", 0);
+        av_dict_set(&opts, "flags", "low_delay", 0);
+        // Live RTSP already provides codec parameters in SDP. Bound probing so
+        // it finishes before the connection deadline on a healthy stream.
+        av_dict_set(&opts, "analyzeduration", "1000000", 0);
+        const int opened = avformat_open_input(&fmt_ctx, url.c_str(), nullptr, &opts);
+        av_dict_free(&opts);
+        if (opened < 0 || avformat_find_stream_info(fmt_ctx, nullptr) < 0 ||
+            !rclcpp::ok() || Clock::now() >= io_deadline.at ||
+            (fmt_ctx->pb && fmt_ctx->pb->error < 0)) {
+            // FFmpeg may return partial metadata after an interrupt. Such a
+            // context has a latched IO error and must not enter the read loop.
+            close_stream(); return false;
         }
-    }
-    if (video_idx == -1) { mpp_err("No video stream\n"); return -1; }
-
-    AVCodecParameters *cp = fmt_ctx->streams[video_idx]->codecpar;
-    MppCodingType type = (cp->codec_id == AV_CODEC_ID_H265) ? MPP_VIDEO_CodingHEVC : MPP_VIDEO_CodingAVC;
-
-    if (init_decoder(&dec, type, cp->width, cp->height, cp->extradata, cp->extradata_size)) {
-        mpp_err("Decoder init failed\n");
-        return -1;
-    }
-    send_extradata_to_decoder(&dec);
-
-    RCLCPP_INFO(nh->get_logger(), "rtsp_hw_pub_ultra running: %s -> /rtsp_cam/image_raw (mono8), color %.1f Hz @ %d px",
-             url.c_str(), color_hz, color_width);
+        for (unsigned i=0; i<fmt_ctx->nb_streams; ++i)
+            if (fmt_ctx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
+                video_idx = static_cast<int>(i); break;
+            }
+        if (video_idx < 0) { close_stream(); return false; }
+        AVCodecParameters *cp = fmt_ctx->streams[video_idx]->codecpar;
+        if (cp->codec_id != AV_CODEC_ID_H264 && cp->codec_id != AV_CODEC_ID_HEVC) {
+            RCLCPP_WARN(nh->get_logger(), "RTSP stream is not H264/H265");
+            close_stream(); return false;
+        }
+        const MppCodingType type = cp->codec_id == AV_CODEC_ID_HEVC ? MPP_VIDEO_CodingHEVC : MPP_VIDEO_CodingAVC;
+        if (init_decoder(&dec, type, cp->width, cp->height, cp->extradata, cp->extradata_size) ||
+            send_extradata_to_decoder(&dec)) {
+            close_stream(); return false;
+        }
+        color_gate = FrameRateGate(color_hz);
+        RCLCPP_INFO(nh->get_logger(), "RTSP stream connected: %dx%d", cp->width, cp->height);
+        return true;
+    };
 
     // 仅启用子logger的debug时记录真实发布消息源戳，便于区分订阅漏帧与重写。
     const auto frame_logger = nh->get_logger().get_child("frames");
@@ -269,12 +308,35 @@ int main(int argc, char **argv) {
 
     rclcpp::executors::SingleThreadedExecutor executor;
     executor.add_node(nh);
+    auto next_connect = Clock::now();
+    auto last_frame = Clock::now();
     while (rclcpp::ok()) {
-        if (av_read_frame(fmt_ctx, pkt) < 0) { usleep(10000); continue; }
+        if (!fmt_ctx) {
+            executor.spin_some();
+            if (Clock::now() < next_connect) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                continue;
+            }
+            if (!open_stream()) {
+                if (rclcpp::ok()) RCLCPP_WARN(nh->get_logger(), "RTSP connect failed or timed out; retrying");
+                next_connect = after(reconnect_delay_s);
+                continue;
+            }
+            last_frame = Clock::now();
+        }
+        io_deadline.at = after(read_timeout_s);
+        if (av_read_frame(fmt_ctx, pkt) < 0) {
+            if (rclcpp::ok()) RCLCPP_WARN(nh->get_logger(), "RTSP read failed or timed out; reconnecting");
+            close_stream(); next_connect = after(reconnect_delay_s); continue;
+        }
         if (pkt->stream_index == video_idx) {
+            const auto process_begin = Clock::now();
             void *data = NULL;
             int fw = 0, fh = 0;
             if (decode_frame(&dec, pkt->data, pkt->size, &data, &fw, &fh) == 1 && dec.frame) {
+                last_frame = Clock::now();
+                if (!rclcpp::ok()) break;
+                const auto decoded_at = Clock::now();
                 const rclcpp::Time stamp = nh->now();
                 std_msgs::msg::Header header;
                 header.stamp = stamp;
@@ -311,6 +373,7 @@ int main(int argc, char **argv) {
                         static_cast<long long>(rclcpp::Time(message->header.stamp).nanoseconds()));
                     ++gray_frames;
                 }
+                const auto gray_done = Clock::now();
                 if (plane && color_hz > 0 && color_pub->get_subscription_count() > 0 &&
                     color_gate.ready(FrameRateGate::Clock::now())) {
                     const int cw = std::max(16, std::min<int>(color_width, int(width)));
@@ -319,9 +382,18 @@ int main(int argc, char **argv) {
                     cv::Mat uv_full(ver_stride / 2, hor_stride / 2, CV_8UC2,
                                     (uint8_t*)plane + size_t(hor_stride) * ver_stride);
                     cv::Mat y_small, uv_small, bgr;
-                    cv::resize(y_full(cv::Rect(0, 0, width, height)), y_small,
+                    cv::Mat y_roi = y_full(cv::Rect(0, 0, width, height));
+                    cv::Mat uv_roi = uv_full(cv::Rect(0, 0, width / 2, height / 2));
+                    // Fractional INTER_AREA scaling repeatedly reads source pixels.
+                    // MPP DMA memory is expensive for those accesses: copy once to
+                    // cached storage, preserving the existing interpolation result.
+                    if (width % cw || height % ch) {
+                        y_roi = y_roi.clone();
+                        uv_roi = uv_roi.clone();
+                    }
+                    cv::resize(y_roi, y_small,
                                cv::Size(cw, ch), 0, 0, cv::INTER_AREA);
-                    cv::resize(uv_full(cv::Rect(0, 0, width / 2, height / 2)), uv_small,
+                    cv::resize(uv_roi, uv_small,
                                cv::Size(cw / 2, ch / 2), 0, 0, cv::INTER_AREA);
                     cv::cvtColorTwoPlane(y_small, uv_small, bgr, cv::COLOR_YUV2BGR_NV12);
                     const auto color_message = cv_bridge::CvImage(header, "bgr8", bgr).toImageMsg();
@@ -330,11 +402,19 @@ int main(int argc, char **argv) {
                         static_cast<long long>(rclcpp::Time(color_message->header.stamp).nanoseconds()));
                     ++color_frames;
                 }
+                RCLCPP_DEBUG(frame_logger, "frame_work width=%u decode_ms=%.3f gray_ms=%.3f color_ms=%.3f",
+                    width, std::chrono::duration<double, std::milli>(decoded_at-process_begin).count(),
+                    std::chrono::duration<double, std::milli>(gray_done-decoded_at).count(),
+                    std::chrono::duration<double, std::milli>(Clock::now()-gray_done).count());
                 mpp_frame_deinit(&dec.frame);
                 dec.frame = NULL;
             }
         }
         av_packet_unref(pkt);
+        if (std::chrono::duration<double>(Clock::now() - last_frame).count() > frame_timeout_s) {
+            RCLCPP_WARN(nh->get_logger(), "RTSP decoder produced no frame within timeout; reconnecting");
+            close_stream(); next_connect = after(reconnect_delay_s);
+        }
         if (rclcpp::ok()) executor.spin_some();
         const double elapsed = (nh->now() - rate_start).seconds();
         if (elapsed >= 10.0) {
@@ -346,9 +426,8 @@ int main(int argc, char **argv) {
         }
     }
 
-    avformat_close_input(&fmt_ctx);
+    close_stream();
     av_packet_free(&pkt);
-    destroy_decoder(&dec);
     avformat_network_deinit();
     rclcpp::shutdown();
     return 0;

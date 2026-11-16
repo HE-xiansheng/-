@@ -1,0 +1,120 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found OpenCV: /usr (found version "4.5.4") found components: core imgproc 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for modules 'libavformat;libavcodec;libavutil'
+--   Found libavformat, version 58.76.100
+--   Found libavcodec, version 58.134.100
+--   Found libavutil, version 56.70.100
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/mpp-reconnect-check/candidate-build
+[ 25%] Building CXX object CMakeFiles/frame_rate_gate_test.dir/test/frame_rate_gate_test.cpp.o
+[ 50%] Building CXX object CMakeFiles/rtsp_hw_pub_ultra.dir/src/rtsp_hw_pub_ultra.cpp.o
+[ 75%] Linking CXX executable frame_rate_gate_test
+[ 75%] Built target frame_rate_gate_test
+[100%] Linking CXX executable rtsp_hw_pub_ultra
+[100%] Built target rtsp_hw_pub_ultra
+Internal ctest changing into directory: /tmp/mpp-reconnect-check/candidate-build
+Test project /tmp/mpp-reconnect-check/candidate-build
+    Start 1: frame_rate_gate_jitter
+1/1 Test #1: frame_rate_gate_jitter ...........   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec
+-- Install configuration: ""
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/lib/rtsp_test/rtsp_hw_pub_ultra
+-- Set runtime path of "/tmp/mpp-reconnect-check/candidate-install/lib/rtsp_test/rtsp_hw_pub_ultra" to ""
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/config
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/config/fastdds_large_images.xml
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/ament_index/resource_index/package_run_dependencies/rtsp_test
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/ament_index/resource_index/parent_prefix_path/rtsp_test
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/environment/ament_prefix_path.sh
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/environment/ament_prefix_path.dsv
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/environment/path.sh
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/environment/path.dsv
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/local_setup.bash
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/local_setup.sh
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/local_setup.zsh
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/local_setup.dsv
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/package.dsv
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/ament_index/resource_index/packages/rtsp_test
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/cmake/rtsp_testConfig.cmake
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/cmake/rtsp_testConfig-version.cmake
+-- Installing: /tmp/mpp-reconnect-check/candidate-install/share/rtsp_test/package.xml
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/mpp-reconnect-check/observer-build
+[ 50%] Building CXX object CMakeFiles/observer.dir/observer.cpp.o
+[100%] Linking CXX executable observer
+[100%] Built target observer
+{"name": "startup silent RTSP listener", "start_ns": 26981848738801, "end_ns": 26985860689880, "decoder_alive": true, "streams": {"raw": {"messages": 0, "tail_3s_messages": 0, "sizes": []}, "color": {"messages": 0, "tail_3s_messages": 0, "sizes": []}}}
+{"name": "initial stream", "start_ns": 26985983847629, "end_ns": 26995014354137, "decoder_alive": true, "streams": {"raw": {"messages": 182, "tail_3s_messages": 82, "sizes": [[1920, 1080]]}, "color": {"messages": 91, "tail_3s_messages": 41, "sizes": [[960, 540]]}}}
+{"name": "closed source", "start_ns": 26995038790888, "end_ns": 26999051775835, "decoder_alive": true, "streams": {"raw": {"messages": 0, "tail_3s_messages": 0, "sizes": []}, "color": {"messages": 0, "tail_3s_messages": 0, "sizes": []}}}
+{"name": "stream restored", "start_ns": 26999172244978, "end_ns": 27011172290208, "decoder_alive": true, "streams": {"raw": {"messages": 273, "tail_3s_messages": 77, "sizes": [[1920, 1080]]}, "color": {"messages": 137, "tail_3s_messages": 39, "sizes": [[960, 540]]}}}
+{"name": "open TCP but stalled", "start_ns": 27011196229171, "end_ns": 27016211671829, "decoder_alive": true, "streams": {"raw": {"messages": 0, "tail_3s_messages": 0, "sizes": []}, "color": {"messages": 0, "tail_3s_messages": 0, "sizes": []}}}
+{"name": "stalled TCP resumed", "start_ns": 27016226130731, "end_ns": 27034232272951, "decoder_alive": true, "streams": {"raw": {"messages": 619, "tail_3s_messages": 89, "sizes": [[1920, 1080]]}, "color": {"messages": 269, "tail_3s_messages": 44, "sizes": [[960, 540]]}}}
+{"name": "resolution changed", "start_ns": 27035467977985, "end_ns": 27045513939234, "decoder_alive": true, "streams": {"raw": {"messages": 221, "tail_3s_messages": 73, "sizes": [[1280, 720]]}, "color": {"messages": 111, "tail_3s_messages": 37, "sizes": [[960, 540]]}}}
+{"passed": true, "checks": {"stays_alive_without_initial_rtsp": true, "initial_stream": true, "alive_while_source_closed": true, "no_stale_frames_when_closed": true, "reconnect_after_closed_connection": true, "alive_during_stalled_tcp": true, "no_repeated_frames_when_stalled": true, "reconnect_after_stalled_tcp": true, "reconnect_with_new_resolution": true, "same_decoder_process": true, "publisher_drained_before_shutdown": true, "bounded_shutdown_during_stall": true, "reliable_raw_all_source_stamps": true, "reliable_raw_headers_and_buffers": true, "reliable_raw_stamps_increase": true, "reliable_color_all_source_stamps": true, "reliable_color_headers_and_buffers": true, "reliable_color_stamps_increase": true, "best_effort_raw_all_source_stamps": true, "best_effort_raw_headers_and_buffers": true, "best_effort_raw_stamps_increase": true, "best_effort_color_all_source_stamps": true, "best_effort_color_headers_and_buffers": true, "best_effort_color_stamps_increase": true, "color_uses_decoded_frame_stamp": true, "native_observer_clean_exit": true}}

@@ -1,0 +1,63 @@
+2026/11/17 01:48:58 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:48:58 INF configuration loaded from /tmp/mpp-reconnect-check/relay.yml
+2026/11/17 01:48:58 INF [path gimbal] [RTSP source] started
+2026/11/17 01:48:58 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 01:48:58 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:48:59 INF [RTSP] [conn 127.0.0.1:39126] opened
+2026/11/17 01:48:59 INF [RTSP] [session 5c1d574c] created by 127.0.0.1:39126
+2026/11/17 01:48:59 INF [RTSP] [session 5c1d574c] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:49:16 INF [RTSP] [session 5c1d574c] destroyed: not in use
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:59662] opened
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:39126] closed: EOF
+2026/11/17 01:49:16 ERR [path gimbal] [RTSP source] TCP timeout
+2026/11/17 01:49:16 INF [RTSP] [session 2d218c6d] created by 127.0.0.1:59662
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:59662] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:16 INF [RTSP] [session 2d218c6d] destroyed: not in use
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:37972] opened
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:37972] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:37976] opened
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:37976] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:37986] opened
+2026/11/17 01:49:16 INF [RTSP] [conn 127.0.0.1:37986] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:37990] opened
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:37990] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:38000] opened
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:38000] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:38008] opened
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:38008] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:17 INF [RTSP] [conn 127.0.0.1:38020] opened
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38020] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38026] opened
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38026] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38034] opened
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38034] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38050] opened
+2026/11/17 01:49:18 INF [RTSP] [conn 127.0.0.1:38050] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38058] opened
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38058] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38060] opened
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38060] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38074] opened
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38074] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38076] opened
+2026/11/17 01:49:19 INF [RTSP] [conn 127.0.0.1:38076] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38084] opened
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38084] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38096] opened
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38096] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38098] opened
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38098] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38104] opened
+2026/11/17 01:49:20 INF [RTSP] [conn 127.0.0.1:38104] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:21 INF [RTSP] [conn 127.0.0.1:38110] opened
+2026/11/17 01:49:21 INF [RTSP] [conn 127.0.0.1:38110] closed: no stream is available on path 'gimbal'
+2026/11/17 01:49:21 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:49:21 INF [RTSP] [conn 127.0.0.1:38116] opened
+2026/11/17 01:49:21 INF [RTSP] [session 60b77b27] created by 127.0.0.1:38116
+2026/11/17 01:49:21 INF [RTSP] [session 60b77b27] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:49:25 INF shutting down gracefully
+2026/11/17 01:49:25 INF [RTSP] closing
+2026/11/17 01:49:25 INF [RTSP] [conn 127.0.0.1:38116] closed: terminated
+2026/11/17 01:49:25 INF [RTSP] [session 60b77b27] destroyed: terminated
+2026/11/17 01:49:25 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 01:49:25 INF waiting for running hooks

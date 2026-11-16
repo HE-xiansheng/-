@@ -1,0 +1,24 @@
+2026/11/17 01:44:22 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:44:22 INF configuration loaded from /tmp/mpp-reconnect-check/relay.yml
+2026/11/17 01:44:22 INF [path gimbal] [RTSP source] started
+2026/11/17 01:44:22 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 01:44:22 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:44:22 INF [RTSP] [conn 127.0.0.1:53420] opened
+2026/11/17 01:44:22 INF [RTSP] [session 3032c399] created by 127.0.0.1:53420
+2026/11/17 01:44:22 INF [RTSP] [session 3032c399] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:23 INF [RTSP] [conn 127.0.0.1:53420] closed: received unexpected response
+2026/11/17 01:44:23 INF [RTSP] [session 3032c399] destroyed: not in use
+2026/11/17 01:44:23 INF [RTSP] [conn 127.0.0.1:53422] opened
+2026/11/17 01:44:23 INF [RTSP] [session 5799544a] created by 127.0.0.1:53422
+2026/11/17 01:44:23 INF [RTSP] [session 5799544a] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:24 INF [RTSP] [conn 127.0.0.1:53422] closed: received unexpected response
+2026/11/17 01:44:24 INF [RTSP] [session 5799544a] destroyed: not in use
+2026/11/17 01:44:25 INF [RTSP] [conn 127.0.0.1:54942] opened
+2026/11/17 01:44:25 INF [RTSP] [session 32a2db4f] created by 127.0.0.1:54942
+2026/11/17 01:44:25 INF [RTSP] [session 32a2db4f] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:44:31 INF shutting down gracefully
+2026/11/17 01:44:31 INF [RTSP] closing
+2026/11/17 01:44:31 INF [RTSP] [conn 127.0.0.1:54942] closed: terminated
+2026/11/17 01:44:31 INF [RTSP] [session 32a2db4f] destroyed: terminated
+2026/11/17 01:44:31 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 01:44:31 INF waiting for running hooks

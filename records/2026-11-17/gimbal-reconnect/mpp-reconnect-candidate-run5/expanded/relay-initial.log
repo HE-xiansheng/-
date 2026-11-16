@@ -1,0 +1,14 @@
+2026/11/17 01:55:50 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:55:50 INF configuration loaded from /tmp/mpp-reconnect-check/relay.yml
+2026/11/17 01:55:50 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 01:55:50 INF [path gimbal] [RTSP source] started
+2026/11/17 01:55:50 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 01:55:51 INF [RTSP] [conn 127.0.0.1:60188] opened
+2026/11/17 01:55:51 INF [RTSP] [session 87089710] created by 127.0.0.1:60188
+2026/11/17 01:55:51 INF [RTSP] [session 87089710] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 01:56:00 INF shutting down gracefully
+2026/11/17 01:56:00 INF [RTSP] closing
+2026/11/17 01:56:00 INF [RTSP] [conn 127.0.0.1:60188] closed: terminated
+2026/11/17 01:56:00 INF [RTSP] [session 87089710] destroyed: terminated
+2026/11/17 01:56:00 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 01:56:00 INF waiting for running hooks

@@ -1,0 +1,23 @@
+2026/11/17 01:42:44 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:42:44 INF configuration loaded from /tmp/mpp-reconnect-check/upstream.yml
+2026/11/17 01:42:44 INF [RTSP] started with listeners on 127.0.0.1:18555 (TCP/RTSP)
+2026/11/17 01:42:44 INF [RTSP] [conn 127.0.0.1:54708] opened
+2026/11/17 01:42:45 INF [RTSP] [session c767f457] created by 127.0.0.1:54708
+2026/11/17 01:42:45 INF [path upstream] stream is available and online, 1 track (H264)
+2026/11/17 01:42:45 INF [RTSP] [session c767f457] is publishing to path 'upstream'
+2026/11/17 01:42:45 INF [path upstream] RTP packets are too big (1460 > 1188), remuxing them into smaller ones
+2026/11/17 01:42:45 INF [RTSP] [conn 127.0.0.1:54716] opened
+2026/11/17 01:42:45 INF [RTSP] [session 0b615fe2] created by 127.0.0.1:54716
+2026/11/17 01:42:45 INF [RTSP] [session 0b615fe2] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:42:54 INF [RTSP] [session 0b615fe2] destroyed: torn down by 127.0.0.1:54716
+2026/11/17 01:42:54 INF [RTSP] [conn 127.0.0.1:54716] closed: EOF
+2026/11/17 01:42:58 INF [RTSP] [conn 127.0.0.1:37096] opened
+2026/11/17 01:42:58 INF [RTSP] [session 77d08fc6] created by 127.0.0.1:37096
+2026/11/17 01:42:58 INF [RTSP] [session 77d08fc6] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:43:10 INF [RTSP] [conn 127.0.0.1:37096] closed: EOF
+2026/11/17 01:43:10 INF [RTSP] [session 77d08fc6] destroyed: torn down by 127.0.0.1:37096
+2026/11/17 01:43:11 INF [RTSP] [session c767f457] destroyed: torn down by 127.0.0.1:54708
+2026/11/17 01:43:11 INF [RTSP] [conn 127.0.0.1:54708] closed: EOF
+2026/11/17 01:43:11 INF shutting down gracefully
+2026/11/17 01:43:11 INF [RTSP] closing
+2026/11/17 01:43:11 INF waiting for running hooks

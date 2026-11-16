@@ -1,0 +1,98 @@
+{
+  "passed": false,
+  "completed": true,
+  "candidate": false,
+  "checks": {
+    "initial_stream": true,
+    "alive_while_source_closed": true,
+    "no_stale_frames_when_closed": true,
+    "reconnect_after_closed_connection": false,
+    "reliable_raw_all_source_stamps": true,
+    "reliable_raw_headers_and_buffers": true,
+    "reliable_raw_stamps_increase": true,
+    "reliable_color_all_source_stamps": true,
+    "reliable_color_headers_and_buffers": true,
+    "reliable_color_stamps_increase": true,
+    "best_effort_raw_all_source_stamps": true,
+    "best_effort_raw_headers_and_buffers": true,
+    "best_effort_raw_stamps_increase": true,
+    "best_effort_color_all_source_stamps": true,
+    "best_effort_color_headers_and_buffers": true,
+    "best_effort_color_stamps_increase": true,
+    "color_uses_decoded_frame_stamp": true,
+    "native_observer_clean_exit": true
+  },
+  "phases": [
+    {
+      "name": "initial stream",
+      "start_ns": 26083508580582,
+      "end_ns": 26092518193981,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 202,
+          "sizes": [
+            [
+              1920,
+              1080
+            ]
+          ]
+        },
+        "color": {
+          "messages": 101,
+          "sizes": [
+            [
+              960,
+              540
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "closed source",
+      "start_ns": 26092567562647,
+      "end_ns": 26096577361907,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "sizes": []
+        }
+      }
+    },
+    {
+      "name": "stream restored",
+      "start_ns": 26096685497008,
+      "end_ns": 26108721838867,
+      "decoder_alive": true,
+      "streams": {
+        "raw": {
+          "messages": 0,
+          "sizes": []
+        },
+        "color": {
+          "messages": 0,
+          "sizes": []
+        }
+      }
+    }
+  ],
+  "source_counts": {
+    "raw": 215,
+    "color": 107
+  },
+  "returncodes": [
+    0,
+    255,
+    0,
+    0,
+    0,
+    0
+  ],
+  "scope": "synthetic source, actual MPP and native subscribers, localhost domain80; no flight controller or physical gimbal commands"
+}
