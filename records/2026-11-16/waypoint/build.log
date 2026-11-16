@@ -1,0 +1,27 @@
+Starting >>> waypoint_mission
+--- stderr: waypoint_mission
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_mission.cpp:20:
+/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_mission.cpp: In member function ‘void waypoint_mission::MissionNode::try_start(double, bool, bool, bool, bool)’:
+/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_mission.cpp:860:117: error: ‘using element_type = class rclcpp::Node’ {aka ‘class rclcpp::Node’} has no member named ‘resolve_topic_name’
+  860 |         if (!odom_fresh) { RCLCPP_ERROR_STREAM(rclcpp::get_logger("waypoint_mission"), "start rejected: " << node_->resolve_topic_name("/Odometry") << " stale; check FAST-LIO and the bridge"); return; }
+      |                                                                                                                     ^~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/waypoint_mission.dir/build.make:76: CMakeFiles/waypoint_mission.dir/src/waypoint_mission.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/waypoint_mission.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< waypoint_mission [28.8s, exited with code 2]
+
+Summary: 0 packages finished [29.1s]
+  1 package failed: waypoint_mission
+  1 package had stderr output: waypoint_mission

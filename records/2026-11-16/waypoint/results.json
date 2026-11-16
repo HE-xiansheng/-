@@ -1,0 +1,374 @@
+[
+  {
+    "name": "source mission parses with slot6/right-forward",
+    "passed": true
+  },
+  {
+    "name": "parser rejects NaN hold",
+    "passed": true
+  },
+  {
+    "name": "parser rejects trailing yaw",
+    "passed": true
+  },
+  {
+    "name": "parser rejects NaN yaw",
+    "passed": true
+  },
+  {
+    "name": "right-forward converted to local ENU",
+    "passed": true
+  },
+  {
+    "name": "auto_photo_return_land observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "idle no commands or requests",
+    "passed": true
+  },
+  {
+    "name": "auto path requests OFFBOARD then ARM",
+    "passed": true
+  },
+  {
+    "name": "native photo saved and correlated",
+    "passed": true
+  },
+  {
+    "name": "return then landing requested",
+    "passed": true
+  },
+  {
+    "name": "AUTO.LAND stops setpoints",
+    "passed": true
+  },
+  {
+    "name": "landing disarm reaches DONE",
+    "passed": true
+  },
+  {
+    "name": "continuous control while task active",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "photo rejects stale",
+    "passed": true
+  },
+  {
+    "name": "photo rejects future",
+    "passed": true
+  },
+  {
+    "name": "photo rejects dropout",
+    "passed": true
+  },
+  {
+    "name": "bench observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "bench gate has no service or setpoint",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "manual observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "manual airborne skips arm and takeoff",
+    "passed": true
+  },
+  {
+    "name": "pilot RC cancel stops outputs",
+    "passed": true
+  },
+  {
+    "name": "cancel sends no late service requests",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "stale_pose observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "stale_pose first active",
+    "passed": true
+  },
+  {
+    "name": "stale_pose aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "stale_pose no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "future_pose observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "future_pose first active",
+    "passed": true
+  },
+  {
+    "name": "future_pose aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "future_pose no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "zero_pose_stamp observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "zero_pose_stamp first active",
+    "passed": true
+  },
+  {
+    "name": "zero_pose_stamp aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "zero_pose_stamp no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "negative_pose_stamp observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "negative_pose_stamp first active",
+    "passed": true
+  },
+  {
+    "name": "negative_pose_stamp aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "negative_pose_stamp no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "invalid_pose_nsec observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "invalid_pose_nsec first active",
+    "passed": true
+  },
+  {
+    "name": "invalid_pose_nsec aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "invalid_pose_nsec no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "frame_change observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "frame_change first active",
+    "passed": true
+  },
+  {
+    "name": "frame_change aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "frame_change no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "nan_pose observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "nan_pose first active",
+    "passed": true
+  },
+  {
+    "name": "nan_pose aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "nan_pose no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "stale_odom observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "stale_odom first active",
+    "passed": true
+  },
+  {
+    "name": "stale_odom aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "stale_odom no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "stale_rc observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "stale_rc first active",
+    "passed": true
+  },
+  {
+    "name": "stale_rc aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "stale_rc no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "rssi_zero observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "rssi_zero first active",
+    "passed": true
+  },
+  {
+    "name": "rssi_zero aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "rssi_zero no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "stale_state observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "stale_state first active",
+    "passed": true
+  },
+  {
+    "name": "stale_state aborts and stops",
+    "passed": true
+  },
+  {
+    "name": "stale_state no reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "selected on startup cannot start task",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "right_forward_motion observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "right maps to negative ENU y with bounded speed",
+    "passed": true
+  },
+  {
+    "name": "pilot mode loss stops output",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "reject_mode observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "mode rejection retries without arming",
+    "passed": true
+  },
+  {
+    "name": "cancel rejected mode stops output",
+    "passed": true
+  },
+  {
+    "name": "cancel clears retries",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  },
+  {
+    "name": "all commands finite and ROS ENU frame",
+    "passed": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "pending_service observes ready baseline before edge",
+    "passed": true
+  },
+  {
+    "name": "unanswered service times out and retries",
+    "passed": true
+  },
+  {
+    "name": "setpoints continue during unanswered service",
+    "passed": true
+  },
+  {
+    "name": "RC cancels while service pending",
+    "passed": true
+  },
+  {
+    "name": "late service responses cannot rearm or reclaim",
+    "passed": true
+  },
+  {
+    "name": "normal node exit",
+    "passed": true
+  }
+]

@@ -1,0 +1,7 @@
+PASS pending_service observes ready baseline before edge
+PASS unanswered service times out and retries
+PASS setpoints continue during unanswered service
+PASS RC cancels while service pending
+PASS late service responses cannot rearm or reclaim
+PASS normal node exit
+{"passed": 6, "total": 6}

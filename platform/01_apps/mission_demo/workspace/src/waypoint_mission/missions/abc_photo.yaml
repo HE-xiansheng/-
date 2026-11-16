@@ -1,0 +1,73 @@
+# 上游航点示例；遥控触发配置沿用本机。
+mission:
+  name: abc_photo
+  frame: x_right_y_forward
+  takeoff_z: 1.0
+  max_speed: 0.5
+  max_z_speed: 0.25
+  max_yaw_rate_deg: 25
+  arrival_tolerance: 0.15
+  z_tolerance: 0.1
+  yaw_tolerance: 0.15
+  stable_seconds: 0.6
+  leg_timeout: 30.0
+  mission_timeout: 300.0
+  pose_timeout: 0.5
+  align_timeout: 15.0
+  settle_timeout: 10.0
+  photo_timeout: 8.0
+  gimbal_settle: 1.0
+  gimbal_timeout: 8.0
+  photo_required: false
+  gimbal_required: false
+  return_to_start: false
+  auto_land: true
+  geofence_radius: 5.0
+  min_z: 0.2
+  max_z: 3.0
+  rc:
+    channel: 5
+    offboard_slot: 6
+    min: 1075.0
+    trim: 1494.0
+    max: 1913.0
+    deadzone: 10.0
+    reversed: false
+    timeout: 0.5
+    off_hold_seconds: 0.3
+    on_hold_seconds: 0.2
+    ready_mode: POSCTL
+  waypoints:
+  - name: A
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    yaw: hold
+    hold: 1.0
+  - name: B
+    x: 0.0
+    y: 1.0
+    z: 1.0
+    yaw: hold
+    hold: 2.0
+    photo: true
+    gimbal_pitch: -90
+    gimbal_yaw: 0
+  - name: C
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    yaw: hold
+    hold: 1.0
+  - name: D
+    x: 1.0
+    y: 0.0
+    z: 1.0
+    yaw: hold
+    hold: 1.0
+  - name: D
+    x: 0.0
+    y: 0.0
+    z: 1.0
+    yaw: hold
+    hold: 1.0

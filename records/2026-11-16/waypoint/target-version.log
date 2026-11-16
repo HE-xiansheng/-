@@ -1,0 +1,11 @@
+[master 6357385] Port-native-ROS2-waypoint-and-correlated-photo-capture
+ Date: Mon Nov 16 20:30:54 2026 +0800
+ 8 files changed, 2243 insertions(+)
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/CMakeLists.txt
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/launch/waypoint_mission.launch.py
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/missions/abc_photo.yaml
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/package.xml
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/src/gcu_control.c
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/src/gcu_control.h
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_mission.cpp
+ create mode 100644 01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_photo.cpp

@@ -1,0 +1,33 @@
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'mission_file':
+        no description given
+        (default: '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/waypoint_mission/share/waypoint_mission/missions/abc_photo.yaml')
+
+    'dry_run':
+        no description given
+        (default: 'false')
+
+    'bench_mode':
+        no description given
+        (default: 'false')
+
+    'start_camera':
+        no description given
+        (default: 'false')
+
+    'start_photo':
+        no description given
+        (default: 'true')
+
+    'odom_topic':
+        no description given
+        (default: '/factory_fastlio/odometry')
+
+    'photo_dir':
+        no description given
+        (default: '/tmp/waypoint_mission/photos')
+
+    'log_dir':
+        no description given
+        (default: '/tmp/waypoint_mission/logs')

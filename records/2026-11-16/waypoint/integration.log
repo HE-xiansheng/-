@@ -1,0 +1,66 @@
+PASS source mission parses with slot6/right-forward
+PASS parser rejects NaN hold
+PASS parser rejects trailing yaw
+PASS parser rejects NaN yaw
+PASS right-forward converted to local ENU
+PASS idle no commands or requests
+PASS auto path requests OFFBOARD then ARM
+PASS native photo saved and correlated
+PASS return then landing requested
+PASS AUTO.LAND stops setpoints
+PASS landing disarm reaches DONE
+PASS continuous control while task active
+PASS normal node exit
+PASS photo rejects stale
+PASS photo rejects future
+PASS photo rejects dropout
+PASS bench gate has no service or setpoint
+PASS normal node exit
+PASS manual airborne skips arm and takeoff
+PASS pilot RC cancel stops outputs
+PASS cancel sends no late service requests
+PASS normal node exit
+PASS stale_pose first active
+PASS stale_pose aborts and stops
+PASS stale_pose no reclaim
+PASS normal node exit
+PASS future_pose first active
+PASS future_pose aborts and stops
+PASS future_pose no reclaim
+PASS normal node exit
+PASS frame_change first active
+PASS frame_change aborts and stops
+PASS frame_change no reclaim
+PASS normal node exit
+PASS nan_pose first active
+PASS nan_pose aborts and stops
+PASS nan_pose no reclaim
+PASS normal node exit
+PASS stale_odom first active
+PASS stale_odom aborts and stops
+PASS stale_odom no reclaim
+PASS normal node exit
+FAIL stale_rc first active
+PASS stale_rc aborts and stops
+FAIL stale_rc no reclaim
+PASS normal node exit
+PASS rssi_zero first active
+PASS rssi_zero aborts and stops
+PASS rssi_zero no reclaim
+PASS normal node exit
+PASS stale_state first active
+PASS stale_state aborts and stops
+PASS stale_state no reclaim
+PASS normal node exit
+PASS selected on startup cannot start task
+PASS normal node exit
+PASS right maps to negative ENU y with bounded speed
+PASS pilot mode loss stops output
+PASS normal node exit
+PASS mode rejection retries without arming
+PASS cancel rejected mode stops output
+PASS cancel clears retries
+PASS normal node exit
+PASS normal node exit
+PASS all commands finite and ROS ENU frame
+{"passed": 63, "total": 65}
