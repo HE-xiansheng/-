@@ -1,0 +1,11 @@
+PASS subscription_1
+PASS duplicates_do_not_advance_initialization
+PASS first_process_graceful_exit
+PASS subscription_2
+FAIL initialization_exactly_100_unique_samples
+Traceback (most recent call last):
+  File "/tmp/gcs-localization-check/test_pose_relay_ros2.py", line 63, in <module>
+    check('initialization_exactly_100_unique_samples',bool(received) and sent[nanoseconds(received[0])]==99)
+  File "/tmp/gcs-localization-check/test_pose_relay_ros2.py", line 17, in check
+    checks[name]=bool(value);print(('PASS ' if value else 'FAIL ')+name,flush=True);assert value,name
+AssertionError: initialization_exactly_100_unique_samples

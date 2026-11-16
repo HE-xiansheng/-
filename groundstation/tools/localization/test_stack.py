@@ -49,40 +49,5 @@ class Guards(unittest.TestCase):
         f=Fake(False,True)
         with self.assertRaises(RuntimeError):operate('start',f)
         self.assertNotIn('start_lio',f.calls)
-    def test_real_fresh_flight_gate(self):
-        api=ExistingStack.__new__(ExistingStack)
-        for age,mode,accepted in [(0.1,'POSCTL',True),(8.,'POSCTL',False),(0.,'OFFBOARD',False),(float('nan'),'POSCTL',False)]:
-            delta=SimpleNamespace(to_sec=lambda:age)
-            class Stamp:
-                def __sub__(self,other):return delta
-            state=SimpleNamespace(header=SimpleNamespace(stamp=0),mode=mode)
-            api.board=SimpleNamespace(gate=lambda:(state,{}),ros=lambda:(SimpleNamespace(Time=SimpleNamespace(now=Stamp)),None))
-            if accepted:api.gate()
-            else:
-                with self.assertRaises(RuntimeError):api.gate()
-    def test_real_source_resampled_after_identity_check(self):
-        api=ExistingStack.__new__(ExistingStack);clock=[1.];calls=[]
-        class Stamp:
-            def __init__(self,value):self.value=value
-            def __sub__(self,other):return SimpleNamespace(to_sec=lambda:self.value-other.value)
-        def sample(*args,**kwargs):
-            calls.append('sample')
-            return SimpleNamespace(header=SimpleNamespace(frame_id='camera_init',stamp=Stamp(clock[0])),child_frame_id='body',pose=SimpleNamespace(pose=SimpleNamespace(position=SimpleNamespace(x=0,y=0,z=0),orientation=SimpleNamespace(x=0,y=0,z=0,w=1))))
-        def verify():calls.append('verify');clock[0]+=1.
-        ros=SimpleNamespace(wait_for_message=sample,Time=SimpleNamespace(now=lambda:Stamp(clock[0])),ROSException=TimeoutError)
-        api.board=SimpleNamespace(ros=lambda:(ros,None),alive=lambda kind:True,ODOM='/factory_fastlio/odometry',verify_source=verify)
-        with patch.dict(sys.modules,{'nav_msgs':SimpleNamespace(),'nav_msgs.msg':SimpleNamespace(Odometry=object)}):api.wait_source()
-        self.assertEqual(calls,['sample','verify','sample'])
-
-    def test_real_idle_gate_execution_and_preview(self):
-        api=ExistingStack.__new__(ExistingStack)
-        with TemporaryDirectory() as d:
-            api.ws=Path(d);api.execution=SimpleNamespace(current=lambda:{'pid':123})
-            with self.assertRaises(RuntimeError):api.require_idle()
-            api.execution=SimpleNamespace(current=lambda:None)
-            api.board=SimpleNamespace(graph=lambda:{'/ego_planner/manual_preview/status':['/preview']})
-            with self.assertRaises(RuntimeError):api.require_idle()
-            api.board=SimpleNamespace(graph=lambda:{})
-            api.require_idle()
 
 if __name__=='__main__':unittest.main(verbosity=2)

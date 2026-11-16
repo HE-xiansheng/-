@@ -93,10 +93,12 @@ class ManualGuards(unittest.TestCase):
     def test_manual_and_gcs_lifecycle_lock_contention(self):
         with TemporaryDirectory() as d:
             root=Path(d)/'localization';root.mkdir();ws=Path(d)/'ego_planner';ws.mkdir()
-            with lifecycle_locks(root,ws):
-                with self.assertRaises(RuntimeError):
-                    with lifecycle_locks(root,ws):pass
-            with lifecycle_locks(root,ws):pass
+            import manage_stack
+            with patch.object(manage_stack.module,'RUNTIME',root):
+                with lifecycle_locks():
+                    with self.assertRaises(RuntimeError):
+                        with lifecycle_locks():pass
+                with lifecycle_locks():pass
 
 
 if __name__=='__main__':unittest.main(verbosity=2)

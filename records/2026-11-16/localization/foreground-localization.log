@@ -1,0 +1,11 @@
+[INFO] [launch]: All log files can be found below /tmp/gcs-localization-check/runtime/localization-1794836495888612690/ros-logs/2026-11-16-21-41-36-206285-orangepi5ultra-98242
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [98243]
+[fastlio_mapping-1] [INFO] [1794836496.762287373] [factory_laserMapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1794836496.773907587] [factory_laserMapping]: Node init finished.
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1794836496.953382500] [factory_laserMapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1794836497.058016418] [factory_laserMapping]: Initialize the map kdtree
+为保护运行中的定位，未执行停止：需要新鲜、已连接、未解锁且非OFFBOARD的飞控状态。请在落地锁定并结束预览/任务后，通过地面站停止。

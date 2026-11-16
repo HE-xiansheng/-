@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""旧 roslaunch 命令的前台会话；复用地面站管理器，不改变话题或飞控参数。"""
+"""原生ROS2前台会话；复用定位管理器，不改变话题或飞控参数。"""
 import argparse
 import contextlib
 import fcntl
@@ -9,7 +9,7 @@ import sys
 import time
 from pathlib import Path
 
-from manage_stack import ExistingStack
+from manage_stack import ExistingStack, locks as stack_locks
 
 
 class StopRequested(Exception):
@@ -17,27 +17,14 @@ class StopRequested(Exception):
 
 
 @contextlib.contextmanager
-def lifecycle_locks(root, ws):
-    with contextlib.ExitStack() as stack:
-        for path in (root/'.manager.lock', root/'.pose-relay-lifecycle.lock',
-                     ws/'.px4-execution-management.lock', ws/'.manual-preview.lock'):
-            handle = stack.enter_context(path.open('a'))
-            try:
-                fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            except BlockingIOError:
-                raise RuntimeError('已有定位、预览或执行器管理操作，请稍后重试')
-        yield
+def lifecycle_locks():
+    with stack_locks():yield
 
 
-def session_token(api, kind):
-    """记录 PID 及内核启动时间，避免退出时误停后来启动的新会话。"""
-    data = (api.relay() if kind == 'relay' else
-            json.loads(api.board.active_file('localization').read_text()))
-    if not data:
-        raise RuntimeError('未找到托管会话')
-    pid = int(data['pid'])
-    tick = (Path('/proc')/str(pid)/'stat').read_text().rsplit(')', 1)[1].split()[19]
-    return pid, tick, Path(data['run'])
+def session_token(api,kind):
+    data=api.owned('relay' if kind=='relay' else 'localization')
+    if not data:raise RuntimeError('未找到托管会话')
+    return data['pid'],data['ticks'],Path(data['run'])
 
 
 def start_session(api, kind, wait_source=None, started=None, cancelled=None):
@@ -98,11 +85,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('kind', choices=['localization', 'relay'])
     args, remaps = parser.parse_known_args()
-    if any(':=' not in arg for arg in remaps):
-        parser.error('只接受 ROS 名称映射参数')
+    if remaps:
+        parser.error('本入口使用固定ROS2接口，不接受ROS1 remap参数；请通过配置声明')
     root = Path.home()/'drone_platform/01_apps/fast_lio'
     ws = root.parent/'ego_planner'
-    api = ExistingStack(root, ws)
+    import rclpy
+    rclpy.init(args=[])
+    api = ExistingStack()
     requested = False
     waiting_source = False
     token = None
@@ -128,9 +117,9 @@ def main():
     for sig in (signal.SIGINT, signal.SIGTERM, signal.SIGHUP):
         signal.signal(sig, request_stop)
     try:
-        with lifecycle_locks(root, ws):
+        with lifecycle_locks():
             start_session(api, args.kind, wait_source, remember_session, lambda: requested)
-        logfile = token[2]/('process.log' if args.kind == 'localization' else 'relay.log')
+        logfile = token[2]/'console.log'
         with logfile.open(errors='replace') as log:
             while not requested:
                 chunk = log.read(8192)
@@ -139,7 +128,7 @@ def main():
                 try:
                     if session_token(api, args.kind) != token:
                         break
-                    alive = bool(api.relay()) if args.kind == 'relay' else api.board.alive('localization')
+                    alive = bool(api.owned(args.kind))
                     if not alive:
                         break
                 except (OSError, ValueError, KeyError, RuntimeError):
@@ -150,11 +139,13 @@ def main():
     finally:
         if requested and token is not None:
             try:
-                with lifecycle_locks(root, ws):
+                with lifecycle_locks():
                     stop_owned(api, args.kind, token)
             except Exception as exc:
                 print('为保护运行中的定位，未执行停止：'+str(exc)+
                       '。请在落地锁定并结束预览/任务后，通过地面站停止。', file=sys.stderr, flush=True)
+        api.close()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

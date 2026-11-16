@@ -1,0 +1,8 @@
+{
+  "test_processes_remaining": 0,
+  "reference_binary_sha256": "04390ccaab975f2d3099994a9e919caad6c7f35a5cb97e4971605693017024a6",
+  "temporary_directory_removed": "/tmp/gcs-localization-check",
+  "migration_documents_onboard": false,
+  "onboard_code_commit": "39edbb1",
+  "reference_archive_binary_sha256_verified": "04390ccaab975f2d3099994a9e919caad6c7f35a5cb97e4971605693017024a6"
+}

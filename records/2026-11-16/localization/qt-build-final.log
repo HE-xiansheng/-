@@ -1,0 +1,7 @@
+[ 12%] Built target check_localization_qmlimportscan
+[ 12%] Built target check_localization_autogen_timestamp_deps
+[ 25%] Automatic MOC for target check_localization
+[ 25%] Built target check_localization_autogen
+[ 37%] Building CXX object CMakeFiles/check_localization.dir/check.cpp.o
+[ 50%] Linking CXX executable check_localization
+[100%] Built target check_localization

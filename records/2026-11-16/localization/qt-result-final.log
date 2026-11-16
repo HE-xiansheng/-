@@ -1,0 +1,22 @@
+PASS create fake SSH
+PASS real panel loads
+PASS real buttons exist
+PASS no automatic localization start
+定位与转发请求 "start" "192.168.1.224"
+定位与转发返回 start 0 {"ok":true,"action":"start"}
+PASS SSH completes
+PASS request clears old display but never invents healthy data
+PASS live PID is not fresh localization
+PASS first observed session preserves current app binding
+PASS actual healthy stream clears startup hint
+PASS stale monitor disables controls and healthy status
+PASS reconnect same origin preserves display
+PASS new localization session clears previous origin
+定位与转发请求 "stop" "192.168.1.224"
+定位与转发返回 stop 1 {"ok":false,"message":"请先停止避障预览"}
+PASS SSH completes
+PASS guard failure shown without raw process metadata
+PASS calls readable
+PASS buttons use the original localization workspace without overriding its package path
+PASS packaged helper actually sent over stdin
+PASS: localization buttons, packaged SSH helper, actual freshness, errors, session identity, reconnect, no automatic flight commands

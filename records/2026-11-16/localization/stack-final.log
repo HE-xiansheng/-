@@ -1,0 +1,34 @@
+MANAGER {"ok": true, "lio_running": false, "relay_running": false, "ros_version": 2}
+PASS status_without_start
+MANAGER {"ok": false, "message": "需要新鲜、已连接、未解锁且非OFFBOARD的飞控状态"}
+PASS armed_start_rejected
+MANAGER {"ok": false, "message": "定位/转发来源冲突，未接管或停止其他进程：/factory_fastlio/odometry"}
+PASS foreign_odometry_not_adopted
+MANAGER {"ok": false, "message": "存在控制指令发布者，拒绝改变定位会话"}
+PASS control_publisher_blocks_start
+MANAGER {"ok": true, "action": "start", "message": "定位与转发已启动，保持静止等待100个新测量初始化"}
+PASS manager_starts_actual_fastlio_and_relay
+PASS actual_lio_outputs_expected_frames
+PASS relay_completes_100_sample_initialization_on_lio
+PASS relay_source_stamps_match_actual_lio
+MANAGER {"ok": true, "action": "start", "message": "已复用当前定位与转发"}
+PASS healthy_start_reuses_both_processes_and_origins
+MANAGER {"ok": false, "message": "需要新鲜、已连接、未解锁且非OFFBOARD的飞控状态"}
+PASS offboard_stop_rejected
+MANAGER {"ok": false, "message": "需要新鲜、已连接、未解锁且非OFFBOARD的飞控状态"}
+PASS stale_fc_stop_rejected
+MANAGER {"ok": false, "message": "请先结束避障预览和执行器，再启停定位与转发"}
+PASS active_planning_blocks_localization_stop
+MANAGER {"ok": true, "action": "stop", "message": "定位与转发已停止"}
+PASS controlled_stop_of_owned_stack
+MANAGER {"ok": true, "lio_running": false, "relay_running": false, "ros_version": 2}
+PASS owned_sessions_report_stopped
+PASS unrelated_process_and_sensor_fixture_survive
+PASS no_pose_output_after_owned_stop
+PASS foreground_lio_starts_without_relay
+PASS second_foreground_terminal_starts_only_relay
+PASS relay_foreground_interrupt_preserves_localization
+PASS armed_foreground_interrupt_preserves_localization
+MANAGER {"ok": true, "action": "stop", "message": "定位与转发已停止"}
+PASS foreground_preserved_session_can_be_stopped_after_disarm
+MANAGER {"ok": true, "action": "stop", "message": "定位与转发已停止"}

@@ -1,0 +1,113 @@
+{
+  "checks": {
+    "status_without_start": true,
+    "armed_start_rejected": true,
+    "foreign_odometry_not_adopted": true,
+    "control_publisher_blocks_start": true,
+    "manager_starts_actual_fastlio_and_relay": true,
+    "actual_lio_outputs_expected_frames": true,
+    "relay_completes_100_sample_initialization_on_lio": true,
+    "relay_source_stamps_match_actual_lio": true,
+    "healthy_start_reuses_both_processes_and_origins": true,
+    "offboard_stop_rejected": true,
+    "stale_fc_stop_rejected": true,
+    "active_planning_blocks_localization_stop": true,
+    "controlled_stop_of_owned_stack": true,
+    "owned_sessions_report_stopped": true,
+    "unrelated_process_and_sensor_fixture_survive": true,
+    "no_pose_output_after_owned_stop": true,
+    "foreground_lio_starts_without_relay": true,
+    "second_foreground_terminal_starts_only_relay": true,
+    "relay_foreground_interrupt_preserves_localization": true,
+    "armed_foreground_interrupt_preserves_localization": true,
+    "foreground_preserved_session_can_be_stopped_after_disarm": true
+  },
+  "passed": true,
+  "odom_samples": 274,
+  "pose_samples": 114,
+  "calls": [
+    {
+      "action": "status",
+      "code": 0,
+      "out": "{\"ok\": true, \"lio_running\": false, \"relay_running\": false, \"ros_version\": 2}\n",
+      "err": ""
+    },
+    {
+      "action": "start",
+      "code": 1,
+      "out": "{\"ok\": false, \"message\": \"\u9700\u8981\u65b0\u9c9c\u3001\u5df2\u8fde\u63a5\u3001\u672a\u89e3\u9501\u4e14\u975eOFFBOARD\u7684\u98de\u63a7\u72b6\u6001\"}\n",
+      "err": ""
+    },
+    {
+      "action": "start",
+      "code": 1,
+      "out": "{\"ok\": false, \"message\": \"\u5b9a\u4f4d/\u8f6c\u53d1\u6765\u6e90\u51b2\u7a81\uff0c\u672a\u63a5\u7ba1\u6216\u505c\u6b62\u5176\u4ed6\u8fdb\u7a0b\uff1a/factory_fastlio/odometry\"}\n",
+      "err": ""
+    },
+    {
+      "action": "start",
+      "code": 1,
+      "out": "{\"ok\": false, \"message\": \"\u5b58\u5728\u63a7\u5236\u6307\u4ee4\u53d1\u5e03\u8005\uff0c\u62d2\u7edd\u6539\u53d8\u5b9a\u4f4d\u4f1a\u8bdd\"}\n",
+      "err": ""
+    },
+    {
+      "action": "start",
+      "code": 0,
+      "out": "{\"ok\": true, \"action\": \"start\", \"message\": \"\u5b9a\u4f4d\u4e0e\u8f6c\u53d1\u5df2\u542f\u52a8\uff0c\u4fdd\u6301\u9759\u6b62\u7b49\u5f85100\u4e2a\u65b0\u6d4b\u91cf\u521d\u59cb\u5316\"}\n",
+      "err": ""
+    },
+    {
+      "action": "start",
+      "code": 0,
+      "out": "{\"ok\": true, \"action\": \"start\", \"message\": \"\u5df2\u590d\u7528\u5f53\u524d\u5b9a\u4f4d\u4e0e\u8f6c\u53d1\"}\n",
+      "err": ""
+    },
+    {
+      "action": "stop",
+      "code": 1,
+      "out": "{\"ok\": false, \"message\": \"\u9700\u8981\u65b0\u9c9c\u3001\u5df2\u8fde\u63a5\u3001\u672a\u89e3\u9501\u4e14\u975eOFFBOARD\u7684\u98de\u63a7\u72b6\u6001\"}\n",
+      "err": ""
+    },
+    {
+      "action": "stop",
+      "code": 1,
+      "out": "{\"ok\": false, \"message\": \"\u9700\u8981\u65b0\u9c9c\u3001\u5df2\u8fde\u63a5\u3001\u672a\u89e3\u9501\u4e14\u975eOFFBOARD\u7684\u98de\u63a7\u72b6\u6001\"}\n",
+      "err": ""
+    },
+    {
+      "action": "stop",
+      "code": 1,
+      "out": "{\"ok\": false, \"message\": \"\u8bf7\u5148\u7ed3\u675f\u907f\u969c\u9884\u89c8\u548c\u6267\u884c\u5668\uff0c\u518d\u542f\u505c\u5b9a\u4f4d\u4e0e\u8f6c\u53d1\"}\n",
+      "err": ""
+    },
+    {
+      "action": "stop",
+      "code": 0,
+      "out": "{\"ok\": true, \"action\": \"stop\", \"message\": \"\u5b9a\u4f4d\u4e0e\u8f6c\u53d1\u5df2\u505c\u6b62\"}\n",
+      "err": ""
+    },
+    {
+      "action": "status",
+      "code": 0,
+      "out": "{\"ok\": true, \"lio_running\": false, \"relay_running\": false, \"ros_version\": 2}\n",
+      "err": ""
+    },
+    {
+      "action": "stop",
+      "code": 0,
+      "out": "{\"ok\": true, \"action\": \"stop\", \"message\": \"\u5b9a\u4f4d\u4e0e\u8f6c\u53d1\u5df2\u505c\u6b62\"}\n",
+      "err": ""
+    },
+    {
+      "action": "stop",
+      "code": 0,
+      "out": "{\"ok\": true, \"action\": \"stop\", \"message\": \"\u5b9a\u4f4d\u4e0e\u8f6c\u53d1\u5df2\u505c\u6b62\"}\n",
+      "err": ""
+    }
+  ],
+  "isolation": {
+    "domain": 196,
+    "localhost": true
+  },
+  "physical_flight_commands_sent": false
+}

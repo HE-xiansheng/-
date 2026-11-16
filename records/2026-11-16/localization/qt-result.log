@@ -1,0 +1,5 @@
+定位与转发请求 "start" "192.168.1.235"
+定位与转发返回 start 0 {"ok":true,"action":"start"}
+定位与转发请求 "stop" "192.168.1.235"
+定位与转发返回 stop 1 {"ok":false,"message":"请先停止避障预览"}
+FAIL: packaged helper actually sent over stdin

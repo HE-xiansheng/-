@@ -1,0 +1,13 @@
+test_existing_lio_only_starts_relay (test_stack.Guards) ... ok
+test_gate_identity_and_busy_rejections_have_no_mutation (test_stack.Guards) ... ok
+test_missing_source_never_starts_relay (test_stack.Guards) ... ok
+test_orphan_relay_blocks_new_origin (test_stack.Guards) ... ok
+test_relay_stop_failure_keeps_lio (test_stack.Guards) ... ok
+test_reuse_keeps_origin (test_stack.Guards) ... ok
+test_start_order (test_stack.Guards) ... ok
+test_stop_order (test_stack.Guards) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

@@ -1,0 +1,30 @@
+... logging to records/2026-11-16/localization/reference/ros-logs/4aab3934-e1c2-11f1-8bc9-71451de62c23/roslaunch-tyzk-OMEN-Gaming-Laptop-16-am0xxx-1468793.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;roscore
+[1mstarted roslaunch server http://192.168.1.89:38165/[0m
+ros_comm version 1.17.4
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+
+NODES
+
+auto-starting new master
+[1mprocess[master]: started with pid [1468801][0m
+[1mROS_MASTER_URI=http://192.168.1.89:47041/[0m
+]2;roscore http://192.168.1.89:47041/
+[1msetting /run_id to 4aab3934-e1c2-11f1-8bc9-71451de62c23[0m
+[1mprocess[rosout-1]: started with pid [1468814][0m
+started core service [/rosout]
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

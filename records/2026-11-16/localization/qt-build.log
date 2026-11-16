@@ -1,0 +1,12 @@
+[ 12%] Running qmlimportscanner for check_localization
+[ 12%] Built target check_localization_qmlimportscan
+[ 12%] Built target check_localization_autogen_timestamp_deps
+[ 25%] Automatic MOC for target check_localization
+[ 25%] Built target check_localization_autogen
+[ 37%] Running rcc for resource helper
+[ 50%] Building CXX object CMakeFiles/check_localization.dir/check_localization_autogen/mocs_compilation.cpp.o
+[ 62%] Building CXX object CMakeFiles/check_localization.dir/check.cpp.o
+[ 75%] Building CXX object CMakeFiles/check_localization.dir/home/tyzk/drone-migration-github/groundstation/localizationcontroller.cpp.o
+[ 87%] Building CXX object CMakeFiles/check_localization.dir/.qt/rcc/qrc_helper.cpp.o
+[100%] Linking CXX executable check_localization
+[100%] Built target check_localization

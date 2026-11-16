@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "subscription_1": true,
+    "duplicates_do_not_advance_initialization": true,
+    "first_process_graceful_exit": true,
+    "subscription_2": true,
+    "initialization_exactly_100_unique_samples": true,
+    "timestamps_from_input_without_rewrite": true,
+    "source_timestamp_published_at_most_once": true,
+    "frame_map_99": true,
+    "compared_over_50_original_binary_measurements": true,
+    "legacy_geometry_component_difference_below_1e9": true,
+    "no_cached_pose_after_source_stall": true,
+    "zero_stale_future_duplicate_regression_nan_frames_quaternion_rejected": true,
+    "10hz_source_is_10hz_unique_output_under_30hz_cap": true,
+    "fresh_input_recovers_after_rejected_samples": true,
+    "source_stall_after_recovery_still_no_republish": true,
+    "only_pose_publisher": true,
+    "no_setpoint_or_mode_or_arming_output": true,
+    "relay_graceful_shutdown": true,
+    "invalid_rate_exits_nonzero": true
+  },
+  "compared": 71,
+  "maximum_geometry_error": 4.440892098500626e-16,
+  "isolation": {
+    "domain": 197,
+    "localhost": true
+  },
+  "source_reference_binary_sha256": "04390ccaab975f2d3099994a9e919caad6c7f35a5cb97e4971605693017024a6"
+}

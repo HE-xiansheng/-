@@ -1,0 +1,9 @@
+{
+  "groundstation/localizationcontroller.cpp": "19697b10d8758916910e7a2fe65a945f3cdaeb76bb33272661f3ee7a754caed6",
+  "groundstation/tools/localization/manage_stack.py": "500db7f66fd6f0e449165e11ded37c63f4f5279f17b9bdfd0670065838aaf084",
+  "groundstation/tools/localization/manual_session.py": "8e443f825e07eaf89b6581d3d63fc92612eb06558be4a27566c23c7bd86b8de0",
+  "groundstation/tools/localization/test_qt/check.cpp": "1d5cc97c1c98a479d13e4665078bef9576ba9f3948c51701aca0c28102a26f1e",
+  "tools/test_pose_relay_ros2.py": "146a49d91d0511e56f8957668b82827c749151767c4f6f2d37c616898f8d4b80",
+  "tools/test_pose_relay_reference.py": "32152d1a3f4c036594b87f4adb308f023863f8d27381d9a793b2fdcec3d0e93e",
+  "tools/test_localization_stack_ros2.py": "6e18befe9ffad3c65fa6c08978064b538dc286755dab9408d6a597cc0acb9de0"
+}

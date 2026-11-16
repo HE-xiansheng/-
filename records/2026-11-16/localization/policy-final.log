@@ -1,0 +1,29 @@
+test_cancel_during_restart_does_not_start_new_process (test_manual_session.ManualGuards) ... ok
+test_failed_relay_stop_does_not_reset_origin (test_manual_session.ManualGuards) ... ok
+test_lio_exit_stops_relay_first (test_manual_session.ManualGuards) ... ok
+test_manual_and_gcs_lifecycle_lock_contention (test_manual_session.ManualGuards) ... ok
+test_missing_lio_never_starts_relay (test_manual_session.ManualGuards) ... ok
+test_no_source_preserves_existing_relay (test_manual_session.ManualGuards) ... ok
+test_only_lio_on_first_terminal (test_manual_session.ManualGuards) ... ok
+test_only_relay_on_second_terminal (test_manual_session.ManualGuards) ... ok
+test_record_new_lio_before_waiting_for_restored_relay (test_manual_session.ManualGuards) ... ok
+test_relay_exit_preserves_lio (test_manual_session.ManualGuards) ... ok
+test_repeated_lio_restarts_in_order_and_restores_relay (test_manual_session.ManualGuards) ... ok
+test_repeated_lio_without_relay_keeps_relay_off (test_manual_session.ManualGuards) ... ok
+test_repeated_relay_only_restarts_relay (test_manual_session.ManualGuards) ... ok
+test_replaced_pid_or_start_time_preserves_new_session (test_manual_session.ManualGuards) ... ok
+test_start_guards_never_mutate_on_rejection (test_manual_session.ManualGuards) ... ok
+test_stop_guards_and_failed_relay_stop_preserve_lio (test_manual_session.ManualGuards) ... ok
+test_existing_lio_only_starts_relay (test_stack.Guards) ... ok
+test_gate_identity_and_busy_rejections_have_no_mutation (test_stack.Guards) ... ok
+test_missing_source_never_starts_relay (test_stack.Guards) ... ok
+test_orphan_relay_blocks_new_origin (test_stack.Guards) ... ok
+test_relay_stop_failure_keeps_lio (test_stack.Guards) ... ok
+test_reuse_keeps_origin (test_stack.Guards) ... ok
+test_start_order (test_stack.Guards) ... ok
+test_stop_order (test_stack.Guards) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.003s
+
+OK

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "tools/test_pose_relay_reference.py", line 41, in <module>
+    assert pub.get_num_connections()>0,'reference relay failed to subscribe'
+AssertionError: reference relay failed to subscribe

@@ -50,7 +50,7 @@ void LocalizationController::request(const QString &action){
     if(!helper.open(QIODevice::ReadOnly)){m_message=tr("无法加载定位管理入口。");emit changed();return;}
     if(action=="start"&&!m_state.value("lio_running").toBool())emit sessionReset();
     m_action=action;m_timedOut=false;m_output.clear();m_message=action=="start" ? tr("正在准备定位与转发…") : tr("正在停止定位与转发…");
-    const QString remote="source /opt/ros/noetic/setup.bash; source ~/drone_platform/01_apps/fast_lio/workspace/devel/setup.bash; export ROS_MASTER_URI=http://127.0.0.1:11311 ROS_IP=127.0.0.1 PYTHONNOUSERSITE=1; /usr/bin/python3 -B - "+action+" # gcs_localization_stack";
+    const QString remote="source ~/drone_platform/env.sh && export PYTHONNOUSERSITE=1 && /usr/bin/python3 -B - "+action+" # gcs_localization_stack";
     qInfo()<<"定位与转发请求"<<action<<m_host;
     SshSession::apply(m_process);
     SshSession::start(m_process,{"-T","-o",SshSession::batchOption(),"-o","ConnectTimeout=5","-o","ServerAliveInterval=5","-o","ServerAliveCountMax=2","orangepi@"+m_host,"bash -lc "+quote(remote)});
