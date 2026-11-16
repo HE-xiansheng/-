@@ -1,0 +1,11 @@
+PASS 隔离目录
+PASS 创建SSH替身
+PASS 目标地址
+PASS 直接选点流程不启用人工确认
+EGO-Planner操作 start host 192.168.1.224
+EGO-Planner返回 start 1 Traceback (most recent call last):
+  File "/tmp/check_planner_ui-NmPAKD/ssh", line 4, in <module>
+    assert '/opt/ros/noetic' not in remote and 'source ~/drone_platform/env.sh && ' in remote,remote
+AssertionError: bash -lc 'bash ~/drone_platform/01_apps/ego_planner/run_board.sh'
+PASS ROS2规划启动SSH完成
+FAIL 规划启动成功

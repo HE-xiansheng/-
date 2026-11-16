@@ -23,30 +23,44 @@ def attempt_stop(execution, flight, source_age, stop_original_preview):
 def main():
     import fcntl
     import importlib.util
-    import rospy
+    import rclpy
+    from rclpy.qos import qos_profile_sensor_data
     from mavros_msgs.msg import State
     ws=Path.home()/'drone_platform/01_apps/ego_planner'
-    # 使用原管理器的PID身份校验和锁，防止停止规划器时并发启动新执行器。
+    # 使用ROS2管理器的实际运行目录和同一把锁，避免并发启动新执行器。
     spec=importlib.util.spec_from_file_location('existing_px4_manager',ws/'px4_execution/manage.py')
     manager=importlib.util.module_from_spec(spec);spec.loader.exec_module(manager)
-    rospy.init_node('gcs_preview_stop_guard',anonymous=True,disable_signals=True,disable_rosout=True)
-    try:
-        msg=rospy.wait_for_message('/mavros/state',State,timeout=3)
+    rclpy.init(args=[])
+    node=rclpy.create_node('gcs_preview_stop_guard')
+    messages=[]
+    node.create_subscription(State,'/mavros/state',messages.append,qos_profile_sensor_data)
+    import time
+    end=time.monotonic()+3
+    while not messages and time.monotonic()<end:
+        rclpy.spin_once(node,timeout_sec=.05)
+    flight={}
+    if messages:
+        msg=messages[-1]
         flight={'connected':msg.connected,'mode':msg.mode}
-        age=rospy.Time.now().to_sec()-msg.header.stamp.to_sec()
-    except rospy.ROSException:
-        flight={};age=math.inf
+    def source_age():
+        if not messages:return math.inf
+        stamp=msg.header.stamp.sec+msg.header.stamp.nanosec*1e-9
+        return node.get_clock().now().nanoseconds*1e-9-stamp if stamp>0 else math.inf
     def stop_original():
         result=subprocess.run(['bash',str(ws/'run_board.sh'),'--stop'],capture_output=True,text=True,timeout=18)
         if result.returncode:raise RuntimeError((result.stdout+result.stderr).strip()[-1500:])
         return result.stdout.strip()
-    with (ws/'.px4-execution-management.lock').open('a') as lock:
-        fcntl.flock(lock,fcntl.LOCK_EX)
-        # 锁可能被其他管理请求占用；在实际决策时重算源龄期。
-        if flight:age=rospy.Time.now().to_sec()-msg.header.stamp.to_sec()
-        execution=manager.read_status(manager.current())
-        result=attempt_stop(execution,flight,age,stop_original)
-    print(json.dumps(result,ensure_ascii=False,allow_nan=False),flush=True)
+    try:
+        manager.RUNTIME.mkdir(parents=True,exist_ok=True)
+        with (manager.RUNTIME/'management.lock').open('a') as lock:
+            fcntl.flock(lock,fcntl.LOCK_EX)
+            execution=manager.read_status(manager.current())
+            result=attempt_stop(execution,flight,source_age(),stop_original)
+        print(json.dumps(result,ensure_ascii=False,allow_nan=False),flush=True)
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
 
 
 if __name__=='__main__':

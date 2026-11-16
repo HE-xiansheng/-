@@ -1,0 +1,19 @@
+[  1%] Built target customgeometry_copy_qml
+[  2%] Built target customgeometry_qmlimportscan
+[  4%] Copying customgeometry qml resources into build dir
+[  4%] Built target radarsimulator_autogen_timestamp_deps
+[  4%] Built target customgeometry_copy_res
+[  4%] Built target customgeometry_autogen_timestamp_deps
+[  5%] Built target radarsimulator_autogen
+[ 13%] Built target radarsimulator
+[ 14%] Automatic MOC and UIC for target customgeometry
+[ 14%] Built target customgeometry_autogen
+[ 16%] Running AUTOMOC file extraction for target customgeometry
+[ 17%] Running rcc for resource customgeometry_raw_qml_0
+[ 18%] Running moc --collect-json for target customgeometry
+[ 20%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 20%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 21%] Building CXX object CMakeFiles/customgeometry.dir/plannercontroller.cpp.o
+[ 22%] Building CXX object CMakeFiles/customgeometry.dir/.qt/rcc/qrc_customgeometry_raw_qml_0.cpp.o
+[ 24%] Linking CXX executable customgeometry
+[100%] Built target customgeometry

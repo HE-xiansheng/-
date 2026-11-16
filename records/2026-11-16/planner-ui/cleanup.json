@@ -1,0 +1,9 @@
+{
+  "guard_sha256": "caac476647b1b45f605692cc33713f59bec5c2a4f8fd2692e43f5feb3e0cc3ac",
+  "remaining_test_processes": 0,
+  "removed": [
+    "/tmp/gcs-planner-ui-check",
+    "/tmp/ego-lifecycle-ros-logs"
+  ],
+  "onboard_code_commit": "2b0c0f9"
+}

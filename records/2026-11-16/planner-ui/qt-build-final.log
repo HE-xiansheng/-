@@ -1,0 +1,7 @@
+[ 12%] Built target check_planner_ui_qmlimportscan
+[ 12%] Built target check_planner_ui_autogen_timestamp_deps
+[ 25%] Automatic MOC for target check_planner_ui
+[ 25%] Built target check_planner_ui_autogen
+[ 37%] Building CXX object CMakeFiles/check_planner_ui.dir/check.cpp.o
+[ 50%] Linking CXX executable check_planner_ui
+[100%] Built target check_planner_ui

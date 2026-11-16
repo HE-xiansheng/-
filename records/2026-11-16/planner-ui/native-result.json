@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "armed_start_refused": true,
+    "cannot_stop_planner_during_control_output": true,
+    "disconnected_start_refused": true,
+    "duplicate_preview_is_same_session": true,
+    "execution_shell_controlled_stop": true,
+    "execution_shell_reports_stopped": true,
+    "execution_shell_starts_adapter": true,
+    "native_status_received": true,
+    "no_mavros_services": true,
+    "no_setpoints_after_stop": true,
+    "preview_restarts_with_new_session": true,
+    "preview_shell_reports_stopped": true,
+    "preview_shell_stops_owned_launch": true,
+    "restarted_preview_stops_cleanly": true,
+    "shell_starts_native_launch": true,
+    "shell_status_reports_owned_launch": true,
+    "synthetic_posctl_prestream": true,
+    "ui_guard_rejects_disconnected_fc": true,
+    "ui_guard_rejects_stale_fc": true,
+    "ui_guard_stops_owned_preview_after_takeover": true,
+    "ui_guard_waits_for_pilot_takeover": true,
+    "ui_guard_waits_for_running_adapter": true,
+    "unrelated_process_untouched": true
+  },
+  "isolation": {
+    "ROS_DOMAIN_ID": 87,
+    "ROS_LOCALHOST_ONLY": 1
+  },
+  "passed": true,
+  "physical_flight_commands_sent": false,
+  "synthetic_fc_commands_received": 273
+}

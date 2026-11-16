@@ -24,7 +24,7 @@ PlannerController::PlannerController(QObject *parent):QObject(parent) {
     connect(&m_stopPoll,&QTimer::timeout,this,&PlannerController::checkStop);
 }
 QString PlannerController::quote(QString v){return "'"+v.replace("'","'\\''")+"'";}
-QString PlannerController::navigation(){return "source /opt/ros/noetic/setup.bash; source ~/drone_platform/01_apps/ego_planner/devel/setup.bash; export ROS_MASTER_URI=http://127.0.0.1:11311 ROS_IP=127.0.0.1 PYTHONNOUSERSITE=1; /usr/bin/python3 -B ~/drone_platform/01_apps/ego_planner/map_navigation.py ";}
+QString PlannerController::navigation(){return "source ~/drone_platform/env.sh && export PYTHONNOUSERSITE=1 && /usr/bin/python3 -B ~/drone_platform/01_apps/ego_planner/map_navigation.py ";}
 void PlannerController::setHost(const QString &v){
     static const QRegularExpression valid("^[a-zA-Z0-9][a-zA-Z0-9.-]{0,252}$");
     if(!busy() && valid.match(v).hasMatch() && v!=m_host){m_host=v;m_token.clear();emit changed();}
@@ -77,7 +77,7 @@ void PlannerController::checkStop(){
     if(!helper.open(QIODevice::ReadOnly)){
         m_stopPending=false;m_message=tr("无法加载预览停止检查；实际停止结果未确认。");emit changed();return;
     }
-    const QString remote="source /opt/ros/noetic/setup.bash; source ~/drone_platform/01_apps/ego_planner/devel/setup.bash; export ROS_MASTER_URI=http://127.0.0.1:11311 ROS_IP=127.0.0.1 PYTHONNOUSERSITE=1; /usr/bin/python3 -B - # gcs_stop_preview_guard";
+    const QString remote="source ~/drone_platform/env.sh && export PYTHONNOUSERSITE=1 && /usr/bin/python3 -B - # gcs_stop_preview_guard";
     command("stop_guard",remote,helper.readAll());
 }
 void PlannerController::preview(const QVector3D &p){

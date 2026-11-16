@@ -1,0 +1,33 @@
+PASS 隔离目录
+PASS 创建SSH替身
+PASS 目标地址
+PASS 直接选点流程不启用人工确认
+EGO-Planner操作 start host 192.168.1.224
+EGO-Planner返回 start 0 {"running": true}
+PASS ROS2规划启动SSH完成
+PASS 规划启动成功
+EGO-Planner操作 preview host 192.168.1.224
+EGO-Planner返回 preview 0 {"goal": [1.0, 2.0, 1.5]}
+EGO-Planner操作 execution_status host 192.168.1.224
+EGO-Planner返回 execution_status 0 {"running": false}
+EGO-Planner操作 enable host 192.168.1.224
+EGO-Planner返回 enable 0 {"running": true}
+PASS 目标回执后自动检查并准备执行器
+EGO-Planner操作 preview host 192.168.1.224
+EGO-Planner返回 preview 0 {"goal": [2.0, 3.0, 1.20000005]}
+EGO-Planner操作 execution_status host 192.168.1.224
+EGO-Planner返回 execution_status 0 {"running": true}
+PASS 同一执行会话可直接更新目标
+PASS 其他任务运行时不发规划目标
+EGO-Planner操作 stop host 192.168.1.224
+EGO-Planner返回 stop 0 {"running": false}
+EGO-Planner操作 stop_guard host 192.168.1.224
+EGO-Planner返回 stop_guard 0 {"status": "waiting", "reason": "\u6a21\u62df\u9065\u63a7\u63a5\u7ba1"}
+PASS 飞手尚未接管时保留停止处理中
+EGO-Planner操作 stop_guard host 192.168.1.224
+EGO-Planner返回 stop_guard 0 {"status": "stopped", "reason": "\u6a21\u62df\u9065\u63a7\u63a5\u7ba1"}
+PASS 核实退出后完成受控停止
+PASS 读取SSH操作记录
+PASS 已有执行会话不重复启用
+PASS 两个目标分别下发一次
+PASS 未恢复人工确认或强制杀进程流程

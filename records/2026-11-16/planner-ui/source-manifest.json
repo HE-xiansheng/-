@@ -1,0 +1,6 @@
+{
+  "groundstation/plannercontroller.cpp": "17f5341e990b295b4cfb02b93d4ef01bbc6da29428390e20e345b35dfe9473e8",
+  "groundstation/tools/planner/stop_preview.py": "caac476647b1b45f605692cc33713f59bec5c2a4f8fd2692e43f5feb3e0cc3ac",
+  "tools/validate_planner_ui.py": "6b704b5940d152a876f37797dbcf6c627b786af6eedeb06f3ed909eb6fca8a3b",
+  "groundstation/tools/planner/test_qt/check.cpp": "c718aea3c3437cb397907fd695631f25f5191e72bbc3c245c30c965398531916"
+}
