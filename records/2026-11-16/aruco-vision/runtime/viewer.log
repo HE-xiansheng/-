@@ -1,0 +1,10 @@
+Reusing RTSP publisher
+/rtsp_cam/image_raw: 64x64 mono8
+Reusing ArUco publisher
+/aruco_imgresult: 64x64 mono8
+Started owned process 131545
+Vision is ready. Ctrl+C stops only owned processes. No flight controller is started.
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+[INFO] [1794838832.431460093] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+This plugin does not support propagateSizeHints()

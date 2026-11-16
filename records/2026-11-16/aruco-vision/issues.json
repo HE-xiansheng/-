@@ -1,0 +1,11 @@
+{
+  "first_deploy": "orangepi cannot create new file in tools directory; exact files deployed via root and owned by orangepi",
+  "first_wrapper_help_returncode": 139,
+  "subsequent_identical_checks": [
+    0,
+    0,
+    0
+  ],
+  "cause": "undetermined",
+  "production_transition": false
+}

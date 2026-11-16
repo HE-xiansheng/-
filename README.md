@@ -32,3 +32,5 @@
 定位阶段：原部署转发71条黑盒几何对照、原生ROS2转发、定位管理/Qt/双终端入口及21项真实FAST-LIO回放联合完成。物理雷达与PX4接收融合待验证，见[定位记录](records/2026-11-16/localization/README.md)。
 
 2026-11-16：新增[物理相机与NPU验证](records/2026-11-16/camera-npu/README.md)及[精准降落补充路径](records/2026-11-16/land-modes/README.md)：13/39项通过，当前相机内部标定已修正并通过18项推理回归。物理任务与整链仍待验证。
+
+新增[物理相机与NPU记录](records/2026-11-16/camera-npu/README.md)、[降落其他触发路径](records/2026-11-16/land-modes/README.md)及[ArUco前台操作流程](records/2026-11-16/aruco-vision/README.md)。真实相机预览和额外隔离验证完成，云台/雷达/飞控融合及任务整链仍待验收。

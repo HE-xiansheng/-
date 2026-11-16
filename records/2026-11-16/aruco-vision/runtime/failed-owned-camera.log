@@ -1,0 +1,5 @@
+Started owned process 129744
+[tcp @ 0x559a67bcc0] Connection to tcp://127.0.0.1:1?timeout=0 failed: Connection refused
+Failed to open RTSP stream
+[ros2run]: Process exited with failure 255
+Owned process 129744 exited (255)

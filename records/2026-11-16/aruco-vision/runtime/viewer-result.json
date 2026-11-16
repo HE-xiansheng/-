@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "real rqt subscribes to requested preview topic offscreen",
+      "passed": true
+    },
+    {
+      "check": "viewer session stays alive",
+      "passed": true
+    },
+    {
+      "check": "only viewer is owned when both streams already exist",
+      "passed": true
+    },
+    {
+      "check": "viewer session exits normally on Ctrl+C",
+      "passed": true
+    },
+    {
+      "check": "owned viewer process group is reaped",
+      "passed": true
+    },
+    {
+      "check": "external image producers survive viewer shutdown",
+      "passed": true
+    }
+  ]
+}

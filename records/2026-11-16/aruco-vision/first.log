@@ -1,0 +1,17 @@
+PASS existing raw image drives actual native detector readiness
+PASS existing camera is reused
+PASS only detector is owned
+PASS second launcher is refused within the same domain
+PASS refused concurrent launcher leaves first running
+PASS Ctrl+C reaps owned detector group
+PASS Ctrl+C leaves external raw publisher alive
+PASS reusing both publishers returns normally
+PASS no duplicate detector or camera when both exist
+PASS existing detector publisher survives launcher exit
+PASS stale image stream fails readiness
+PASS stale reused stream does not spawn replacement or detector
+PASS future image stream fails readiness
+PASS failed readiness leaves external source alive
+PASS owned camera connection failure is reported
+PASS failed startup reaps owned camera group
+{"passed": true, "checks": [{"check": "existing raw image drives actual native detector readiness", "passed": true}, {"check": "existing camera is reused", "passed": true}, {"check": "only detector is owned", "passed": true}, {"check": "second launcher is refused within the same domain", "passed": true}, {"check": "refused concurrent launcher leaves first running", "passed": true}, {"check": "Ctrl+C reaps owned detector group", "passed": true}, {"check": "Ctrl+C leaves external raw publisher alive", "passed": true}, {"check": "reusing both publishers returns normally", "passed": true}, {"check": "no duplicate detector or camera when both exist", "passed": true}, {"check": "existing detector publisher survives launcher exit", "passed": true}, {"check": "stale image stream fails readiness", "passed": true}, {"check": "stale reused stream does not spawn replacement or detector", "passed": true}, {"check": "future image stream fails readiness", "passed": true}, {"check": "failed readiness leaves external source alive", "passed": true}, {"check": "owned camera connection failure is reported", "passed": true}, {"check": "failed startup reaps owned camera group", "passed": true}]}

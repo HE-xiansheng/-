@@ -1,0 +1,5 @@
+Reusing RTSP publisher
+/rtsp_cam/image_raw: 1920x1080 mono8
+Reusing ArUco publisher
+/aruco_imgresult: 8x8 mono8
+Vision is ready. Ctrl+C stops only owned processes. No flight controller is started.

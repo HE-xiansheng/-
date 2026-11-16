@@ -1,0 +1,68 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libpyside2-dev libpyside2-py3-5.15 libshiboken2-dev libshiboken2-py3-5.15
+  pyqt5-dev python3-pyqt5 python3-pyqt5.qtsvg python3-pyqt5.sip
+  python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtsvg
+  python3-pyside2.qtwidgets python3-sip-dev ros-humble-python-qt-binding
+  ros-humble-qt-gui ros-humble-qt-gui-cpp ros-humble-rqt-gui
+  ros-humble-rqt-gui-cpp ros-humble-tango-icons-vendor shiboken2 sip-dev
+  tango-icon-theme
+Suggested packages:
+  python-pyside2-doc python-sip-doc kdelibs-data
+The following NEW packages will be installed:
+  libpyside2-dev libpyside2-py3-5.15 libshiboken2-dev libshiboken2-py3-5.15
+  pyqt5-dev python3-pyqt5 python3-pyqt5.qtsvg python3-pyqt5.sip
+  python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtsvg
+  python3-pyside2.qtwidgets python3-sip-dev ros-humble-python-qt-binding
+  ros-humble-qt-gui ros-humble-qt-gui-cpp ros-humble-rqt-gui
+  ros-humble-rqt-gui-cpp ros-humble-rqt-image-view
+  ros-humble-tango-icons-vendor shiboken2 sip-dev tango-icon-theme
+0 upgraded, 23 newly installed, 0 to remove and 505 not upgraded.
+Inst libshiboken2-py3-5.15 (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst libpyside2-py3-5.15 (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst libpyside2-dev (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst shiboken2 (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst libshiboken2-dev (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst pyqt5-dev (5.15.6+dfsg-1ubuntu3 Ubuntu:22.04/jammy [all])
+Inst python3-pyqt5.sip (12.9.1-1build1 Ubuntu:22.04/jammy [arm64])
+Inst python3-pyqt5 (5.15.6+dfsg-1ubuntu3 Ubuntu:22.04/jammy [arm64])
+Inst python3-pyqt5.qtsvg (5.15.6+dfsg-1ubuntu3 Ubuntu:22.04/jammy [arm64])
+Inst python3-pyside2.qtcore (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst python3-pyside2.qtgui (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst python3-pyside2.qtwidgets (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst python3-pyside2.qtsvg (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Inst sip-dev (4.19.25+dfsg-3build1 Ubuntu:22.04/jammy [arm64])
+Inst python3-sip-dev (4.19.25+dfsg-3build1 Ubuntu:22.04/jammy [arm64])
+Inst ros-humble-python-qt-binding (1.1.3-1jammy.20260307.161214 ROS jammy:jammy [arm64])
+Inst tango-icon-theme (0.8.90-8 Ubuntu:22.04/jammy [all])
+Inst ros-humble-tango-icons-vendor (0.1.1-3jammy.20260307.164337 ROS jammy:jammy [arm64])
+Inst ros-humble-qt-gui (2.2.5-1jammy.20260330.191016 ROS jammy:jammy [arm64])
+Inst ros-humble-qt-gui-cpp (2.2.5-1jammy.20260907.195938 ROS jammy:jammy [arm64])
+Inst ros-humble-rqt-gui (1.1.10-2jammy.20260907.233159 ROS jammy:jammy [arm64])
+Inst ros-humble-rqt-gui-cpp (1.1.10-2jammy.20260908.040739 ROS jammy:jammy [arm64])
+Inst ros-humble-rqt-image-view (1.2.0-2jammy.20260908.055541 ROS jammy:jammy [arm64])
+Conf libshiboken2-py3-5.15 (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf libpyside2-py3-5.15 (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf libpyside2-dev (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf shiboken2 (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf libshiboken2-dev (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf pyqt5-dev (5.15.6+dfsg-1ubuntu3 Ubuntu:22.04/jammy [all])
+Conf python3-pyqt5.sip (12.9.1-1build1 Ubuntu:22.04/jammy [arm64])
+Conf python3-pyqt5 (5.15.6+dfsg-1ubuntu3 Ubuntu:22.04/jammy [arm64])
+Conf python3-pyqt5.qtsvg (5.15.6+dfsg-1ubuntu3 Ubuntu:22.04/jammy [arm64])
+Conf python3-pyside2.qtcore (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf python3-pyside2.qtgui (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf python3-pyside2.qtwidgets (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf python3-pyside2.qtsvg (5.15.2-2build2 Ubuntu:22.04/jammy [arm64])
+Conf sip-dev (4.19.25+dfsg-3build1 Ubuntu:22.04/jammy [arm64])
+Conf python3-sip-dev (4.19.25+dfsg-3build1 Ubuntu:22.04/jammy [arm64])
+Conf ros-humble-python-qt-binding (1.1.3-1jammy.20260307.161214 ROS jammy:jammy [arm64])
+Conf tango-icon-theme (0.8.90-8 Ubuntu:22.04/jammy [all])
+Conf ros-humble-tango-icons-vendor (0.1.1-3jammy.20260307.164337 ROS jammy:jammy [arm64])
+Conf ros-humble-qt-gui (2.2.5-1jammy.20260330.191016 ROS jammy:jammy [arm64])
+Conf ros-humble-qt-gui-cpp (2.2.5-1jammy.20260907.195938 ROS jammy:jammy [arm64])
+Conf ros-humble-rqt-gui (1.1.10-2jammy.20260907.233159 ROS jammy:jammy [arm64])
+Conf ros-humble-rqt-gui-cpp (1.1.10-2jammy.20260908.040739 ROS jammy:jammy [arm64])
+Conf ros-humble-rqt-image-view (1.2.0-2jammy.20260908.055541 ROS jammy:jammy [arm64])

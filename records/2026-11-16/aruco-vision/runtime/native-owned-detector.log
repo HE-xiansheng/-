@@ -1,0 +1,7 @@
+Reusing RTSP publisher
+/rtsp_cam/image_raw: 1920x1080 mono8
+Started owned process 129540
+[INFO] [1794838691.940331722] [Safina_aruco_test]: ArUco configured: ORIGINAL id=0 side=0.0350 m (adaptive max 53), 5X5 id=231 side=0.1950 m (adaptive max 23), calibration=1920x1080
+/aruco_imgresult: 960x540 bgr8
+Vision is ready. Ctrl+C stops only owned processes. No flight controller is started.
+[INFO] [1794838692.610779249] [rclcpp]: signal_handler(SIGINT/SIGTERM)

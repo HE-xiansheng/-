@@ -1,0 +1,6 @@
+PASS real rqt subscribes to requested preview topic offscreen
+PASS viewer session stays alive
+PASS only viewer is owned when both streams already exist
+PASS viewer session exits normally on Ctrl+C
+PASS owned viewer process group is reaped
+PASS external image producers survive viewer shutdown

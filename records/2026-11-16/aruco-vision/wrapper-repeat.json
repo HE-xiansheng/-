@@ -1,0 +1,20 @@
+[
+  {
+    "iteration": 0,
+    "returncode": 0,
+    "stdout": "usage: aruco_vision.py [-h] [--no-view] [--rtsp-url RTSP_URL]\n                       [--timeout TIMEOUT]\n\nForeground vision session: reuse producers and stop only owned children.\n\noptions:\n  -h, --help           show this help message and exit\n  --no-view\n  --rtsp-url RTSP_URL\n  --timeout TIMEOUT\n",
+    "stderr": ""
+  },
+  {
+    "iteration": 1,
+    "returncode": 0,
+    "stdout": "usage: aruco_vision.py [-h] [--no-view] [--rtsp-url RTSP_URL]\n                       [--timeout TIMEOUT]\n\nForeground vision session: reuse producers and stop only owned children.\n\noptions:\n  -h, --help           show this help message and exit\n  --no-view\n  --rtsp-url RTSP_URL\n  --timeout TIMEOUT\n",
+    "stderr": ""
+  },
+  {
+    "iteration": 2,
+    "returncode": 0,
+    "stdout": "usage: aruco_vision.py [-h] [--no-view] [--rtsp-url RTSP_URL]\n                       [--timeout TIMEOUT]\n\nForeground vision session: reuse producers and stop only owned children.\n\noptions:\n  -h, --help           show this help message and exit\n  --no-view\n  --rtsp-url RTSP_URL\n  --timeout TIMEOUT\n",
+    "stderr": ""
+  }
+]

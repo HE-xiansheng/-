@@ -1,0 +1,11 @@
+{
+  "commit": "c3dff85749c32ee62153f7426675cd750b55f4dd",
+  "sha256": {
+    "01_apps/mission_demo/tools/aruco_vision.py": "fb6f9a1e136c16889784fbfe036b976d272bed39e0302ceb0017f12defdcd6b5",
+    "03_tools/config script/start_aruco_vision.sh": "8a2e8462c2b766a2e1d0605a70a20c9c20f75d193d7bd4eacaf426ac4b33bb4b"
+  },
+  "git_status": "",
+  "temporary_directory_cleaned": true,
+  "rqt_version": "1.2.0-2jammy.20260908.055541",
+  "nomachine": "active"
+}
