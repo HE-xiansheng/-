@@ -1,0 +1,194 @@
+{
+  "README.md": {
+    "sha256": "20a15940adde1724c71d09c8d59352c5f224607d8adfe3a4bf064ac5002a336f"
+  },
+  "03_tools/ros2_migration/config/reference_ros1/peripherals_ros1_reference.txt": {
+    "sha256": "adcf13ac095a4ba81a6474d7a43dfd6a7853eaf867eb8caa23bf20d3802b39ce"
+  },
+  "03_tools/ros2_migration/docs/validation.md": {
+    "sha256": "b1097acd2623e9caed79014977c4412321ac86a4f4e06584044ccd7b18301707"
+  },
+  "03_tools/ros2_migration/docs/peripheral-migration.md": {
+    "sha256": "940644368ff0677a5deb5b327ec565e59470cf18068325977d308ba1bbad7b10"
+  },
+  "03_tools/ros2_migration/tools/validate_humble_base.py": {
+    "sha256": "99c76b3ea39490a7ec2650cbc403fcd0d37b8538f99028165729eba7e28f66eb"
+  },
+  "03_tools/ros2_migration/tools/validate_peripherals.py": {
+    "sha256": "b94ea86eebcbac456d23b81ded6ccb9c81dfb14f322223d224fcb6905ce19701"
+  },
+  "02_drivers/orbbec/README.md": {
+    "sha256": "4315bbada1f774d515e35ca9ceb35dbb0c20417b7aeec4e5880fa55761a720bc"
+  },
+  "02_drivers/orbbec/log/latest": {
+    "symlink": "latest_build"
+  },
+  "02_drivers/orbbec/log/COLCON_IGNORE": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "02_drivers/orbbec/log/latest_build": {
+    "symlink": "build_2026-11-16_17-34-40"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/events.log": {
+    "sha256": "56230b9fd3e51bab470ff154bbe4fae5c3a01336fae634e696f380717424d727"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/logger_all.log": {
+    "sha256": "65e20c1114efab00398e6f64d5d7dad47b2f93fc96c3be40b49ab3afe73b38da"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera_msgs/streams.log": {
+    "sha256": "f1485d18fb4fc7983e6b080a7c831d44452ae17e8b5fd56298258551fbfec1e9"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera_msgs/stdout_stderr.log": {
+    "sha256": "39829dc7ff9467a573e7986d066a23418de1fc08425ce3fd4e08b6584be8cdab"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera_msgs/command.log": {
+    "sha256": "10209596279e8c99cca6feea73b01965e277d7e4edf67cd2e3a2fb3f06e5eab6"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera_msgs/stdout.log": {
+    "sha256": "39829dc7ff9467a573e7986d066a23418de1fc08425ce3fd4e08b6584be8cdab"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera_msgs/stderr.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera/streams.log": {
+    "sha256": "46ff3396c27f3565584f24b1bce1c67df730e86a2c46341333360197d6b8a371"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera/stdout_stderr.log": {
+    "sha256": "3312c8af4b91c5bcabe23265e78bb01b9e74424c7a2d26eff8d81dafa5a4b855"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera/command.log": {
+    "sha256": "fc49c509edfd13ca43dbe006891b329a409e9425d538945e763099aa05c3057e"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera/stdout.log": {
+    "sha256": "3312c8af4b91c5bcabe23265e78bb01b9e74424c7a2d26eff8d81dafa5a4b855"
+  },
+  "02_drivers/orbbec/log/build_2026-11-16_17-34-40/orbbec_camera/stderr.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "02_drivers/sensors/workspace/log/latest": {
+    "symlink": "latest_list"
+  },
+  "02_drivers/sensors/workspace/log/COLCON_IGNORE": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "02_drivers/sensors/workspace/log/latest_list": {
+    "symlink": "list_2026-11-16_17-14-54"
+  },
+  "02_drivers/sensors/workspace/log/list_2026-11-16_17-14-48/logger_all.log": {
+    "sha256": "638659354086b93002314a791b268241fcc94f7640b675f5d5a40f8e3bd78ed2"
+  },
+  "02_drivers/sensors/workspace/log/list_2026-11-16_17-14-54/logger_all.log": {
+    "sha256": "f8d3dcc94f8df5d6892194c84d60e61b8860c4a8707be436df34ad7189d9292c"
+  },
+  "04_data/logs/ros2_migration/camera-camera-aligned-parameters.yaml": {
+    "sha256": "8f5b4202d9c805ddf28e693542d34d783974a5944103b0cf3a5a14fb787b598c"
+  },
+  "04_data/logs/ros2_migration/peripherals-20261116-172957.json": {
+    "sha256": "07d7f030228f5d6ff229f86fd0c01a438474bfd1d671e61a03bc620beca105cf"
+  },
+  "04_data/logs/ros2_migration/mavros-parameters.yaml": {
+    "sha256": "d2ec1b6927ff2b5ace76dd3d8eac2fa0f0843a120277206a95189014eb45113f"
+  },
+  "04_data/logs/ros2_migration/nomachine_8.5.3_install_result.json": {
+    "sha256": "2bb2dce71845cd8542efdd1971ee094b1aa2d4917fe11f2a0f1213f88ca809f2"
+  },
+  "04_data/logs/ros2_migration/camera-reliable-rates.json": {
+    "sha256": "6f0564540856aad629f8723cfd0b333aae3bd87c4433e8765edf6611af384153"
+  },
+  "04_data/logs/ros2_migration/camera-camera-parameters.yaml": {
+    "sha256": "8f5b4202d9c805ddf28e693542d34d783974a5944103b0cf3a5a14fb787b598c"
+  },
+  "04_data/logs/ros2_migration/camera-reliable-rates.log": {
+    "sha256": "500429bdbf0c939523d3437628bda2cb4b2a426858443f8b21a8b9a222166bc9"
+  },
+  "04_data/logs/ros2_migration/nomachine-install.log": {
+    "sha256": "2611eb22fb540e29f788d9f70f742deb850a1b5a0aa0795f81b4b56978882c45"
+  },
+  "04_data/logs/ros2_migration/orbbec-2.10.6-build.log": {
+    "sha256": "c3d0827c8de98369270c9fd700a968403d19b4abb0527bdce2a87b12f68983b9"
+  },
+  "04_data/logs/ros2_migration/reliable-reader-bench.log": {
+    "sha256": "ef4f73a1f07d851d56d74d492689df3ecc4473c342fd1a74b2048554e0dc926f"
+  },
+  "04_data/logs/ros2_migration/peripheral-package-baseline.tsv": {
+    "sha256": "5f2fd362701e51975afaa846ca22e3ab1dd23819dd40915dfd23bdbdbe6b95d7"
+  },
+  "04_data/logs/ros2_migration/peripheral-source-versions.json": {
+    "sha256": "f94c83b748817716653debfb0822eb9d4771451581a02a65cdd79cb4ae01e437"
+  },
+  "04_data/logs/ros2_migration/mavros-local_position-parameters.yaml": {
+    "sha256": "8f5b4202d9c805ddf28e693542d34d783974a5944103b0cf3a5a14fb787b598c"
+  },
+  "04_data/logs/ros2_migration/peripherals-apt-install.log": {
+    "sha256": "2e3e1a55b5b8845f6ea9bd8731ccb58db23fd8653323d44ca5937d4723056ea6"
+  },
+  "04_data/logs/ros2_migration/base-platform.json": {
+    "sha256": "a0da19a1b5464681c3da25f593e1cf027b326629847191312520a53fd98c15eb"
+  },
+  "04_data/logs/ros2_migration/peripheral-git-commit.txt": {
+    "sha256": "c40815d5bd2c03b2b12a9dca29b9d00c95df816d528a9a8e856f385894958237"
+  },
+  "04_data/logs/ros2_migration/aligned-2.10.6-bench.log": {
+    "sha256": "43bb6ac671f53ae072488f20c1c376ea4e3449c2938ed6b4cfca7941764ce2b9"
+  },
+  "04_data/logs/ros2_migration/peripherals-apt-simulation.log": {
+    "sha256": "44a570b5a9d94c00e4326162da7f3ee6737fd2289ba9a25d94e6b666aefbd71e"
+  },
+  "04_data/logs/ros2_migration/peripherals-20261116-174825.json": {
+    "sha256": "84f7072bcc7ed10a7fed31bba31419d6e0fff91b5c3ac3884107591fd2f968b1"
+  },
+  "04_data/logs/ros2_migration/mavros_telemetry-bench.log": {
+    "sha256": "b1458812f15c019a01e215a3f62051d54d5654ca9e599d5bd13dea02ac280134"
+  },
+  "04_data/logs/ros2_migration/peripheral-git-commit.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "04_data/logs/ros2_migration/mavros-final-validation.json": {
+    "sha256": "92cfcee491364ff5b609941ee4b8961f1f05e2ab35825d7c86d397c4967254dd"
+  },
+  "04_data/logs/ros2_migration/vendor-held-packages.txt": {
+    "sha256": "8f19c27a8de4d227448305a6f637c44c92e461c2521fd3e0f04bc83e140fa103"
+  },
+  "04_data/logs/ros2_migration/final-peripheral-bench.log": {
+    "sha256": "96c1a4b663c27f78a66b50f9578d0c45c94b9d73d001c35c01b550559fe99344"
+  },
+  "04_data/logs/ros2_migration/nomachine-8.5.3-install.log": {
+    "sha256": "29a7c41f774ca490b908bbd036608a0a8e280c7224004c78d3ad3fe414a4f4f5"
+  },
+  "04_data/logs/ros2_migration/peripherals-20261116-174607.json": {
+    "sha256": "91f788a99e00e8fea2c6f059cd39fc05f2c0d74b614e049b8a17c14c54d2c4f7"
+  },
+  "04_data/logs/ros2_migration/gemini335l-bench.log": {
+    "sha256": "509dbaeb6b1c94085588ff0817b9f0e8ce1bec2864b1eee78ad66e5415c0eda4"
+  },
+  "04_data/logs/ros2_migration/installed-packages.tsv": {
+    "sha256": "e6d686ce4331c27522dcb0edd157e84efdfc4f98de5dce3a059922ce480f0a1e"
+  },
+  "04_data/logs/ros2_migration/mavros-aligned-parameters.yaml": {
+    "sha256": "8f5b4202d9c805ddf28e693542d34d783974a5944103b0cf3a5a14fb787b598c"
+  },
+  "04_data/logs/ros2_migration/image-transport-install.log": {
+    "sha256": "31f2307708923906ea59b2453416fca415889b7168481a24ade11b8d98e1dbf7"
+  },
+  "04_data/logs/ros2_migration/peripherals-20261116-174251.json": {
+    "sha256": "8e9fcfcfbc0fd2599f66aa10f95293651956bccd960993b75065ac6656b65418"
+  },
+  "04_data/logs/ros2_migration/camera-isolated-rates.json": {
+    "sha256": "163b091563f48827f9d1fcd17a3ae356e0dba82b8a87f856d9932b13f0495eeb"
+  },
+  "04_data/logs/ros2_migration/camera-isolated-rates.log": {
+    "sha256": "0fec663e6f1c39af6091201294f0305866b146faa7a0858348db6631bf83ffae"
+  },
+  "04_data/logs/ros2_migration/mavros-final-bench.log": {
+    "sha256": "f6100e939927a28c98c166e1b1c0e2cc6f6b793c924989fa9633580f8f9ec5df"
+  },
+  "04_data/logs/ros2_migration/base-dds-20261116-171308/result.json": {
+    "sha256": "3efc9a820ec2328e8346b1e355106a8609ce6bbca6367cab0ddcd75bea40a310"
+  },
+  "04_data/logs/ros2_migration/base-dds-20261116-171308/listener.log": {
+    "sha256": "1eacd182d708b2bad67c4a9fa485fc2c4ce9ee2bc9aca3441fcee8c49b29747d"
+  },
+  "04_data/logs/ros2_migration/base-dds-20261116-171308/talker.log": {
+    "sha256": "98adeebc24d8ea6a845ebf793dea95836c3b4e4fbb4959ff369cec4f85533e3a"
+  }
+}
