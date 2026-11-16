@@ -1,0 +1,2 @@
+    PID                  STARTED COMMAND
+   1419 Mon Nov 16 14:48:43 2026 /usr/local/bin/mediamtx /etc/mediamtx/gimbal.yml

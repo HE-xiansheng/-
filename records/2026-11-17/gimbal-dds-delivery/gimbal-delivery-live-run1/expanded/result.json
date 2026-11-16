@@ -1,0 +1,154 @@
+{
+  "completed": true,
+  "rounds": [
+    {
+      "profile": "candidate_default",
+      "passed": true,
+      "checks": {
+        "owned_decoder_reader_exit": true,
+        "no_xml_errors": true,
+        "reliable_raw_all_published_received": true,
+        "reliable_raw_rate": true,
+        "reliable_raw_geometry": true,
+        "reliable_raw_changing_pixels": true,
+        "reliable_raw_source_stamp_order": true,
+        "reliable_color_all_published_received": true,
+        "reliable_color_rate": true,
+        "reliable_color_geometry": true,
+        "reliable_color_changing_pixels": true,
+        "reliable_color_source_stamp_order": true,
+        "best_effort_raw_all_published_received": true,
+        "best_effort_raw_rate": true,
+        "best_effort_raw_geometry": true,
+        "best_effort_raw_changing_pixels": true,
+        "best_effort_raw_source_stamp_order": true,
+        "best_effort_color_all_published_received": true,
+        "best_effort_color_rate": true,
+        "best_effort_color_geometry": true,
+        "best_effort_color_changing_pixels": true,
+        "best_effort_color_source_stamp_order": true,
+        "full_source_frames": true,
+        "selected_profile_matches_request": true,
+        "requested_shm_segment_created": true,
+        "color_source_stamps_preserved": true
+      },
+      "streams": {
+        "reliable_raw": {
+          "published": 691,
+          "received": 691,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 29.985478808324427,
+          "max_age_ms": 29.162968
+        },
+        "reliable_color": {
+          "published": 344,
+          "received": 344,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 14.940476763360403,
+          "max_age_ms": 96.376009
+        },
+        "best_effort_raw": {
+          "published": 691,
+          "received": 691,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 29.988334881944855,
+          "max_age_ms": 32.048407
+        },
+        "best_effort_color": {
+          "published": 344,
+          "received": 344,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 14.940424755735686,
+          "max_age_ms": 97.013588
+        }
+      }
+    },
+    {
+      "profile": "candidate_explicit32",
+      "passed": true,
+      "checks": {
+        "owned_decoder_reader_exit": true,
+        "no_xml_errors": true,
+        "reliable_raw_all_published_received": true,
+        "reliable_raw_rate": true,
+        "reliable_raw_geometry": true,
+        "reliable_raw_changing_pixels": true,
+        "reliable_raw_source_stamp_order": true,
+        "reliable_color_all_published_received": true,
+        "reliable_color_rate": true,
+        "reliable_color_geometry": true,
+        "reliable_color_changing_pixels": true,
+        "reliable_color_source_stamp_order": true,
+        "best_effort_raw_all_published_received": true,
+        "best_effort_raw_rate": true,
+        "best_effort_raw_geometry": true,
+        "best_effort_raw_changing_pixels": true,
+        "best_effort_raw_source_stamp_order": true,
+        "best_effort_color_all_published_received": true,
+        "best_effort_color_rate": true,
+        "best_effort_color_geometry": true,
+        "best_effort_color_changing_pixels": true,
+        "best_effort_color_source_stamp_order": true,
+        "full_source_frames": true,
+        "selected_profile_matches_request": true,
+        "requested_shm_segment_created": true,
+        "color_source_stamps_preserved": true
+      },
+      "streams": {
+        "reliable_raw": {
+          "published": 682,
+          "received": 682,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 30.047635643240646,
+          "max_age_ms": 28.257932
+        },
+        "reliable_color": {
+          "published": 340,
+          "received": 340,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 14.99027372737689,
+          "max_age_ms": 80.15487
+        },
+        "best_effort_raw": {
+          "published": 682,
+          "received": 682,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 30.050479979755856,
+          "max_age_ms": 31.22737
+        },
+        "best_effort_color": {
+          "published": 340,
+          "received": 340,
+          "missing": 0,
+          "extra": 0,
+          "missing_stamps": [],
+          "hz": 14.990204321334385,
+          "max_age_ms": 80.448868
+        }
+      }
+    }
+  ],
+  "child_returncodes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "scope": "actual .235 camera via read-only SSH tunnels -> target relay/MPP -> native DDS observers; source stamps are decode receipt times"
+}

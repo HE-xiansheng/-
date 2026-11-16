@@ -1,0 +1,68 @@
+{
+  "profile": "shm64",
+  "passed": true,
+  "checks": {
+    "owned_decoder_reader_exit": true,
+    "no_xml_errors": true,
+    "reliable_raw_all_published_received": true,
+    "reliable_raw_rate": true,
+    "reliable_raw_geometry": true,
+    "reliable_raw_changing_pixels": true,
+    "reliable_raw_source_stamp_order": true,
+    "reliable_color_all_published_received": true,
+    "reliable_color_rate": true,
+    "reliable_color_geometry": true,
+    "reliable_color_changing_pixels": true,
+    "reliable_color_source_stamp_order": true,
+    "best_effort_raw_all_published_received": true,
+    "best_effort_raw_rate": true,
+    "best_effort_raw_geometry": true,
+    "best_effort_raw_changing_pixels": true,
+    "best_effort_raw_source_stamp_order": true,
+    "best_effort_color_all_published_received": true,
+    "best_effort_color_rate": true,
+    "best_effort_color_geometry": true,
+    "best_effort_color_changing_pixels": true,
+    "best_effort_color_source_stamp_order": true,
+    "full_source_frames": true,
+    "color_source_stamps_preserved": true
+  },
+  "streams": {
+    "reliable_raw": {
+      "published": 727,
+      "received": 727,
+      "missing": 0,
+      "extra": 0,
+      "missing_stamps": [],
+      "hz": 30.036092936859102,
+      "max_age_ms": 29.980712
+    },
+    "reliable_color": {
+      "published": 364,
+      "received": 364,
+      "missing": 0,
+      "extra": 0,
+      "missing_stamps": [],
+      "hz": 15.030824868440565,
+      "max_age_ms": 100.018359
+    },
+    "best_effort_raw": {
+      "published": 727,
+      "received": 727,
+      "missing": 0,
+      "extra": 0,
+      "missing_stamps": [],
+      "hz": 30.038688219260404,
+      "max_age_ms": 31.29212
+    },
+    "best_effort_color": {
+      "published": 364,
+      "received": 364,
+      "missing": 0,
+      "extra": 0,
+      "missing_stamps": [],
+      "hz": 15.030981528693795,
+      "max_age_ms": 100.590897
+    }
+  }
+}

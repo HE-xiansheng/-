@@ -1,0 +1,16 @@
+[master 1f81c3b] Use publisher scoped Fast DDS shared memory profile for MPP images
+ 4 files changed, 42 insertions(+), 2 deletions(-)
+ create mode 100644 01_apps/mission_demo/workspace/src/rtsp_test/config/fastdds_large_images.xml
+{
+  "head": "1f81c3bc74d4d8867a61d2078457bae5f2091b67",
+  "sha256": {
+    "01_apps/mission_demo/workspace/src/rtsp_test/CMakeLists.txt": "69b64b5aab6663695454beaecff7c3730c10599cfdfca2c78210d0550ae35249",
+    "01_apps/mission_demo/workspace/src/rtsp_test/package.xml": "0b78772be191bb81494e65f32ada20d88c26b969569441b9937044e96a644e25",
+    "01_apps/mission_demo/workspace/src/rtsp_test/src/rtsp_hw_pub_ultra.cpp": "88c492138012127ed8ea5c485ddbf08c680fa69a2abe304906bbd40928730bcf",
+    "01_apps/mission_demo/workspace/src/rtsp_test/config/fastdds_large_images.xml": "6038209349e7f966f197c378b08b7c8a875c462f21ed9178042bc238b5998071",
+    "01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra": "f391437954c37c5b2b253c637db141421fc5479b808d5d7d2915a33810d85cc1",
+    "01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.xml": "0b78772be191bb81494e65f32ada20d88c26b969569441b9937044e96a644e25",
+    "01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/config/fastdds_large_images.xml": "6038209349e7f966f197c378b08b7c8a875c462f21ed9178042bc238b5998071"
+  },
+  "status": ""
+}

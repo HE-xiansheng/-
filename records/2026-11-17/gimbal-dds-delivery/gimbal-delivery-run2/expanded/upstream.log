@@ -1,0 +1,18 @@
+2026/11/17 01:28:09 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:28:09 INF configuration loaded from /tmp/gimbal-delivery-check/upstream.yml
+2026/11/17 01:28:09 INF [RTSP] started with listeners on 127.0.0.1:18555 (TCP/RTSP)
+2026/11/17 01:28:09 INF [RTSP] [conn 127.0.0.1:58354] opened
+2026/11/17 01:28:09 INF [RTSP] [session 73bc0865] created by 127.0.0.1:58354
+2026/11/17 01:28:09 INF [path upstream] stream is available and online, 1 track (H264)
+2026/11/17 01:28:09 INF [RTSP] [session 73bc0865] is publishing to path 'upstream'
+2026/11/17 01:28:10 INF [path upstream] RTP packets are too big (1460 > 1188), remuxing them into smaller ones
+2026/11/17 01:28:10 INF [RTSP] [conn 127.0.0.1:58362] opened
+2026/11/17 01:28:10 INF [RTSP] [session 6b63df40] created by 127.0.0.1:58362
+2026/11/17 01:28:10 INF [RTSP] [session 6b63df40] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:29:05 INF [RTSP] [session 6b63df40] destroyed: torn down by 127.0.0.1:58362
+2026/11/17 01:29:05 INF [RTSP] [conn 127.0.0.1:58362] closed: read tcp 127.0.0.1:18555->127.0.0.1:58362: read: connection reset by peer
+2026/11/17 01:29:05 INF [RTSP] [session 73bc0865] destroyed: torn down by 127.0.0.1:58354
+2026/11/17 01:29:05 INF [RTSP] [conn 127.0.0.1:58354] closed: EOF
+2026/11/17 01:29:05 INF shutting down gracefully
+2026/11/17 01:29:05 INF [RTSP] closing
+2026/11/17 01:29:05 INF waiting for running hooks

@@ -1,0 +1,4 @@
+expected connection failure on closed loopback port; exit=255
+Failed to open RTSP stream
+[INFO] [1794850659.719839150] [rtsp_hw_pub_ultra]: Fast DDS profile: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/config/fastdds_large_images.xml
+[tcp @ 0x5585474140] Connection to tcp://127.0.0.1:1?timeout=0 failed: Connection refused

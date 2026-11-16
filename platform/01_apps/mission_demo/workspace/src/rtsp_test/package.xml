@@ -4,7 +4,7 @@
   <description>ROS2 wrapper of the deployed RK3588 MPP RTSP decoder.</description>
   <maintainer email="940833041@qq.com">tyzk</maintainer><license>TODO</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <depend>rclcpp</depend><depend>sensor_msgs</depend><depend>std_msgs</depend><depend>cv_bridge</depend>
+  <depend>rclcpp</depend><depend>ament_index_cpp</depend><depend>sensor_msgs</depend><depend>std_msgs</depend><depend>cv_bridge</depend>
   <depend>libopencv-dev</depend><depend>libavformat-dev</depend><depend>libavcodec-dev</depend><depend>libavutil-dev</depend>
   <export><build_type>ament_cmake</build_type></export>
 </package>

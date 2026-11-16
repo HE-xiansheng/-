@@ -1,0 +1,4 @@
+ 01:37:40 up  7:09,  3 users,  load average: 1.79, 2.20, 2.03
+1f81c3b Use publisher scoped Fast DDS shared memory profile for MPP images
+active
+temporary-directory-absent

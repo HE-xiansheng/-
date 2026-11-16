@@ -1,0 +1,12 @@
+{
+  "completed": false,
+  "rounds": [],
+  "child_returncodes": [
+    0,
+    255,
+    0,
+    -11,
+    0
+  ],
+  "scope": "synthetic 1080p30 H264 -> real relay/MPP -> native DDS observers; source stamps are decode receipt times"
+}

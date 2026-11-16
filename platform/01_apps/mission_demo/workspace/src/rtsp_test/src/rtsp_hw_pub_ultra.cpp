@@ -1,4 +1,8 @@
 #include <rclcpp/rclcpp.hpp>
+#include <ament_index_cpp/get_package_share_directory.hpp>
+#include <cstdlib>
+#include <fstream>
+#include <stdexcept>
 #include <sensor_msgs/msg/image.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/opencv.hpp>
@@ -183,10 +187,24 @@ static int decode_frame(DecoderContext *dec, uint8_t *data, size_t len,
 // 改成 mono8 后这两项都省掉，检测节点也无需再做 BGR→灰度。
 // ============================================================
 int main(int argc, char **argv) {
+    // Scope the large-frame transport to this publisher process. Keep an explicit
+    // caller profile and any selected non-Fast-DDS RMW unchanged.
+    const char* rmw = std::getenv("RMW_IMPLEMENTATION");
+    const bool fastdds = !rmw || std::string(rmw) == "rmw_fastrtps_cpp" ||
+        std::string(rmw) == "rmw_fastrtps_dynamic_cpp";
+    if (fastdds && !std::getenv("FASTRTPS_DEFAULT_PROFILES_FILE") &&
+        !std::getenv("FASTDDS_DEFAULT_PROFILES_FILE")) {
+        const auto profile = ament_index_cpp::get_package_share_directory("rtsp_test") +
+            "/config/fastdds_large_images.xml";
+        if (!std::ifstream(profile).good() || setenv("FASTRTPS_DEFAULT_PROFILES_FILE", profile.c_str(), 0) != 0)
+            throw std::runtime_error("Cannot select RTSP large-image DDS profile: " + profile);
+    }
     rclcpp::init(argc, argv);
     // Small conversions only; the default 8-thread pool spins more than it helps.
     cv::setNumThreads(2);
     auto nh = std::make_shared<rclcpp::Node>("rtsp_hw_pub_ultra");
+    if (const char* profile = std::getenv("FASTRTPS_DEFAULT_PROFILES_FILE"))
+        RCLCPP_INFO(nh->get_logger(), "Fast DDS profile: %s", profile);
     auto gray_pub = nh->create_publisher<sensor_msgs::msg::Image>("/rtsp_cam/image_raw", rclcpp::QoS(1).reliable());
     auto color_pub = nh->create_publisher<sensor_msgs::msg::Image>("/rtsp_cam/image_color", rclcpp::QoS(1).reliable());
 

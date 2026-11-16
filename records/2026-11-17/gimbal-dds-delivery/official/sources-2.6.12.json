@@ -1,0 +1,17 @@
+[
+  {
+    "file": "shared-memory-2.6.12.rst",
+    "url": "https://raw.githubusercontent.com/eProsima/Fast-DDS-docs/v2.6.12/docs/fastdds/transport/shared_memory/shared_memory.rst",
+    "bytes": 8647
+  },
+  {
+    "file": "SharedMemTransportDescriptor-2.6.12.cpp",
+    "url": "https://raw.githubusercontent.com/eProsima/Fast-DDS/v2.6.12/src/cpp/rtps/transport/shared_mem/SharedMemTransportDescriptor.cpp",
+    "bytes": 2254
+  },
+  {
+    "file": "SharedMemTransport-2.6.12.cpp",
+    "url": "https://raw.githubusercontent.com/eProsima/Fast-DDS/v2.6.12/src/cpp/rtps/transport/shared_mem/SharedMemTransport.cpp",
+    "bytes": 18344
+  }
+]

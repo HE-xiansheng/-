@@ -1,0 +1,407 @@
+[
+  {
+    "run": "gimbal-delivery-run1",
+    "completed": false,
+    "scope": "synthetic 1080p30 H264 -> real relay/MPP -> native DDS observers; source stamps are decode receipt times",
+    "child_returncodes": [
+      0,
+      255,
+      0,
+      -11,
+      0
+    ],
+    "rounds": []
+  },
+  {
+    "run": "gimbal-delivery-run2",
+    "completed": true,
+    "scope": "synthetic 1080p30 H264 -> real relay/MPP -> native DDS observers; source stamps are decode receipt times",
+    "child_returncodes": [
+      0,
+      255,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rounds": [
+      {
+        "profile": "default",
+        "passed": false,
+        "passed_checks": 17,
+        "total_checks": 24,
+        "streams": {
+          "reliable_raw": {
+            "published": 726,
+            "received": 643,
+            "missing": 83,
+            "hz": 26.572740482668713,
+            "max_age_ms": 54.01159
+          },
+          "reliable_color": {
+            "published": 363,
+            "received": 348,
+            "missing": 15,
+            "hz": 14.39473850202079,
+            "max_age_ms": 89.09785
+          },
+          "best_effort_raw": {
+            "published": 726,
+            "received": 154,
+            "missing": 572,
+            "hz": 6.419964765272132,
+            "max_age_ms": 28.972635
+          },
+          "best_effort_color": {
+            "published": 363,
+            "received": 27,
+            "missing": 336,
+            "hz": 1.1785284940563796,
+            "max_age_ms": 72.660796
+          }
+        }
+      },
+      {
+        "profile": "shm64",
+        "passed": false,
+        "passed_checks": 22,
+        "total_checks": 24,
+        "streams": {
+          "reliable_raw": {
+            "published": 715,
+            "received": 715,
+            "missing": 0,
+            "hz": 30.025715380116647,
+            "max_age_ms": 42.922832
+          },
+          "reliable_color": {
+            "published": 358,
+            "received": 357,
+            "missing": 1,
+            "hz": 15.030851719093533,
+            "max_age_ms": 86.248078
+          },
+          "best_effort_raw": {
+            "published": 715,
+            "received": 715,
+            "missing": 0,
+            "hz": 30.01773992430045,
+            "max_age_ms": 43.677369
+          },
+          "best_effort_color": {
+            "published": 358,
+            "received": 357,
+            "missing": 1,
+            "hz": 15.030875967519641,
+            "max_age_ms": 86.802824
+          }
+        }
+      }
+    ]
+  },
+  {
+    "run": "gimbal-delivery-run3",
+    "completed": true,
+    "scope": "synthetic 1080p30 H264 -> real relay/MPP -> native DDS observers; source stamps are decode receipt times",
+    "child_returncodes": [
+      0,
+      255,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rounds": [
+      {
+        "profile": "shm64",
+        "passed": true,
+        "passed_checks": 24,
+        "total_checks": 24,
+        "streams": {
+          "reliable_raw": {
+            "published": 727,
+            "received": 727,
+            "missing": 0,
+            "hz": 30.036092936859102,
+            "max_age_ms": 29.980712
+          },
+          "reliable_color": {
+            "published": 364,
+            "received": 364,
+            "missing": 0,
+            "hz": 15.030824868440565,
+            "max_age_ms": 100.018359
+          },
+          "best_effort_raw": {
+            "published": 727,
+            "received": 727,
+            "missing": 0,
+            "hz": 30.038688219260404,
+            "max_age_ms": 31.29212
+          },
+          "best_effort_color": {
+            "published": 364,
+            "received": 364,
+            "missing": 0,
+            "hz": 15.030981528693795,
+            "max_age_ms": 100.590897
+          }
+        }
+      },
+      {
+        "profile": "default",
+        "passed": false,
+        "passed_checks": 17,
+        "total_checks": 24,
+        "streams": {
+          "reliable_raw": {
+            "published": 723,
+            "received": 655,
+            "missing": 68,
+            "hz": 27.21529561294793,
+            "max_age_ms": 40.2336
+          },
+          "reliable_color": {
+            "published": 361,
+            "received": 357,
+            "missing": 4,
+            "hz": 14.874312834317806,
+            "max_age_ms": 101.315684
+          },
+          "best_effort_raw": {
+            "published": 723,
+            "received": 223,
+            "missing": 500,
+            "hz": 9.380907118785842,
+            "max_age_ms": 39.73277
+          },
+          "best_effort_color": {
+            "published": 361,
+            "received": 72,
+            "missing": 289,
+            "hz": 3.3058325350927693,
+            "max_age_ms": 68.487825
+          }
+        }
+      },
+      {
+        "profile": "publisher_shm64",
+        "passed": true,
+        "passed_checks": 24,
+        "total_checks": 24,
+        "streams": {
+          "reliable_raw": {
+            "published": 714,
+            "received": 714,
+            "missing": 0,
+            "hz": 30.061725269965468,
+            "max_age_ms": 40.119935
+          },
+          "reliable_color": {
+            "published": 357,
+            "received": 357,
+            "missing": 0,
+            "hz": 15.033727418733628,
+            "max_age_ms": 82.05494
+          },
+          "best_effort_raw": {
+            "published": 714,
+            "received": 714,
+            "missing": 0,
+            "hz": 30.064678538461088,
+            "max_age_ms": 42.522085
+          },
+          "best_effort_color": {
+            "published": 357,
+            "received": 357,
+            "missing": 0,
+            "hz": 15.03359446842047,
+            "max_age_ms": 82.404062
+          }
+        }
+      }
+    ]
+  },
+  {
+    "run": "gimbal-delivery-candidate-run1",
+    "completed": true,
+    "scope": "synthetic 1080p30 H264 -> real relay/MPP -> native DDS observers; source stamps are decode receipt times",
+    "child_returncodes": [
+      0,
+      255,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rounds": [
+      {
+        "profile": "candidate_default",
+        "passed": true,
+        "passed_checks": 26,
+        "total_checks": 26,
+        "streams": {
+          "reliable_raw": {
+            "published": 726,
+            "received": 726,
+            "missing": 0,
+            "hz": 30.004829859252617,
+            "max_age_ms": 37.796992
+          },
+          "reliable_color": {
+            "published": 363,
+            "received": 363,
+            "missing": 0,
+            "hz": 15.018561342674666,
+            "max_age_ms": 106.420774
+          },
+          "best_effort_raw": {
+            "published": 726,
+            "received": 726,
+            "missing": 0,
+            "hz": 30.007481532760846,
+            "max_age_ms": 40.768472
+          },
+          "best_effort_color": {
+            "published": 363,
+            "received": 363,
+            "missing": 0,
+            "hz": 15.018566250102753,
+            "max_age_ms": 107.030062
+          }
+        }
+      },
+      {
+        "profile": "candidate_explicit32",
+        "passed": true,
+        "passed_checks": 26,
+        "total_checks": 26,
+        "streams": {
+          "reliable_raw": {
+            "published": 716,
+            "received": 716,
+            "missing": 0,
+            "hz": 30.03418645894333,
+            "max_age_ms": 31.155912
+          },
+          "reliable_color": {
+            "published": 358,
+            "received": 358,
+            "missing": 0,
+            "hz": 15.02759051158607,
+            "max_age_ms": 85.593875
+          },
+          "best_effort_raw": {
+            "published": 716,
+            "received": 716,
+            "missing": 0,
+            "hz": 30.03922993231155,
+            "max_age_ms": 34.354016
+          },
+          "best_effort_color": {
+            "published": 358,
+            "received": 358,
+            "missing": 0,
+            "hz": 15.027399003887608,
+            "max_age_ms": 86.292703
+          }
+        }
+      }
+    ]
+  },
+  {
+    "run": "gimbal-delivery-live-run1",
+    "completed": true,
+    "scope": "actual .235 camera via read-only SSH tunnels -> target relay/MPP -> native DDS observers; source stamps are decode receipt times",
+    "child_returncodes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rounds": [
+      {
+        "profile": "candidate_default",
+        "passed": true,
+        "passed_checks": 26,
+        "total_checks": 26,
+        "streams": {
+          "reliable_raw": {
+            "published": 691,
+            "received": 691,
+            "missing": 0,
+            "hz": 29.985478808324427,
+            "max_age_ms": 29.162968
+          },
+          "reliable_color": {
+            "published": 344,
+            "received": 344,
+            "missing": 0,
+            "hz": 14.940476763360403,
+            "max_age_ms": 96.376009
+          },
+          "best_effort_raw": {
+            "published": 691,
+            "received": 691,
+            "missing": 0,
+            "hz": 29.988334881944855,
+            "max_age_ms": 32.048407
+          },
+          "best_effort_color": {
+            "published": 344,
+            "received": 344,
+            "missing": 0,
+            "hz": 14.940424755735686,
+            "max_age_ms": 97.013588
+          }
+        }
+      },
+      {
+        "profile": "candidate_explicit32",
+        "passed": true,
+        "passed_checks": 26,
+        "total_checks": 26,
+        "streams": {
+          "reliable_raw": {
+            "published": 682,
+            "received": 682,
+            "missing": 0,
+            "hz": 30.047635643240646,
+            "max_age_ms": 28.257932
+          },
+          "reliable_color": {
+            "published": 340,
+            "received": 340,
+            "missing": 0,
+            "hz": 14.99027372737689,
+            "max_age_ms": 80.15487
+          },
+          "best_effort_raw": {
+            "published": 682,
+            "received": 682,
+            "missing": 0,
+            "hz": 30.050479979755856,
+            "max_age_ms": 31.22737
+          },
+          "best_effort_color": {
+            "published": 340,
+            "received": 340,
+            "missing": 0,
+            "hz": 14.990204321334385,
+            "max_age_ms": 80.448868
+          }
+        }
+      }
+    ]
+  }
+]

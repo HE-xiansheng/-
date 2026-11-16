@@ -1,0 +1,1 @@
+Before fixture start (asserted encode.log absent), changed observer env to reader_env for publisher_shm64 isolation. Corrected exact input archive retained alongside original.

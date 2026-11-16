@@ -1,0 +1,72 @@
+{
+  "profile": "shm64",
+  "passed": false,
+  "checks": {
+    "owned_decoder_reader_exit": true,
+    "no_xml_errors": true,
+    "reliable_raw_all_published_received": true,
+    "reliable_raw_rate": true,
+    "reliable_raw_geometry": true,
+    "reliable_raw_changing_pixels": true,
+    "reliable_raw_source_stamp_order": true,
+    "reliable_color_all_published_received": false,
+    "reliable_color_rate": true,
+    "reliable_color_geometry": true,
+    "reliable_color_changing_pixels": true,
+    "reliable_color_source_stamp_order": true,
+    "best_effort_raw_all_published_received": true,
+    "best_effort_raw_rate": true,
+    "best_effort_raw_geometry": true,
+    "best_effort_raw_changing_pixels": true,
+    "best_effort_raw_source_stamp_order": true,
+    "best_effort_color_all_published_received": false,
+    "best_effort_color_rate": true,
+    "best_effort_color_geometry": true,
+    "best_effort_color_changing_pixels": true,
+    "best_effort_color_source_stamp_order": true,
+    "full_source_frames": true,
+    "color_source_stamps_preserved": true
+  },
+  "streams": {
+    "reliable_raw": {
+      "published": 715,
+      "received": 715,
+      "missing": 0,
+      "extra": 0,
+      "missing_stamps": [],
+      "hz": 30.025715380116647,
+      "max_age_ms": 42.922832
+    },
+    "reliable_color": {
+      "published": 358,
+      "received": 357,
+      "missing": 1,
+      "extra": 0,
+      "missing_stamps": [
+        1794850143854867663
+      ],
+      "hz": 15.030851719093533,
+      "max_age_ms": 86.248078
+    },
+    "best_effort_raw": {
+      "published": 715,
+      "received": 715,
+      "missing": 0,
+      "extra": 0,
+      "missing_stamps": [],
+      "hz": 30.01773992430045,
+      "max_age_ms": 43.677369
+    },
+    "best_effort_color": {
+      "published": 358,
+      "received": 357,
+      "missing": 1,
+      "extra": 0,
+      "missing_stamps": [
+        1794850143854867663
+      ],
+      "hz": 15.030875967519641,
+      "max_age_ms": 86.802824
+    }
+  }
+}

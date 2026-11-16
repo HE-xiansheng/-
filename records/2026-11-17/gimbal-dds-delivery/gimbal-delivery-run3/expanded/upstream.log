@@ -1,0 +1,28 @@
+2026/11/17 01:30:30 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 01:30:30 INF configuration loaded from /tmp/gimbal-delivery-check/upstream.yml
+2026/11/17 01:30:30 INF [RTSP] started with listeners on 127.0.0.1:18555 (TCP/RTSP)
+2026/11/17 01:30:31 INF [RTSP] [conn 127.0.0.1:60562] opened
+2026/11/17 01:30:31 INF [RTSP] [session f7f564a0] created by 127.0.0.1:60562
+2026/11/17 01:30:31 INF [path upstream] stream is available and online, 1 track (H264)
+2026/11/17 01:30:31 INF [RTSP] [session f7f564a0] is publishing to path 'upstream'
+2026/11/17 01:30:31 INF [path upstream] RTP packets are too big (1460 > 1188), remuxing them into smaller ones
+2026/11/17 01:30:31 INF [RTSP] [conn 127.0.0.1:60568] opened
+2026/11/17 01:30:31 INF [RTSP] [session 0f4f535a] created by 127.0.0.1:60568
+2026/11/17 01:30:31 INF [RTSP] [session 0f4f535a] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:30:57 INF [RTSP] [session 0f4f535a] destroyed: torn down by 127.0.0.1:60568
+2026/11/17 01:30:57 INF [RTSP] [conn 127.0.0.1:60568] closed: EOF
+2026/11/17 01:31:01 INF [RTSP] [conn 127.0.0.1:34712] opened
+2026/11/17 01:31:01 INF [RTSP] [session 1aeb0211] created by 127.0.0.1:34712
+2026/11/17 01:31:01 INF [RTSP] [session 1aeb0211] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:31:27 INF [RTSP] [session 1aeb0211] destroyed: torn down by 127.0.0.1:34712
+2026/11/17 01:31:27 INF [RTSP] [conn 127.0.0.1:34712] closed: EOF
+2026/11/17 01:31:31 INF [RTSP] [conn 127.0.0.1:40158] opened
+2026/11/17 01:31:31 INF [RTSP] [session 1c2d7adc] created by 127.0.0.1:40158
+2026/11/17 01:31:31 INF [RTSP] [session 1c2d7adc] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/17 01:31:57 INF [RTSP] [session 1c2d7adc] destroyed: torn down by 127.0.0.1:40158
+2026/11/17 01:31:57 INF [RTSP] [conn 127.0.0.1:40158] closed: EOF
+2026/11/17 01:32:00 INF [RTSP] [session f7f564a0] destroyed: torn down by 127.0.0.1:60562
+2026/11/17 01:32:00 INF [RTSP] [conn 127.0.0.1:60562] closed: EOF
+2026/11/17 01:32:00 INF shutting down gracefully
+2026/11/17 01:32:00 INF [RTSP] closing
+2026/11/17 01:32:00 INF waiting for running hooks
