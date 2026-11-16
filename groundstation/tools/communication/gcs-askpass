@@ -1,0 +1,4 @@
+#!/bin/sh
+# SSH reads this output through a private pipe. No password is stored here.
+[ -n "${GCS_SSH_PASSWORD:-}" ] || exit 1
+printf '%s\n' "$GCS_SSH_PASSWORD"

@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.19)
+project(video_reconnect_test LANGUAGES CXX)
+set(CMAKE_AUTOMOC ON)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick)
+get_filename_component(GCS_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
+qt_add_executable(video_reconnect_test reconnect.cpp "${GCS_ROOT}/videocontroller.cpp" "${GCS_ROOT}/videocontroller.h"
+    "${GCS_ROOT}/connectioncontroller.cpp" "${GCS_ROOT}/connectioncontroller.h")
+target_include_directories(video_reconnect_test PRIVATE "${GCS_ROOT}")
+target_compile_definitions(video_reconnect_test PRIVATE GCS_VIDEO_ROOT="${GCS_ROOT}")
+target_link_libraries(video_reconnect_test PRIVATE Qt6::Core Qt6::Gui Qt6::Quick)
+qt_add_resources(video_reconnect_test video PREFIX /qt/qml/CustomGeometryExample BASE "${GCS_ROOT}" FILES "${GCS_ROOT}/tools/video/ros_image_bridge.py")

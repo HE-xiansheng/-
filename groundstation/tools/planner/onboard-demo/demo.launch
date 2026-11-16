@@ -1,0 +1,18 @@
+<launch>
+  <!-- 真实雷达 + FAST-LIO 参数教学入口；先停止已有规划预览，再启动本 demo。 -->
+  <arg name="config" default="$(find ego_planner)/config/demo.yaml" />
+  <arg name="drone_id" default="0" />
+  <arg name="odom_topic" default="/factory_fastlio/odometry" />
+  <arg name="cloud_topic" default="/factory_fastlio/cloud_world" />
+
+  <include file="$(find ego_planner)/launch/realflight/run_planner_board.launch">
+    <arg name="drone_id" value="$(arg drone_id)" />
+    <arg name="manual_preview" value="true" />
+    <arg name="odom_topic" value="$(arg odom_topic)" />
+    <arg name="cloud_topic" value="$(arg cloud_topic)" />
+  </include>
+
+  <!-- include 提供完整默认值；此处只覆盖教学参数。 -->
+  <rosparam command="load" file="$(arg config)" ns="/drone_$(arg drone_id)_ego_planner_node" />
+  <param name="/drone_$(arg drone_id)_ego_planner_node/fsm/manual_preview" value="true" />
+</launch>

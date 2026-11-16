@@ -1,0 +1,4 @@
+PASS 真实ROS2机载SSH只读监视进入Qt控制器
+PASS 隔离域没有启动真实任务
+PASS 只读验证未发送任务操作
+{"aruco":{"detector":{},"id":-1,"landing":{},"landing_fresh":false,"offset":{},"reason":"marker_unavailable","source_stamp_known":false,"valid":false},"fc":null,"log_tail":"","map_session":null,"message":"","run":"","running":false,"stop_pending":false,"task":"","tracking":{},"waypoint":{}}

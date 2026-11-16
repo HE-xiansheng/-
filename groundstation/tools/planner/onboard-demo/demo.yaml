@@ -1,0 +1,31 @@
+# 真实雷达 + FAST-LIO 的规划预览 demo 参数。
+# 启动：source ~/drone_platform/01_apps/ego_planner/devel/setup.bash
+#       roslaunch ego_planner demo.launch
+# 编辑：roscd ego_planner，然后打开 config/demo.yaml。
+# 每次先改一个参数，Ctrl+C 停止 demo 后重新启动，再选目标观察变化。
+# 本配置不启动飞控执行器；先停止其他规划预览，保留雷达与 FAST-LIO。
+# &name 定义一个值，*name 引用同一个值：改定义处即可同步规划和优化模块。
+
+manager:
+  max_vel: &max_vel 1.0             # 最大速度，m/s；观察轨迹时长及速度变化。
+  max_acc: &max_acc 0.5             # 最大加速度，m/s^2；观察加减速过程。
+  planning_horizon: &horizon 4.0   # 局部规划距离，m。
+
+fsm:
+  planning_horizon: *horizon
+
+# 地图与避障：使用真实点云，不生成仿真障碍物。
+grid_map:
+  resolution: 0.10                 # 栅格边长，m；越小越精细，计算和内存开销越大。
+  obstacles_inflation: 0.35         # 障碍物膨胀半径，m；观察狭窄通道及绕障路径。
+  local_update_range_x: 5.5         # 局部地图更新范围参数，m。
+  local_update_range_y: 5.5
+  local_update_range_z: 2.0
+
+optimization:
+  max_vel: *max_vel
+  max_acc: *max_acc
+  max_vel_z: 0.3                   # 垂直速度约束，m/s。
+  weight_time: 10.0                # 时间代价权重。
+  obstacle_clearance: 0.10         # 优化器的障碍物间距参数，m。
+  obstacle_clearance_soft: 0.50    # 软约束间距参数，m。

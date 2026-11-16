@@ -1,0 +1,17 @@
+{
+  "installed": true,
+  "backup": "/home/orangepi/drone_platform/01_apps/ego_planner/deployment-backups/automatic-navigation-20261029-143833",
+  "files": {
+    "src/diff_planner/plan_manage/src/diff_replan_fsm.cpp": "36b713539ea3c1af66c010392bf31ff182b31ab1c6a01be2b3bb092f3daa8a57",
+    "src/diff_planner/plan_manage/include/plan_manage/diff_replan_fsm.h": "e7d684a1952cfcf7d08d8274acebd24dd5ca910fb2031a07184fc0d716b4b993",
+    "src/diff_planner/plan_manage/include/plan_manage/candidate_preview_io.h": "f456087388819ce5b8bf6e2e24499c3f61f1d9640f7dd5dbb0c9bb28475315cf",
+    "src/diff_planner/plan_manage/src/candidate_preview_worker.cpp": "d628dd4c53c1dbaf833fde8759cc7058b4ddb472f29b1b376a04ea13b8bc0966",
+    "map_navigation.py": "98267c8fc7db32dc2963e712d9539c24cbae2640c16bee0e755bdd9a84afa85b",
+    "px4_execution/adapter.py": "30d0b251fa0db5334ca18e39ac74e785507707166070d656dd431bba1abb2c88",
+    "px4_execution/execution.py": "c4884e22af826b55cd445315d5b0ffc670b092dba6b81ae82602ab878e35c891",
+    "devel/lib/diff_planner/diff_planner_node": "8b32746fbec010f0b6738b5203c957ca3dd2badc00920cdd44e3485397b4e606",
+    "devel/lib/diff_planner/candidate_preview_worker": "66a8bf859b6577ef4f654d976b0ca14f7874767659b8140c01368f5276039252"
+  },
+  "flight_commands_sent": false,
+  "time": 1793255914.2989786
+}

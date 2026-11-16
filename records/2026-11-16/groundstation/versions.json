@@ -1,0 +1,10 @@
+{
+  "target_commit": "5859393",
+  "local_baseline": "b345f7d",
+  "qt": "6.8.3",
+  "files": {
+    "groundstation/missioncontroller.cpp": "40777dc9980bb9297cca74ad4291f4aa1bda476f924a7f10a6d9f89d8d820c63",
+    "groundstation/tools/pointcloud-only/cloud_sender.py": "f1d4e9df78e607f5e8b009fa1af6ee5bb980f132d13f741c986b0dc94c2b0110",
+    "tools/test_cloud_sender_ros2.py": "02952402adc07af15454a4df4993f5b22aea809bb8dd1f05ccc3eb36b1d22690"
+  }
+}

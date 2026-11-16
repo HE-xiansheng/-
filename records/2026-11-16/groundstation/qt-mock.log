@@ -1,0 +1,138 @@
+PASS 隔离目录
+PASS 写模拟监视状态
+PASS 假SSH
+PASS Ego原选点入口保持可用
+PASS 三项任务接管时阻止Ego同时接入
+PASS 冲突时不发送Ego启动命令
+PASS 结束任务后Ego入口恢复
+PASS 实际三项控制栏QML创建
+PASS waypointPlanningSection
+PASS 展开功能栏只启动监视
+PASS 展开不会启动飞行任务
+机载任务请求 "validate" "--mission-file" host "192.168.1.224"
+机载任务返回 0 操作已完成
+PASS 含特殊字符路径校验完成
+PASS 含引号与shell符号的任务路径作为单个参数传递
+PASS 写模拟监视状态
+PASS 地图定位会话回传
+PASS pickMissionWaypoints
+PASS 按钮可操作
+PASS QML点击信号
+PASS SSH操作回执结束
+PASS 地图连续选点模式
+PASS 连续添加两个地图点
+PASS waypointHeight_0
+PASS 实际QML提交航点高度
+PASS waypointPhoto_0
+PASS 实际QML切换拍照
+PASS 逐点高度拍照编辑及删除
+PASS prepareWaypointTask
+PASS 按钮可操作
+机载任务请求 "start-map" "" host "192.168.1.224"
+PASS QML点击信号
+机载任务返回 0 操作已完成
+PASS SSH操作回执结束
+PASS 地图航点准备与监视状态
+PASS SSH标准输入承载地图任务JSON
+PASS 地图任务包含会话、高度及拍照设置
+PASS 提交任务后结束选点
+PASS stopWaypointTask
+PASS 按钮可操作
+机载任务请求 "stop" "" host "192.168.1.224"
+PASS QML点击信号
+机载任务返回 0 操作已完成
+PASS SSH操作回执结束
+PASS 停止显示等待接管
+PASS 写模拟监视状态
+PASS 远端停止状态回传
+PASS visualControlSection
+PASS arucoLandingSection
+PASS prepareArucoTask
+PASS 按钮可操作
+机载任务请求 "start" "--kind" host "192.168.1.224"
+PASS QML点击信号
+机载任务返回 0 操作已完成
+PASS SSH操作回执结束
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+ArUco降落状态 IDLE   
+PASS arucoMarkerId
+PASS ArUco ID回传到实际栏位
+PASS arucoOffsetX
+PASS ArUco米制偏移显示
+PASS arucoControlTargetStatus
+PASS 区分检测成功与控制器接受目标
+PASS 写模拟监视状态
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+ArUco降落状态 CANCELLED rc_stamp_stale  channel=5;pwm=1913;rssi=255;slot=6;source_age=0.7
+PASS arucoTaskStatus
+PASS 取消具体原因显示，不能笼统归因拨杆
+PASS arucoRcDetail
+PASS 显示冻结的RC取消证据
+PASS 写模拟监视状态
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS arucoMarkerId
+PASS 监视在线时也隐藏源过期的ID和偏移
+PASS arucoDetectionStatus
+PASS 源过期原因可见
+PASS 写模拟监视状态
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS 监视在线不等于控制节点状态新鲜
+PASS 写模拟监视状态
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+PASS arucoTaskStatus
+ArUco降落状态 IDLE  manual_mode_requires_airborne_and_armed 
+PASS arucoTaskStatus
+PASS 触发拒绝原因回传到界面
+PASS 写模拟监视状态
+PASS 模拟降落任务结束
+PASS personTrackingSection
+PASS prepareTrackingTask
+PASS 按钮可操作
+机载任务请求 "start" "--kind" host "192.168.1.224"
+PASS QML点击信号
+机载任务返回 0 操作已完成
+PASS SSH操作回执结束
+PASS 人物跟踪控制入口
+PASS 写模拟监视状态
+PASS SSH断开不冒充任务状态实时
+PASS arucoMarkerId
+PASS 过期识别数据隐藏
+PASS 断开监视不发送停止飞行请求

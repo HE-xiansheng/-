@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "DDS cloud and sensor-data odometry subscriptions match",
+      "passed": true
+    },
+    {
+      "name": "PCD1 and POS1 received via actual UDP",
+      "passed": true
+    },
+    {
+      "name": "PCD1 unchanged framing and finite point filtering",
+      "passed": true
+    },
+    {
+      "name": "POS1 retains meters and XYZW without double coordinate conversion",
+      "passed": true
+    },
+    {
+      "name": "wrong body frame suppresses pose",
+      "passed": true
+    },
+    {
+      "name": "nonunit quaternion suppresses pose",
+      "passed": true
+    },
+    {
+      "name": "source stale cloud and odometry suppressed",
+      "passed": true
+    },
+    {
+      "name": "future cloud and odometry suppressed",
+      "passed": true
+    },
+    {
+      "name": "cloud frame mismatch suppresses both outputs",
+      "passed": true
+    },
+    {
+      "name": "invalid PointCloud2 stride suppresses cloud",
+      "passed": true
+    },
+    {
+      "name": "valid input recovers stream",
+      "passed": true
+    },
+    {
+      "name": "fresh odometry with stale cloud suppressed",
+      "passed": true
+    },
+    {
+      "name": "sender has no control publishers",
+      "passed": true
+    },
+    {
+      "name": "sender normal SIGINT shutdown",
+      "passed": true
+    }
+  ]
+}

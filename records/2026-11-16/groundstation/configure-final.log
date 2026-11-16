@@ -1,0 +1,11 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+shaders/brand.frag -> shaders/brand.frag.qsb exposed as ://shaders/brand.frag.qsb
+-- Configuring done (0.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-groundstation

@@ -1,0 +1,25 @@
+{
+  "purpose": "恢复OFFBOARD途中及局部地图外远目标选点",
+  "files": [
+    {
+      "path": "src/diff_planner/plan_manage/include/plan_manage/diff_replan_fsm.h",
+      "expected_old": "20a986ba83107b06fec799b0c51f5afd640f689dcd2c96d7b27a2cee418774fb",
+      "sha256": "3351a3c620ddfb0ab15b2c6098b931da7d9d71dd50fbe3dda325ed87cc09316b"
+    },
+    {
+      "path": "src/diff_planner/plan_manage/include/plan_manage/candidate_preview_io.h",
+      "expected_old": "13a75cba2d5602d0564582c1b1b2bf1e6822f8db1c5a19a2e0994ea816bab557",
+      "sha256": "f456087388819ce5b8bf6e2e24499c3f61f1d9640f7dd5dbb0c9bb28475315cf"
+    },
+    {
+      "path": "src/diff_planner/plan_manage/src/diff_replan_fsm.cpp",
+      "expected_old": "3167e9951ac4433d0cecff6469ebaf063569c7be31e82afaf6fe0cc1395805ea",
+      "sha256": "5e0e41d9287212322049f423af64a999be6383407213fe8e77263a96d254fa22"
+    },
+    {
+      "path": "src/diff_planner/plan_manage/src/candidate_preview_worker.cpp",
+      "expected_old": "8c7744339d9175034c3003632abe884676d7006e12e539ca875bbe903b3b474a",
+      "sha256": "d628dd4c53c1dbaf833fde8759cc7058b4ddb472f29b1b376a04ea13b8bc0966"
+    }
+  ]
+}

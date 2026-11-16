@@ -1,0 +1,11 @@
+[ 14%] Running qmlimportscanner for check_mission_controls
+[ 14%] Built target check_mission_controls_qmlimportscan
+[ 14%] Built target check_mission_controls_autogen_timestamp_deps
+[ 28%] Automatic MOC for target check_mission_controls
+[ 28%] Built target check_mission_controls_autogen
+[ 71%] Building CXX object CMakeFiles/check_mission_controls.dir/home/tyzk/drone-migration-github/groundstation/plannercontroller.cpp.o
+[ 71%] Building CXX object CMakeFiles/check_mission_controls.dir/home/tyzk/drone-migration-github/groundstation/missioncontroller.cpp.o
+[ 71%] Building CXX object CMakeFiles/check_mission_controls.dir/check.cpp.o
+[ 85%] Building CXX object CMakeFiles/check_mission_controls.dir/check_mission_controls_autogen/mocs_compilation.cpp.o
+[100%] Linking CXX executable check_mission_controls
+[100%] Built target check_mission_controls

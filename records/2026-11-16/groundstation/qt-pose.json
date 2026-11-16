@@ -1,0 +1,1 @@
+{"passed":true,"checks":["python_POS1_to_original_Qt_decode","finite_and_unit_quaternion","ROS_90deg_to_Qt_forward","stale_marker_hidden","old_timestamp_rejected","new_pose_recovers","disable_hides_marker"]}

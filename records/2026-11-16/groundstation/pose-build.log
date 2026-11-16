@@ -1,0 +1,11 @@
+[  0%] Built target check_pose_autogen_timestamp_deps
+[ 12%] Automatic MOC for target check_pose
+[ 12%] Built target check_pose_autogen
+[ 25%] Building CXX object CMakeFiles/check_pose.dir/check_pose_autogen/mocs_compilation.cpp.o
+[ 37%] Building CXX object CMakeFiles/check_pose.dir/check_pose.cpp.o
+[ 50%] Building CXX object CMakeFiles/check_pose.dir/home/tyzk/drone-migration-github/groundstation/udptransport.cpp.o
+[ 62%] Building CXX object CMakeFiles/check_pose.dir/home/tyzk/drone-migration-github/groundstation/pointcloudprotocol.cpp.o
+[ 75%] Building CXX object CMakeFiles/check_pose.dir/home/tyzk/drone-migration-github/groundstation/pointcloudgeometry.cpp.o
+[ 87%] Building CXX object CMakeFiles/check_pose.dir/home/tyzk/drone-migration-github/groundstation/routegeometry.cpp.o
+[100%] Linking CXX executable check_pose
+[100%] Built target check_pose

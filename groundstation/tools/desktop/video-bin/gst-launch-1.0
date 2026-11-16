@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Bypass the proxy only for the ground station's onboard gimbal relay.
+for argument in "$@"; do
+    if [[ "$argument" =~ ^location=rtsp://([[:alnum:]_.-]+):8554/gimbal$ ]]; then
+        host="${BASH_REMATCH[1]}"
+        export no_proxy="${no_proxy:+$no_proxy,}$host"
+        export NO_PROXY="${NO_PROXY:+$NO_PROXY,}$host"
+        break
+    fi
+done
+
+exec /usr/bin/gst-launch-1.0 "$@"

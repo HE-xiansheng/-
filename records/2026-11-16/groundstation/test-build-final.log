@@ -1,0 +1,13 @@
+[  8%] Built target check_mission_controls_qmlimportscan
+[  8%] Built target check_cloud_decode_autogen_timestamp_deps
+[  8%] Built target check_mission_controls_autogen_timestamp_deps
+[ 16%] Automatic MOC for target check_cloud_decode
+[ 16%] Built target check_cloud_decode_autogen
+[ 25%] Automatic MOC for target check_mission_controls
+[ 33%] Building CXX object CMakeFiles/check_cloud_decode.dir/check_cloud_decode_autogen/mocs_compilation.cpp.o
+[ 41%] Building CXX object CMakeFiles/check_cloud_decode.dir/home/tyzk/drone-migration-github/groundstation/tools/pointcloud-only/check_qt_decode.cpp.o
+[ 50%] Building CXX object CMakeFiles/check_cloud_decode.dir/home/tyzk/drone-migration-github/groundstation/pointcloudprotocol.cpp.o
+[ 50%] Built target check_mission_controls_autogen
+[ 91%] Built target check_mission_controls
+[100%] Linking CXX executable check_cloud_decode
+[100%] Built target check_cloud_decode

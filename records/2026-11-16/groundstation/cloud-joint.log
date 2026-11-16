@@ -1,0 +1,14 @@
+PASS DDS cloud and sensor-data odometry subscriptions match
+PASS PCD1 and POS1 received via actual UDP
+PASS PCD1 unchanged framing and finite point filtering
+PASS POS1 retains meters and XYZW without double coordinate conversion
+PASS wrong body frame suppresses pose
+PASS nonunit quaternion suppresses pose
+PASS source stale cloud and odometry suppressed
+PASS future cloud and odometry suppressed
+PASS cloud frame mismatch suppresses both outputs
+PASS invalid PointCloud2 stride suppresses cloud
+PASS valid input recovers stream
+PASS fresh odometry with stale cloud suppressed
+PASS sender has no control publishers
+PASS sender normal SIGINT shutdown

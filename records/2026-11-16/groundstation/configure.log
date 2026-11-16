@@ -1,0 +1,44 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE  
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+-- Found WrapOpenGL: TRUE  
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Found WrapVulkanHeaders: /usr/include  
+-- Check if linker can resolve circular dependencies - FALSE
+CMake Warning at /home/tyzk/dianyunGCS-review-20261026/.deps/Qt/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:911 (message):
+  aotstats is not supported on CMake versions < 3.19
+Call Stack (most recent call first):
+  /home/tyzk/dianyunGCS-review-20261026/.deps/Qt/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:1254 (qt6_add_qml_module)
+  CMakeLists.txt:41 (qt_add_qml_module)
+
+
+CMake Error at /home/tyzk/dianyunGCS-review-20261026/.deps/Qt/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:4488 (message):
+  QML app deployment requires CMake version 3.19, or later, or manual
+  executable finalization.  For manual finalization, pass the
+  MANUAL_FINALIZATION option to qt_add_executable() and then call
+  qt_finalize_target(customgeometry) just before
+
+              calling qt_generate_deploy_qml_app_script().
+Call Stack (most recent call first):
+  /home/tyzk/dianyunGCS-review-20261026/.deps/Qt/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:4723 (qt6_generate_deploy_qml_app_script)
+  CMakeLists.txt:114 (qt_generate_deploy_qml_app_script)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/tyzk/drone-migration-work/build-groundstation/CMakeFiles/CMakeOutput.log".
+See also "/home/tyzk/drone-migration-work/build-groundstation/CMakeFiles/CMakeError.log".

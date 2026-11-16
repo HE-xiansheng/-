@@ -1,0 +1,14 @@
+{
+  "telemetry_reader.py": {
+    "source": "/home/tyzk/diff-yopo-project/deployment/factory-stack/telemetry_reader.py",
+    "sha256": "43ba06b45c08e18e286cfab46d241b6eda1127a090a92aac50a7c75dfdfaaf3c"
+  },
+  "preflight_status.py": {
+    "source": "/home/tyzk/diff-yopo-project/deployment/factory-stack/preflight_status.py",
+    "sha256": "18f750a366caead80129cb3749516be0748e91fed8416805285ea1ab527c5cdc"
+  },
+  "test-preflight-status.py": {
+    "source": "/home/tyzk/diff-yopo-project/deployment/factory-stack/test-preflight-status.py",
+    "sha256": "169bfae2c440e9c81624bb79491dda4488e562655305e6ac8e2c23b10fe50be7"
+  }
+}

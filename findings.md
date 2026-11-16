@@ -24,3 +24,7 @@
 - EGO执行器源码已对照.235核实SHA256。原坐标策略是冻结旋转、用最新位姿调整平移；保持轨迹原时钟和PVA，不自行缩放时间或重复做ENU/NED换轴。MAVROS2 2.16.0官方setpoint_raw源码local_cb已核实执行ENU→NED。
 - 新增原生rclpy执行器和临时目录会话管理。旧执行器虽声明输入超时但未使用，原生版检查源时间和单调接收时间；断流、未来位姿、无效姿态、坐标错配、断连时停止输出。未添加解锁／模式／参数写服务。
 - 交叉核对实际ROS2 FAST-LIO发现：输出全局点云名为/factory_fastlio/cloud_world，机体twist由补丁显式输出。修正规划launch和执行器默认点云为cloud_world，并设fsm.odom_vel_is_body=true；新增90度姿态下body速度到world速度的轨迹起始导数检查。早期状态机报告的cloud_registered默认名已由本阶段纠正。
+
+- 实际Qt源码非Git工程，构建依赖原目录.deps/Qt及.venv-build内CMake；系统CMake不足以执行Qt6部署宏。原任务管理器Qt将map_session视为不透明对象，因此可保持版本4载荷并携带ROS2 DDS GID。遥测/视频/定位/录制入口仍有ROS1依赖，独立副本不能视为全功能已完成。
+
+- Qt ROS2适配必须隔离应用名与状态目录，避免覆盖正在使用的ROS1地面站；本阶段独立构建、独立QSettings。只读发送器可经SSH stdin运行，无需电脑ROS2，也不需要安装新的机载服务。保留既有PCD1/POS1，图形界面接收侧可继续复用；连接管理还依赖未迁移的飞前遥测，不应仅凭点云单项验证宣称整套连接可用。

@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.21)
+project(mission_controls_test LANGUAGES CXX)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_CXX_STANDARD 17)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick)
+get_filename_component(GCS_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
+qt_add_executable(check_mission_controls check.cpp "${GCS_ROOT}/missioncontroller.cpp" "${GCS_ROOT}/missioncontroller.h" "${GCS_ROOT}/plannercontroller.cpp" "${GCS_ROOT}/plannercontroller.h")
+target_include_directories(check_mission_controls PRIVATE "${GCS_ROOT}")
+target_compile_definitions(check_mission_controls PRIVATE GCS_ROOT="${GCS_ROOT}")
+target_link_libraries(check_mission_controls PRIVATE Qt6::Core Qt6::Gui Qt6::Qml Qt6::Quick)
+
+# 用原协议实现解码真实ROS2发送器产生的PCD1/LZ4数据。
+add_executable(check_cloud_decode "${GCS_ROOT}/tools/pointcloud-only/check_qt_decode.cpp" "${GCS_ROOT}/pointcloudprotocol.cpp")
+target_include_directories(check_cloud_decode PRIVATE "${GCS_ROOT}")
+target_link_libraries(check_cloud_decode PRIVATE Qt6::Core Qt6::Gui)

@@ -1,0 +1,16 @@
+{
+  "native_build": "passed",
+  "qt_build": "passed",
+  "ros_checks": {
+    "arrival": 15,
+    "moving": 4,
+    "distant": 5
+  },
+  "qt_retarget_token_race": "passed",
+  "qt_distant_confirmation": "passed",
+  "qml_new_goal_arrival_and_display": "4 passed",
+  "onboard_deployed": false,
+  "reason": "onboard executor and planner processes active; SSH later timed out; no remote writes",
+  "onboard_observed_source_sha256": "3167e9951ac4433d0cecff6469ebaf063569c7be31e82afaf6fe0cc1395805ea",
+  "actual_flight_validated": false
+}
