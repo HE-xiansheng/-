@@ -1,0 +1,5 @@
+{
+  "head": "00a54bcf605bc671e8211fc862716a5948413067 init\n",
+  "submodule_tree": "",
+  "sih": "ROMFS/px4fmu_common/init.d-posix/airframes/10040_sihsim_quadx\nROMFS/px4fmu_common/init.d-posix/airframes/10041_sihsim_airplane\nROMFS/px4fmu_common/init.d-posix/airframes/10042_sihsim_xvert\nROMFS/px4fmu_common/init.d-posix/airframes/10043_sihsim_standard_vtol\nROMFS/px4fmu_common/init.d-posix/px4-rc.sihsim\nROMFS/px4fmu_common/init.d/airframes/1100_rc_quad_x_sih.hil\nROMFS/px4fmu_common/init.d/airframes/1101_rc_plane_sih.hil\nROMFS/px4fmu_common/init.d/airframes/1102_tailsitter_duo_sih.hil\nROMFS/px4fmu_common/init.d/airframes/1103_standard_vtol_sih.hil\ndocs/en/sim_sih/index.md\ndocs/ko/sim_sih/index.md\ndocs/uk/sim_sih/index.md\ndocs/zh/sim_sih/index.md\nsrc/modules/simulation/simulator_sih/CMakeLists.txt\nsrc/modules/simulation/simulator_sih/Kconfig\nsrc/modules/simulation/simulator_sih/aero.hpp\nsrc/modules/simulation/simulator_sih/sih.cpp\nsrc/modules/simulation/simulator_sih/sih.hpp\nsrc/modules/simulation/simulator_sih/sih_params.c\n"
+}

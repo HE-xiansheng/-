@@ -1,0 +1,27 @@
+[
+  {
+    "path": "src/modules/mavlink/mavlink",
+    "sha": "5bfd76d80281f6027134e854aafe6cb3dbfbe9e1",
+    "local_object_available": true
+  },
+  {
+    "path": "src/drivers/gps/devices",
+    "sha": "4cea5de87ce7e2a52e5289bd3639fd8eb770eafa",
+    "local_object_available": true
+  },
+  {
+    "path": "src/lib/events/libevents",
+    "sha": "9ef591c447fe0386d698bf6fb9a6d27e43988ee4",
+    "local_object_available": true
+  },
+  {
+    "path": "src/lib/heatshrink/heatshrink",
+    "sha": "052e6de72f67f1777198bce98f3de62f7f3c16a0",
+    "local_object_available": true
+  },
+  {
+    "path": "src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+    "sha": "711aef423edd1820347b866d1e4164832df35d04",
+    "local_object_available": true
+  }
+]

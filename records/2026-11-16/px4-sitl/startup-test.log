@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "tools/verify_px4_sitl_startup.py", line 90, in <module>
+    raise SystemExit(main())
+  File "tools/verify_px4_sitl_startup.py", line 20, in main
+    raise RuntimeError('This test requires a network namespace with only lo')
+RuntimeError: This test requires a network namespace with only lo

@@ -1,0 +1,29 @@
+子模组 'src/modules/mavlink/mavlink'（https://github.com/mavlink/mavlink.git）已对路径 'src/modules/mavlink/mavlink' 注册
+正克隆到 '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/modules/mavlink/mavlink'...
+HEAD 目前位于 5bfd76d MAV_CMD_SET_GLOBAL_ORIGIN supersedes SET_GPS_GLOBAL_ORIGIN (#2247)
+子模组 'src/drivers/gps/devices'（https://github.com/PX4/PX4-GPSDrivers.git）已对路径 'src/drivers/gps/devices' 注册
+正克隆到 '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/drivers/gps/devices'...
+HEAD 目前位于 4cea5de Simplify code
+子模组 'src/lib/events/libevents'（https://github.com/mavlink/libevents.git）已对路径 'src/lib/events/libevents' 注册
+正克隆到 '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/lib/events/libevents'...
+HEAD 目前位于 9ef591c pylint: increase max-positional-arguments from 5 to 7
+子模组 'src/lib/heatshrink/heatshrink'（https://github.com/PX4/heatshrink.git）已对路径 'src/lib/heatshrink/heatshrink' 注册
+正克隆到 '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/lib/heatshrink/heatshrink'...
+HEAD 目前位于 052e6de heatshrink_decoder.c: add braces to if statement
+子模组 'src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client'（https://github.com/PX4/Micro-XRCE-DDS-Client.git）已对路径 'src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client' 注册
+正克隆到 '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client'...
+HEAD 目前位于 711aef4 Merge remote-tracking branch 'upstream/develop' into px4
+子模组 'pymavlink'（https://github.com/ardupilot/pymavlink.git）已对路径 'pymavlink' 注册
+正克隆到 '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/modules/mavlink/mavlink/pymavlink'...
+完成。
+之前的 HEAD 位置是 5977f445 generator: add note regarding memcpy
+HEAD 目前位于 4960d4d2 mavgen_python: add bitmask attribute to Enum
+Traceback (most recent call last):
+  File "<stdin>", line 15, in <module>
+  File "<stdin>", line 14, in nested
+  File "<stdin>", line 7, in nested
+  File "/usr/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', 'config', '-f', '.gitmodules', '--get-regexp', 'submodule.*.path']' returned non-zero exit status 1.

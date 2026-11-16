@@ -1,0 +1,1 @@
+ninja: error: '/home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/src/modules/mavlink/mavlink/pymavlink/tools/mavgen.py', needed by 'mavlink/development/development.h', missing and no known rule to make it

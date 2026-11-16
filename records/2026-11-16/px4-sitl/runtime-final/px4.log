@@ -1,0 +1,133 @@
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] startup script: /bin/sh /home/tyzk/drone-migration-work/build-px4-sitl/etc/init.d-posix/rcS 0
+INFO  [init] found model autostart file as SYS_AUTOSTART=10040
+INFO  [param] selected parameter default file parameters.bson
+INFO  [param] selected parameter backup file parameters_backup.bson
+  SYS_AUTOCONFIG: curr: 0 -> new: 1
+  SYS_AUTOSTART: curr: 0 -> new: 10040
+  CAL_ACC0_ID: curr: 0 -> new: 1310988
+  CAL_GYRO0_ID: curr: 0 -> new: 1310988
+  CAL_ACC1_ID: curr: 0 -> new: 1310996
+  CAL_GYRO1_ID: curr: 0 -> new: 1310996
+  CAL_ACC2_ID: curr: 0 -> new: 1311004
+  CAL_GYRO2_ID: curr: 0 -> new: 1311004
+  CAL_MAG0_ID: curr: 0 -> new: 197388
+  CAL_MAG0_PRIO: curr: -1 -> new: 50
+  CAL_MAG1_ID: curr: 0 -> new: 197644
+  CAL_MAG1_PRIO: curr: -1 -> new: 50
+  SENS_BOARD_X_OFF: curr: 0.0000 -> new: 0.0000
+  SENS_DPRES_OFF: curr: 0.0000 -> new: 0.0010
+INFO  [dataman] data manager file './dataman' size is 1208528 bytes
+INFO  [init] SIH simulator
+INFO  [simulator_sih] Simulation loop with 250 Hz (4000 us sim time interval)
+INFO  [simulator_sih] Simulation with 1.0x speedup. Loop with (4000 us wall time interval)
+INFO  [lockstep_scheduler] setting initial absolute time to 4000 us
+INFO  [commander] LED: open /dev/led0 failed (22)
+INFO  [uxrce_dds_client] init UDP agent IP:127.0.0.1, port:8888
+INFO  [mavlink] mode: Normal, data rate: 4000000 B/s on udp port 18570 remote port 14550
+INFO  [tone_alarm] home set
+INFO  [mavlink] mode: Onboard, data rate: 4000000 B/s on udp port 14580 remote port 14540
+INFO  [mavlink] mode: Onboard, data rate: 4000 B/s on udp port 14280 remote port 14030
+INFO  [mavlink] mode: Gimbal, data rate: 400000 B/s on udp port 13030 remote port 13280
+INFO  [mavlink] mode: Custom, data rate: 400000 B/s on udp port 19450 remote port 19410
+INFO  [logger] logger started (mode=all)
+INFO  [logger] Start file log (type: full)
+INFO  [logger] [logger] ./log/2026-11-16/14_54_33.ulg	
+INFO  [logger] Opened full log file: ./log/2026-11-16/14_54_33.ulg
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [px4] Startup script returned successfully
+pxh> INFO  [commander] [32mReady for takeoff![0m
+[2Kpxh> v[2Kpxh> ve[2Kpxh> ver[2Kpxh> ver [2Kpxh> ver a[2Kpxh> ver al[2Kpxh> ver all
+HW arch: PX4_SITL
+PX4 git-hash: 6ea3539157ca358c70a515878b77077af7d4611d
+PX4 version: Release 1.16.0 (17826047)
+OS: Linux
+OS version: Release 5.15.0 (84869375)
+Build datetime: Nov 16 2026 22:53:43
+Build uri: localhost
+Build variant: default
+Toolchain: GNU GCC, 9.4.0
+PX4GUID: 1006554d49534954414c44494e4f30303030
+UNKNOWN MCU
+pxh> [2Kpxh> c[2Kpxh> co[2Kpxh> com[2Kpxh> comm[2Kpxh> comma[2Kpxh> comman[2Kpxh> command[2Kpxh> commande[2Kpxh> commander[2Kpxh> commander [2Kpxh> commander s[2Kpxh> commander st[2Kpxh> commander sta[2Kpxh> commander stat[2Kpxh> commander statu[2Kpxh> commander status
+INFO  [commander] Disarmed
+INFO  [commander] navigation mode: Hold
+INFO  [commander] user intended navigation mode: Hold
+INFO  [commander] in failsafe: no
+commander: cycle: 437 events, 0us elapsed, 0.00us avg, min 0us max 0us 0.000us rms
+commander: preflight check: 49 events, 0us elapsed, 0.00us avg, min 0us max 0us 0.000us rms
+pxh> [2Kpxh> e[2Kpxh> ek[2Kpxh> ekf[2Kpxh> ekf2[2Kpxh> ekf2 [2Kpxh> ekf2 s[2Kpxh> ekf2 st[2Kpxh> ekf2 sta[2Kpxh> ekf2 stat[2Kpxh> ekf2 statu[2Kpxh> ekf2 status
+
+ekf2:0 EKF dt: 0.0080s, attitude: 1, local position: 1, global position: 1
+ekf2: EKF update: 692 events, 0us elapsed, 0.00us avg, min 0us max 0us 0.000us rms
+ekf2: IMU message missed: 0 events
+pxh> [2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener v[2Kpxh> listener ve[2Kpxh> listener veh[2Kpxh> listener vehi[2Kpxh> listener vehic[2Kpxh> listener vehicl[2Kpxh> listener vehicle[2Kpxh> listener vehicle_[2Kpxh> listener vehicle_l[2Kpxh> listener vehicle_lo[2Kpxh> listener vehicle_loc[2Kpxh> listener vehicle_loca[2Kpxh> listener vehicle_local[2Kpxh> listener vehicle_local_[2Kpxh> listener vehicle_local_p[2Kpxh> listener vehicle_local_po[2Kpxh> listener vehicle_local_pos[2Kpxh> listener vehicle_local_posi[2Kpxh> listener vehicle_local_posit[2Kpxh> listener vehicle_local_positi[2Kpxh> listener vehicle_local_positio[2Kpxh> listener vehicle_local_position[2Kpxh> listener vehicle_local_position [2Kpxh> listener vehicle_local_position 1
+
+TOPIC: vehicle_local_position
+ vehicle_local_position
+    timestamp: 6040000 (0.004000 seconds ago)
+    timestamp_sample: 6040000 (0 us before timestamp)
+    ref_timestamp: 1136000
+    ref_lat: 47.397743
+    ref_lon: 8.545595
+    x: -0.00922
+    y: -0.07145
+    z: -0.34396
+    delta_xy: [0.42442, -0.14457]
+    delta_z: -488.54825
+    vx: -0.00132
+    vy: -0.00869
+    vz: -0.02439
+    z_deriv: 0.00259
+    delta_vxy: [0.02943, 0.06705]
+    delta_vz: 0.04001
+    ax: 0.03241
+    ay: 0.03853
+    az: -0.05453
+    heading: -0.00120
+    heading_var: 0.03706
+    unaided_heading: 0.00014
+    delta_heading: -0.01664
+    tilt_var: 0.00088
+    ref_alt: 489.42340
+    dist_bottom: 0.10229
+    dist_bottom_var: 0.10310
+    delta_dist_bottom: -488.54825
+    eph: 0.30322
+    epv: 0.29567
+    evh: 0.18787
+    evv: 0.12836
+    vxy_max: inf
+    vz_max: inf
+    hagl_min: inf
+    hagl_max_z: inf
+    hagl_max_xy: inf
+    xy_valid: True
+    z_valid: True
+    v_xy_valid: True
+    v_z_valid: True
+    xy_reset_counter: 3
+    z_reset_counter: 3
+    vxy_reset_counter: 2
+    vz_reset_counter: 2
+    heading_reset_counter: 1
+    heading_good_for_control: False
+    xy_global: True
+    z_global: True
+    dist_bottom_valid: True
+    dist_bottom_reset_counter: 3
+    dist_bottom_sensor_bitfield: 1
+    dead_reckoning: False
+pxh> [2Kpxh> s[2Kpxh> sh[2Kpxh> shu[2Kpxh> shut[2Kpxh> shutd[2Kpxh> shutdo[2Kpxh> shutdow[2Kpxh> shutdown
+Exiting NOW.

@@ -1,0 +1,167 @@
+-- PX4_GIT_TAG: v1.16.0
+CMake Warning (dev) at CMakeLists.txt:176 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found PythonInterp: /home/tyzk/drone-migration-work/px4-sitl-venv/bin/python (found suitable version "3.8.10", minimum required is "3")
+-- PX4 config file: /home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/boards/px4/sitl/default.px4board
+-- PLATFORM posix
+-- ROMFSROOT px4fmu_common
+-- TESTING y
+-- ETHERNET y
+-- ROOT_PATH .
+-- PARAM_FILE /fs/mtd_params
+-- PX4 config: px4_sitl_default
+-- PX4 platform: posix
+-- PX4 lockstep: enabled
+-- The CXX compiler identification is GNU 9.4.0
+-- The C compiler identification is GNU 9.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- cmake build type: RelWithDebInfo
+CMake Deprecation Warning at platforms/posix/src/px4/common/lockstep_scheduler/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Could NOT find gz-transport (missing: gz-transport_DIR)
+-- Gazebo simulation bridge module disabled: missing dependencies
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1")
+-- Could NOT find gz-transport (missing: gz-transport_DIR)
+-- Could NOT find gz-sim (missing: gz-sim_DIR)
+-- Could NOT find gz-sensors (missing: gz-sensors_DIR)
+-- Could NOT find gz-plugin (missing: gz-plugin_DIR)
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
+-- Checking for module 'bullet>=2.82'
+--   Found bullet, version 2.88
+-- Found ccd: /usr/include (found suitable version "2.0", minimum required is "2.0")
+-- Found fcl: /usr/include (found suitable version "0.5.0", minimum required is "0.3.2")
+-- Found assimp: /usr/include (found version "5.0.0")
+CMake Warning (dev) at /usr/share/dart/cmake/DARTFindBoost.cmake:24 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /usr/share/dart/cmake/dart_dartComponent.cmake:6 (include)
+  /usr/share/dart/cmake/DARTConfig.cmake:63 (include)
+  /usr/share/dart/cmake/DARTConfig.cmake:123 (dart_traverse_components)
+  /usr/share/dart/cmake/DARTConfig.cmake:171 (dart_package_init)
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:166 (find_package)
+  src/modules/simulation/simulator_mavlink/sitl_targets_gazebo-classic.cmake:2 (find_package)
+  src/modules/simulation/simulator_mavlink/CMakeLists.txt:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found DART: /usr/include (Required is at least version "6.6") found components: dart
+CMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:197 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  src/modules/simulation/simulator_mavlink/sitl_targets_gazebo-classic.cmake:2 (find_package)
+  src/modules/simulation/simulator_mavlink/CMakeLists.txt:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Searching for dependencies of ignition-math6
+-- Looking for OGRE...
+-- OGRE_PREFIX_WATCH changed.
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+CMake Warning (dev) at /usr/share/OGRE/cmake/modules/FindOGRE.cmake:309 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:222 (find_package)
+  src/modules/simulation/simulator_mavlink/sitl_targets_gazebo-classic.cmake:2 (find_package)
+  src/modules/simulation/simulator_mavlink/CMakeLists.txt:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at /usr/share/OGRE/cmake/modules/FindOGRE.cmake:318 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:222 (find_package)
+  src/modules/simulation/simulator_mavlink/sitl_targets_gazebo-classic.cmake:2 (find_package)
+  src/modules/simulation/simulator_mavlink/CMakeLists.txt:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-transport8 -- found version 8.5.0
+-- Searching for dependencies of ignition-transport8
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq, version 4.3.2
+-- Found ZeroMQ: TRUE (Required is at least version "4")
+-- Checking for module 'uuid'
+--   Found uuid, version 2.34.0
+-- Found UUID: TRUE
+-- Looking for ignition-msgs5 -- found version 5.11.0
+-- Searching for dependencies of ignition-msgs5
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3")
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.2.0
+-- Looking for ignition-msgs5 -- found version 5.11.0
+-- Looking for ignition-common3 -- found version 3.17.0
+-- Searching for dependencies of ignition-common3
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE
+-- Searching for <ignition-common3> component [graphics]
+-- Looking for ignition-common3-graphics -- found version 3.17.0
+-- Searching for dependencies of ignition-common3-graphics
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-fuel_tools4 -- found version 4.9.1
+-- Searching for dependencies of ignition-fuel_tools4
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Found JSONCPP: TRUE
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.2.2
+-- Found YAML: TRUE
+-- Checking for module 'libzip'
+--   Found libzip, version 1.5.1
+-- Found ZIP: TRUE
+-- Looking for ignition-common3 -- found version 3.17.0
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-msgs5 -- found version 5.11.0
+-- Found gazebo-classic 11.15.1, including sitl_gazebo-classic simulator and gazebo-classic targets

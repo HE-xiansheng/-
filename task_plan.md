@@ -53,3 +53,10 @@ ArUco前台复用/所属清理16项及实际rqt offscreen6项通过；可见窗�
 - 源码归档补齐830个机载跟踪文件并逐一验证；完整MAVROS插件配置和独立USB相机驱动列入下一阶段，正式切换未授权。
 
 - 完整MAVROS候选入口c2f8226已准备，实际MAVROS/MAVLink localhost联合22项通过；正式入口未切换，物理融合与SITL待验收。
+
+## 当前构建问题
+
+- SITL私有venv首次因ensurepip缺失失败：使用现有pip的--python接口安装至私有venv。
+- Git2.25.1 partial clone反复下载未形成checkout：保留失败证据，改独立目录普通浅克隆。
+
+- 独立官方PX4 v1.16.0 SIH基线构建与隔离启动7项完成；ROS2/MAVROS联合仿真及实物融合仍进行中。

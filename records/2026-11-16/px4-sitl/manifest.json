@@ -1,0 +1,48 @@
+{
+  "source_url": "https://github.com/PX4/PX4-Autopilot.git",
+  "source_commit": "6ea3539157ca358c70a515878b77077af7d4611d",
+  "source_status": "",
+  "sha256": {
+    "/home/tyzk/drone-migration-work/build-px4-sitl/bin/px4": "9f805269c427112819d78d08ba40c93db84c93fd79d9cc62805bc3f3173450bf",
+    "tools/verify_px4_sitl_startup.py": "a4d412746e96940b0ba95736299604ef656607fa3c1e7efb4e784eaf74ff2696",
+    "records/2026-11-16/px4-sitl/runtime-final/result.json": "9fd8c9a6c57fe2d01aac0907ce89caec659f9b0a17a11e3b0c8a68c17211dca9"
+  },
+  "submodules": [
+    {
+      "path": "src/modules/mavlink/mavlink",
+      "sha": "5bfd76d80281f6027134e854aafe6cb3dbfbe9e1",
+      "local_object_available": true,
+      "actual_commit": "5bfd76d80281f6027134e854aafe6cb3dbfbe9e1",
+      "status": ""
+    },
+    {
+      "path": "src/drivers/gps/devices",
+      "sha": "4cea5de87ce7e2a52e5289bd3639fd8eb770eafa",
+      "local_object_available": true,
+      "actual_commit": "4cea5de87ce7e2a52e5289bd3639fd8eb770eafa",
+      "status": ""
+    },
+    {
+      "path": "src/lib/events/libevents",
+      "sha": "9ef591c447fe0386d698bf6fb9a6d27e43988ee4",
+      "local_object_available": true,
+      "actual_commit": "9ef591c447fe0386d698bf6fb9a6d27e43988ee4",
+      "status": ""
+    },
+    {
+      "path": "src/lib/heatshrink/heatshrink",
+      "sha": "052e6de72f67f1777198bce98f3de62f7f3c16a0",
+      "local_object_available": true,
+      "actual_commit": "052e6de72f67f1777198bce98f3de62f7f3c16a0",
+      "status": ""
+    },
+    {
+      "path": "src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+      "sha": "711aef423edd1820347b866d1e4164832df35d04",
+      "local_object_available": true,
+      "actual_commit": "711aef423edd1820347b866d1e4164832df35d04",
+      "status": ""
+    }
+  ],
+  "pymavlink_commit": "4960d4d20dcf9fc2981785355567fc5773416bc9"
+}

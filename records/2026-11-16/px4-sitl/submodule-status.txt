@@ -1,0 +1,2 @@
+-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge
+ 70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic

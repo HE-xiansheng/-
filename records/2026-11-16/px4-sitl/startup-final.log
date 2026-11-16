@@ -1,0 +1,9 @@
+{
+  "heartbeat": true,
+  "all_disarmed": true,
+  "px4_autopilot": true,
+  "LOCAL_POSITION_NED": true,
+  "ATTITUDE": true,
+  "HIGHRES_IMU": true,
+  "clean_exit": true
+}

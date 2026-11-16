@@ -1,0 +1,57 @@
+-- PX4_GIT_TAG: v1.16.0
+CMake Warning (dev) at CMakeLists.txt:176 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found PythonInterp: /home/tyzk/drone-migration-work/px4-sitl-venv/bin/python (found suitable version "3.8.10", minimum required is "3")
+-- PX4 config file: /home/tyzk/drone-migration-work/vendor/px4-sitl-v1.16.0-full/boards/px4/sitl/default.px4board
+-- PLATFORM posix
+-- ROMFSROOT px4fmu_common
+-- TESTING y
+-- ETHERNET y
+-- ROOT_PATH .
+-- PARAM_FILE /fs/mtd_params
+-- PX4 config: px4_sitl_default
+-- PX4 platform: posix
+-- PX4 lockstep: enabled
+-- The CXX compiler identification is GNU 9.4.0
+-- The C compiler identification is GNU 9.4.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- cmake build type: RelWithDebInfo
+CMake Deprecation Warning at platforms/posix/src/px4/common/lockstep_scheduler/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Could NOT find gz-transport (missing: gz-transport_DIR)
+-- Gazebo simulation bridge module disabled: missing dependencies
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1")
+-- Could NOT find gz-transport (missing: gz-transport_DIR)
+-- Could NOT find gz-sim (missing: gz-sim_DIR)
+-- Could NOT find gz-sensors (missing: gz-sensors_DIR)
+-- Could NOT find gz-plugin (missing: gz-plugin_DIR)
+-- Could NOT find Java (missing: Java_JAR_EXECUTABLE Java_JAVAC_EXECUTABLE Java_JAVADOC_EXECUTABLE) (found version "11.0.27")
+-- ROMFS: ROMFS/px4fmu_common
+Architecture:  amd64
+==> CPACK_INSTALL_PREFIX = @DEB_INSTALL_PREFIX@
+-- Configuring done (1.0s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-px4-sitl
