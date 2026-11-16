@@ -1,0 +1,179 @@
+{
+  "camera_info": {
+    "depth": {
+      "width": 848,
+      "height": 480,
+      "frame": "camera_depth_optical_frame",
+      "k": [
+        412.95977783203125,
+        0.0,
+        421.6812744140625,
+        0.0,
+        412.95977783203125,
+        240.9937744140625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "d": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_model": "plumb_bob",
+      "stamp": 1794838247364429000
+    },
+    "color": {
+      "width": 1280,
+      "height": 720,
+      "frame": "camera_color_optical_frame",
+      "k": [
+        611.2028198242188,
+        0.0,
+        637.3434448242188,
+        0.0,
+        611.2351684570312,
+        361.92822265625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "d": [
+        -0.03194306418299675,
+        0.0352947898209095,
+        -0.0007062535732984543,
+        -0.0007207499002106488,
+        -0.012298050336539745,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_model": "rational_polynomial",
+      "stamp": 1794838247364411000
+    }
+  },
+  "depth_to_color": {
+    "R": [
+      [
+        0.9999982174373699,
+        0.001722293596282603,
+        -0.0007738390341253887
+      ],
+      [
+        -0.0017213470599839612,
+        0.9999977716236943,
+        0.001222175087628803
+      ],
+      [
+        0.0007759422540477798,
+        -0.0012208408634788717,
+        0.9999989537300549
+      ]
+    ],
+    "t": [
+      -0.02372660065694635,
+      5.434224243806157e-05,
+      0.00017667341743536117
+    ]
+  },
+  "old_config_difference": {
+    "rotation_matrix_max_abs": 0.0021841235962826028,
+    "translation_norm_m": 0.00012179071620268991
+  },
+  "streams": {
+    "color": {
+      "messages": 450,
+      "hz": 29.967644666227102,
+      "age_p95_s": 0.08860861039999991,
+      "size": [
+        1280,
+        720,
+        "rgb8",
+        "camera_color_optical_frame"
+      ]
+    },
+    "depth": {
+      "messages": 450,
+      "hz": 29.950465572692874,
+      "age_p95_s": 0.08842306599999997,
+      "size": [
+        848,
+        480,
+        "16UC1",
+        "camera_depth_optical_frame"
+      ]
+    },
+    "preview": {
+      "messages": 238,
+      "hz": 15.878905387843806,
+      "age_p95_s": 0.16748377329999992,
+      "size": [
+        1280,
+        720,
+        "bgr8",
+        "camera_color_optical_frame"
+      ]
+    }
+  },
+  "passed": true,
+  "checks": [
+    {
+      "check": "color physical stream rate",
+      "passed": true
+    },
+    {
+      "check": "color stamps monotonic",
+      "passed": true
+    },
+    {
+      "check": "color finite recent source age",
+      "passed": true
+    },
+    {
+      "check": "depth physical stream rate",
+      "passed": true
+    },
+    {
+      "check": "depth stamps monotonic",
+      "passed": true
+    },
+    {
+      "check": "depth finite recent source age",
+      "passed": true
+    },
+    {
+      "check": "preview physical stream rate",
+      "passed": true
+    },
+    {
+      "check": "preview stamps monotonic",
+      "passed": true
+    },
+    {
+      "check": "preview finite recent source age",
+      "passed": true
+    },
+    {
+      "check": "NPU annotated image preserves actual source header",
+      "passed": true
+    },
+    {
+      "check": "actual CameraInfo for both streams",
+      "passed": true
+    },
+    {
+      "check": "live depth optical to color optical rigid transform",
+      "passed": true
+    },
+    {
+      "check": "no flight/task/control interfaces",
+      "passed": true
+    }
+  ],
+  "returncodes": [
+    0,
+    0
+  ]
+}

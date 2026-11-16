@@ -1,0 +1,9 @@
+{
+  "01_apps/mission_demo/workspace/src/land_test/src/Safina_land_test.cpp": "4a4814d738eee3a8d09720e9b20ae7f77d9a30153a28fbd0f3f400179a2da367",
+  "01_apps/mission_demo/workspace/install/land_test/lib/land_test/Safina_land_test": "ca44b93128497bca0cdaae1b9755b830366a179081c3512d90c3992cd385003a",
+  "01_apps/mission_demo/workspace/install/yolo_ultra_test/lib/yolo_ultra_test/person_preview": "81c86d3b8ef8e0f463a2e31454e40ecde869717be06cc67b2b727411f54465a0",
+  "01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn": "c918497014847b82201e30cab4079cb20b7d5b2d8434a0e3a1890d6a2ae8f04c",
+  "02_drivers/orbbec/config/gemini335l.yaml": "45b79e429201bbc0a94a30f05ec4ef748a4b65614789527233b6ee5c600b2b7d",
+  "01_apps/mission_demo/workspace/src/yolo_ultra_test/config/yolo_track.yaml": "61087a1291d0fa4d3793a70ecae933c831511d15928159096fb5527685c70666",
+  "commit": "dcbb549a99f24599a13d4eb8f79f15bcb029af8f"
+}

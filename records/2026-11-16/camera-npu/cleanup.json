@@ -1,0 +1,12 @@
+{
+  "cleaned": true,
+  "directories": [
+    "/tmp/camera-npu-ros2",
+    "/tmp/camera-npu-ros2-second",
+    "/tmp/land-modes-ros2",
+    "/tmp/yolo-calibration-ros2"
+  ],
+  "target_commit": "dcbb549",
+  "nomachine": "active",
+  "target_git_clean": true
+}

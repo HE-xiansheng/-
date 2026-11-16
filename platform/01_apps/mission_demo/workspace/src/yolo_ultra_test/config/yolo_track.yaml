@@ -1,12 +1,13 @@
+# Factory calibration for Gemini 335L CP253530009G; Pc = R_depth_to_color * Pd + t (m).
 /**:
   ros__parameters:
     model_file: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn
     camera_rows: 720
     camera_cols: 1280
-    camera_fx: 613.3737182617188
-    camera_fy: 613.2047119140625
-    camera_cx: 644.221923828125
-    camera_cy: 363.62823486328125
+    camera_fx: 611.2028198242188
+    camera_fy: 611.2351684570312
+    camera_cx: 637.3434448242188
+    camera_cy: 361.92822265625
     detection.object_threshold: 0.2
     detection.nms_threshold: 0.25
     detection.class_id: 0
@@ -32,24 +33,24 @@
     offset.standoff_deadband_px: 70.0
     offset.standoff_full_scale_px: 150.0
     depth.enabled: true
-    depth.fx: 416.2961730957031
-    depth.fy: 416.2961730957031
-    depth.cx: 423.3375244140625
-    depth.cy: 238.01251220703125
+    depth.fx: 412.95977783203125
+    depth.fy: 412.95977783203125
+    depth.cx: 421.6812744140625
+    depth.cy: 240.9937744140625
     depth.extrinsic_rotation:
-    - 0.99999887
-    - -0.00046183
-    - -0.00142059
-    - 0.00046162
-    - 0.99999988
-    - -0.00015206
-    - 0.00142066
-    - 0.0001514
-    - 0.99999899
+    - 0.9999982174373699
+    - 0.001722293596282603
+    - -0.0007738390341253887
+    - -0.0017213470599839612
+    - 0.9999977716236943
+    - 0.001222175087628803
+    - 0.0007759422540477798
+    - -0.0012208408634788717
+    - 0.9999989537300549
     depth.extrinsic_translation:
-    - -0.02367074
-    - 0.00010004
-    - 7.857e-05
+    - -0.02372660065694635
+    - 5.434224243806157e-05
+    - 0.00017667341743536117
     depth.max_age_s: 0.3
     depth.min_range_m: 0.3
     depth.max_range_m: 8.0

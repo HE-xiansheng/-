@@ -1,0 +1,64 @@
+{"check": "color physical stream rate", "passed": true}
+{"check": "color stamps monotonic", "passed": true}
+{"check": "color finite recent source age", "passed": true}
+{"check": "depth physical stream rate", "passed": true}
+{"check": "depth stamps monotonic", "passed": true}
+{"check": "depth finite recent source age", "passed": true}
+{"check": "preview physical stream rate", "passed": true}
+{"check": "preview stamps monotonic", "passed": true}
+{"check": "preview finite recent source age", "passed": true}
+{"check": "NPU annotated image preserves actual source header", "passed": false}
+{
+  "checks": [
+    {
+      "check": "color physical stream rate",
+      "passed": true
+    },
+    {
+      "check": "color stamps monotonic",
+      "passed": true
+    },
+    {
+      "check": "color finite recent source age",
+      "passed": true
+    },
+    {
+      "check": "depth physical stream rate",
+      "passed": true
+    },
+    {
+      "check": "depth stamps monotonic",
+      "passed": true
+    },
+    {
+      "check": "depth finite recent source age",
+      "passed": true
+    },
+    {
+      "check": "preview physical stream rate",
+      "passed": true
+    },
+    {
+      "check": "preview stamps monotonic",
+      "passed": true
+    },
+    {
+      "check": "preview finite recent source age",
+      "passed": true
+    },
+    {
+      "check": "NPU annotated image preserves actual source header",
+      "passed": false
+    }
+  ],
+  "returncodes": [
+    0,
+    0
+  ]
+}
+Traceback (most recent call last):
+  File "/tmp/camera-npu-ros2/test.py", line 45, in <module>
+    preview=received['preview'];check('NPU annotated image preserves actual source header',bool(preview.get('source_matches')) and all(preview['source_matches']))
+  File "/tmp/camera-npu-ros2/test.py", line 26, in check
+    if not v:raise AssertionError(label)
+AssertionError: NPU annotated image preserves actual source header

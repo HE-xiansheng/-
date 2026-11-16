@@ -1,0 +1,10 @@
+[WARN] [1794838007.417739716] [Safina_land_test]: ArUco landing v3: WAITING. No arming or mode requests before trigger. Trigger=px4_mode auto_takeoff=true. Camera startup-down=false. PX4 mode trigger: wait for READY in POSCTL, then manually switch OFFBOARD. Standby streams zero velocity; PWM mapping is never interpreted here. Diagnostics: /tmp/land-modes-ros2/result/px4_mode_auto_takeoff/landing_20261116_220647_122634.csv
+[WARN] [1794838008.684520215] [Safina_land_test]: RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for autonomous takeoff and landing; no RC channel/slot mapping
+[WARN] [1794838009.717960174] [Safina_land_test]: Landing task enabled by px4_mode; generation=1 auto_takeoff=1
+[WARN] [1794838009.718131964] [Safina_land_test]: Landing phase IDLE -> PRESTREAM reason=explicit_enable
+[INFO] [1794838010.922899457] [Safina_land_test]: Landing async request=arm accepted=0 generation=1 current=1
+[INFO] [1794838011.953392227] [Safina_land_test]: Landing async request=arm accepted=1 generation=1 current=1
+[WARN] [1794838011.984588104] [Safina_land_test]: Landing phase PRESTREAM -> TAKEOFF reason=takeover_confirmed
+[INFO] [1794838011.984685228] [Safina_land_test]: Takeoff readiness: XY 0.000/0.150 m, Z 0.250/0.080 m, Vxy 0.000/0.100 m/s, Vz 0.000/0.100 m/s, yaw-rate 0.000/0.100 rad/s, hold 0.00/0.20 s, failed=2
+[WARN] [1794838012.017935592] [Safina_land_test]: Landing phase TAKEOFF -> CANCELLED reason=pilot_or_fcu_left_offboard
+[INFO] [1794838012.591865589] [rclcpp]: signal_handler(SIGINT/SIGTERM)

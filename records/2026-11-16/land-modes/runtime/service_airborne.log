@@ -1,0 +1,8 @@
+[WARN] [1794837993.382144892] [Safina_land_test]: ArUco landing v3: WAITING. No arming or mode requests before trigger. Trigger=service auto_takeoff=false. Camera startup-down=false. PX4 mode trigger: wait for READY in POSCTL, then manually switch OFFBOARD. Standby streams zero velocity; PWM mapping is never interpreted here. Diagnostics: /tmp/land-modes-ros2/result/service_airborne/landing_20261116_220633_122605.csv
+[WARN] [1794837994.400473950] [Safina_land_test]: Landing task enabled by service; generation=1 auto_takeoff=0
+[WARN] [1794837994.415897473] [Safina_land_test]: Landing phase IDLE -> PRESTREAM reason=explicit_enable
+[INFO] [1794837995.651956967] [Safina_land_test]: Landing async request=offboard accepted=0 generation=1 current=1
+[INFO] [1794837996.651031237] [Safina_land_test]: Landing async request=offboard accepted=1 generation=1 current=1
+[WARN] [1794837996.682308197] [Safina_land_test]: Landing phase PRESTREAM -> ACQUIRE reason=takeover_confirmed
+[WARN] [1794837996.715596768] [Safina_land_test]: Landing phase ACQUIRE -> CANCELLED reason=explicit_disable
+[INFO] [1794837997.189687550] [rclcpp]: signal_handler(SIGINT/SIGTERM)
