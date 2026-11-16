@@ -30,3 +30,5 @@
 机载先source平台env.sh；测试仅使用ROS_DOMAIN_ID=198和ROS_LOCALHOST_ONLY=1。tools/test_telemetry_ros2.py使用--reader指定本阶段采样器、--output指定临时结果目录。Qt测试在groundstation/tools/preflight/test_qt独立构建，跨机编排脚本tools/test_telemetry_ssh_qt.py只允许认证和只读采样远程命令；必须先把测试代码放入其明确的机载/tmp目录。
 
 停止独立目录自己的桥接即可结束本阶段，正式应用未切换。用同一个GCS_STATE_DIR执行tools/pointcloud-only/manage.py stop及tools/preflight/bridge.py stop；不要删除或停止原`.pointcloud-link`拥有的会话。机载所有测试目录和本次拥有的点云目标锁在取回结果后清理，见cleanup-final.log；报告继续只存电脑和GitHub。
+
+清理补充：本机SSH客户端结束后，远端合成fixture曾继续运行到其75秒期限，首次清理断言据此拒绝删除。确认它自行退出后完成清理；编排工具补充只匹配本次明确/tmp测试命令和--serve参数的远端停止步骤。此补充只影响测试fixture清理，不改变已通过复测的生产遥测代码。

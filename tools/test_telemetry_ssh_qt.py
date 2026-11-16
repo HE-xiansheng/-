@@ -42,6 +42,22 @@ os.execv('/usr/bin/ssh',['ssh','-o','UserKnownHostsFile='+os.environ['GCS_TEST_K
    try:fixture.wait(timeout=5)
    except subprocess.TimeoutExpired:fixture.kill();fixture.wait()
    fixture_log.close()
+   # SSH客户端结束不保证远端合成发布进程同步退出；仅清理本工具的明确测试命令。
+   cleanup_code="""from pathlib import Path
+import os,signal,time
+for proc in Path('/proc').iterdir():
+ if not proc.name.isdigit():continue
+ try:
+  args=proc.joinpath('cmdline').read_bytes().split(b'\\0')
+  if b'/tmp/gcs-telemetry-ros2-check/tools/test_telemetry_ros2.py' not in args or b'--serve' not in args:continue
+  if b'/tmp/gcs-telemetry-ros2-user-check' not in args:continue
+  tick=proc.joinpath('stat').read_text().rsplit(')',1)[1].split()[19]
+  os.kill(int(proc.name),signal.SIGINT)
+  print('stopped owned synthetic fixture',proc.name,tick)
+ except (OSError,ValueError,IndexError):pass
+"""
+   with (out/'remote-fixture-cleanup.log').open('w') as cleanup_log:
+    subprocess.run([*SSH,'orangepi@192.168.1.224','python3 -c '+shlex.quote(cleanup_code)],stdout=cleanup_log,stderr=subprocess.STDOUT,timeout=12)
    shutil.copytree(state,out/'local-bridge-state',dirs_exist_ok=True)
   passed=result is not None and result.returncode==0
   (out/'result.json').write_text(json.dumps({'passed':passed,'qt_exit':None if result is None else result.returncode,'scope':'actual SSH and cross-host UDP, synthetic ROS2 domain 198 localhost inputs, no flight task'},indent=2)+'\n')
