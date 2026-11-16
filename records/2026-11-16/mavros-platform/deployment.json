@@ -1,0 +1,13 @@
+{
+  "commit": "c2f8226cff6fa3033c8c203cfd06ac04e7506f5a",
+  "candidate_sha256": "ab6d9dd464a51041623612c151d757b99b5a6dbfa14e1be851691028fb08c826",
+  "fixture_sha256": "0ad2b5cb34ffa7c1316549af330a7de48027886e5fe9913f958b6f3a8ff67325",
+  "dependencies": {
+    "future-1.0.0-py3-none-any.whl": "929292d34f5872e70396626ef385ec22355a1fae8ad29e1a734c3e43f9fbc216",
+    "pymavlink-2.4.49.tar.gz": "d7cf10d5592d038a18aa972711177ebb88be2143efcc258df630b0513e9da2c2"
+  },
+  "git_status": "",
+  "formal_environment_switched": false,
+  "temporary_directory_cleaned": true,
+  "nomachine": "active"
+}

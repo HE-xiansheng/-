@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "wire heartbeat establishes real MAVROS connection",
+      "passed": true
+    },
+    {
+      "check": "disarmed PX4 heartbeat maps to ROS state",
+      "passed": true
+    },
+    {
+      "check": "wire local position produces ROS pose",
+      "passed": true
+    },
+    {
+      "check": "incoming NED position converts once to ENU",
+      "passed": true
+    },
+    {
+      "check": "rc_io plugin publishes wire RC input",
+      "passed": true
+    },
+    {
+      "check": "all 18 RC channel values survive transport",
+      "passed": true
+    },
+    {
+      "check": "wire landed state reaches ROS extended state",
+      "passed": true
+    },
+    {
+      "check": "vision_pose plugin subscribes",
+      "passed": true
+    },
+    {
+      "check": "ROS external pose reaches actual MAVLink vision packet",
+      "passed": true
+    },
+    {
+      "check": "external vision ENU position converts once to NED",
+      "passed": true
+    },
+    {
+      "check": "external vision applies ENU/NED and FLU/FRD attitude convention",
+      "passed": true
+    },
+    {
+      "check": "external vision uses original ROS source stamp",
+      "passed": true
+    },
+    {
+      "check": "setpoint_raw plugin subscribes",
+      "passed": true
+    },
+    {
+      "check": "ROS setpoint reaches actual MAVLink packet",
+      "passed": true
+    },
+    {
+      "check": "frame mask and target identity survive wire encoding",
+      "passed": true
+    },
+    {
+      "check": "position velocity acceleration all convert ENU to NED once",
+      "passed": true
+    },
+    {
+      "check": "setpoint yaw and yaw rate convert once",
+      "passed": true
+    },
+    {
+      "check": "actual mode service is present",
+      "passed": true
+    },
+    {
+      "check": "mode service reports MAVLink dispatch to simulated peer",
+      "passed": true
+    },
+    {
+      "check": "POSCTL mode request encodes PX4 main mode on loopback only",
+      "passed": true
+    },
+    {
+      "check": "command plugin exposes arming API without calling it",
+      "passed": true
+    },
+    {
+      "check": "no arm or takeoff command transmitted",
+      "passed": true
+    }
+  ],
+  "process_returncode": 0,
+  "states": [
+    {
+      "connected": false,
+      "armed": false,
+      "mode": ""
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "CMODE(65536)"
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "MANUAL"
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "MANUAL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/tmp/mavros-platform-ros2/test_mavros_mavlink_ros2.py", line 95, in <module>
+    check(wait(lambda: states and states[-1].connected), 'wire heartbeat establishes real MAVROS connection')
+  File "/tmp/mavros-platform-ros2/test_mavros_mavlink_ros2.py", line 84, in wait
+    pump(.05, extra)
+  File "/tmp/mavros-platform-ros2/test_mavros_mavlink_ros2.py", line 54, in pump
+    raise RuntimeError('MAVROS exited {}'.format(process.returncode))
+RuntimeError: MAVROS exited 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/mavros-platform-ros2/test_mavros_mavlink_ros2.py", line 138, in <module>
+    os.killpg(process.pid,signal.SIGINT)
+ProcessLookupError: [Errno 3] No such process

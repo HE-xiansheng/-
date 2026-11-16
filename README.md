@@ -36,3 +36,5 @@
 新增[物理相机与NPU记录](records/2026-11-16/camera-npu/README.md)、[降落其他触发路径](records/2026-11-16/land-modes/README.md)及[ArUco前台操作流程](records/2026-11-16/aruco-vision/README.md)。真实相机预览和额外隔离验证完成，云台/雷达/飞控融合及任务整链仍待验收。
 
 [源码与驱动归档核对](records/2026-11-16/source-completeness/README.md)：机载已跟踪普通文件已补齐到仓库；含SDK2源码和Orbbec2.10.6离线SDK资料。当前传感器入口仍为MAVROS遥测配置，完整任务插件与独立USB相机继续适配。
+
+[完整MAVROS候选与实际MAVLink验证](records/2026-11-16/mavros-platform/README.md)：22项localhost隔离检查通过，完整插件候选已部署，现有遥测服务未切换；真实PX4融合/SITL仍待验收。

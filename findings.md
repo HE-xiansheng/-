@@ -52,3 +52,5 @@
 2026-11-16：发现旧ROS1 ArUco前台入口有复用既有发布者、等待图像、可选rqt以及仅回收所属进程语义，单纯ROS2 launch不能覆盖。已恢复该行为并通过隔离16+6检查；入口首次139不可复现列待查，实际云台参数/标定/窗口渲染未验收。
 
 2026-11-16：源码归档已补齐机载跟踪普通文件，Orbbec SDK库来自锁定归档。现有MAVROS telemetry插件缺少vision_pose/setpoint_raw/rc_io，必须在正式切换前准备并验证完整接口。源机旧路径不存在，当前工程为/home/orangepi/drone_platform。
+
+2026-11-16：实际MAVROS2首PX4心跳可能先发布connected=true、mode=CMODE(65536)，随后才MANUAL；不能把连接位等同稳定模式。完整候选已验证真实MAVLink ENU/NED/FLU/FRD和源时刻语义，仍不证明PX4融合或SITL。

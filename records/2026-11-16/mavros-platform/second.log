@@ -1,0 +1,8 @@
+PASS wire heartbeat establishes real MAVROS connection
+FAIL disarmed PX4 heartbeat maps to ROS state
+Traceback (most recent call last):
+  File "/tmp/mavros-platform-ros2/test_mavros_mavlink_ros2.py", line 96, in <module>
+    check(not states[-1].armed and states[-1].mode == 'MANUAL', 'disarmed PX4 heartbeat maps to ROS state')
+  File "/tmp/mavros-platform-ros2/test_mavros_mavlink_ros2.py", line 90, in check
+    assert value, label
+AssertionError: disarmed PX4 heartbeat maps to ROS state

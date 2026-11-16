@@ -1,0 +1,22 @@
+PASS wire heartbeat establishes real MAVROS connection
+PASS disarmed PX4 heartbeat maps to ROS state
+PASS wire local position produces ROS pose
+PASS incoming NED position converts once to ENU
+PASS rc_io plugin publishes wire RC input
+PASS all 18 RC channel values survive transport
+PASS wire landed state reaches ROS extended state
+PASS vision_pose plugin subscribes
+PASS ROS external pose reaches actual MAVLink vision packet
+PASS external vision ENU position converts once to NED
+PASS external vision applies ENU/NED and FLU/FRD attitude convention
+PASS external vision uses original ROS source stamp
+PASS setpoint_raw plugin subscribes
+PASS ROS setpoint reaches actual MAVLink packet
+PASS frame mask and target identity survive wire encoding
+PASS position velocity acceleration all convert ENU to NED once
+PASS setpoint yaw and yaw rate convert once
+PASS actual mode service is present
+PASS mode service reports MAVLink dispatch to simulated peer
+PASS POSCTL mode request encodes PX4 main mode on loopback only
+PASS command plugin exposes arming API without calling it
+PASS no arm or takeoff command transmitted
