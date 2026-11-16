@@ -10,7 +10,7 @@
 - NoMachine 8.5.3-1 ARM64 已安装，服务已启用，电脑连接 `.224:4000` 成功；桌面登录尚未验证。
 - Livox SDK2 1.3.0 + ROS2 driver 1.2.6 已构建；FAST-LIO 已用旧机数据隔离回放，输出 40 帧里程计及点云，检查通过。新机物理雷达尚未接入。
 - 原生 ArUco 合成图、RK3588 MPP RTSP 合成视频和正常停止验证通过，物理云台待验证。
-- EGO 的28个消息接口和原生地图、A*、优化、管理库已构建，24项隔离检查通过；[详细记录](records/2026-11-16/ego-native-stage-report.md)。EGO原生状态机及地图选点工具31项隔离检查通过，见[状态机阶段记录](records/2026-11-16/ego-fsm-stage-report.md)。执行适配器、任务控制、人物跟踪、位姿转发和地面站适配仍未完成。
+- EGO 的28个消息接口和原生地图、A*、优化、管理库已构建，24项隔离检查通过；[详细记录](records/2026-11-16/ego-native-stage-report.md)。EGO原生状态机及地图选点工具31项隔离检查通过，见[状态机阶段记录](records/2026-11-16/ego-fsm-stage-report.md)。[执行适配器与会话管理](records/2026-11-16/ego-execution-stage-report.md)完成46项及19项隔离检查；任务控制、人物跟踪、位姿转发、录制、地面站与物理链路验证仍未完成。
 - 当前阶段详情、限制和版本见 [原生迁移阶段记录](records/2026-11-16/native-stage-report.md)。
 
 ## 记录位置与时效

@@ -37,6 +37,7 @@ def main():
     stop_pub = node.create_publisher(Empty, '/mandatory_stop', 10)
     mode_pub = node.create_publisher(Bool, '/ego_planner/flight_execution', qos)
     position, speed, stamp_offset = [-2., 0., 0.], 0., 0.
+    odom_yaw = 0.
     feed_odom = feed_cloud = False
     odom_frame = 'camera_init'
     cloud = PointCloud2()
@@ -63,7 +64,8 @@ def main():
                     odom = Odometry()
                     odom.header.frame_id = odom_frame
                     odom.header.stamp = (stamp + rclpy.duration.Duration(seconds=stamp_offset)).to_msg()
-                    odom.pose.pose.orientation.w = 1.
+                    odom.pose.pose.orientation.w = math.cos(odom_yaw/2)
+                    odom.pose.pose.orientation.z = math.sin(odom_yaw/2)
                     odom.pose.pose.position.x, odom.pose.pose.position.y, odom.pose.pose.position.z = position
                     odom.twist.twist.linear.x = speed
                     odom_pub.publish(odom)
@@ -159,6 +161,14 @@ def main():
         position = [-2., 0., 0.]
         mode_pub.publish(Bool(data=False))
         checks['return_to_preview'] = pump(4, lambda: statuses and statuses[-1]['planning_mode'] == 'measured_preview')
+        speed, odom_yaw = .2, math.pi/2
+        pump(.15)
+        previous = len(paths)
+        goal(-.7)
+        generated = pump(5, lambda: len(paths)>previous)
+        checks['body_velocity_rotated_into_world'] = (generated and len(paths[-1].coef_x)>=6
+            and abs(paths[-1].coef_x[4])<1e-4 and abs(paths[-1].coef_y[4]-.2)<1e-4)
+        speed, odom_yaw = 0., 0.
         checks['planner_still_running'] = proc.poll() is None
     finally:
         proc.send_signal(signal.SIGINT) if proc.poll() is None else None

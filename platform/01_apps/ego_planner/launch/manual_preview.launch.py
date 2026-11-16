@@ -10,7 +10,7 @@ def generate_launch_description():
     config = Path(__file__).resolve().parent.parent / 'config'
     return LaunchDescription([
         DeclareLaunchArgument('odom', default_value='/factory_fastlio/odometry'),
-        DeclareLaunchArgument('cloud', default_value='/factory_fastlio/cloud_registered'),
+        DeclareLaunchArgument('cloud', default_value='/factory_fastlio/cloud_world'),
         Node(package='plan_manage', executable='planner_node', name='ego_planner_node',
              output='screen', parameters=[str(config / 'planner.yaml'), str(config / 'manual_preview.yaml')],
              remappings=[('odom_world', LaunchConfiguration('odom')),

@@ -1,0 +1,187 @@
+PLANNER_LOG hit: 0.619039
+miss: -0.619039
+min log: -1.99243
+max: 2.19722
+thresh log: 1.38629
+lidar hit: 2.19722
+lidar miss: -0.405465
+lidar min log: -1.99243
+lidar max: 3.89182
+lidar thresh log: 1.7346
+[47;30m
+[1.79483e+09] Drone 0 Replan 0[0m
+Success=yes
+Time:[42m1.692ms,[0m init:0.260ms, optimize:1.432ms, avg=1.692ms
+[PILOT_OFFBOARD]Drone:0, from INIT to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 1[0m
+Success=yes
+Time:[42m1.453ms,[0m init:0.197ms, optimize:1.256ms, avg=1.572ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79483e+09] Drone 0 Replan 2[0m
+Success=yes
+Time:[42m1.370ms,[0m init:0.136ms, optimize:1.233ms, avg=1.505ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 3[0m
+Success=yes
+Time:[42m1.579ms,[0m init:0.269ms, optimize:1.310ms, avg=1.523ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 4[0m
+Success=yes
+Time:[42m0.780ms,[0m init:0.126ms, optimize:0.654ms, avg=1.375ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79483e+09] Drone 0 Replan 5[0m
+Success=yes
+Time:[42m0.926ms,[0m init:0.122ms, optimize:0.804ms, avg=1.300ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 6[0m
+Success=yes
+Time:[42m0.788ms,[0m init:0.114ms, optimize:0.674ms, avg=1.227ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[FSM]Drone:0, from EXEC_TRAJ to REPLAN_TRAJ
+[47;30m
+[1.79483e+09] Drone 0 Replan 7[0m
+Success=yes
+Time:[42m1.121ms,[0m init:0.207ms, optimize:0.915ms, avg=1.214ms
+[FSM]Drone:0, from REPLAN_TRAJ to EXEC_TRAJ
+[FSM]Drone:0, from EXEC_TRAJ to REPLAN_TRAJ
+[47;30m
+[1.79483e+09] Drone 0 Replan 8[0m
+Success=yes
+Time:[42m1.130ms,[0m init:0.206ms, optimize:0.924ms, avg=1.204ms
+[FSM]Drone:0, from REPLAN_TRAJ to EXEC_TRAJ
+[FSM]Drone:0, from EXEC_TRAJ to REPLAN_TRAJ
+[47;30m
+[1.79483e+09] Drone 0 Replan 9[0m
+Success=yes
+Time:[42m2.535ms,[0m init:0.362ms, optimize:2.173ms, avg=1.337ms
+[FSM]Drone:0, from REPLAN_TRAJ to EXEC_TRAJ
+[FSM]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[PILOT_MANUAL]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[47;30m
+[1.79483e+09] Drone 0 Replan 10[0m
+Success=yes
+Time:[42m1.501ms,[0m init:0.201ms, optimize:1.299ms, avg=1.352ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 11[0m
+Success=yes
+Time:[42m1.469ms,[0m init:0.171ms, optimize:1.298ms, avg=1.362ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79483e+09] Drone 0 Replan 12[0m
+Success=yes
+Time:[42m1.850ms,[0m init:0.190ms, optimize:1.660ms, avg=1.400ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 13[0m
+Success=yes
+Time:[42m1.426ms,[0m init:0.191ms, optimize:1.234ms, avg=1.401ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79483e+09] Drone 0 Replan 14[0m
+Success=yes
+Time:[42m1.847ms,[0m init:0.181ms, optimize:1.666ms, avg=1.431ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79483e+09] Drone 0 Replan 15[0m
+Success=yes
+Time:[42m1.401ms,[0m init:0.177ms, optimize:1.224ms, avg=1.429ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[FSM]: state: EXEC_TRAJ, Drone:0
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79483e+09] Drone 0 Replan 16[0m
+Success=yes
+Time:[42m0.713ms,[0m init:0.087ms, optimize:0.626ms, avg=1.387ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 17[0m
+Success=yes
+Time:[42m2.143ms,[0m init:0.227ms, optimize:1.916ms, avg=1.429ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 18[0m
+Success=yes
+Time:[42m1.024ms,[0m init:0.119ms, optimize:0.905ms, avg=1.408ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 19[0m
+Success=yes
+Time:[42m1.377ms,[0m init:0.153ms, optimize:1.225ms, avg=1.406ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 20[0m
+Success=yes
+Time:[42m1.518ms,[0m init:0.209ms, optimize:1.309ms, avg=1.412ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 21[0m
+Success=yes
+Time:[42m1.369ms,[0m init:0.153ms, optimize:1.217ms, avg=1.410ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 22[0m
+Success=yes
+Time:[42m0.793ms,[0m init:0.090ms, optimize:0.703ms, avg=1.383ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 23[0m
+Success=yes
+Time:[42m0.777ms,[0m init:0.120ms, optimize:0.657ms, avg=1.358ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 24[0m
+Success=yes
+Time:[42m0.878ms,[0m init:0.090ms, optimize:0.788ms, avg=1.338ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 25[0m
+Success=yes
+Time:[42m1.501ms,[0m init:0.184ms, optimize:1.317ms, avg=1.345ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 26[0m
+Success=yes
+Time:[42m0.747ms,[0m init:0.091ms, optimize:0.655ms, avg=1.323ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 27[0m
+Success=yes
+Time:[42m0.777ms,[0m init:0.089ms, optimize:0.689ms, avg=1.303ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 28[0m
+Success=yes
+Time:[42m1.556ms,[0m init:0.232ms, optimize:1.324ms, avg=1.312ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 29[0m
+Success=yes
+Time:[42m0.766ms,[0m init:0.090ms, optimize:0.677ms, avg=1.294ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 30[0m
+Success=yes
+Time:[42m0.646ms,[0m init:0.094ms, optimize:0.552ms, avg=1.273ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 31[0m
+Success=yes
+Time:[42m0.874ms,[0m init:0.103ms, optimize:0.771ms, avg=1.260ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 32[0m
+Success=yes
+Time:[42m2.131ms,[0m init:0.226ms, optimize:1.905ms, avg=1.287ms
+[47;30m
+[1.79483e+09] Drone 0 Replan 33[0m
+Success=yes
+[INFO] [1794828885.912627890] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Time:[42m1.076ms,[0m init:0.124ms, optimize:0.952ms, avg=1.280ms
+des manager
+
+ADAPTER_LAST [{"stamp": 1794828877.2630084, "monotonic_stamp": 3995.573003421, "phase": "STOP_HOLD", "reason": "operator_stop_switch_back_to_POSCTL", "mode": "OFFBOARD", "armed": true, "airborne": true, "hard_errors": [], "planning_errors": [], "publish_requested": true, "output_enabled": true, "tracking_output_enabled": false, "output_kind": "position_hold", "cycle_id": 2, "goal_key": ["3984851191249", 1], "trajectory_id": null, "trajectory_start": null, "trajectory_clock": "upstream_native", "time_scale": null, "alignment_policy": "latest_pose_translation_frozen_rotation", "alignment_R": [[-2.220446049250313e-16, -1.0000000000000002, 0.0], [1.0000000000000002, -2.220446049250313e-16, 0.0], [0.0, 0.0, 1.0]], "alignment_t": [10.0, 22.0, 3.0], "live_translation_offset": null, "reference_fc_enu": [10.0, 20.0, 3.0, 1.5707963267948968], "input_ages": {"state": {"receive": 0.004726436000055401, "source": 0.005594968795776367}, "landed": {"receive": 0.003467608999926597, "source": 0.005594968795776367}, "fcpose": {"receive": 0.0018899910000982345, "source": 0.005594968795776367}, "lio": {"receive": 8.866600001056213e-05, "source": 0.005594968795776367}, "cloud": {"receive": 0.022984102000009443, "source": 0.03093433380126953}, "status": {"receive": 0.2079781689999436, "source": 0.2111682891845703}}, "control_loop_gap": 0.02180664900015472, "planner_status": {"mode": "manual_preview", "phase": "ACTIVE", "session_id": "3984851191249", "stamp": 1794828877.05184, "goal_id": 1, "has_goal": true, "goal": [-0.5, 0, 0], "position": [-2, 0, 0], "distance_m": 1.5, "trajectory_id": 17, "planning_mode": "measured_preview", "confirmation_required": false, "goal_confirmed": true, "measured_arrived": false, "confirm_token": "3984851191249:1", "goal_frame": "camera_init", "height_reference": "fastlio_session_origin", "goal_validation": "FREE_IN_LOCAL_MAP", "navigation_message": "GOAL_ACCEPTED", "candidate": {"available": false, "id": 0, "phase": "NONE", "reason": "", "confirm_token": "3984851191249:candidate:0", "goal": [0, 0, 0], "trajectory_id": 0}, "command_output": false}, "parameters_read_only": {"policy": "native_planner_parameters_no_additional_gate"}}, {"stamp": 1794828877.379795, "monotonic_stamp": 3995.689788843, "phase": "DONE", "reason": "operator_stop_completed_in_manual_mode", "mode": "POSCTL", "armed": true, "airborne": true, "hard_errors": [], "planning_errors": [], "publish_requested": true, "output_enabled": false, "tracking_output_enabled": false, "output_kind": "none", "cycle_id": 2, "goal_key": ["3984851191249", 1], "trajectory_id": null, "trajectory_start": null, "trajectory_clock": "upstream_native", "time_scale": null, "alignment_policy": "latest_pose_translation_frozen_rotation", "alignment_R": null, "alignment_t": null, "live_translation_offset": null, "reference_fc_enu": null, "input_ages": {"state": {"receive": 0.014443558000039047, "source": 0.01602911949157715}, "landed": {"receive": 0.01300768999999491, "source": 0.01602911949157715}, "fcpose": {"receive": 0.011446113999681984, "source": 0.01602911949157715}, "lio": {"receive": 0.009443830999771308, "source": 0.01602911949157715}, "cloud": {"receive": 0.007792130999860092, "source": 0.01602911949157715}, "status": {"receive": 0.11161886199988658, "source": 0.11868500709533691}}, "control_loop_gap": 0.022012856999936048, "planner_status": {"mode": "manual_preview", "phase": "ACTIVE", "session_id": "3984851191249", "stamp": 1794828877.26111, "goal_id": 1, "has_goal": true, "goal": [-0.5, 0, 0], "position": [-2, 0, 0], "distance_m": 1.5, "trajectory_id": 17, "planning_mode": "measured_preview", "confirmation_required": false, "goal_confirmed": true, "measured_arrived": false, "confirm_token": "3984851191249:1", "goal_frame": "camera_init", "height_reference": "fastlio_session_origin", "goal_validation": "FREE_IN_LOCAL_MAP", "navigation_message": "GOAL_ACCEPTED", "candidate": {"available": false, "id": 0, "phase": "NONE", "reason": "", "confirm_token": "3984851191249:candidate:0", "goal": [0, 0, 0], "trajectory_id": 0}, "command_output": false}, "parameters_read_only": {"policy": "native_planner_parameters_no_additional_gate"}}, {"stamp": 1794828877.381991, "monotonic_stamp": 3995.691985083, "phase": "DONE", "reason": "operator_stop_completed_in_manual_mode", "mode": "POSCTL", "armed": true, "airborne": true, "hard_errors": [], "planning_errors": [], "publish_requested": true, "output_enabled": false, "tracking_output_enabled": false, "output_kind": "none", "cycle_id": 2, "goal_key": ["3984851191249", 1], "trajectory_id": null, "trajectory_start": null, "trajectory_clock": "upstream_native", "time_scale": null, "alignment_policy": "latest_pose_translation_frozen_rotation", "alignment_R": null, "alignment_t": null, "live_translation_offset": null, "reference_fc_enu": null, "input_ages": {"state": {"receive": 0.014443558000039047, "source": 0.01602911949157715}, "landed": {"receive": 0.01300768999999491, "source": 0.01602911949157715}, "fcpose": {"receive": 0.011446113999681984, "source": 0.01602911949157715}, "lio": {"receive": 0.009443830999771308, "source": 0.01602911949157715}, "cloud": {"receive": 0.007792130999860092, "source": 0.01602911949157715}, "status": {"receive": 0.11161886199988658, "source": 0.11868500709533691}}, "control_loop_gap": 0.022012856999936048, "planner_status": {"mode": "manual_preview", "phase": "ACTIVE", "session_id": "3984851191249", "stamp": 1794828877.26111, "goal_id": 1, "has_goal": true, "goal": [-0.5, 0, 0], "position": [-2, 0, 0], "distance_m": 1.5, "trajectory_id": 17, "planning_mode": "measured_preview", "confirmation_required": false, "goal_confirmed": true, "measured_arrived": false, "confirm_token": "3984851191249:1", "goal_frame": "camera_init", "height_reference": "fastlio_session_origin", "goal_validation": "FREE_IN_LOCAL_MAP", "navigation_message": "GOAL_ACCEPTED", "candidate": {"available": false, "id": 0, "phase": "NONE", "reason": "", "confirm_token": "3984851191249:candidate:0", "goal": [0, 0, 0], "trajectory_id": 0}, "command_output": false}, "parameters_read_only": {"policy": "native_planner_parameters_no_additional_gate"}}]
+EXECUTION_RESULT {"checks": {"check_mode_readonly_success": true, "check_mode_sends_no_commands": true, "completed_trajectory_holds_endpoint": true, "connection_recovers": true, "disarmed_waits_no_commands": true, "disconnect_stops_output": true, "frame_mismatch_stops_output": true, "fresh_cloud_recovers": true, "fresh_odometry_resumes_native_plan": true, "future_fc_pose_stops_output": true, "grounded_no_commands": true, "invalid_coefficients_rejected": true, "invalid_quaternion_stops_output": false, "manager_detects_exit": true, "manager_starts_adapter": true, "manager_status_reports_owned_process": true, "manual_prestream_has_zero_velocity": true, "mavros_conversion_contract": true, "mode_flag_drives_native_fsm": true, "no_flight_services_called": true, "no_output_after_adapter_exit": true, "piece_boundary_preserves_pva": true, "pilot_offboard_enters_tracking": true, "pilot_posctl_prestream": true, "pilot_takeover_completes_stop": true, "pilot_takeover_stops_tracking": true, "planner_clean_shutdown": true, "planner_ready": true, "prestream_is_current_enu_pose": true, "preview_goal_accepted": true, "pva_rotated_once_into_fc_enu": true, "second_pilot_cycle_tracks": true, "setpoint_rate_sustained": true, "single_publisher_enforced": true, "source_clock_preserved": true, "stale_cloud_stops_output": true, "stale_odometry_stops_output": true, "stop_hold_is_measured_position": true, "stop_is_controlled_hold": true, "valid_fc_stamp_recovers": true, "valid_frame_recovers": true, "valid_orientation_recovers": true, "yaw_frozen_at_handover": true}, "isolation": {"ROS_DOMAIN_ID": 87, "ROS_LOCALHOST_ONLY": 1}, "native_execution_trajectories": 10, "passed": false, "physical_flight_commands_sent": false, "setpoint_rate_hz": 42.75871217955009, "synthetic_fc_commands_received": 308}

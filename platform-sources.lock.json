@@ -34,8 +34,24 @@
       "quadrotor_msgs",
       "plan_manage"
     ],
-    "runtime_state_machine": "pending; native manager is a library only",
+    "runtime_state_machine": "native ROS2 runtime FSM and direct map goal CLI; 32 isolated checks passed",
     "parameters": "platform/01_apps/ego_planner/config/planner.yaml",
-    "onboard_runtime_commit": "c33f78bbb305bea7024546b27103aee2d6317f7c"
+    "onboard_runtime_commit": "73b952659fb0914ed5d77434f0470bf6efa3a8ab",
+    "execution_adapter_reference": {
+      "adapter.py": "9c32e83ad72fbbb61b5b9d83b0b794d991d846bc689685b7e6b8cee6afd2e16f",
+      "execution.py": "c4884e22af826b55cd445315d5b0ffc670b092dba6b81ae82602ab878e35c891",
+      "manage.py": "87cf81754319e024b4017b0d7a27f6fd33cda63d99a77c676afd6993f285abea"
+    },
+    "execution_adapter": "native rclpy + session managers; mock FC integration; physical reception still pending",
+    "native_cloud_topic": "/factory_fastlio/cloud_world",
+    "odometry_twist_frame": "body; fsm.odom_vel_is_body=true"
+  },
+  "mavros_setpoint_contract": {
+    "version": "2.16.0",
+    "source": "https://github.com/mavlink/mavros/blob/2.16.0/mavros/src/plugins/setpoint_raw.cpp",
+    "sha256": "32697916f2f105d71598e66585564d7d591df71cb45e5fe8f61eb9be66c57751",
+    "ros_frame": "ENU",
+    "mavlink_frame": "NED",
+    "conversion_owner": "MAVROS setpoint_raw local_cb"
   }
 }

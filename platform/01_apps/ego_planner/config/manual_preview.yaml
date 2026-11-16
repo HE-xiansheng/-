@@ -8,7 +8,7 @@
     fsm.emergency_time: 1.0
     fsm.realworld_experiment: true
     fsm.fail_safe: true
-    fsm.odom_vel_is_body: false
+    fsm.odom_vel_is_body: true
     fsm.manual_replan_period: 0.5
     fsm.manual_arrival_radius: 0.25
     fsm.manual_arrival_speed: 0.15
