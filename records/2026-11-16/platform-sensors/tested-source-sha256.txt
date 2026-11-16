@@ -1,0 +1,3 @@
+214d938491fa4971fbdd1d0f3591ddaecbcd8348ef67e870a42308d999a6a761  02_drivers/sensors/launch/platform_sensors.launch.py
+8d13f257c8ae879946946ea8cc9e22274c8ba5dbb0231e926995e087b125d708  03_tools/config script/start_platform_sensors.sh
+6a08b0378d0cd81e293e924def573d525e11e41740ce67b85d9c2d34f787a6a7  03_tools/systemd/Safina_sensor.service

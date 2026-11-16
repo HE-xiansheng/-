@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "check": "empty",
+      "passed": true
+    },
+    {
+      "check": "invalid_bool",
+      "passed": true
+    },
+    {
+      "check": "missing_serial",
+      "passed": true
+    },
+    {
+      "check": "missing_usb",
+      "passed": true
+    },
+    {
+      "check": "missing_lidar_ip",
+      "passed": true
+    },
+    {
+      "check": "launch arguments",
+      "passed": true
+    },
+    {
+      "check": "PX4 connected and disarmed",
+      "passed": true
+    },
+    {
+      "check": "color actual rate",
+      "passed": false
+    }
+  ],
+  "returncode": 0
+}

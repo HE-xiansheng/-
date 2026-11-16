@@ -1,0 +1,3 @@
+1794842386.5197356 [INFO] [launch]: All log files can be found below /tmp/platform-sensors-audit/run2/ros-log/2026-11-16-23-19-46-518538-orangepi5ultra-149755
+1794842386.5199070 [INFO] [launch]: Default logging verbosity is set to INFO
+1794842386.5583601 [ERROR] [launch]: Caught exception in launch (see debug for traceback): PX4 serial device missing or inaccessible: /dev/nonexistent_px4

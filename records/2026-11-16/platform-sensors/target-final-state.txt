@@ -1,0 +1,7 @@
+214d938491fa4971fbdd1d0f3591ddaecbcd8348ef67e870a42308d999a6a761  /home/orangepi/drone_platform/02_drivers/sensors/launch/platform_sensors.launch.py
+8d13f257c8ae879946946ea8cc9e22274c8ba5dbb0231e926995e087b125d708  /home/orangepi/drone_platform/03_tools/config script/start_platform_sensors.sh
+6a08b0378d0cd81e293e924def573d525e11e41740ce67b85d9c2d34f787a6a7  /home/orangepi/drone_platform/03_tools/systemd/Safina_sensor.service
+2b9ba9bb27b38b1a9fe08720e1e2d0d551f9a40f0683397cd637deac391fe757  /tmp/platform-sensors-audit/run2/test.py
+468c0d199e0778dd0873e679c2687a3e45356013dec524b72f053a27f73a4f86  /tmp/platform-sensors-audit/test_exit.py
+active
+Failed to get unit file state for Safina_sensor.service: No such file or directory

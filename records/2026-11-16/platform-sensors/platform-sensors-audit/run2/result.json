@@ -1,0 +1,154 @@
+{
+  "streams": {
+    "imu": {
+      "messages": 1251,
+      "hz": 50.00737465554848,
+      "age_min_s": 0.000430205,
+      "age_max_s": 0.022435997,
+      "frames": [
+        "base_link"
+      ]
+    },
+    "color": {
+      "messages": 749,
+      "hz": 29.970888308543284,
+      "age_min_s": 0.044300794,
+      "age_max_s": 0.119505659,
+      "frames": [
+        "camera_color_optical_frame"
+      ]
+    },
+    "depth": {
+      "messages": 749,
+      "hz": 29.95405028223715,
+      "age_min_s": 0.064865689,
+      "age_max_s": 0.112041592,
+      "frames": [
+        "camera_depth_optical_frame"
+      ]
+    },
+    "pose": {
+      "messages": 750,
+      "hz": 30.002740855729346,
+      "age_min_s": 0.000459955,
+      "age_max_s": 0.027133253,
+      "frames": [
+        "map"
+      ]
+    }
+  },
+  "states": [
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    }
+  ],
+  "checks": [
+    {
+      "check": "empty",
+      "passed": true
+    },
+    {
+      "check": "invalid_bool",
+      "passed": true
+    },
+    {
+      "check": "missing_serial",
+      "passed": true
+    },
+    {
+      "check": "missing_usb",
+      "passed": true
+    },
+    {
+      "check": "missing_lidar_ip",
+      "passed": true
+    },
+    {
+      "check": "launch arguments",
+      "passed": true
+    },
+    {
+      "check": "PX4 connected and disarmed",
+      "passed": true
+    },
+    {
+      "check": "color actual rate",
+      "passed": true
+    },
+    {
+      "check": "color source stamps increase",
+      "passed": true
+    },
+    {
+      "check": "color source ages bounded",
+      "passed": true
+    },
+    {
+      "check": "depth actual rate",
+      "passed": true
+    },
+    {
+      "check": "depth source stamps increase",
+      "passed": true
+    },
+    {
+      "check": "depth source ages bounded",
+      "passed": true
+    },
+    {
+      "check": "imu actual rate",
+      "passed": true
+    },
+    {
+      "check": "imu source stamps increase",
+      "passed": true
+    },
+    {
+      "check": "imu source ages bounded",
+      "passed": true
+    },
+    {
+      "check": "pose actual rate",
+      "passed": true
+    },
+    {
+      "check": "pose source stamps increase",
+      "passed": true
+    },
+    {
+      "check": "pose source ages bounded",
+      "passed": true
+    },
+    {
+      "check": "full MAVROS vision and command plugins loaded",
+      "passed": true
+    },
+    {
+      "check": "normal SIGINT shutdown",
+      "passed": true
+    }
+  ],
+  "returncode": 0
+}

@@ -1,0 +1,265 @@
+[INFO] [launch]: All log files can be found below /tmp/platform-sensors-audit/run2/ros-log/2026-11-16-23-20-02-210629-orangepi5ultra-150043
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [mavros_node-1]: process started with pid [150268]
+[INFO] [component_container-2]: process started with pid [150270]
+[mavros_node-1] [INFO] [1794842402.615543240] [mavros_node]: Starting mavros_node container
+[mavros_node-1] [INFO] [1794842402.615677114] [mavros_node]: FCU URL: /dev/serial/by-id/usb-Matek_HKUST_UAV_NxtPX4_0-if00:57600
+[mavros_node-1] [INFO] [1794842402.615689947] [mavros_node]: GCS URL: 
+[mavros_node-1] [INFO] [1794842402.615698697] [mavros_node]: UAS Prefix: /uas1
+[mavros_node-1] [INFO] [1794842402.615706572] [mavros_node]: Starting mavros router node
+[mavros_node-1] [INFO] [1794842402.625178376] [mavros_router]: Built-in SIMD instructions: ARM NEON
+[mavros_node-1] [INFO] [1794842402.625227959] [mavros_router]: Built-in MAVLink package version: 2026.9.9
+[mavros_node-1] [INFO] [1794842402.625239625] [mavros_router]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous loweheiser marsh paparazzi standard stemstudios storm32 uAvionix
+[mavros_node-1] [INFO] [1794842402.625247792] [mavros_router]: MAVROS Router started
+[mavros_node-1] [INFO] [1794842402.625429207] [mavros_node]: Starting mavros uas node
+[mavros_node-1] [INFO] [1794842402.671742315] [mavros_router]: Requested to add endpoint: type: 0, url: /dev/serial/by-id/usb-Matek_HKUST_UAV_NxtPX4_0-if00:57600
+[mavros_node-1] [INFO] [1794842402.671815815] [mavros_router]: Endpoint link[1000] created
+[mavros_node-1] [INFO] [1794842402.672630725] [mavros_router]: link[1000] opened successfully
+[mavros_node-1] [INFO] [1794842402.672670392] [mavros_router]: Requested to add endpoint: type: 2, url: /uas1
+[mavros_node-1] [INFO] [1794842402.672694016] [mavros_router]: Endpoint link[1001] created
+[mavros_node-1] [INFO] [1794842402.672821765] [mavros_router]: link[1000] detected remote address 1.1
+[mavros_node-1] [INFO] [1794842402.674963458] [mavros_router]: link[1001] opened successfully
+[mavros_node-1] [INFO] [1794842402.681814947] [mavros]: UAS Executor started, threads: 4
+[mavros_node-1] [WARN] [1794842402.681828072] [mavros]: plugin_denylist pattern 'image_pub' does not match any declared plugin
+[mavros_node-1] [INFO] [1794842402.714849614] [mavros]: Plugin actuator_control created
+[mavros_node-1] [INFO] [1794842402.715009155] [mavros]: Plugin actuator_control initialized
+[mavros_node-1] [INFO] [1794842402.741422288] [mavros]: Plugin adsb created
+[mavros_node-1] [INFO] [1794842402.741493163] [mavros]: Plugin adsb initialized
+[mavros_node-1] [INFO] [1794842402.748440610] [mavros]: Plugin altitude created
+[mavros_node-1] [INFO] [1794842402.748513818] [mavros]: Plugin altitude initialized
+[mavros_node-1] [INFO] [1794842402.755715305] [mavros]: Plugin cam_imu_sync created
+[mavros_node-1] [INFO] [1794842402.755789971] [mavros]: Plugin cam_imu_sync initialized
+[mavros_node-1] [INFO] [1794842402.763297123] [mavros]: Plugin camera created
+[mavros_node-1] [INFO] [1794842402.763374706] [mavros]: Plugin camera initialized
+[mavros_node-1] [INFO] [1794842402.772260555] [mavros]: Plugin cellular_status created
+[mavros_node-1] [INFO] [1794842402.772358846] [mavros]: Plugin cellular_status initialized
+[mavros_node-1] [INFO] [1794842402.788136727] [mavros]: Plugin command created
+[mavros_node-1] [INFO] [1794842402.788221018] [mavros]: Plugin command initialized
+[mavros_node-1] [INFO] [1794842402.796938577] [mavros]: Plugin companion_process_status created
+[mavros_node-1] [INFO] [1794842402.797005660] [mavros]: Plugin companion_process_status initialized
+[mavros_node-1] [INFO] [1794842402.809201318] [mavros]: Plugin debug_value created
+[mavros_node-1] [INFO] [1794842402.809322650] [mavros]: Plugin debug_value initialized
+[mavros_node-1] [INFO] [1794842402.809350942] [mavros]: Plugin distance_sensor ignored
+[component_container-2] [INFO] [1794842402.823274711] [camera.camera_container]: Load Library: /home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera/lib/liborbbec_camera.so
+[mavros_node-1] [INFO] [1794842402.825149530] [mavros]: Plugin esc_status created
+[mavros_node-1] [INFO] [1794842402.825237030] [mavros]: Plugin esc_status initialized
+[mavros_node-1] [INFO] [1794842402.836070615] [mavros]: Plugin esc_telemetry created
+[mavros_node-1] [INFO] [1794842402.836274196] [mavros]: Plugin esc_telemetry initialized
+[mavros_node-1] [INFO] [1794842402.849303723] [mavros]: Plugin fake_gps created
+[mavros_node-1] [INFO] [1794842402.849374597] [mavros]: Plugin fake_gps initialized
+[mavros_node-1] [INFO] [1794842402.870826227] [mavros]: Plugin ftp created
+[mavros_node-1] [INFO] [1794842402.870922184] [mavros]: Plugin ftp initialized
+[mavros_node-1] [INFO] [1794842402.886522441] [mavros]: Plugin geofence created
+[mavros_node-1] [INFO] [1794842402.886633274] [mavros]: Plugin geofence initialized
+[mavros_node-1] [INFO] [1794842402.912617369] [mavros]: Plugin gimbal_control created
+[mavros_node-1] [INFO] [1794842402.912721202] [mavros]: Plugin gimbal_control initialized
+[mavros_node-1] [INFO] [1794842402.935389364] [mavros]: Plugin global_position created
+[mavros_node-1] [INFO] [1794842402.935523529] [mavros]: Plugin global_position initialized
+[component_container-2] [INFO] [1794842402.935496988] [camera.camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-2] [INFO] [1794842402.935542487] [camera.camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-2] [INFO] [1794842402.941569442] [camera.camera]: SDK log file path set to: /home/orangepi/.ros/Log/camera/OrbbecSDK_20261116_232002.log
+[component_container-2] [INFO] [1794842402.954253929] [camera.camera]: Device access mode: Default (4)
+[component_container-2] [INFO] [1794842402.954323637] [camera.camera]: Set UVC backend to libuvc
+[mavros_node-1] [INFO] [1794842402.958189066] [mavros]: Plugin gps_input created
+[mavros_node-1] [INFO] [1794842402.958308357] [mavros]: Plugin gps_input initialized
+[mavros_node-1] [INFO] [1794842402.975558560] [mavros]: Plugin gps_rtk created
+[mavros_node-1] [INFO] [1794842402.975706725] [mavros]: Plugin gps_rtk initialized
+[mavros_node-1] [INFO] [1794842402.996229112] [mavros]: Plugin gps_status created
+[mavros_node-1] [INFO] [1794842402.996337319] [mavros]: Plugin gps_status initialized
+[mavros_node-1] [INFO] [1794842403.016450209] [mavros]: Plugin guided_target created
+[mavros_node-1] [INFO] [1794842403.016537417] [mavros]: Plugin guided_target initialized
+[mavros_node-1] [INFO] [1794842403.035847062] [mavros]: Plugin hil created
+[mavros_node-1] [INFO] [1794842403.035928145] [mavros]: Plugin hil initialized
+[mavros_node-1] [INFO] [1794842403.053302305] [mavros]: Plugin home_position created
+[mavros_node-1] [INFO] [1794842403.053384263] [mavros]: Plugin home_position initialized
+[mavros_node-1] [INFO] [1794842403.074396646] [mavros]: Plugin imu created
+[mavros_node-1] [INFO] [1794842403.074490854] [mavros]: Plugin imu initialized
+[mavros_node-1] [INFO] [1794842403.094097997] [mavros]: Plugin landing_target created
+[mavros_node-1] [INFO] [1794842403.094176163] [mavros]: Plugin landing_target initialized
+[mavros_node-1] [INFO] [1794842403.115784125] [mavros]: Plugin local_position created
+[mavros_node-1] [INFO] [1794842403.117263155] [mavros]: Plugin local_position initialized
+[mavros_node-1] [INFO] [1794842403.142504381] [mavros]: Plugin log_transfer created
+[mavros_node-1] [INFO] [1794842403.142588672] [mavros]: Plugin log_transfer initialized
+[mavros_node-1] [INFO] [1794842403.160635702] [mavros]: Plugin mag_calibration_status created
+[mavros_node-1] [INFO] [1794842403.160719702] [mavros]: Plugin mag_calibration_status initialized
+[mavros_node-1] [INFO] [1794842403.179236020] [mavros]: Plugin manual_control created
+[mavros_node-1] [INFO] [1794842403.179312144] [mavros]: Plugin manual_control initialized
+[mavros_node-1] [INFO] [1794842403.198576290] [mavros]: Plugin mocap_pose_estimate created
+[mavros_node-1] [INFO] [1794842403.198652123] [mavros]: Plugin mocap_pose_estimate initialized
+[mavros_node-1] [INFO] [1794842403.221547783] [mavros]: Plugin mount_control created
+[mavros_node-1] [INFO] [1794842403.221865114] [mavros]: Plugin mount_control initialized
+[mavros_node-1] [INFO] [1794842403.239992936] [mavros]: Plugin nav_controller_output created
+[mavros_node-1] [INFO] [1794842403.240162976] [mavros]: Plugin nav_controller_output initialized
+[mavros_node-1] [INFO] [1794842403.259742703] [mavros]: Plugin obstacle_distance created
+[mavros_node-1] [INFO] [1794842403.259818244] [mavros]: Plugin obstacle_distance initialized
+[mavros_node-1] [INFO] [1794842403.279923842] [mavros]: Plugin obstacle_distance_3d created
+[mavros_node-1] [INFO] [1794842403.279997925] [mavros]: Plugin obstacle_distance_3d initialized
+[mavros_node-1] [INFO] [1794842403.301028099] [mavros]: Plugin odometry created
+[mavros_node-1] [INFO] [1794842403.301154681] [mavros]: Plugin odometry initialized
+[mavros_node-1] [INFO] [1794842403.322058565] [mavros]: Plugin onboard_computer_status created
+[mavros_node-1] [INFO] [1794842403.322134689] [mavros]: Plugin onboard_computer_status initialized
+[mavros_node-1] [INFO] [1794842403.348874779] [mavros]: Plugin open_drone_id created
+[mavros_node-1] [INFO] [1794842403.349065528] [mavros]: Plugin open_drone_id initialized
+[mavros_node-1] [INFO] [1794842403.373776799] [mavros]: Plugin optical_flow created
+[mavros_node-1] [INFO] [1794842403.373885007] [mavros]: Plugin optical_flow initialized
+[mavros_node-1] [INFO] [1794842403.398400863] [mavros]: Plugin param created
+[mavros_node-1] [INFO] [1794842403.398500612] [mavros]: Plugin param initialized
+[mavros_node-1] [INFO] [1794842403.421962976] [mavros]: Plugin play_tune created
+[mavros_node-1] [INFO] [1794842403.422032101] [mavros]: Plugin play_tune initialized
+[mavros_node-1] [INFO] [1794842403.449602267] [mavros]: Plugin px4flow created
+[mavros_node-1] [INFO] [1794842403.449683058] [mavros]: Plugin px4flow initialized
+[mavros_node-1] [INFO] [1794842403.480612033] [mavros]: Plugin rallypoint created
+[mavros_node-1] [INFO] [1794842403.480715282] [mavros]: Plugin rallypoint initialized
+[mavros_node-1] [INFO] [1794842403.480734824] [mavros]: Plugin rangefinder ignored
+[mavros_node-1] [INFO] [1794842403.511303593] [mavros]: Plugin rc_io created
+[mavros_node-1] [INFO] [1794842403.511425800] [mavros]: Plugin rc_io initialized
+[mavros_node-1] [INFO] [1794842403.537649935] [mavros]: Plugin setpoint_accel created
+[mavros_node-1] [INFO] [1794842403.537730726] [mavros]: Plugin setpoint_accel initialized
+[mavros_node-1] [INFO] [1794842403.570061440] [mavros]: Plugin setpoint_attitude created
+[mavros_node-1] [INFO] [1794842403.570145148] [mavros]: Plugin setpoint_attitude initialized
+[mavros_node-1] [INFO] [1794842403.609233727] [mavros]: Plugin setpoint_position created
+[mavros_node-1] [INFO] [1794842403.609462684] [mavros]: Plugin setpoint_position initialized
+[mavros_node-1] [INFO] [1794842403.647334439] [mavros]: Plugin setpoint_raw created
+[mavros_node-1] [INFO] [1794842403.647441188] [mavros]: Plugin setpoint_raw initialized
+[mavros_node-1] [INFO] [1794842403.680899477] [mavros]: Plugin setpoint_trajectory created
+[mavros_node-1] [INFO] [1794842403.681179475] [mavros]: Plugin setpoint_trajectory initialized
+[mavros_node-1] [INFO] [1794842403.731434137] [mavros]: Plugin setpoint_velocity created
+[mavros_node-1] [INFO] [1794842403.731514928] [mavros]: Plugin setpoint_velocity initialized
+[mavros_node-1] [INFO] [1794842403.765481296] [mavros]: Plugin sim_state created
+[mavros_node-1] [INFO] [1794842403.765571128] [mavros]: Plugin sim_state initialized
+[mavros_node-1] [INFO] [1794842403.815521584] [mavros]: Plugin sys_status created
+[mavros_node-1] [INFO] [1794842403.815677625] [mavros]: Plugin sys_status initialized
+[mavros_node-1] [INFO] [1794842403.843566289] [mavros.time]: TM: Timesync mode: MAVLINK
+[mavros_node-1] [INFO] [1794842403.851493729] [mavros]: Plugin sys_time created
+[mavros_node-1] [INFO] [1794842403.851599020] [mavros]: Plugin sys_time initialized
+[mavros_node-1] [INFO] [1794842403.880849173] [mavros]: Plugin tdr_radio created
+[mavros_node-1] [INFO] [1794842403.880978964] [mavros]: Plugin tdr_radio initialized
+[mavros_node-1] [INFO] [1794842403.922999938] [mavros]: Plugin terrain created
+[mavros_node-1] [INFO] [1794842403.924180304] [mavros]: Plugin terrain initialized
+[mavros_node-1] [INFO] [1794842403.964335501] [mavros]: Plugin trajectory created
+[mavros_node-1] [INFO] [1794842403.964442833] [mavros]: Plugin trajectory initialized
+[mavros_node-1] [INFO] [1794842403.998404243] [mavros]: Plugin tunnel created
+[mavros_node-1] [INFO] [1794842403.998516242] [mavros]: Plugin tunnel initialized
+[mavros_node-1] [INFO] [1794842404.029961754] [mavros]: Plugin vfr_hud created
+[mavros_node-1] [INFO] [1794842404.030051587] [mavros]: Plugin vfr_hud initialized
+[mavros_node-1] [INFO] [1794842404.030068795] [mavros]: Plugin vibration ignored
+[component_container-2] [INFO] [1794842404.054247196] [camera.camera]: startDevice called
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/camera/camera' in container '/camera/camera_container'
+[component_container-2] [INFO] [1794842404.064450202] [camera.camera]: Connecting to device with serial number: CP253530009G
+[component_container-2] [INFO] [1794842404.064578534] [camera.camera]: Matched device serial number: CP253530009G
+[mavros_node-1] [INFO] [1794842404.075422036] [mavros]: Plugin vision_pose created
+[mavros_node-1] [INFO] [1794842404.075510118] [mavros]: Plugin vision_pose initialized
+[mavros_node-1] [INFO] [1794842404.113288833] [mavros]: Plugin vision_speed created
+[mavros_node-1] [INFO] [1794842404.113441665] [mavros]: Plugin vision_speed initialized
+[mavros_node-1] [INFO] [1794842404.167519756] [mavros]: Plugin waypoint created
+[mavros_node-1] [INFO] [1794842404.167634672] [mavros]: Plugin waypoint initialized
+[mavros_node-1] [INFO] [1794842404.167660338] [mavros]: Plugin wheel_odometry ignored
+[mavros_node-1] [INFO] [1794842404.202611366] [mavros]: Plugin wind_estimation created
+[mavros_node-1] [INFO] [1794842404.202713740] [mavros]: Plugin wind_estimation initialized
+[mavros_node-1] [INFO] [1794842404.206888917] [mavros]: Built-in SIMD instructions: ARM NEON
+[mavros_node-1] [INFO] [1794842404.206949583] [mavros]: Built-in MAVLink package version: 2026.9.9
+[mavros_node-1] [INFO] [1794842404.206961541] [mavros]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous loweheiser marsh paparazzi standard stemstudios storm32 uAvionix
+[mavros_node-1] [INFO] [1794842404.206971458] [mavros]: MAVROS UAS via /uas1 started. MY ID 1.191, TARGET ID 1.1
+[mavros_node-1] [INFO] [1794842404.222308050] [mavros.imu]: IMU: High resolution IMU detected!
+[mavros_node-1] [INFO] [1794842404.225650525] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+[mavros_node-1] [INFO] [1794842404.234057753] [mavros_router]: link[1001] detected remote address 1.191
+[component_container-2] [INFO] [1794842404.355849832] [camera.camera]: OBCameraNode: use_intra_process: OFF
+[component_container-2] [INFO] [1794842404.399954457] [camera.camera]: Current time domain: global
+[component_container-2] [INFO] [1794842404.400123331] [camera.camera]: Loaded device preset: Default
+[component_container-2] [INFO] [1794842404.535014352] [camera.camera]: Current heartbeat: OFF
+[component_container-2] [INFO] [1794842404.535108852] [camera.camera]: Set firmware log to OFF
+[component_container-2] [INFO] [1794842404.535694514] [camera.camera]: Disparity to depth mode: HW
+[component_container-2] [INFO] [1794842404.536573299] [camera.camera]: Current LDP: OFF
+[component_container-2] [INFO] [1794842404.537123378] [camera.camera]: Current G300 laser control: ON
+[component_container-2] [INFO] [1794842404.537228377] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+[component_container-2] [INFO] [1794842404.537273877] [camera.camera]: Current color mirror: OFF
+[component_container-2] [INFO] [1794842404.537299252] [camera.camera]: Current color flip: OFF
+[component_container-2] [INFO] [1794842404.537329877] [camera.camera]: Current depth mirror: OFF
+[component_container-2] [INFO] [1794842404.537354085] [camera.camera]: Current depth flip: OFF
+[component_container-2] [INFO] [1794842404.537381793] [camera.camera]: Current left_ir mirror: OFF
+[component_container-2] [INFO] [1794842404.537405418] [camera.camera]: Current left_ir flip: OFF
+[component_container-2] [INFO] [1794842404.537432543] [camera.camera]: Current right_ir mirror: OFF
+[component_container-2] [INFO] [1794842404.537455876] [camera.camera]: Current right_ir flip: OFF
+[component_container-2] [INFO] [1794842404.537939455] [camera.camera]: Current color auto white balance: ON
+[component_container-2] [WARN] [1794842404.537985538] [camera.camera]: Color preset is not supported by this device
+[component_container-2] [INFO] [1794842404.538269328] [camera.camera]: Current color auto exposure priority: OFF
+[component_container-2] [INFO] [1794842404.538788199] [camera.camera]: Current color auto exposure: ON
+[component_container-2] [INFO] [1794842404.539298320] [camera.camera]: Current depth auto exposure priority: OFF
+[component_container-2] [INFO] [1794842404.542026549] [camera.camera]: Current IR auto exposure: ON
+[component_container-2] [INFO] [1794842404.542121340] [camera.camera]: Current accel data correction: ON
+[component_container-2] [INFO] [1794842404.542145549] [camera.camera]: Current gyro data correction: ON
+[component_container-2] [INFO] [1794842404.542228381] [camera.camera]: Set depth filter DecimationFilter to disabled
+[component_container-2] [INFO] [1794842404.542248798] [camera.camera]: Set depth filter ThresholdFilter to disabled
+[component_container-2] [INFO] [1794842404.542267756] [camera.camera]: Set depth filter HDRMerge to disabled
+[component_container-2] [INFO] [1794842404.542282923] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+[component_container-2] [INFO] [1794842404.542297506] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+[component_container-2] [INFO] [1794842404.542312964] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+[component_container-2] [INFO] [1794842404.542328714] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+[component_container-2] [INFO] [1794842404.542345630] [camera.camera]: Set depth filter TemporalFilter to disabled
+[component_container-2] [INFO] [1794842404.542360505] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+[component_container-2] [INFO] [1794842404.542376255] [camera.camera]: Set depth filter DisparityTransform to enabled
+[component_container-2] [INFO] [1794842404.543719953] [camera.camera]: Set color filter DecimationFilter to disabled
+[component_container-2] [INFO] [1794842404.543776828] [camera.camera]: Set right IR filter SequenceIdFilter to disabled
+[component_container-2] [INFO] [1794842404.543797244] [camera.camera]: Set left IR filter SequenceIdFilter to disabled
+[component_container-2] [INFO] [1794842404.606355188] [camera.camera]: color/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-2] [INFO] [1794842404.614533460] [camera.camera]: depth/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-2] [INFO] [1794842404.629726261] [camera.camera]: left_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-2] [INFO] [1794842404.636191879] [camera.camera]: right_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-2] [INFO] [1794842404.638842817] [camera.camera]: Publish diagnostics every 1 seconds
+[mavros_node-1] [INFO] [1794842404.674816420] [mavros]: CON: Got HEARTBEAT, connected. FCU: PX4 Autopilot
+[mavros_node-1] [INFO] [1794842404.675252459] [mavros.mission]: WP: detected enable_partial_push: 0
+[mavros_node-1] [INFO] [1794842404.681749285] [mavros.imu]: IMU: High resolution IMU detected!
+[mavros_node-1] [INFO] [1794842404.682961442] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+[mavros_node-1] [INFO] [1794842404.821345438] [mavros.sys]: FCU: EVENT 10716939 with args -0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+[component_container-2] [INFO] [1794842404.935455075] [camera.camera]: Device Orbbec Gemini 335L connected
+[component_container-2] [INFO] [1794842404.935647865] [camera.camera]: Serial number: CP253530009G
+[component_container-2] [INFO] [1794842404.935694240] [camera.camera]: Firmware version: 1.4.60
+[component_container-2] [INFO] [1794842404.935728656] [camera.camera]: ROS Wrapper version: 2.10.6
+[component_container-2] [INFO] [1794842404.935767739] [camera.camera]: SDK version: 2.10.6
+[component_container-2] [INFO] [1794842404.935812947] [camera.camera]: Hardware version: 0.1
+[component_container-2] [INFO] [1794842404.935851447] [camera.camera]: ISP firmware version: 20241125
+[component_container-2] [INFO] [1794842404.935890822] [camera.camera]: ISP needed version: 20241125
+[component_container-2] [INFO] [1794842404.935928446] [camera.camera]: usb connect type: USB3.2
+[component_container-2] [INFO] [1794842404.935961113] [camera.camera]: device unique id: 8-1-2
+[component_container-2] [INFO] [1794842404.935998446] [camera.camera]: Current node pid: 150270
+[component_container-2] [INFO] [1794842404.969499901] [camera.camera]: Disable frame sync
+[component_container-2] [INFO] [1794842405.122924407] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-2] [INFO] [1794842405.123313779] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-2] [INFO] [1794842405.123692068] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+[component_container-2] [INFO] [1794842405.388539732] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+[component_container-2] [INFO] [1794842405.969665422] [camera.camera]: current interleave_ae_mode_: laser
+[component_container-2] [INFO] [1794842405.974168721] [camera.camera]: Enable enable_interleave_depth_frame to false
+[component_container-2] [INFO] [1794842405.974284512] [camera.camera]: Initialize device cost: 1618 ms
+[mavros_node-1] [WARN] [1794842406.720262455] [mavros.sys]: VER: broadcast request timeout, retries left 4
+[mavros_node-1] [WARN] [1794842407.721127138] [mavros.sys]: VER: broadcast request timeout, retries left 3
+[mavros_node-1] [INFO] [1794842408.690658599] [mavros.geofence]: GF: Using MISSION_ITEM_INT
+[mavros_node-1] [INFO] [1794842408.690741140] [mavros.rallypoint]: RP: Using MISSION_ITEM_INT
+[mavros_node-1] [INFO] [1794842408.690766807] [mavros.mission]: WP: Using MISSION_ITEM_INT
+[mavros_node-1] [INFO] [1794842408.690786932] [mavros.sys]: VER: 1.1: Capabilities         0x000000000000e8ff
+[mavros_node-1] [INFO] [1794842408.690807640] [mavros.sys]: VER: 1.1: Flight software:     011000ff (6ea3539157000000)
+[mavros_node-1] [INFO] [1794842408.690821640] [mavros.sys]: VER: 1.1: Middleware software: 011000ff (6ea3539157000000)
+[mavros_node-1] [INFO] [1794842408.690835056] [mavros.sys]: VER: 1.1: OS software:         0b0000ff (886acbbdb4f061e5)
+[mavros_node-1] [INFO] [1794842408.690847889] [mavros.sys]: VER: 1.1: Board hardware:      00000036
+[mavros_node-1] [INFO] [1794842408.690860723] [mavros.sys]: VER: 1.1: VID/PID:             1b8c:0036
+[mavros_node-1] [INFO] [1794842408.690873556] [mavros.sys]: VER: 1.1: UID:                 3333510f39303736
+[mavros_node-1] [WARN] [1794842408.711922688] [mavros.sys]: VER: unicast request timeout, retries left 2
+[mavros_node-1] [INFO] [1794842414.677812082] [mavros.home_position]: HP: requesting home position
+[mavros_node-1] [WARN] [1794842418.194872782] [mavros.time]: TM: RTT too high for timesync: 2248.78 ms.
+[mavros_node-1] [WARN] [1794842418.263020766] [mavros.time]: TM: RTT too high for timesync: 1211.45 ms.
+[mavros_node-1] [WARN] [1794842418.313869257] [mavros.time]: TM: RTT too high for timesync: 159.94 ms.
+[mavros_node-1] [WARN] [1794842419.156884008] [mavros.param]: PR: request param #105 timeout, retries left 2, and 438 params still missing
+[mavros_node-1] [INFO] [1794842419.685335387] [mavros.mission]: WP: mission received
+[mavros_node-1] [INFO] [1794842424.676468859] [mavros.home_position]: HP: requesting home position
+[mavros_node-1] [INFO] [1794842424.679582085] [mavros.rallypoint]: RP: mission received
+[mavros_node-1] [INFO] [1794842429.681559683] [mavros.geofence]: GF: mission received
+[mavros_node-1] [INFO] [1794842434.677497993] [mavros.home_position]: HP: requesting home position
+[mavros_node-1] [INFO] [1794842444.680920401] [mavros.home_position]: HP: requesting home position
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [component_container-2]: sending signal 'SIGINT' to process[component_container-2]
+[INFO] [mavros_node-1]: sending signal 'SIGINT' to process[mavros_node-1]
+[component_container-2] [INFO] [1794842448.476247580] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[mavros_node-1] [INFO] [1794842448.479470181] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[mavros_node-1] [WARN] [1794842448.482632407] [mavros]: UAS Executor terminated
+[component_container-2] [INFO] [1794842449.137313624] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [mavros_node-1]: process has died [pid 150268, exit code -2, cmd '/opt/ros/humble/lib/mavros/mavros_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_aruink8r --params-file /tmp/launch_params_gnpcsu98 --params-file /tmp/launch_params_byx6qgbc --params-file /tmp/launch_params_j8jmot_0 --params-file /tmp/launch_params_iv30mgt_ --params-file /opt/ros/humble/share/mavros/launch/px4_pluginlists.yaml --params-file /opt/ros/humble/share/mavros/launch/px4_config.yaml'].
+[INFO] [component_container-2]: process has finished cleanly [pid 150270]

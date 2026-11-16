@@ -1,0 +1,3 @@
+1794842394.3460691 [INFO] [launch]: All log files can be found below /tmp/platform-sensors-audit/run2/ros-log/2026-11-16-23-19-54-344775-orangepi5ultra-149893
+1794842394.3462684 [INFO] [launch]: Default logging verbosity is set to INFO
+1794842394.3937275 [ERROR] [launch]: Caught exception in launch (see debug for traceback): MID360s host IP is not assigned: 192.168.1.51

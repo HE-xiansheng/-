@@ -1,0 +1,23 @@
+[Unit]
+Description=Research platform ROS2 sensors
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=orangepi
+Group=orangepi
+WorkingDirectory=/home/orangepi/drone_platform
+ExecStart=/bin/bash "/home/orangepi/drone_platform/03_tools/config script/start_platform_sensors.sh"
+KillSignal=SIGINT
+KillMode=control-group
+TimeoutStopSec=30
+Restart=no
+Environment=ROS_DOMAIN_ID=0
+Environment=ROS_LOCALHOST_ONLY=0
+Environment=ROS_LOG_DIR=/run/drone-sensors/ros-log
+RuntimeDirectory=drone-sensors
+RuntimeDirectoryMode=0750
+
+[Install]
+WantedBy=multi-user.target

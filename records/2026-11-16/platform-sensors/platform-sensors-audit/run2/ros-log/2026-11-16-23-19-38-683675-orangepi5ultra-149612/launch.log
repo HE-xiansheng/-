@@ -1,0 +1,3 @@
+1794842378.6851799 [INFO] [launch]: All log files can be found below /tmp/platform-sensors-audit/run2/ros-log/2026-11-16-23-19-38-683675-orangepi5ultra-149612
+1794842378.6854050 [INFO] [launch]: Default logging verbosity is set to INFO
+1794842378.7239566 [ERROR] [launch]: Caught exception in launch (see debug for traceback): Select at least one sensor module

@@ -1,0 +1,37 @@
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'enable_mavros':
+        no description given
+        (default: 'true')
+
+    'enable_camera':
+        no description given
+        (default: 'true')
+
+    'enable_usb_camera':
+        no description given
+        (default: 'true')
+
+    'enable_lidar':
+        no description given
+        (default: 'true')
+
+    'enable_rtsp':
+        no description given
+        (default: 'true')
+
+    'fcu_url':
+        no description given
+        (default: '/dev/serial/by-id/usb-Matek_HKUST_UAV_NxtPX4_0-if00:57600')
+
+    'video_device':
+        no description given
+        (default: '/dev/usb_cam')
+
+    'device_config':
+        no description given
+        (default: '/home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json')
+
+    'rtsp_url':
+        no description given
+        (default: 'rtsp://192.168.144.108')

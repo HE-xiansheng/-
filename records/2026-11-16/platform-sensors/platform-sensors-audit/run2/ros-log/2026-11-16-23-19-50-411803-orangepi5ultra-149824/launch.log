@@ -1,0 +1,3 @@
+1794842390.4131036 [INFO] [launch]: All log files can be found below /tmp/platform-sensors-audit/run2/ros-log/2026-11-16-23-19-50-411803-orangepi5ultra-149824
+1794842390.4132988 [INFO] [launch]: Default logging verbosity is set to INFO
+1794842390.4555228 [ERROR] [launch]: Caught exception in launch (see debug for traceback): Independent USB camera not connected: /dev/usb_cam

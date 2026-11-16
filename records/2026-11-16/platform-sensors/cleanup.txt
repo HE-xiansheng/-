@@ -1,0 +1,1 @@
+Retrieved evidence then removed /tmp/platform-sensors-audit. Target git status:

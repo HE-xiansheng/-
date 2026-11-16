@@ -66,3 +66,5 @@
 2026-11-16：旧机实采雷达/IMU循环回放→机载实际FAST-LIO/原生转发/MAVROS→官方PX4 SIH整链18项通过；711cloud/14611IMU→665odom/564vision，564条wire源戳/坐标一致，传感器停流不重发，管理器正常停止。运行中水平/高度EV融合通过。ULog发现PX4同步收敛前410条用接收戳，72.376秒后才显现源时龄，末100条70–132ms；禁止把融合位等同源时刻对齐。当前雷达以太网NO-CARRIER。报告仅电脑/GitHub，机载测试目录已清理、bd6c781干净。记录见records/2026-11-16/fastlio-px4-sitl。
 
 2026-11-16：审计Qt实际入口，确认automatic-navigation/offboard-retarget及旧task_manager为历史ROS1工具，不是当前ROS2入口；Linux原安装规则会复制整tools，改12文件白名单并移除无用ROS1资源。Qt重构建及真实独立安装目录8项SSH/PFS1/启停检查通过；初次未登记指纹被拒绝、使用已核实专用known_hosts复测通过。根README和ROS2部署说明已按当前证据更新；.224无Safina_sensor.service及传感器进程，正式服务/物理整链未切换。完整可搬移Qt包仍待准备。记录见records/2026-11-16/runtime-install-audit。
+
+2026-11-16：断电续接确认.224在线、飞控/Gemini在位。整套五模块传感器启动候选部署5993306，未安装或启用service。21项预检/真实双目+完整MAVROS检查及意外退出回收通过；彩色/深度约30Hz，飞控IMU50Hz/位姿30Hz，始终disarmed。首轮BEST_EFFORT图像接收率失败保留，RELIABLE复测通过但根因未定；timesync/参数重试与退出告警保留。证据取回电脑/GitHub、机载临时目录清理、Git干净。雷达网口carrier0，独立USB/云台/全链及正式切换未验收。见records/2026-11-16/platform-sensors。
