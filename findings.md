@@ -135,3 +135,7 @@ GCS诊断更新：run4独立端口直连仍失败，排除仅SSH隧道解释；�
 补充实测纠正：生产归档显式QSG_NO_VSYNC=0仍创建swapInterval0，不能作为恢复vsync操作方法；main未覆盖该显式值，但Qt运行结果与文档预期不同。README/部署说明已去掉0回退承诺，回退以原r2包或撤销该main修改重建为准。
 
 2026-11-17 默认产品入口run10收尾：GUI24/24、机载43/43严格通过，真实QML录制启停正常；证据取回、remote_removed=true。USB逐秒观察采流时active、停止后suspended，本轮内核无disconnect；未更改电源配置，不宣称间歇断连已解决。明确纠正QSG_NO_VSYNC=0不能作为已验证回退，回退使用原r2包或撤销main分支重建。候选r3归档7项通过且原桌面入口未切换，机载仍d896200。物理接线/外参/真实融合与完整任务未验收，目标仍进行中。
+
+2026-11-17 真实PX4只读审计：临时独立工具/官方pymavlink2.4.49生成common.py，独占无占用串口，仅GCS心跳、PARAM_REQUEST_READ及REQUEST_MESSAGE(AUTOPILOT_VERSION)，20秒后恢复Linux串口属性并清理工具。物理飞控1.16.0 stable、未解锁，wire hash000000579153a36e对应前缀6ea3539157（官方v1.16.0提交前缀相符，不证明完整构建相同）。字节编码整数正确解码：EKF2_EV_CTRL15、HGT_REF3、DELAY0ms、EV_POS_X/Y/Z均0、NOISE_MD0、EVP/EVV/EVA噪声约0.1、QMIN0。11参数返回、5个历史/探测名称无响应，保留缺失而非认定查询全成功。PTY13项防写入/解码/锁和串口属性恢复检查通过；未发外部位姿/设定点，不能证明实际融合或外参正确。证据records/2026-11-17/px4-physical-readonly。
+
+2026-11-17 传感器网络核对：.224现有Wired connection1为DHCP、无.51；WiFi .224/23默认gateway.1。旧机雷达.50/24手动删/24直连路由、仅保留.117/32源.50，云台网卡00:E0:9A:5B:57:C2为.144.100/24。电脑准备候选雷达.51/32+.117/32、云台.144.100/24专用MAC绑定，均非自动连接/无默认网关。机载libnm1.36内存解析/verify两份通过，未load/import/up，未修改网络；实物唯一性/可达性及用户确认仍待完成。见candidates/network和records/2026-11-17/network-candidates。

@@ -1,0 +1,23 @@
+2026-11-17T03:52:46+08:00
+Nov 17 03:50:27 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 03:50:27 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+/sys/class/thermal/thermal_zone0
+soc-thermal
+/sys/class/thermal/thermal_zone0/trip_point_0_temp
+75000
+/sys/class/thermal/thermal_zone0/trip_point_1_temp
+85000
+/sys/class/thermal/thermal_zone0/trip_point_2_temp
+115000
+/sys/class/thermal/thermal_zone1
+bigcore0-thermal
+/sys/class/thermal/thermal_zone2
+bigcore1-thermal
+/sys/class/thermal/thermal_zone3
+littlecore-thermal
+/sys/class/thermal/thermal_zone4
+center-thermal
+/sys/class/thermal/thermal_zone5
+gpu-thermal
+/sys/class/thermal/thermal_zone6
+npu-thermal

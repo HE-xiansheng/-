@@ -1,0 +1,790 @@
+{
+  "scope": "physical PX4 firmware/EV settings read only; no estimator input or flight commands",
+  "device": "/dev/serial/by-id/usb-Matek_HKUST_UAV_NxtPX4_0-if00",
+  "duration_s": 20.0,
+  "parameters_requested": [
+    "EKF2_EV_CTRL",
+    "EKF2_AID_MASK",
+    "EKF2_EV_DELAY",
+    "EKF2_HGT_REF",
+    "EKF2_HGT_MODE",
+    "EKF2_EV_POS_X",
+    "EKF2_EV_POS_Y",
+    "EKF2_EV_POS_Z",
+    "EKF2_EV_NOISE_MD",
+    "EKF2_EVP_NOISE",
+    "EKF2_EVV_NOISE",
+    "EKF2_EVA_NOISE",
+    "EKF2_EV_QMIN",
+    "EKF2_EV_P_NOISE",
+    "EKF2_EV_V_NOISE",
+    "EKF2_EV_Y_NOISE"
+  ],
+  "parameters": {
+    "EKF2_EV_CTRL": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_CTRL",
+      "param_type": 6,
+      "param_count": 933,
+      "param_index": 310,
+      "param_value_wire_hex": "0f000000",
+      "param_value_float": 2.1019476964872256e-44,
+      "decoded_value": 15
+    },
+    "EKF2_EV_DELAY": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_DELAY",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 311,
+      "param_value_wire_hex": "00000000",
+      "param_value_float": 0.0,
+      "decoded_value": 0.0
+    },
+    "EKF2_HGT_REF": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_HGT_REF",
+      "param_type": 6,
+      "param_count": 933,
+      "param_index": 339,
+      "param_value_wire_hex": "03000000",
+      "param_value_float": 4.203895392974451e-45,
+      "decoded_value": 3
+    },
+    "EKF2_EV_POS_X": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_POS_X",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 313,
+      "param_value_wire_hex": "00000000",
+      "param_value_float": 0.0,
+      "decoded_value": 0.0
+    },
+    "EKF2_EV_POS_Y": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_POS_Y",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 314,
+      "param_value_wire_hex": "00000000",
+      "param_value_float": 0.0,
+      "decoded_value": 0.0
+    },
+    "EKF2_EV_POS_Z": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_POS_Z",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 315,
+      "param_value_wire_hex": "00000000",
+      "param_value_float": 0.0,
+      "decoded_value": 0.0
+    },
+    "EKF2_EV_NOISE_MD": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_NOISE_MD",
+      "param_type": 6,
+      "param_count": 933,
+      "param_index": 312,
+      "param_value_wire_hex": "00000000",
+      "param_value_float": 0.0,
+      "decoded_value": 0
+    },
+    "EKF2_EVP_NOISE": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EVP_NOISE",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 307,
+      "param_value_wire_hex": "cdcccc3d",
+      "param_value_float": 0.10000000149011612,
+      "decoded_value": 0.10000000149011612
+    },
+    "EKF2_EVV_NOISE": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EVV_NOISE",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 309,
+      "param_value_wire_hex": "cdcccc3d",
+      "param_value_float": 0.10000000149011612,
+      "decoded_value": 0.10000000149011612
+    },
+    "EKF2_EVA_NOISE": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EVA_NOISE",
+      "param_type": 9,
+      "param_count": 933,
+      "param_index": 305,
+      "param_value_wire_hex": "cdcccc3d",
+      "param_value_float": 0.10000000149011612,
+      "decoded_value": 0.10000000149011612
+    },
+    "EKF2_EV_QMIN": {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "EKF2_EV_QMIN",
+      "param_type": 6,
+      "param_count": 933,
+      "param_index": 316,
+      "param_value_wire_hex": "00000000",
+      "param_value_float": 0.0,
+      "decoded_value": 0
+    }
+  },
+  "heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 2,
+    "autopilot": 12,
+    "base_mode": 29,
+    "custom_mode": 50593792,
+    "system_status": 0,
+    "mavlink_version": 3,
+    "system_id": 1,
+    "component_id": 1,
+    "armed": false
+  },
+  "firmware": {
+    "mavpackettype": "AUTOPILOT_VERSION",
+    "capabilities": 59647,
+    "flight_sw_version": 17826047,
+    "middleware_sw_version": 17826047,
+    "os_sw_version": 184549631,
+    "board_version": 54,
+    "flight_custom_version": [
+      0,
+      0,
+      0,
+      87,
+      145,
+      83,
+      163,
+      110
+    ],
+    "middleware_custom_version": [
+      0,
+      0,
+      0,
+      87,
+      145,
+      83,
+      163,
+      110
+    ],
+    "os_custom_version": [
+      229,
+      97,
+      240,
+      180,
+      189,
+      203,
+      106,
+      136
+    ],
+    "vendor_id": 7052,
+    "product_id": 54,
+    "uid": 3689381645572388662,
+    "uid2": [
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      57,
+      48,
+      55,
+      54,
+      51,
+      51,
+      81,
+      15,
+      0,
+      60,
+      0,
+      69
+    ]
+  },
+  "outgoing": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 512,
+      "confirmation": 0,
+      "param1": 148,
+      "param2": 0,
+      "param3": 0,
+      "param4": 0,
+      "param5": 0,
+      "param6": 0,
+      "param7": 0
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_CTRL",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_AID_MASK",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_DELAY",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_REF",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_MODE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_POS_X",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_POS_Y",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_POS_Z",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_NOISE_MD",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EVP_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EVV_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EVA_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_QMIN",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_P_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_V_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_Y_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 512,
+      "confirmation": 0,
+      "param1": 148,
+      "param2": 0,
+      "param3": 0,
+      "param4": 0,
+      "param5": 0,
+      "param6": 0,
+      "param7": 0
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_AID_MASK",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_MODE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_P_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_V_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_Y_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 512,
+      "confirmation": 0,
+      "param1": 148,
+      "param2": 0,
+      "param3": 0,
+      "param4": 0,
+      "param5": 0,
+      "param6": 0,
+      "param7": 0
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_AID_MASK",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_MODE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_P_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_V_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_Y_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 512,
+      "confirmation": 0,
+      "param1": 148,
+      "param2": 0,
+      "param3": 0,
+      "param4": 0,
+      "param5": 0,
+      "param6": 0,
+      "param7": 0
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_AID_MASK",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_MODE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_P_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_V_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_Y_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 512,
+      "confirmation": 0,
+      "param1": 148,
+      "param2": 0,
+      "param3": 0,
+      "param4": 0,
+      "param5": 0,
+      "param6": 0,
+      "param7": 0
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_AID_MASK",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_MODE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_P_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_V_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_EV_Y_NOISE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 512,
+      "confirmation": 0,
+      "param1": 148,
+      "param2": 0,
+      "param3": 0,
+      "param4": 0,
+      "param5": 0,
+      "param6": 0,
+      "param7": 0
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_AID_MASK",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    },
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "EKF2_HGT_MODE",
+      "param_index": -1
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 6,
+      "autopilot": 8,
+      "base_mode": 0,
+      "custom_mode": 0,
+      "system_status": 0,
+      "mavlink_version": 3
+    }
+  ],
+  "first_message_wall_ns": 1794858196490415064,
+  "flight_version_decoded": [
+    1,
+    16,
+    0,
+    255
+  ],
+  "capabilities": 59647,
+  "parameter_encoding": "bytewise",
+  "messages": {
+    "HIGHRES_IMU": 990,
+    "LOCAL_POSITION_NED": 595,
+    "ODOMETRY": 594,
+    "ATTITUDE_QUATERNION": 991,
+    "ATTITUDE": 1977,
+    "TIMESYNC": 199,
+    "ALTITUDE": 199,
+    "ATTITUDE_TARGET": 199,
+    "POSITION_TARGET_LOCAL_NED": 199,
+    "SERVO_OUTPUT_RAW": 199,
+    "VFR_HUD": 199,
+    "EXTENDED_SYS_STATE": 101,
+    "SYS_STATUS": 100,
+    "MISSION_CURRENT": 21,
+    "PING": 21,
+    "HEARTBEAT": 21,
+    "UNKNOWN_8": 21,
+    "UNKNOWN_410": 11,
+    "UNKNOWN_411": 7,
+    "STATUSTEXT": 1,
+    "AUTOPILOT_VERSION": 6,
+    "COMMAND_ACK": 6,
+    "PARAM_VALUE": 11,
+    "BATTERY_STATUS": 10,
+    "UNKNOWN_436": 10,
+    "ESTIMATOR_STATUS": 20,
+    "OPEN_DRONE_ID_LOCATION": 20,
+    "SCALED_PRESSURE": 20,
+    "SYSTEM_TIME": 20,
+    "UNKNOWN_380": 11,
+    "VIBRATION": 10
+  },
+  "parameters_missing": [
+    "EKF2_AID_MASK",
+    "EKF2_HGT_MODE",
+    "EKF2_EV_P_NOISE",
+    "EKF2_EV_V_NOISE",
+    "EKF2_EV_Y_NOISE"
+  ],
+  "connected": true
+}

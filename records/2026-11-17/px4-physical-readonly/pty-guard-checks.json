@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "reject_COMMAND_LONG_0": true,
+    "reject_SET_MODE_1": true,
+    "reject_PARAM_SET_2": true,
+    "reject_COMMAND_LONG_3": true,
+    "reject_PARAM_REQUEST_READ_4": true,
+    "PX4_detected_disarmed": true,
+    "firmware_decoded": true,
+    "all_requested_parameters_received": true,
+    "bytewise_integer_decoding": true,
+    "wire_only_allowed_reads": true,
+    "terminal_settings_restored": true,
+    "exclusive_lock_released": true,
+    "emulator_no_errors": true
+  },
+  "passed": true,
+  "scope": "local PTY; no physical FC"
+}

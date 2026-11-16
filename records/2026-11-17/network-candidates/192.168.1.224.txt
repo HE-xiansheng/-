@@ -1,0 +1,13 @@
+2026-11-17T03:49:26+08:00
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enP3p49s0        DOWN           
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:af0a:7930:a292:9ac3/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 
+default via 192.168.1.1 dev wlan0 proto dhcp metric 600 
+192.168.0.0/23 dev wlan0 proto kernel scope link src 192.168.1.224 metric 600 
+NAME                  UUID                                  TYPE      DEVICE 
+ROS2 installer Wi-Fi  3f0f5216-a750-48db-8139-0575c30edd2b  wifi      wlan0  
+Wired connection 1    832dd3b5-8a1a-3c4b-93db-c09f90bdd28a  ethernet  --     
+source /etc/network/interfaces.d/*
+# Network is managed by Network manager
+auto lo
+iface lo inet loopback

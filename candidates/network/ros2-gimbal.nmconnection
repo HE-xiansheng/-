@@ -1,0 +1,19 @@
+# Candidate bound to the USB Ethernet adapter observed on .235.
+[connection]
+id=ROS2 gimbal candidate
+uuid=64b8b688-2d42-4686-a6da-d19e2bdf5ca1
+type=ethernet
+interface-name=enx00e09a5b57c2
+autoconnect=false
+
+[ethernet]
+mac-address=00:E0:9A:5B:57:C2
+
+[ipv4]
+method=manual
+address1=192.168.144.100/24
+never-default=true
+ignore-auto-dns=true
+
+[ipv6]
+method=disabled

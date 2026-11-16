@@ -73,7 +73,26 @@ def resource():
    for s in (Path('/proc')/str(p.pid)/'status').read_text().splitlines():
     if s.startswith('VmRSS:'):rss[name]=int(s.split()[1])*1024
   except OSError:pass
- resources.append(dict(monotonic_ns=time.monotonic_ns(),cpu=list(map(int,Path('/proc/stat').read_text().splitlines()[0].split()[1:])),memory=mem,temperature_c=temps,rss=rss))
+ # 只读硬件状态：将USB断连/休眠及负载期间降频与消息间隔对齐。
+ # 设备重枚举时sysfs文件可能消失，保留缺失证据而不中断收集。
+ usb={}
+ for device in Path('/sys/bus/usb/devices').glob('*'):
+  try:
+   if (device/'idVendor').read_text().strip()!='2bc5':continue
+   values={'product_id':(device/'idProduct').read_text().strip()}
+   for key in ['control','runtime_status','runtime_active_time','runtime_suspended_time']:
+    try:values[key]=(device/'power'/key).read_text().strip()
+    except OSError:values[key]=None
+   usb[device.name]=values
+  except OSError:continue
+ clocks={}
+ for policy in Path('/sys/devices/system/cpu/cpufreq').glob('policy*'):
+  values={}
+  for key in ['scaling_cur_freq','scaling_max_freq','cpuinfo_max_freq','scaling_governor']:
+   try:values[key]=(policy/key).read_text().strip()
+   except OSError:values[key]=None
+  clocks[policy.name]=values
+ resources.append(dict(monotonic_ns=time.monotonic_ns(),wall_time_ns=time.time_ns(),cpu=list(map(int,Path('/proc/stat').read_text().splitlines()[0].split()[1:])),memory=mem,temperature_c=temps,rss=rss,orbbec_usb=usb,cpufreq=clocks))
 thread=None;observer=None;recorder=None;begin_ns=end_ns=None
 try:
  config=yaml.safe_load((root/'03_tools/gimbal_relay/gimbal.yml').read_text());config['rtspAddress']='127.0.0.1:18554';config['rtspTransports']=['tcp'];config['paths']={'gimbal':{'source':'publisher'}};config['authInternalUsers']=[{'user':'any','ips':['127.0.0.1'],'permissions':[{'action':'publish','path':'gimbal'},{'action':'read','path':'gimbal'}]}]

@@ -1,0 +1,36 @@
+{
+  "libnm": [
+    1,
+    36
+  ],
+  "profiles": {
+    "ros2-livox.nmconnection": {
+      "verified": true,
+      "connection_id": "ROS2 Livox candidate",
+      "autoconnect": false,
+      "interface": "enP3p49s0",
+      "addresses": [
+        "192.168.1.51/32"
+      ],
+      "routes": [
+        "192.168.1.117/32"
+      ],
+      "gateway": null,
+      "never_default": true
+    },
+    "ros2-gimbal.nmconnection": {
+      "verified": true,
+      "connection_id": "ROS2 gimbal candidate",
+      "autoconnect": false,
+      "interface": "enx00e09a5b57c2",
+      "addresses": [
+        "192.168.144.100/24"
+      ],
+      "routes": [],
+      "gateway": null,
+      "never_default": true
+    }
+  },
+  "loaded_into_NetworkManager": false,
+  "network_changed": false
+}

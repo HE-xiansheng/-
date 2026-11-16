@@ -1,0 +1,450 @@
+{
+  "archives": [
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/evidence.tar.gz",
+      "size": 1983618450,
+      "sha256": "5bfcf8676d8d1bcdb22e8744d50754ba5629d1796b51b4fcdb97293f54f30ceb"
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/inputs.tar",
+      "size": 20971520,
+      "sha256": "1a2c031093032a1b6cc2acb10d8bd7da437b42c39db58daa94fed099ca83685d"
+    }
+  ],
+  "bags": [
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_0.db3",
+      "size": 34684928
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_8.db3",
+      "size": 33697792
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_73.db3",
+      "size": 34742272
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_3.db3",
+      "size": 34357248
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_4.db3",
+      "size": 34758656
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_96.db3",
+      "size": 34754560
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_48.db3",
+      "size": 33947648
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_20.db3",
+      "size": 34340864
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_43.db3",
+      "size": 34738176
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_56.db3",
+      "size": 33693696
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_12.db3",
+      "size": 33697792
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_84.db3",
+      "size": 33947648
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_27.db3",
+      "size": 34357248
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_86.db3",
+      "size": 34353152
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_79.db3",
+      "size": 34336768
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_101.db3",
+      "size": 33943552
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_106.db3",
+      "size": 34103296
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_55.db3",
+      "size": 34107392
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_40.db3",
+      "size": 34353152
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_78.db3",
+      "size": 34349056
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_63.db3",
+      "size": 34349056
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_23.db3",
+      "size": 33943552
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_38.db3",
+      "size": 34750464
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_42.db3",
+      "size": 33947648
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_53.db3",
+      "size": 33931264
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_93.db3",
+      "size": 34344960
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_21.db3",
+      "size": 33931264
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_10.db3",
+      "size": 34754560
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_90.db3",
+      "size": 34107392
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_18.db3",
+      "size": 33705984
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_61.db3",
+      "size": 34123776
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_7.db3",
+      "size": 34766848
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_37.db3",
+      "size": 33927168
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_25.db3",
+      "size": 33947648
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_22.db3",
+      "size": 34107392
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_97.db3",
+      "size": 34996224
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_72.db3",
+      "size": 34992128
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_41.db3",
+      "size": 34086912
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_65.db3",
+      "size": 33943552
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_1.db3",
+      "size": 34365440
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_62.db3",
+      "size": 34340864
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_105.db3",
+      "size": 34353152
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_33.db3",
+      "size": 34344960
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_26.db3",
+      "size": 34742272
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_15.db3",
+      "size": 34328576
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_95.db3",
+      "size": 33935360
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_59.db3",
+      "size": 34119680
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_92.db3",
+      "size": 34586624
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_49.db3",
+      "size": 34746368
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_102.db3",
+      "size": 34328576
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_52.db3",
+      "size": 34349056
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_89.db3",
+      "size": 34996224
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_34.db3",
+      "size": 34349056
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_76.db3",
+      "size": 36929536
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_39.db3",
+      "size": 34574336
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_46.db3",
+      "size": 34365440
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_57.db3",
+      "size": 33939456
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_28.db3",
+      "size": 34349056
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_64.db3",
+      "size": 34979840
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_14.db3",
+      "size": 34357248
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_30.db3",
+      "size": 34762752
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_85.db3",
+      "size": 34344960
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_16.db3",
+      "size": 34340864
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_51.db3",
+      "size": 34750464
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_36.db3",
+      "size": 34123776
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_54.db3",
+      "size": 34336768
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_11.db3",
+      "size": 34361344
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_50.db3",
+      "size": 34586624
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_2.db3",
+      "size": 33935360
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_67.db3",
+      "size": 34107392
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_19.db3",
+      "size": 34353152
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_24.db3",
+      "size": 34095104
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_6.db3",
+      "size": 34570240
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_107.db3",
+      "size": 11042816
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_45.db3",
+      "size": 34983936
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_47.db3",
+      "size": 35004416
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_83.db3",
+      "size": 34734080
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_44.db3",
+      "size": 34340864
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_81.db3",
+      "size": 34983936
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_9.db3",
+      "size": 33947648
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_98.db3",
+      "size": 34349056
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_29.db3",
+      "size": 33939456
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_71.db3",
+      "size": 34340864
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_91.db3",
+      "size": 34983936
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_103.db3",
+      "size": 34746368
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_74.db3",
+      "size": 33959936
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_104.db3",
+      "size": 34578432
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_31.db3",
+      "size": 33943552
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_70.db3",
+      "size": 34344960
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_87.db3",
+      "size": 34738176
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_80.db3",
+      "size": 34742272
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_58.db3",
+      "size": 34983936
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_99.db3",
+      "size": 33951744
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_75.db3",
+      "size": 34086912
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_69.db3",
+      "size": 33931264
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_68.db3",
+      "size": 34340864
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_13.db3",
+      "size": 33935360
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_60.db3",
+      "size": 34582528
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_77.db3",
+      "size": 33931264
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_94.db3",
+      "size": 34107392
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_82.db3",
+      "size": 33943552
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_88.db3",
+      "size": 33943552
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_17.db3",
+      "size": 34095104
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_100.db3",
+      "size": 34742272
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_5.db3",
+      "size": 34344960
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_66.db3",
+      "size": 36929536
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_32.db3",
+      "size": 34091008
+    },
+    {
+      "path": "/home/tyzk/drone-migration-work/platform-soak-600s/platform-soak-check/recording-source/flight-records/20261117-033957-86f0e4/inputs-7b3974bac8c640bbb908f6e26d613c62/inputs-7b3974bac8c640bbb908f6e26d613c62_35.db3",
+      "size": 34586624
+    }
+  ],
+  "bag_bytes": 3690205184,
+  "note": "Raw complete archive and bags on computer only; archive SHA covers all raw evidence"
+}

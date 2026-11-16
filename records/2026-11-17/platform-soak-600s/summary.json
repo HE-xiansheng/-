@@ -1,0 +1,148 @@
+{
+  "duration_s": 600.0,
+  "checks_passed": 43,
+  "checks_total": 43,
+  "max_temperature_c": 84.076,
+  "min_MemAvailable_GiB": 9.816150665283203,
+  "cpu_busy_pct_mean": 56.26142270113514,
+  "cpu_busy_pct_range": [
+    54.15713196033562,
+    59.979685119349924
+  ],
+  "cpufreq": {
+    "policy6": {
+      "scaling_cur_freq_khz_range": [
+        600000,
+        2400000
+      ],
+      "scaling_max_freq_khz_range": [
+        2016000,
+        2400000
+      ],
+      "cpuinfo_max_freq_khz_range": [
+        2400000,
+        2400000
+      ],
+      "governors": [
+        "ondemand"
+      ]
+    },
+    "policy4": {
+      "scaling_cur_freq_khz_range": [
+        1200000,
+        2400000
+      ],
+      "scaling_max_freq_khz_range": [
+        2400000,
+        2400000
+      ],
+      "cpuinfo_max_freq_khz_range": [
+        2400000,
+        2400000
+      ],
+      "governors": [
+        "ondemand"
+      ]
+    },
+    "policy0": {
+      "scaling_cur_freq_khz_range": [
+        1800000,
+        1800000
+      ],
+      "scaling_max_freq_khz_range": [
+        1800000,
+        1800000
+      ],
+      "cpuinfo_max_freq_khz_range": [
+        1800000,
+        1800000
+      ],
+      "governors": [
+        "ondemand"
+      ]
+    }
+  },
+  "usb_samples": 119,
+  "usb_all_samples_present_and_active": true,
+  "stream_results": {
+    "color": {
+      "messages": 17979,
+      "hz": 29.963532103215275,
+      "max_gap_s": 0.20730544,
+      "min_age_s": 0.041677535,
+      "max_age_s": 0.51845176
+    },
+    "depth": {
+      "messages": 17981,
+      "hz": 29.96760518318546,
+      "max_gap_s": 0.209584836,
+      "min_age_s": 0.030998511,
+      "max_age_s": 0.521217744
+    },
+    "preview": {
+      "messages": 9949,
+      "hz": 16.58052415637954,
+      "max_gap_s": 0.299618786,
+      "min_age_s": 0.092969129,
+      "max_age_s": 0.395530064
+    },
+    "odom": {
+      "messages": 5686,
+      "hz": 9.475475621767307,
+      "max_gap_s": 0.549486408,
+      "min_age_s": 0.05182079,
+      "max_age_s": 0.296869379
+    },
+    "cloud": {
+      "messages": 5685,
+      "hz": 9.474371533813294,
+      "max_gap_s": 0.549825911,
+      "min_age_s": 0.054741275,
+      "max_age_s": 0.298404434
+    },
+    "vision": {
+      "messages": 5656,
+      "hz": 9.427001361407525,
+      "max_gap_s": 0.571944322,
+      "min_age_s": 0.059854328,
+      "max_age_s": 0.300268921
+    }
+  },
+  "coverage": {
+    "/livox/imu": {
+      "expected": 116415,
+      "recorded": 116415,
+      "missing": 0
+    },
+    "/livox/lidar": {
+      "expected": 5669,
+      "recorded": 5669,
+      "missing": 0
+    },
+    "/factory_fastlio/odometry": {
+      "expected": 5670,
+      "recorded": 5670,
+      "missing": 0
+    },
+    "/factory_fastlio/cloud_world": {
+      "expected": 5670,
+      "recorded": 5670,
+      "missing": 0
+    },
+    "/mavros/vision_pose/pose": {
+      "expected": 5641,
+      "recorded": 5641,
+      "missing": 0
+    }
+  },
+  "mpp_published_counts": {
+    "raw": 19083,
+    "color": 9539
+  },
+  "limitations": [
+    "5s sysfs snapshots do not exclude brief USB transitions; kernel log reviewed separately",
+    "CPU frequency samples do not prove absence or presence of thermal throttling",
+    "physical PX4 read-only query overlapped about20s",
+    "not physical LiDAR/gimbal, flight fusion or long-duration thermal acceptance"
+  ]
+}

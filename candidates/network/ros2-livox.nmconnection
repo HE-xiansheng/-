@@ -1,0 +1,19 @@
+# Candidate only: do not install or activate before hardware and approval checks.
+[connection]
+id=ROS2 Livox candidate
+uuid=23c8f72a-4b88-4a17-a82e-2b3d44685f13
+type=ethernet
+interface-name=enP3p49s0
+autoconnect=false
+
+[ethernet]
+
+[ipv4]
+method=manual
+address1=192.168.1.51/32
+route1=192.168.1.117/32
+never-default=true
+ignore-auto-dns=true
+
+[ipv6]
+method=disabled
