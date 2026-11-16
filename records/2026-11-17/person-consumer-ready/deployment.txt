@@ -1,0 +1,14 @@
+[master 73dd98c] Gate person tracking startup on actual MAVROS consumer and router readiness
+ 4 files changed, 55 insertions(+), 2 deletions(-)
+{
+  "head": "73dd98c163a3913fc123a6e03e7dce48db584aa6",
+  "sha256": {
+    "01_apps/mission_demo/workspace/src/track_test/CMakeLists.txt": "5ce9e5eabf303a68b0e1418a94938d05e4ddbb47576e5287783991a696aec0ec",
+    "01_apps/mission_demo/workspace/src/track_test/package.xml": "0ed6feadbb9357bea6f4203c791df27f2226062ef5b3ab084ca6d263a02ae42c",
+    "01_apps/mission_demo/workspace/src/track_test/include/track_test/Safina_track_test.h": "b09515a7f28b44968a02d34f6bec8aa39ef6dcdcd699b5f5a4ceaea9e5c7639e",
+    "01_apps/mission_demo/workspace/src/track_test/src/Safina_track_test.cpp": "05b96a949302be47bab907997fbc2203cb6be1b441672a309764a08a220be037",
+    "01_apps/mission_demo/workspace/install/track_test/lib/track_test/Safina_track_test": "faa167cb32cae0b182489f16eb9aed3c98f5c62fcfe78fd16195f4390c05aa41",
+    "01_apps/mission_demo/workspace/install/track_test/share/track_test/package.xml": "0ed6feadbb9357bea6f4203c791df27f2226062ef5b3ab084ca6d263a02ae42c"
+  },
+  "status": ""
+}

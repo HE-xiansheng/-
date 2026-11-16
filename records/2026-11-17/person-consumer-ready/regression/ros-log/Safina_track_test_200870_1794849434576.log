@@ -1,0 +1,44 @@
+[INFO] [1794849434.604364828] [track]: track_test ready: control_rate=20.0 Hz require_offboard=1
+[INFO] [1794849434.604515910] [track]: The node never arms and never requests OFFBOARD; the pilot does that.
+[INFO] [1794849434.604533702] [track]: SWA mapping: up<=1211 pwm -> protection, <=1757 -> follow, above -> land
+[INFO] [1794849434.654585108] [track]: Waiting for MAVROS setpoint consumer and router
+[INFO] [1794849436.704633454] [track]: Waiting for MAVROS setpoint consumer and router
+[INFO] [1794849438.804448542] [track]: OFFBOARD entered: holding at (2.00, 3.00, 1.00), SWA=mid(follow)
+[INFO] [1794849439.604337468] [track]: PX4 armed=1
+[INFO] [1794849439.604488550] [track]: SWA mid: tracking enabled (z=1.00)
+[WARN] [1794849439.654511540] [track]: landed_state=1 while tracking: stopping tracking and holding
+[WARN] [1794849439.704448614] [track]: SWA mid but landed_state=1 (on ground/landing): holding
+[WARN] [1794849440.454375384] [track]: SWA mid but z=0.20 < min_tracking_height=0.30: holding, take off first
+[WARN] [1794849441.254691932] [track]: SWA up in OFFBOARD: protection hold (no takeoff, no altitude change)
+[INFO] [1794849442.054437485] [track]: SWA mid: tracking enabled (z=1.00)
+[INFO] [1794849442.104535099] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794849444.154533696] [track]: tracking distance=1.00 m target=2.00 m source=2 valid=1 vx=-0.15
+[INFO] [1794849446.204409793] [track]: tracking distance=2.10 m target=2.00 m source=2 valid=0 vx=0.08
+[WARN] [1794849448.154667615] [track]: No primary target: holding position
+[WARN] [1794849449.204631492] [track]: No primary target: holding position
+[WARN] [1794849450.254548911] [track]: No primary target: holding position
+[WARN] [1794849451.304442496] [track]: No primary target: holding position
+[INFO] [1794849451.654473260] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794849453.055259063] [track]: No primary target: holding position
+[WARN] [1794849454.104410237] [track]: No primary target: holding position
+[INFO] [1794849454.504447074] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794849455.304393792] [track]: Pose stale: braking
+[WARN] [1794849456.354247836] [track]: Pose stale: braking
+[INFO] [1794849456.504645346] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794849457.354331139] [track]: Pose stale: braking
+[WARN] [1794849458.354450566] [track]: Pose stale: braking
+[INFO] [1794849458.554431068] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794849460.454311320] [track]: RC data stale: braking and holding
+[INFO] [1794849460.904771853] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794849462.904387045] [track]: landed_state=2 while tracking: stopping tracking and holding
+[WARN] [1794849462.954445951] [track]: SWA mid but landed_state=2 (on ground/landing): holding
+[INFO] [1794849463.304281092] [track]: SWA mid: tracking enabled (z=1.00)
+[INFO] [1794849463.354396206] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794849465.404271137] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794849466.254253428] [track]: Left OFFBOARD: SWA actions disabled, pilot has control
+[INFO] [1794849468.154257554] [track]: OFFBOARD entered: holding at (2.00, 3.00, 1.00), SWA=down(land/hold)
+[INFO] [1794849468.754326102] [track]: SWA mid: tracking enabled (z=1.00)
+[INFO] [1794849468.804264842] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794849469.254336961] [track]: Landing in place at (2.00, 3.00), z=1.00
+[INFO] [1794849473.054364713] [track]: Left OFFBOARD: SWA actions disabled, pilot has control
+[INFO] [1794849475.019902222] [rclcpp]: signal_handler(SIGINT/SIGTERM)

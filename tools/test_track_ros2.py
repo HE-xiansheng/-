@@ -5,7 +5,7 @@ assert os.environ.get('ROS_DOMAIN_ID')=='87' and os.environ.get('ROS_LOCALHOST_O
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped,TwistStamped
-from mavros_msgs.msg import State,RCIn,ExtendedState,PositionTarget
+from mavros_msgs.msg import State,RCIn,ExtendedState,PositionTarget,Mavlink
 from mavros_msgs.srv import SetMode,CommandBool
 from std_msgs.msg import Float32MultiArray
 from yolo_ultra_test.msg import TrackedTarget
@@ -45,7 +45,7 @@ def phase(label,duration=.8,**changes):
     m=TrackedTarget();m.header.stamp=stamp(values['targetage']);m.header.frame_id='camera_color_optical_frame';m.state=values['targetstate'];m.offset_x=values['x'];m.offset_y=values['y'];m.target_id=1;m.distance_m=values['distance'];m.distance_source=values['source'];m.distance_valid=values['valid'];m.session_active=values['session'];pubs['target'].publish(m)
    if values['legacy']:
     m=Float32MultiArray();m.data=[0.,1.,1.,1.,6.,2.,1.];pubs['legacy'].publish(m)
-  rclpy.spin_once(node,timeout_sec=.005)
+  executor.spin_once(timeout_sec=.005) if 'executor' in globals() else rclpy.spin_once(node,timeout_sec=.005)
  out=[m for t,m in outputs[start:] if t>=t0+max(.1,duration-.3)]
  print('PHASE',label,'tail samples',len(out),flush=True);return out
 
@@ -55,7 +55,14 @@ def position(m):return m.coordinate_frame==PositionTarget.FRAME_LOCAL_NED and no
 def velocity(m):return m.coordinate_frame==PositionTarget.FRAME_BODY_NED and not(m.type_mask&PositionTarget.IGNORE_VX)
 def hold(a):return bool(a) and all(position(m) and abs(m.position.x-2)<1e-6 and abs(m.position.y-3)<1e-6 for m in a)
 def neutral(a):return bool(a) and all(position(m) or (velocity(m) and abs(m.velocity.x)<.01 and abs(m.velocity.z)<.01 and abs(m.yaw_rate)<.01) for m in a)
-phase('discovery',1.)
+phase('recorder only',1.);check('recorder alone cannot unlock commands',not outputs)
+from rclpy.executors import SingleThreadedExecutor
+consumer=Node('setpoint_raw',namespace='/mavros');consumer.declare_parameter('thrust_scaling',1.0)
+consumer.create_subscription(PositionTarget,'/mavros/setpoint_raw/local',lambda m:None,10)
+executor=SingleThreadedExecutor();executor.add_node(node);executor.add_node(consumer)
+phase('consumer without router',1.);check('consumer probe without router cannot unlock commands',not outputs)
+router=consumer.create_publisher(Mavlink,'/uas1/mavlink_sink',10)
+phase('discovery',1.);check('late consumer and router unlock commands',bool(outputs))
 a=phase('POSCTL down',pwm=1900);check('outside OFFBOARD holds current position and ignores SWA down',hold(a) and not mode_calls)
 a=phase('disarmed OFFBOARD',mode='OFFBOARD',pwm=1500);check('disarmed OFFBOARD never tracks',hold(a))
 a=phase('landed guard',armed=True,landed=1);check('on ground blocks following',hold(a))
@@ -99,4 +106,4 @@ check('all outputs finite and bounded',bool(outputs) and all(all(math.isfinite(v
 pairs=[((tb-ta),a,b) for (ta,a),(tb,b) in zip(outputs,outputs[1:]) if velocity(a) and velocity(b) and 0<tb-ta<.12]
 check('consecutive body commands obey acceleration limits',bool(pairs) and all(abs(b.velocity.x-a.velocity.x)<=.6*dt+.04 and abs(b.velocity.z-a.velocity.z)<=.5*dt+.04 and abs(b.yaw_rate-a.yaw_rate)<=1.0*dt+.06 for dt,a,b in pairs))
 print(json.dumps(dict(passed=sum(x['passed'] for x in results),total=len(results),results=results)),flush=True)
-node.destroy_node();rclpy.shutdown();sys.exit(0 if all(x['passed'] for x in results) else 1)
+executor.remove_node(consumer);consumer.destroy_node();node.destroy_node();rclpy.shutdown();sys.exit(0 if all(x['passed'] for x in results) else 1)

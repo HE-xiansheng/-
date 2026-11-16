@@ -1,0 +1,5 @@
+ 01:21:45 up  6:53,  3 users,  load average: 1.44, 1.94, 1.90
+73dd98c Gate person tracking startup on actual MAVROS consumer and router readiness
+active
+faa167cb32cae0b182489f16eb9aed3c98f5c62fcfe78fd16195f4390c05aa41  /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/track_test/lib/track_test/Safina_track_test
+temporary-directories-absent

@@ -1,0 +1,18 @@
+ 01:20:32 up  6:52,  3 users,  load average: 2.40, 2.19, 1.97
+dae36a8f469bdce8b9ce3decc0df47244194f702
+active
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
+enP3p49s0        DOWN           c0:74:2b:f9:c0:d8 <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+wlan0            UP             40:fd:f3:04:1f:c6 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 008 Device 002: ID 2bc5:0804 Orbbec 3D Technology International, Inc Orbbec Gemini 335L
+Bus 008 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 007 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 004 Device 003: ID 1b8c:0036 Altium Limited HKUST UAV NxtPX4
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+total 0
+lrwxrwxrwx 1 root root 13 Nov 16 18:28 usb-Matek_HKUST_UAV_NxtPX4_0-if00 -> ../../ttyACM0

@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('base', type=Path)
     parser.add_argument('--fixture-subdir', default='waypoint-mavros-wire',
-                        choices=['waypoint-mavros-wire','ego-mavros-wire','aruco-mavros-wire'])
+                        choices=['waypoint-mavros-wire','ego-mavros-wire','aruco-mavros-wire','person-mavros-wire'])
     args = parser.parse_args()
     base = args.base
     fixture = json.loads((base/args.fixture_subdir/'result.json').read_text())
@@ -21,6 +21,7 @@ def main():
     source = fixture['commands']
     wire = [p for p in transport['packets'] if p['mavpackettype']=='SET_POSITION_TARGET_LOCAL_NED']
     checks = dict(fixture['checks'])
+    if args.fixture_subdir=='person-mavros-wire':checks['fixture_completed']=fixture['passed']
     checks['runner_clean_exit'] = runner['passed'] and runner['remote_removed']
     checks['px4_loopback_only'] = transport['interfaces']==['lo']
     checks['px4_normal_exit'] = transport['process_returncode']==0
@@ -39,15 +40,16 @@ def main():
         expected = {}
         for source_key, fields in [('position',['x','y','z']),('velocity',['vx','vy','vz']),('acceleration',['afx','afy','afz'])]:
             x,y,z = c[source_key]
-            expected.update(zip(fields,[y,x,-z]))
-        expected['yaw'] = math.atan2(math.sin(math.pi/2-c['yaw']),math.cos(math.pi/2-c['yaw']))
+            assert c['coordinate_frame'] in (1,8,9), c['coordinate_frame']
+            expected.update(zip(fields,[x,-y,-z] if c['coordinate_frame'] in (8,9) else [y,x,-z]))
+        expected['yaw'] = math.atan2(math.sin((-c['yaw'] if c['coordinate_frame'] in (8,9) else math.pi/2-c['yaw'])),math.cos((-c['yaw'] if c['coordinate_frame'] in (8,9) else math.pi/2-c['yaw'])))
         expected['yaw_rate'] = -c['yaw_rate']
         for field,value in expected.items():
             error = abs(p[field]-value)
-            if error>1e-5:
+            if not math.isfinite(value) or not math.isfinite(p[field]) or error>1e-5:
                 errors.append(dict(stamp=p['time_boot_ms'],field=field,expected=value,actual=p[field]))
-    checks['enu_ned_position_velocity_acceleration_yaw_match'] = bool(wire) and not errors
-    checks['masks_and_frames_match'] = bool(wire) and all(p['coordinate_frame']==1 and p['type_mask']==by_stamp[p['time_boot_ms']]['type_mask'] for p in wire if p['time_boot_ms'] in by_stamp)
+    checks['enu_and_body_flu_to_ned_frd_fields_match' if args.fixture_subdir=='person-mavros-wire' else 'enu_ned_position_velocity_acceleration_yaw_match'] = bool(wire) and not errors
+    checks['masks_and_frames_match'] = bool(wire) and all(p['coordinate_frame']==by_stamp[p['time_boot_ms']]['coordinate_frame'] and p['type_mask']==by_stamp[p['time_boot_ms']]['type_mask'] for p in wire if p['time_boot_ms'] in by_stamp)
     checks['target_system_component_one'] = bool(wire) and all(p['target_system']==1 and p['target_component']==1 for p in wire)
     ulog_path = list((base/'px4-runtime/log').rglob('*.ulg'))
     assert len(ulog_path)==1,ulog_path
@@ -67,7 +69,7 @@ def main():
     wire_stamps={p['time_boot_ms'] for p in wire}
     sink = fixture.get('mavros_sink_commands')
     sink_diagnostics = None
-    if args.fixture_subdir=='aruco-mavros-wire' and sink is not None:
+    if args.fixture_subdir in ('aruco-mavros-wire','person-mavros-wire') and sink is not None:
         sink_stamps = {p['time_boot_ms'] for p in sink}
         checks['all_observed_source_stamps_reach_mavros_sink'] = set(by_stamp) <= sink_stamps
         checks['mavros_sink_stamps_match_observed_source'] = sink_stamps <= set(by_stamp)

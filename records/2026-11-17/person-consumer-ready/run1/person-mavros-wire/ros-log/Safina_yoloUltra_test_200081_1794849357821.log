@@ -1,0 +1,31 @@
+[INFO] [1794849357.908547489] [Safina_yoloUltra_test]: yoloUltra_test ready: model=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn image=1280x720
+[INFO] [1794849357.908904195] [Safina_yoloUltra_test]: detection: object_threshold=0.20 nms=0.25 class_id=0
+[INFO] [1794849357.908936278] [Safina_yoloUltra_test]: tracker: new_track_conf=0.50 match_conf=0.20 iou=0.25 center_ratio=0.10 loss_timeout=3.0s reacquire=new_track
+[INFO] [1794849357.908954945] [Safina_yoloUltra_test]: primary gate: center_ratio=0.10 size_tol=0.35 iou=0.15 predict=0.20s reacquire_radius=0.25
+[INFO] [1794849357.908970111] [Safina_yoloUltra_test]: distance: depth_enabled=1 person_height=1.70 m filter_frames=5
+[INFO] [1794849360.723741292] [Safina_yoloUltra_test]: Person tracking session START (OFFBOARD + SWA mid), IDs start at 1
+[INFO] [1794849360.797392744] [Safina_yoloUltra_test]: Primary target acquired: ID=1
+[INFO] [1794849360.797754992] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849361.869223804] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849362.922869323] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849363.951741636] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849364.999183447] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=2.00 m source=depth
+[INFO] [1794849366.101823295] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=2.00 m source=depth
+[INFO] [1794849367.194514545] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=1.00 m source=depth
+[INFO] [1794849369.861186784] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=1.00 m source=depth
+[INFO] [1794849370.873152963] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849372.261033146] [Safina_yoloUltra_test]: Person tracking session END
+[INFO] [1794849373.826898773] [Safina_yoloUltra_test]: Person tracking session START (OFFBOARD + SWA mid), IDs start at 1
+[INFO] [1794849373.827603435] [Safina_yoloUltra_test]: Primary target acquired: ID=1
+[INFO] [1794849373.828041807] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849374.895378148] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849375.973194958] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849377.065339921] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849378.145179926] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849379.210376990] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849379.898351851] [Safina_yoloUltra_test]: Person tracking session END
+[INFO] [1794849381.774626681] [Safina_yoloUltra_test]: Person tracking session START (OFFBOARD + SWA mid), IDs start at 1
+[INFO] [1794849381.848583507] [Safina_yoloUltra_test]: Primary target acquired: ID=1
+[INFO] [1794849381.848920088] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849382.895536321] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849384.231748400] [rclcpp]: signal_handler(SIGINT/SIGTERM)

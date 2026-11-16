@@ -1,0 +1,32 @@
+{"check": "actual PX4 connects disarmed", "passed": true}
+PHASE POSCTL commands 10 targets 4
+{"check": "POSCTL prestream holds and detector session inactive", "passed": true}
+PHASE follow positive error commands 10 targets 4
+{"check": "actual NPU target reaches controller and forward speed", "passed": true}
+{"check": "actual NPU horizontal error produces nonzero body yaw rate", "passed": true}
+{"check": "inferred horizontal error drives bounded nonzero body yaw rate", "passed": true}
+PHASE depth standoff commands 10 targets 3
+{"check": "NPU depth at configured 2m gives zero forward speed", "passed": true}
+PHASE close target commands 10 targets 3
+{"check": "NPU close depth drives capped reverse", "passed": true}
+PHASE blank image commands 10 targets 3
+{"check": "blank image ends movement with target absent", "passed": true}
+PHASE person returns commands 10 targets 3
+{"check": "returning detected person resumes movement", "passed": true}
+PHASE RGB dropout commands 10 targets 10
+{"check": "RGB dropout ends detector session and controller holds", "passed": true}
+PHASE RGB returns commands 10 targets 3
+{"check": "RGB return starts new ID session", "passed": true}
+PHASE SWA protection commands 10 targets 3
+{"check": "protection holds controller while preserving detector IDs", "passed": true}
+PHASE SWA follow commands 10 targets 3
+{"check": "SWA follow resumes without target replacement", "passed": true}
+PHASE mode exit commands 10 targets 3
+{"check": "pilot mode exit holds and resets detector session", "passed": true}
+PHASE disarmed OFFBOARD commands 10 targets 3
+{"check": "disarmed controller ignores valid inferred target", "passed": true}
+{"check": "no mode or arming calls in tracking chain", "passed": true}
+{"check": "all control messages finite", "passed": true}
+{"check": "actual PX4 remains disarmed and nonoffboard", "passed": true}
+{"check": "actual NPU preserves RGB source timestamps", "passed": true}
+{"check": "owned native processes exit normally", "passed": true}

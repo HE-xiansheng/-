@@ -1,0 +1,14 @@
+[
+  {
+    "label": "controller",
+    "returncode": 0,
+    "controller_alive": true,
+    "binary_sha256": "faa167cb32cae0b182489f16eb9aed3c98f5c62fcfe78fd16195f4390c05aa41"
+  },
+  {
+    "label": "npu-chain",
+    "returncode": 0,
+    "controller_alive": true,
+    "binary_sha256": "faa167cb32cae0b182489f16eb9aed3c98f5c62fcfe78fd16195f4390c05aa41"
+  }
+]

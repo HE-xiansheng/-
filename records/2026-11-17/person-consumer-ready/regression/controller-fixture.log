@@ -1,0 +1,81 @@
+PHASE recorder only tail samples 0
+{"check": "recorder alone cannot unlock commands", "passed": true}
+PHASE consumer without router tail samples 0
+{"check": "consumer probe without router cannot unlock commands", "passed": true}
+PHASE discovery tail samples 6
+{"check": "late consumer and router unlock commands", "passed": true}
+PHASE POSCTL down tail samples 6
+{"check": "outside OFFBOARD holds current position and ignores SWA down", "passed": true}
+PHASE disarmed OFFBOARD tail samples 6
+{"check": "disarmed OFFBOARD never tracks", "passed": true}
+PHASE landed guard tail samples 6
+{"check": "on ground blocks following", "passed": true}
+PHASE minimum altitude tail samples 6
+{"check": "below minimum altitude blocks following", "passed": true}
+PHASE protection tail samples 6
+{"check": "protection holds", "passed": true}
+PHASE metric forward tail samples 6
+{"check": "metric positive error yields capped forward FLU velocity", "passed": true}
+{"check": "left offset gives positive yaw rate", "passed": true}
+{"check": "ROS time used for command header", "passed": true}
+PHASE metric reverse tail samples 6
+{"check": "negative error caps reverse speed", "passed": true}
+PHASE deadband tail samples 6
+{"check": "metric deadband zero forward velocity", "passed": true}
+PHASE pixel fallback tail samples 6
+{"check": "invalid metric distance uses pixel heuristic", "passed": true}
+PHASE altitude damping tail samples 6
+{"check": "fresh vertical velocity damps altitude", "passed": true}
+PHASE stale velocity tail samples 6
+{"check": "stale velocity excluded from altitude damping", "passed": true}
+PHASE velocity restored tail samples 4
+PHASE stale target tail samples 6
+{"check": "stale source target brakes then holds", "passed": true}
+PHASE target timeout tail samples 6
+{"check": "legacy topic cannot override native stamped source", "passed": true}
+PHASE nonfinite target tail samples 6
+{"check": "NaN target rejected", "passed": true}
+PHASE inactive session tail samples 6
+{"check": "inactive inference session cannot track", "passed": true}
+PHASE resume tail samples 6
+{"check": "fresh target resumes following", "passed": true}
+PHASE future target tail samples 6
+{"check": "future target rejected", "passed": true}
+PHASE zero stamp target tail samples 6
+{"check": "zero source stamp rejected", "passed": true}
+PHASE resume target tail samples 7
+PHASE changed local frame tail samples 6
+{"check": "local frame change blocks tracking", "passed": true}
+PHASE restore frame tail samples 6
+PHASE stale pose tail samples 6
+{"check": "stale pose brakes to zero without stale position hold", "passed": true}
+PHASE resume pose tail samples 6
+PHASE RC timeout tail samples 6
+{"check": "RC timeout stops following", "passed": true}
+PHASE resume RC tail samples 6
+PHASE missing landed state tail samples 6
+{"check": "landed state timeout blocks tracking", "passed": true}
+PHASE resume landed tail samples 6
+PHASE state timeout tail samples 0
+{"check": "state timeout stops command publication", "passed": true}
+PHASE disconnected tail samples 0
+{"check": "disconnected state stops commands", "passed": true}
+PHASE POSCTL reset tail samples 6
+PHASE OFFBOARD down entry tail samples 6
+{"check": "down at OFFBOARD entry cannot trigger landing", "passed": true}
+PHASE tracking before landing tail samples 6
+PHASE landing tail samples 6
+{"check": "landing locks XY and descends local ENU position", "passed": true}
+{"check": "no premature AUTO.LAND", "passed": true}
+PHASE landing pose unavailable tail samples 5
+{"check": "landing pose dropout pauses descent", "passed": true}
+{"check": "stale pose prevents AUTO.LAND service", "passed": true}
+PHASE low altitude landing tail samples 6
+{"check": "AUTO.LAND reject then retry uses only AUTO.LAND", "passed": true}
+PHASE pilot mode exit tail samples 6
+PHASE remains pilot mode tail samples 6
+{"check": "mode exit cancels landing retries", "passed": true}
+{"check": "no arming service calls", "passed": true}
+{"check": "all outputs finite and bounded", "passed": true}
+{"check": "consecutive body commands obey acceleration limits", "passed": true}
+{"passed": 39, "total": 39, "results": [{"check": "recorder alone cannot unlock commands", "passed": true}, {"check": "consumer probe without router cannot unlock commands", "passed": true}, {"check": "late consumer and router unlock commands", "passed": true}, {"check": "outside OFFBOARD holds current position and ignores SWA down", "passed": true}, {"check": "disarmed OFFBOARD never tracks", "passed": true}, {"check": "on ground blocks following", "passed": true}, {"check": "below minimum altitude blocks following", "passed": true}, {"check": "protection holds", "passed": true}, {"check": "metric positive error yields capped forward FLU velocity", "passed": true}, {"check": "left offset gives positive yaw rate", "passed": true}, {"check": "ROS time used for command header", "passed": true}, {"check": "negative error caps reverse speed", "passed": true}, {"check": "metric deadband zero forward velocity", "passed": true}, {"check": "invalid metric distance uses pixel heuristic", "passed": true}, {"check": "fresh vertical velocity damps altitude", "passed": true}, {"check": "stale velocity excluded from altitude damping", "passed": true}, {"check": "stale source target brakes then holds", "passed": true}, {"check": "legacy topic cannot override native stamped source", "passed": true}, {"check": "NaN target rejected", "passed": true}, {"check": "inactive inference session cannot track", "passed": true}, {"check": "fresh target resumes following", "passed": true}, {"check": "future target rejected", "passed": true}, {"check": "zero source stamp rejected", "passed": true}, {"check": "local frame change blocks tracking", "passed": true}, {"check": "stale pose brakes to zero without stale position hold", "passed": true}, {"check": "RC timeout stops following", "passed": true}, {"check": "landed state timeout blocks tracking", "passed": true}, {"check": "state timeout stops command publication", "passed": true}, {"check": "disconnected state stops commands", "passed": true}, {"check": "down at OFFBOARD entry cannot trigger landing", "passed": true}, {"check": "landing locks XY and descends local ENU position", "passed": true}, {"check": "no premature AUTO.LAND", "passed": true}, {"check": "landing pose dropout pauses descent", "passed": true}, {"check": "stale pose prevents AUTO.LAND service", "passed": true}, {"check": "AUTO.LAND reject then retry uses only AUTO.LAND", "passed": true}, {"check": "mode exit cancels landing retries", "passed": true}, {"check": "no arming service calls", "passed": true}, {"check": "all outputs finite and bounded", "passed": true}, {"check": "consecutive body commands obey acceleration limits", "passed": true}]}

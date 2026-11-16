@@ -2,6 +2,8 @@
 #define SAFINA_TRACK_TEST_H
 
 #include <rclcpp/rclcpp.hpp>
+#include <rcl_interfaces/srv/get_parameters.hpp>
+#include <future>
 #include <mavros_msgs/msg/state.hpp>
 #include <mavros_msgs/srv/set_mode.hpp>
 #include <yolo_ultra_test/msg/tracked_target.hpp>
@@ -49,6 +51,13 @@ private:
     rclcpp::Subscription<mavros_msgs::msg::ExtendedState>::SharedPtr sub_extended_state_;
     rclcpp::Publisher<mavros_msgs::msg::PositionTarget>::SharedPtr pub_setraw_;
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Client<rcl_interfaces::srv::GetParameters>::SharedPtr consumer_client_;
+    std::shared_future<rcl_interfaces::srv::GetParameters::Response::SharedPtr> consumer_probe_;
+    int64_t consumer_request_id_=0;
+    bool consumer_ready_=false;
+    double consumer_probe_at_=-1,consumer_check_at_=-1;
+    std::string consumer_node_="/mavros/setpoint_raw",consumer_transport_="/uas1/mavlink_sink";
+    void updateConsumer(double now);
 
     // Must be declared after node_ (constructed with node_).
     rclcpp::Subscription<mavros_msgs::msg::State>::SharedPtr sub_state_;

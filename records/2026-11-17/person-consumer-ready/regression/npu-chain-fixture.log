@@ -1,0 +1,27 @@
+PHASE POSCTL commands 10 targets 4
+{"check": "POSCTL prestream holds and detector session inactive", "passed": true}
+PHASE follow positive error commands 10 targets 4
+{"check": "actual NPU target reaches controller and forward speed", "passed": true}
+PHASE depth standoff commands 10 targets 3
+{"check": "NPU depth at configured 2m gives zero forward speed", "passed": true}
+PHASE close target commands 10 targets 3
+{"check": "NPU close depth drives capped reverse", "passed": true}
+PHASE blank image commands 10 targets 3
+{"check": "blank image ends movement with target absent", "passed": true}
+PHASE person returns commands 10 targets 3
+{"check": "returning detected person resumes movement", "passed": true}
+PHASE RGB dropout commands 10 targets 10
+{"check": "RGB dropout ends detector session and controller holds", "passed": true}
+PHASE RGB returns commands 10 targets 3
+{"check": "RGB return starts new ID session", "passed": true}
+PHASE SWA protection commands 11 targets 3
+{"check": "protection holds controller while preserving detector IDs", "passed": true}
+PHASE SWA follow commands 10 targets 3
+{"check": "SWA follow resumes without target replacement", "passed": true}
+PHASE mode exit commands 10 targets 3
+{"check": "pilot mode exit holds and resets detector session", "passed": true}
+PHASE disarmed OFFBOARD commands 10 targets 3
+{"check": "disarmed controller ignores valid inferred target", "passed": true}
+{"check": "no mode or arming calls in tracking chain", "passed": true}
+{"check": "all control messages finite", "passed": true}
+{"passed": 14, "total": 14, "results": [{"check": "POSCTL prestream holds and detector session inactive", "passed": true}, {"check": "actual NPU target reaches controller and forward speed", "passed": true}, {"check": "NPU depth at configured 2m gives zero forward speed", "passed": true}, {"check": "NPU close depth drives capped reverse", "passed": true}, {"check": "blank image ends movement with target absent", "passed": true}, {"check": "returning detected person resumes movement", "passed": true}, {"check": "RGB dropout ends detector session and controller holds", "passed": true}, {"check": "RGB return starts new ID session", "passed": true}, {"check": "protection holds controller while preserving detector IDs", "passed": true}, {"check": "SWA follow resumes without target replacement", "passed": true}, {"check": "pilot mode exit holds and resets detector session", "passed": true}, {"check": "disarmed controller ignores valid inferred target", "passed": true}, {"check": "no mode or arming calls in tracking chain", "passed": true}, {"check": "all control messages finite", "passed": true}]}

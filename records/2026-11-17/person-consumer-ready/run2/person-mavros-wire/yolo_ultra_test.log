@@ -1,0 +1,46 @@
+[INFO] [1794849577.926133537] [Safina_yoloUltra_test]: yoloUltra_test ready: model=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn image=1280x720
+[INFO] [1794849577.926405660] [Safina_yoloUltra_test]: detection: object_threshold=0.20 nms=0.25 class_id=0
+[INFO] [1794849577.926436285] [Safina_yoloUltra_test]: tracker: new_track_conf=0.50 match_conf=0.20 iou=0.25 center_ratio=0.10 loss_timeout=3.0s reacquire=new_track
+[INFO] [1794849577.926453202] [Safina_yoloUltra_test]: primary gate: center_ratio=0.10 size_tol=0.35 iou=0.15 predict=0.20s reacquire_radius=0.25
+[INFO] [1794849577.926467201] [Safina_yoloUltra_test]: distance: depth_enabled=1 person_height=1.70 m filter_frames=5
+[INFO] [1794849580.749801906] [Safina_yoloUltra_test]: Person tracking session START (OFFBOARD + SWA mid), IDs start at 1
+[INFO] [1794849580.822156035] [Safina_yoloUltra_test]: Primary target acquired: ID=1
+[INFO] [1794849580.822502241] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849581.884661576] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[NN_INFO] rknn_init success!
+[NN_INFO] RKNN API version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+[NN_INFO] RKNN Driver version: 0.9.6
+[NN_INFO] model input num: 1, output num: 6
+[NN_INFO] input tensors:
+[NN_INFO]   index=0, name=data, n_dims=4, dims=[1, 640, 640, 3], n_elems=1228800, size=1228800, fmt=NHWC, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003922
+[NN_INFO] output tensors:
+[NN_INFO]   index=0, name=reg1, n_dims=4, dims=[1, 1, 4, 6400], n_elems=25600, size=25600, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.048968
+[NN_INFO]   index=1, name=cls1, n_dims=4, dims=[1, 80, 80, 80], n_elems=512000, size=512000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=118, scale=0.134088
+[NN_INFO]   index=2, name=reg2, n_dims=4, dims=[1, 1, 4, 1600], n_elems=6400, size=6400, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.053783
+[NN_INFO]   index=3, name=cls2, n_dims=4, dims=[1, 80, 40, 40], n_elems=128000, size=128000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=114, scale=0.188033
+[NN_INFO]   index=4, name=reg3, n_dims=4, dims=[1, 1, 4, 400], n_elems=1600, size=1600, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.056636
+[NN_INFO]   index=5, name=cls3, n_dims=4, dims=[1, 80, 20, 20], n_elems=32000, size=32000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=103, scale=0.169929
+=== yoloUltra Meshgrid  Generate success! 
+[INFO] [1794849582.956873425] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849583.971326003] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849585.030734815] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=2.00 m source=depth
+[INFO] [1794849586.137827925] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=2.00 m source=depth
+[INFO] [1794849587.207384376] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=1.00 m source=depth
+[INFO] [1794849589.888311600] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=1.00 m source=depth
+[INFO] [1794849590.912577820] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849592.294084921] [Safina_yoloUltra_test]: Person tracking session END
+[INFO] [1794849593.828213350] [Safina_yoloUltra_test]: Person tracking session START (OFFBOARD + SWA mid), IDs start at 1
+[INFO] [1794849593.828500931] [Safina_yoloUltra_test]: Primary target acquired: ID=1
+[INFO] [1794849593.828641513] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849594.893910827] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849595.984272801] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849597.079165870] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849598.163839133] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849599.208743211] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849599.920630200] [Safina_yoloUltra_test]: Person tracking session END
+[INFO] [1794849601.922532502] [Safina_yoloUltra_test]: Person tracking session START (OFFBOARD + SWA mid), IDs start at 1
+[INFO] [1794849602.016079276] [Safina_yoloUltra_test]: Primary target acquired: ID=1
+[INFO] [1794849602.016449982] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849603.068617385] [Safina_yoloUltra_test]: primary ID=1 x_off=1.00 y_off=-0.83 distance=3.00 m source=depth
+[INFO] [1794849604.206142786] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[NN_INFO] rknn context destroyed!

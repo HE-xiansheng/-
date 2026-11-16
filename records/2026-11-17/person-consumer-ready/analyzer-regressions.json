@@ -1,0 +1,23 @@
+[
+  {
+    "baseline": "waypoint-mavros-wire-run1",
+    "passed": true,
+    "checks": 34,
+    "source_count": 198,
+    "wire_count": 198
+  },
+  {
+    "baseline": "ego-consumer-router-run4",
+    "passed": true,
+    "checks": 43,
+    "source_count": 231,
+    "wire_count": 231
+  },
+  {
+    "baseline": "aruco-consumer-ready-run3",
+    "passed": true,
+    "checks": 44,
+    "source_count": 871,
+    "wire_count": 871
+  }
+]

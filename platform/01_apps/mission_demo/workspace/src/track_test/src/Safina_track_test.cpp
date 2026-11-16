@@ -9,6 +9,12 @@ Safina_Track::Safina_Track(rclcpp::Node::SharedPtr node_track)
     loadParams();
     initializeSubscribers();
     initializePublishers();
+    consumer_node_=node_->declare_parameter<std::string>("command_consumer_node","/mavros/setpoint_raw");
+    consumer_transport_=node_->declare_parameter<std::string>("command_transport_topic","/uas1/mavlink_sink");
+    for(const auto& name : {consumer_node_,consumer_transport_})
+        if(name.empty()||name.front()!='/'||name.back()=='/')
+            throw std::runtime_error("Command consumer and transport must be absolute ROS names");
+    consumer_client_=node_->create_client<rcl_interfaces::srv::GetParameters>(consumer_node_+"/get_parameters");
 
     timer_ = node_->create_wall_timer(std::chrono::duration<double>(1.0 / control_rate_hz_),
                                std::bind(&Safina_Track::controlTimer, this));
@@ -296,11 +302,48 @@ bool Safina_Track::landedStateBlocksTracking() const
     return landed_state_ != mavros_msgs::msg::ExtendedState::LANDED_STATE_IN_AIR;
 }
 
+void Safina_Track::updateConsumer(double now) {
+    if(consumer_ready_)return;
+    if(consumer_probe_.valid()) {
+        if(consumer_probe_.wait_for(std::chrono::seconds(0))==std::future_status::ready) {
+            try {
+                const auto reply=consumer_probe_.get();
+                consumer_ready_=reply&&reply->values.size()==1&&reply->values[0].type==3&&
+                    !node_->get_publishers_info_by_topic(consumer_transport_).empty();
+            } catch(const std::exception&) { consumer_ready_=false; }
+            consumer_probe_={};
+        } else if(now-consumer_probe_at_>1.) {
+            consumer_client_->remove_pending_request(consumer_request_id_);
+            consumer_probe_={};
+        }
+    }
+    if(consumer_ready_||consumer_probe_.valid()||now-consumer_check_at_<.1)return;
+    consumer_check_at_=now;
+    if(pub_setraw_->get_subscription_count()==0||!consumer_client_->service_is_ready())return;
+    for(const auto& endpoint : node_->get_subscriptions_info_by_topic(pub_setraw_->get_topic_name())) {
+        const auto ns=endpoint.node_namespace();
+        const auto name=(ns=="/"?ns:ns+"/")+endpoint.node_name();
+        if(name==consumer_node_&&endpoint.topic_type()=="mavros_msgs/msg/PositionTarget") {
+            auto request=std::make_shared<rcl_interfaces::srv::GetParameters::Request>();
+            request->names={"thrust_scaling"};
+            auto pending=consumer_client_->async_send_request(request);
+            consumer_request_id_=pending.request_id;consumer_probe_=pending.share();consumer_probe_at_=now;
+            return;
+        }
+    }
+}
+
 void Safina_Track::controlTimer()
 {
     const auto tick=steadyNow();
     double dt = last_tick_.nanoseconds()>0 ? (tick-last_tick_).seconds() : 1.0/control_rate_hz_;
     last_tick_=tick;
+    updateConsumer(tick.seconds());
+    if (!consumer_ready_) {
+        resetCmd();
+        RCLCPP_INFO_THROTTLE(node_->get_logger(), *node_->get_clock(), 2000, "Waiting for MAVROS setpoint consumer and router");
+        return;
+    }
     if (mode_pending_ && (tick-mode_request_at_).seconds()>2.0) {
         mode_client_->remove_pending_request(mode_request_id_); mode_pending_=false;
     }

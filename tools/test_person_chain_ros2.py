@@ -7,10 +7,12 @@ from rclpy.node import Node
 from cv_bridge import CvBridge
 from sensor_msgs.msg import Image
 from geometry_msgs.msg import PoseStamped,TwistStamped
-from mavros_msgs.msg import State,RCIn,ExtendedState,PositionTarget
+from mavros_msgs.msg import State,RCIn,ExtendedState,PositionTarget,Mavlink
 from mavros_msgs.srv import SetMode,CommandBool
 from yolo_ultra_test.msg import TrackedTarget
-rclpy.init();node=Node('person_chain_fixture');bridge=CvBridge();commands=[];targets=[];calls=[];results=[]
+rclpy.init();node=Node('setpoint_raw',namespace='/mavros');bridge=CvBridge();commands=[];targets=[];calls=[];results=[]
+node.declare_parameter('thrust_scaling',1.0)
+router=node.create_publisher(Mavlink,'/uas1/mavlink_sink',10)
 node.create_subscription(PositionTarget,'/mavros/setpoint_raw/local',lambda m:commands.append((time.monotonic(),m)),100)
 node.create_subscription(TrackedTarget,'/Safina_track_stamped',lambda m:targets.append((time.monotonic(),m)),20)
 def service(req,res):calls.append(type(req).__name__);return res
