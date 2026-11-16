@@ -1,0 +1,22 @@
+mission:
+  auto_land: false
+  frame: x_right_y_forward
+  manual_airborne: true
+  name: rc_cancel
+  rc:
+    channel: 5
+    max: 1913
+    min: 1075
+    off_hold_seconds: 0.3
+    offboard_slot: 6
+    on_hold_seconds: 0.2
+    trim: 1494
+  return_to_start: false
+  state_timeout: 0.8
+  waypoints:
+  - hold: 0.1
+    name: right
+    x: 0.8
+    y: 0.0
+    yaw: hold
+    z: 1.0

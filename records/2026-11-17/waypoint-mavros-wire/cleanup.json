@@ -1,0 +1,11 @@
+{
+  "identity_and_checks": [
+    "c58b4d5df083880c1bbf677039915e9058866604",
+    "active",
+    "test-directory-removed",
+    "fdc584092f4caabe03ff88024cb5bad8b68618470dda71b0feb3e0bd507730e6  /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/waypoint_mission/lib/waypoint_mission/waypoint_mission",
+    "9961f81c8c28b1a3f8c599a4c30e4bb184a240998b94960557a401710d7179b3  /home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_mission.cpp"
+  ],
+  "matching_processes": [],
+  "stderr": ""
+}

@@ -76,3 +76,5 @@
 2026-11-16：旧机实物H264云台经只读临时SSH隧道送入.224真实relay/MPP，再到电脑GStreamer；实际1920x1080声明30Hz，电脑237帧约29.55Hz。最终20项格式/源戳/内容变化/退出检查通过，增加默认关闭的帧发布DEBUG日志，逐条证明收到的源戳与实际发布一致；独立C++观察仍漏收88/935灰度、3/453彩色，保留吞吐问题未解决。Python配对门槛失败、观察偏差、端口重复和引号错误均留证，不以中间通过替代最终结论。机载c58b4d5，临时目录和隧道清理，.235原relay/PID保持。已询问雷达/云台直接接入时机，物理网卡/定位融合/任务与完整Qt视频仍待验收；记录见records/2026-11-16/gimbal-live。
 
 2026-11-16：断电续接只读确认.224在线、c58b4d5干净、NoMachine active，GitHub可访问；已保存的实际Qt VideoPanel/VideoController实物云台验证14项通过，覆盖按钮开关、QML图像加载/变化、offscreen窗口帧、主动断流失效和恢复自动重连。机载临时relay退出0且目录已清理，.235原relay仍PID1419。本阶段仅新增测试；offscreen不代替可见桌面/鼠标，旧机视频隧道不代替新机物理接线，也不解决MPP订阅漏收。雷达网口仍DOWN。详见records/2026-11-16/gimbal-qt-live。
+
+2026-11-17：航点原生控制器→真实MAVROS→隔离官方PX4消息链路34项通过，198条源/线包毫秒戳、ENU/NED及mask匹配；PX4 ULog65条offboard_control_mode证实位置/速度解析。RC取消与位姿过期均ABORT停发。合成状态/RC/里程计及模式服务stub，不是闭环飞行；真实PX4始终未解锁且非OFFBOARD。启动RTT/参数重试、结束后mission computer lost保留解释。机载临时目录清理，c58b4d5干净、NoMachine正常；记录仅电脑/GitHub。详见records/2026-11-17/waypoint-mavros-wire。

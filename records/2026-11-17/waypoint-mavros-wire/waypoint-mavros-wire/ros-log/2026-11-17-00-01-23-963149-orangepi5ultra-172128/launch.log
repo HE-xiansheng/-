@@ -1,0 +1,6 @@
+1794844883.9644332 [INFO] [launch]: All log files can be found below /tmp/waypoint-mavros-wire/ros-log/2026-11-17-00-01-23-963149-orangepi5ultra-172128
+1794844883.9646192 [INFO] [launch]: Default logging verbosity is set to INFO
+1794844884.1114578 [INFO] [mavros_node-1]: process started with pid [172129]
+1794844901.5105200 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794844901.5123165 [INFO] [mavros_node-1]: sending signal 'SIGINT' to process[mavros_node-1]
+1794844903.4947705 [INFO] [mavros_node-1]: process has finished cleanly [pid 172129]

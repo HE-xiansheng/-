@@ -1,0 +1,12 @@
+[WARN] [1794844888.364949543] [waypoint_mission]: waypoint_mission ready. IDLE: no setpoints, no arm, no mode request.
+[WARN] [1794844888.365172958] [waypoint_mission]: RC gate: leave OFFBOARD slot in POSCTL, then switch to OFFBOARD slot 6 to start.
+[WARN] [1794844888.698465607] [waypoint_mission]: RC gate READY in POSCTL: switch to OFFBOARD slot 6 to start.
+[WARN] [1794844889.468231023] [waypoint_mission]: local z at start is 1.00 m; waypoint z/takeoff_z are absolute local z, not AGL.
+[INFO] [1794844889.469030185] [waypoint_mission]: [PRESTREAM] mission start: home=(0.000, 0.000, 1.000) yaw=0.0 deg
+[WARN] [1794844889.469109517] [waypoint_mission]: MISSION START gen=1 home=(0.000,0.000,1.000) waypoints=1
+[INFO] [1794844890.698894247] [waypoint_mission]: [WAIT_OFFBOARD] prestream done; requesting OFFBOARD
+[INFO] [1794844890.731884143] [waypoint_mission]: [WAIT_OFFBOARD] manual airborne OFFBOARD confirmed; start first waypoint without arming/takeoff
+[INFO] [1794844890.731962601] [waypoint_mission]: [GOTO] GOTO wp0 right (0.00,-0.80,1.00)
+[INFO] [1794844892.798414450] [waypoint_mission]: [ABORT] ABORT: rc_switch_out_or_timeout
+[ERROR] [1794844892.798496408] [waypoint_mission]: MISSION ABORT: rc_switch_out_or_timeout. Setpoints stopped; no mode is re-requested. PX4 will use its offboard-loss failsafe; pilot keeps control.
+[INFO] [1794844894.772624522] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -1,0 +1,8 @@
+{
+  "tools/test_waypoint_mavros_wire_ros2.py": "9db7595991c03ebc4c4d980ae588af15a181cdbca1b1f8490b12a6d47d03b90b",
+  "tools/run_waypoint_mavros_wire.py": "d9112708dba135c6abbb11c862b79242416ee8bb956505da49565cdbd8fac6d8",
+  "tools/analyze_waypoint_mavros_wire.py": "cc4007156b4ba9f4401a29752eac102e559d02a0e2278763c3085c35781d15f6",
+  "tools/sitl_stdio_transport.py": "4d852fe4b49e7dc669e12c755e661253ac6f09eee85e6df449ee07b71d5b873d",
+  "platform/02_drivers/sensors/launch/mavros_platform.launch.py": "ab6d9dd464a51041623612c151d757b99b5a6dbfa14e1be851691028fb08c826",
+  "platform/01_apps/mission_demo/workspace/src/waypoint_mission/src/waypoint_mission.cpp": "9961f81c8c28b1a3f8c599a4c30e4bb184a240998b94960557a401710d7179b3"
+}
