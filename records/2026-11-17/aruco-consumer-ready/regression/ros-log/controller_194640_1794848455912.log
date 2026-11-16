@@ -1,0 +1,16 @@
+[WARN] [1794848455.939860422] [Safina_land_test]: ArUco landing v3: WAITING. No arming or mode requests before trigger. Trigger=service auto_takeoff=true. Camera startup-down=false. PX4 mode trigger: wait for READY in POSCTL, then manually switch OFFBOARD. Standby streams zero velocity; PWM mapping is never interpreted here. Diagnostics: /tmp/land-consumer-regression/modes/service_auto_takeoff/landing_20261117_010055_194640.csv
+[WARN] [1794848456.283046752] [Safina_land_test]: Landing task enabled by service; generation=1 auto_takeoff=1
+[WARN] [1794848456.306874879] [Safina_land_test]: Landing phase IDLE -> PRESTREAM reason=explicit_enable
+[INFO] [1794848457.542969187] [Safina_land_test]: Landing async request=offboard accepted=0 generation=1 current=1
+[INFO] [1794848458.542972548] [Safina_land_test]: Landing async request=offboard accepted=1 generation=1 current=1
+[INFO] [1794848459.544048444] [Safina_land_test]: Landing async request=arm accepted=0 generation=1 current=1
+[INFO] [1794848460.578077194] [Safina_land_test]: Landing async request=arm accepted=1 generation=1 current=1
+[WARN] [1794848460.606825995] [Safina_land_test]: Landing phase PRESTREAM -> TAKEOFF reason=takeover_confirmed
+[INFO] [1794848460.606953452] [Safina_land_test]: Takeoff readiness: XY 0.000/0.150 m, Z 0.250/0.080 m, Vxy 0.000/0.100 m/s, Vz 0.000/0.100 m/s, yaw-rate 0.000/0.100 rad/s, hold 0.00/0.20 s, failed=2
+[WARN] [1794848462.573367866] [Safina_land_test]: Landing phase TAKEOFF -> ACQUIRE reason=takeoff_stable_search_started
+[WARN] [1794848463.273500388] [Safina_land_test]: Landing phase ACQUIRE -> LAND_HANDOFF reason=initial_target_timeout_land_here
+[INFO] [1794848463.343653319] [Safina_land_test]: Landing async request=land accepted=0 generation=1 current=1
+[INFO] [1794848464.342661020] [Safina_land_test]: Landing async request=land accepted=1 generation=1 current=1
+[WARN] [1794848464.373290766] [Safina_land_test]: Landing phase LAND_HANDOFF -> AUTO_LAND reason=auto_land_confirmed
+[WARN] [1794848464.406789617] [Safina_land_test]: Landing phase AUTO_LAND -> COMPLETE reason=landed_and_disarmed
+[INFO] [1794848464.408952311] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -6,12 +6,12 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile,DurabilityPolicy
 from geometry_msgs.msg import PoseStamped,TwistStamped
-from mavros_msgs.msg import State,ExtendedState,PositionTarget
+from mavros_msgs.msg import State,ExtendedState,PositionTarget,Mavlink
 from mavros_msgs.srv import SetMode,CommandBool
 from std_srvs.srv import SetBool
 from std_msgs.msg import String
 from nav_msgs.msg import Path
-rclpy.init();node=Node('land_fake_px4');rows=[];headers=[];commands=[];accepted=[];paths=[];calls=[];arms=[];checks=[]
+rclpy.init();node=Node('setpoint_raw',namespace='/mavros');node.declare_parameter('thrust_scaling',1.0);transport=node.create_publisher(Mavlink,'/uas1/mavlink_sink',10);rows=[];headers=[];commands=[];accepted=[];paths=[];calls=[];arms=[];checks=[]
 retained=QoSProfile(depth=1,durability=DurabilityPolicy.TRANSIENT_LOCAL)
 node.create_subscription(String,'/aruco_landing/status_header',lambda m:headers.append(m.data),retained)
 def status(m):

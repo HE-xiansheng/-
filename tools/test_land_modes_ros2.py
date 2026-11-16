@@ -6,12 +6,12 @@ assert os.environ.get('ROS_DOMAIN_ID')=='90' and os.environ.get('ROS_LOCALHOST_O
 import rclpy
 from rclpy.qos import QoSProfile,DurabilityPolicy
 from geometry_msgs.msg import PoseStamped,TwistStamped
-from mavros_msgs.msg import State,ExtendedState,PositionTarget
+from mavros_msgs.msg import State,ExtendedState,PositionTarget,Mavlink
 from mavros_msgs.srv import SetMode,CommandBool
 from std_srvs.srv import SetBool
 from std_msgs.msg import String
 
-rclpy.init();node=rclpy.create_node('landing_modes_mock_px4');out=Path(os.environ['LAND_MODES_OUTPUT']);out.mkdir(exist_ok=True)
+rclpy.init();node=rclpy.create_node('setpoint_raw',namespace='/mavros');node.declare_parameter('thrust_scaling',1.0);transport=node.create_publisher(Mavlink,'/uas1/mavlink_sink',10);out=Path(os.environ['LAND_MODES_OUTPUT']);out.mkdir(exist_ok=True)
 checks=[];case=None;schema=[];rows=[];commands=[];calls=[];arms=[]
 q=QoSProfile(depth=1,durability=DurabilityPolicy.TRANSIENT_LOCAL)
 node.create_subscription(String,'/aruco_landing/status_header',lambda m:schema.append(m.data),q)
@@ -62,7 +62,7 @@ def start(name,trigger,auto,servers=True,extra=None):
     case=name;rows.clear();schema.clear();commands.clear();calls.clear();arms.clear()
     value.clear();value.update(mode='POSCTL',armed=not auto,landed=1 if auto else 2,z=0. if auto else 1.5,integrate=False)
     if servers:services.extend([node.create_service(SetMode,'/mavros/set_mode',mode),node.create_service(CommandBool,'/mavros/cmd/arming',arm)])
-    cmd=['ros2','run','land_test','Safina_land_test','--ros-args','--params-file',os.environ['LAND_CONFIG']]
+    cmd=([os.environ['LAND_EXECUTABLE']] if os.environ.get('LAND_EXECUTABLE') else ['ros2','run','land_test','Safina_land_test'])+['--ros-args','--params-file',os.environ['LAND_CONFIG']]
     params={'start_trigger':trigger,'auto_takeoff':auto,'command_gimbal_down':False,'gimbal_down_on_startup':False,'diagnostic_directory':str(out/name),'diagnostic_hz':20.,'takeOff_altitude':.25,'hover_seconds':.2,'initial_target_timeout':.7}
     params.update(extra or {})
     for k,v in params.items():cmd+=['-p',k+':='+str(v).lower() if isinstance(v,bool) else k+':='+str(v)]

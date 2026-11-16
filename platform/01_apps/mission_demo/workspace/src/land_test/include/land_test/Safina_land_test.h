@@ -12,6 +12,8 @@
 #include <mavros_msgs/srv/set_mode.hpp>
 #include <mavros_msgs/srv/command_bool.hpp>
 #include <std_srvs/srv/set_bool.hpp>
+#include <rcl_interfaces/srv/get_parameters.hpp>
+#include <future>
 #include <std_msgs/msg/string.hpp>
 #include <nav_msgs/msg/path.hpp>
 #include <tf2/LinearMath/Quaternion.h>
@@ -41,6 +43,13 @@ private:
     rclcpp::Client<mavros_msgs::srv::SetMode>::SharedPtr mode_client_;
     rclcpp::Client<mavros_msgs::srv::CommandBool>::SharedPtr arm_client_;
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Client<rcl_interfaces::srv::GetParameters>::SharedPtr consumer_client_;
+    std::shared_future<rcl_interfaces::srv::GetParameters::Response::SharedPtr> consumer_probe_;
+    int64_t consumer_request_id_=0;
+    bool consumer_ready_=false;
+    double consumer_probe_at_=-1,consumer_check_at_=-1;
+    std::string consumer_node_="/mavros/setpoint_raw",consumer_transport_="/uas1/mavlink_sink";
+    void updateConsumer(double now);
     land_task::Config config_;
     std::unique_ptr<land_task::Task> task_;
     land_task::ModeStartGate mode_gate_;

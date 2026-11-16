@@ -19,8 +19,17 @@ with tarfile.open(base/'inputs.tar','w') as archive:
         ('tools/test_aruco_mavros_wire_ros2.py','test_aruco_mavros_wire_ros2.py'),
         ('platform/02_drivers/sensors/launch/mavros_platform.launch.py','mavros_platform.launch.py')]:
         archive.add(repo/src,arcname=dst)
+    if os.environ.get('ARUCO_WIRE_CANDIDATE')=='1':
+        archive.add(repo/'platform/01_apps/mission_demo/workspace/src/land_test',arcname='candidate-src',filter=lambda item: None if '__pycache__' in item.name else item)
 with (base/'inputs.tar').open('rb') as source:
     subprocess.run(ssh+['mkdir '+remote+' && tar -xf - -C '+remote],stdin=source,check=True)
+if os.environ.get('ARUCO_WIRE_CANDIDATE')=='1':
+    with (base/'candidate-build.log').open('wb') as output:
+        subprocess.run(ssh+['bash -c "source /home/orangepi/drone_platform/env.sh; '
+            'cmake -S '+remote+'/candidate-src -B '+remote+'/candidate-build -DCMAKE_INSTALL_PREFIX='+remote+'/candidate-install -DBUILD_TESTING=ON && '
+            'cmake --build '+remote+'/candidate-build -j2 && '
+            'ctest --test-dir '+remote+'/candidate-build --output-on-failure && '
+            'cmake --install '+remote+'/candidate-build"'],stdout=output,stderr=subprocess.STDOUT,check=True)
 ab_r,ab_w=os.pipe();ba_r,ba_w=os.pipe()
 processes=[];logs=[];success=False
 try:

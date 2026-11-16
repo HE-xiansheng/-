@@ -1,0 +1,39 @@
+{"case": "service_airborne", "check": "native node starts with fresh diagnostic schema", "passed": true}
+{"case": "service_airborne", "check": "service workflow produces no standby commands", "passed": true}
+{"case": "service_airborne", "check": "enable service responds", "passed": true}
+{"case": "service_airborne", "check": "airborne-only task refuses disarmed ground activation", "passed": true}
+{"case": "service_airborne", "check": "enable service responds", "passed": true}
+{"case": "service_airborne", "check": "airborne service accepts fresh inputs", "passed": true}
+{"case": "service_airborne", "check": "service takeover reaches ACQUIRE after rejected mode request", "passed": true}
+{"case": "service_airborne", "check": "airborne service never arms", "passed": true}
+{"case": "service_airborne", "check": "mode rejection retries then accepts OFFBOARD", "passed": true}
+{"case": "service_airborne", "check": "enable service responds", "passed": true}
+{"case": "service_airborne", "check": "explicit disable accepted", "passed": true}
+{"case": "service_airborne", "check": "disabled task stops commands and never reclaims modes", "passed": true}
+{"case": "service_airborne", "check": "native controller normal exit", "passed": true}
+{"case": "service_auto_takeoff", "check": "native node starts with fresh diagnostic schema", "passed": true}
+{"case": "service_auto_takeoff", "check": "auto takeoff remains idle before enable", "passed": true}
+{"case": "service_auto_takeoff", "check": "enable service responds", "passed": true}
+{"case": "service_auto_takeoff", "check": "auto takeoff enable accepts ground state", "passed": true}
+{"case": "service_auto_takeoff", "check": "service auto takeoff reaches TAKEOFF", "passed": true}
+{"case": "service_auto_takeoff", "check": "arming rejection retries only after OFFBOARD", "passed": true}
+{"case": "service_auto_takeoff", "check": "simulated ascent reaches acquisition then no-target AUTO.LAND", "passed": true}
+{"case": "service_auto_takeoff", "check": "positive ENU ascent is limited", "passed": true}
+{"case": "service_auto_takeoff", "check": "no-target landing handoff rejected then retried", "passed": true}
+{"case": "service_auto_takeoff", "check": "auto land completes on ground and disarm", "passed": true}
+{"case": "service_auto_takeoff", "check": "native controller normal exit", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "native node starts with fresh diagnostic schema", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "ground POSCTL only streams zero standby with no mode or arm requests", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "enable service responds", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "PX4 mode workflow refuses enable service", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "manual OFFBOARD edge triggers ground auto takeoff and arm retry", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "pilot POSCTL cancels without reclaim or rearm", "passed": true}
+{"case": "px4_mode_auto_takeoff", "check": "native controller normal exit", "passed": true}
+{"case": "missing_mode_server", "check": "native node starts with fresh diagnostic schema", "passed": true}
+{"case": "missing_mode_server", "check": "enable service responds", "passed": true}
+{"case": "missing_mode_server", "check": "enable works before mode server appears", "passed": true}
+{"case": "missing_mode_server", "check": "missing mode server reaches bounded cancellation", "passed": true}
+{"case": "missing_mode_server", "check": "no arming or hidden mode writes on unavailable server", "passed": true}
+{"case": "missing_mode_server", "check": "enable service responds", "passed": true}
+{"case": "missing_mode_server", "check": "cancellation remains responsive", "passed": true}
+{"case": "missing_mode_server", "check": "native controller normal exit", "passed": true}

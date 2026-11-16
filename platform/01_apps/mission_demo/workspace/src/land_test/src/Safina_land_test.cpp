@@ -50,6 +50,12 @@ bool Safina_land::sourceFresh(const builtin_interfaces::msg::Time &stamp,double 
 Safina_land::Safina_land(rclcpp::Node::SharedPtr node) : node_(node) {
     loadParameters();task_.reset(new land_task::Task(config_));openDiagnostics();
     command_pub_=node_->create_publisher<mavros_msgs::msg::PositionTarget>("/mavros/setpoint_raw/local",1);
+    consumer_node_=node_->declare_parameter<std::string>("command_consumer_node","/mavros/setpoint_raw");
+    consumer_transport_=node_->declare_parameter<std::string>("command_transport_topic","/uas1/mavlink_sink");
+    for(const auto& name : {consumer_node_,consumer_transport_})
+        if(name.empty()||name.front()!='/'||name.back()=='/')
+            throw std::runtime_error("Command consumer and transport must be absolute ROS names");
+    consumer_client_=node_->create_client<rcl_interfaces::srv::GetParameters>(consumer_node_+"/get_parameters");
     diagnostic_pub_=node_->create_publisher<std_msgs::msg::String>("/aruco_landing/status",rclcpp::QoS(1).transient_local());
     header_pub_=node_->create_publisher<std_msgs::msg::String>("/aruco_landing/status_header",rclcpp::QoS(1).transient_local());
     std_msgs::msg::String schema;schema.data=diagnostic_header_;header_pub_->publish(schema);
@@ -225,7 +231,7 @@ void Safina_land::openDiagnostics() {
         "request_offboard,request_arm,request_land,search_elapsed,mode_state_fresh,legacy_rc_slot_unused,px4_offboard_selected,mode_edge_ready,"
         "takeoff_xy_error,takeoff_z_error,takeoff_failed_gates,takeoff_hold_seconds,"
         "marker_reason,marker_source_age,marker_pair_dt,marker_jump,marker_received,marker_accepted,"
-        "target_z,goal_x,goal_y,goal_z,goal_valid,marker_rx_age,gimbal_ready,gimbal_status,inherit_age,inherit_travel,yaw_hold_active,descent_failed_gates,alignment_hold_seconds";
+        "target_z,goal_x,goal_y,goal_z,goal_valid,marker_rx_age,gimbal_ready,gimbal_status,inherit_age,inherit_travel,yaw_hold_active,descent_failed_gates,alignment_hold_seconds,command_consumer_ready";
     diagnostic_file_<<diagnostic_header_<<'\n';
     diagnostic_file_.flush();
 }
@@ -356,8 +362,43 @@ bool Safina_land::enable(std_srvs::srv::SetBool::Request& request,std_srvs::srv:
     return true;
 }
 
+// Startup only: graph discovery alone precedes plugin/router readiness. A read-only
+// plugin response and the router publisher are required. Runtime telemetry guards
+// remain responsible after the gate latches; no graph-driven control interruptions.
+void Safina_land::updateConsumer(double now) {
+    if(consumer_ready_)return;
+    if(consumer_probe_.valid()) {
+        if(consumer_probe_.wait_for(std::chrono::seconds(0))==std::future_status::ready) {
+            try {
+                const auto reply=consumer_probe_.get();
+                consumer_ready_=reply&&reply->values.size()==1&&reply->values[0].type==3&&
+                    !node_->get_publishers_info_by_topic(consumer_transport_).empty();
+            } catch(const std::exception&) { consumer_ready_=false; }
+            consumer_probe_={};
+        } else if(now-consumer_probe_at_>1.) {
+            consumer_client_->remove_pending_request(consumer_request_id_);
+            consumer_probe_={};
+        }
+    }
+    if(consumer_ready_||consumer_probe_.valid()||now-consumer_check_at_<.1)return;
+    consumer_check_at_=now;
+    if(command_pub_->get_subscription_count()==0||!consumer_client_->service_is_ready())return;
+    for(const auto& endpoint : node_->get_subscriptions_info_by_topic(command_pub_->get_topic_name())) {
+        const auto ns=endpoint.node_namespace();
+        const auto name=(ns=="/"?ns:ns+"/")+endpoint.node_name();
+        if(name==consumer_node_&&endpoint.topic_type()=="mavros_msgs/msg/PositionTarget") {
+            auto request=std::make_shared<rcl_interfaces::srv::GetParameters::Request>();
+            request->names={"thrust_scaling"};
+            auto pending=consumer_client_->async_send_request(request);
+            consumer_request_id_=pending.request_id;consumer_probe_=pending.share();consumer_probe_at_=now;
+            return;
+        }
+    }
+}
+
 // Caller holds mutex; publisher-conflict check is done before entering here.
 bool Safina_land::startTask(double now,std::string& reason) {
+    if(!consumer_ready_) {reason="command_consumer_waiting";return false;}
     if(worker_busy_||pending_) {reason="previous_async_job_still_running";return false;}
     if(!task_->enable(input(now),reason))return false;
     ++generation_;pending_=false;gimbal_ready_=!command_gimbal_down_;
@@ -428,6 +469,7 @@ void Safina_land::workerLoop() {
 
 void Safina_land::tick() {
     std::lock_guard<std::mutex> lock(mutex_);double now=steady();
+    updateConsumer(now);
     bool standby_publish=false;
     if(start_trigger_=="px4_mode") {
         if(!task_->active()&&now-standby_check_at_>=1.0) {
@@ -436,7 +478,7 @@ void Safina_land::tick() {
             if(!standby_clear_)RCLCPP_WARN_THROTTLE(node_->get_logger(), *node_->get_clock(), 3000,"PX4 mode gate waiting: %s",reason.c_str());
         }
         const auto in=input(now);
-        const bool healthy=in.state_ok&&in.connected&&in.pose_ok&&in.velocity_ok&&in.extended_ok;
+        const bool healthy=consumer_ready_&&in.state_ok&&in.connected&&in.pose_ok&&in.velocity_ok&&in.extended_ok;
         const bool eligible=config_.auto_takeoff?
             (in.landed_state==1&&(!in.armed||in.mode=="OFFBOARD")):(in.armed&&in.landed_state==2);
         const bool clear=standby_clear_&&recent(standby_check_at_,now,1.5)&&!pending_&&!worker_busy_;
@@ -463,6 +505,7 @@ void Safina_land::tick() {
     const auto i=input(now);auto out=task_->step(i);
     if(!task_->active())pending_=false;
     if(!task_->active()&&standby_publish)out.publish=true; // Include standby in published diagnostics.
+    if(!consumer_ready_)out.publish=false;
     if(out.publish) {
         mavros_msgs::msg::PositionTarget cmd;cmd.header.stamp=node_->now();cmd.header.frame_id=local_frame_;
         cmd.coordinate_frame=mavros_msgs::msg::PositionTarget::FRAME_LOCAL_NED;
@@ -509,7 +552,7 @@ void Safina_land::diagnostics(const land_task::Input& i,const land_task::Command
         <<task_->takeoffHoldSeconds(i.now)<<','<<marker_reason_<<','<<marker_source_age_<<','
         <<marker_pair_dt_<<','<<marker_jump_<<','<<marker_received_<<','<<marker_accepted_<<','
         <<target_z_<<','<<goal.x<<','<<goal.y<<','<<goal.z<<','<<goal_valid<<','
-        <<(marker_rx_at_<0?-1:i.now-marker_rx_at_)<<','<<gimbal_ready_<<','<<gimbal_status_<<','<<task_->inheritedAge(i.now)<<','<<task_->inheritedTravel(i)<<','<<out.yaw_hold_active<<','<<task_->descentFailedGates(i)<<','<<task_->alignmentHoldSeconds(i.now);
+        <<(marker_rx_at_<0?-1:i.now-marker_rx_at_)<<','<<gimbal_ready_<<','<<gimbal_status_<<','<<task_->inheritedAge(i.now)<<','<<task_->inheritedTravel(i)<<','<<out.yaw_hold_active<<','<<task_->descentFailedGates(i)<<','<<task_->alignmentHoldSeconds(i.now)<<','<<consumer_ready_;
     if(diagnostic_file_) {diagnostic_file_<<row.str()<<'\n';diagnostic_file_.flush();}
     else RCLCPP_ERROR_THROTTLE(node_->get_logger(), *node_->get_clock(), 5000,"Landing diagnostics CSV write failed");
     std_msgs::msg::String status;status.data=row.str();diagnostic_pub_->publish(status);

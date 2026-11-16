@@ -100,22 +100,35 @@ def check(label,value):
 def start(package,executable,config,extra):
     log=(out/(package+'.log')).open('wb');logs.append(log)
     args=[str(base/package/'lib'/package/executable),'--ros-args','--params-file',str(base/package/'share'/package/'config'/config)]
+    if package=='land_test' and (out/'candidate-install/lib/land_test/Safina_land_test').exists():
+        args[0]=str(out/'candidate-install/lib/land_test/Safina_land_test')
     for item in extra:args+=['-p',item]
     if package=='land_test':
         for source,dest in {'/mavros/state': '/fixture/state', '/mavros/local_position/pose': '/fixture/pose', '/mavros/local_position/velocity_local': '/fixture/velocity', '/mavros/extended_state': '/fixture/landed', '/mavros/set_mode': '/fixture/set_mode', '/mavros/cmd/arming': '/fixture/arming'}.items(): args+=['-r',source+':='+dest]
     p=subprocess.Popen(args,stdout=log,stderr=subprocess.STDOUT,start_new_session=True);procs.append(p)
 
-try:
-    log=(out/'mavros.log').open('wb');logs.append(log)
-    procs.append(subprocess.Popen(['ros2','launch',str(out/'mavros_platform.launch.py'),'fcu_url:=udp://127.0.0.1:14640@127.0.0.1:14641'],stdout=log,stderr=subprocess.STDOUT,start_new_session=True))
-    deadline=time.monotonic()+25
-    while time.monotonic()<deadline and not (actual_states and actual_states[-1].connected):
-        assert procs[0].poll() is None
-        rclpy.spin_once(node,timeout_sec=.05)
-    check('actual PX4 connected disarmed before controller starts',bool(actual_states) and actual_states[-1].connected and not actual_states[-1].armed)
+mavros_process=None
+candidate=(out/'candidate-install/lib/land_test/Safina_land_test').exists()
+def start_visual_chain():
     start('aruco_test','Safina_aruco_test','aruco.yaml',['preview_color:=false'])
     start('land_test','Safina_land_test','takeoff_land.yaml',['command_gimbal_down:=false','gimbal_down_on_startup:=false','diagnostic_directory:='+str(out/'controller-data')])
+
+try:
+    if candidate:
+        start_visual_chain()
+        d,c,t=phase('recorder and healthy inputs without MAVROS',2.)
+        check('recorder cannot unlock first command or mode readiness',bool(d) and all(r.get('command_consumer_ready')=='0' and r.get('mode_edge_ready')=='0' and r.get('enabled')=='0' for r in d) and not commands and not calls and not arms)
+    log=(out/'mavros.log').open('wb');logs.append(log)
+    procs.append(subprocess.Popen(['ros2','launch',str(out/'mavros_platform.launch.py'),'fcu_url:=udp://127.0.0.1:14640@127.0.0.1:14641'],stdout=log,stderr=subprocess.STDOUT,start_new_session=True))
+    mavros_process=procs[-1]
+    deadline=time.monotonic()+25
+    while time.monotonic()<deadline and not (actual_states and actual_states[-1].connected):
+        assert procs[-1].poll() is None
+        rclpy.spin_once(node,timeout_sec=.05)
+    check('actual PX4 connected disarmed before task trigger',bool(actual_states) and actual_states[-1].connected and not actual_states[-1].armed)
+    if not candidate:start_visual_chain()
     d,c,t=phase('ready image chain',3.5)
+    if candidate:check('actual MAVROS router readiness opens command gate',bool(d) and all(r.get('command_consumer_ready')=='1' for r in d) and bool(c))
     check('actual image detector and controller diagnostics are ready',bool(d) and any(r.get('target_valid')=='1' for r in d))
     recent=[m for at,m in markers if at>time.monotonic()-.5 and m.pose.position.z>0]
     check('PnP recovers synthetic optical position',bool(recent) and all(abs(m.pose.position.x-.12)<.03 and abs(m.pose.position.y+.16)<.03 and abs(m.pose.position.z-1.5)<.15 for m in recent))
@@ -150,18 +163,23 @@ try:
     d,c,t=phase('centered image enables descent',image=centered,seconds=3.5)
     check('centered actual detector target produces downward ENU velocity',bool(d) and d[-1]['phase']=='DESCEND' and bool(c) and any(m.velocity.z<-.02 for m in c))
     clients=node.get_client_names_and_types_by_node('Safina_land_test','/')
-    check('controller flight service clients are isolated stubs only',set(name for name,_ in clients)=={'/fixture/set_mode','/fixture/arming'})
+    check('controller flight service clients are isolated stubs only',{'/fixture/set_mode','/fixture/arming'} <= set(name for name,_ in clients) <= {'/fixture/set_mode','/fixture/arming','/mavros/setpoint_raw/get_parameters'} and all(name!='/mavros/setpoint_raw/get_parameters' or types==['rcl_interfaces/srv/GetParameters'] for name,types in clients))
     d,c,t=phase('pilot returns POSCTL',mode='POSCTL',seconds=.8)
     check('pilot mode exit cancels without reclaiming control',bool(d) and all(r['enabled']=='0' for r in d) and not calls and not arms)
     check('all generated commands obey finite ENU limits',bool(commands) and all(m.coordinate_frame==PositionTarget.FRAME_LOCAL_NED and all(math.isfinite(x) for x in [m.velocity.x,m.velocity.y,m.velocity.z,m.yaw_rate]) and math.hypot(m.velocity.x,m.velocity.y)<=.151 and abs(m.velocity.z)<=.281 and abs(m.yaw_rate)<=.101 for _,m in commands))
     check('actual PX4 stays disarmed and nonoffboard',bool(actual_states) and all(not m.armed and m.mode!='OFFBOARD' for m in actual_states))
     completed=True
 finally:
-    for p in procs:
+    # Stop the source and read its final callbacks while MAVROS is still alive.
+    # Stopping the consumer first can itself manufacture a missing tail packet.
+    stop_order=[p for p in reversed(procs) if p is not mavros_process]+([mavros_process] if mavros_process is not None else [])
+    for p in stop_order:
         if p.poll() is None:os.killpg(p.pid,signal.SIGINT)
-    for p in procs:
-        try:p.wait(timeout=8)
-        except subprocess.TimeoutExpired:os.killpg(p.pid,signal.SIGTERM);p.wait(timeout=3)
+        deadline=time.monotonic()+8
+        while p.poll() is None and time.monotonic()<deadline:rclpy.spin_once(node,timeout_sec=.01)
+        if p.poll() is None:os.killpg(p.pid,signal.SIGTERM);p.wait(timeout=3)
+        until=time.monotonic()+.25
+        while time.monotonic()<until:rclpy.spin_once(node,timeout_sec=.01)
     # Drain both observation queues after all publishers have exited.
     until=time.monotonic()+.5
     while time.monotonic()<until:rclpy.spin_once(node,timeout_sec=.01)

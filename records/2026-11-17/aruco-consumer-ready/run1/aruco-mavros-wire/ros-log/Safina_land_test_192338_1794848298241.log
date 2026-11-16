@@ -1,0 +1,13 @@
+[WARN] [1794848298.279931374] [Safina_land_test]: ArUco landing v3: WAITING. No arming or mode requests before trigger. Trigger=px4_mode auto_takeoff=false. Camera startup-down=false. PX4 mode trigger: wait for READY in POSCTL, then manually switch OFFBOARD. Standby streams zero velocity; PWM mapping is never interpreted here. Diagnostics: /tmp/aruco-mavros-wire/controller-data/landing_20261117_005818_192338.csv
+[WARN] [1794848299.846825098] [Safina_land_test]: RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for airborne landing takeover; no RC channel/slot mapping
+[WARN] [1794848317.147532696] [Safina_land_test]: Landing task enabled by px4_mode; generation=1 auto_takeoff=0
+[WARN] [1794848317.148038150] [Safina_land_test]: Landing phase IDLE -> PRESTREAM reason=explicit_enable
+[WARN] [1794848318.380061779] [Safina_land_test]: Landing phase PRESTREAM -> ACQUIRE reason=takeover_confirmed
+[WARN] [1794848318.580273016] [Safina_land_test]: Landing phase ACQUIRE -> TRANSLATE reason=fresh_target_confirmed
+[WARN] [1794848319.813339595] [Safina_land_test]: Landing phase TRANSLATE -> SHORT_LOSS reason=short_loss_inherit_world_target_pause_descent
+[WARN] [1794848320.013502916] [Safina_land_test]: Landing phase SHORT_LOSS -> LOST_HOLD reason=short_loss_budget_expired_hover
+[WARN] [1794848321.213320018] [Safina_land_test]: Landing phase LOST_HOLD -> TRANSLATE reason=fresh_target_confirmed
+[WARN] [1794848323.580003407] [Safina_land_test]: Landing phase TRANSLATE -> STABILIZE reason=near_target_translation_stopped
+[WARN] [1794848323.946759240] [Safina_land_test]: Landing phase STABILIZE -> DESCEND reason=alignment_stable_descent_allowed
+[WARN] [1794848326.447265786] [Safina_land_test]: Landing phase DESCEND -> CANCELLED reason=pilot_or_fcu_left_offboard
+[INFO] [1794848327.246876036] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -1,0 +1,14 @@
+[master dae36a8] Gate landing startup on actual MAVROS consumer and router readiness
+ 4 files changed, 58 insertions(+), 5 deletions(-)
+{
+  "head": "dae36a8f469bdce8b9ce3decc0df47244194f702",
+  "sha256": {
+    "01_apps/mission_demo/workspace/src/land_test/CMakeLists.txt": "b8f0f683da12317b6325931b4e68622ea830638c945b006f86c1f5805425c831",
+    "01_apps/mission_demo/workspace/src/land_test/package.xml": "4d115dac7165591c3f8b5c08071a7b9975d48d59f3492fc358667683f4342481",
+    "01_apps/mission_demo/workspace/src/land_test/include/land_test/Safina_land_test.h": "1787219116b7296438954e00fb3c2cd7abf965013187919619d16fbea3599590",
+    "01_apps/mission_demo/workspace/src/land_test/src/Safina_land_test.cpp": "6568d6189978f5548227ad61cfc16ecba8656e0f84ca4890a4c5d332fc608488",
+    "01_apps/mission_demo/workspace/install/land_test/lib/land_test/Safina_land_test": "e38939c431c42e966e3897773bbf592d7e40137f6cb94fdbc8dd6ff3c266bab6",
+    "01_apps/mission_demo/workspace/install/land_test/share/land_test/package.xml": "4d115dac7165591c3f8b5c08071a7b9975d48d59f3492fc358667683f4342481"
+  },
+  "status": ""
+}

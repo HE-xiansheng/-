@@ -1,0 +1,90 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found mavros_msgs: 2.16.0 (/opt/ros/humble/share/mavros_msgs/cmake)
+-- Found std_srvs: 4.9.2 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found tf2: 0.25.24 (/opt/ros/humble/share/tf2/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/aruco-mavros-wire/candidate-build
+[  9%] Building CXX object CMakeFiles/Safina_land_test.dir/src/Safina_land_test.cpp.o
+[ 18%] Building CXX object CMakeFiles/landing_task_test.dir/test/landing_task_test.cpp.o
+[ 27%] Linking CXX executable landing_task_test
+[ 27%] Built target landing_task_test
+[ 36%] Building C object CMakeFiles/Safina_land_test.dir/include/gcu/gcu_control.c.o
+[ 45%] Building CXX object CMakeFiles/mode_start_gate_test.dir/test/mode_start_gate_test.cpp.o
+[ 54%] Linking CXX executable mode_start_gate_test
+[ 54%] Built target mode_start_gate_test
+[ 63%] Building CXX object CMakeFiles/motion_limits_test.dir/test/motion_limits_test.cpp.o
+[ 72%] Linking CXX executable motion_limits_test
+[ 72%] Built target motion_limits_test
+[ 81%] Building CXX object CMakeFiles/takeoff_replay_test.dir/test/takeoff_replay_test.cpp.o
+[ 90%] Linking CXX executable takeoff_replay_test
+[ 90%] Built target takeoff_replay_test
+[100%] Linking CXX executable Safina_land_test
+[100%] Built target Safina_land_test
+Internal ctest changing into directory: /tmp/aruco-mavros-wire/candidate-build
+Test project /tmp/aruco-mavros-wire/candidate-build
+    Start 1: landing_task
+1/4 Test #1: landing_task .....................   Passed    0.02 sec
+    Start 2: mode_start_gate
+2/4 Test #2: mode_start_gate ..................   Passed    0.01 sec
+    Start 3: motion_limits
+3/4 Test #3: motion_limits ....................   Passed    0.01 sec
+    Start 4: takeoff_replay
+4/4 Test #4: takeoff_replay ...................   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.06 sec
+-- Install configuration: ""
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/lib/land_test/Safina_land_test
+-- Set runtime path of "/tmp/aruco-mavros-wire/candidate-install/lib/land_test/Safina_land_test" to ""
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/config
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/config/takeoff_land.yaml
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/launch
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/launch/Safina_land.launch.py
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/ament_index/resource_index/package_run_dependencies/land_test
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/ament_index/resource_index/parent_prefix_path/land_test
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/environment/ament_prefix_path.sh
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/environment/ament_prefix_path.dsv
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/environment/path.sh
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/environment/path.dsv
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/local_setup.bash
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/local_setup.sh
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/local_setup.zsh
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/local_setup.dsv
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/package.dsv
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/ament_index/resource_index/packages/land_test
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/cmake/land_testConfig.cmake
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/cmake/land_testConfig-version.cmake
+-- Installing: /tmp/aruco-mavros-wire/candidate-install/share/land_test/package.xml
