@@ -1,0 +1,9 @@
+std_msgs/Header header
+int32 state
+float32 offset_x
+float32 offset_y
+int32 target_id
+float32 distance_m
+uint8 distance_source
+bool distance_valid
+bool session_active

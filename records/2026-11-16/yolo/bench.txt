@@ -1,0 +1,41 @@
+Starting >>> yolo_ultra_test
+Finished <<< yolo_ultra_test [0.92s]
+
+Summary: 1 package finished [1.18s]
+PHASE discovery samples 16 visible 15
+PHASE positive samples 15 visible 15
+{"check": "real NPU detects and assigns ID", "pass": true}
+{"check": "depth distance 2m", "pass": true}
+{"check": "stamped image frame preserved", "pass": true}
+{"check": "target source header preserved", "pass": true}
+{"check": "legacy seven fields", "pass": true}
+PHASE stale samples 11 visible 11
+{"check": "stale depth rejected", "pass": true}
+PHASE future samples 12 visible 12
+{"check": "future depth rejected", "pass": true}
+PHASE zero samples 12 visible 12
+{"check": "zero depth rejected", "pass": true}
+PHASE valid depth again samples 12 visible 12
+{"check": "depth resumes without mixing bbox history", "pass": true}
+PHASE blank samples 12 visible 1
+{"check": "absent person clears offsets", "pass": true}
+PHASE land samples 11 visible 0
+{"check": "land switch ends session", "pass": true}
+PHASE mid resets samples 12 visible 10
+{"check": "session restart IDs begin at one", "pass": true}
+PHASE protection samples 12 visible 12
+{"check": "protection retains session IDs", "pass": true}
+PHASE mode exit samples 12 visible 2
+{"check": "mode exit clears session", "pass": true}
+PHASE restart samples 11 visible 11
+PHASE image timeout samples 22 visible 1
+{"check": "image dropout clears output", "pass": true}
+PHASE restart samples 5 visible 5
+PHASE RC timeout samples 13 visible 5
+{"check": "RC dropout clears session", "pass": true}
+PHASE restart samples 10 visible 8
+PHASE state timeout samples 17 visible 9
+{"check": "state dropout clears session", "pass": true}
+PHASE stale image samples 33 visible 0
+{"check": "stale image rejected", "pass": true}
+{"results": [{"check": "real NPU detects and assigns ID", "pass": true}, {"check": "depth distance 2m", "pass": true}, {"check": "stamped image frame preserved", "pass": true}, {"check": "target source header preserved", "pass": true}, {"check": "legacy seven fields", "pass": true}, {"check": "stale depth rejected", "pass": true}, {"check": "future depth rejected", "pass": true}, {"check": "zero depth rejected", "pass": true}, {"check": "depth resumes without mixing bbox history", "pass": true}, {"check": "absent person clears offsets", "pass": true}, {"check": "land switch ends session", "pass": true}, {"check": "session restart IDs begin at one", "pass": true}, {"check": "protection retains session IDs", "pass": true}, {"check": "mode exit clears session", "pass": true}, {"check": "image dropout clears output", "pass": true}, {"check": "RC dropout clears session", "pass": true}, {"check": "state dropout clears session", "pass": true}, {"check": "stale image rejected", "pass": true}], "passed": 18, "total": 18}
