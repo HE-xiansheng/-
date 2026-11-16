@@ -1,0 +1,16 @@
+[INFO] [launch]: All log files can be found below /tmp/fastlio-validation-jt6ji2qk/2026-11-16-18-42-26-914269-orangepi5ultra-23779
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [23780]
+[fastlio_mapping-1] [INFO] [1794825747.117604400] [factory_laserMapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1794825747.129019577] [factory_laserMapping]: Node init finished.
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1794825747.940730347] [factory_laserMapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1794825748.271275751] [factory_laserMapping]: Initialize the map kdtree
+[fastlio_mapping-1] Self sync IMU and LiDAR, time diff is 1.1350708008 
+[fastlio_mapping-1] lidar loop back, clear buffer
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[fastlio_mapping-1] catch sig %d2
+[INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+[ERROR] [fastlio_mapping-1]: process has died [pid 23780, exit code -2, cmd '/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_ze3zia4c -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf'].

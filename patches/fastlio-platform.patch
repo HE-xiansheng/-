@@ -1,0 +1,101 @@
+--- a/src/laserMapping.cpp
++++ b/src/laserMapping.cpp
+@@ -1,3 +1,4 @@
++#include <stdexcept>
+ // This is an advanced implementation of the algorithm described in the
+ // following paper:
+ //   J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time.
+@@ -631,7 +632,11 @@
+     odomAftMapped.child_frame_id = "body";
+     odomAftMapped.header.stamp = get_ros_time(lidar_end_time);
+     set_posestamp(odomAftMapped.pose);
+-    pubOdomAftMapped->publish(odomAftMapped);
++    // nav_msgs/Odometry twist is expressed in child_frame_id (body).
++    const Eigen::Vector3d velocity_body = state_point.rot.toRotationMatrix().transpose() * state_point.vel;
++    odomAftMapped.twist.twist.linear.x = velocity_body.x();
++    odomAftMapped.twist.twist.linear.y = velocity_body.y();
++    odomAftMapped.twist.twist.linear.z = velocity_body.z();
+     auto P = kf.get_P();
+     for (int i = 0; i < 6; i ++)
+     {
+@@ -644,6 +649,8 @@
+         odomAftMapped.pose.covariance[i*6 + 5] = P(k, 2);
+     }
+ 
++    pubOdomAftMapped->publish(odomAftMapped);
++
+     geometry_msgs::msg::TransformStamped trans;
+     trans.header.frame_id = "camera_init";
+     trans.child_frame_id = "body";
+@@ -903,19 +910,10 @@
+         fill(epsi, epsi+23, 0.001);
+         kf.init_dyn_share(get_f, df_dx, df_dw, h_share_model, NUM_MAX_ITERATIONS, epsi);
+ 
+-        /*** debug record ***/
+-        // FILE *fp;
+-        string pos_log_dir = root_dir + "/Log/pos_log.txt";
+-        fp = fopen(pos_log_dir.c_str(),"w");
+-
+-        // ofstream fout_pre, fout_out, fout_dbg;
+-        fout_pre.open(DEBUG_FILE_DIR("mat_pre.txt"),ios::out);
+-        fout_out.open(DEBUG_FILE_DIR("mat_out.txt"),ios::out);
+-        fout_dbg.open(DEBUG_FILE_DIR("dbg.txt"),ios::out);
+-        if (fout_pre && fout_out)
+-            cout << "~~~~"<<ROOT_DIR<<" file opened" << endl;
+-        else
+-            cout << "~~~~"<<ROOT_DIR<<" doesn't exist" << endl;
++        // Migration diagnostics are collected on the ground computer via stdout.
++        // Keep the upstream numeric log sink usable without writing onboard files.
++        fp = fopen("/dev/null", "w");
++        if (!fp) throw std::runtime_error("Cannot open diagnostic sink");
+ 
+         /*** ROS subscribe initialization ***/
+         if (p_pre->lidar_type == AVIA)
+@@ -951,7 +949,7 @@
+     {
+         fout_out.close();
+         fout_pre.close();
+-        fclose(fp);
++        if (fp) fclose(fp);
+     }
+ 
+ private:
+@@ -1158,7 +1156,7 @@
+ {
+     rclcpp::init(argc, argv);
+ 
+-    signal(SIGINT, SigHandle);
++    // Keep rclcpp signal handling so spin exits cleanly on SIGINT.
+ 
+     rclcpp::spin(std::make_shared<LaserMappingNode>());
+ 
+@@ -1180,8 +1178,7 @@
+     {
+         vector<double> t, s_vec, s_vec2, s_vec3, s_vec4, s_vec5, s_vec6, s_vec7;    
+         FILE *fp2;
+-        string log_dir = root_dir + "/Log/fast_lio_time_log.csv";
+-        fp2 = fopen(log_dir.c_str(),"w");
++        fp2 = stdout;
+         fprintf(fp2,"time_stamp, total time, scan point size, incremental time, search time, delete size, delete time, tree size st, tree size end, add point size, preprocess time\n");
+         for (int i = 0;i<time_log_counter; i++){
+             fprintf(fp2,"%0.8f,%0.8f,%d,%0.8f,%0.8f,%d,%0.8f,%d,%d,%d,%0.8f\n",T1[i],s_plot[i],int(s_plot2[i]),s_plot3[i],s_plot4[i],int(s_plot5[i]),s_plot6[i],int(s_plot7[i]),int(s_plot8[i]), int(s_plot10[i]), s_plot11[i]);
+@@ -1191,7 +1188,7 @@
+             s_vec3.push_back(s_plot4[i]);
+             s_vec5.push_back(s_plot[i]);
+         }
+-        fclose(fp2);
++        fflush(fp2);
+     }
+ 
+     return 0;
+--- a/src/IMU_Processing.hpp
++++ b/src/IMU_Processing.hpp
+@@ -364,7 +364,7 @@
+       std::cout << "IMU Initial Done" << std::endl;
+       // ROS_INFO("IMU Initial Done: Gravity: %.4f %.4f %.4f %.4f; state.bias_g: %.4f %.4f %.4f; acc covarience: %.8f %.8f %.8f; gry covarience: %.8f %.8f %.8f",\
+       //          imu_state.grav[0], imu_state.grav[1], imu_state.grav[2], mean_acc.norm(), cov_bias_gyr[0], cov_bias_gyr[1], cov_bias_gyr[2], cov_acc[0], cov_acc[1], cov_acc[2], cov_gyr[0], cov_gyr[1], cov_gyr[2]);
+-      fout_imu.open(DEBUG_FILE_DIR("imu.txt"),ios::out);
++      // Diagnostics are streamed to the computer; no source-tree IMU log.
+     }
+ 
+     return;

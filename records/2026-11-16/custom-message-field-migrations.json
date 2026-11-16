@@ -1,0 +1,62 @@
+[
+  {
+    "message": "quadrotor_msgs/Gains",
+    "from": "Kp",
+    "to": "kp",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/Gains",
+    "from": "Kd",
+    "to": "kd",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/Gains",
+    "from": "Kp_yaw",
+    "to": "kp_yaw",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/Gains",
+    "from": "Kd_yaw",
+    "to": "kd_yaw",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/SO3Command",
+    "from": "kR",
+    "to": "k_r",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/SO3Command",
+    "from": "kOm",
+    "to": "k_om",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/OptimalTimeAllocator",
+    "from": "K",
+    "to": "k",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/OptimalTimeAllocator",
+    "from": "K_max",
+    "to": "k_max",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/SpatialTemporalTrajectory",
+    "from": "K",
+    "to": "k",
+    "reason": "ROS2 field names must be lowercase"
+  },
+  {
+    "message": "quadrotor_msgs/SpatialTemporalTrajectory",
+    "from": "K_max",
+    "to": "k_max",
+    "reason": "ROS2 field names must be lowercase"
+  }
+]

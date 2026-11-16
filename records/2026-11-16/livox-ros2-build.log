@@ -1,0 +1,33 @@
+Starting >>> livox_ros_driver2
+--- stderr: livox_ros_driver2
+/usr/include/apr-1.0
+apr-1
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp: In member function ‘void livox_ros::LidarPubHandler::LivoxLidarPointCloudProcess(livox_ros::RawPacket&)’:
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp:329:12: error: ‘kLivoxLidarDoubleEchoData’ was not declared in this scope; did you mean ‘kLivoxLidarImuData’?
+  329 |       case kLivoxLidarDoubleEchoData:
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |            kLivoxLidarImuData
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp: In member function ‘void livox_ros::LidarPubHandler::ProcessDoubleEchoPoint(livox_ros::RawPacket&)’:
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp:463:3: error: ‘LivoxLidarDoubleEchoRawPoint’ was not declared in this scope; did you mean ‘LivoxLidarImuRawPoint’?
+  463 |   LivoxLidarDoubleEchoRawPoint* raw = (LivoxLidarDoubleEchoRawPoint*)pkt.raw_data.data();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |   LivoxLidarImuRawPoint
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp:463:33: error: ‘raw’ was not declared in this scope
+  463 |   LivoxLidarDoubleEchoRawPoint* raw = (LivoxLidarDoubleEchoRawPoint*)pkt.raw_data.data();
+      |                                 ^~~
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp:463:69: error: expected primary-expression before ‘)’ token
+  463 |   LivoxLidarDoubleEchoRawPoint* raw = (LivoxLidarDoubleEchoRawPoint*)pkt.raw_data.data();
+      |                                                                     ^
+/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/src/comm/pub_handler.cpp:466:12: warning: unused variable ‘index’ [-Wunused-variable]
+  466 |   uint32_t index = 0;
+      |            ^~~~~
+gmake[2]: *** [CMakeFiles/livox_ros_driver2.dir/build.make:216: CMakeFiles/livox_ros_driver2.dir/src/comm/pub_handler.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:614: CMakeFiles/livox_ros_driver2.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< livox_ros_driver2 [45.4s, exited with code 2]
+
+Summary: 0 packages finished [45.6s]
+  1 package failed: livox_ros_driver2
+  1 package had stderr output: livox_ros_driver2

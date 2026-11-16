@@ -1,0 +1,24 @@
+{
+  "passed": false,
+  "checks": {
+    "odometry_received": false,
+    "clouds_received": false,
+    "finite_pose_velocity_and_unit_quaternion": true,
+    "source_time_monotonic": true,
+    "expected_frames": true,
+    "clean_shutdown": true
+  },
+  "input_counts": {
+    "/livox/lidar": 78,
+    "/livox/imu": 883
+  },
+  "output_odometry_count": 12,
+  "output_cloud_count": 12,
+  "source_duration_seconds": 10.064694181999585,
+  "flight_commands_sent": false,
+  "limitations": [
+    "Recorded .235 sensor input, isolated DDS; not .224 physical radar test",
+    "No trajectory reference comparison, long-term drift, FC input or fusion tested"
+  ],
+  "shutdown_return_code": 0
+}

@@ -1,0 +1,43 @@
+[INFO] [launch]: All log files can be found below /tmp/fastlio-validation-_dgn79dk/2026-11-16-18-40-19-987067-orangepi5ultra-22387
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [22388]
+[fastlio_mapping-1] [INFO] [1794825620.259291387] [factory_laserMapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1794825620.270063201] [factory_laserMapping]: Node init finished.
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1794825621.104875347] [factory_laserMapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1794825621.430256537] [factory_laserMapping]: Initialize the map kdtree
+[fastlio_mapping-1] Self sync IMU and LiDAR, time diff is 1.1350708008 
+[fastlio_mapping-1] lidar loop back, clear buffer
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+[fastlio_mapping-1] catch sig %d2
+[ERROR] [fastlio_mapping-1]: process has died [pid 22388, exit code -2, cmd '/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_24rsw3lq -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf'].
+
+Traceback (most recent call last):
+  File "<stdin>", line 91, in main
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 208, in spin_once
+    executor.spin_once(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 812, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 801, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 784, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 681, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 136, in <module>
+  File "<stdin>", line 127, in main
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241

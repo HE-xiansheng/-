@@ -1,0 +1,6 @@
+Starting >>> quadrotor_msgs
+Finished <<< quadrotor_msgs [1min 12s]
+Starting >>> traj_utils
+Finished <<< traj_utils [15.4s]
+
+Summary: 2 packages finished [1min 28s]

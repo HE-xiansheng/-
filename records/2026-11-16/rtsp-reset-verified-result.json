@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": {
+    "gray_full_resolution": true,
+    "gray_mono8": true,
+    "color_preview": true,
+    "streams_received": true,
+    "current_monotonic_stamps": true,
+    "clean_shutdown": true
+  },
+  "streams": {
+    "/migration_validation/gray": {
+      "count": 249,
+      "last": 1794825820926438206,
+      "stamp_regressions": 0,
+      "width": 1920,
+      "height": 1080,
+      "encoding": "mono8",
+      "frame_id": "gimbal_camera_optical_frame",
+      "bytes": 2073600,
+      "step": 1920,
+      "age_seconds": 0.02580021,
+      "observed_hz": 14.958559086570032
+    },
+    "/migration_validation/color": {
+      "count": 159,
+      "last": 1794825820861835517,
+      "stamp_regressions": 0,
+      "width": 960,
+      "height": 540,
+      "encoding": "bgr8",
+      "frame_id": "gimbal_camera_optical_frame",
+      "bytes": 1555200,
+      "step": 2880,
+      "age_seconds": 0.023978093,
+      "observed_hz": 9.582756021030766
+    }
+  },
+  "flight_commands_sent": false,
+  "limitations": [
+    "Local synthetic H264 only; physical gimbal network/reconnect not validated",
+    "Image timestamps describe decoder receipt, not camera exposure time"
+  ],
+  "shutdown_return_codes": [
+    0,
+    255,
+    0
+  ]
+}

@@ -1,0 +1,26 @@
+Safina_aruco_test:
+  ros__parameters:
+    original_enabled: true
+    original_id: 0
+    original_size_m: 0.035
+    original_yaw_offset_deg: 0.0
+    five_enabled: true
+    five_id: 231
+    five_size_m: 0.195
+    five_yaw_offset_deg: 0.0
+    prefer_original: true
+    calibrated_width: 1920
+    calibrated_height: 1080
+    require_calibrated_resolution: true
+    preview_width: 960
+    preview_hz: 15.0
+    color_topic: /rtsp_cam/image_color
+    preview_color: true
+    original_adaptive_max: 53
+    five_adaptive_max: 23
+    full_native_period: 1.0
+    opencv_threads: 2
+    roi_enabled: true
+    full_search_scale: 0.75
+    full_search_period: 0.6
+    roi_margin_px: 120

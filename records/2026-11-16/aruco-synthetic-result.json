@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "original",
+      "passed": true,
+      "source_stamps_preserved": 12,
+      "valid_depths": [
+        1.4949437290242127,
+        1.4949437290242127,
+        1.4949818755585422,
+        1.4949437290242127,
+        1.4949818755585422,
+        1.4949437290242127,
+        1.4949818755585422,
+        1.4949437290242127,
+        1.4949437290242127,
+        1.4949818755585422,
+        1.4949437290242127,
+        1.4949437290242127
+      ],
+      "ids": [
+        0
+      ]
+    },
+    {
+      "case": "inverted_5x5",
+      "passed": true,
+      "source_stamps_preserved": 12,
+      "valid_depths": [
+        1.4972538852034971,
+        1.4972496352671418,
+        1.4972538852034971,
+        1.4972496352671418,
+        1.4972538852034971,
+        1.4972496352671418,
+        1.4972538852034971,
+        1.4972496352671418,
+        1.4972538852034971,
+        1.4972496352671418,
+        1.4972538852034971
+      ],
+      "ids": [
+        -1,
+        231
+      ]
+    },
+    {
+      "case": "blank",
+      "passed": true,
+      "source_stamps_preserved": 12,
+      "valid_depths": [],
+      "ids": [
+        -1
+      ]
+    },
+    {
+      "case": "wrong_resolution",
+      "passed": true,
+      "source_stamps_preserved": 12,
+      "valid_depths": [],
+      "ids": [
+        -1
+      ]
+    }
+  ],
+  "annotated_preview_received": true,
+  "flight_commands_sent": false,
+  "limitations": [
+    "Synthetic front-facing markers only; not physical camera calibration or landing validation",
+    "No camera-to-airframe transform or PX4 estimator fusion tested"
+  ]
+}

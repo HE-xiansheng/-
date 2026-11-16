@@ -1,0 +1,6 @@
+Starting >>> aruco_test
+Finished <<< aruco_test [32.9s]
+Starting >>> rtsp_test
+Finished <<< rtsp_test [16.2s]
+
+Summary: 2 packages finished [49.5s]

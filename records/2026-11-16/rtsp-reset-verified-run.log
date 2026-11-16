@@ -1,0 +1,24 @@
+2026/11/16 18:43:16 INF MediaMTX v1.21.1, linux, arm64
+2026/11/16 18:43:16 INF configuration loaded from /tmp/rtsp-validation-q9674hpu/fixture.yml
+2026/11/16 18:43:16 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/16 18:43:18 INF [RTSP] [conn 127.0.0.1:43714] opened
+2026/11/16 18:43:18 INF [RTSP] [session 064e6c81] created by 127.0.0.1:43714
+2026/11/16 18:43:18 INF [path fixture] stream is available and online, 1 track (H264)
+2026/11/16 18:43:18 INF [RTSP] [session 064e6c81] is publishing to path 'fixture'
+2026/11/16 18:43:18 INF [path fixture] RTP packets are too big (1460 > 1440), remuxing them into smaller ones
+2026/11/16 18:43:21 INF [RTSP] [conn 127.0.0.1:43728] opened
+2026/11/16 18:43:21 INF [RTSP] [session 4845efe3] created by 127.0.0.1:43728
+2026/11/16 18:43:21 INF [RTSP] [session 4845efe3] is reading from path 'fixture', with TCP, 1 track (H264)
+2026/11/16 18:43:40 INF [RTSP] [conn 127.0.0.1:43728] closed: read tcp 127.0.0.1:18554->127.0.0.1:43728: read: connection reset by peer
+2026/11/16 18:43:40 INF [RTSP] [session 4845efe3] destroyed: not in use
+2026/11/16 18:43:41 INF [RTSP] [session 064e6c81] destroyed: torn down by 127.0.0.1:43714
+2026/11/16 18:43:41 INF [RTSP] [conn 127.0.0.1:43714] closed: EOF
+2026/11/16 18:43:41 INF shutting down gracefully
+2026/11/16 18:43:41 INF [RTSP] closing
+2026/11/16 18:43:41 INF waiting for running hooks
+
+
+[INFO] [1794825803.932938136] [rtsp_hw_pub_ultra]: rtsp_hw_pub_ultra running: rtsp://127.0.0.1:18554/fixture -> /rtsp_cam/image_raw (mono8), color 15.0 Hz @ 960 px
+[INFO] [1794825813.944982751] [rtsp_hw_pub_ultra]: RTSP decode: gray 14.5 Hz, color 9.2 Hz, subscribers gray=1 color=1
+[INFO] [1794825820.954956444] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+

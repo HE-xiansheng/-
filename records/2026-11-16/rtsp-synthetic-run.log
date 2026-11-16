@@ -1,0 +1,27 @@
+2026/11/16 18:33:35 INF MediaMTX v1.21.1, linux, arm64
+2026/11/16 18:33:35 INF configuration loaded from /tmp/rtsp-validation-wn6sep21/fixture.yml
+2026/11/16 18:33:35 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/16 18:33:36 INF [RTSP] [conn 127.0.0.1:34530] opened
+2026/11/16 18:33:36 INF [RTSP] [session 646e343b] created by 127.0.0.1:34530
+2026/11/16 18:33:36 INF [path fixture] stream is available and online, 1 track (H264)
+2026/11/16 18:33:36 INF [RTSP] [session 646e343b] is publishing to path 'fixture'
+2026/11/16 18:33:36 INF [path fixture] RTP packets are too big (1460 > 1440), remuxing them into smaller ones
+2026/11/16 18:33:39 INF [RTSP] [conn 127.0.0.1:34540] opened
+2026/11/16 18:33:39 INF [RTSP] [session 1bf1b1fe] created by 127.0.0.1:34540
+2026/11/16 18:33:39 INF [RTSP] [session 1bf1b1fe] is reading from path 'fixture', with TCP, 1 track (H264)
+2026/11/16 18:33:59 INF [RTSP] [conn 127.0.0.1:34540] closed: read tcp 127.0.0.1:18554->127.0.0.1:34540: read: connection reset by peer
+2026/11/16 18:33:59 INF [RTSP] [session 1bf1b1fe] destroyed: not in use
+2026/11/16 18:33:59 INF [RTSP] [session 646e343b] destroyed: torn down by 127.0.0.1:34530
+2026/11/16 18:33:59 INF [RTSP] [conn 127.0.0.1:34530] closed: EOF
+2026/11/16 18:34:00 INF shutting down gracefully
+2026/11/16 18:34:00 INF [RTSP] closing
+2026/11/16 18:34:00 INF waiting for running hooks
+
+
+[INFO] [1794825222.630280366] [rtsp_hw_pub_ultra]: rtsp_hw_pub_ultra running: rtsp://127.0.0.1:18554/fixture -> /rtsp_cam/image_raw (mono8), color 15.0 Hz @ 960 px
+[INFO] [1794825232.631217760] [rtsp_hw_pub_ultra]: RTSP decode: gray 14.6 Hz, color 9.2 Hz, subscribers gray=1 color=1
+[INFO] [1794825239.598073971] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+  what():  failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[ros2run]: Aborted
+

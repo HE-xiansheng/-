@@ -1,0 +1,55 @@
+# Livox publish pointcloud msg format.
+
+std_msgs/Header header    # ROS standard message header
+	builtin_interfaces/Time stamp
+		int32 sec
+		uint32 nanosec
+	string frame_id
+uint64 timebase           # The time of first point
+uint32 point_num          # Total number of pointclouds
+uint8  lidar_id           # Lidar device id number
+uint8[3]  rsvd            # Reserved use
+CustomPoint[] points      # Pointcloud data
+	uint32 offset_time      #
+	float32 x               #
+	float32 y               #
+	float32 z               #
+	uint8 reflectivity      #
+	uint8 tag               #
+	uint8 line              #
+
+	linux-vdso.so.1 (0x0000007fa7943000)
+	librclcpp.so => /opt/ros/humble/lib/librclcpp.so (0x0000007fa7690000)
+	librmw.so => /opt/ros/humble/lib/librmw.so (0x0000007fa7670000)
+	librcutils.so => /opt/ros/humble/lib/librcutils.so (0x0000007fa7640000)
+	librcl.so => /opt/ros/humble/lib/librcl.so (0x0000007fa75f0000)
+	libtracetools.so => /opt/ros/humble/lib/libtracetools.so (0x0000007fa75d0000)
+	libsensor_msgs__rosidl_typesupport_cpp.so => /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_cpp.so (0x0000007fa75b0000)
+	liblivox_ros_driver2__rosidl_typesupport_cpp.so => /home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so (0x0000007fa7590000)
+	liblivox_lidar_sdk_shared.so => /home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so (0x0000007fa7490000)
+	libclass_loader.so => /opt/ros/humble/lib/libclass_loader.so (0x0000007fa7460000)
+	libconsole_bridge.so.1.0 => /lib/aarch64-linux-gnu/libconsole_bridge.so.1.0 (0x0000007fa7420000)
+	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000007fa71f0000)
+	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007fa7150000)
+	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000007fa7120000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007fa6f70000)
+	/lib/ld-linux-aarch64.so.1 (0x0000007fa790a000)
+	liblibstatistics_collector.so => /opt/ros/humble/lib/liblibstatistics_collector.so (0x0000007fa6f50000)
+	librcl_yaml_param_parser.so => /opt/ros/humble/lib/librcl_yaml_param_parser.so (0x0000007fa6f30000)
+	librosgraph_msgs__rosidl_typesupport_cpp.so => /opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_cpp.so (0x0000007fa6f10000)
+	libstatistics_msgs__rosidl_typesupport_cpp.so => /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_cpp.so (0x0000007fa6ef0000)
+	librmw_implementation.so => /opt/ros/humble/lib/librmw_implementation.so (0x0000007fa6ed0000)
+	libament_index_cpp.so => /opt/ros/humble/lib/libament_index_cpp.so (0x0000007fa6eb0000)
+	librcl_logging_interface.so => /opt/ros/humble/lib/librcl_logging_interface.so (0x0000007fa6e90000)
+	librcl_interfaces__rosidl_typesupport_cpp.so => /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_cpp.so (0x0000007fa6e70000)
+	librcpputils.so => /opt/ros/humble/lib/librcpputils.so (0x0000007fa6e50000)
+	librcl_logging_spdlog.so => /opt/ros/humble/lib/librcl_logging_spdlog.so (0x0000007fa6e30000)
+	librcl_interfaces__rosidl_typesupport_c.so => /opt/ros/humble/lib/librcl_interfaces__rosidl_typesupport_c.so (0x0000007fa6e10000)
+	librcl_interfaces__rosidl_generator_c.so => /opt/ros/humble/lib/librcl_interfaces__rosidl_generator_c.so (0x0000007fa6de0000)
+	librosidl_runtime_c.so => /opt/ros/humble/lib/librosidl_runtime_c.so (0x0000007fa6dc0000)
+	librosidl_typesupport_cpp.so => /opt/ros/humble/lib/librosidl_typesupport_cpp.so (0x0000007fa6da0000)
+	libyaml.so => /opt/ros/humble/lib/libyaml.so (0x0000007fa6d70000)
+	libspdlog.so.1 => /lib/aarch64-linux-gnu/libspdlog.so.1 (0x0000007fa6d00000)
+	librosidl_typesupport_c.so => /opt/ros/humble/lib/librosidl_typesupport_c.so (0x0000007fa6ce0000)
+	libbuiltin_interfaces__rosidl_generator_c.so => /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so (0x0000007fa6cc0000)
+	libfmt.so.8 => /lib/aarch64-linux-gnu/libfmt.so.8 (0x0000007fa6c90000)
