@@ -94,6 +94,9 @@ def main():
         check('old_adapter_reproduces_ros_remap_argparse_failure',baseline.returncode==2 and 'unrecognized arguments' in baseline.stderr)
         start('mavros',['ros2','launch',str(base/'mavros_platform.launch.py'),'fcu_url:=udp://127.0.0.1:14640@127.0.0.1:14641'])
         check('real_px4_connected_disarmed',pump(25,lambda:actual_states and actual_states[-1].connected and not actual_states[-1].armed))
+        if (base/'native-build/observer').exists():
+            start('native-observer',[str(base/'native-build/observer')])
+            check('native_qos_observer_ready',pump(5,lambda:'"kind":"ready"' in (base/'native-observer.log').read_text()))
         planner=start('planner',[str(root/'workspace/install/plan_manage/lib/plan_manage/planner_node'),'--ros-args',
             '--params-file',str(root/'config/planner.yaml'),'--params-file',str(root/'config/manual_preview.yaml'),
             '-r','odom_world:=/factory_fastlio/odometry','-r','grid_map/odom:=/factory_fastlio/odometry','-r','grid_map/cloud:=/factory_fastlio/cloud_world'])

@@ -29,8 +29,15 @@ with tarfile.open(base/'inputs.tar','w') as archive:
         archive.add(repo/'platform/01_apps/ego_planner/px4_execution'/name,arcname=name)
     if os.environ.get('EGO_WIRE_TRACE')=='1':
         archive.add(repo/'tools/trace_adapter_publish.py',arcname='trace_adapter_publish.py')
+    if os.environ.get('EGO_WIRE_NATIVE')=='1':
+        archive.add(repo/'tools/ego_qos_observer',arcname='native')
 with (base/'inputs.tar').open('rb') as source:
     subprocess.run(ssh+['mkdir '+remote+' && tar -xf - -C '+remote],stdin=source,check=True)
+if os.environ.get('EGO_WIRE_NATIVE')=='1':
+    with (base/'native-build.log').open('wb') as output:
+        subprocess.run(ssh+['bash -c "source /home/orangepi/drone_platform/env.sh; '
+            'cmake -S '+remote+'/native -B '+remote+'/native-build && '
+            'cmake --build '+remote+'/native-build -j2"'],stdout=output,stderr=subprocess.STDOUT,check=True)
 ab_r,ab_w=os.pipe();ba_r,ba_w=os.pipe()
 processes=[];logs=[];success=False
 try:

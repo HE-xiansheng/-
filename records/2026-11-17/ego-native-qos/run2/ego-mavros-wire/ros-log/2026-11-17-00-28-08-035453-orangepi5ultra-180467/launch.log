@@ -1,0 +1,6 @@
+1794846488.0367105 [INFO] [launch]: All log files can be found below /tmp/ego-mavros-wire/ros-log/2026-11-17-00-28-08-035453-orangepi5ultra-180467
+1794846488.0368943 [INFO] [launch]: Default logging verbosity is set to INFO
+1794846488.1839130 [INFO] [mavros_node-1]: process started with pid [180468]
+1794846500.7332251 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794846500.7373765 [INFO] [mavros_node-1]: sending signal 'SIGINT' to process[mavros_node-1]
+1794846503.2232432 [INFO] [mavros_node-1]: process has finished cleanly [pid 180468]

@@ -1,0 +1,2 @@
+usage: adapter-before.py [-h] [--publish | --check] --run RUN
+adapter-before.py: error: unrecognized arguments: --ros-args -r /mavros/state:=/fixture/state
