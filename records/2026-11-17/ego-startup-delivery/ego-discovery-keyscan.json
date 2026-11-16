@@ -1,0 +1,10 @@
+{
+  "candidate_count": 48,
+  "expected_key_types": [
+    "ssh-ed25519"
+  ],
+  "matching_addresses": [
+    "192.168.1.224"
+  ],
+  "scope": "Read public SSH host keys from current neighbor addresses and compare pinned target identity; no login or remote mutation"
+}

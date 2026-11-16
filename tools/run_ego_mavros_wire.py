@@ -27,6 +27,8 @@ with tarfile.open(base/'inputs.tar','w') as archive:
         archive.add(repo/src,arcname=dst)
     for name in ['adapter.py','execution.py']:
         archive.add(repo/'platform/01_apps/ego_planner/px4_execution'/name,arcname=name)
+    if os.environ.get('EGO_WIRE_TRACE')=='1':
+        archive.add(repo/'tools/trace_adapter_publish.py',arcname='trace_adapter_publish.py')
 with (base/'inputs.tar').open('rb') as source:
     subprocess.run(ssh+['mkdir '+remote+' && tar -xf - -C '+remote],stdin=source,check=True)
 ab_r,ab_w=os.pipe();ba_r,ba_w=os.pipe()

@@ -80,3 +80,7 @@
 2026-11-17：航点原生控制器→真实MAVROS→隔离官方PX4消息链路34项通过，198条源/线包毫秒戳、ENU/NED及mask匹配；PX4 ULog65条offboard_control_mode证实位置/速度解析。RC取消与位姿过期均ABORT停发。合成状态/RC/里程计及模式服务stub，不是闭环飞行；真实PX4始终未解锁且非OFFBOARD。启动RTT/参数重试、结束后mission computer lost保留解释。机载临时目录清理，c58b4d5干净、NoMachine正常；记录仅电脑/GitHub。详见records/2026-11-17/waypoint-mavros-wire。
 
 2026-11-17：修复EGO执行器argparse拒绝标准--ros-args重映射，已部署候选b686e55。实际EGO规划/FSM/执行器→MAVROS→隔离PX4最终38项通过，228源/228wire的PVA/yaw/掩码/毫秒戳匹配，ULog59条控制模式证实PVA解析；始终未解锁/非OFFBOARD。里程计/点云/规划器停流、恢复、STOP_HOLD和交还退出已测。原有执行器46项回归通过。首轮228/219有9条启动保持丢失，原因未定，保留严格失败，不宣称无丢失已解决。机载临时目录已取回清理、Git干净、NoMachine正常。详见records/2026-11-17/ego-mavros-wire。
+
+2026-11-17：EGO启动丢失进一步诊断：新增测试专用发布匹配跟踪/内部mavlink_sink观察，未改产品。首轮228发布/188wire，39条遗漏时已匹配2订阅；次轮246发布/205内部出口/205wire，38条遗漏时匹配2订阅，内部出口与wire集合一致。否定“仅未发现订阅者”解释；更指向源→插件路径，具体DDS/执行器根因未定，严格全流两轮均失败，未放宽门槛。两轮证据取回并删除机载临时目录；随后.224 IPv4无路由、IPv6超时，.235仍在线，末次机载状态待重新确认。见records/2026-11-17/ego-startup-delivery。
+
+2026-11-17：启动诊断后的网络故障续查：邻居SSH公钥扫描重新找到同一.224，连接恢复，无重启迹象；b686e55干净、NoMachine active、临时目录及所属测试进程已清理，证据在ego-startup-delivery/reconnected-state.json。中断原因未定，未更改网络或服务。

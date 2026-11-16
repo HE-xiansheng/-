@@ -1,0 +1,7 @@
+{
+  "tools/trace_adapter_publish.py": "86b1941680b256fbbea968fb6deab338b90bbe0f26a993aab4e85b54aa036809",
+  "tools/analyze_ego_discovery_trace.py": "56a4eb2e420db8d109261191b13a2e3be101fdf42ae9e4c76686f5eccc593904",
+  "tools/run_ego_mavros_wire.py": "2ee57b733321c24464bcb0d7140c6b93ac02020cd5d94688ed29f5bda0e3260b",
+  "tools/test_ego_mavros_wire_ros2.py": "4cb6150b98b3e6ef5758e599c049e109afd3bf84bbe5239df255b38ed1ef5479",
+  "platform/01_apps/ego_planner/px4_execution/adapter.py": "00ba45808f918af77e7116297c81eaaafbeb4dc0502de16597398d08d013297f"
+}

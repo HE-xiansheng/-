@@ -12,9 +12,9 @@ import time
 
 import numpy as np
 import rclpy
-from rclpy.qos import QoSProfile, DurabilityPolicy, qos_profile_sensor_data
+from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy, qos_profile_sensor_data
 from geometry_msgs.msg import PoseStamped
-from mavros_msgs.msg import State, ExtendedState, PositionTarget
+from mavros_msgs.msg import State, ExtendedState, PositionTarget, Mavlink
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import String
@@ -25,7 +25,7 @@ def main():
     assert os.environ.get('ROS_DOMAIN_ID')=='87' and os.environ.get('ROS_LOCALHOST_ONLY')=='1'
     base=Path(sys.argv[1]); root=Path('/home/orangepi/drone_platform/01_apps/ego_planner')
     rclpy.init();node=rclpy.create_node('ego_wire_fixture')
-    checks={};commands=[];actual_states=[];statuses=[];plans=[];trajectories=[];processes=[];logs=[]
+    checks={};commands=[];actual_states=[];statuses=[];plans=[];trajectories=[];processes=[];logs=[];sink=[]
     retained=QoSProfile(depth=1,durability=DurabilityPolicy.TRANSIENT_LOCAL)
     node.create_subscription(State,'/mavros/state',actual_states.append,qos_profile_sensor_data)
     node.create_subscription(String,'/ego_planner/px4_execution/status',lambda m:statuses.append(json.loads(m.data)),retained)
@@ -37,6 +37,14 @@ def main():
             position=[m.position.x,m.position.y,m.position.z],velocity=[m.velocity.x,m.velocity.y,m.velocity.z],
             acceleration=[m.acceleration_or_force.x,m.acceleration_or_force.y,m.acceleration_or_force.z],yaw=m.yaw,yaw_rate=m.yaw_rate))
     node.create_subscription(PositionTarget,'/mavros/setpoint_raw/local',record,500)
+    if (base/'trace_adapter_publish.py').exists():
+        def record_sink(m):
+            if m.msgid==84:
+                payload=b''.join(struct.pack('<Q',int(v)) for v in m.payload64)
+                sink.append(dict(time_boot_ms=struct.unpack_from('<I',payload)[0],
+                    received_monotonic=time.monotonic(),seq=m.seq,sysid=m.sysid,compid=m.compid))
+        node.create_subscription(Mavlink,'/uas1/mavlink_sink',record_sink,
+            QoSProfile(depth=500,reliability=ReliabilityPolicy.BEST_EFFORT))
     pubs={key:node.create_publisher(cls,topic,10) for key,cls,topic in [
         ('state',State,'/fixture/state'),('landed',ExtendedState,'/fixture/landed'),('pose',PoseStamped,'/fixture/pose'),
         ('lio',Odometry,'/factory_fastlio/odometry'),('cloud',PointCloud2,'/factory_fastlio/cloud_world'),
@@ -90,7 +98,8 @@ def main():
             '--params-file',str(root/'config/planner.yaml'),'--params-file',str(root/'config/manual_preview.yaml'),
             '-r','odom_world:=/factory_fastlio/odometry','-r','grid_map/odom:=/factory_fastlio/odometry','-r','grid_map/cloud:=/factory_fastlio/cloud_world'])
         check('actual_planner_ready',pump(10,lambda:plans and plans[-1]['phase']=='WAIT_GOAL'))
-        adapter=start('adapter',[sys.executable,str(base/'adapter.py'),'--publish','--isolated-test','--run',str(base/'execution'),
+        entry=base/('trace_adapter_publish.py' if (base/'trace_adapter_publish.py').exists() else 'adapter.py')
+        adapter=start('adapter',[sys.executable,str(entry),'--publish','--isolated-test','--run',str(base/'execution'),
             '--ros-args','-r','/mavros/state:=/fixture/state','-r','/mavros/extended_state:=/fixture/landed',
             '-r','/mavros/local_position/pose:=/fixture/pose'])
         check('standard_ros_remaps_allow_ready',phase('READY'))
@@ -128,7 +137,7 @@ def main():
             stop('process_'+str(p.pid),p)
         for log in logs:log.close()
         (base/'result.json').write_text(json.dumps(dict(checks=checks,commands=commands,statuses=statuses,
-            trajectory_count=len(trajectories),actual_states=[dict(armed=s.armed,mode=s.mode,connected=s.connected) for s in actual_states]),indent=2)+'\n')
+            mavros_sink_commands=sink,trajectory_count=len(trajectories),actual_states=[dict(armed=s.armed,mode=s.mode,connected=s.connected) for s in actual_states]),indent=2)+'\n')
         node.destroy_node();rclpy.shutdown()
     return 0 if checks and all(checks.values()) else 1
 

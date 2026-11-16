@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/mavlink/mavros/2.16.0/mavros/src/plugins/setpoint_raw.cpp",
+    "sha256": "32697916f2f105d71598e66585564d7d591df71cb45e5fe8f61eb9be66c57751",
+    "scope": "upstream reference only; deployed library source/binary equivalence not established"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mavlink/mavros/2.16.0/mavros/src/lib/mavros_router.cpp",
+    "sha256": "2b27b1fafca1e9507c07a52e1bc9096157a9b9130a6446a24c87a62073d277f8",
+    "scope": "upstream reference only; deployed library source/binary equivalence not established"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mavlink/mavros/2.16.0/mavros/src/lib/mavros_uas.cpp",
+    "sha256": "f95ea33953ddfe373e6ba8e64ae8bf47898a4c67f00e6e1138eee6ffbc73d884",
+    "scope": "upstream reference only; deployed library source/binary equivalence not established"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/mavlink/mavros/2.16.0/mavros/src/lib/uas_executor.cpp",
+    "sha256": "f2ece160d48506cb35fdd2bf58a5a20f8b3f67ba4e8ad6da2eb85683e63b19ed",
+    "scope": "upstream reference only; deployed library source/binary equivalence not established"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "expected_target_mac": "40:fd:f3:04:1f:c6",
+  "responding_host_count": 37,
+  "target_neighbor_matches": [],
+  "scope": "ICMP discovery on current directly attached /23; no remote mutation"
+}

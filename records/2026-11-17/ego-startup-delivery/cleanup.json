@@ -1,0 +1,25 @@
+{
+  "runner_results": {
+    "1": {
+      "passed": true,
+      "returncodes": [
+        0,
+        0,
+        0
+      ],
+      "remote_removed": true
+    },
+    "2": {
+      "passed": true,
+      "returncodes": [
+        0,
+        0,
+        0
+      ],
+      "remote_removed": true
+    }
+  },
+  "last_verified_target_commit": "b686e5590de9b2511518bcf187b7480d04397e62",
+  "after_run_remote_revalidation": "Temporary connectivity loss then same .224 restored; current clean/NoMachine/process check in reconnected-state.json",
+  "notes": "Both runner exit records confirm retrieval then remote temporary directory removal before connectivity loss. No product source or service changes in this stage."
+}

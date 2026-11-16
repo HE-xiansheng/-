@@ -1,0 +1,250 @@
+{
+  "scope": "diagnostic only; does not waive strict full-stream wire checks",
+  "emitted_count": 228,
+  "observer_count": 228,
+  "wire_count": 188,
+  "all_emissions_reached_wire": false,
+  "all_emissions_seen_by_fixture": true,
+  "all_wire_stamps_are_actual_emissions": true,
+  "wire_only_after_second_subscription": true,
+  "missing_only_with_fixture_subscription": false,
+  "no_missing_after_second_subscription": false,
+  "unique_emission_millisecond_stamps": true,
+  "unmatched_emissions": [
+    {
+      "index": 0,
+      "stamp_ns": 1794845654391802081,
+      "matched_subscriptions": 1
+    },
+    {
+      "index": 1,
+      "stamp_ns": 1794845654415345835,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 2,
+      "stamp_ns": 1794845654439177461,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 3,
+      "stamp_ns": 1794845654460754812,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 4,
+      "stamp_ns": 1794845654484764354,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 5,
+      "stamp_ns": 1794845654506773076,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 6,
+      "stamp_ns": 1794845654529215796,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 7,
+      "stamp_ns": 1794845654551903805,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 8,
+      "stamp_ns": 1794845654574551857,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 9,
+      "stamp_ns": 1794845654596269498,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 10,
+      "stamp_ns": 1794845654617645767,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 11,
+      "stamp_ns": 1794845654640919189,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 12,
+      "stamp_ns": 1794845654663255534,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 13,
+      "stamp_ns": 1794845654685052508,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 14,
+      "stamp_ns": 1794845654708702302,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 15,
+      "stamp_ns": 1794845654732919343,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 16,
+      "stamp_ns": 1794845654757425006,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 17,
+      "stamp_ns": 1794845654779322146,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 18,
+      "stamp_ns": 1794845654801569867,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 19,
+      "stamp_ns": 1794845654823989629,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 20,
+      "stamp_ns": 1794845654845757728,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 21,
+      "stamp_ns": 1794845654868213572,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 22,
+      "stamp_ns": 1794845654889820964,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 23,
+      "stamp_ns": 1794845654911353857,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 24,
+      "stamp_ns": 1794845654935997311,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 25,
+      "stamp_ns": 1794845654959010818,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 26,
+      "stamp_ns": 1794845654983520857,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 27,
+      "stamp_ns": 1794845655009280386,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 28,
+      "stamp_ns": 1794845655032679474,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 29,
+      "stamp_ns": 1794845655055069986,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 30,
+      "stamp_ns": 1794845655077205291,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 31,
+      "stamp_ns": 1794845655099664927,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 32,
+      "stamp_ns": 1794845655122124855,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 33,
+      "stamp_ns": 1794845655145248319,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 34,
+      "stamp_ns": 1794845655168413701,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 35,
+      "stamp_ns": 1794845655192860864,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 36,
+      "stamp_ns": 1794845655215046711,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 37,
+      "stamp_ns": 1794845655237465389,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 38,
+      "stamp_ns": 1794845655261574972,
+      "matched_subscriptions": 2
+    },
+    {
+      "index": 39,
+      "stamp_ns": 1794845655283951942,
+      "matched_subscriptions": 2
+    }
+  ],
+  "match_transitions": [
+    {
+      "stamp_ns": 1794845654391802081,
+      "before_publish_monotonic": 20772.702000919,
+      "matched_subscriptions": 1,
+      "discovered_subscriptions": [
+        {
+          "node_name": "ego_wire_fixture",
+          "node_namespace": "/",
+          "reliability": 1,
+          "durability": 2
+        }
+      ]
+    },
+    {
+      "stamp_ns": 1794845654415345835,
+      "before_publish_monotonic": 20772.725498298,
+      "matched_subscriptions": 2,
+      "discovered_subscriptions": [
+        {
+          "node_name": "ego_wire_fixture",
+          "node_namespace": "/",
+          "reliability": 1,
+          "durability": 2
+        },
+        {
+          "node_name": "_NODE_NAME_UNKNOWN_",
+          "node_namespace": "_NODE_NAMESPACE_UNKNOWN_",
+          "reliability": 2,
+          "durability": 2
+        }
+      ]
+    }
+  ],
+  "interpretation": "First endpoint is identified as the fixture. Second endpoint has unknown ROS node name; only MAVROS is the other command consumer in this isolated fixture. Counts prove match timing in this run, not the historical 9-message loss."
+}
