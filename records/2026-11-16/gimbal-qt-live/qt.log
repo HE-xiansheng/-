@@ -1,0 +1,25 @@
+PASS 真实视频面板创建
+PASS 实际云台视频按钮存在
+PASS 实物RTSP经实际Qt按钮进入控制器
+PASS 单开云台没有启动双目SSH或任务
+PASS 真实视频解码尺寸640x360
+PASS 实际VideoPanel Image加载实物云台帧
+PASS 实物视频持续更新且像素变化
+PASS 实际视频面板渲染得到窗口帧
+PASS 实际按钮关闭视频并回收接收进程
+PASS 实际按钮重新打开并加载新视频
+REQUEST_TRANSPORT_DROP
+云台接收进程退出 0
+"云台连接中断，2 秒后自动重连"
+视频: 错误：来自组件 /GstPipeline:pipeline0/GstRTSPSrc:rtspsrc0：无法打开资源读取和写入。
+额外的调试信息：
+gstrtspsrc.c(7893): gst_rtspsrc_retrieve_sdp (): /GstPipeline:pipeline0/GstRTSPSrc:rtspsrc0:
+Failed to connect. (Generic error)
+错误: 管道不需要 preroll.
+云台接收进程退出 1
+"云台连接中断，4 秒后自动重连"
+PASS 真实转发断流后画面失效并安排恢复
+TRANSPORT_LOSS_OBSERVED
+PASS 真实转发恢复后Qt自动重连更新画面
+PASS 视频恢复后重连退避复位
+PASS 结束时视频状态失效且接收进程全部回收

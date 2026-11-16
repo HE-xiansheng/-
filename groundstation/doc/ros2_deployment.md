@@ -47,3 +47,5 @@ python3 tools/packaging/package_ros2_linux.py \
 补充运行库参数用于本机缺少的libxcb-cursor及许可文件。解压归档后执行start-groundstation.sh，可从任意工作目录启动。包含Qt库/QML/插件，系统Python/numpy、OpenSSH、OpenGL/X11和GStreamer仍为外部依赖；本机不需要ROS。此轮Ubuntu20.04 amd64桌面已验证，其他发行版未验收。文件摘要、权限和符号链接记录在payload-manifest.json；外层归档有sha256文件。
 
 下载目录的20261116-22c9b52-r2产物在含空格新路径解压后完成7项清单/依赖/主界面首帧检查、8项实际SSH/PFS1及桥接启停检查；测试没有发送飞行任务，完整物理工作流仍待验收。见records/2026-11-16/gcs-portable-linux。仅删除已关闭的解压目录即可移除此包，用户日志与设置继续留在各自用户数据目录。
+
+实际VideoPanel云台按钮与视频渲染另完成14项实物视频检查：开关/重开、640x360连续变化画面、QML Image Ready、offscreen窗口帧、主动中断临时转发后的失效和恢复自动重连均通过。视频来自.235经.224临时relay与SSH转发，未启动飞行或云台控制；不替代.224云台网卡直连、可见桌面鼠标操作、延迟或外参验收。MPP订阅吞吐问题仍保留。日志见records/2026-11-16/gimbal-qt-live。

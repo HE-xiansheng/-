@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "qt_exit": 0,
+  "dropped": true,
+  "restored": true,
+  "evidence_retrieved": true,
+  "events": [
+    {
+      "event": "stopped_owned_target_tunnel",
+      "monotonic": 656349.426159794
+    },
+    {
+      "event": "restored_owned_target_tunnel",
+      "monotonic": 656351.839917311
+    }
+  ],
+  "scope": "actual VideoPanel/QImage/renderer/buttons and real camera RTSP; temporary localhost tunnels, no flight task or gimbal movement"
+}

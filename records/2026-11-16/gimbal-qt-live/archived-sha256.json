@@ -1,0 +1,11 @@
+{
+  "groundstation/tools/video/tests/reconnect.cpp": "81bdb4e6b16cfe5510f1562878e85b1b1ada02ef446e64bfecba3af6f24ca06d",
+  "groundstation/tools/video/tests/CMakeLists.txt": "0e1d0d376a2446887e0f5679ce178dc70be039f67ef037de1cf99bfecb561fb6",
+  "groundstation/VideoPanel.qml": "a9f3f3f44355330185a46ffa2948dffd567fc87d4f84d93bddb46b464eaab6ea",
+  "groundstation/videocontroller.cpp": "fa471b861672e81311d47bc75411fa96498c7f400ef0e96339271e463c1b3436",
+  "groundstation/videocontroller.h": "1a68b61d30809a1bb26786a5cd0a6a4678fa9337915462c8ecf8300ff5bc08ad",
+  "groundstation/connectioncontroller.cpp": "5ee5b508c6a51e9ce7b31e4f410bb3a602938b01f966bd29a2a227d9cc4a4dc7",
+  "groundstation/connectioncontroller.h": "0cbe7102ecd604a1285be591f2974cfe13e2d0ac9af2e3e56a747332ebdbbd56",
+  "tools/run_qt_gimbal_live.py": "6c8154608b2579efa13c1005899cbc9e6ad07c573c5a160dc50cdd5b8ba5e3a6",
+  "/home/tyzk/drone-migration-work/build-groundstation-video-test/video_reconnect_test": "c570d9159b758b81c1b059d6102107d96d6020b6de4d45114e5b439b598d2939"
+}

@@ -11,6 +11,7 @@
 #include <QQmlContext>
 #include <QQmlComponent>
 #include <QQuickItem>
+#include <QQuickWindow>
 #include <QTemporaryDir>
 #include <QFile>
 #include <QThread>
@@ -33,6 +34,49 @@ static void require(bool ok, const char *message) {
 }
 int main(int argc, char **argv) {
     QGuiApplication app(argc, argv);
+    if (app.arguments().contains("--real-gimbal")) {
+        // 临时隧道只读转发实物视频；不启动ROS任务或云台控制。
+        VideoController c; c.setHost("127.0.0.1");
+        QQmlEngine engine; engine.rootContext()->setContextProperty("videoController", &c);
+        engine.addImageProvider("livevideo", new VideoImageProvider(&c));
+        QQmlComponent panel(&engine, QUrl::fromLocalFile(QStringLiteral(GCS_VIDEO_ROOT "/VideoPanel.qml")));
+        QObject *root=panel.create();
+        if (!root) qFatal("QML create failed: %s", qPrintable(panel.errorString()));
+        auto item=qobject_cast<QQuickItem*>(root); require(item, "真实视频面板创建");
+        QQuickWindow window; window.resize(600,500); item->setParentItem(window.contentItem());
+        item->setWidth(600); item->setHeight(500); window.show();
+        auto button=root->findChild<QObject*>("toggleGimbalVideo"); require(button, "实际云台视频按钮存在");
+        QElapsedTimer timer;
+        auto until=[&](const std::function<bool()> &predicate,int timeout=16000) {
+            timer.restart(); while(timer.elapsed()<timeout) {QCoreApplication::processEvents(); if(predicate())return true; QThread::msleep(5);}return false;
+        };
+        std::function<bool(QQuickItem*)> readyImage=[&](QQuickItem *child) {
+            if(child->property("source").toUrl().toString().startsWith("image://livevideo/gimbal/") && child->property("status").toInt()==1)return true;
+            for(auto next:child->childItems())if(readyImage(next))return true;
+            return false;
+        };
+        QMetaObject::invokeMethod(button,"clicked");
+        require(until([&]{return c.gimbalFresh() && c.gimbalRevision()>15;}), "实物RTSP经实际Qt按钮进入控制器");
+        require(!c.stereoEnabled() && c.m_stereo.state()==QProcess::NotRunning, "单开云台没有启动双目SSH或任务");
+        require(c.image(1).size()==QSize(640,360), "真实视频解码尺寸640x360");
+        require(until([&]{return readyImage(item);}), "实际VideoPanel Image加载实物云台帧");
+        const auto first=c.image(1); const int revision=c.gimbalRevision();
+        require(until([&]{return c.gimbalRevision()>revision+15 && c.image(1)!=first;}), "实物视频持续更新且像素变化");
+        require(!window.grabWindow().isNull(), "实际视频面板渲染得到窗口帧");
+        QMetaObject::invokeMethod(button,"clicked");
+        require(!c.gimbalFresh() && c.image(1).isNull() && c.m_gimbal.state()==QProcess::NotRunning && !c.m_gimbalRetry.isActive(), "实际按钮关闭视频并回收接收进程");
+        QMetaObject::invokeMethod(button,"clicked");
+        require(until([&]{return c.gimbalFresh() && readyImage(item);}), "实际按钮重新打开并加载新视频");
+        qInfo()<<"REQUEST_TRANSPORT_DROP";
+        require(until([&]{return !c.gimbalFresh() && (c.m_gimbalRetry.isActive() || c.m_gimbal.state()==QProcess::NotRunning);},25000), "真实转发断流后画面失效并安排恢复");
+        const auto lostRevision=c.gimbalRevision();
+        qInfo()<<"TRANSPORT_LOSS_OBSERVED";
+        require(until([&]{return c.gimbalFresh() && c.gimbalRevision()>lostRevision+15 && readyImage(item);},45000), "真实转发恢复后Qt自动重连更新画面");
+        require(c.m_gimbalRetryDelayMs==2000 && !c.m_gimbalRetry.isActive(), "视频恢复后重连退避复位");
+        c.stop();
+        require(!c.gimbalFresh() && !c.active() && c.m_gimbal.state()==QProcess::NotRunning && c.m_stereo.state()==QProcess::NotRunning, "结束时视频状态失效且接收进程全部回收");
+        delete root; return 0;
+    }
     if (app.arguments().contains("--real-ssh")) {
         VideoController c;c.setHost("192.168.1.224");c.setStreamEnabled(0,true);
         QElapsedTimer timer;timer.start();
