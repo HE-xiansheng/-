@@ -1,0 +1,55 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/platform-soak-check/observer-build
+[ 50%] Building CXX object CMakeFiles/observer.dir/observer.cpp.o
+[100%] Linking CXX executable observer
+[100%] Built target observer
+{"all_actual_processing_streams_ready": true}
+{"actual_recorder_ready": true}
+{"remaining_s": 115.0, "streams": {"color": 1472, "odom": 569, "cloud": 568, "depth": 1524, "preview": 760, "vision": 261}, "bag_bytes": 35465024, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 76.692, "thermal_zone3": 81.307, "thermal_zone1": 83.153, "thermal_zone6": 78.538, "thermal_zone4": 77.615}}
+{"remaining_s": 110.0, "streams": {"color": 1580, "odom": 617, "cloud": 617, "depth": 1633, "preview": 815, "vision": 307}, "bag_bytes": 69138240, "temperature_c": {"thermal_zone2": 80.384, "thermal_zone0": 79.461, "thermal_zone5": 75.769, "thermal_zone3": 80.384, "thermal_zone1": 80.384, "thermal_zone6": 77.615, "thermal_zone4": 76.692}}
+{"remaining_s": 104.9, "streams": {"color": 1653, "odom": 664, "cloud": 663, "depth": 1716, "preview": 854, "vision": 344}, "bag_bytes": 98920256, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 77.615, "thermal_zone3": 81.307, "thermal_zone1": 83.153, "thermal_zone6": 78.538, "thermal_zone4": 78.538}}
+{"remaining_s": 99.9, "streams": {"color": 1806, "odom": 709, "cloud": 709, "depth": 1875, "preview": 923, "vision": 385}, "bag_bytes": 129349440, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 82.23, "thermal_zone5": 78.538, "thermal_zone3": 82.23, "thermal_zone1": 83.153, "thermal_zone6": 79.461, "thermal_zone4": 79.461}}
+{"remaining_s": 94.9, "streams": {"color": 1952, "odom": 761, "cloud": 761, "depth": 2025, "preview": 990, "vision": 427}, "bag_bytes": 160216896, "temperature_c": {"thermal_zone2": 84.076, "thermal_zone0": 82.23, "thermal_zone5": 78.538, "thermal_zone3": 83.153, "thermal_zone1": 84.076, "thermal_zone6": 80.384, "thermal_zone4": 79.461}}
+{"remaining_s": 89.9, "streams": {"color": 2104, "odom": 807, "cloud": 807, "depth": 2177, "preview": 1059, "vision": 454}, "bag_bytes": 190347072, "temperature_c": {"thermal_zone2": 84.076, "thermal_zone0": 82.23, "thermal_zone5": 78.538, "thermal_zone3": 83.153, "thermal_zone1": 84.076, "thermal_zone6": 80.384, "thermal_zone4": 79.461}}
+{"mpp_reliable_raw_all_source_stamps": true}
+{"mpp_reliable_color_all_source_stamps": true}
+{"mpp_best_effort_raw_all_source_stamps": true}
+{"mpp_best_effort_color_all_source_stamps": true}
+{"npu_preserves_independently_observed_camera_headers": true}
+{"passed": false, "checks": {"all_actual_processing_streams_ready": true, "actual_recorder_ready": true, "mpp_reliable_raw_all_source_stamps": true, "mpp_reliable_color_all_source_stamps": true, "mpp_best_effort_raw_all_source_stamps": true, "mpp_best_effort_color_all_source_stamps": true, "npu_preserves_independently_observed_camera_headers": true}}
+Traceback (most recent call last):
+  File "/tmp/platform-soak-check/test_platform_soak_ros2.py", line 113, in <module>
+    if gcs_mode and (out/'gcs-abort.json').exists():raise RuntimeError('GCS failed; abort isolated fixture and retain failure evidence')
+RuntimeError: GCS failed; abort isolated fixture and retain failure evidence

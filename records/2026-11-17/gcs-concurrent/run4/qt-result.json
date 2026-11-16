@@ -1,0 +1,318 @@
+{
+    "bag_mb": 191.768312,
+    "checks": {
+        "actual_lio_cloud_pose_cross_host_udp": true,
+        "actual_qml_clicked_handler": true,
+        "both_actual_qml_images_loaded": true,
+        "both_live_video_streams": true,
+        "button_enabled": true,
+        "cloud_points_available": true,
+        "full_main_window_created": true,
+        "onboardConnect": true,
+        "production_controllers_found": true,
+        "qml_record_start_confirmed_by_remote_state": true,
+        "real_ssh_connection_and_telemetry": true,
+        "recordingStart": true,
+        "recording_state_arrives_through_production_telemetry": true,
+        "simultaneous_streams_and_recording_remain_fresh_30s": false,
+        "toggleGimbalVideo": true,
+        "toggleStereoVideo": true
+    },
+    "concurrent_samples": [
+        {
+            "elapsed_ms": 1999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.063,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 2999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.116,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 3999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.096,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 4998,
+            "gimbal_fresh": false,
+            "monitor_age": 1.052,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 5999,
+            "gimbal_fresh": false,
+            "monitor_age": 0.975,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 6999,
+            "gimbal_fresh": false,
+            "monitor_age": 0.988,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 7999,
+            "gimbal_fresh": true,
+            "monitor_age": 1.042,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 8999,
+            "gimbal_fresh": true,
+            "monitor_age": 1.074,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 9999,
+            "gimbal_fresh": true,
+            "monitor_age": 1.062,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 10996,
+            "gimbal_fresh": false,
+            "monitor_age": 1.007,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 11999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.01,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 12998,
+            "gimbal_fresh": false,
+            "monitor_age": 1.022,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 13999,
+            "gimbal_fresh": false,
+            "monitor_age": 0.978,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 14999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.011,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 15996,
+            "gimbal_fresh": false,
+            "monitor_age": 0.998,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 16997,
+            "gimbal_fresh": false,
+            "monitor_age": 1.101,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 17999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.026,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 18997,
+            "gimbal_fresh": true,
+            "monitor_age": 1.009,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 19999,
+            "gimbal_fresh": true,
+            "monitor_age": 1.077,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 20998,
+            "gimbal_fresh": true,
+            "monitor_age": 1.085,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 21999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.033,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 22999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.008,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 23999,
+            "gimbal_fresh": false,
+            "monitor_age": 0.976,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 24999,
+            "gimbal_fresh": false,
+            "monitor_age": 0.99,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 25999,
+            "gimbal_fresh": false,
+            "monitor_age": 1.013,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 26998,
+            "gimbal_fresh": false,
+            "monitor_age": 0.972,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 27998,
+            "gimbal_fresh": false,
+            "monitor_age": 0.975,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 28996,
+            "gimbal_fresh": true,
+            "monitor_age": 1.037,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        },
+        {
+            "elapsed_ms": 29999,
+            "gimbal_fresh": true,
+            "monitor_age": 1.077,
+            "recording": true,
+            "recording_fresh": true,
+            "stereo_fresh": true,
+            "telemetry_fresh": true,
+            "video_status": "双目、云台视频正常"
+        }
+    ],
+    "error": "simultaneous_streams_and_recording_remain_fresh_30s",
+    "passed": false,
+    "recording_elapsed": 32.310921359938455,
+    "sample_count": 29,
+    "scope": "Actual main/QML/controllers; actual camera/NPU/LIO replay; synthetic gimbal RTSP on independent port; record writes redirected to isolated copy; no flight commands"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "local_path": "/home/tyzk/drone-migration-work/gcs-concurrent-run2/ros2-crash.apport",
+    "bytes": 11430195,
+    "sha256": "e8206701625d10897a043384b8b793704d33d54c717b75cb90506a02bb1c5056"
+  },
+  {
+    "local_path": "/home/tyzk/drone-migration-work/rosbag-stop-diagnosis/mapped-libs-deref.tar.gz",
+    "bytes": 26412295,
+    "sha256": "37a4063ab48af3f058f19d8b78cf2eada8d8cf47a4048594f868bda71fc29054"
+  }
+]

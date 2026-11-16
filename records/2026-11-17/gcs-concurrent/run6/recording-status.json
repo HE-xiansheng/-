@@ -1,0 +1,63 @@
+{
+  "schema": 3,
+  "policy": "manual",
+  "phase": "STOPPED",
+  "stamp": 1794856426.7847488,
+  "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-031257-2ae2cb",
+  "duration_s": 44.80892795600084,
+  "bag_bytes": 258899968,
+  "bag_pid": null,
+  "storage": "sqlite3",
+  "request_id": "5f192bf6cf594b9287f8e88cd0a5ea43",
+  "clip_id": "5f192bf6cf594b9287f8e88cd0a5ea43",
+  "recording_started_wall": 1794856380.7296894,
+  "free_bytes": 8068632576,
+  "flight_observed": {
+    "fresh": false,
+    "connected": false,
+    "armed": false,
+    "mode": null,
+    "landed_state": null,
+    "state_stamp": null,
+    "landed_stamp": null
+  },
+  "missing_topics": [
+    "/ego_planner/flight_execution",
+    "/ego_planner/flight_execution/trajectory",
+    "/ego_planner/manual_preview/status",
+    "/ego_planner/manual_preview/trajectory",
+    "/ego_planner/px4_execution/status",
+    "/goal",
+    "/grid_map/occupancy",
+    "/grid_map/occupancy_inflate",
+    "/mandatory_stop_to_planner",
+    "/mavros/battery",
+    "/mavros/estimator_status",
+    "/mavros/extended_state",
+    "/mavros/imu/data",
+    "/mavros/local_position/odom",
+    "/mavros/local_position/pose",
+    "/mavros/local_position/velocity_local",
+    "/mavros/rc/in",
+    "/mavros/setpoint_raw/local",
+    "/mavros/setpoint_raw/target_local",
+    "/mavros/state",
+    "/mavros/statustext/recv",
+    "/mavros/timesync_status",
+    "/move_base_simple/goal",
+    "/planning/data_display",
+    "/planning/trajectory"
+  ],
+  "active_bags": [],
+  "warnings": [
+    "缺少25个话题；详见recording-status.json"
+  ],
+  "bags": [
+    {
+      "file": "inputs-5f192bf6cf594b9287f8e88cd0a5ea43/inputs-5f192bf6cf594b9287f8e88cd0a5ea43_0.db3",
+      "bytes": 258899968,
+      "messages": 9626,
+      "sha256": "9cd9497a0a463e81e4ee384dd8a00466dd40d23b924447a10c6d0fcdfae0a7ac"
+    }
+  ]
+}

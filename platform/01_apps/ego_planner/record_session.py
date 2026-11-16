@@ -191,8 +191,10 @@ def main():
                         dump_params(node,run/('params-start-'+last+'.json'))
                         marker=run/('inputs-'+last+'.active');marker.touch(exist_ok=False)
                         recorder='flight_bag_'+str(os.getpid())
+                        # Humble 的 -p 单位是毫秒，保留官方默认 100ms。
+                        # 1ms 会把 stop() 等待发现线程的时间压到 2ms；并发实测曾超时后崩溃。
                         cmd=['ros2','bag','record','-s','sqlite3','-o',str(run/('inputs-'+last)),
-                             '-b',str(max(65536,int(os.environ.get('RECORDING_MAX_BAG_SIZE','268435456')))),'--max-cache-size','67108864','-p','1',
+                             '-b',str(max(65536,int(os.environ.get('RECORDING_MAX_BAG_SIZE','268435456')))),'--max-cache-size','67108864','-p','100',
                              '--qos-profile-overrides-path',str(run/'qos.yaml'),
                              '--storage-config-file',str(run/'storage.yaml'),'--node-name',recorder,*TOPICS]
                         proc=subprocess.Popen(cmd,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)

@@ -1,0 +1,38 @@
+Nov 17 02:50:32 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 02:50:32 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 02:52:32 orangepi5ultra kernel: usb 8-1: USB disconnect, device number 2
+Nov 17 02:52:33 orangepi5ultra kernel: usb 8-1: new SuperSpeed Gen 1 USB device number 3 using xhci-hcd
+Nov 17 02:52:33 orangepi5ultra kernel: usb 8-1: New USB device found, idVendor=2bc5, idProduct=0804, bcdDevice= 0.01
+Nov 17 02:52:33 orangepi5ultra kernel: usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=10
+Nov 17 02:52:33 orangepi5ultra kernel: usb 8-1: Product: Orbbec Gemini 335L
+Nov 17 02:52:33 orangepi5ultra kernel: usb 8-1: Manufacturer: Orbbec(R)
+Nov 17 02:52:33 orangepi5ultra kernel: usb 8-1: SerialNumber: CP253530009G
+Nov 17 02:52:33 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 02:52:33 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 02:52:33 orangepi5ultra kernel: hid-generic 0003:2BC5:0804.0002: hiddev96,hidraw0: USB HID v1.11 Device [Orbbec(R) Orbbec Gemini 335L] on usb-xhci-hcd.11.auto-1/input6
+Nov 17 02:52:52 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:52:52 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:52:57 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:52:57 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:02 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:02 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:06 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:06 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:11 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:11 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:16 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:16 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:21 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:21 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:25 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:25 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:28 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 02:53:28 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 02:53:30 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:30 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:35 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:35 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:40 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:40 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10
+Nov 17 02:53:44 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing signal not lock, tmds_clk_ratio:0
+Nov 17 02:53:44 orangepi5ultra kernel: fdee0000.hdmirx-controller: hdmirx_wait_lock_and_get_timing mu_st:0x0, scdc_st:0x0, dma_st10:0x10

@@ -1,0 +1,69 @@
+{
+  "schema": 3,
+  "policy": "manual",
+  "phase": "STOPPED",
+  "stamp": 1794855973.2073896,
+  "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-030445-5d0cca",
+  "duration_s": 81.92757205599992,
+  "bag_bytes": 500011008,
+  "bag_pid": null,
+  "storage": "sqlite3",
+  "request_id": "ba383a6ffac14b1f83f22726451945f8",
+  "clip_id": "ba383a6ffac14b1f83f22726451945f8",
+  "recording_started_wall": 1794855889.6032126,
+  "free_bytes": 7826620416,
+  "flight_observed": {
+    "fresh": false,
+    "connected": false,
+    "armed": false,
+    "mode": null,
+    "landed_state": null,
+    "state_stamp": null,
+    "landed_stamp": null
+  },
+  "missing_topics": [
+    "/ego_planner/flight_execution",
+    "/ego_planner/flight_execution/trajectory",
+    "/ego_planner/manual_preview/status",
+    "/ego_planner/manual_preview/trajectory",
+    "/ego_planner/px4_execution/status",
+    "/goal",
+    "/grid_map/occupancy",
+    "/grid_map/occupancy_inflate",
+    "/mandatory_stop_to_planner",
+    "/mavros/battery",
+    "/mavros/estimator_status",
+    "/mavros/extended_state",
+    "/mavros/imu/data",
+    "/mavros/local_position/odom",
+    "/mavros/local_position/pose",
+    "/mavros/local_position/velocity_local",
+    "/mavros/rc/in",
+    "/mavros/setpoint_raw/local",
+    "/mavros/setpoint_raw/target_local",
+    "/mavros/state",
+    "/mavros/statustext/recv",
+    "/mavros/timesync_status",
+    "/move_base_simple/goal",
+    "/planning/data_display",
+    "/planning/trajectory"
+  ],
+  "active_bags": [],
+  "warnings": [
+    "缺少25个话题；详见recording-status.json"
+  ],
+  "bags": [
+    {
+      "file": "inputs-ba383a6ffac14b1f83f22726451945f8/inputs-ba383a6ffac14b1f83f22726451945f8_0.db3",
+      "bytes": 269864960,
+      "messages": 10314,
+      "sha256": "476b3993386196b3d57e14650872cfafe46278c9d8af06490b8d2f3de8c4e53b"
+    },
+    {
+      "file": "inputs-ba383a6ffac14b1f83f22726451945f8/inputs-ba383a6ffac14b1f83f22726451945f8_1.db3",
+      "bytes": 230146048,
+      "messages": 8713,
+      "sha256": "76231d56093ce3e01d59df70b17c5d4657399135c8c56bfeef7789bf5b7472c2"
+    }
+  ]
+}

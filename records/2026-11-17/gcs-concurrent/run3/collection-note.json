@@ -1,0 +1,7 @@
+{
+  "original_collection_interrupted": true,
+  "recovered_archive": "/home/tyzk/drone-migration-work/gcs-concurrent-run3/fixture/evidence-recovered.tar.gz",
+  "temporary_directory_removed": true,
+  "gui_passed": false,
+  "stop_reason": "cleanup after GUI freshness failure; not a successful UI stop test"
+}

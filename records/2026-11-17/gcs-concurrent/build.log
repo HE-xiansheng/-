@@ -1,0 +1,13 @@
+[  1%] Built target customgeometry_qmlimportscan
+[  2%] Built target customgeometry_copy_qml
+[  4%] Built target customgeometry_copy_res
+[  4%] Built target customgeometry_autogen_timestamp_deps
+[  5%] Automatic MOC and UIC for target customgeometry
+[  5%] Built target customgeometry_autogen
+[  7%] Running AUTOMOC file extraction for target customgeometry
+[  8%] Running moc --collect-json for target customgeometry
+[ 10%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 10%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 11%] Building CXX object gcs/CMakeFiles/customgeometry.dir/home/tyzk/drone-migration-github/tools/gcs_concurrent/automation.cpp.o
+[ 13%] Linking CXX executable customgeometry
+[100%] Built target customgeometry

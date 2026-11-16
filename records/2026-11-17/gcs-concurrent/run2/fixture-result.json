@@ -1,0 +1,687 @@
+{
+  "passed": false,
+  "completed": true,
+  "checks": {
+    "all_actual_processing_streams_ready": true,
+    "actual_recorder_ready": true,
+    "recorder_normal_finalization": false,
+    "color_sustained_rate": true,
+    "color_source_order": true,
+    "color_no_long_gap": false,
+    "color_ages_bounded": true,
+    "depth_sustained_rate": true,
+    "depth_source_order": true,
+    "depth_no_long_gap": false,
+    "depth_ages_bounded": true,
+    "preview_sustained_rate": true,
+    "preview_source_order": true,
+    "preview_no_long_gap": false,
+    "preview_ages_bounded": true,
+    "odom_sustained_rate": true,
+    "odom_source_order": true,
+    "odom_no_long_gap": true,
+    "odom_ages_bounded": true,
+    "cloud_sustained_rate": true,
+    "cloud_source_order": true,
+    "cloud_no_long_gap": true,
+    "cloud_ages_bounded": true,
+    "vision_sustained_rate": true,
+    "vision_source_order": true,
+    "vision_no_long_gap": true,
+    "vision_ages_bounded": true,
+    "python_camera_preview_source_stamps_nonempty": true,
+    "relay_uses_actual_lio_stamps": true,
+    "lio_valid_frames_and_finite_unit_quaternion": true,
+    "all_recorded_sqlite_parts_valid": true,
+    "/livox/imu_all_stable_source_stamps_recorded": true,
+    "/livox/lidar_all_stable_source_stamps_recorded": true,
+    "/factory_fastlio/odometry_all_stable_source_stamps_recorded": true,
+    "/factory_fastlio/cloud_world_all_stable_source_stamps_recorded": true,
+    "/mavros/vision_pose/pose_all_stable_source_stamps_recorded": true,
+    "no_flight_command_interfaces": true,
+    "memory_headroom": true,
+    "mpp_reliable_raw_all_source_stamps": true,
+    "mpp_reliable_color_all_source_stamps": true,
+    "mpp_best_effort_raw_all_source_stamps": true,
+    "mpp_best_effort_color_all_source_stamps": true,
+    "npu_preserves_independently_observed_camera_headers": true
+  },
+  "resources": [
+    {
+      "monotonic_ns": 30256210872677,
+      "cpu": [
+        1403242,
+        6212,
+        382532,
+        22248564,
+        1476,
+        0,
+        18644,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13999472640
+      },
+      "temperature_c": {
+        "thermal_zone2": 82.23,
+        "thermal_zone0": 80.384,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 81.307,
+        "thermal_zone1": 82.23,
+        "thermal_zone6": 77.615,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 42569728,
+        "video-source": 56307712,
+        "native-observer": 99258368,
+        "mpp": 22929408,
+        "camera": 132988928,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30261226152920,
+      "cpu": [
+        1406149,
+        6212,
+        383022,
+        22249049,
+        1476,
+        0,
+        18699,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13968863232
+      },
+      "temperature_c": {
+        "thermal_zone2": 82.23,
+        "thermal_zone0": 80.384,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 80.384,
+        "thermal_zone1": 82.23,
+        "thermal_zone6": 77.615,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 42106880,
+        "video-source": 56307712,
+        "native-observer": 99258368,
+        "mpp": 22929408,
+        "camera": 132988928,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30266255072638,
+      "cpu": [
+        1409045,
+        6212,
+        383527,
+        22249580,
+        1476,
+        0,
+        18741,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13933461504
+      },
+      "temperature_c": {
+        "thermal_zone2": 81.307,
+        "thermal_zone0": 80.384,
+        "thermal_zone5": 76.692,
+        "thermal_zone3": 80.384,
+        "thermal_zone1": 80.384,
+        "thermal_zone6": 78.538,
+        "thermal_zone4": 77.615
+      },
+      "rss": {
+        "stream-server": 42577920,
+        "video-source": 56307712,
+        "native-observer": 99258368,
+        "mpp": 22929408,
+        "camera": 132988928,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30271336026758,
+      "cpu": [
+        1411791,
+        6212,
+        384015,
+        22250283,
+        1476,
+        0,
+        18787,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13950992384
+      },
+      "temperature_c": {
+        "thermal_zone2": 81.307,
+        "thermal_zone0": 78.538,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 79.461,
+        "thermal_zone1": 80.384,
+        "thermal_zone6": 76.692,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 42766336,
+        "video-source": 56307712,
+        "native-observer": 99258368,
+        "mpp": 22929408,
+        "camera": 132988928,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30276362559189,
+      "cpu": [
+        1414223,
+        6212,
+        384519,
+        22251251,
+        1476,
+        0,
+        18819,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13846978560
+      },
+      "temperature_c": {
+        "thermal_zone2": 83.153,
+        "thermal_zone0": 81.307,
+        "thermal_zone5": 76.692,
+        "thermal_zone3": 82.23,
+        "thermal_zone1": 83.153,
+        "thermal_zone6": 78.538,
+        "thermal_zone4": 77.615
+      },
+      "rss": {
+        "stream-server": 41803776,
+        "video-source": 56307712,
+        "native-observer": 99258368,
+        "mpp": 22929408,
+        "camera": 132988928,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30281402143095,
+      "cpu": [
+        1417186,
+        6212,
+        385030,
+        22251705,
+        1476,
+        0,
+        18865,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13828030464
+      },
+      "temperature_c": {
+        "thermal_zone2": 84.076,
+        "thermal_zone0": 82.23,
+        "thermal_zone5": 77.615,
+        "thermal_zone3": 82.23,
+        "thermal_zone1": 84.076,
+        "thermal_zone6": 79.461,
+        "thermal_zone4": 78.538
+      },
+      "rss": {
+        "stream-server": 43126784,
+        "video-source": 56307712,
+        "native-observer": 99258368,
+        "mpp": 22929408,
+        "camera": 132988928,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30286430517105,
+      "cpu": [
+        1419814,
+        6212,
+        385513,
+        22252512,
+        1476,
+        0,
+        18910,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 14027132928
+      },
+      "temperature_c": {
+        "thermal_zone2": 81.307,
+        "thermal_zone0": 79.461,
+        "thermal_zone5": 76.692,
+        "thermal_zone3": 80.384,
+        "thermal_zone1": 81.307,
+        "thermal_zone6": 77.615,
+        "thermal_zone4": 77.615
+      },
+      "rss": {
+        "stream-server": 42770432,
+        "video-source": 56307712,
+        "native-observer": 98828288,
+        "mpp": 22929408,
+        "camera": 132587520,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30291464524355,
+      "cpu": [
+        1421936,
+        6212,
+        385931,
+        22253893,
+        1476,
+        0,
+        18950,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 14001668096
+      },
+      "temperature_c": {
+        "thermal_zone2": 80.384,
+        "thermal_zone0": 78.538,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 79.461,
+        "thermal_zone1": 80.384,
+        "thermal_zone6": 76.692,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 42614784,
+        "video-source": 56307712,
+        "native-observer": 98578432,
+        "mpp": 22929408,
+        "camera": 132337664,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30296501150184,
+      "cpu": [
+        1424016,
+        6212,
+        386327,
+        22255287,
+        1476,
+        0,
+        18985,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13973868544
+      },
+      "temperature_c": {
+        "thermal_zone2": 79.461,
+        "thermal_zone0": 78.538,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 78.538,
+        "thermal_zone1": 79.461,
+        "thermal_zone6": 76.692,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 43302912,
+        "video-source": 56307712,
+        "native-observer": 98578432,
+        "mpp": 22929408,
+        "camera": 132337664,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30301539517550,
+      "cpu": [
+        1426096,
+        6212,
+        386722,
+        22256700,
+        1476,
+        0,
+        19018,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13939716096
+      },
+      "temperature_c": {
+        "thermal_zone2": 79.461,
+        "thermal_zone0": 78.538,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 78.538,
+        "thermal_zone1": 79.461,
+        "thermal_zone6": 76.692,
+        "thermal_zone4": 75.769
+      },
+      "rss": {
+        "stream-server": 42991616,
+        "video-source": 56307712,
+        "native-observer": 98578432,
+        "mpp": 22929408,
+        "camera": 132337664,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30306581854201,
+      "cpu": [
+        1428146,
+        6212,
+        387128,
+        22258130,
+        1476,
+        0,
+        19050,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13909868544
+      },
+      "temperature_c": {
+        "thermal_zone2": 80.384,
+        "thermal_zone0": 78.538,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 79.461,
+        "thermal_zone1": 80.384,
+        "thermal_zone6": 76.692,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 43196416,
+        "video-source": 56307712,
+        "native-observer": 98578432,
+        "mpp": 22929408,
+        "camera": 132337664,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30311594940241,
+      "cpu": [
+        1430188,
+        6212,
+        387500,
+        22259572,
+        1477,
+        0,
+        19083,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13877448704
+      },
+      "temperature_c": {
+        "thermal_zone2": 78.538,
+        "thermal_zone0": 78.538,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 78.538,
+        "thermal_zone1": 78.538,
+        "thermal_zone6": 76.692,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 43114496,
+        "video-source": 56307712,
+        "native-observer": 98578432,
+        "mpp": 22929408,
+        "camera": 132337664,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30316616669514,
+      "cpu": [
+        1432222,
+        6212,
+        387901,
+        22260988,
+        1477,
+        0,
+        19120,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13847318528
+      },
+      "temperature_c": {
+        "thermal_zone2": 79.461,
+        "thermal_zone0": 79.461,
+        "thermal_zone5": 75.769,
+        "thermal_zone3": 79.461,
+        "thermal_zone1": 79.461,
+        "thermal_zone6": 77.615,
+        "thermal_zone4": 76.692
+      },
+      "rss": {
+        "stream-server": 43208704,
+        "video-source": 56307712,
+        "native-observer": 98578432,
+        "mpp": 22929408,
+        "camera": 132337664,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    },
+    {
+      "monotonic_ns": 30321634853294,
+      "cpu": [
+        1434426,
+        6212,
+        388311,
+        22262248,
+        1477,
+        0,
+        19157,
+        0,
+        0,
+        0
+      ],
+      "memory": {
+        "MemTotal": 16746098688,
+        "MemAvailable": 13871116288
+      },
+      "temperature_c": {
+        "thermal_zone2": 80.384,
+        "thermal_zone0": 79.461,
+        "thermal_zone5": 76.692,
+        "thermal_zone3": 80.384,
+        "thermal_zone1": 80.384,
+        "thermal_zone6": 78.538,
+        "thermal_zone4": 77.615
+      },
+      "rss": {
+        "stream-server": 42721280,
+        "video-source": 56307712,
+        "native-observer": 98525184,
+        "mpp": 22929408,
+        "camera": 132292608,
+        "npu": 22937600,
+        "lio": 35188736,
+        "relay": 22933504
+      }
+    }
+  ],
+  "returncodes": {
+    "stream-server": 0,
+    "video-source": 255,
+    "native-observer": 0,
+    "mpp": 0,
+    "camera": 0,
+    "npu": 0,
+    "lio": 0,
+    "relay": 0
+  },
+  "input_counts": {
+    "/livox/imu": 23449,
+    "/livox/lidar": 1141
+  },
+  "mpp_published_counts": {
+    "raw": 3544,
+    "color": 1688
+  },
+  "scope": "actual Gemini/NPU/LIO/relay/MPP/recorder, repeated .235 recorded LiDAR and synthetic H264, localhost domain83; no physical MAVROS/FC/task controllers",
+  "stream_results": {
+    "color": {
+      "messages": 1981,
+      "hz": 28.127985255837913,
+      "max_gap_s": 3.743894226,
+      "min_age_s": 0.040322097,
+      "max_age_s": 0.361036134
+    },
+    "depth": {
+      "messages": 2012,
+      "hz": 28.59698016111335,
+      "max_gap_s": 3.380477663,
+      "min_age_s": 0.050475702,
+      "max_age_s": 0.401053524
+    },
+    "preview": {
+      "messages": 1010,
+      "hz": 14.344792671935533,
+      "max_gap_s": 3.754734873,
+      "min_age_s": 0.094224336,
+      "max_age_s": 0.371114185
+    },
+    "odom": {
+      "messages": 670,
+      "hz": 9.508401059657869,
+      "max_gap_s": 0.564298101,
+      "min_age_s": 0.052682244,
+      "max_age_s": 0.571841223
+    },
+    "cloud": {
+      "messages": 670,
+      "hz": 9.510415220864244,
+      "max_gap_s": 0.674376686,
+      "min_age_s": 0.053283659,
+      "max_age_s": 0.672587772
+    },
+    "vision": {
+      "messages": 636,
+      "hz": 9.125011102781816,
+      "max_gap_s": 0.624567697,
+      "min_age_s": 0.054398407,
+      "max_age_s": 0.279198964
+    }
+  },
+  "coverage": {
+    "/livox/imu": {
+      "expected": 12512,
+      "recorded": 12512,
+      "missing": 0
+    },
+    "/livox/lidar": {
+      "expected": 609,
+      "recorded": 609,
+      "missing": 0
+    },
+    "/factory_fastlio/odometry": {
+      "expected": 609,
+      "recorded": 609,
+      "missing": 0
+    },
+    "/factory_fastlio/cloud_world": {
+      "expected": 609,
+      "recorded": 609,
+      "missing": 0
+    },
+    "/mavros/vision_pose/pose": {
+      "expected": 591,
+      "recorded": 591,
+      "missing": 0
+    }
+  },
+  "begin_ns": 1794855132871299704,
+  "end_ns": 1794855199253494805,
+  "duration": 120.0,
+  "preview_header_coverage": {
+    "passed": true,
+    "native_camera_count": 3415,
+    "python_camera_count": 3356,
+    "preview_count": 1709,
+    "missing_from_native_camera": [],
+    "missing_from_both_camera_observers": [],
+    "corroborated_by_python": [],
+    "scope": "Every native-observed preview stamp must occur in independent source-camera observation; no startup/end exemptions",
+    "native_only_match": true
+  }
+}

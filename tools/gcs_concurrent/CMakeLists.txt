@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.21)
+project(gcs_concurrent LANGUAGES CXX)
+get_filename_component(REPO "${CMAKE_CURRENT_SOURCE_DIR}/../.." ABSOLUTE)
+add_subdirectory("${REPO}/groundstation" gcs)
+target_sources(customgeometry PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/automation.cpp")
+target_include_directories(customgeometry PRIVATE "${REPO}/groundstation")

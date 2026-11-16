@@ -1,0 +1,65 @@
+{
+  "owned": [
+    {
+      "pid": 237697,
+      "pgid": 237697,
+      "command": "/home/orangepi/drone_platform/03_tools/gimbal_relay/mediamtx /tmp/platform-soak-check/stream.yml "
+    },
+    {
+      "pid": 237706,
+      "pgid": 237706,
+      "command": "/tmp/platform-soak-check/observer-build/observer --ros-args -p output:=/tmp/platform-soak-check/gimbal-headers.csv -p stop_file:=/tmp/platform-soak-check/observer.stop -p include_camera:=true "
+    },
+    {
+      "pid": 237707,
+      "pgid": 237707,
+      "command": "/usr/bin/python3 /opt/ros/humble/bin/ros2 run rtsp_test rtsp_hw_pub_ultra --ros-args -p rtsp_url:=rtsp://127.0.0.1:18554/gimbal --log-level rtsp_hw_pub_ultra.frames:=debug "
+    },
+    {
+      "pid": 237708,
+      "pgid": 237708,
+      "command": "/usr/bin/python3 /opt/ros/humble/bin/ros2 launch /home/orangepi/drone_platform/02_drivers/orbbec/launch/gemini335l.launch.py "
+    },
+    {
+      "pid": 237709,
+      "pgid": 237709,
+      "command": "/usr/bin/python3 /opt/ros/humble/bin/ros2 run yolo_ultra_test person_preview "
+    },
+    {
+      "pid": 237710,
+      "pgid": 237710,
+      "command": "/usr/bin/python3 /opt/ros/humble/bin/ros2 launch /home/orangepi/drone_platform/01_apps/fast_lio/launch/localization.launch.py "
+    },
+    {
+      "pid": 237711,
+      "pgid": 237711,
+      "command": "/usr/bin/python3 /opt/ros/humble/bin/ros2 run to_mavros vision2mavros "
+    },
+    {
+      "pid": 237724,
+      "pgid": 237707,
+      "command": "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra --ros-args -p rtsp_url:=rtsp://127.0.0.1:18554/gimbal --log-level rtsp_hw_pub_ultra.frames:=debug "
+    },
+    {
+      "pid": 237725,
+      "pgid": 237711,
+      "command": "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros/lib/to_mavros/vision2mavros "
+    },
+    {
+      "pid": 237739,
+      "pgid": 237709,
+      "command": "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/lib/yolo_ultra_test/person_preview "
+    },
+    {
+      "pid": 237743,
+      "pgid": 237710,
+      "command": "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_rc7tmxwp -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf "
+    },
+    {
+      "pid": 237791,
+      "pgid": 237708,
+      "command": "/opt/ros/humble/lib/rclcpp_components/component_container --ros-args -r __node:=camera_container -r __ns:=/camera -r /camera/depth/color/points:=/camera/depth_registered/points "
+    }
+  ],
+  "remaining": []
+}

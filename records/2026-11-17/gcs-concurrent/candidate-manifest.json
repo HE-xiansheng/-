@@ -1,0 +1,6 @@
+{
+  "path": "01_apps/ego_planner/record_session.py",
+  "expected_old_sha256": "1b512f94687e2c7bd5d4e6d4b3a32c9aea2e9cb2edf8067ee3836b66e134b4fa",
+  "expected_head": "bfc044a3b0a82bca28b539dd733722dfee286d2e",
+  "new_sha256": "48519ba7b654812584bc4aad3703db1118506f523763d5def3891be2a639f2b3"
+}

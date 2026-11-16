@@ -1,0 +1,106 @@
+2026-11-17 02:51:36.882 [INFO ] 日志文件：/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/logs/customgeometry_20261117_025136.log
+2026-11-17 02:51:36.990 [INFO ] Qt Quick 3D surface format initialized
+2026-11-17 02:51:36.990 [INFO ] 启动机载地址（视频与通信）：192.168.1.224
+2026-11-17 02:51:37.023 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 02:51:37.023 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:56000
+2026-11-17 02:51:37.023 [INFO ] 静态点云显示上限变更：400000
+2026-11-17 02:51:37.026 [INFO ] 点云监听端口变更：9004
+2026-11-17 02:51:37.065 [INFO ] 位姿 UDP 监听状态：启动
+2026-11-17 02:51:37.065 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:9001
+2026-11-17 02:51:37.066 [INFO ] 实时累计显示：开启
+2026-11-17 02:51:37.066 [INFO ] 世界坐标累计建图显示 true
+2026-11-17 02:51:37.067 [INFO ] 静态点云加载器绑定主几何：0x557dc98ea840
+2026-11-17 02:51:37.067 [INFO ] 静态点云加载器绑定预览几何：0x557dc98ea980
+2026-11-17 02:51:37.067 [INFO ] 点云接收器绑定渲染几何：0x557dc98ead30
+2026-11-17 02:51:37.067 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 02:51:37.067 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:9004
+2026-11-17 02:51:37.067 [INFO ] 静态点云加载器绑定主几何：0x557dc996d700
+2026-11-17 02:51:37.068 [INFO ] 飞前状态仅监听本机127.0.0.1: 46271
+2026-11-17 02:51:37.068 [INFO ] 位姿监听端口变更：49655
+2026-11-17 02:51:37.068 [INFO ] 关闭位姿 UDP 监听端口：49655
+2026-11-17 02:51:37.068 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:49655
+2026-11-17 02:51:37.068 [INFO ] 点云接收器绑定渲染几何：0x557dc98ea840
+2026-11-17 02:51:37.068 [INFO ] 点云监听端口变更：53338
+2026-11-17 02:51:37.068 [INFO ] 关闭点云 UDP 监听端口：53338
+2026-11-17 02:51:37.068 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:53338
+2026-11-17 02:51:37.168 [INFO ] QML module loaded: CustomGeometryExample/Main
+2026-11-17 02:51:38.453 [INFO ] 地面站首帧就绪，启动耗时(ms) 1460
+2026-11-17 02:51:38.453 [WARN ] 任务监视: Traceback (most recent call last):
+  File "/home/tyzk/drone-migration-work/gcs-concurrent-run2/shims/ssh", line 13, in <module>
+    assert remote.endswith(' watch'),'only mission watch is allowed'
+AssertionError: only mission watch is allowed
+
+2026-11-17 02:51:38.457 [INFO ] PASS full_main_window_created
+2026-11-17 02:51:38.457 [INFO ] PASS production_controllers_found
+2026-11-17 02:51:38.457 [INFO ] PASS onboardConnect
+2026-11-17 02:51:38.457 [INFO ] PASS button_enabled
+2026-11-17 02:51:38.459 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 02:51:39.463 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 02:51:39.463 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 02:51:39.463 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 02:51:39.463 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 02:51:39.463 [INFO ] 关闭位姿 UDP 监听端口：49655
+2026-11-17 02:51:39.463 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:49655
+2026-11-17 02:51:39.467 [INFO ] 飞前状态仅监听本机127.0.0.1: 46271
+2026-11-17 02:51:41.464 [WARN ] 任务监视: Traceback (most recent call last):
+  File "/home/tyzk/drone-migration-work/gcs-concurrent-run2/shims/ssh", line 13, in <module>
+    assert remote.endswith(' watch'),'only mission watch is allowed'
+AssertionError: only mission watch is allowed
+
+2026-11-17 02:51:45.464 [INFO ] 点云几何更新：sequence=1794855106，点数=1721，boundsMin=(-3.64,-1.50,-0.55)，boundsMax=(7.23,11.32,3.06)
+2026-11-17 02:51:45.465 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794855106，单帧 2466 点，显示 1721 点，累计收到 1 帧，丢帧 0
+2026-11-17 02:51:45.466 [INFO ] 航线整体替换：原航点 0 个，新航点 1 个
+2026-11-17 02:51:45.466 [INFO ] POS1 位姿包：序号 1，位置 [-0.018, 0.007, 0.008]，四元数 [-0.001, 0.003, -0.000, 1.000]
+2026-11-17 02:51:46.455 [INFO ] PASS real_ssh_connection_and_telemetry
+2026-11-17 02:51:46.458 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794855107，单帧 2465 点，显示 2899 点，累计收到 2 帧，丢帧 0
+2026-11-17 02:51:46.458 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794855108，单帧 2457 点，显示 3857 点，累计收到 3 帧，丢帧 0
+2026-11-17 02:51:46.458 [INFO ] POS1 位姿包：序号 2，位置 [-0.016, 0.003, 0.011]，四元数 [-0.001, 0.003, -0.000, 1.000]
+2026-11-17 02:51:46.458 [INFO ] POS1 位姿包：序号 3，位置 [-0.013, 0.005, 0.011]，四元数 [-0.001, 0.003, -0.000, 1.000]
+2026-11-17 02:51:46.468 [WARN ] 任务监视: Traceback (most recent call last):
+  File "/home/tyzk/drone-migration-work/gcs-concurrent-run2/shims/ssh", line 13, in <module>
+    assert remote.endswith(' watch'),'only mission watch is allowed'
+AssertionError: only mission watch is allowed
+
+2026-11-17 02:51:48.454 [INFO ] PASS actual_lio_cloud_pose_cross_host_udp
+2026-11-17 02:51:48.454 [INFO ] PASS cloud_points_available
+2026-11-17 02:51:48.455 [INFO ] PASS toggleStereoVideo
+2026-11-17 02:51:48.455 [INFO ] PASS button_enabled
+2026-11-17 02:51:48.456 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 02:51:48.456 [INFO ] PASS toggleGimbalVideo
+2026-11-17 02:51:48.456 [INFO ] PASS button_enabled
+2026-11-17 02:51:48.457 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 02:51:51.482 [WARN ] 任务监视: Traceback (most recent call last):
+  File "/home/tyzk/drone-migration-work/gcs-concurrent-run2/shims/ssh", line 13, in <module>
+    assert remote.endswith(' watch'),'only mission watch is allowed'
+AssertionError: only mission watch is allowed
+
+2026-11-17 02:51:55.468 [INFO ] POS1 位姿包：序号 100，位置 [-0.016, 0.008, 0.008]，四元数 [-0.001, 0.003, -0.001, 1.000]
+2026-11-17 02:51:56.488 [WARN ] 任务监视: Traceback (most recent call last):
+  File "/home/tyzk/drone-migration-work/gcs-concurrent-run2/shims/ssh", line 13, in <module>
+    assert remote.endswith(' watch'),'only mission watch is allowed'
+AssertionError: only mission watch is allowed
+
+2026-11-17 02:51:59.468 [INFO ] 点云几何更新：sequence=1794855133，点数=9701，boundsMin=(-4.23,-1.51,-0.65)，boundsMax=(7.31,11.34,3.08)
+2026-11-17 02:52:00.470 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794855135，单帧 2449 点，显示 9988 点，累计收到 30 帧，丢帧 0
+2026-11-17 02:52:01.454 [INFO ] PASS both_live_video_streams
+2026-11-17 02:52:02.456 [INFO ] PASS both_actual_qml_images_loaded
+2026-11-17 02:52:03.454 [INFO ] PASS recording_state_arrives_through_production_telemetry
+2026-11-17 02:52:03.454 [INFO ] PASS recordingStart
+2026-11-17 02:52:03.454 [INFO ] PASS button_enabled
+2026-11-17 02:52:03.454 [INFO ] 录制管理请求 "start" "192.168.1.224"
+2026-11-17 02:52:03.456 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 02:52:06.472 [INFO ] POS1 位姿包：序号 200，位置 [-0.010, 0.008, 0.005]，四元数 [-0.001, 0.003, 0.000, 1.000]
+2026-11-17 02:52:09.490 [INFO ] 录制管理返回 start 0 {"phase": "PREPARING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.047827720642089844, "stamp": 1794855128.521664, "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-025208-5fdd90", "request_id": "b0a7827a9a53420d8017f9c7f4839ac6", "requested": "start", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "UNAVAILABLE", "auto_error": "", "pending_action": "start", "duration_s": 0.0, "warnings": [], "active_bags_count": 0, "available": true}
+2026-11-17 02:52:14.454 [INFO ] PASS qml_record_start_confirmed_by_remote_state
+2026-11-17 02:52:14.458 [INFO ] 点云几何更新：sequence=1794855163，点数=12983，boundsMin=(-4.23,-1.51,-0.66)，boundsMax=(7.33,11.34,3.08)
+2026-11-17 02:52:15.470 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794855165，单帧 2443 点，显示 13171 点，累计收到 60 帧，丢帧 0
+2026-11-17 02:52:17.469 [INFO ] POS1 位姿包：序号 300，位置 [-0.012, 0.008, 0.008]，四元数 [-0.001, 0.003, 0.000, 1.000]
+2026-11-17 02:52:27.471 [INFO ] POS1 位姿包：序号 400，位置 [-0.013, 0.003, 0.008]，四元数 [-0.001, 0.003, 0.000, 1.000]
+2026-11-17 02:52:29.471 [INFO ] 点云几何更新：sequence=1794855193，点数=13500，boundsMin=(-4.23,-1.51,-0.66)，boundsMax=(7.33,11.35,3.08)
+2026-11-17 02:52:30.469 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794855195，单帧 2458 点，显示 13501 点，累计收到 90 帧，丢帧 0
+2026-11-17 02:52:38.472 [INFO ] POS1 位姿包：序号 500，位置 [-0.013, 0.009, 0.007]，四元数 [-0.001, 0.003, -0.000, 1.000]
+2026-11-17 02:52:44.461 [INFO ] FAIL simultaneous_streams_and_recording_remain_fresh_30s
+{"running": false, "stopped": true}
+{"running": false, "stopped": true}
+2026-11-17 02:52:45.535 [INFO ] 销毁静态点云加载器，取消未完成加载任务
+2026-11-17 02:52:45.535 [INFO ] 销毁静态点云加载器，取消未完成加载任务

@@ -1,0 +1,26 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1794855590.134683566] [flight_bag_246160]: Press SPACE for pausing/resuming
+[INFO] [1794855590.139018307] [rosbag2_storage]: Opened database '/tmp/platform-soak-check/recording-source/flight-records/20261117-025944-defffb/inputs-d7cba04b9d38482a8a58e0f744a02065/inputs-d7cba04b9d38482a8a58e0f744a02065_0.db3' for READ_WRITE.
+[INFO] [1794855590.145238671] [flight_bag_246160]: Listening for topics...
+[INFO] [1794855590.147711708] [flight_bag_246160]: Overriding subscription profile for /rosout
+[INFO] [1794855590.150857618] [flight_bag_246160]: Subscribed to topic '/rosout'
+[INFO] [1794855590.151051285] [flight_bag_246160]: Recording...
+[INFO] [1794855590.166560047] [flight_bag_246160]: Event publisher thread: Starting
+[INFO] [1794855590.869509804] [flight_bag_246160]: Overriding subscription profile for /factory_fastlio/cloud_world
+[INFO] [1794855591.145429158] [flight_bag_246160]: Subscribed to topic '/factory_fastlio/cloud_world'
+[INFO] [1794855591.146506864] [flight_bag_246160]: Overriding subscription profile for /factory_fastlio/odometry
+[INFO] [1794855591.154419183] [flight_bag_246160]: Subscribed to topic '/factory_fastlio/odometry'
+[INFO] [1794855591.154985890] [flight_bag_246160]: Overriding subscription profile for /mavros/vision_pose/pose
+[INFO] [1794855591.159242465] [flight_bag_246160]: Subscribed to topic '/mavros/vision_pose/pose'
+[INFO] [1794855591.270429672] [flight_bag_246160]: Overriding subscription profile for /livox/lidar
+[INFO] [1794855591.280235487] [flight_bag_246160]: Subscribed to topic '/livox/lidar'
+[INFO] [1794855591.281960692] [flight_bag_246160]: Overriding subscription profile for /livox/imu
+[INFO] [1794855591.289768011] [flight_bag_246160]: Subscribed to topic '/livox/imu'
+[INFO] [1794855591.292327673] [flight_bag_246160]: Overriding subscription profile for /tf
+[INFO] [1794855591.301935738] [flight_bag_246160]: Subscribed to topic '/tf'
+[INFO] [1794855591.304288900] [flight_bag_246160]: Overriding subscription profile for /tf_static
+[INFO] [1794855591.320182953] [flight_bag_246160]: Subscribed to topic '/tf_static'
+[INFO] [1794855635.064946066] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794855635.068951517] [rosbag2_storage]: Opened database '/tmp/platform-soak-check/recording-source/flight-records/20261117-025944-defffb/inputs-d7cba04b9d38482a8a58e0f744a02065/inputs-d7cba04b9d38482a8a58e0f744a02065_1.db3' for READ_WRITE.
+[INFO] [1794855664.270965283] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794855664.281720763] [flight_bag_246160]: Event publisher thread: Exiting
+[INFO] [1794855664.282038679] [flight_bag_246160]: Recording stopped

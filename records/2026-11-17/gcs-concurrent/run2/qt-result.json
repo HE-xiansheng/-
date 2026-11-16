@@ -1,0 +1,23 @@
+{
+    "checks": {
+        "actual_lio_cloud_pose_cross_host_udp": true,
+        "actual_qml_clicked_handler": true,
+        "both_actual_qml_images_loaded": true,
+        "both_live_video_streams": true,
+        "button_enabled": true,
+        "cloud_points_available": true,
+        "full_main_window_created": true,
+        "onboardConnect": true,
+        "production_controllers_found": true,
+        "qml_record_start_confirmed_by_remote_state": true,
+        "real_ssh_connection_and_telemetry": true,
+        "recordingStart": true,
+        "recording_state_arrives_through_production_telemetry": true,
+        "simultaneous_streams_and_recording_remain_fresh_30s": false,
+        "toggleGimbalVideo": true,
+        "toggleStereoVideo": true
+    },
+    "error": "simultaneous_streams_and_recording_remain_fresh_30s",
+    "passed": false,
+    "scope": "Actual main/QML/controllers; actual camera/NPU/LIO replay; synthetic gimbal RTSP via owned tunnel; record writes redirected to isolated copy; no flight commands"
+}

@@ -1,0 +1,24 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1794856381.462221269] [flight_bag_258044]: Press SPACE for pausing/resuming
+[INFO] [1794856381.465651572] [rosbag2_storage]: Opened database '/tmp/platform-soak-check/recording-source/flight-records/20261117-031257-2ae2cb/inputs-5f192bf6cf594b9287f8e88cd0a5ea43/inputs-5f192bf6cf594b9287f8e88cd0a5ea43_0.db3' for READ_WRITE.
+[INFO] [1794856381.467191577] [flight_bag_258044]: Listening for topics...
+[INFO] [1794856381.468220872] [flight_bag_258044]: Overriding subscription profile for /rosout
+[INFO] [1794856381.473048847] [flight_bag_258044]: Subscribed to topic '/rosout'
+[INFO] [1794856381.473284514] [flight_bag_258044]: Recording...
+[INFO] [1794856381.476384649] [flight_bag_258044]: Event publisher thread: Starting
+[INFO] [1794856382.800027215] [flight_bag_258044]: Overriding subscription profile for /mavros/vision_pose/pose
+[INFO] [1794856383.039626345] [flight_bag_258044]: Subscribed to topic '/mavros/vision_pose/pose'
+[INFO] [1794856383.141258807] [flight_bag_258044]: Overriding subscription profile for /factory_fastlio/cloud_world
+[INFO] [1794856383.143361439] [flight_bag_258044]: Subscribed to topic '/factory_fastlio/cloud_world'
+[INFO] [1794856383.144398609] [flight_bag_258044]: Overriding subscription profile for /factory_fastlio/odometry
+[INFO] [1794856383.148179205] [flight_bag_258044]: Subscribed to topic '/factory_fastlio/odometry'
+[INFO] [1794856383.353128720] [flight_bag_258044]: Overriding subscription profile for /livox/lidar
+[INFO] [1794856383.359934201] [flight_bag_258044]: Subscribed to topic '/livox/lidar'
+[INFO] [1794856383.360762245] [flight_bag_258044]: Overriding subscription profile for /livox/imu
+[INFO] [1794856383.362319167] [flight_bag_258044]: Subscribed to topic '/livox/imu'
+[INFO] [1794856383.362845335] [flight_bag_258044]: Overriding subscription profile for /tf
+[INFO] [1794856383.375935087] [flight_bag_258044]: Subscribed to topic '/tf'
+[INFO] [1794856383.377130049] [flight_bag_258044]: Overriding subscription profile for /tf_static
+[INFO] [1794856383.395246693] [flight_bag_258044]: Subscribed to topic '/tf_static'
+[INFO] [1794856425.583733524] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794856425.590886964] [flight_bag_258044]: Event publisher thread: Exiting
+[INFO] [1794856425.591095215] [flight_bag_258044]: Recording stopped

@@ -20,6 +20,8 @@ if os.environ.get('PLATFORM_SOAK_CAMERA_PROFILE')=='1':
  cmd=cmd.replace('ROS_DOMAIN_ID=83','PLATFORM_SOAK_CAMERA_PROFILE=1 ROS_DOMAIN_ID=83')
 if os.environ.get('PLATFORM_SOAK_CAMERA_LAUNCH_CANDIDATE')=='1':
  cmd=cmd.replace('ROS_DOMAIN_ID=83','PLATFORM_SOAK_CAMERA_LAUNCH='+remote+'/camera-candidate/launch/gemini335l.launch.py ROS_DOMAIN_ID=83')
+if os.environ.get('PLATFORM_SOAK_GCS')=='1':
+ cmd=cmd.replace('ROS_DOMAIN_ID=83','PLATFORM_SOAK_GCS=1 ROS_DOMAIN_ID=83')
 with (out/'runner.log').open('wb') as f:p=subprocess.run(ssh+[cmd],stdout=f,stderr=subprocess.STDOUT,timeout=int(seconds)+240)
 with (out/'evidence.tar.gz').open('wb') as f:subprocess.run(ssh+['tar -I "gzip -1" -cf - -C /tmp platform-soak-check'],stdout=f,check=True)
 subprocess.run(['tar','-xzf',str(out/'evidence.tar.gz'),'-C',str(out)],check=True)

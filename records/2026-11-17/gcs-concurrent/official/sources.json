@@ -1,0 +1,8 @@
+{
+  "urls": {
+    "recorder-0.15.17.cpp": "https://raw.githubusercontent.com/ros2/rosbag2/0.15.17/rosbag2_transport/src/rosbag2_transport/recorder.cpp",
+    "record-cli-0.15.17.py": "https://raw.githubusercontent.com/ros2/rosbag2/0.15.17/ros2bag/ros2bag/verb/record.py",
+    "recorder-humble.cpp": "https://raw.githubusercontent.com/ros2/rosbag2/humble/rosbag2_transport/src/rosbag2_transport/recorder.cpp"
+  },
+  "retrieved_date": "2026-11-17"
+}

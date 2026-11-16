@@ -6,6 +6,7 @@ import yaml
 out=Path(sys.argv[1]);assert out==Path('/tmp/platform-soak-check')
 assert os.environ['ROS_DOMAIN_ID']=='83' and os.environ['ROS_LOCALHOST_ONLY']=='1'
 root=Path('/home/orangepi/drone_platform');sys.path.insert(0,str(out/'recording-source'))
+gcs_mode=os.environ.get('PLATFORM_SOAK_GCS')=='1'
 import recording_manage as recording
 from validate_fastlio_replay import decode
 import rclpy
@@ -16,7 +17,8 @@ from geometry_msgs.msg import PoseStamped
 from livox_ros_driver2.msg import CustomMsg
 from collections import defaultdict
 os.environ['RECORDING_MAX_BAG_SIZE']='33554432'
-rclpy.init();node=rclpy.create_node('platform_concurrent_observer')
+from rclpy.signals import SignalHandlerOptions
+rclpy.init(signal_handler_options=SignalHandlerOptions.NO);node=rclpy.create_node('platform_concurrent_observer')
 processes=[];logs=[];stats=defaultdict(list);checks={};resources=[];halt=threading.Event();feed_errors=[];pubs={};sent=defaultdict(list);record_root=out/'recording-source';completed=False
 
 def start(name,args,env=None):
@@ -75,6 +77,10 @@ def resource():
 thread=None;observer=None;recorder=None;begin_ns=end_ns=None
 try:
  config=yaml.safe_load((root/'03_tools/gimbal_relay/gimbal.yml').read_text());config['rtspAddress']='127.0.0.1:18554';config['rtspTransports']=['tcp'];config['paths']={'gimbal':{'source':'publisher'}};config['authInternalUsers']=[{'user':'any','ips':['127.0.0.1'],'permissions':[{'action':'publish','path':'gimbal'},{'action':'read','path':'gimbal'}]}]
+ if gcs_mode:
+  pc_ip=os.environ['SSH_CONNECTION'].split()[0]
+  config['rtspAddress']='0.0.0.0:18554'
+  config['authInternalUsers'].append({'user':'any','ips':[pc_ip],'permissions':[{'action':'read','path':'gimbal'}]})
  (out/'stream.yml').write_text(yaml.safe_dump(config))
  p=subprocess.run(['ffmpeg','-hide_banner','-loglevel','warning','-f','lavfi','-i','testsrc2=size=1920x1080:rate=30','-t','3','-an','-c:v','libx264','-preset','ultrafast','-tune','zerolatency','-threads','2','-pix_fmt','yuv420p','-g','30','-y',str(out/'video.mp4')],capture_output=True,timeout=40);(out/'encode.log').write_bytes(p.stdout+p.stderr);assert p.returncode==0
  start('stream-server',[str(root/'03_tools/gimbal_relay/mediamtx'),str(out/'stream.yml')]);pump(.5)
@@ -97,18 +103,21 @@ try:
  deadline=time.monotonic()+55
  while time.monotonic()<deadline and not all(len(stats[k])>10 for k in ['color','depth','preview','odom','cloud','vision']):pump(.2)
  check('all_actual_processing_streams_ready',all(len(stats[k])>10 for k in ['color','depth','preview','odom','cloud','vision']))
- recording.request('start',record_root)
- deadline=time.monotonic()+35
+ if not gcs_mode:recording.request('start',record_root)
+ deadline=time.monotonic()+(120 if gcs_mode else 35)
  while time.monotonic()<deadline and recording.health(record_root)['phase'] not in ['RECORDING','ERROR']:pump(.2)
  h=recording.health(record_root);check('actual_recorder_ready',h['phase']=='RECORDING');recorder=recording.current(record_root)
  begin_ns=time.time_ns();sample_begin=time.monotonic_ns();duration=float(os.environ.get('PLATFORM_SOAK_SECONDS','180'));deadline=time.monotonic()+duration
  while time.monotonic()<deadline:
   pump(min(5,max(0,deadline-time.monotonic())));resource();h=recording.health(record_root)
+  if gcs_mode and (out/'gcs-abort.json').exists():raise RuntimeError('GCS failed; abort isolated fixture and retain failure evidence')
+  if gcs_mode and (out/'ui-stop-request.json').exists():break
   if h['phase']!='RECORDING':raise RuntimeError(h)
   print(json.dumps(dict(remaining_s=round(deadline-time.monotonic(),1),streams={k:len(v) for k,v in stats.items()},bag_bytes=h.get('bag_bytes'),temperature_c=resources[-1]['temperature_c'])),flush=True)
- end_ns=time.time_ns();sample_end=time.monotonic_ns()
+ end_ns=json.loads((out/'ui-stop-request.json').read_text())['time_ns'] if gcs_mode and (out/'ui-stop-request.json').exists() else time.time_ns();sample_end=time.monotonic_ns()
  # The recorder remains alive while publishers drain; inspect a stable interior.
- recording.request('stop',record_root);deadline=time.monotonic()+35
+ if not gcs_mode:recording.request('stop',record_root)
+ deadline=time.monotonic()+35
  while time.monotonic()<deadline and recording.health(record_root)['phase'] not in ['STOPPED','ERROR']:pump(.2)
  h=recording.health(record_root);check('recorder_normal_finalization',h['phase']=='STOPPED' and not h.get('active_bags'))
  interior=(begin_ns+1_000_000_000,end_ns-1_000_000_000)

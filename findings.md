@@ -122,3 +122,7 @@
 2026-11-17：完成本阶段收尾：FAST-LIO自同步单位修正部署d861281，受控IMU -2秒原版0/候选126帧及并发定位/转发/录包检查通过。相机64MiB发布端run3原始43/43；实际launch候选run4原始42/43（原生观察初始漏2条，两条均由Python源记录补证），按两路独立相机记录并集严格复核43/43，保留原始失败，run2同法仍失败1条、改戳1ns负向拒绝。相机launch/XML部署bfc044a，与run4输入摘要一致；显式profile/Cyclone构造检查通过，未替换SDK/固件/驱动二进制或启用正式服务。机载源码/二进制摘要独立读回，Git干净/NoMachine active、三处临时目录及所属进程清理，证据仅电脑/GitHub。物理雷达网口DOWN、云台缺直连，真实融合/外参/完整任务/GCS及长期热稳定性未验收，整体目标仍进行中。见records/2026-11-17/platform-soak、fastlio-sync、camera-dds。
 
 2026-11-17：本阶段收尾：机载HEAD bfc044a，FAST-LIO修正与相机launch/XML均已部署候选并独立摘要核对；Git干净、NoMachine active；三处测试临时目录及所属进程已清理，正式服务/物理飞控未操作。run3原始43/43、run4原始42/43与两路源记录严格复核43/43均留证；不是两次原始全通过。run4约相机30Hz、预览16Hz、定位9.47Hz、转发9.40Hz，五条流稳定段录包源戳全到达。安装launch默认/显式profile/非FastDDS三种构造检查通过。记录仅电脑与GitHub，整平台物理接入/外参/真实融合/完整操作仍待验收。
+
+2026-11-17 完整GCS并发诊断：rosbag2 -p单位ms、官方默认100；平台1ms把Recorder::stop等待压到2ms，run2日志timeout，core发现线程memcmp/warn_if_new_qos/topics_discovery崩溃，官方超时后仍清表。候选恢复100ms，26项原生录制回归通过，run3正常收尾两个分包；不等于修复底层并发访问实现。run2内核USB断开/重枚举，run3逐秒失败为云台新鲜度；后者经过测试SSH隧道，run4改独立端口直连对照。详见records/2026-11-17/gcs-concurrent。
+
+GCS诊断更新：run4独立端口直连仍失败，排除仅SSH隧道解释；独立生产GStreamer824帧/35秒最大0.867s，完整GUI run5约10秒一次sink render。run6替换processEvents+sleep为QEventLoop仍失败，不支持将自动化休眠认定根因。产品播放器未更改，下一步需同步原始管道字节/QProcess缓存/GUI更新观察。录制源码d896200部署回读一致，26回归及4次清理正常收尾；这仍只是恢复官方轮询、不是修补底层发现线程竞争实现。

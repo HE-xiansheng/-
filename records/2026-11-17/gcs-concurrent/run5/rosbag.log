@@ -1,0 +1,24 @@
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1794856221.174593665] [flight_bag_254849]: Press SPACE for pausing/resuming
+[INFO] [1794856221.179414931] [rosbag2_storage]: Opened database '/tmp/platform-soak-check/recording-source/flight-records/20261117-031017-7cd998/inputs-f0e04c9ce3484704bc4421ff4dff909f/inputs-f0e04c9ce3484704bc4421ff4dff909f_0.db3' for READ_WRITE.
+[INFO] [1794856221.187343041] [flight_bag_254849]: Listening for topics...
+[INFO] [1794856221.188678879] [flight_bag_254849]: Overriding subscription profile for /factory_fastlio/odometry
+[INFO] [1794856221.202419633] [flight_bag_254849]: Event publisher thread: Starting
+[INFO] [1794856221.204158847] [flight_bag_254849]: Subscribed to topic '/factory_fastlio/odometry'
+[INFO] [1794856221.205669102] [flight_bag_254849]: Overriding subscription profile for /rosout
+[INFO] [1794856221.209710740] [flight_bag_254849]: Subscribed to topic '/rosout'
+[INFO] [1794856221.211067287] [flight_bag_254849]: Overriding subscription profile for /factory_fastlio/cloud_world
+[INFO] [1794856221.219847941] [flight_bag_254849]: Subscribed to topic '/factory_fastlio/cloud_world'
+[INFO] [1794856221.220028483] [flight_bag_254849]: Recording...
+[INFO] [1794856221.252004298] [flight_bag_254849]: Overriding subscription profile for /mavros/vision_pose/pose
+[INFO] [1794856221.259665240] [flight_bag_254849]: Subscribed to topic '/mavros/vision_pose/pose'
+[INFO] [1794856221.464596462] [flight_bag_254849]: Overriding subscription profile for /tf
+[INFO] [1794856221.469782605] [flight_bag_254849]: Subscribed to topic '/tf'
+[INFO] [1794856221.470631941] [flight_bag_254849]: Overriding subscription profile for /tf_static
+[INFO] [1794856221.472937282] [flight_bag_254849]: Subscribed to topic '/tf_static'
+[INFO] [1794856222.220225349] [flight_bag_254849]: Overriding subscription profile for /livox/lidar
+[INFO] [1794856222.228254375] [flight_bag_254849]: Subscribed to topic '/livox/lidar'
+[INFO] [1794856222.229527796] [flight_bag_254849]: Overriding subscription profile for /livox/imu
+[INFO] [1794856222.239549204] [flight_bag_254849]: Subscribed to topic '/livox/imu'
+[INFO] [1794856257.679854109] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794856257.691097313] [flight_bag_254849]: Event publisher thread: Exiting
+[INFO] [1794856257.691294189] [flight_bag_254849]: Recording stopped

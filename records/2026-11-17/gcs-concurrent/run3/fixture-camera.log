@@ -1,0 +1,240 @@
+[INFO] [launch]: All log files can be found below /tmp/platform-soak-check/ros-log/2026-11-17-02-58-55-150176-orangepi5ultra-244088
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container-1]: process started with pid [244170]
+[component_container-1] [INFO] [1794855535.781401556] [camera.camera_container]: Load Library: /home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera/lib/liborbbec_camera.so
+[component_container-1] [INFO] [1794855535.882565948] [camera.camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1794855535.882634198] [camera.camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1794855535.897122129] [camera.camera]: SDK log file path set to: /home/orangepi/.ros/Log/camera/OrbbecSDK_20261117_025855.log
+[component_container-1] [INFO] [1794855535.909999772] [camera.camera]: Device access mode: Default (4)
+[component_container-1] [INFO] [1794855535.910057813] [camera.camera]: Set UVC backend to libuvc
+[component_container-1] [INFO] [1794855537.015226686] [camera.camera]: startDevice called
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/camera/camera' in container '/camera/camera_container'
+[component_container-1] [INFO] [1794855537.025822916] [camera.camera]: Connecting to device with serial number: CP253530009G
+[component_container-1] [INFO] [1794855537.026106999] [camera.camera]: Matched device serial number: CP253530009G
+[component_container-1] [INFO] [1794855537.320054027] [camera.camera]: OBCameraNode: use_intra_process: OFF
+[component_container-1] [INFO] [1794855537.331180506] [camera.camera]: Current time domain: global
+[component_container-1] [INFO] [1794855537.331326048] [camera.camera]: Loaded device preset: Default
+[component_container-1] [INFO] [1794855537.473983445] [camera.camera]: Current heartbeat: OFF
+[component_container-1] [INFO] [1794855537.474064820] [camera.camera]: Set firmware log to OFF
+[component_container-1] [INFO] [1794855537.474654277] [camera.camera]: Disparity to depth mode: HW
+[component_container-1] [INFO] [1794855537.475515276] [camera.camera]: Current LDP: OFF
+[component_container-1] [INFO] [1794855537.476010233] [camera.camera]: Current G300 laser control: ON
+[component_container-1] [INFO] [1794855537.476082274] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+[component_container-1] [INFO] [1794855537.476138566] [camera.camera]: Current color mirror: OFF
+[component_container-1] [INFO] [1794855537.476177649] [camera.camera]: Current color flip: OFF
+[component_container-1] [INFO] [1794855537.476218191] [camera.camera]: Current depth mirror: OFF
+[component_container-1] [INFO] [1794855537.476255816] [camera.camera]: Current depth flip: OFF
+[component_container-1] [INFO] [1794855537.476294024] [camera.camera]: Current left_ir mirror: OFF
+[component_container-1] [INFO] [1794855537.476331357] [camera.camera]: Current left_ir flip: OFF
+[component_container-1] [INFO] [1794855537.476396399] [camera.camera]: Current right_ir mirror: OFF
+[component_container-1] [INFO] [1794855537.476434315] [camera.camera]: Current right_ir flip: OFF
+[component_container-1] [INFO] [1794855537.476792190] [camera.camera]: Current color auto white balance: ON
+[component_container-1] [WARN] [1794855537.476838856] [camera.camera]: Color preset is not supported by this device
+[component_container-1] [INFO] [1794855537.477060814] [camera.camera]: Current color auto exposure priority: OFF
+[component_container-1] [INFO] [1794855537.477579688] [camera.camera]: Current color auto exposure: ON
+[component_container-1] [INFO] [1794855537.478090104] [camera.camera]: Current depth auto exposure priority: OFF
+[component_container-1] [INFO] [1794855537.480698182] [camera.camera]: Current IR auto exposure: ON
+[component_container-1] [INFO] [1794855537.480800266] [camera.camera]: Current accel data correction: ON
+[component_container-1] [INFO] [1794855537.480856265] [camera.camera]: Current gyro data correction: ON
+[component_container-1] [INFO] [1794855537.481009390] [camera.camera]: Set depth filter DecimationFilter to disabled
+[component_container-1] [INFO] [1794855537.481062765] [camera.camera]: Set depth filter ThresholdFilter to disabled
+[component_container-1] [INFO] [1794855537.481108557] [camera.camera]: Set depth filter HDRMerge to disabled
+[component_container-1] [INFO] [1794855537.481153182] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855537.481216473] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+[component_container-1] [INFO] [1794855537.481262848] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+[component_container-1] [INFO] [1794855537.481307473] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+[component_container-1] [INFO] [1794855537.481351806] [camera.camera]: Set depth filter TemporalFilter to disabled
+[component_container-1] [INFO] [1794855537.481396139] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+[component_container-1] [INFO] [1794855537.481440473] [camera.camera]: Set depth filter DisparityTransform to enabled
+[component_container-1] [INFO] [1794855537.486734213] [camera.camera]: Set color filter DecimationFilter to disabled
+[component_container-1] [INFO] [1794855537.486845337] [camera.camera]: Set right IR filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855537.486906296] [camera.camera]: Set left IR filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855537.601688579] [camera.camera]: color/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855537.612958849] [camera.camera]: depth/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855537.627787447] [camera.camera]: left_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855537.633066603] [camera.camera]: right_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855537.636883638] [camera.camera]: Publish diagnostics every 1 seconds
+[component_container-1] [INFO] [1794855537.938429985] [camera.camera]: Device Orbbec Gemini 335L connected
+[component_container-1] [INFO] [1794855537.938513693] [camera.camera]: Serial number: CP253530009G
+[component_container-1] [INFO] [1794855537.938534693] [camera.camera]: Firmware version: 1.4.60
+[component_container-1] [INFO] [1794855537.938549860] [camera.camera]: ROS Wrapper version: 2.10.6
+[component_container-1] [INFO] [1794855537.938565902] [camera.camera]: SDK version: 2.10.6
+[component_container-1] [INFO] [1794855537.938581652] [camera.camera]: Hardware version: 0.1
+[component_container-1] [INFO] [1794855537.938597985] [camera.camera]: ISP firmware version: 20241125
+[component_container-1] [INFO] [1794855537.938611985] [camera.camera]: ISP needed version: 20241125
+[component_container-1] [INFO] [1794855537.938626568] [camera.camera]: usb connect type: USB3.2
+[component_container-1] [INFO] [1794855537.938640277] [camera.camera]: device unique id: 8-1-3
+[component_container-1] [INFO] [1794855537.938658068] [camera.camera]: Current node pid: 244170
+[component_container-1] [INFO] [1794855537.954403663] [camera.camera]: Disable frame sync
+[component_container-1] [INFO] [1794855538.108723039] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-1] [INFO] [1794855538.108972413] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-1] [INFO] [1794855538.109218871] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+[component_container-1] [INFO] [1794855538.411157260] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+[component_container-1] [INFO] [1794855538.954571484] [camera.camera]: current interleave_ae_mode_: laser
+[component_container-1] [INFO] [1794855538.956168648] [camera.camera]: Enable enable_interleave_depth_frame to false
+[component_container-1] [INFO] [1794855538.956258189] [camera.camera]: Initialize device cost: 1636 ms
+[component_container-1] [WARN] [1794855554.196129846] [camera.camera]: Color frame queue overflow: queue=color count=1 capacity_frames=1
+[component_container-1] [WARN] [1794855589.958343982] [camera.camera]: Color frame queue overflow: queue=color count=100 capacity_frames=1
+[component_container-1] [INFO] [1794855600.200489861] [camera.camera]: onDeviceDisconnected called
+[component_container-1] [INFO] [1794855600.200699278] [camera.camera]: device with 8-1-3 disconnected
+[component_container-1] [INFO] [1794855600.200876902] [camera.camera]: device with 8-1-3 disconnected, notify reset device thread
+[component_container-1] [INFO] [1794855600.200914236] [camera.camera]: Device connected callback triggered
+[component_container-1] [INFO] [1794855600.200964985] [camera.camera]: Resetting device UID: 8-1-3
+[component_container-1] [ERROR] [1794855600.205115103] [camera.camera]: Failed to stop pipeline: Device is deactivated/disconnected! DeviceComponentId:5 status:108
+[component_container-1] [INFO] [1794855600.306594494] [camera.camera]: Resetting device handle
+[component_container-1] [INFO] [1794855600.308445116] [camera.camera]: Device handle reset complete
+[component_container-1] [INFO] [1794855600.308555074] [camera.camera]: Resetting device info
+[component_container-1] [INFO] [1794855600.308584532] [camera.camera]: Device info reset complete
+[component_container-1] [INFO] [1794855600.311532693] [camera.camera]: Device reset complete
+[component_container-1] [INFO] [1794855602.380995955] [camera.camera]: Device connected callback triggered
+[component_container-1] [INFO] [1794855602.381180579] [camera.camera]: startDevice called
+[component_container-1] [INFO] [1794855602.391339310] [camera.camera]: Connecting to device with serial number: CP253530009G
+[component_container-1] [INFO] [1794855602.391571185] [camera.camera]: Matched device serial number: CP253530009G
+[component_container-1] [INFO] [1794855602.729953463] [camera.camera]: OBCameraNode: use_intra_process: OFF
+[component_container-1] [INFO] [1794855602.731920167] [camera.camera]: Current time domain: global
+[component_container-1] [INFO] [1794855602.732168084] [camera.camera]: Loaded device preset: Default
+[component_container-1] [INFO] [1794855602.877832267] [camera.camera]: Current heartbeat: OFF
+[component_container-1] [INFO] [1794855602.877968767] [camera.camera]: Set firmware log to OFF
+[component_container-1] [INFO] [1794855602.878600224] [camera.camera]: Disparity to depth mode: HW
+[component_container-1] [INFO] [1794855602.879698639] [camera.camera]: Current LDP: OFF
+[component_container-1] [INFO] [1794855602.880200013] [camera.camera]: Current G300 laser control: ON
+[component_container-1] [INFO] [1794855602.880807553] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+[component_container-1] [INFO] [1794855602.880882803] [camera.camera]: Current color mirror: OFF
+[component_container-1] [INFO] [1794855602.880914011] [camera.camera]: Current color flip: OFF
+[component_container-1] [INFO] [1794855602.880952511] [camera.camera]: Current depth mirror: OFF
+[component_container-1] [INFO] [1794855602.880982844] [camera.camera]: Current depth flip: OFF
+[component_container-1] [INFO] [1794855602.881050511] [camera.camera]: Current left_ir mirror: OFF
+[component_container-1] [INFO] [1794855602.881086386] [camera.camera]: Current left_ir flip: OFF
+[component_container-1] [INFO] [1794855602.881118469] [camera.camera]: Current right_ir mirror: OFF
+[component_container-1] [INFO] [1794855602.881151719] [camera.camera]: Current right_ir flip: OFF
+[component_container-1] [INFO] [1794855602.881501719] [camera.camera]: Current color auto white balance: ON
+[component_container-1] [WARN] [1794855602.881544302] [camera.camera]: Color preset is not supported by this device
+[component_container-1] [INFO] [1794855602.881791343] [camera.camera]: Current color auto exposure priority: OFF
+[component_container-1] [INFO] [1794855602.882334717] [camera.camera]: Current color auto exposure: ON
+[component_container-1] [INFO] [1794855602.882870508] [camera.camera]: Current depth auto exposure priority: OFF
+[component_container-1] [INFO] [1794855602.885564628] [camera.camera]: Current IR auto exposure: ON
+[component_container-1] [INFO] [1794855602.885635211] [camera.camera]: Current accel data correction: ON
+[component_container-1] [INFO] [1794855602.885667002] [camera.camera]: Current gyro data correction: ON
+[component_container-1] [INFO] [1794855602.885747502] [camera.camera]: Set depth filter DecimationFilter to disabled
+[component_container-1] [INFO] [1794855602.885776085] [camera.camera]: Set depth filter ThresholdFilter to disabled
+[component_container-1] [INFO] [1794855602.885796502] [camera.camera]: Set depth filter HDRMerge to disabled
+[component_container-1] [INFO] [1794855602.885817794] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855602.886029543] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+[component_container-1] [INFO] [1794855602.886055502] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+[component_container-1] [INFO] [1794855602.886078835] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+[component_container-1] [INFO] [1794855602.886099252] [camera.camera]: Set depth filter TemporalFilter to disabled
+[component_container-1] [INFO] [1794855602.886120543] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+[component_container-1] [INFO] [1794855602.886141251] [camera.camera]: Set depth filter DisparityTransform to enabled
+[component_container-1] [INFO] [1794855602.889394787] [camera.camera]: Set color filter DecimationFilter to disabled
+[component_container-1] [INFO] [1794855602.889478203] [camera.camera]: Set right IR filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855602.889507662] [camera.camera]: Set left IR filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855603.090033075] [camera.camera]: color/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855603.096574563] [camera.camera]: depth/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855603.100616180] [camera.camera]: left_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855603.104599464] [camera.camera]: right_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855603.112136992] [camera.camera]: Publish diagnostics every 1 seconds
+[component_container-1] [INFO] [1794855603.408699015] [camera.camera]: Device Orbbec Gemini 335L connected
+[component_container-1] [INFO] [1794855603.408822973] [camera.camera]: Serial number: CP253530009G
+[component_container-1] [INFO] [1794855603.408888307] [camera.camera]: Firmware version: 1.4.60
+[component_container-1] [INFO] [1794855603.408929432] [camera.camera]: ROS Wrapper version: 2.10.6
+[component_container-1] [INFO] [1794855603.408994473] [camera.camera]: SDK version: 2.10.6
+[component_container-1] [INFO] [1794855603.409035890] [camera.camera]: Hardware version: 0.1
+[component_container-1] [INFO] [1794855603.409075848] [camera.camera]: ISP firmware version: 20241125
+[component_container-1] [INFO] [1794855603.409112014] [camera.camera]: ISP needed version: 20241125
+[component_container-1] [INFO] [1794855603.409145848] [camera.camera]: usb connect type: USB3.2
+[component_container-1] [INFO] [1794855603.409184056] [camera.camera]: device unique id: 8-1-4
+[component_container-1] [INFO] [1794855603.409219639] [camera.camera]: Current node pid: 244170
+[component_container-1] [INFO] [1794855603.424414277] [camera.camera]: Disable frame sync
+[component_container-1] [INFO] [1794855603.593759416] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-1] [INFO] [1794855603.594207124] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-1] [INFO] [1794855603.594546331] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+[component_container-1] [INFO] [1794855603.862743242] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+[component_container-1] [INFO] [1794855604.424551390] [camera.camera]: current interleave_ae_mode_: laser
+[component_container-1] [INFO] [1794855604.426084970] [camera.camera]: Enable enable_interleave_depth_frame to false
+[component_container-1] [INFO] [1794855604.426260553] [camera.camera]: Initialize device cost: 1696 ms
+[component_container-1] [WARN] [1794855606.231552771] [camera.camera]: Color frame queue overflow: queue=color count=1 capacity_frames=1
+[component_container-1] [INFO] [1794855622.770779726] [camera.camera]: onDeviceDisconnected called
+[component_container-1] [INFO] [1794855622.770973392] [camera.camera]: device with 8-1-4 disconnected
+[component_container-1] [INFO] [1794855622.771005767] [camera.camera]: device with 8-1-4 disconnected, notify reset device thread
+[component_container-1] [INFO] [1794855622.771046600] [camera.camera]: Device connected callback triggered
+[component_container-1] [INFO] [1794855622.771073434] [camera.camera]: Device reset in progress, waiting before connecting
+[component_container-1] [INFO] [1794855622.777055214] [camera.camera]: Resetting device UID: 8-1-4
+[component_container-1] [ERROR] [1794855622.786676696] [camera.camera]: Failed to stop pipeline: Device is deactivated/disconnected! DeviceComponentId:5 status:108
+[component_container-1] [INFO] [1794855622.888624503] [camera.camera]: Resetting device handle
+[component_container-1] [INFO] [1794855622.889259752] [camera.camera]: Device handle reset complete
+[component_container-1] [INFO] [1794855622.889482585] [camera.camera]: Resetting device info
+[component_container-1] [INFO] [1794855622.889638918] [camera.camera]: Device info reset complete
+[component_container-1] [INFO] [1794855622.889783001] [camera.camera]: Device reset completed, continuing connection
+[component_container-1] [INFO] [1794855622.902219353] [camera.camera]: Device reset complete
+[component_container-1] [INFO] [1794855624.943912208] [camera.camera]: Device connected callback triggered
+[component_container-1] [INFO] [1794855624.944522082] [camera.camera]: startDevice called
+[component_container-1] [INFO] [1794855624.954896062] [camera.camera]: Connecting to device with serial number: CP253530009G
+[component_container-1] [INFO] [1794855624.955296228] [camera.camera]: Matched device serial number: CP253530009G
+[component_container-1] [INFO] [1794855625.286143312] [camera.camera]: OBCameraNode: use_intra_process: OFF
+[component_container-1] [INFO] [1794855625.287610393] [camera.camera]: Current time domain: global
+[component_container-1] [INFO] [1794855625.287850726] [camera.camera]: Loaded device preset: Default
+[component_container-1] [INFO] [1794855625.431320122] [camera.camera]: Current heartbeat: OFF
+[component_container-1] [INFO] [1794855625.431513205] [camera.camera]: Set firmware log to OFF
+[component_container-1] [INFO] [1794855625.432121912] [camera.camera]: Disparity to depth mode: HW
+[component_container-1] [INFO] [1794855625.433204576] [camera.camera]: Current LDP: OFF
+[component_container-1] [INFO] [1794855625.433638867] [camera.camera]: Current G300 laser control: ON
+[component_container-1] [INFO] [1794855625.434263908] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+[component_container-1] [INFO] [1794855625.434358408] [camera.camera]: Current color mirror: OFF
+[component_container-1] [INFO] [1794855625.434399824] [camera.camera]: Current color flip: OFF
+[component_container-1] [INFO] [1794855625.434433657] [camera.camera]: Current depth mirror: OFF
+[component_container-1] [INFO] [1794855625.434468366] [camera.camera]: Current depth flip: OFF
+[component_container-1] [INFO] [1794855625.434498991] [camera.camera]: Current left_ir mirror: OFF
+[component_container-1] [INFO] [1794855625.434536032] [camera.camera]: Current left_ir flip: OFF
+[component_container-1] [INFO] [1794855625.434567240] [camera.camera]: Current right_ir mirror: OFF
+[component_container-1] [INFO] [1794855625.434599032] [camera.camera]: Current right_ir flip: OFF
+[component_container-1] [INFO] [1794855625.434919281] [camera.camera]: Current color auto white balance: ON
+[component_container-1] [WARN] [1794855625.434966531] [camera.camera]: Color preset is not supported by this device
+[component_container-1] [INFO] [1794855625.435166031] [camera.camera]: Current color auto exposure priority: OFF
+[component_container-1] [INFO] [1794855625.435713780] [camera.camera]: Current color auto exposure: ON
+[component_container-1] [INFO] [1794855625.436224779] [camera.camera]: Current depth auto exposure priority: OFF
+[component_container-1] [INFO] [1794855625.439003190] [camera.camera]: Current IR auto exposure: ON
+[component_container-1] [INFO] [1794855625.439121024] [camera.camera]: Current accel data correction: ON
+[component_container-1] [INFO] [1794855625.439153107] [camera.camera]: Current gyro data correction: ON
+[component_container-1] [INFO] [1794855625.439240898] [camera.camera]: Set depth filter DecimationFilter to disabled
+[component_container-1] [INFO] [1794855625.439280565] [camera.camera]: Set depth filter ThresholdFilter to disabled
+[component_container-1] [INFO] [1794855625.439310023] [camera.camera]: Set depth filter HDRMerge to disabled
+[component_container-1] [INFO] [1794855625.439334523] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855625.439356106] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+[component_container-1] [INFO] [1794855625.439376523] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+[component_container-1] [INFO] [1794855625.439399273] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+[component_container-1] [INFO] [1794855625.439427273] [camera.camera]: Set depth filter TemporalFilter to disabled
+[component_container-1] [INFO] [1794855625.439449148] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+[component_container-1] [INFO] [1794855625.439471023] [camera.camera]: Set depth filter DisparityTransform to enabled
+[component_container-1] [INFO] [1794855625.443302349] [camera.camera]: Set color filter DecimationFilter to disabled
+[component_container-1] [INFO] [1794855625.443524890] [camera.camera]: Set right IR filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855625.443648848] [camera.camera]: Set left IR filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1794855625.618556935] [camera.camera]: color/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855625.623242843] [camera.camera]: depth/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855625.626752169] [camera.camera]: left_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855625.630671287] [camera.camera]: right_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+[component_container-1] [INFO] [1794855625.637577357] [camera.camera]: Publish diagnostics every 1 seconds
+[component_container-1] [INFO] [1794855625.932973592] [camera.camera]: Device Orbbec Gemini 335L connected
+[component_container-1] [INFO] [1794855625.934689755] [camera.camera]: Serial number: CP253530009G
+[component_container-1] [INFO] [1794855625.934751880] [camera.camera]: Firmware version: 1.4.60
+[component_container-1] [INFO] [1794855625.934770546] [camera.camera]: ROS Wrapper version: 2.10.6
+[component_container-1] [INFO] [1794855625.934788921] [camera.camera]: SDK version: 2.10.6
+[component_container-1] [INFO] [1794855625.934805838] [camera.camera]: Hardware version: 0.1
+[component_container-1] [INFO] [1794855625.934825088] [camera.camera]: ISP firmware version: 20241125
+[component_container-1] [INFO] [1794855625.934843755] [camera.camera]: ISP needed version: 20241125
+[component_container-1] [INFO] [1794855625.934864755] [camera.camera]: usb connect type: USB3.2
+[component_container-1] [INFO] [1794855625.934881380] [camera.camera]: device unique id: 8-1-5
+[component_container-1] [INFO] [1794855625.934898588] [camera.camera]: Current node pid: 244170
+[component_container-1] [INFO] [1794855625.949951476] [camera.camera]: Disable frame sync
+[component_container-1] [INFO] [1794855626.116699620] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-1] [INFO] [1794855626.117063327] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+[component_container-1] [INFO] [1794855626.117657160] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+[component_container-1] [INFO] [1794855626.389589146] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+[component_container-1] [INFO] [1794855626.950158589] [camera.camera]: current interleave_ae_mode_: laser
+[component_container-1] [INFO] [1794855626.951308628] [camera.camera]: Enable enable_interleave_depth_frame to false
+[component_container-1] [INFO] [1794855626.951380378] [camera.camera]: Initialize device cost: 1665 ms
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [component_container-1]: sending signal 'SIGINT' to process[component_container-1]
+[component_container-1] [INFO] [1794855670.297095619] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container-1] [ERROR] [1794855670.306357477] [camera.camera]: onNewFrameSetCallback error: could not count subscribers: rcl node's context is invalid, at ./src/rcl/node.c:428
+[component_container-1] [INFO] [1794855671.127511760] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [component_container-1]: process has finished cleanly [pid 244170]
