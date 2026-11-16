@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('base', type=Path)
     parser.add_argument('--fixture-subdir', default='waypoint-mavros-wire',
-                        choices=['waypoint-mavros-wire','ego-mavros-wire'])
+                        choices=['waypoint-mavros-wire','ego-mavros-wire','aruco-mavros-wire'])
     args = parser.parse_args()
     base = args.base
     fixture = json.loads((base/args.fixture_subdir/'result.json').read_text())
@@ -54,13 +54,27 @@ def main():
     log = ULog(str(ulog_path[0]))
     offboard = log.get_dataset('offboard_control_mode').data
     status = log.get_dataset('vehicle_status').data
-    checks['px4_decoded_position_and_velocity_inputs'] = bool(any(offboard['position']) and any(offboard['velocity']))
+    if args.fixture_subdir=='aruco-mavros-wire':
+        checks['px4_decoded_velocity_input'] = bool(any(offboard['velocity']))
+        checks['velocity_only_position_disabled'] = not any(offboard['position'])
+    else:
+        checks['px4_decoded_position_and_velocity_inputs'] = bool(any(offboard['position']) and any(offboard['velocity']))
     if args.fixture_subdir=='ego-mavros-wire':
         checks['px4_decoded_acceleration_input'] = bool(any(offboard['acceleration']))
     # PX4 v1.16 vehicle_status arming_state=2 is armed, nav_state=14 is OFFBOARD.
     checks['ulog_never_armed'] = bool(len(status['arming_state'])) and all(int(x)!=2 for x in status['arming_state'])
     checks['ulog_never_offboard'] = all(int(x)!=14 for x in status['nav_state'])
     wire_stamps={p['time_boot_ms'] for p in wire}
+    sink = fixture.get('mavros_sink_commands')
+    sink_diagnostics = None
+    if args.fixture_subdir=='aruco-mavros-wire' and sink is not None:
+        sink_stamps = {p['time_boot_ms'] for p in sink}
+        checks['all_observed_source_stamps_reach_mavros_sink'] = set(by_stamp) <= sink_stamps
+        checks['mavros_sink_stamps_match_observed_source'] = sink_stamps <= set(by_stamp)
+        checks['mavros_sink_and_wire_stamps_equal'] = sink_stamps == wire_stamps
+        sink_diagnostics = dict(observed_count=len(sink),unique_stamps=len(sink_stamps),
+            source_missing_indices=[i for i,c in enumerate(source) if boot_ms(c['stamp_ns']) not in sink_stamps],
+            wire_unobserved_source_stamps=sorted(wire_stamps-set(by_stamp)))
     missing=[i for i,c in enumerate(source) if boot_ms(c['stamp_ns']) not in wire_stamps]
     first_wire_source=next((i for i,c in enumerate(source) if boot_ms(c['stamp_ns']) in wire_stamps),None)
     prefix_only=first_wire_source is not None and missing==list(range(first_wire_source))
@@ -68,7 +82,7 @@ def main():
         unmatched_source_indices=missing,unmatched_is_initial_prefix_only=prefix_only,
         initial_unmatched_span_seconds=(source[first_wire_source]['stamp_ns']-source[0]['stamp_ns'])/1e9 if first_wire_source is not None else None,
         # 全流严格比较保留失败；这些诊断字段不豁免缺失或改变passed。
-        geometry_errors=errors,ulog=str(ulog_path[0].relative_to(base)),
+        mavros_sink_diagnostics=sink_diagnostics,geometry_errors=errors,ulog=str(ulog_path[0].relative_to(base)),
         px4_offboard_control_mode_samples=len(offboard['timestamp']),
         scope=args.fixture_subdir+': synthetic inputs -> actual native controller -> MAVROS -> PX4 decode; no armed flight dynamics or real hardware mission')
     (base/'analysis.json').write_text(json.dumps(result,indent=2)+'\n')

@@ -1,0 +1,24 @@
+[INFO] [1794847807.885773127] [Safina_aruco_test]: ArUco configured: ORIGINAL id=0 side=0.0350 m (adaptive max 53), 5X5 id=231 side=0.1950 m (adaptive max 23), calibration=1920x1080
+[INFO] [1794847808.038351070] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847809.097152898] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847810.196269614] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847811.205805243] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847812.231427385] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847813.342173812] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847814.390931377] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847815.444050161] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[ERROR] [1794847817.691067588] [Safina_aruco_test]: ArUco resolution 960x540 differs from calibration 1920x1080; target invalid
+[INFO] [1794847820.931357090] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847821.977892420] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847824.518516438] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847825.594594772] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847826.605781680] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847827.669271768] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847828.696947562] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847830.555594848] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=-0.0 deg
+[INFO] [1794847831.602488467] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=0.121 y=-0.161 depth=1.507 edge_yaw=0.0 deg
+[INFO] [1794847832.930547263] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=-0.000 y=-0.000 depth=1.495 edge_yaw=-0.0 deg
+[INFO] [1794847833.969627312] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=-0.000 y=-0.000 depth=1.495 edge_yaw=-0.0 deg
+[INFO] [1794847835.070573557] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=-0.000 y=-0.000 depth=1.495 edge_yaw=-0.0 deg
+[INFO] [1794847836.181394775] [Safina_aruco_test]: ArUco family=ORIGINAL id=0 x=-0.000 y=-0.000 depth=1.495 edge_yaw=-0.0 deg
+[INFO] [1794847836.365845580] [rclcpp]: signal_handler(SIGINT/SIGTERM)

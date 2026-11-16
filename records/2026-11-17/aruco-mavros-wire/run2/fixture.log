@@ -1,0 +1,40 @@
+{"check": "actual PX4 connected disarmed before controller starts", "passed": true}
+PHASE ready image chain rows 2 phase IDLE reason accepted
+{"check": "actual image detector and controller diagnostics are ready", "passed": true}
+{"check": "PnP recovers synthetic optical position", "passed": true}
+{"check": "detector preserves actual image source header", "passed": true}
+{"check": "optical target maps to ENU at zero aircraft yaw", "passed": true}
+{"check": "marker is paired with pose history within configured tolerance", "passed": true}
+{"check": "healthy POSCTL standby produces only zero commands", "passed": true}
+{"check": "no flight service request before mode trigger", "passed": true}
+PHASE wrong optical frame rows 2 phase IDLE reason unexpected_marker_frame
+{"check": "image source wrong frame propagates and controller rejects it", "passed": true}
+PHASE stale image rows 2 phase IDLE reason source_stamp_stale
+{"check": "old image source cannot become a fresh control target", "passed": true}
+PHASE future image rows 3 phase IDLE reason source_stamp_stale
+{"check": "future image source cannot become a control target", "passed": true}
+PHASE blank image rows 2 phase IDLE reason detector_no_selected_target
+{"check": "blank image detector sentinel clears target", "passed": true}
+PHASE wrong image size rows 3 phase IDLE reason detector_no_selected_target
+{"check": "calibration resolution mismatch cannot drive the controller", "passed": true}
+PHASE unconfigured marker ID rows 3 phase IDLE reason detector_no_selected_target
+{"check": "unconfigured ArUco ID cannot drive the controller", "passed": true}
+PHASE 90 degree aircraft yaw rows 2 phase IDLE reason accepted
+{"check": "image target rotates into ENU using aircraft pose yaw", "passed": true}
+PHASE filter reset rows 3 phase IDLE reason detector_no_selected_target
+PHASE restore source rows 2 phase IDLE reason accepted
+PHASE simulated pilot OFFBOARD edge rows 2 phase TRANSLATE reason accepted
+{"check": "fresh image chain enables task on simulated pilot mode edge", "passed": true}
+{"check": "controller moves toward the detected ENU target", "passed": true}
+PHASE image stream dropout rows 3 phase LOST_HOLD reason accepted
+{"check": "image dropout holds rather than continuing blind descent at 1.5m", "passed": true}
+PHASE image stream recovered rows 2 phase TRANSLATE reason accepted
+{"check": "fresh images reacquire the control target", "passed": true}
+PHASE centered image enables descent rows 3 phase CANCELLED reason accepted
+{"check": "centered actual detector target produces downward ENU velocity", "passed": false}
+Traceback (most recent call last):
+  File "/tmp/aruco-mavros-wire/test_aruco_mavros_wire_ros2.py", line 145, in <module>
+    check('centered actual detector target produces downward ENU velocity',bool(d) and d[-1]['phase']=='DESCEND' and bool(c) and any(m.velocity.z<-.02 for m in c))
+  File "/tmp/aruco-mavros-wire/test_aruco_mavros_wire_ros2.py", line 92, in check
+    assert value,label
+AssertionError: centered actual detector target produces downward ENU velocity
