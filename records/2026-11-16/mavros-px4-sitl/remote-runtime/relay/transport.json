@@ -1,0 +1,14 @@
+{
+  "interfaces": [
+    "lo",
+    "enP3p49s0",
+    "wlan0"
+  ],
+  "counts": {
+    "udp_to_stdio": 3230,
+    "stdio_to_udp": 30339
+  },
+  "packets": [],
+  "simulator_parameter_commands": [],
+  "process_returncode": null
+}

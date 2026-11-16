@@ -81,3 +81,5 @@ EGO机载代码提交c33f78b；机载临时构建/测试/日志目录清理，�
 2026-11-16：断电续接只读确认.224在线、NoMachine active、机载bd6c781干净；GitHub f2ed248与电脑一致。独立SITL准备中：系统Python venv缺ensurepip，改用现有pip --python向私有venv安装构建工具。Git2.25.1的blob:none浅克隆反复取包且未完成checkout，停止其专属进程，改为独立-full目录不带filter的浅克隆。尚未运行SITL，不改变物理飞控。
 
 2026-11-16：独立官方PX4 v1.16.0（6ea3539157）源码及锁定子模块准备，私有构建完成；仅lo网络空间SIH启动7项通过，全程disarmed并正常退出。记录见records/2026-11-16/px4-sitl，包含依赖/部分克隆/可选Gazebo/代码生成/网络检查/JSON失败及处理。机载仍bd6c781，无部署或正式切换；ROS2/MAVROS联合SITL、真实雷达/PX4融合与物理任务仍待验证。
+
+2026-11-16：真实ROS2/MAVROS2与官方PX4 SIH通过SSH stdio/仅lo网络空间完成16项联合检查。1515条视觉源戳/坐标逐条匹配，PX4水平/高度EV融合运行中均True，全程disarmed；timesync RTT/参数启动重试告警保留，不宣称时延验收。源摘要匹配，机载临时目录/进程清理、bd6c781干净、NoMachine active。记录见records/2026-11-16/mavros-px4-sitl；下一步实际FAST-LIO/转发联合，实物雷达/云台/任务/GCS仍未验收。

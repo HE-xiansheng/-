@@ -1,0 +1,11 @@
+{
+  "active_test_processes": [],
+  "removed": "/tmp/mavros-px4-sitl",
+  "source_sha256": {
+    "tools/sitl_stdio_transport.py": "1f13185b7725a334e312f4aa2b7dc7786a8d2fbbc863ef6c2dfc14e1da8560c3",
+    "tools/test_mavros_px4_sitl_ros2.py": "d63cacef5a5bc0ba29ecffc4b9cdfe8ad7930e3711c727bba93c3d37fa443c0b",
+    "fixture/mavros_platform.launch.py": "ab6d9dd464a51041623612c151d757b99b5a6dbfa14e1be851691028fb08c826"
+  },
+  "onboard_status": "",
+  "nxserver": "active"
+}

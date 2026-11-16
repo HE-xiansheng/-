@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "connected": true,
+    "all_disarmed": true,
+    "local_poses": true,
+    "vision_published": true,
+    "landed_state": true,
+    "fresh_pose": true,
+    "connected_at_end": true,
+    "loopback_namespace": true,
+    "px4_clean_exit": true,
+    "bidirectional_transport": true,
+    "vision_packet_count": true,
+    "all_wire_stamps_match_source": true,
+    "vision_enu_ned_once": true,
+    "vision_unique_increasing": true,
+    "estimator_aid_src_ev_pos_fused": true,
+    "estimator_aid_src_ev_hgt_fused": true
+  },
+  "passed": true,
+  "wire_vision_count": 1515,
+  "ros_vision_count": 1515,
+  "max_position_error_m": 0.0,
+  "timesync_rtt_warning_count": 1,
+  "limitation": "Synthetic simulated pose feedback, not independent radar localization or physical PX4 fusion; transport RTT spikes observed."
+}

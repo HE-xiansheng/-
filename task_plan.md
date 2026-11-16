@@ -60,3 +60,5 @@ ArUco前台复用/所属清理16项及实际rqt offscreen6项通过；可见窗�
 - Git2.25.1 partial clone反复下载未形成checkout：保留失败证据，改独立目录普通浅克隆。
 
 - 独立官方PX4 v1.16.0 SIH基线构建与隔离启动7项完成；ROS2/MAVROS联合仿真及实物融合仍进行中。
+
+- 真实MAVROS2↔官方PX4隔离SIH联合16项完成；外部视觉反馈融合通过，尚未覆盖真实FAST-LIO端到端或实物；启动timesync RTT告警仍待验证。

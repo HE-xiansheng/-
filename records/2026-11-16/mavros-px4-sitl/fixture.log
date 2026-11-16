@@ -1,0 +1,9 @@
+{
+  "connected": true,
+  "all_disarmed": true,
+  "local_poses": true,
+  "vision_published": true,
+  "landed_state": true,
+  "fresh_pose": true,
+  "connected_at_end": true
+}

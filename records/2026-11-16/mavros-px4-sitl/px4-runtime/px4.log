@@ -1,0 +1,179 @@
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] startup script: /bin/sh /home/tyzk/drone-migration-work/build-px4-sitl/etc/init.d-posix/rcS 0
+INFO  [init] found model autostart file as SYS_AUTOSTART=10040
+INFO  [param] selected parameter default file parameters.bson
+INFO  [param] selected parameter backup file parameters_backup.bson
+  SYS_AUTOCONFIG: curr: 0 -> new: 1
+  SYS_AUTOSTART: curr: 0 -> new: 10040
+  CAL_ACC0_ID: curr: 0 -> new: 1310988
+  CAL_GYRO0_ID: curr: 0 -> new: 1310988
+  CAL_ACC1_ID: curr: 0 -> new: 1310996
+  CAL_GYRO1_ID: curr: 0 -> new: 1310996
+  CAL_ACC2_ID: curr: 0 -> new: 1311004
+  CAL_GYRO2_ID: curr: 0 -> new: 1311004
+  CAL_MAG0_ID: curr: 0 -> new: 197388
+  CAL_MAG0_PRIO: curr: -1 -> new: 50
+  CAL_MAG1_ID: curr: 0 -> new: 197644
+  CAL_MAG1_PRIO: curr: -1 -> new: 50
+  SENS_BOARD_X_OFF: curr: 0.0000 -> new: 0.0000
+  SENS_DPRES_OFF: curr: 0.0000 -> new: 0.0010
+INFO  [dataman] data manager file './dataman' size is 1208528 bytes
+INFO  [init] SIH simulator
+INFO  [simulator_sih] Simulation loop with 250 Hz (4000 us sim time interval)
+INFO  [simulator_sih] Simulation with 1.0x speedup. Loop with (4000 us wall time interval)
+INFO  [lockstep_scheduler] setting initial absolute time to 4000 us
+INFO  [commander] LED: open /dev/led0 failed (22)
+INFO  [uxrce_dds_client] init UDP agent IP:127.0.0.1, port:8888
+INFO  [mavlink] mode: Normal, data rate: 4000000 B/s on udp port 18570 remote port 14550
+INFO  [tone_alarm] home set
+INFO  [mavlink] mode: Onboard, data rate: 4000000 B/s on udp port 14580 remote port 14540
+INFO  [mavlink] mode: Onboard, data rate: 4000 B/s on udp port 14280 remote port 14030
+INFO  [mavlink] mode: Gimbal, data rate: 400000 B/s on udp port 13030 remote port 13280
+INFO  [mavlink] mode: Custom, data rate: 400000 B/s on udp port 19450 remote port 19410
+INFO  [logger] logger started (mode=all)
+INFO  [logger] Start file log (type: full)
+INFO  [logger] [logger] ./log/2026-11-16/14_57_26.ulg	
+INFO  [logger] Opened full log file: ./log/2026-11-16/14_57_26.ulg
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [px4] Startup script returned successfully
+pxh> INFO  [commander] [32mReady for takeoff![0m
+INFO  [mavlink] partner IP: 127.0.0.1
+INFO  [mavlink] Ignore command 512 from 1/191 to 0/0
+[2Kpxh> p[2Kpxh> pa[2Kpxh> par[2Kpxh> para[2Kpxh> param[2Kpxh> param [2Kpxh> param s[2Kpxh> param se[2Kpxh> param set[2Kpxh> param set [2Kpxh> param set E[2Kpxh> param set EK[2Kpxh> param set EKF[2Kpxh> param set EKF2[2Kpxh> param set EKF2_[2Kpxh> param set EKF2_E[2Kpxh> param set EKF2_EV[2Kpxh> param set EKF2_EV_[2Kpxh> param set EKF2_EV_C[2Kpxh> param set EKF2_EV_CT[2Kpxh> param set EKF2_EV_CTR[2Kpxh> param set EKF2_EV_CTRL[2Kpxh> param set EKF2_EV_CTRL [2Kpxh> param set EKF2_EV_CTRL 3
+  EKF2_EV_CTRL: curr: 0 -> new: 3
+pxh> INFO  [mavlink] Ignore command 512 from 1/191 to 0/0
+INFO  [mavlink] Ignore command 512 from 1/191 to 0/0
+WARN  [timesync] RTT too high for timesync: 1972 ms
+[2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener v[2Kpxh> listener ve[2Kpxh> listener veh[2Kpxh> listener vehi[2Kpxh> listener vehic[2Kpxh> listener vehicl[2Kpxh> listener vehicle[2Kpxh> listener vehicle_[2Kpxh> listener vehicle_v[2Kpxh> listener vehicle_vi[2Kpxh> listener vehicle_vis[2Kpxh> listener vehicle_visu[2Kpxh> listener vehicle_visua[2Kpxh> listener vehicle_visual[2Kpxh> listener vehicle_visual_[2Kpxh> listener vehicle_visual_o[2Kpxh> listener vehicle_visual_od[2Kpxh> listener vehicle_visual_odo[2Kpxh> listener vehicle_visual_odom[2Kpxh> listener vehicle_visual_odome[2Kpxh> listener vehicle_visual_odomet[2Kpxh> listener vehicle_visual_odometr[2Kpxh> listener vehicle_visual_odometry[2Kpxh> listener vehicle_visual_odometry [2Kpxh> listener vehicle_visual_odometry 1
+
+TOPIC: vehicle_visual_odometry
+ vehicle_visual_odometry
+    timestamp: 50716000 (0.000000 seconds ago)
+    timestamp_sample: 50716000 (0 us before timestamp)
+    position: [0.24477, -0.01474, 0.06650]
+    q: [0.99999, 0.00034, 0.00018, -0.00395] (Roll: 0.0 deg, Pitch: 0.0 deg, Yaw: -0.5 deg)
+    velocity: [nan, nan, nan]
+    angular_velocity: [nan, nan, nan]
+    position_variance: [0.00000, 0.00000, 0.00000]
+    orientation_variance: [0.00000, 0.00000, 0.00000]
+    velocity_variance: [nan, nan, nan]
+    pose_frame: 1
+    velocity_frame: 0
+    reset_counter: 0
+    quality: 0
+
+pxh> [2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener e[2Kpxh> listener es[2Kpxh> listener est[2Kpxh> listener esti[2Kpxh> listener estim[2Kpxh> listener estima[2Kpxh> listener estimat[2Kpxh> listener estimato[2Kpxh> listener estimator[2Kpxh> listener estimator_[2Kpxh> listener estimator_a[2Kpxh> listener estimator_ai[2Kpxh> listener estimator_aid[2Kpxh> listener estimator_aid_[2Kpxh> listener estimator_aid_s[2Kpxh> listener estimator_aid_sr[2Kpxh> listener estimator_aid_src[2Kpxh> listener estimator_aid_src_[2Kpxh> listener estimator_aid_src_e[2Kpxh> listener estimator_aid_src_ev[2Kpxh> listener estimator_aid_src_ev_[2Kpxh> listener estimator_aid_src_ev_p[2Kpxh> listener estimator_aid_src_ev_po[2Kpxh> listener estimator_aid_src_ev_pos[2Kpxh> listener estimator_aid_src_ev_pos [2Kpxh> listener estimator_aid_src_ev_pos 1
+
+TOPIC: estimator_aid_src_ev_pos
+ estimator_aid_src_ev_pos
+    timestamp: 50708000 (0.008000 seconds ago)
+    timestamp_sample: 50556000 (152000 us before timestamp)
+    time_last_fuse: 50556000
+    observation: [0.246912, -0.009577]
+    device_id: 0 (Type: 0x00, UNKNOWN:0 (0x00))
+    observation_variance: [0.26293, 0.26293]
+    innovation: [-0.01027, -0.00786]
+    innovation_filtered: [-0.00254, -0.00136]
+    innovation_variance: [0.27173, 0.27173]
+    test_ratio: [0.00002, 0.00001]
+    test_ratio_filtered: [-0.00000, -0.00000]
+    estimator_instance: 0
+    innovation_rejected: False
+    fused: True
+
+pxh> [2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener e[2Kpxh> listener es[2Kpxh> listener est[2Kpxh> listener esti[2Kpxh> listener estim[2Kpxh> listener estima[2Kpxh> listener estimat[2Kpxh> listener estimato[2Kpxh> listener estimator[2Kpxh> listener estimator_[2Kpxh> listener estimator_a[2Kpxh> listener estimator_ai[2Kpxh> listener estimator_aid[2Kpxh> listener estimator_aid_[2Kpxh> listener estimator_aid_s[2Kpxh> listener estimator_aid_sr[2Kpxh> listener estimator_aid_src[2Kpxh> listener estimator_aid_src_[2Kpxh> listener estimator_aid_src_e[2Kpxh> listener estimator_aid_src_ev[2Kpxh> listener estimator_aid_src_ev_[2Kpxh> listener estimator_aid_src_ev_h[2Kpxh> listener estimator_aid_src_ev_hg[2Kpxh> listener estimator_aid_src_ev_hgt[2Kpxh> listener estimator_aid_src_ev_hgt [2Kpxh> listener estimator_aid_src_ev_hgt 1
+
+TOPIC: estimator_aid_src_ev_hgt
+ estimator_aid_src_ev_hgt
+    timestamp: 50708000 (0.008000 seconds ago)
+    timestamp_sample: 50556000 (152000 us before timestamp)
+    time_last_fuse: 50556000
+    device_id: 0 (Type: 0x00, UNKNOWN:0 (0x00))
+    observation: -489.35327
+    observation_variance: 0.26289
+    innovation: -0.00180
+    innovation_filtered: -0.00020
+    innovation_variance: 0.27021
+    test_ratio: 0.00000
+    test_ratio_filtered: -0.00000
+    estimator_instance: 0
+    innovation_rejected: False
+    fused: True
+
+pxh> WARN  [commander] Connection to mission computer lost	
+[2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener v[2Kpxh> listener ve[2Kpxh> listener veh[2Kpxh> listener vehi[2Kpxh> listener vehic[2Kpxh> listener vehicl[2Kpxh> listener vehicle[2Kpxh> listener vehicle_[2Kpxh> listener vehicle_v[2Kpxh> listener vehicle_vi[2Kpxh> listener vehicle_vis[2Kpxh> listener vehicle_visu[2Kpxh> listener vehicle_visua[2Kpxh> listener vehicle_visual[2Kpxh> listener vehicle_visual_[2Kpxh> listener vehicle_visual_o[2Kpxh> listener vehicle_visual_od[2Kpxh> listener vehicle_visual_odo[2Kpxh> listener vehicle_visual_odom[2Kpxh> listener vehicle_visual_odome[2Kpxh> listener vehicle_visual_odomet[2Kpxh> listener vehicle_visual_odometr[2Kpxh> listener vehicle_visual_odometry[2Kpxh> listener vehicle_visual_odometry [2Kpxh> listener vehicle_visual_odometry 1
+
+TOPIC: vehicle_visual_odometry
+ vehicle_visual_odometry
+    timestamp: 62072000 (8.060000 seconds ago)
+    timestamp_sample: 62067154 (4846 us before timestamp)
+    position: [0.11078, 0.01004, 0.06873]
+    q: [1.00000, 0.00151, 0.00069, -0.00038] (Roll: 0.2 deg, Pitch: 0.1 deg, Yaw: -0.0 deg)
+    velocity: [nan, nan, nan]
+    angular_velocity: [nan, nan, nan]
+    position_variance: [0.00000, 0.00000, 0.00000]
+    orientation_variance: [0.00000, 0.00000, 0.00000]
+    velocity_variance: [nan, nan, nan]
+    pose_frame: 1
+    velocity_frame: 0
+    reset_counter: 0
+    quality: 0
+
+pxh> [2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener e[2Kpxh> listener es[2Kpxh> listener est[2Kpxh> listener esti[2Kpxh> listener estim[2Kpxh> listener estima[2Kpxh> listener estimat[2Kpxh> listener estimato[2Kpxh> listener estimator[2Kpxh> listener estimator_[2Kpxh> listener estimator_a[2Kpxh> listener estimator_ai[2Kpxh> listener estimator_aid[2Kpxh> listener estimator_aid_[2Kpxh> listener estimator_aid_s[2Kpxh> listener estimator_aid_sr[2Kpxh> listener estimator_aid_src[2Kpxh> listener estimator_aid_src_[2Kpxh> listener estimator_aid_src_e[2Kpxh> listener estimator_aid_src_ev[2Kpxh> listener estimator_aid_src_ev_[2Kpxh> listener estimator_aid_src_ev_p[2Kpxh> listener estimator_aid_src_ev_po[2Kpxh> listener estimator_aid_src_ev_pos[2Kpxh> listener estimator_aid_src_ev_pos [2Kpxh> listener estimator_aid_src_ev_pos 1
+
+TOPIC: estimator_aid_src_ev_pos
+ estimator_aid_src_ev_pos
+    timestamp: 62220000 (8.300000 seconds ago)
+    timestamp_sample: 62063154 (156846 us before timestamp)
+    time_last_fuse: 62068000
+    observation: [0.110773, 0.004540]
+    device_id: 0 (Type: 0x00, UNKNOWN:0 (0x00))
+    observation_variance: [0.26270, 0.26270]
+    innovation: [-0.00075, -0.00337]
+    innovation_filtered: [0.00023, 0.00048]
+    innovation_variance: [0.27141, 0.27141]
+    test_ratio: [0.00000, 0.00000]
+    test_ratio_filtered: [0.00000, 0.00000]
+    estimator_instance: 0
+    innovation_rejected: False
+    fused: True
+
+pxh> [2Kpxh> l[2Kpxh> li[2Kpxh> lis[2Kpxh> list[2Kpxh> liste[2Kpxh> listen[2Kpxh> listene[2Kpxh> listener[2Kpxh> listener [2Kpxh> listener e[2Kpxh> listener es[2Kpxh> listener est[2Kpxh> listener esti[2Kpxh> listener estim[2Kpxh> listener estima[2Kpxh> listener estimat[2Kpxh> listener estimato[2Kpxh> listener estimator[2Kpxh> listener estimator_[2Kpxh> listener estimator_a[2Kpxh> listener estimator_ai[2Kpxh> listener estimator_aid[2Kpxh> listener estimator_aid_[2Kpxh> listener estimator_aid_s[2Kpxh> listener estimator_aid_sr[2Kpxh> listener estimator_aid_src[2Kpxh> listener estimator_aid_src_[2Kpxh> listener estimator_aid_src_e[2Kpxh> listener estimator_aid_src_ev[2Kpxh> listener estimator_aid_src_ev_[2Kpxh> listener estimator_aid_src_ev_h[2Kpxh> listener estimator_aid_src_ev_hg[2Kpxh> listener estimator_aid_src_ev_hgt[2Kpxh> listener estimator_aid_src_ev_hgt [2Kpxh> listener estimator_aid_src_ev_hgt 1
+
+TOPIC: estimator_aid_src_ev_hgt
+ estimator_aid_src_ev_hgt
+    timestamp: 62220000 (8.688000 seconds ago)
+    timestamp_sample: 62063154 (156846 us before timestamp)
+    time_last_fuse: 62068000
+    device_id: 0 (Type: 0x00, UNKNOWN:0 (0x00))
+    observation: -489.35489
+    observation_variance: 0.26266
+    innovation: -0.00101
+    innovation_filtered: -0.00046
+    innovation_variance: 0.26989
+    test_ratio: 0.00000
+    test_ratio_filtered: -0.00000
+    estimator_instance: 0
+    innovation_rejected: False
+    fused: True
+
+pxh> [2Kpxh> c[2Kpxh> co[2Kpxh> com[2Kpxh> comm[2Kpxh> comma[2Kpxh> comman[2Kpxh> command[2Kpxh> commande[2Kpxh> commander[2Kpxh> commander [2Kpxh> commander s[2Kpxh> commander st[2Kpxh> commander sta[2Kpxh> commander stat[2Kpxh> commander statu[2Kpxh> commander status
+INFO  [commander] Disarmed
+INFO  [commander] navigation mode: Hold
+INFO  [commander] user intended navigation mode: Hold
+INFO  [commander] in failsafe: no
+commander: cycle: 5924 events, 0us elapsed, 0.00us avg, min 0us max 0us 0.000us rms
+commander: preflight check: 659 events, 0us elapsed, 0.00us avg, min 0us max 0us 0.000us rms
+pxh> [2Kpxh> s[2Kpxh> sh[2Kpxh> shu[2Kpxh> shut[2Kpxh> shutd[2Kpxh> shutdo[2Kpxh> shutdow[2Kpxh> shutdown
+Exiting NOW.
