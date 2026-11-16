@@ -1,0 +1,6 @@
+1794841352.6794562 [INFO] [launch]: All log files can be found below /tmp/fastlio-px4-sitl/ros-log/2026-11-16-23-02-32-678029-orangepi5ultra-144696
+1794841352.6796367 [INFO] [launch]: Default logging verbosity is set to INFO
+1794841352.8308034 [INFO] [mavros_node-1]: process started with pid [144697]
+1794841435.9397919 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794841435.9446194 [INFO] [mavros_node-1]: sending signal 'SIGINT' to process[mavros_node-1]
+1794841437.8785472 [INFO] [mavros_node-1]: process has finished cleanly [pid 144697]

@@ -1,0 +1,18 @@
+{
+  "source_commit": "bd6c781a33d5389762481ea47379518fcfb75413",
+  "status": "",
+  "sha256": {
+    "/home/orangepi/drone_platform/01_apps/fast_lio/manage_stack.py": "9b3b204fda5fd0ceb036ce6ec6c60ef768af093cde26dd0b537873cc7cc3350f",
+    "/home/orangepi/drone_platform/01_apps/fast_lio/launch/localization.launch.py": "b4fa080bfa872b0cb03725ab05a0b1fbe64bcf4b60e7a40bbe9308dbbeb4d3ba",
+    "/home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml": "447aebf3ef449da3c37c6bf0a6bdcc824c083a8d112b94e99ebf29cdfb2d3b85",
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": "04cda48cae7220bafe733dfaa5dd45b5776fa0b3d1f583c9dfa91ec774f0b8c8",
+    "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros/lib/to_mavros/vision2mavros": "cb74acd99f821d0aafb8c3bf54eec698ed0fbbbce3e5da6616dbbf14ebc3c5b9",
+    "/tmp/fastlio-px4-sitl/tools/sitl_stdio_transport.py": "4d852fe4b49e7dc669e12c755e661253ac6f09eee85e6df449ee07b71d5b873d",
+    "/tmp/fastlio-px4-sitl/tools/test_fastlio_px4_sitl_ros2.py": "236394dee8973f5c41cf8324201ace0c69c13cf95a2dd332f786166efe244a7c",
+    "/tmp/fastlio-px4-sitl/tools/validate_fastlio_replay.py": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+    "/tmp/fastlio-px4-sitl/fixture/mavros_platform.launch.py": "ab6d9dd464a51041623612c151d757b99b5a6dbfa14e1be851691028fb08c826",
+    "/tmp/fastlio-px4-sitl/fixture/livox.jsonl.gz": "0f849044a1371180b3c55ec61bc061fd348043bfbd0617dd47157ef063757d4f"
+  },
+  "ip_link": "lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> \nenP3p49s0        DOWN           c0:74:2b:f9:c0:d8 <NO-CARRIER,BROADCAST,MULTICAST,UP> \nwlan0            UP             40:fd:f3:04:1f:c6 <BROADCAST,MULTICAST,UP,LOWER_UP> \n",
+  "ip_addr": "lo               UNKNOWN        127.0.0.1/8 ::1/128 \nenP3p49s0        DOWN           \nwlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:af0a:7930:a292:9ac3/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 \n"
+}

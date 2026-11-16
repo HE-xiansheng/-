@@ -1,0 +1,15 @@
+PASS actual_px4_connected_disarmed
+{"ok": true, "action": "start", "message": "定位与转发已启动，保持静止等待100个新测量初始化"}
+
+PASS manager_starts_actual_stack
+PASS relay_initializes_from_actual_lio
+PASS actual_odometry_stream
+PASS actual_vision_stream
+PASS relay_keeps_lio_source_stamps
+PASS relay_unique_increasing
+PASS expected_frames
+PASS sensor_loss_stops_vision_retransmission
+{"ok": true, "action": "stop", "message": "定位与转发已停止"}
+
+PASS manager_stops_owned_stack
+PASS all_observed_states_disarmed

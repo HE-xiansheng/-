@@ -1,0 +1,12 @@
+{
+  "first_visual_timestamp_s": 30.012,
+  "last_visual_timestamp_s": 87.772,
+  "first_nonzero_source_age_timestamp_s": 72.376,
+  "zero_age_samples": 410,
+  "nonzero_age_samples": 152,
+  "last_100_age_ms": {
+    "min": 70.007,
+    "median": 111.166,
+    "max": 132.15
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "checks": {
+    "actual_px4_connected_disarmed": true,
+    "manager_starts_actual_stack": true,
+    "relay_initializes_from_actual_lio": true,
+    "actual_odometry_stream": true,
+    "actual_vision_stream": true,
+    "relay_keeps_lio_source_stamps": true,
+    "relay_unique_increasing": true,
+    "expected_frames": true,
+    "sensor_loss_stops_vision_retransmission": true,
+    "manager_stops_owned_stack": true,
+    "all_observed_states_disarmed": true,
+    "network_namespace_only_lo": true,
+    "px4_clean_exit": true,
+    "wire_vision_count": true,
+    "all_wire_source_stamps_match": true,
+    "enu_ned_once": true,
+    "estimator_aid_src_ev_pos_fused": true,
+    "estimator_aid_src_ev_hgt_fused": true
+  },
+  "passed": true,
+  "sensor_inputs": {
+    "/livox/lidar": 711,
+    "/livox/imu": 14611
+  },
+  "odom_count": 665,
+  "vision_count": 564,
+  "wire_vision_count": 564,
+  "max_wire_position_error_m": 2.3273926536004907e-10,
+  "fusion_snapshots": {
+    "estimator_aid_src_ev_pos": [
+      {
+        "fused": true,
+        "rejected": false
+      },
+      {
+        "fused": true,
+        "rejected": false
+      },
+      {
+        "fused": true,
+        "rejected": false
+      }
+    ],
+    "estimator_aid_src_ev_hgt": [
+      {
+        "fused": true,
+        "rejected": false
+      },
+      {
+        "fused": true,
+        "rejected": false
+      },
+      {
+        "fused": true,
+        "rejected": false
+      }
+    ]
+  },
+  "observed_source_age": {
+    "odometry": {
+      "count": 76,
+      "min_ms": 50.213967,
+      "median_ms": 76.90268800000001,
+      "max_ms": 108.716735
+    },
+    "vision": {
+      "count": 76,
+      "min_ms": 52.441992,
+      "median_ms": 84.4860235,
+      "max_ms": 118.300677
+    }
+  },
+  "steady_rtt_ms": {
+    "count": 70,
+    "min": 2.7019801139831543,
+    "median": 3.500702977180481,
+    "max": 33.304874420166016
+  },
+  "limitations": [
+    "Recorded short stationary sample is looped, not physical radar or independent trajectory accuracy.",
+    "PX4 initially falls back to receive timestamps until its own timesync converges.",
+    "No real flight controller parameters or flight commands changed."
+  ]
+}

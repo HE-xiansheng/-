@@ -1,0 +1,70 @@
+{
+  "timesync_status_0": {
+    "count": 82,
+    "steady_count": 47,
+    "fields": [
+      "timestamp",
+      "remote_timestamp",
+      "observed_offset",
+      "estimated_offset",
+      "round_trip_time",
+      "source_protocol"
+    ],
+    "estimated_offset_last": -1794841339962924,
+    "observed_offset_last": -1794841339970868,
+    "round_trip_time_last": 0,
+    "remote_timestamp_last": 1794841435834868,
+    "source_protocol_last": 0
+  },
+  "vehicle_visual_odometry_0": {
+    "count": 562,
+    "steady_count": 367,
+    "fields": [
+      "timestamp",
+      "timestamp_sample",
+      "position[0]",
+      "position[1]",
+      "position[2]",
+      "q[0]",
+      "q[1]",
+      "q[2]",
+      "q[3]",
+      "velocity[0]",
+      "velocity[1]",
+      "velocity[2]",
+      "angular_velocity[0]",
+      "angular_velocity[1]",
+      "angular_velocity[2]",
+      "position_variance[0]",
+      "position_variance[1]",
+      "position_variance[2]",
+      "orientation_variance[0]",
+      "orientation_variance[1]",
+      "orientation_variance[2]",
+      "velocity_variance[0]",
+      "velocity_variance[1]",
+      "velocity_variance[2]",
+      "pose_frame",
+      "velocity_frame",
+      "reset_counter",
+      "quality"
+    ],
+    "steady_sensor_delay_ms": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 154.958
+    },
+    "last_deltas_ms": [
+      111.116,
+      78.626,
+      111.989,
+      114.627,
+      109.198,
+      81.141,
+      118.226,
+      86.185,
+      111.216,
+      113.698
+    ]
+  }
+}

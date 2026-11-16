@@ -1,0 +1,11 @@
+{
+  "sha256": {
+    "tools/sitl_stdio_transport.py": "4d852fe4b49e7dc669e12c755e661253ac6f09eee85e6df449ee07b71d5b873d",
+    "tools/test_fastlio_px4_sitl_ros2.py": "236394dee8973f5c41cf8324201ace0c69c13cf95a2dd332f786166efe244a7c",
+    "tools/run_fastlio_px4_sitl.py": "5322fa8497fc6454327bc998c2e077f4475374e7d38bdc2a419ba27cc9580ce8",
+    "tools/validate_fastlio_replay.py": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+    "/home/tyzk/drone-migration-work/reference/livox235-sample.jsonl.gz": "0f849044a1371180b3c55ec61bc061fd348043bfbd0617dd47157ef063757d4f",
+    "/home/tyzk/drone-migration-work/build-px4-sitl/bin/px4": "9f805269c427112819d78d08ba40c93db84c93fd79d9cc62805bc3f3173450bf"
+  },
+  "px4_commit": "6ea3539157ca358c70a515878b77077af7d4611d"
+}

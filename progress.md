@@ -83,3 +83,5 @@ EGO机载代码提交c33f78b；机载临时构建/测试/日志目录清理，�
 2026-11-16：独立官方PX4 v1.16.0（6ea3539157）源码及锁定子模块准备，私有构建完成；仅lo网络空间SIH启动7项通过，全程disarmed并正常退出。记录见records/2026-11-16/px4-sitl，包含依赖/部分克隆/可选Gazebo/代码生成/网络检查/JSON失败及处理。机载仍bd6c781，无部署或正式切换；ROS2/MAVROS联合SITL、真实雷达/PX4融合与物理任务仍待验证。
 
 2026-11-16：真实ROS2/MAVROS2与官方PX4 SIH通过SSH stdio/仅lo网络空间完成16项联合检查。1515条视觉源戳/坐标逐条匹配，PX4水平/高度EV融合运行中均True，全程disarmed；timesync RTT/参数启动重试告警保留，不宣称时延验收。源摘要匹配，机载临时目录/进程清理、bd6c781干净、NoMachine active。记录见records/2026-11-16/mavros-px4-sitl；下一步实际FAST-LIO/转发联合，实物雷达/云台/任务/GCS仍未验收。
+
+2026-11-16：旧机实采雷达/IMU循环回放→机载实际FAST-LIO/原生转发/MAVROS→官方PX4 SIH整链18项通过；711cloud/14611IMU→665odom/564vision，564条wire源戳/坐标一致，传感器停流不重发，管理器正常停止。运行中水平/高度EV融合通过。ULog发现PX4同步收敛前410条用接收戳，72.376秒后才显现源时龄，末100条70–132ms；禁止把融合位等同源时刻对齐。当前雷达以太网NO-CARRIER。报告仅电脑/GitHub，机载测试目录已清理、bd6c781干净。记录见records/2026-11-16/fastlio-px4-sitl。

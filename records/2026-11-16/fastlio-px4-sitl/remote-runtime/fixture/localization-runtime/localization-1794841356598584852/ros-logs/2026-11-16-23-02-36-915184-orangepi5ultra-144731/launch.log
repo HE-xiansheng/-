@@ -1,0 +1,6 @@
+1794841356.9173970 [INFO] [launch]: All log files can be found below /tmp/fastlio-px4-sitl/fixture/localization-runtime/localization-1794841356598584852/ros-logs/2026-11-16-23-02-36-915184-orangepi5ultra-144731
+1794841356.9177251 [INFO] [launch]: Default logging verbosity is set to INFO
+1794841356.9759004 [INFO] [fastlio_mapping-1]: process started with pid [144732]
+1794841435.4179187 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794841435.4213507 [INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+1794841435.5890644 [INFO] [fastlio_mapping-1]: process has finished cleanly [pid 144732]

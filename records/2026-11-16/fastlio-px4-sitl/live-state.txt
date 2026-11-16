@@ -1,0 +1,19 @@
+[mavros_node-1] [INFO] [1794841359.185506552] [mavros.sys]: VER: 1.1: Middleware software: 011000ff (6ea3539157000000)
+[mavros_node-1] [INFO] [1794841359.185539218] [mavros.sys]: VER: 1.1: OS software:         050f00ff (0000000000000000)
+[mavros_node-1] [INFO] [1794841359.185569552] [mavros.sys]: VER: 1.1: Board hardware:      00000001
+[mavros_node-1] [INFO] [1794841359.185599593] [mavros.sys]: VER: 1.1: VID/PID:             0000:0000
+[mavros_node-1] [INFO] [1794841359.185629343] [mavros.sys]: VER: 1.1: UID:                 4954414c44494e4f
+[mavros_node-1] [WARN] [1794841359.212059687] [mavros.sys]: VER: unicast request timeout, retries left 2
+[mavros_node-1] [WARN] [1794841368.484192321] [mavros.time]: TM: RTT too high for timesync: 2012.98 ms.
+[mavros_node-1] [WARN] [1794841368.550472783] [mavros.time]: TM: RTT too high for timesync: 975.63 ms.
+[mavros_node-1] [WARN] [1794841369.448336529] [mavros.param]: PR: request param #96 timeout, retries left 2, and 474 params still missing
+[mavros_node-1] [INFO] [1794841370.170337339] [mavros.mission]: WP: mission received
+[mavros_node-1] [INFO] [1794841375.173609723] [mavros.rallypoint]: RP: mission received
+[mavros_node-1] [INFO] [1794841380.167408053] [mavros.geofence]: GF: mission received
+localization-1794841356598584852
+localization.json
+management.lock
+relay-1794841357689393655
+relay.json
+ 144732       00:24 /home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_265p5m47 -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf
+ 144755       00:23 /home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros/lib/to_mavros/vision2mavros

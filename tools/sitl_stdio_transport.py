@@ -19,6 +19,7 @@ def main():
     ap.add_argument('--build', type=Path)
     ap.add_argument('--runtime', type=Path, required=True)
     ap.add_argument('--seconds', type=float, default=100)
+    ap.add_argument('--diagnostics-at', type=float, nargs='*', default=[])
     args = ap.parse_args()
     args.runtime.mkdir(parents=True, exist_ok=False)
     interfaces = [name for _, name in socket.if_nameindex()]
@@ -50,6 +51,7 @@ def main():
     buffer = bytearray()
     started = time.monotonic()
     configured = False
+    diagnostics = []
     try:
         while time.monotonic() - started < args.seconds:
             if process and process.poll() is not None:
@@ -59,6 +61,15 @@ def main():
                 process.stdin.write('param set EKF2_EV_CTRL 3\n')
                 process.stdin.flush()
                 configured = True
+            if process and len(diagnostics) < len(args.diagnostics_at):
+                due = args.diagnostics_at[len(diagnostics)]
+                if time.monotonic() - started >= due:
+                    for command in ['listener vehicle_visual_odometry 1',
+                                    'listener estimator_aid_src_ev_pos 1',
+                                    'listener estimator_aid_src_ev_hgt 1']:
+                        process.stdin.write(command+'\n')
+                    process.stdin.flush()
+                    diagnostics.append(time.monotonic()-started)
             for key, _ in selector.select(.1):
                 if key.fileobj is sock:
                     data, address = sock.recvfrom(65536)
@@ -106,6 +117,7 @@ def main():
         sock.close();selector.close()
         (args.runtime/'transport.json').write_text(json.dumps({
             'interfaces':interfaces, 'counts':counts, 'packets':packets,
+            'diagnostic_offsets_seconds':diagnostics,
             'simulator_parameter_commands':['param set EKF2_EV_CTRL 3'] if configured else [],
             'process_returncode':process.returncode if process else None},indent=2)+'\n')
 
