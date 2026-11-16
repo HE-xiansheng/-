@@ -1,0 +1,10 @@
+{
+  "states_received": 18,
+  "last_state": {
+    "connected": true,
+    "armed": false,
+    "mode": "AUTO.LOITER"
+  },
+  "command_plugin_dependency_fixed": true,
+  "flight_commands_sent": false
+}

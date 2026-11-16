@@ -1,0 +1,14 @@
+{
+  "/camera/color/image_raw": {
+    "messages": 201,
+    "receipt_hz": 16.758719078927776
+  },
+  "/camera/color/image_raw/compressed": {
+    "messages": 360,
+    "receipt_hz": 29.97541664980395
+  },
+  "/camera/depth/points": {
+    "messages": 193,
+    "receipt_hz": 16.12812492639132
+  }
+}

@@ -1,0 +1,97 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  geographiclib-tools libasio-dev libboost-python1.74.0 libgeographic-dev
+  libgeographic19 libgflags-dev libgflags2.2 libgl1-mesa-dev libglu1-mesa
+  libglu1-mesa-dev libglvnd-core-dev libglvnd-dev libgoogle-glog-dev
+  libgoogle-glog0v5 libopengl-dev nlohmann-json3-dev python3-opencv
+  ros-humble-backward-ros ros-humble-camera-calibration-parsers
+  ros-humble-camera-info-manager ros-humble-cv-bridge
+  ros-humble-diagnostic-updater ros-humble-eigen-stl-containers
+  ros-humble-geographic-msgs ros-humble-image-publisher
+  ros-humble-image-transport ros-humble-libmavconn ros-humble-mavlink
+  ros-humble-mavros-msgs ros-humble-orbbec-camera-msgs
+Suggested packages:
+  proj-bin geographiclib-doc
+Recommended packages:
+  libboost-regex-dev libboost-dev libboost-date-time-dev
+The following NEW packages will be installed:
+  geographiclib-tools libasio-dev libboost-python1.74.0 libgeographic-dev
+  libgeographic19 libgflags-dev libgflags2.2 libgl1-mesa-dev libglu1-mesa
+  libglu1-mesa-dev libglvnd-core-dev libglvnd-dev libgoogle-glog-dev
+  libgoogle-glog0v5 libopengl-dev nlohmann-json3-dev python3-opencv
+  ros-humble-backward-ros ros-humble-camera-calibration-parsers
+  ros-humble-camera-info-manager ros-humble-cv-bridge
+  ros-humble-diagnostic-updater ros-humble-eigen-stl-containers
+  ros-humble-geographic-msgs ros-humble-image-publisher
+  ros-humble-image-transport ros-humble-libmavconn ros-humble-mavlink
+  ros-humble-mavros ros-humble-mavros-extras ros-humble-mavros-msgs
+  ros-humble-orbbec-camera ros-humble-orbbec-camera-msgs
+0 upgraded, 33 newly installed, 0 to remove and 529 not upgraded.
+Inst libgeographic19 (1.52-1 Ubuntu:22.04/jammy [arm64])
+Inst geographiclib-tools (1.52-1 Ubuntu:22.04/jammy [arm64])
+Inst libasio-dev (1:1.18.1-1 Ubuntu:22.04/jammy [all])
+Inst libboost-python1.74.0 (1.74.0-14ubuntu3 Ubuntu:22.04/jammy [arm64])
+Inst libgeographic-dev (1.52-1 Ubuntu:22.04/jammy [arm64])
+Inst libgflags2.2 (2.2.2-2 Ubuntu:22.04/jammy [arm64])
+Inst libgflags-dev (2.2.2-2 Ubuntu:22.04/jammy [arm64])
+Inst libglu1-mesa (9.0.2-1 Ubuntu:22.04/jammy [arm64])
+Inst libglu1-mesa-dev (9.0.2-1 Ubuntu:22.04/jammy [arm64])
+Inst libgoogle-glog0v5 (0.5.0+really0.4.0-2 Ubuntu:22.04/jammy [arm64])
+Inst libgoogle-glog-dev (0.5.0+really0.4.0-2 Ubuntu:22.04/jammy [arm64])
+Inst libopengl-dev (1.4.0-1 Ubuntu:22.04/jammy [arm64])
+Inst nlohmann-json3-dev (3.10.5-2 Ubuntu:22.04/jammy [all])
+Inst python3-opencv (4.5.4+dfsg-9ubuntu4 Ubuntu:22.04/jammy [arm64])
+Inst ros-humble-backward-ros (1.0.8-2jammy.20260306.212100 ROS jammy:jammy [arm64])
+Inst ros-humble-camera-calibration-parsers (3.1.13-1jammy.20260908.011532 ROS jammy:jammy [arm64])
+Inst ros-humble-camera-info-manager (3.1.13-1jammy.20260908.011907 ROS jammy:jammy [arm64])
+Inst ros-humble-cv-bridge (3.2.1-1jammy.20260907.222938 ROS jammy:jammy [arm64])
+Inst ros-humble-diagnostic-updater (4.0.7-1jammy.20260908.025324 ROS jammy:jammy [arm64])
+Inst ros-humble-eigen-stl-containers (1.1.0-1jammy.20260307.143650 ROS jammy:jammy [arm64])
+Inst ros-humble-geographic-msgs (1.0.6-1jammy.20260907.222606 ROS jammy:jammy [arm64])
+Inst ros-humble-image-transport (3.1.13-1jammy.20260908.042813 ROS jammy:jammy [arm64])
+Inst ros-humble-image-publisher (3.0.9-1jammy.20260908.085505 ROS jammy:jammy [arm64])
+Inst ros-humble-mavlink (2026.9.9-1jammy.20260915.185252 ROS jammy:jammy [arm64])
+Inst ros-humble-libmavconn (2.16.0-1jammy.20260927.155237 ROS jammy:jammy [arm64])
+Inst ros-humble-mavros-msgs (2.16.0-1jammy.20260927.155213 ROS jammy:jammy [arm64])
+Inst ros-humble-mavros (2.16.0-1jammy.20260927.163040 ROS jammy:jammy [arm64])
+Inst ros-humble-mavros-extras (2.16.0-1jammy.20260927.170609 ROS jammy:jammy [arm64])
+Inst libglvnd-core-dev (1.4.0-1 Ubuntu:22.04/jammy [arm64])
+Inst libglvnd-dev (1.4.0-1 Ubuntu:22.04/jammy [arm64])
+Inst libgl1-mesa-dev (23.2.1-1ubuntu3.1~22.04.4 Ubuntu:22.04/jammy-security, Ubuntu:22.04/jammy-updates [arm64])
+Inst ros-humble-orbbec-camera-msgs (2.9.3-2jammy.20260907.224129 ROS jammy:jammy [arm64])
+Inst ros-humble-orbbec-camera (2.9.3-2jammy.20260916.045920 ROS jammy:jammy [arm64])
+Conf libgeographic19 (1.52-1 Ubuntu:22.04/jammy [arm64])
+Conf geographiclib-tools (1.52-1 Ubuntu:22.04/jammy [arm64])
+Conf libasio-dev (1:1.18.1-1 Ubuntu:22.04/jammy [all])
+Conf libboost-python1.74.0 (1.74.0-14ubuntu3 Ubuntu:22.04/jammy [arm64])
+Conf libgeographic-dev (1.52-1 Ubuntu:22.04/jammy [arm64])
+Conf libgflags2.2 (2.2.2-2 Ubuntu:22.04/jammy [arm64])
+Conf libgflags-dev (2.2.2-2 Ubuntu:22.04/jammy [arm64])
+Conf libglu1-mesa (9.0.2-1 Ubuntu:22.04/jammy [arm64])
+Conf libglu1-mesa-dev (9.0.2-1 Ubuntu:22.04/jammy [arm64])
+Conf libgoogle-glog0v5 (0.5.0+really0.4.0-2 Ubuntu:22.04/jammy [arm64])
+Conf libgoogle-glog-dev (0.5.0+really0.4.0-2 Ubuntu:22.04/jammy [arm64])
+Conf libopengl-dev (1.4.0-1 Ubuntu:22.04/jammy [arm64])
+Conf nlohmann-json3-dev (3.10.5-2 Ubuntu:22.04/jammy [all])
+Conf python3-opencv (4.5.4+dfsg-9ubuntu4 Ubuntu:22.04/jammy [arm64])
+Conf ros-humble-backward-ros (1.0.8-2jammy.20260306.212100 ROS jammy:jammy [arm64])
+Conf ros-humble-camera-calibration-parsers (3.1.13-1jammy.20260908.011532 ROS jammy:jammy [arm64])
+Conf ros-humble-camera-info-manager (3.1.13-1jammy.20260908.011907 ROS jammy:jammy [arm64])
+Conf ros-humble-cv-bridge (3.2.1-1jammy.20260907.222938 ROS jammy:jammy [arm64])
+Conf ros-humble-diagnostic-updater (4.0.7-1jammy.20260908.025324 ROS jammy:jammy [arm64])
+Conf ros-humble-eigen-stl-containers (1.1.0-1jammy.20260307.143650 ROS jammy:jammy [arm64])
+Conf ros-humble-geographic-msgs (1.0.6-1jammy.20260907.222606 ROS jammy:jammy [arm64])
+Conf ros-humble-image-transport (3.1.13-1jammy.20260908.042813 ROS jammy:jammy [arm64])
+Conf ros-humble-image-publisher (3.0.9-1jammy.20260908.085505 ROS jammy:jammy [arm64])
+Conf ros-humble-mavlink (2026.9.9-1jammy.20260915.185252 ROS jammy:jammy [arm64])
+Conf ros-humble-libmavconn (2.16.0-1jammy.20260927.155237 ROS jammy:jammy [arm64])
+Conf ros-humble-mavros-msgs (2.16.0-1jammy.20260927.155213 ROS jammy:jammy [arm64])
+Conf ros-humble-mavros (2.16.0-1jammy.20260927.163040 ROS jammy:jammy [arm64])
+Conf ros-humble-mavros-extras (2.16.0-1jammy.20260927.170609 ROS jammy:jammy [arm64])
+Conf libglvnd-core-dev (1.4.0-1 Ubuntu:22.04/jammy [arm64])
+Conf libglvnd-dev (1.4.0-1 Ubuntu:22.04/jammy [arm64])
+Conf libgl1-mesa-dev (23.2.1-1ubuntu3.1~22.04.4 Ubuntu:22.04/jammy-security, Ubuntu:22.04/jammy-updates [arm64])
+Conf ros-humble-orbbec-camera-msgs (2.9.3-2jammy.20260907.224129 ROS jammy:jammy [arm64])
+Conf ros-humble-orbbec-camera (2.9.3-2jammy.20260916.045920 ROS jammy:jammy [arm64])

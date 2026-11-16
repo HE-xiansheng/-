@@ -1,0 +1,15 @@
+Selecting previously unselected package nomachine.
+(Reading database ... 194766 files and directories currently installed.)
+Preparing to unpack .../nomachine_8.5.3_1_arm64.deb ...
+Unpacking nomachine (8.5.3-1) ...
+Setting up nomachine (8.5.3-1) ...
+NX> 700 Starting installation at: Mon, 16 Nov 2026 18:03:59.
+NX> 700 Using installation profile: Ubuntu.
+NX> 700 Installation log is: /usr/NX/var/log/nxinstall.log.
+NX> 700 Installing nxrunner version: 8.5.3.
+NX> 700 Installing nxplayer version: 8.5.3.
+NX> 700 Installing nxnode version: 8.5.3.
+NX> 700 Installing nxserver version: 8.5.3.
+NX> 700 Installation completed at: Mon, 16 Nov 2026 18:04:20.
+NX> 700 NoMachine was configured to run the following services:
+NX> 700 NX service on port: 4000

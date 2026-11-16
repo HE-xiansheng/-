@@ -1,0 +1,19 @@
+{
+  "reference": "192.168.1.235",
+  "reference_mavros": "1.20.1 (ROS1 Noetic)",
+  "active_mavros": "2.16.0 (ROS2 Humble)",
+  "active_orbbec_wrapper": "2.10.6",
+  "active_orbbec_sdk": "2.10.6",
+  "source_url": "https://github.com/orbbec/OrbbecSDK_ROS2",
+  "source_tag": "v2.10.6",
+  "source_commit": "296156521b60bdf813cb94c46cbb55562bbdc453",
+  "firmware": "1.4.60 unchanged",
+  "camera_serial": "CP253530009G",
+  "source_archive": "03_tools/install_assets/orbbec-ros2-v2.10.6-source.tar.gz",
+  "flight_commands_sent": false,
+  "system_services_changed": false,
+  "nomachine_installed": false,
+  "local_nomachine": "9.4.14 x86_64",
+  "reference_nomachine": "8.27.1-2 arm64",
+  "network_mode": "DHCP"
+}

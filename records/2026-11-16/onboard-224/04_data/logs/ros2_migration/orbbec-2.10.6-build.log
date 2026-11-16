@@ -1,0 +1,19 @@
+Starting >>> orbbec_camera_msgs
+[Processing: orbbec_camera_msgs]
+[Processing: orbbec_camera_msgs]
+Finished <<< orbbec_camera_msgs [1min 4s]
+Starting >>> orbbec_camera
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+[Processing: orbbec_camera]
+Finished <<< orbbec_camera [5min 32s]
+
+Summary: 2 packages finished [6min 36s]

@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-16T18:05:02.247181+08:00",
+  "source_file": "/home/tyzk/\u4e0b\u8f7d/nomachine_8.5.3_1_arm64.deb",
+  "target_file": "/home/orangepi/drone_platform/03_tools/install_assets/nomachine_8.5.3_1_arm64.deb",
+  "version": "8.5.3-1",
+  "architecture": "arm64",
+  "desktop_command": "/usr/bin/startxfce4",
+  "service_active": true,
+  "service_enabled": true,
+  "desktop_login_tested": false,
+  "tcp_4000_reachable_from_computer": true
+}

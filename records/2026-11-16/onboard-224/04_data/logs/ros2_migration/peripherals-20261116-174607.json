@@ -1,0 +1,1348 @@
+{
+  "checked_at": "2026-11-16T17:46:07.019356+08:00",
+  "duration_seconds": 35.01136217999988,
+  "checks": {
+    "flight_controller_connected": true,
+    "flight_controller_disarmed": true,
+    "four_image_streams": true,
+    "four_camera_calibrations": true,
+    "depth_has_valid_samples": true,
+    "point_cloud_received": true,
+    "camera_tf_received": true,
+    "timestamps_monotonic": true,
+    "image_timestamps_current": true
+  },
+  "passed": true,
+  "topics": {
+    "/camera/depth/image_raw": {
+      "count": 1050,
+      "first_receipt": 1579.224662831,
+      "last_stamp": 1794822366.940125,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.224194748,
+      "frame_id": "camera_depth_optical_frame",
+      "age_seconds": 0.07021498680114746,
+      "width": 848,
+      "height": 480,
+      "encoding": "16UC1",
+      "step": 1696,
+      "data_bytes": 814080,
+      "sample": {
+        "valid_fraction": 0.6772061713836478,
+        "raw_median": 2192.0,
+        "unit": "millimetres"
+      },
+      "receipt_hz": 29.971829408680705,
+      "stale_seconds": 0.00025054100001398183
+    },
+    "/camera/depth/camera_info": {
+      "count": 1042,
+      "first_receipt": 1579.229525775,
+      "last_stamp": 1794822366.940125,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.22105613,
+      "frame_id": "camera_depth_optical_frame",
+      "age_seconds": 0.06706643104553223,
+      "width": 848,
+      "height": 480,
+      "k": [
+        412.95977783203125,
+        0.0,
+        421.6812744140625,
+        0.0,
+        412.95977783203125,
+        240.9937744140625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "distortion_model": "plumb_bob",
+      "d": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receipt_hz": 29.750056354744316,
+      "stale_seconds": 0.0033935339999970893
+    },
+    "/camera/left_ir/image_raw": {
+      "count": 1049,
+      "first_receipt": 1579.23009044,
+      "last_stamp": 1794822366.906752,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.189366035,
+      "frame_id": "camera_left_ir_optical_frame",
+      "age_seconds": 0.06873607635498047,
+      "width": 848,
+      "height": 480,
+      "encoding": "mono8",
+      "step": 848,
+      "data_bytes": 407040,
+      "receipt_hz": 29.977737872517256,
+      "stale_seconds": 0.03508625400013443
+    },
+    "/camera/left_ir/camera_info": {
+      "count": 1043,
+      "first_receipt": 1579.230394064,
+      "last_stamp": 1794822366.906752,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.189812284,
+      "frame_id": "camera_left_ir_optical_frame",
+      "age_seconds": 0.06917572021484375,
+      "width": 848,
+      "height": 480,
+      "k": [
+        412.95977783203125,
+        0.0,
+        421.6812744140625,
+        0.0,
+        412.95977783203125,
+        240.9937744140625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "distortion_model": "plumb_bob",
+      "d": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receipt_hz": 29.805988001364323,
+      "stale_seconds": 0.0346435050000764
+    },
+    "/camera/right_ir/image_raw": {
+      "count": 1049,
+      "first_receipt": 1579.23066998,
+      "last_stamp": 1794822366.906752,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.191167364,
+      "frame_id": "camera_right_ir_optical_frame",
+      "age_seconds": 0.07053327560424805,
+      "width": 848,
+      "height": 480,
+      "encoding": "mono8",
+      "step": 848,
+      "data_bytes": 407040,
+      "receipt_hz": 29.976690219505432,
+      "stale_seconds": 0.03329105000011623
+    },
+    "/camera/right_ir/camera_info": {
+      "count": 1045,
+      "first_receipt": 1579.252702417,
+      "last_stamp": 1794822366.906752,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.191560238,
+      "frame_id": "camera_right_ir_optical_frame",
+      "age_seconds": 0.07091951370239258,
+      "width": 848,
+      "height": 480,
+      "k": [
+        412.95977783203125,
+        0.0,
+        421.6812744140625,
+        0.0,
+        412.95977783203125,
+        240.9937744140625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "distortion_model": "plumb_bob",
+      "d": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receipt_hz": 29.8807707266407,
+      "stale_seconds": 0.03290080100009618
+    },
+    "/camera/color/image_raw": {
+      "count": 1046,
+      "first_receipt": 1579.27397798,
+      "last_stamp": 1794822366.906733,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.17280903,
+      "frame_id": "camera_color_optical_frame",
+      "age_seconds": 0.052201271057128906,
+      "width": 1280,
+      "height": 720,
+      "encoding": "rgb8",
+      "step": 3840,
+      "data_bytes": 2764800,
+      "receipt_hz": 29.94369635197269,
+      "stale_seconds": 0.05165463399998771
+    },
+    "/camera/color/camera_info": {
+      "count": 1040,
+      "first_receipt": 1579.332948435,
+      "last_stamp": 1794822366.940106,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.213594438,
+      "frame_id": "camera_color_optical_frame",
+      "age_seconds": 0.05962371826171875,
+      "width": 1280,
+      "height": 720,
+      "k": [
+        611.2028198242188,
+        0.0,
+        637.3434448242188,
+        0.0,
+        611.2351684570312,
+        361.92822265625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "distortion_model": "rational_polynomial",
+      "d": [
+        -0.03194306418299675,
+        0.0352947898209095,
+        -0.0007062535732984543,
+        -0.0007207499002106488,
+        -0.012298050336539745,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receipt_hz": 29.78729235435138,
+      "stale_seconds": 0.010872434000020803
+    },
+    "/camera/depth/points": {
+      "count": 1046,
+      "first_receipt": 1579.346693478,
+      "last_stamp": 1794822366.873378,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.179662306,
+      "frame_id": "camera_depth_optical_frame",
+      "age_seconds": 0.09240365028381348,
+      "width": 275914,
+      "height": 1,
+      "point_step": 16,
+      "fields": [
+        "x",
+        "y",
+        "z"
+      ],
+      "receipt_hz": 30.000313931323298,
+      "stale_seconds": 0.04480806600008691
+    },
+    "/mavros/imu/data": {
+      "count": 1699,
+      "first_receipt": 1579.798276757,
+      "last_stamp": 1794822367.0009716,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.216591015,
+      "frame_id": "base_link",
+      "age_seconds": 0.0017628669738769531,
+      "receipt_hz": 49.334200021296105,
+      "stale_seconds": 0.007883149000008416
+    },
+    "/mavros/local_position/pose": {
+      "count": 1029,
+      "first_receipt": 1579.810298056,
+      "last_stamp": 1794822366.9948273,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.210272071,
+      "frame_id": "map",
+      "age_seconds": 0.001589059829711914,
+      "position": [
+        0.6202419996261597,
+        5.336878776550293,
+        -0.004756554961204529
+      ],
+      "receipt_hz": 29.883743503752182,
+      "stale_seconds": 0.014205300999947212
+    },
+    "/mavros/extended_state": {
+      "count": 172,
+      "first_receipt": 1579.840159969,
+      "last_stamp": 1794822366.8235974,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.038184459,
+      "frame_id": "",
+      "age_seconds": 0.0007073879241943359,
+      "landed_state": 1,
+      "vtol_state": 0,
+      "receipt_hz": 5.000288833935528,
+      "stale_seconds": 0.18629728800010525
+    },
+    "/mavros/state": {
+      "count": 35,
+      "first_receipt": 1580.015514713,
+      "last_stamp": 1794822366.8017104,
+      "stamp_regressions": 0,
+      "last_receipt": 1614.017557256,
+      "frame_id": "",
+      "age_seconds": 0.0019822120666503906,
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER",
+      "system_status": 0,
+      "receipt_hz": 0.999939928814646,
+      "stale_seconds": 0.20693353299998307
+    }
+  },
+  "tf": {
+    "camera_color_frame": {
+      "parent": "camera_depth_frame",
+      "translation": [
+        -0.00019510021805763244,
+        -0.02372651481628418,
+        1.3262258842587471e-05
+      ],
+      "rotation_xyzw": [
+        0.0008609106880612671,
+        -0.0006107543595135212,
+        -0.0003874455578625202,
+        0.9999993443489075
+      ]
+    },
+    "camera_color_optical_frame": {
+      "parent": "camera_color_frame",
+      "translation": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_depth_optical_frame": {
+      "parent": "camera_depth_frame",
+      "translation": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_left_ir_frame": {
+      "parent": "camera_depth_frame",
+      "translation": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "camera_left_ir_optical_frame": {
+      "parent": "camera_left_ir_frame",
+      "translation": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_right_ir_frame": {
+      "parent": "camera_depth_frame",
+      "translation": [
+        0.0,
+        -0.09496150207519531,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "camera_right_ir_optical_frame": {
+      "parent": "camera_right_ir_frame",
+      "translation": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        -0.5,
+        0.4999999999999999,
+        -0.5,
+        0.5000000000000001
+      ]
+    },
+    "camera_depth_frame": {
+      "parent": "camera_link",
+      "translation": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "rotation_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "map_ned": {
+      "parent": "map",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_xyzw": [
+        0.7071067811865476,
+        0.7071067811865475,
+        4.329780281177466e-17,
+        4.329780281177467e-17
+      ]
+    },
+    "odom_ned": {
+      "parent": "odom",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_xyzw": [
+        0.7071067811865476,
+        0.7071067811865475,
+        4.329780281177466e-17,
+        4.329780281177467e-17
+      ]
+    },
+    "base_link_frd": {
+      "parent": "base_link",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_xyzw": [
+        1.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17
+      ]
+    }
+  },
+  "graph": {
+    "/camera/color/camera_info": {
+      "types": [
+        "sensor_msgs/msg/CameraInfo"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/color/image_raw": {
+      "types": [
+        "sensor_msgs/msg/Image"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/color/image_raw/compressed": {
+      "types": [
+        "sensor_msgs/msg/CompressedImage"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/color/metadata": {
+      "types": [
+        "orbbec_camera_msgs/msg/Metadata"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/depth/camera_info": {
+      "types": [
+        "sensor_msgs/msg/CameraInfo"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/depth/image_raw": {
+      "types": [
+        "sensor_msgs/msg/Image"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/depth/image_raw/compressedDepth": {
+      "types": [
+        "sensor_msgs/msg/CompressedImage"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/depth/metadata": {
+      "types": [
+        "orbbec_camera_msgs/msg/Metadata"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/depth/points": {
+      "types": [
+        "sensor_msgs/msg/PointCloud2"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/depth_filters/status": {
+      "types": [
+        "orbbec_camera_msgs/msg/DepthFiltersStatus"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/camera/device_status": {
+      "types": [
+        "orbbec_camera_msgs/msg/DeviceStatus"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/camera/left_ir/camera_info": {
+      "types": [
+        "sensor_msgs/msg/CameraInfo"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/left_ir/image_raw": {
+      "types": [
+        "sensor_msgs/msg/Image"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/left_ir/image_raw/compressed": {
+      "types": [
+        "sensor_msgs/msg/CompressedImage"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/left_ir/image_raw/theora": {
+      "types": [
+        "theora_image_transport/msg/Packet"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/left_ir/metadata": {
+      "types": [
+        "orbbec_camera_msgs/msg/Metadata"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/right_ir/camera_info": {
+      "types": [
+        "sensor_msgs/msg/CameraInfo"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/right_ir/image_raw": {
+      "types": [
+        "sensor_msgs/msg/Image"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/right_ir/image_raw/compressed": {
+      "types": [
+        "sensor_msgs/msg/CompressedImage"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/right_ir/image_raw/theora": {
+      "types": [
+        "theora_image_transport/msg/Packet"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/camera/right_ir/metadata": {
+      "types": [
+        "orbbec_camera_msgs/msg/Metadata"
+      ],
+      "publishers": [
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/diagnostics": {
+      "types": [
+        "diagnostic_msgs/msg/DiagnosticArray"
+      ],
+      "publishers": [
+        {
+          "node": "//mavros_router",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "//mavros",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/battery": {
+      "types": [
+        "sensor_msgs/msg/BatteryState"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/estimator_status": {
+      "types": [
+        "mavros_msgs/msg/EstimatorStatus"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/mavros/extended_state": {
+      "types": [
+        "mavros_msgs/msg/ExtendedState"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/mavros/global_position/compass_hdg": {
+      "types": [
+        "std_msgs/msg/Float64"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/global": {
+      "types": [
+        "sensor_msgs/msg/NavSatFix"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/gp_lp_offset": {
+      "types": [
+        "geometry_msgs/msg/PoseStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/gp_origin": {
+      "types": [
+        "geographic_msgs/msg/GeoPointStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/mavros/global_position/local": {
+      "types": [
+        "nav_msgs/msg/Odometry"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/raw/fix": {
+      "types": [
+        "sensor_msgs/msg/NavSatFix"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/raw/gps_vel": {
+      "types": [
+        "geometry_msgs/msg/TwistStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/raw/satellites": {
+      "types": [
+        "std_msgs/msg/UInt32"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/global_position/rel_alt": {
+      "types": [
+        "std_msgs/msg/Float64"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/data": {
+      "types": [
+        "sensor_msgs/msg/Imu"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/data_raw": {
+      "types": [
+        "sensor_msgs/msg/Imu"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/diff_pressure": {
+      "types": [
+        "sensor_msgs/msg/FluidPressure"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/mag": {
+      "types": [
+        "sensor_msgs/msg/MagneticField"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/static_pressure": {
+      "types": [
+        "sensor_msgs/msg/FluidPressure"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/temperature_baro": {
+      "types": [
+        "sensor_msgs/msg/Temperature"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/imu/temperature_imu": {
+      "types": [
+        "sensor_msgs/msg/Temperature"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/accel": {
+      "types": [
+        "geometry_msgs/msg/AccelWithCovarianceStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/odom": {
+      "types": [
+        "nav_msgs/msg/Odometry"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/pose": {
+      "types": [
+        "geometry_msgs/msg/PoseStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/pose_cov": {
+      "types": [
+        "geometry_msgs/msg/PoseWithCovarianceStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/velocity_body": {
+      "types": [
+        "geometry_msgs/msg/TwistStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/velocity_body_cov": {
+      "types": [
+        "geometry_msgs/msg/TwistWithCovarianceStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/local_position/velocity_local": {
+      "types": [
+        "geometry_msgs/msg/TwistStamped"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/param/event": {
+      "types": [
+        "mavros_msgs/msg/ParamEvent"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/param",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/state": {
+      "types": [
+        "mavros_msgs/msg/State"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/mavros/status_event": {
+      "types": [
+        "mavros_msgs/msg/StatusEvent"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/statustext/recv": {
+      "types": [
+        "mavros_msgs/msg/StatusText"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/sys_status": {
+      "types": [
+        "mavros_msgs/msg/SysStatus"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/mavros/time_reference": {
+      "types": [
+        "sensor_msgs/msg/TimeReference"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/time",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/mavros/timesync_status": {
+      "types": [
+        "mavros_msgs/msg/TimesyncStatus"
+      ],
+      "publishers": [
+        {
+          "node": "/mavros/time",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/parameter_events": {
+      "types": [
+        "rcl_interfaces/msg/ParameterEvent"
+      ],
+      "publishers": [
+        {
+          "node": "//peripheral_data_audit",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "//_ros2cli_daemon_175_278721a26aa54391bbd62852320df6c3",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "//launch_ros_17619",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "//mavros_node",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "//mavros_router",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "//mavros",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/cmd",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/param",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/mavros/time",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/rosout": {
+      "types": [
+        "rcl_interfaces/msg/Log"
+      ],
+      "publishers": [
+        {
+          "node": "//peripheral_data_audit",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "//_ros2cli_daemon_175_278721a26aa54391bbd62852320df6c3",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "//launch_ros_17619",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "//mavros_node",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "//mavros_router",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "//mavros",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "//transform_listener_impl_55a8f0d6e8",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/cmd",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/global_position",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/imu",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/param",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/mavros/time",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/camera/camera_container",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/tf": {
+      "types": [
+        "tf2_msgs/msg/TFMessage"
+      ],
+      "publishers": [
+        {
+          "node": "//mavros",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        },
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/tf_static": {
+      "types": [
+        "tf2_msgs/msg/TFMessage"
+      ],
+      "publishers": [
+        {
+          "node": "//mavros",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        },
+        {
+          "node": "/camera/camera",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL"
+        }
+      ]
+    },
+    "/uas1/mavlink_sink": {
+      "types": [
+        "mavros_msgs/msg/Mavlink"
+      ],
+      "publishers": [
+        {
+          "node": "//mavros",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    },
+    "/uas1/mavlink_source": {
+      "types": [
+        "mavros_msgs/msg/Mavlink"
+      ],
+      "publishers": [
+        {
+          "node": "//mavros_router",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE"
+        }
+      ]
+    }
+  },
+  "flight_commands_sent": false,
+  "limitations": [
+    "Short bench sample only; no external pose fusion or flight validation",
+    "Depth units follow ROS encoding; not independently measured against a target",
+    "No camera-to-airframe extrinsic calibration assumed"
+  ]
+}

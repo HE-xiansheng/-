@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-11-16T17:13:14.161771+08:00",
+  "passed": true,
+  "received_messages": 5,
+  "publisher": "official demo_nodes_cpp/talker",
+  "subscriber": "official demo_nodes_py/listener",
+  "ROS_LOCALHOST_ONLY": "1",
+  "ROS_DOMAIN_ID": "174",
+  "log_directory": "/home/orangepi/ros2_platform/records/base-dds-20261116-171308",
+  "hardware_validation": false
+}
