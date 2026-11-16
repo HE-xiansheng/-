@@ -1,0 +1,35 @@
+{
+  "read_at": "2026-11-17T04:02:07+08:00",
+  "target": "orangepi@192.168.1.224",
+  "onboard_revision": "d896200",
+  "onboard_git_clean": true,
+  "nomachine": "active",
+  "lidar_interface": "enP3p49s0",
+  "lidar_link": "NO-CARRIER",
+  "usb_devices": [
+    "2bc5:0804 Orbbec Gemini 335L",
+    "1b8c:0036 HKUST UAV NxtPX4"
+  ],
+  "gimbal_usb_ethernet_present": false,
+  "independent_usb_camera_present": false,
+  "owned_test_processes_present": false,
+  "temporary_directories_present": {
+    "/tmp/platform-soak-check": false,
+    "/tmp/px4-physical-readonly": false
+  },
+  "scope_complete": false,
+  "requires_external_change": [
+    "Connect physical LiDAR and gimbal Ethernet adapter to .224",
+    "Connect independent USB camera for its acceptance",
+    "Verify actual installation/extrinsics and approve network/formal runtime changes when ready"
+  ],
+  "recurrence_evidence": [
+    "45c0bcf: physical LiDAR/gimbal missing during 600s/PX4 read-only audit",
+    "f477d07: physical LiDAR/gimbal still missing during fan audit",
+    "2026-11-17T04:02:07+08:00: same devices/link still absent"
+  ],
+  "previous_goal_turn_classification": "progress: compared actual device trees and ruled out a fan configuration mismatch",
+  "current_goal_turn_classification": "no progress on platform implementation; revalidated unchanged hardware gate",
+  "live_wait_job": null,
+  "next_action": "Await physical connection/user update, then re-read devices and review network candidate activation before actual ground validation"
+}
