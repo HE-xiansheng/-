@@ -2,9 +2,9 @@
 
 将Orange Pi 5 Ultra参考机`.235`的完整平台迁入`.224`，使用Ubuntu22.04 ARM64 / ROS2 Humble。**迁移进行中，尚未完成实物整链验收或正式入口切换。**
 
-## 当前状态（2026-11-16）
+## 当前状态（2026-11-17）
 
-机载`.224`从eMMC启动Ubuntu22.04，Humble和NoMachine8.5.3已安装。当前部署源码`bd6c781`，工作区干净。最近只读检查未发现Safina_sensor.service，也没有运行相机、MAVROS、FAST-LIO或本轮测试进程；不能将以前的短时数据验证当作当前传感器正在运行。以太网口仍NO-CARRIER。
+机载`.224`从eMMC启动Ubuntu22.04，Humble和NoMachine8.5.3已安装。当前部署源码`b686e55`，工作区干净、NoMachine正常；本轮测试进程及机载临时目录已清理。整套传感器及云台relay服务候选已准备，正式服务尚未安装/启用。不能将短时验证当作传感器持续运行；最近网口仍DOWN、无雷达直连。
 
 | 模块 | 已有直接证据 | 仍需验证 |
 | --- | --- | --- |
@@ -12,16 +12,19 @@
 | Livox / FAST-LIO | SDK2 1.3.0、ROS2 driver1.2.6构建；旧机实采雷达/IMU回放实际FAST-LIO | 新机物理雷达采集、网络/时钟及运动精度 |
 | 定位转发 / MAVROS2 | 旧二进制71条几何对照；原生100帧初始化；MAVROS2 2.16.0物理未解锁遥测和22项实际MAVLink接口检查 | 实际安装外参、真实PX4外部视觉融合与时间同步 |
 | 定位到PX4仿真 | 旧机实采回放→实际FAST-LIO/转发/MAVROS→官方PX4 1.16.0，18项；564条源戳/坐标匹配，EV融合与停流检查 | 回放与软件仿真不替代新雷达、真实飞控和轨迹精度验收 |
-| EGO规划 | 原生消息、地图/优化库、状态机、地图选点、执行器及所属会话管理隔离检查 | 实物地图/任务/地面站全链 |
-| 航点 / ArUco / 人物 | 原生包、任务管理器、实际RK3588 NPU；ArUco图像到控制器21项、触发路径39项 | 物理云台/标记/运动目标、任务地面整链 |
-| USB相机 / 云台视频 | 官方usb_cam0.8.1候选与API适配；MPP/RTSP合成视频及退出检查 | 独立相机未接入，物理云台与RTSP源待验 |
-| Linux地面站 | 独立Qt源码/构建；任务、遥测、点云/位姿、视频、定位、规划、录制与SSH接口；原生Linux运行工具安装组件 | 完整安装包/可见桌面/实际任务及正式切换 |
+| EGO规划 | 原生地图/优化/FSM及执行器；实际规划→MAVROS→PX4消息38项、原执行器46项回归，支持标准ROS重映射 | 实物地图/任务/地面站全链 |
+| 航点 / ArUco / 人物 | 原生包、实际RK3588 NPU；航点→MAVROS→PX4消息34项、ArUco图像控制21项/触发39项 | 物理云台/标记/运动目标、任务地面整链 |
+| USB相机 / 云台视频 | usb_cam0.8.1候选；实物云台经只读隧道→新机MPP及Qt面板14项/重连通过 | 新机云台直连、独立相机未接；MPP漏收/延迟未解决 |
+| Linux地面站 | 独立Qt源码/构建；任务、遥测、点云/位姿、视频、定位、规划、录制与SSH接口；完整可搬移Linux包及重定位/首帧，实际Qt视频面板与自动重连 | 可见桌面/实际任务及正式切换 |
 | 录制与回放 | rosbag2/SQLite/CDR、分包下载、实际Qt回放与损坏包拒绝 | 与实物整链持续运行联合验证 |
 
 PX4源码与ULog已证实：其自身同步收敛前会用接收时刻替代源时刻，本次回放约仿真时钟72秒后才保留非零源时龄。不能只凭融合标志或MAVLink源戳正确认定实机时间对齐，也不能把该时间当作实机固定等待时长。
 
+EGO消息首轮228条中9条启动保持消息未到PX4，复测228/228通过，原因仍待查；这不支持一般无丢失或时延结论。
+
 ## 证据与源码
 
+- [EGO/PX4消息与参数修复](records/2026-11-17/ego-mavros-wire/README.md)、[航点/PX4消息](records/2026-11-17/waypoint-mavros-wire/README.md)、[实际Qt云台面板](records/2026-11-16/gimbal-qt-live/README.md)、[完整Linux独立包](records/2026-11-16/gcs-portable-linux/README.md)。
 - [完整计划](task_plan.md)、[进展](progress.md)、[发现与问题](findings.md)。
 - [源码/驱动归档核对](records/2026-11-16/source-completeness/README.md)、[初期原生迁移](records/2026-11-16/native-stage-report.md)。
 - [定位及旧转发对照](records/2026-11-16/localization/README.md)、[完整MAVROS候选](records/2026-11-16/mavros-platform/README.md)、[实际定位到PX4仿真](records/2026-11-16/fastlio-px4-sitl/README.md)。

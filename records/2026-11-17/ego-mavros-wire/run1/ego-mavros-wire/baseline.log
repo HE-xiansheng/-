@@ -1,0 +1,2 @@
+usage: adapter.py [-h] [--publish | --check] --run RUN
+adapter.py: error: unrecognized arguments: --ros-args -r /mavros/state:=/fixture/state

@@ -9,6 +9,7 @@ import json
 import math
 from pathlib import Path
 import signal
+import sys
 import time
 import numpy as np
 from execution import Alignment, Trajectory, Session, rotation
@@ -41,10 +42,12 @@ def main():
     flags.add_argument('--check', action='store_true')
     parser.add_argument('--isolated-test', action='store_true', help=argparse.SUPPRESS)
     parser.add_argument('--run', type=Path, required=True)
-    args = parser.parse_args()
+    import rclpy
+    from rclpy.utilities import remove_ros_args
+    # argparse只处理本工具选项，标准ROS2重映射由rclpy.init读取原始argv。
+    args = parser.parse_args(remove_ros_args(args=sys.argv)[1:])
     if args.isolated_test and (os.environ.get('ROS_DOMAIN_ID') != '87' or os.environ.get('ROS_LOCALHOST_ONLY') != '1'):
         parser.error('isolated test requires localhost DDS domain 87')
-    import rclpy
     from rclpy.signals import SignalHandlerOptions
     from rclpy.qos import QoSProfile, DurabilityPolicy, qos_profile_sensor_data
     from mavros_msgs.msg import State, ExtendedState, PositionTarget
