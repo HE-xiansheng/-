@@ -22,6 +22,12 @@
 
 int main(int argc, char *argv[])
 {
+#if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
+    // 当前 X11/驱动组合的 vsync 等待会拖慢 GUI 管道读取，导致云台原始帧积压。
+    // Qt 6.4+ 支持改用系统定时器驱动渲染；显式环境设置仍由使用者决定。
+    if (!qEnvironmentVariableIsSet("QSG_NO_VSYNC"))
+        qputenv("QSG_NO_VSYNC", "1");
+#endif
     QGuiApplication app(argc, argv);
 #ifdef Q_OS_WIN
     // 随包工具只用于地面站子进程，不修改用户或系统 PATH。

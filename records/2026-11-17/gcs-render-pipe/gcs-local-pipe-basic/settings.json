@@ -1,0 +1,5 @@
+{
+  "LIBGL_ALWAYS_SOFTWARE": "1",
+  "GCS_VIDEO_PIPE_PROBE": "1",
+  "QSG_RENDER_LOOP": "basic"
+}

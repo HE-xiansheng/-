@@ -1,0 +1,101 @@
+2026-11-17 03:30:10.264 [INFO ] 日志文件：/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/logs/customgeometry_20261117_033010.log
+2026-11-17 03:30:10.352 [INFO ] Qt Quick 3D surface format initialized
+2026-11-17 03:30:10.353 [INFO ] 启动机载地址（视频与通信）：192.168.1.224
+2026-11-17 03:30:10.381 [DEBUG] threaded render loop
+2026-11-17 03:30:10.381 [DEBUG] Using sg animation driver
+2026-11-17 03:30:10.381 [DEBUG] Animation Driver: using vsync: 16.67 ms
+2026-11-17 03:30:10.382 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 03:30:10.382 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:56000
+2026-11-17 03:30:10.382 [INFO ] 静态点云显示上限变更：400000
+2026-11-17 03:30:10.385 [INFO ] 点云监听端口变更：9004
+2026-11-17 03:30:10.403 [INFO ] 位姿 UDP 监听状态：启动
+2026-11-17 03:30:10.403 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:9001
+2026-11-17 03:30:10.404 [INFO ] 实时累计显示：开启
+2026-11-17 03:30:10.404 [INFO ] 世界坐标累计建图显示 true
+2026-11-17 03:30:10.406 [INFO ] 静态点云加载器绑定主几何：0x559b225aafd0
+2026-11-17 03:30:10.406 [INFO ] 静态点云加载器绑定预览几何：0x559b225ab110
+2026-11-17 03:30:10.406 [INFO ] 点云接收器绑定渲染几何：0x559b224a6330
+2026-11-17 03:30:10.406 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 03:30:10.406 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:9004
+2026-11-17 03:30:10.406 [INFO ] 静态点云加载器绑定主几何：0x559b225ab4c0
+2026-11-17 03:30:10.406 [INFO ] 飞前状态仅监听本机127.0.0.1: 44077
+2026-11-17 03:30:10.406 [INFO ] 位姿监听端口变更：59172
+2026-11-17 03:30:10.406 [INFO ] 关闭位姿 UDP 监听端口：59172
+2026-11-17 03:30:10.406 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:59172
+2026-11-17 03:30:10.406 [INFO ] 点云接收器绑定渲染几何：0x559b225aafd0
+2026-11-17 03:30:10.406 [INFO ] 点云监听端口变更：57616
+2026-11-17 03:30:10.406 [INFO ] 关闭点云 UDP 监听端口：57616
+2026-11-17 03:30:10.406 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:57616
+2026-11-17 03:30:10.485 [INFO ] QML module loaded: CustomGeometryExample/Main
+2026-11-17 03:30:10.501 [DEBUG] Using sg animation driver
+2026-11-17 03:30:10.501 [DEBUG] Animation Driver: using vsync: 16.67 ms
+2026-11-17 03:30:10.501 [DEBUG] Creating QRhi with backend OpenGL for window 0x559b223c0e80 (wflags 0x1)
+  Graphics API debug/validation layers: 0
+  Debug markers: 0
+  Timestamps: 0
+  Prefer software device: 0
+  Shader/pipeline cache collection: 1
+2026-11-17 03:30:10.536 [DEBUG] Created OpenGL context QSurfaceFormat(version 4.3, options QFlags<QSurfaceFormat::FormatOption>(), depthBufferSize 24, redBufferSize 8, greenBufferSize 8, blueBufferSize 8, alphaBufferSize 0, stencilBufferSize 8, samples -1, swapBehavior QSurfaceFormat::DoubleBuffer, swapInterval 0, colorSpace QColorSpace(), profile  QSurfaceFormat::CoreProfile)
+2026-11-17 03:30:10.539 [DEBUG] OpenGL VENDOR: NVIDIA Corporation RENDERER: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2 VERSION: 4.3.0 NVIDIA 580.126.09
+2026-11-17 03:30:10.539 [DEBUG] Created QRhi 0x7f10b00051c0 for window 0x559b223c0e80
+2026-11-17 03:30:10.545 [DEBUG] Swap interval is 0, attempting to disable vsync when presenting.
+2026-11-17 03:30:10.545 [DEBUG] MSAA sample count for the swapchain is 1. Alpha channel requested = no.
+2026-11-17 03:30:10.545 [DEBUG] rhi texture atlas dimensions: 2048x1024
+2026-11-17 03:30:10.751 [INFO ] 地面站首帧就绪，启动耗时(ms) 396
+2026-11-17 03:30:11.763 [INFO ] PASS full_main_window_created
+2026-11-17 03:30:11.763 [INFO ] PASS production_controllers_found
+2026-11-17 03:30:11.763 [INFO ] PASS onboardConnect
+2026-11-17 03:30:11.763 [INFO ] PASS button_enabled
+2026-11-17 03:30:11.764 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 03:30:12.502 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 03:30:12.502 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 03:30:12.502 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 03:30:12.502 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 03:30:12.502 [INFO ] 关闭位姿 UDP 监听端口：59172
+2026-11-17 03:30:12.502 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:59172
+2026-11-17 03:30:12.526 [INFO ] 飞前状态仅监听本机127.0.0.1: 44077
+2026-11-17 03:30:20.468 [INFO ] PASS real_ssh_connection_and_telemetry
+2026-11-17 03:30:20.951 [INFO ] 航线整体替换：原航点 0 个，新航点 1 个
+2026-11-17 03:30:20.952 [INFO ] POS1 位姿包：序号 1，位置 [-0.007, 0.022, -0.009]，四元数 [0.000, 0.001, -0.001, 1.000]
+2026-11-17 03:30:21.010 [INFO ] POS1 位姿包：序号 2，位置 [-0.011, 0.024, -0.007]，四元数 [0.000, 0.001, -0.001, 1.000]
+2026-11-17 03:30:21.089 [INFO ] POS1 位姿包：序号 3，位置 [-0.012, 0.021, -0.003]，四元数 [-0.000, 0.001, -0.001, 1.000]
+2026-11-17 03:30:21.308 [INFO ] 点云几何更新：sequence=1794857421，点数=1786，boundsMin=(-3.71,-1.45,-0.54)，boundsMax=(7.24,11.32,3.08)
+2026-11-17 03:30:21.308 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794857421，单帧 2470 点，显示 1786 点，累计收到 1 帧，丢帧 0
+2026-11-17 03:30:21.808 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794857422，单帧 2434 点，显示 2893 点，累计收到 2 帧，丢帧 0
+2026-11-17 03:30:22.307 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794857423，单帧 2442 点，显示 3859 点，累计收到 3 帧，丢帧 0
+2026-11-17 03:30:23.310 [INFO ] PASS actual_lio_cloud_pose_cross_host_udp
+2026-11-17 03:30:23.310 [INFO ] PASS cloud_points_available
+2026-11-17 03:30:23.311 [INFO ] PASS toggleStereoVideo
+2026-11-17 03:30:23.311 [INFO ] PASS button_enabled
+2026-11-17 03:30:23.313 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 03:30:23.313 [INFO ] PASS toggleGimbalVideo
+2026-11-17 03:30:23.313 [INFO ] PASS button_enabled
+2026-11-17 03:30:23.336 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 03:30:29.818 [INFO ] PASS both_live_video_streams
+2026-11-17 03:30:29.819 [INFO ] PASS both_actual_qml_images_loaded
+2026-11-17 03:30:29.819 [INFO ] PASS recording_state_arrives_through_production_telemetry
+2026-11-17 03:30:29.819 [INFO ] PASS recordingStart
+2026-11-17 03:30:29.819 [INFO ] PASS button_enabled
+2026-11-17 03:30:29.819 [INFO ] 录制管理请求 "start" "192.168.1.224"
+2026-11-17 03:30:29.820 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 03:30:31.546 [INFO ] POS1 位姿包：序号 101，位置 [-0.006, 0.018, 0.000]，四元数 [-0.000, 0.001, -0.000, 1.000]
+2026-11-17 03:30:34.397 [INFO ] 录制管理返回 start 0 {"phase": "PREPARING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.02274632453918457, "stamp": 1794857434.2938838, "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-033034-45fd09", "request_id": "8d996fb12c984ed59a9c07a9ecdecddb", "requested": "start", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "UNAVAILABLE", "auto_error": "", "pending_action": "start", "duration_s": 0.0, "warnings": [], "active_bags_count": 0, "available": true}
+2026-11-17 03:30:34.828 [INFO ] 点云几何更新：sequence=1794857448，点数=10275，boundsMin=(-4.24,-1.48,-0.64)，boundsMax=(7.34,11.35,3.10)
+2026-11-17 03:30:35.828 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794857450，单帧 2470 点，显示 10798 点，累计收到 30 帧，丢帧 0
+2026-11-17 03:30:39.250 [INFO ] PASS qml_record_start_confirmed_by_remote_state
+2026-11-17 03:30:41.600 [INFO ] POS1 位姿包：序号 201，位置 [-0.010, 0.024, -0.004]，四元数 [-0.000, 0.001, -0.001, 1.000]
+2026-11-17 03:30:46.336 [WARN ] 香橙派点云帧 1794857470 分片不完整，已丢弃；收到 9/22 个分片
+2026-11-17 03:30:50.347 [INFO ] 点云几何更新：sequence=1794857479，点数=12055，boundsMin=(-4.24,-1.48,-0.64)，boundsMax=(7.34,11.35,3.10)
+2026-11-17 03:30:51.351 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794857481，单帧 2449 点，显示 12055 点，累计收到 60 帧，丢帧 1
+2026-11-17 03:30:52.322 [INFO ] POS1 位姿包：序号 301，位置 [-0.009, 0.020, -0.004]，四元数 [-0.000, 0.000, -0.001, 1.000]
+2026-11-17 03:30:57.853 [WARN ] 香橙派点云帧 1794857493 分片不完整，已丢弃；收到 14/22 个分片
+2026-11-17 03:31:02.809 [INFO ] POS1 位姿包：序号 401，位置 [-0.008, 0.020, 0.001]，四元数 [-0.000, 0.001, -0.001, 1.000]
+2026-11-17 03:31:05.865 [INFO ] 点云几何更新：sequence=1794857510，点数=13289，boundsMin=(-4.23,-1.48,-0.65)，boundsMax=(7.34,11.35,3.10)
+2026-11-17 03:31:06.868 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794857512，单帧 2454 点，显示 13290 点，累计收到 90 帧，丢帧 2
+2026-11-17 03:31:08.817 [INFO ] FAIL simultaneous_streams_and_recording_remain_fresh_30s
+{"running": false, "stopped": true}
+{"running": false, "stopped": true}
+2026-11-17 03:31:09.383 [DEBUG] Total time spent on pipeline creation during the lifetime of the QRhi 0x7f10b00051c0 was 123 ms
+2026-11-17 03:31:09.387 [DEBUG] Writing pipeline cache contents (90124 bytes) for QRhi 0x7f10b00051c0 to '/home/tyzk/drone-migration-work/gcs-concurrent-run9/cache/customgeometry-ros2-staging/qtpipelinecache-x86_64-little_endian-lp64/qqpc_opengl'
+2026-11-17 03:31:09.454 [INFO ] 销毁静态点云加载器，取消未完成加载任务
+2026-11-17 03:31:09.455 [INFO ] 销毁静态点云加载器，取消未完成加载任务

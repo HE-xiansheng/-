@@ -1,0 +1,6 @@
+{
+  "qt_exit": 0,
+  "fixture_exit": 0,
+  "passed": true,
+  "scope": "Full actual main/QML, SSH, UDP, live camera, replay LIO, synthetic gimbal over direct RTSP on isolated port, isolated recorder commands; no flight commands"
+}

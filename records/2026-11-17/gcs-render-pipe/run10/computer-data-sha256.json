@@ -1,0 +1,6 @@
+{
+  "fixture/evidence.tar.gz": "7c4e4537c1aca3928e9cb4bc2d3b155f128b5a27a9b57962d6d9f75c66dff1fb",
+  "fixture/platform-soak-check/livox.jsonl.gz": "0f849044a1371180b3c55ec61bc061fd348043bfbd0617dd47157ef063757d4f",
+  "fixture/platform-soak-check/gimbal-headers.csv": "b4583489b55269dc55bf0ebdb3106bf6614060503517226896788fbe05ad68c6",
+  "fixture/platform-soak-check/recording-source/flight-records/20261117-033540-132a12/inputs-790a685a480a4e37ae17d722cb1d9d35/inputs-790a685a480a4e37ae17d722cb1d9d35_0.db3": "088d84262a6b6e37c15b5d1d9a47a032c9b152f4875b425decb76757a9473092"
+}

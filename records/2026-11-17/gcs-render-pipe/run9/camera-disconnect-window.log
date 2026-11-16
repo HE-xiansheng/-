@@ -1,0 +1,130 @@
+1794857446.1547492 [component_container-1] [11/17 03:30:46.147325][info][265885][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.964043fps
+1794857446.1790841 [component_container-1] [11/17 03:30:46.177791][info][265888][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.964043fps
+1794857446.1797237 [component_container-1] [11/17 03:30:46.178025][info][265889][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.958059fps
+1794857446.2852833 [component_container-1] [11/17 03:30:46.284220][info][265890][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.970030fps
+1794857446.5257742 [component_container-1] [11/17 03:30:46.524981][info][265879][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.964043fps
+1794857446.5662174 [component_container-1] [11/17 03:30:46.564984][info][265894][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.952078fps
+1794857451.1505144 [component_container-1] [11/17 03:30:51.150031][info][265883][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.964043fps
+1794857451.1509879 [component_container-1] [11/17 03:30:51.150202][info][265885][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.982012fps
+1794857451.1511755 [component_container-1] [11/17 03:30:51.150585][info][265881][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.964043fps
+1794857451.1840222 [component_container-1] [11/17 03:30:51.183554][info][265888][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.964043fps
+1794857451.1847134 [component_container-1] [11/17 03:30:51.184021][info][265889][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.964043fps
+1794857451.2917800 [component_container-1] [11/17 03:30:51.290850][info][265890][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.964043fps
+1794857451.5339310 [component_container-1] [11/17 03:30:51.531097][info][265879][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.964043fps
+1794857451.5711708 [component_container-1] [11/17 03:30:51.570625][info][265894][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.970030fps
+1794857456.1565318 [component_container-1] [11/17 03:30:56.156022][info][265883][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.964043fps
+1794857456.1567888 [component_container-1] [11/17 03:30:56.156144][info][265885][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.964043fps
+1794857456.1572659 [component_container-1] [11/17 03:30:56.156400][info][265881][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.964043fps
+1794857456.1924505 [component_container-1] [11/17 03:30:56.192001][info][265888][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.946098fps
+1794857456.1936214 [component_container-1] [11/17 03:30:56.192943][info][265889][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.946098fps
+1794857456.2976916 [component_container-1] [11/17 03:30:56.296868][info][265890][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.964043fps
+1794857456.5376422 [component_container-1] [11/17 03:30:56.536846][info][265879][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.970030fps
+1794857456.5765328 [component_container-1] [11/17 03:30:56.575972][info][265894][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.964043fps
+1794857456.9184799 [component_container-1] [11/17 03:30:56.918082][info][267602][DeviceManager.cpp:354] Device changed! removed: 1, added: 0
+1794857456.9186471 [component_container-1] [11/17 03:30:56.918141][warning][267602][DeviceBase.cpp:223] Device is deactivated or disconnected while there are still sensors streaming!
+1794857456.9192727 [component_container-1] [11/17 03:30:56.918375][info][267602][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794857456.9194117 [component_container-1] [11/17 03:30:56.918390][info][267602][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794857456.9194586 [component_container-1] [11/17 03:30:56.918406][warning][267602][HidDevicePort.cpp:50] release interface failed, error: No such device (it may have been disconnected)
+1794857456.9194973 [component_container-1] [11/17 03:30:56.918424][info][267602][DeviceManager.cpp:25] Removed device(s) list: (1)
+1794857456.9195340 [component_container-1] [11/17 03:30:56.918429][info][267602][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP253530009G, Connection: USB3.2
+1794857456.9195671 [component_container-1] [11/17 03:30:56.918434][info][267602][DeviceManager.cpp:25] Current device(s) list: (0)
+1794857456.9198785 [component_container-1] [INFO] [1794857456.918459771] [camera.camera]: onDeviceDisconnected called
+1794857456.9200149 [component_container-1] [INFO] [1794857456.918636229] [camera.camera]: device with 8-1-11 disconnected
+1794857456.9201663 [component_container-1] [INFO] [1794857456.918660729] [camera.camera]: device with 8-1-11 disconnected, notify reset device thread
+1794857456.9204121 [component_container-1] [INFO] [1794857456.919165021] [camera.camera]: Device connected callback triggered
+1794857456.9204986 [component_container-1] [INFO] [1794857456.919318437] [camera.camera]: Device reset in progress, waiting before connecting
+1794857456.9206741 [component_container-1] [11/17 03:30:56.919344][error][265853][ObLibuvcDevicePort.cpp:152] UVC transfer queue exhausted while stream is running usb_path=8-1-11.0
+1794857456.9208872 [component_container-1] [11/17 03:30:56.920659][error][265853][ObLibuvcDevicePort.cpp:152] UVC transfer queue exhausted while stream is running usb_path=8-1-11.0
+1794857456.9224565 [component_container-1] [11/17 03:30:56.922152][error][265853][ObLibuvcDevicePort.cpp:152] UVC transfer queue exhausted while stream is running usb_path=8-1-11.0
+1794857456.9234960 [component_container-1] [11/17 03:30:56.923313][error][265853][ObLibuvcDevicePort.cpp:152] UVC transfer queue exhausted while stream is running usb_path=8-1-11.4
+1794857456.9259689 [component_container-1] [INFO] [1794857456.925693976] [camera.camera]: Resetting device UID: 8-1-11
+1794857456.9298270 [component_container-1] [11/17 03:30:56.929380][info][265869][Pipeline.cpp:367] [CP253530009G] Try to stop pipeline!
+1794857456.9300091 [component_container-1] [11/17 03:30:56.929454][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@Color
+1794857456.9304237 [component_container-1] [11/17 03:30:56.929619][error][265869][ObLibuvcDevicePort.cpp:210] libusb_clear_halt failed, error code=-4
+1794857456.9305031 [component_container-1] [11/17 03:30:56.929793][warning][265869][ObException.cpp:26] A recoverable_exception has occurred!
+1794857456.9305758 [component_container-1]  - where: DeviceBase.cpp(397)
+1794857456.9306157 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9306610 [component_container-1]  - type: WRONG_API_CALL_SEQUENCE
+1794857456.9306991 [component_container-1]  - status: 108
+1794857456.9307356 [component_container-1] [11/17 03:30:56.929872][warning][265869][VideoSensor.cpp:293] [CP253530009G] Failed to send stop stream vendor command: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9307721 [component_container-1] [11/17 03:30:56.929890][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@Color
+1794857456.9310474 [component_container-1] [11/17 03:30:56.930383][info][265869][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794857456.9311070 [component_container-1] [11/17 03:30:56.930516][info][265869][ObLibuvcDevicePort.cpp:87] uvc_close done.
+1794857456.9311459 [component_container-1] [11/17 03:30:56.930521][info][265869][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+1794857456.9311821 [component_container-1] [11/17 03:30:56.930532][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@Depth
+1794857456.9312172 [component_container-1] [11/17 03:30:56.930649][error][265869][ObLibuvcDevicePort.cpp:210] libusb_clear_halt failed, error code=-4
+1794857456.9314311 [component_container-1] [11/17 03:30:56.930943][warning][265869][ObException.cpp:26] A recoverable_exception has occurred!
+1794857456.9314842 [component_container-1]  - where: DeviceBase.cpp(397)
+1794857456.9315243 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9315610 [component_container-1]  - type: WRONG_API_CALL_SEQUENCE
+1794857456.9315968 [component_container-1]  - status: 108
+1794857456.9316323 [component_container-1] [11/17 03:30:56.930978][warning][265869][VideoSensor.cpp:293] [CP253530009G] Failed to send stop stream vendor command: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9316678 [component_container-1] [11/17 03:30:56.930987][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@Depth
+1794857456.9318357 [component_container-1] [11/17 03:30:56.931307][info][265869][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794857456.9320364 [component_container-1] [11/17 03:30:56.931898][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@LeftIR
+1794857456.9322205 [component_container-1] [11/17 03:30:56.932001][error][265869][ObLibuvcDevicePort.cpp:210] libusb_clear_halt failed, error code=-4
+1794857456.9324160 [component_container-1] [11/17 03:30:56.932262][warning][265869][ObException.cpp:26] A recoverable_exception has occurred!
+1794857456.9324679 [component_container-1]  - where: DeviceBase.cpp(397)
+1794857456.9325073 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9325435 [component_container-1]  - type: WRONG_API_CALL_SEQUENCE
+1794857456.9325786 [component_container-1]  - status: 108
+1794857456.9326148 [component_container-1] [11/17 03:30:56.932297][warning][265869][VideoSensor.cpp:293] [CP253530009G] Failed to send stop stream vendor command: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9327693 [component_container-1] [11/17 03:30:56.932306][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@LeftIR
+1794857456.9329493 [component_container-1] [11/17 03:30:56.932735][info][265869][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794857456.9330001 [component_container-1] [11/17 03:30:56.932802][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@RightIR
+1794857456.9331980 [component_container-1] [11/17 03:30:56.932927][error][265869][ObLibuvcDevicePort.cpp:210] libusb_clear_halt failed, error code=-4
+1794857456.9335151 [component_container-1] [11/17 03:30:56.933342][warning][265869][ObException.cpp:26] A recoverable_exception has occurred!
+1794857456.9335759 [component_container-1]  - where: DeviceBase.cpp(397)
+1794857456.9336162 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9336627 [component_container-1]  - type: WRONG_API_CALL_SEQUENCE
+1794857456.9337029 [component_container-1]  - status: 108
+1794857456.9338784 [component_container-1] [11/17 03:30:56.933441][warning][265869][VideoSensor.cpp:293] [CP253530009G] Failed to send stop stream vendor command: Device is deactivated/disconnected! DeviceComponentId:0
+1794857456.9339490 [component_container-1] [11/17 03:30:56.933490][info][265869][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@RightIR
+1794857456.9341359 [component_container-1] [11/17 03:30:56.933911][info][265869][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794857456.9347577 [component_container-1] [11/17 03:30:56.934409][info][265869][ObLibuvcDevicePort.cpp:87] uvc_close done.
+1794857456.9349205 [component_container-1] [11/17 03:30:56.934430][info][265869][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+1794857456.9355724 [component_container-1] [11/17 03:30:56.934537][info][265869][Pipeline.cpp:343] [CP253530009G] Try to stop streams!
+1794857456.9357283 [component_container-1] [11/17 03:30:56.934564][warning][265869][ObException.cpp:26] A recoverable_exception has occurred!
+1794857456.9358764 [component_container-1]  - where: DeviceBase.cpp(397)
+1794857456.9360237 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:5
+1794857456.9361715 [component_container-1]  - type: WRONG_API_CALL_SEQUENCE
+1794857456.9363184 [component_container-1]  - status: 108
+1794857456.9368136 [component_container-1] [ERROR] [1794857456.934840638] [camera.camera]: Failed to stop pipeline: Device is deactivated/disconnected! DeviceComponentId:5 status:108
+1794857456.9384944 [component_container-1] [11/17 03:30:56.938165][info][265869][Pipeline.cpp:367] [CP253530009G] Try to stop pipeline!
+1794857456.9386530 [component_container-1] [11/17 03:30:56.938197][info][265869][Pipeline.cpp:343] [CP253530009G] Try to stop streams!
+1794857456.9388037 [component_container-1] [11/17 03:30:56.938222][warning][265869][ObException.cpp:26] A recoverable_exception has occurred!
+1794857456.9389534 [component_container-1]  - where: DeviceBase.cpp(397)
+1794857456.9390998 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:5
+1794857456.9392455 [component_container-1]  - type: WRONG_API_CALL_SEQUENCE
+1794857456.9393933 [component_container-1]  - status: 108
+1794857456.9401302 [component_container-1] [11/17 03:30:56.938317][warning][265869][Pipeline.cpp:61] [CP253530009G] Execute failure! A libobsensor_exception has occurred!
+1794857456.9406054 [component_container-1]  - where: Pipeline.cpp(61):~Pipeline
+1794857456.9408028 [component_container-1]  - msg: Device is deactivated/disconnected! DeviceComponentId:5
+1794857456.9409544 [component_container-1]  - type: N11libobsensor21recoverable_exceptionE
+1794857456.9411020 [component_container-1]  - status: 108
+1794857456.9412501 [component_container-1] [11/17 03:30:56.938347][info][265869][Pipeline.cpp:65] [CP253530009G] Pipeline destroyed! @0x7F485C0320
+1794857457.0392268 [component_container-1] [INFO] [1794857457.038504465] [camera.camera]: Resetting device handle
+1794857457.0433488 [component_container-1] [INFO] [1794857457.042545213] [camera.camera]: Device handle reset complete
+1794857457.0444534 [component_container-1] [INFO] [1794857457.042778838] [camera.camera]: Resetting device info
+1794857457.0447466 [component_container-1] [INFO] [1794857457.042840379] [camera.camera]: Device info reset complete
+1794857457.0449817 [component_container-1] [INFO] [1794857457.042947421] [camera.camera]: Device reset completed, continuing connection
+1794857457.0489321 [component_container-1] [INFO] [1794857457.048200335] [camera.camera]: Device reset complete
+1794857459.1010871 [component_container-1] [11/17 03:30:59.100062][info][267657][DeviceManager.cpp:354] Device changed! removed: 0, added: 1
+1794857459.1015553 [component_container-1] [11/17 03:30:59.100158][info][267657][DeviceManager.cpp:25] Current device(s) list: (1)
+1794857459.1018305 [component_container-1] [11/17 03:30:59.100173][info][267657][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP253530009G, Connection: USB3.2
+1794857459.1029356 [component_container-1] [INFO] [1794857459.100209704] [camera.camera]: Device connected callback triggered
+1794857459.1032629 [component_container-1] [INFO] [1794857459.100425537] [camera.camera]: startDevice called
+1794857459.1116879 [component_container-1] [INFO] [1794857459.110712324] [camera.camera]: Connecting to device with serial number: CP253530009G
+1794857459.1129062 [component_container-1] [INFO] [1794857459.111084490] [camera.camera]: Matched device serial number: CP253530009G
+1794857459.1144831 [component_container-1] [11/17 03:30:59.113952][info][267657][G330Device.cpp:660] UVCAutoRebootOnFault=true for device: Gemini 335L
+1794857459.1158071 [component_container-1] [11/17 03:30:59.115140][info][267657][DeviceBase.cpp:833] key: AppSlot,value:1
+1794857459.1160550 [component_container-1] [11/17 03:30:59.115157][info][267657][DeviceBase.cpp:833] key: HwType,value:L2
+1794857459.1162176 [component_container-1] [11/17 03:30:59.115159][info][267657][DeviceBase.cpp:833] key: HwVer,value:V1.1
+1794857459.1163673 [component_container-1] [11/17 03:30:59.115162][info][267657][DeviceBase.cpp:833] key: IspFwVer,value:20241125
+1794857459.1165173 [component_container-1] [11/17 03:30:59.115164][info][267657][DeviceBase.cpp:833] key: IspNeedVer,value:20241125
+1794857459.1166661 [component_container-1] [11/17 03:30:59.115167][info][267657][DeviceBase.cpp:833] key: PresetVer,value:1.2.2
+1794857459.2766089 [component_container-1] [11/17 03:30:59.275892][warning][267657][PropertyServer.cpp:55] [CP253530009G] Property not found to register callback, propertyId: 5525
+1794857459.2769630 [component_container-1] [11/17 03:30:59.276046][warning][267657][PropertyServer.cpp:55] [CP253530009G] Property not found to register callback, propertyId: 277
+1794857459.2777421 [component_container-1] [11/17 03:30:59.276577][warning][267657][PropertyConfigHandler.hpp:53] Unsupported property '223', skipping getting, return nullvalue
+1794857459.3092506 [component_container-1] [11/17 03:30:59.308510][warning][267657][PropertyConfigHandler.hpp:95] Exporting property '190' while stream is not active; the value may differ from what will be applied after streaming starts
+1794857459.3107638 [component_container-1] [11/17 03:30:59.310273][warning][267657][PresetHandler.cpp:337] Exporting ROI property '1061' while stream is not active; the value may differ from what will be applied after streaming starts

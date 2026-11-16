@@ -1,0 +1,8 @@
+2026-11-17T03:37:37+08:00
+d896200
+active
+REMOVED /tmp/platform-soak-check
+REMOVED /tmp/gcs-video-env-diag
+ 273552 bash -c date -Is; git -C /home/orangepi/drone_platform status --short; git -C /home/orangepi/drone_platform rev-parse --short HEAD; systemctl is-active nxserver; for d in /tmp/platform-soak-check /tmp/gcs-video-env-diag; do if test -e "$d"; then echo "PRESENT $d"; else echo "REMOVED $d"; fi; done; ps -eo pid,args | grep -E "[o]bserver-build/observer|[p]latform-soak-check|[g]cs-video-env-diag"; journalctl -k --since "2026-11-17 03:34:00" --no-pager | grep -E "usb 8-1|uvcvideo" || true
+Nov 17 03:36:25 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 03:36:25 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)

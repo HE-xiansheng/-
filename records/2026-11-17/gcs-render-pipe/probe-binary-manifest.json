@@ -1,0 +1,5 @@
+{
+  "local_path": "/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/customgeometry",
+  "sha256": "974211e128fba64ac853791105c12279a7e0308dd1a27715866b619f470d1a1f",
+  "test_kind": "local full main/window/controller synthetic raw pipeline, same executable for native default vs QSG_NO_VSYNC=1; no SSH or ROS"
+}

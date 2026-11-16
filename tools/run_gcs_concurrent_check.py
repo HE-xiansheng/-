@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exercise full production GCS against concurrent, isolated native ROS2 inputs."""
 from pathlib import Path
-import json,os,shlex,shutil,signal,socket,subprocess,sys,time
+import hashlib,json,os,shlex,shutil,signal,socket,subprocess,sys,time
 repo=Path(__file__).resolve().parents[1];out=Path(sys.argv[1]).resolve();out.mkdir(parents=True,exist_ok=False)
 ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=8','-o','ExitOnForwardFailure=yes','-o','UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts','-o','HostKeyAlias=opi-ros2-emmc','orangepi@192.168.1.224']
 def free_port():
@@ -13,6 +13,8 @@ def stop(p):
   except subprocess.TimeoutExpired:os.killpg(p.pid,signal.SIGKILL);p.wait(timeout=5)
 fixture=None;tunnel=None;qt=None;handles=[];result={};env=None
 try:
+ inputs=[repo/'groundstation/main.cpp',repo/'groundstation/videocontroller.cpp',repo/'tools/gcs_concurrent/automation.cpp',repo/'tools/gcs_concurrent/gst-wrapper.py',Path('/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/customgeometry')]
+ (out/'inputs-manifest.json').write_text(json.dumps({str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},indent=2)+'\n')
  shim=out/'shims';shim.mkdir()
  for src,name in [('ssh-wrapper.py','ssh'),('gst-wrapper.py','gst-launch-1.0')]:shutil.copy2(repo/'tools/gcs_concurrent'/src,shim/name);(shim/name).chmod(0o700)
  # Test relay uses an independent port, with read permission only for this PC.
@@ -29,6 +31,9 @@ try:
  env=dict(os.environ,PATH=str(shim)+':'+os.environ['PATH'],LD_LIBRARY_PATH=bundle_lib+':'+qt_root+'/lib',QML_IMPORT_PATH=qt_root+'/qml',GCS_STATE_DIR=str(out/'state'),GCS_TEST_KEYS='/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts',GCS_TEST_SSH_CALLS=str(out/'ssh-calls.jsonl'),GCS_CONCURRENT_RESULT=str(out/'qt-result.json'),GCS_RAW_UDP_PORT=str(ports[3]),XDG_CONFIG_HOME=str(out/'config'),XDG_DATA_HOME=str(out/'data'),XDG_CACHE_HOME=str(out/'cache'),LIBGL_ALWAYS_SOFTWARE='1',NO_PROXY='127.0.0.1',no_proxy='127.0.0.1')
  (out/'ports.json').write_text(json.dumps(ports))
  env['GCS_GST_DIAG']=str(out/'gstreamer-sink.log')
+ env.pop('QSG_NO_VSYNC',None)
+ env['QSG_INFO']='1'
+ (out/'render-launch-settings.json').write_text(json.dumps({'QSG_NO_VSYNC_present_in_launcher':'QSG_NO_VSYNC' in env,'LIBGL_ALWAYS_SOFTWARE':env.get('LIBGL_ALWAYS_SOFTWARE'),'QSG_INFO':env.get('QSG_INFO')},indent=2)+'\n')
  f=(out/'qt.log').open('w');handles.append(f)
  qt=subprocess.Popen(['/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/customgeometry','--no-splash','--host','192.168.1.224','--cloud-port',str(ports[0]),'--pose-port',str(ports[1]),'--preflight-port',str(ports[2])],env=env,cwd=out,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
  qt.wait(timeout=210)

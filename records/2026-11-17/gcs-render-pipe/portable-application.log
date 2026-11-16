@@ -1,0 +1,312 @@
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/platforms" ...
+qt.core.plugin.factoryloader: looking at "libqxcb.so"
+qt.core.plugin.loader: Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/platforms/libqxcb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "xcb"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QXcbIntegrationPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("xcb")
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/platforms" ...
+qt.core.library: "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/platforms/libqxcb.so" loaded library
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/platformthemes" ...
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/platformthemes" ...
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/platforminputcontexts" ...
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/platforminputcontexts" ...
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/iconengines" ...
+qt.core.plugin.factoryloader: looking at "libqsvgicon.so"
+qt.core.plugin.loader: Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/iconengines/libqsvgicon.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QIconEngineFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz",
+            "svg.gz"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QSvgIconPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("svg", "svgz", "svg.gz")
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/iconengines" ...
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats" ...
+qt.core.plugin.factoryloader: looking at "libqico.so"
+qt.core.plugin.loader: Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqico.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "ico",
+            "cur"
+        ],
+        "MimeTypes": [
+            "image/vnd.microsoft.icon",
+            "image/vnd.microsoft.icon"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QICOPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("ico", "cur")
+qt.core.plugin.factoryloader: looking at "libqgif.so"
+qt.core.plugin.loader: Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqgif.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "gif"
+        ],
+        "MimeTypes": [
+            "image/gif"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QGifPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("gif")
+qt.core.plugin.factoryloader: looking at "libqsvg.so"
+qt.core.plugin.loader: Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqsvg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz"
+        ],
+        "MimeTypes": [
+            "image/svg+xml",
+            "image/svg+xml-compressed"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QSvgPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("svg", "svgz")
+qt.core.plugin.factoryloader: looking at "libqjpeg.so"
+qt.core.plugin.loader: Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqjpeg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "jpg",
+            "jpeg",
+            "jfif"
+        ],
+        "MimeTypes": [
+            "image/jpeg",
+            "image/jpeg",
+            "image/jpeg"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QJpegPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("jpg", "jpeg", "jfif")
+qt.core.plugin.factoryloader: checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/imageformats" ...
+qt.core.library: "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqico.so" loaded library
+qt.core.library: "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqgif.so" loaded library
+qt.core.library: "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqsvg.so" loaded library
+qt.core.library: "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/imageformats/libqjpeg.so" loaded library
+2026-11-17 03:30:52.791 [INFO ] 日志文件：/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/logs/customgeometry_20261117_033052.log
+2026-11-17 03:30:52.791 [DEBUG] checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/xcbglintegrations" ...
+2026-11-17 03:30:52.791 [DEBUG] looking at "libqxcb-egl-integration.so"
+2026-11-17 03:30:52.791 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/xcbglintegrations/libqxcb-egl-integration.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.Xcb.QXcbGlIntegrationFactoryInterface.5.5",
+    "MetaData": {
+        "Keys": [
+            "xcb_egl"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QXcbEglIntegrationPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.791 [DEBUG] Got keys from plugin meta data QList("xcb_egl")
+2026-11-17 03:30:52.791 [DEBUG] looking at "libqxcb-glx-integration.so"
+2026-11-17 03:30:52.791 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/xcbglintegrations/libqxcb-glx-integration.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.Xcb.QXcbGlIntegrationFactoryInterface.5.5",
+    "MetaData": {
+        "Keys": [
+            "xcb_glx"
+        ]
+    },
+    "archlevel": 1,
+    "className": "QXcbGlxIntegrationPlugin",
+    "debug": false,
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.791 [DEBUG] Got keys from plugin meta data QList("xcb_glx")
+2026-11-17 03:30:52.791 [DEBUG] checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/xcbglintegrations" ...
+2026-11-17 03:30:52.791 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/xcbglintegrations/libqxcb-glx-integration.so" loaded library
+2026-11-17 03:30:52.888 [INFO ] Qt Quick 3D surface format initialized
+2026-11-17 03:30:52.888 [INFO ] 启动机载地址（视频与通信）：192.168.1.224
+2026-11-17 03:30:52.890 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick3D/libqquick3dplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 1,
+    "className": "QQuick3DPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick3D"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.890 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick3D/libqquick3dplugin.so" loaded library
+2026-11-17 03:30:52.894 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 1,
+    "className": "QtQuickControls2BasicStylePlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls.Basic"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.896 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so" loaded library
+2026-11-17 03:30:52.897 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 1,
+    "className": "QtQuickDialogsPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Dialogs"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.898 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Dialogs/libqtquickdialogsplugin.so" loaded library
+2026-11-17 03:30:52.898 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Layouts/libqquicklayoutsplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 1,
+    "className": "QtQuickLayoutsPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Layouts"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.898 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Layouts/libqquicklayoutsplugin.so" loaded library
+2026-11-17 03:30:52.899 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick3D/Helpers/libqtquick3dhelpersplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 1,
+    "className": "QtQuick3DHelpersPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick3D.Helpers"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.899 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick3D/Helpers/libqtquick3dhelpersplugin.so" loaded library
+2026-11-17 03:30:52.900 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Templates/libqtquicktemplates2plugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 1,
+    "className": "QtQuickTemplates2Plugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Templates"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.900 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Templates/libqtquicktemplates2plugin.so" loaded library
+2026-11-17 03:30:52.918 [DEBUG] threaded render loop
+2026-11-17 03:30:52.918 [DEBUG] Using sg animation driver
+2026-11-17 03:30:52.918 [DEBUG] Animation Driver: using vsync: 16.67 ms
+2026-11-17 03:30:52.918 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 03:30:52.918 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:56000
+2026-11-17 03:30:52.918 [INFO ] 静态点云显示上限变更：400000
+2026-11-17 03:30:52.921 [INFO ] 点云监听端口变更：9004
+2026-11-17 03:30:52.922 [DEBUG] checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/accessible" ...
+2026-11-17 03:30:52.922 [DEBUG] checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/accessible" ...
+2026-11-17 03:30:52.926 [DEBUG] Found metadata in lib /home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Controls/libqtquickcontrols2plugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 1,
+    "className": "QtQuickControls2Plugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls"
+    ],
+    "version": 395264
+}
+
+
+2026-11-17 03:30:52.926 [DEBUG] "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/qml/QtQuick/Controls/libqtquickcontrols2plugin.so" loaded library
+2026-11-17 03:30:52.944 [INFO ] 静态点云加载器绑定主几何：0x5623389d60b0
+2026-11-17 03:30:52.944 [INFO ] 静态点云加载器绑定预览几何：0x562338a5ddd0
+2026-11-17 03:30:52.944 [INFO ] 点云接收器绑定渲染几何：0x5623388d43c0
+2026-11-17 03:30:52.944 [INFO ] 静态点云加载器绑定主几何：0x5623388cdc50
+2026-11-17 03:30:52.944 [INFO ] 点云接收器绑定渲染几何：0x5623389d60b0
+2026-11-17 03:30:52.944 [INFO ] 点云监听端口变更：20100
+2026-11-17 03:30:52.944 [INFO ] 关闭点云 UDP 监听端口：20100
+2026-11-17 03:30:52.945 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:20100
+2026-11-17 03:30:53.028 [INFO ] QML module loaded: CustomGeometryExample/Main
+2026-11-17 03:30:53.028 [DEBUG] checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/plugins/accessiblebridge" ...
+2026-11-17 03:30:53.028 [DEBUG] checking directory path "/home/tyzk/drone-migration-work/ROS2 新版地面站 r3 重定位/drone-gcs-ros2-20261117-ros2-r3-linux-amd64/bin/accessiblebridge" ...
+2026-11-17 03:30:53.048 [DEBUG] Using sg animation driver
+2026-11-17 03:30:53.048 [DEBUG] Animation Driver: using vsync: 16.67 ms
+2026-11-17 03:30:53.048 [DEBUG] Creating QRhi with backend OpenGL for window 0x5623389cdc90 (wflags 0x1)
+  Graphics API debug/validation layers: 0
+  Debug markers: 0
+  Timestamps: 0
+  Prefer software device: 0
+  Shader/pipeline cache collection: 1
+2026-11-17 03:30:53.081 [DEBUG] Created OpenGL context QSurfaceFormat(version 4.3, options QFlags<QSurfaceFormat::FormatOption>(), depthBufferSize 24, redBufferSize 8, greenBufferSize 8, blueBufferSize 8, alphaBufferSize 0, stencilBufferSize 8, samples -1, swapBehavior QSurfaceFormat::DoubleBuffer, swapInterval 0, colorSpace QColorSpace(), profile  QSurfaceFormat::CoreProfile)
+2026-11-17 03:30:53.083 [DEBUG] OpenGL VENDOR: NVIDIA Corporation RENDERER: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2 VERSION: 4.3.0 NVIDIA 580.126.09
+2026-11-17 03:30:53.083 [DEBUG] Created QRhi 0x7fc6200051c0 for window 0x5623389cdc90
+2026-11-17 03:30:53.092 [DEBUG] Swap interval is 0, attempting to disable vsync when presenting.
+2026-11-17 03:30:53.092 [DEBUG] MSAA sample count for the swapchain is 1. Alpha channel requested = no.
+2026-11-17 03:30:53.092 [DEBUG] rhi texture atlas dimensions: 2048x1024
+2026-11-17 03:30:53.309 [INFO ] 地面站首帧就绪，启动耗时(ms) 419

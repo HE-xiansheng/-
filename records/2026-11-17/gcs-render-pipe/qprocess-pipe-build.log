@@ -1,0 +1,8 @@
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+shaders/brand.frag -> shaders/brand.frag.qsb exposed as ://shaders/brand.frag.qsb
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-gcs-concurrent
+[ 50%] Building CXX object CMakeFiles/qprocess_pipe_probe.dir/pipe_probe.cpp.o
+[100%] Linking CXX executable qprocess_pipe_probe
+[100%] Built target qprocess_pipe_probe

@@ -1,0 +1,12 @@
+Nov 17 03:30:56 orangepi5ultra kernel: usb 8-1: USB disconnect, device number 11
+Nov 17 03:30:58 orangepi5ultra kernel: usb 8-1: new SuperSpeed Gen 1 USB device number 12 using xhci-hcd
+Nov 17 03:30:58 orangepi5ultra kernel: usb 8-1: New USB device found, idVendor=2bc5, idProduct=0804, bcdDevice= 0.01
+Nov 17 03:30:58 orangepi5ultra kernel: usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=10
+Nov 17 03:30:58 orangepi5ultra kernel: usb 8-1: Product: Orbbec Gemini 335L
+Nov 17 03:30:58 orangepi5ultra kernel: usb 8-1: Manufacturer: Orbbec(R)
+Nov 17 03:30:58 orangepi5ultra kernel: usb 8-1: SerialNumber: CP253530009G
+Nov 17 03:30:58 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 03:30:58 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 03:30:58 orangepi5ultra kernel: hid-generic 0003:2BC5:0804.000B: hiddev96,hidraw0: USB HID v1.11 Device [Orbbec(R) Orbbec Gemini 335L] on usb-xhci-hcd.11.auto-1/input6
+Nov 17 03:31:18 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 03:31:18 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)

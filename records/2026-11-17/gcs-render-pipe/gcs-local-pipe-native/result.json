@@ -1,0 +1,175 @@
+{
+    "frames": 89,
+    "passed": false,
+    "rows": [
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 1997,
+            "pending": 0,
+            "revision": 3
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 2997,
+            "pending": 0,
+            "revision": 5
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 3997,
+            "pending": 0,
+            "revision": 7
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 4997,
+            "pending": 0,
+            "revision": 9
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 5998,
+            "pending": 0,
+            "revision": 11
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 6997,
+            "pending": 0,
+            "revision": 16
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 7997,
+            "pending": 0,
+            "revision": 21
+        },
+        {
+            "buffer": 589824,
+            "fresh": true,
+            "ms": 8998,
+            "pending": 0,
+            "revision": 25
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 9998,
+            "pending": 0,
+            "revision": 29
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 10998,
+            "pending": 0,
+            "revision": 37
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 11997,
+            "pending": 0,
+            "revision": 41
+        },
+        {
+            "buffer": 458752,
+            "fresh": true,
+            "ms": 12995,
+            "pending": 0,
+            "revision": 45
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 13998,
+            "pending": 0,
+            "revision": 48
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 14995,
+            "pending": 0,
+            "revision": 53
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 15996,
+            "pending": 0,
+            "revision": 57
+        },
+        {
+            "buffer": 393216,
+            "fresh": true,
+            "ms": 16996,
+            "pending": 0,
+            "revision": 60
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 17997,
+            "pending": 0,
+            "revision": 63
+        },
+        {
+            "buffer": 458752,
+            "fresh": true,
+            "ms": 18995,
+            "pending": 0,
+            "revision": 66
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 19995,
+            "pending": 0,
+            "revision": 69
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 20995,
+            "pending": 0,
+            "revision": 73
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 21995,
+            "pending": 0,
+            "revision": 77
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 22996,
+            "pending": 0,
+            "revision": 81
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 23995,
+            "pending": 0,
+            "revision": 85
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 24996,
+            "pending": 0,
+            "revision": 90
+        }
+    ],
+    "scope": "Full production main/window/controller, local synthetic raw GStreamer only; pipe diagnosis, no SSH/ROS/flight"
+}

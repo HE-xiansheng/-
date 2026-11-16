@@ -1,0 +1,37 @@
+2026-11-17 03:25:16.304 [INFO ] 日志文件：/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/logs/customgeometry_20261117_032516.log
+2026-11-17 03:25:16.405 [INFO ] Qt Quick 3D surface format initialized
+2026-11-17 03:25:16.405 [INFO ] 启动机载地址（视频与通信）：192.168.1.224
+2026-11-17 03:25:16.435 [DEBUG] threaded render loop
+2026-11-17 03:25:16.436 [DEBUG] Using sg animation driver
+2026-11-17 03:25:16.436 [DEBUG] Animation Driver: using vsync: 16.67 ms
+2026-11-17 03:25:16.436 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 03:25:16.436 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:56000
+2026-11-17 03:25:16.436 [INFO ] 静态点云显示上限变更：400000
+2026-11-17 03:25:16.439 [INFO ] 点云监听端口变更：9004
+2026-11-17 03:25:16.465 [INFO ] 静态点云加载器绑定主几何：0x55675efc6f50
+2026-11-17 03:25:16.465 [INFO ] 静态点云加载器绑定预览几何：0x55675efc7090
+2026-11-17 03:25:16.465 [INFO ] 点云接收器绑定渲染几何：0x55675eec2380
+2026-11-17 03:25:16.465 [INFO ] 静态点云加载器绑定主几何：0x55675efc7440
+2026-11-17 03:25:16.465 [INFO ] 点云接收器绑定渲染几何：0x55675efc6f50
+2026-11-17 03:25:16.547 [INFO ] QML module loaded: CustomGeometryExample/Main
+2026-11-17 03:25:16.563 [DEBUG] Using sg animation driver
+2026-11-17 03:25:16.563 [DEBUG] Animation Driver: using vsync: 16.67 ms
+2026-11-17 03:25:16.563 [DEBUG] Creating QRhi with backend OpenGL for window 0x55675eddc8f0 (wflags 0x1)
+  Graphics API debug/validation layers: 0
+  Debug markers: 0
+  Timestamps: 0
+  Prefer software device: 0
+  Shader/pipeline cache collection: 1
+2026-11-17 03:25:16.599 [DEBUG] Created OpenGL context QSurfaceFormat(version 4.3, options QFlags<QSurfaceFormat::FormatOption>(), depthBufferSize 24, redBufferSize 8, greenBufferSize 8, blueBufferSize 8, alphaBufferSize 0, stencilBufferSize 8, samples -1, swapBehavior QSurfaceFormat::DoubleBuffer, swapInterval 0, colorSpace QColorSpace(), profile  QSurfaceFormat::CoreProfile)
+2026-11-17 03:25:16.601 [DEBUG] OpenGL VENDOR: NVIDIA Corporation RENDERER: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2 VERSION: 4.3.0 NVIDIA 580.126.09
+2026-11-17 03:25:16.602 [DEBUG] Created QRhi 0x7f16a40051c0 for window 0x55675eddc8f0
+2026-11-17 03:25:16.628 [DEBUG] Swap interval is 0, attempting to disable vsync when presenting.
+2026-11-17 03:25:16.628 [DEBUG] MSAA sample count for the swapchain is 1. Alpha channel requested = no.
+2026-11-17 03:25:16.628 [DEBUG] rhi texture atlas dimensions: 2048x1024
+2026-11-17 03:25:16.854 [INFO ] 地面站首帧就绪，启动耗时(ms) 447
+2026-11-17 03:25:17.804 [INFO ] PASS full_main_window_created
+2026-11-17 03:25:17.804 [INFO ] PASS production_controllers_found
+2026-11-17 03:25:42.850 [DEBUG] Total time spent on pipeline creation during the lifetime of the QRhi 0x7f16a40051c0 was 97 ms
+2026-11-17 03:25:42.854 [DEBUG] Writing pipeline cache contents (70738 bytes) for QRhi 0x7f16a40051c0 to '/home/tyzk/drone-migration-work/gcs-local-pipe-no-vsync/cache/customgeometry-ros2-staging/qtpipelinecache-x86_64-little_endian-lp64/qqpc_opengl'
+2026-11-17 03:25:42.913 [INFO ] 销毁静态点云加载器，取消未完成加载任务
+2026-11-17 03:25:42.914 [INFO ] 销毁静态点云加载器，取消未完成加载任务

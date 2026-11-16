@@ -1,0 +1,58 @@
+[
+  {
+    "run": 7,
+    "passed": false,
+    "gui_checks": {
+      "passed": 15,
+      "total": 16
+    },
+    "fixture_checks": {
+      "passed": 7,
+      "total": 7
+    },
+    "gimbal_fresh_all_samples": false,
+    "stereo_fresh_all_samples": true
+  },
+  {
+    "run": 8,
+    "passed": true,
+    "gui_checks": {
+      "passed": 24,
+      "total": 24
+    },
+    "fixture_checks": {
+      "passed": 43,
+      "total": 43
+    },
+    "gimbal_fresh_all_samples": true,
+    "stereo_fresh_all_samples": true
+  },
+  {
+    "run": 9,
+    "passed": false,
+    "gui_checks": {
+      "passed": 15,
+      "total": 16
+    },
+    "fixture_checks": {
+      "passed": 3,
+      "total": 7
+    },
+    "gimbal_fresh_all_samples": true,
+    "stereo_fresh_all_samples": false
+  },
+  {
+    "run": 10,
+    "passed": true,
+    "gui_checks": {
+      "passed": 24,
+      "total": 24
+    },
+    "fixture_checks": {
+      "passed": 43,
+      "total": 43
+    },
+    "gimbal_fresh_all_samples": true,
+    "stereo_fresh_all_samples": true
+  }
+]

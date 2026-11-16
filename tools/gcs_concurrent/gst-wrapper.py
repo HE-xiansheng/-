@@ -7,4 +7,6 @@ args[args.index(old)]=new
 if os.environ.get('GCS_GST_DIAG'):
  os.environ['GST_DEBUG']='basesink:6'
  os.environ['GST_DEBUG_FILE']=os.environ['GCS_GST_DIAG']
+if os.environ.get('GCS_VIDEO_PIPE_PROBE'):
+ args=['-q','videotestsrc','is-live=true','!','video/x-raw,format=RGB,width=640,height=360,framerate=30/1','!','fdsink','fd=1','sync=false']
 os.execv('/usr/bin/gst-launch-1.0',['gst-launch-1.0',*args])

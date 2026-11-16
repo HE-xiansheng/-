@@ -126,3 +126,12 @@
 2026-11-17 完整GCS并发诊断：rosbag2 -p单位ms、官方默认100；平台1ms把Recorder::stop等待压到2ms，run2日志timeout，core发现线程memcmp/warn_if_new_qos/topics_discovery崩溃，官方超时后仍清表。候选恢复100ms，26项原生录制回归通过，run3正常收尾两个分包；不等于修复底层并发访问实现。run2内核USB断开/重枚举，run3逐秒失败为云台新鲜度；后者经过测试SSH隧道，run4改独立端口直连对照。详见records/2026-11-17/gcs-concurrent。
 
 GCS诊断更新：run4独立端口直连仍失败，排除仅SSH隧道解释；独立生产GStreamer824帧/35秒最大0.867s，完整GUI run5约10秒一次sink render。run6替换processEvents+sleep为QEventLoop仍失败，不支持将自动化休眠认定根因。产品播放器未更改，下一步需同步原始管道字节/QProcess缓存/GUI更新观察。录制源码d896200部署回读一致，26回归及4次清理正常收尾；这仍只是恢复官方轮询、不是修补底层发现线程竞争实现。
+
+
+2026-11-17 断电续接/GUI显示诊断：.224在线，uptime约9h，d896200干净、NoMachine active、飞控/相机在位；GitHub HEAD509c70a可达。新旧机内核均5.10.160-rockchip-rk3588，相机power/control=auto、delay2000ms；旧机采流active、新机停止后suspended，不足以证明自动休眠导致断连。dnsmasq端口53冲突为此前开机遗留失败，未调整服务。
+
+本地完整GUI原始管道探针：默认78帧/25秒、basic91、NVIDIA native89、关闭vsync740；独立QCoreApplication约300帧/10秒。实际均NVIDIA渲染，软件环境标志未生效。产品main仅Linux非Android、未显式设置时默认QSG_NO_VSYNC=1，保留0覆盖。run8显式开启24 GUI+43机载通过；run9产品默认云台正常，但相机03:30:56 USB断开，严格整轮失败。reset线程日志在断开回调之后，尚无证据认定其主动导致断连。r3包7项重定位/依赖/主界面通过，SHA319a5331…；原桌面入口未切换。证据已取回records/2026-11-17/gcs-render-pipe，默认路径run10附USB电源逐秒只读观察进行中。未改USB电源配置/固件/驱动/正式服务或飞控。
+
+补充实测纠正：生产归档显式QSG_NO_VSYNC=0仍创建swapInterval0，不能作为恢复vsync操作方法；main未覆盖该显式值，但Qt运行结果与文档预期不同。README/部署说明已去掉0回退承诺，回退以原r2包或撤销该main修改重建为准。
+
+2026-11-17 默认产品入口run10收尾：GUI24/24、机载43/43严格通过，真实QML录制启停正常；证据取回、remote_removed=true。USB逐秒观察采流时active、停止后suspended，本轮内核无disconnect；未更改电源配置，不宣称间歇断连已解决。明确纠正QSG_NO_VSYNC=0不能作为已验证回退，回退使用原r2包或撤销main分支重建。候选r3归档7项通过且原桌面入口未切换，机载仍d896200。物理接线/外参/真实融合与完整任务未验收，目标仍进行中。

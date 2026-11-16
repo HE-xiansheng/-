@@ -1,0 +1,8 @@
+{
+  "explicit_QSG_NO_VSYNC": "0",
+  "surface_lines": [
+    "2026-11-17 03:35:03.482 [DEBUG] Created OpenGL context QSurfaceFormat(version 4.3, options QFlags<QSurfaceFormat::FormatOption>(), depthBufferSize 24, redBufferSize 8, greenBufferSize 8, blueBufferSize 8, alphaBufferSize 0, stencilBufferSize 8, samples -1, swapBehavior QSurfaceFormat::DoubleBuffer, swapInterval 0, colorSpace QColorSpace(), profile  QSurfaceFormat::CoreProfile)"
+  ],
+  "application_exit": -15,
+  "scope": "production portable main only; no SSH or task commands"
+}

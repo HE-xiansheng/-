@@ -1,0 +1,182 @@
+{
+    "frames": 740,
+    "passed": true,
+    "rows": [
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 1010,
+            "pending": 0,
+            "revision": 21
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 2010,
+            "pending": 0,
+            "revision": 51
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 3010,
+            "pending": 0,
+            "revision": 81
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 4010,
+            "pending": 0,
+            "revision": 111
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 5010,
+            "pending": 0,
+            "revision": 141
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 6010,
+            "pending": 0,
+            "revision": 171
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 7011,
+            "pending": 0,
+            "revision": 201
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 8010,
+            "pending": 0,
+            "revision": 231
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 9011,
+            "pending": 0,
+            "revision": 261
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 10011,
+            "pending": 0,
+            "revision": 291
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 11011,
+            "pending": 0,
+            "revision": 321
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 12010,
+            "pending": 0,
+            "revision": 351
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 13010,
+            "pending": 0,
+            "revision": 381
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 14011,
+            "pending": 0,
+            "revision": 411
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 15010,
+            "pending": 0,
+            "revision": 441
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 16010,
+            "pending": 0,
+            "revision": 471
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 17010,
+            "pending": 0,
+            "revision": 501
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 18011,
+            "pending": 0,
+            "revision": 531
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 19011,
+            "pending": 0,
+            "revision": 561
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 20010,
+            "pending": 0,
+            "revision": 591
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 21010,
+            "pending": 0,
+            "revision": 621
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 22011,
+            "pending": 0,
+            "revision": 651
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 23010,
+            "pending": 0,
+            "revision": 681
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 24011,
+            "pending": 0,
+            "revision": 711
+        },
+        {
+            "buffer": 0,
+            "fresh": true,
+            "ms": 25010,
+            "pending": 0,
+            "revision": 741
+        }
+    ],
+    "scope": "Full production main/window/controller, local synthetic raw GStreamer only; pipe diagnosis, no SSH/ROS/flight"
+}

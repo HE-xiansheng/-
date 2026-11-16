@@ -1,0 +1,182 @@
+{
+    "frames": 78,
+    "passed": false,
+    "rows": [
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 1997,
+            "pending": 0,
+            "revision": 3
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 2998,
+            "pending": 0,
+            "revision": 5
+        },
+        {
+            "buffer": 393216,
+            "fresh": true,
+            "ms": 3998,
+            "pending": 0,
+            "revision": 6
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 4997,
+            "pending": 0,
+            "revision": 8
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 5998,
+            "pending": 0,
+            "revision": 10
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 6997,
+            "pending": 0,
+            "revision": 12
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 7998,
+            "pending": 0,
+            "revision": 16
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 8998,
+            "pending": 0,
+            "revision": 21
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 10000,
+            "pending": 0,
+            "revision": 25
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 10998,
+            "pending": 0,
+            "revision": 29
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 11997,
+            "pending": 0,
+            "revision": 33
+        },
+        {
+            "buffer": 524288,
+            "fresh": true,
+            "ms": 12998,
+            "pending": 0,
+            "revision": 36
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 13997,
+            "pending": 0,
+            "revision": 40
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 14996,
+            "pending": 0,
+            "revision": 43
+        },
+        {
+            "buffer": 655360,
+            "fresh": true,
+            "ms": 15998,
+            "pending": 0,
+            "revision": 46
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 16997,
+            "pending": 0,
+            "revision": 49
+        },
+        {
+            "buffer": 131072,
+            "fresh": true,
+            "ms": 17996,
+            "pending": 0,
+            "revision": 52
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 18996,
+            "pending": 0,
+            "revision": 56
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 19996,
+            "pending": 0,
+            "revision": 60
+        },
+        {
+            "buffer": 327680,
+            "fresh": true,
+            "ms": 20996,
+            "pending": 0,
+            "revision": 63
+        },
+        {
+            "buffer": 655360,
+            "fresh": true,
+            "ms": 21996,
+            "pending": 0,
+            "revision": 65
+        },
+        {
+            "buffer": 196608,
+            "fresh": true,
+            "ms": 22996,
+            "pending": 0,
+            "revision": 68
+        },
+        {
+            "buffer": 65536,
+            "fresh": true,
+            "ms": 23997,
+            "pending": 0,
+            "revision": 72
+        },
+        {
+            "buffer": 655360,
+            "fresh": true,
+            "ms": 24996,
+            "pending": 0,
+            "revision": 75
+        },
+        {
+            "buffer": 28672,
+            "fresh": true,
+            "ms": 25996,
+            "pending": 0,
+            "revision": 79
+        }
+    ],
+    "scope": "Full production main/window/controller, local synthetic raw GStreamer only; pipe diagnosis, no SSH/ROS/flight"
+}

@@ -157,3 +157,10 @@ EGO机载代码提交c33f78b；机载临时构建/测试/日志目录清理，�
 2026-11-17 断电续接：.224/NoMachine/GitHub可达，运行时HEAD bfc044a干净、实物Gemini和PX4 USB在位，无上轮所属进程。完整GCS run2失败证据/core/内核日志取回；run3逐秒定位云台接收新鲜度，遥测/相机/录制持续正常。恢复rosbag2官方100ms轮询候选，26项隔离回归通过，run3正常STOPPED两分包。测试清理漏导入shlex已修正、取回重新归档并清理临时目录；run4改独立RTSP端口直连对照进行中，候选尚未部署。物理飞控未操作，正式服务未切换。
 
 2026-11-17 阶段收口：录制轮询恢复Humble官方100ms已部署d896200，26项回归通过；run3/4失败清理录制正常STOPPED各两个分包，run5/6各一个分包。完整GUI run4直连仍云台新鲜度失败；独立GStreamer35秒824帧最大间隔0.867s，关闭drop无改善。run5 sink约10秒/帧；run6真正事件循环仍失败，根因未解决，未修改产品播放器。run5/6自动取证清理已完成。证据见records/2026-11-17/gcs-concurrent；物理雷达/云台、真实融合、完整任务与持续热负载仍待验收，目标保持进行中。
+
+
+2026-11-17 断电续接/GUI显示诊断：.224在线，uptime约9h，d896200干净、NoMachine active、飞控/相机在位；GitHub HEAD509c70a可达。新旧机内核均5.10.160-rockchip-rk3588，相机power/control=auto、delay2000ms；旧机采流active、新机停止后suspended，不足以证明自动休眠导致断连。dnsmasq端口53冲突为此前开机遗留失败，未调整服务。
+
+本地完整GUI原始管道探针：默认78帧/25秒、basic91、NVIDIA native89、关闭vsync740；独立QCoreApplication约300帧/10秒。实际均NVIDIA渲染，软件环境标志未生效。产品main仅Linux非Android、未显式设置时默认QSG_NO_VSYNC=1，保留0覆盖。run8显式开启24 GUI+43机载通过；run9产品默认云台正常，但相机03:30:56 USB断开，严格整轮失败。reset线程日志在断开回调之后，尚无证据认定其主动导致断连。r3包7项重定位/依赖/主界面通过，SHA319a5331…；原桌面入口未切换。证据已取回records/2026-11-17/gcs-render-pipe，默认路径run10附USB电源逐秒只读观察进行中。未改USB电源配置/固件/驱动/正式服务或飞控。
+
+2026-11-17 默认产品入口run10收尾：GUI24/24、机载43/43严格通过，真实QML录制启停正常；证据取回、remote_removed=true。USB逐秒观察采流时active、停止后suspended，本轮内核无disconnect；未更改电源配置，不宣称间歇断连已解决。明确纠正QSG_NO_VSYNC=0不能作为已验证回退，回退使用原r2包或撤销main分支重建。候选r3归档7项通过且原桌面入口未切换，机载仍d896200。物理接线/外参/真实融合与完整任务未验收，目标仍进行中。

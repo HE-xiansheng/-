@@ -1,0 +1,28 @@
+{
+  "samples": 180,
+  "transitions": [
+    {
+      "time": "2026-11-17T03:34:34+08:00",
+      "control": "auto",
+      "runtime_status": "suspended",
+      "runtime_active_time": "22926",
+      "runtime_suspended_time": "193283"
+    },
+    {
+      "time": "2026-11-17T03:35:05+08:00",
+      "control": "auto",
+      "runtime_status": "active",
+      "runtime_active_time": "23163",
+      "runtime_suspended_time": "224606"
+    },
+    {
+      "time": "2026-11-17T03:36:27+08:00",
+      "control": "auto",
+      "runtime_status": "suspended",
+      "runtime_active_time": "104463",
+      "runtime_suspended_time": "224645"
+    }
+  ],
+  "read_only": true,
+  "power_configuration_changed": false
+}
