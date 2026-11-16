@@ -1,0 +1,35 @@
+/**:
+  ros__parameters:
+    control_rate_hz: 20.0
+    require_offboard: true
+    target_timeout_s: 0.5
+    target_loss_grace_s: 0.3
+    pose_timeout_s: 0.5
+    rc_timeout_s: 1.0
+    tracking_vlxy: 0.8
+    max_forward_speed: 0.3
+    max_backward_speed: 0.15
+    tracking_ryaw: 1.5
+    max_yaw_rate: 1.2
+    use_metric_distance: true
+    target_distance_m: 2.0
+    distance_kp: 0.5
+    distance_deadband_m: 0.2
+    min_tracking_height_m: 0.3
+    use_landed_state: true
+    landed_state_timeout_s: 1.0
+    altitude_kp: 0.8
+    altitude_kd: 0.2
+    altitude_offset_m: 0.0
+    max_climb_speed: 0.4
+    max_descent_speed: 0.3
+    max_xy_accel: 0.6
+    max_z_accel: 0.5
+    max_yaw_accel: 1.0
+    landing_descent_speed: 0.2
+    landing_switch_height: 0.1
+    landing_timeout_s: 20.0
+    accept_legacy_target: false
+    state_timeout_s: 2.0
+    swa.up_max_pwm: 1211
+    swa.mid_max_pwm: 1757
