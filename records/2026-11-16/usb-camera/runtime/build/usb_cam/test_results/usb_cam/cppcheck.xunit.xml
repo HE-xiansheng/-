@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="usb_cam.cppcheck"
+  tests="21"
+  errors="0"
+  failures="0"
+  time="0.001"
+  skipped="21"
+>
+  <testcase
+    name="include/usb_cam/constants.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/conversions.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/av_pixel_format_helper.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/m420.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/mjpeg.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/mono.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/pixel_format_base.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/rgb.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/utils.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/uyvy.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/formats/yuyv.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/usb_cam.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/usb_cam_node.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="include/usb_cam/utils.hpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/ros1/usb_cam_node.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/ros2/usb_cam_node.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/usb_cam.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/gtest_main.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_pixel_formats.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_usb_cam_lib.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_usb_cam_utils.cpp"
+    classname="usb_cam.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.7 performance issues]]
+    </skipped>
+  </testcase>
+  <system-err>Tests Skipped due to cppcheck 2.7 performance issues</system-err>
+</testsuite>

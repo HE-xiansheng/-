@@ -67,5 +67,14 @@
     "record": "records/2026-11-16/source-completeness/README.md",
     "onboard_tracked_regular_files_archived": true,
     "runtime_build_artifacts_archived": false
+  },
+  "usb_cam": {
+    "url": "https://github.com/ros-drivers/usb_cam",
+    "tag": "0.8.1",
+    "commit": "cb2ae6bc0a312de629f84fef933fb3e07dac1ef8",
+    "source_path": "platform/02_drivers/usb_camera/workspace/src/usb_cam",
+    "patch": "patches/usb-cam-platform.patch",
+    "reference_version": "ROS1 0.3.7",
+    "physical_independent_camera_available": false
   }
 }

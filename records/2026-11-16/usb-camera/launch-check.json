@@ -1,0 +1,20 @@
+[
+  {
+    "case": "arguments",
+    "returncode": 0,
+    "stdout": "Arguments (pass arguments as '<name>:=<value>'):\n\n    'video_device':\n        no description given\n        (default: '/dev/usb_cam')\n",
+    "stderr": ""
+  },
+  {
+    "case": "missing",
+    "returncode": 1,
+    "stdout": "[INFO] [launch]: All log files can be found below /tmp/usb-camera-ros2/roslogs/2026-11-16-22-41-14-434863-orangepi5ultra-140216\n[INFO] [launch]: Default logging verbosity is set to INFO\n[ERROR] [launch]: Caught exception in launch (see debug for traceback): Independent USB camera not connected: /dev/usb_cam\n",
+    "stderr": ""
+  },
+  {
+    "case": "hdmi",
+    "returncode": 1,
+    "stdout": "[INFO] [launch]: All log files can be found below /tmp/usb-camera-ros2/roslogs/2026-11-16-22-41-18-349056-orangepi5ultra-140286\n[INFO] [launch]: Default logging verbosity is set to INFO\n[ERROR] [launch]: Caught exception in launch (see debug for traceback): Device is not a USB camera (HDMI/platform input is excluded): /dev/video0\n",
+    "stderr": ""
+  }
+]

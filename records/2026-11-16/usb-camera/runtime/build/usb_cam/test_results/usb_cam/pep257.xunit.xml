@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="usb_cam.pep257"
+  tests="4"
+  errors="0"
+  failures="0"
+  time="0.031"
+>
+  <testcase
+    name="./launch/__init__.py"
+    classname="usb_cam.pep257"/>
+  <testcase
+    name="./launch/camera.launch.py"
+    classname="usb_cam.pep257"/>
+  <testcase
+    name="./launch/camera_config.py"
+    classname="usb_cam.pep257"/>
+  <testcase
+    name="./scripts/show_image.py"
+    classname="usb_cam.pep257"/>
+  <system-out>Checked files:
+* ./launch/__init__.py
+* ./launch/camera.launch.py
+* ./launch/camera_config.py
+* ./scripts/show_image.py</system-out>
+</testsuite>

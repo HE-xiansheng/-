@@ -1,0 +1,37 @@
+Test project /tmp/usb-camera-ros2/build/usb_cam
+      Start  1: test_usb_cam_utils
+ 1/10 Test  #1: test_usb_cam_utils ...............   Passed    0.13 sec
+      Start  2: test_pixel_formats
+ 2/10 Test  #2: test_pixel_formats ...............   Passed    0.15 sec
+      Start  3: copyright
+ 3/10 Test  #3: copyright ........................   Passed    0.91 sec
+      Start  4: cppcheck
+ 4/10 Test  #4: cppcheck .........................   Passed    0.27 sec
+      Start  5: cpplint
+ 5/10 Test  #5: cpplint ..........................   Passed    1.80 sec
+      Start  6: flake8
+ 6/10 Test  #6: flake8 ...........................   Passed    0.46 sec
+      Start  7: lint_cmake
+ 7/10 Test  #7: lint_cmake .......................   Passed    0.27 sec
+      Start  8: pep257
+ 8/10 Test  #8: pep257 ...........................   Passed    0.35 sec
+      Start  9: uncrustify
+ 9/10 Test  #9: uncrustify .......................   Passed    0.44 sec
+      Start 10: xmllint
+10/10 Test #10: xmllint ..........................   Passed    5.15 sec
+
+100% tests passed, 0 tests failed out of 10
+
+Label Time Summary:
+copyright     =   0.91 sec*proc (1 test)
+cppcheck      =   0.27 sec*proc (1 test)
+cpplint       =   1.80 sec*proc (1 test)
+flake8        =   0.46 sec*proc (1 test)
+gtest         =   0.28 sec*proc (2 tests)
+lint_cmake    =   0.27 sec*proc (1 test)
+linter        =   9.66 sec*proc (8 tests)
+pep257        =   0.35 sec*proc (1 test)
+uncrustify    =   0.44 sec*proc (1 test)
+xmllint       =   5.15 sec*proc (1 test)
+
+Total Test time (real) =   9.94 sec

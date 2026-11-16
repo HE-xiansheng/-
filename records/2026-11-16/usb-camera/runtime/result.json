@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "missing reference alias fails without a fallback",
+      "passed": true
+    },
+    {
+      "check": "regular file rejected",
+      "passed": true
+    },
+    {
+      "check": "non-video character device rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video7 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video5 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video3 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video1 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video8 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video6 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video4 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video2 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical HDMI receiver is rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy Empty service names appear",
+      "passed": true
+    },
+    {
+      "check": "start Empty forwards true to native SetBool",
+      "passed": true
+    },
+    {
+      "check": "stop Empty forwards false to native SetBool",
+      "passed": true
+    },
+    {
+      "check": "native rejection is retained in operator status",
+      "passed": true
+    },
+    {
+      "check": "nonresponsive native service has bounded timeout",
+      "passed": true
+    },
+    {
+      "check": "missing native service is reported within bound",
+      "passed": true
+    },
+    {
+      "check": "compatibility node shuts down normally",
+      "passed": true
+    }
+  ]
+}

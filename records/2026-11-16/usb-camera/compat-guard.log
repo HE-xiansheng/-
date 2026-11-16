@@ -1,0 +1,19 @@
+PASS missing reference alias fails without a fallback
+PASS regular file rejected
+PASS non-video character device rejected
+PASS physical Gemini video7 is rejected
+PASS physical Gemini video5 is rejected
+PASS physical Gemini video3 is rejected
+PASS physical Gemini video1 is rejected
+PASS physical Gemini video8 is rejected
+PASS physical Gemini video6 is rejected
+PASS physical Gemini video4 is rejected
+PASS physical Gemini video2 is rejected
+PASS physical HDMI receiver is rejected
+PASS legacy Empty service names appear
+PASS start Empty forwards true to native SetBool
+PASS stop Empty forwards false to native SetBool
+PASS native rejection is retained in operator status
+PASS nonresponsive native service has bounded timeout
+PASS missing native service is reported within bound
+PASS compatibility node shuts down normally

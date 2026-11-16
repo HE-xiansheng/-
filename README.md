@@ -38,3 +38,5 @@
 [源码与驱动归档核对](records/2026-11-16/source-completeness/README.md)：机载已跟踪普通文件已补齐到仓库；含SDK2源码和Orbbec2.10.6离线SDK资料。当前传感器入口仍为MAVROS遥测配置，完整任务插件与独立USB相机继续适配。
 
 [完整MAVROS候选与实际MAVLink验证](records/2026-11-16/mavros-platform/README.md)：22项localhost隔离检查通过，完整插件候选已部署，现有遥测服务未切换；真实PX4融合/SITL仍待验收。
+
+[独立USB相机适配记录](records/2026-11-16/usb-camera/README.md)：官方ROS2驱动、旧配置与采集服务候选已部署，隔离验证通过；实际独立相机尚未接入，未切换现有服务。

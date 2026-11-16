@@ -1,0 +1,356 @@
+Start testing: Nov 16 22:41 CST
+----------------------------------------------------------
+1/10 Testing: test_usb_cam_utils
+1/10 Test: test_usb_cam_utils
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_usb_cam_utils.gtest.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_cmake_gtest/test_usb_cam_utils.txt" "--command" "/tmp/usb-camera-ros2/build/usb_cam/test_usb_cam_utils" "--gtest_output=xml:/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_usb_cam_utils.gtest.xml"
+Directory: /tmp/usb-camera-ros2/build/usb_cam
+"test_usb_cam_utils" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/tmp/usb-camera-ros2/build/usb_cam':
+ - /tmp/usb-camera-ros2/build/usb_cam/test_usb_cam_utils --gtest_output=xml:/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_usb_cam_utils.gtest.xml
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from test_usb_cam_utils
+[ RUN      ] test_usb_cam_utils.test_io_method_from_string
+[       OK ] test_usb_cam_utils.test_io_method_from_string (0 ms)
+[ RUN      ] test_usb_cam_utils.test_clip_value
+[       OK ] test_usb_cam_utils.test_clip_value (0 ms)
+[ RUN      ] test_usb_cam_utils.test_monotonic_to_real_time
+[       OK ] test_usb_cam_utils.test_monotonic_to_real_time (0 ms)
+[----------] 3 tests from test_usb_cam_utils (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_usb_cam_utils.gtest.xml'
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_usb_cam_utils.gtest.xml'
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"test_usb_cam_utils" end time: Nov 16 22:41 CST
+"test_usb_cam_utils" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/10 Testing: test_pixel_formats
+2/10 Test: test_pixel_formats
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_pixel_formats.gtest.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_cmake_gtest/test_pixel_formats.txt" "--command" "/tmp/usb-camera-ros2/build/usb_cam/test_pixel_formats" "--gtest_output=xml:/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_pixel_formats.gtest.xml"
+Directory: /tmp/usb-camera-ros2/build/usb_cam
+"test_pixel_formats" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/tmp/usb-camera-ros2/build/usb_cam':
+ - /tmp/usb-camera-ros2/build/usb_cam/test_pixel_formats --gtest_output=xml:/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_pixel_formats.gtest.xml
+Running main() from /opt/ros/humble/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from test_pixel_formats
+[ RUN      ] test_pixel_formats.pixel_format_base_class
+[       OK ] test_pixel_formats.pixel_format_base_class (0 ms)
+[----------] 1 test from test_pixel_formats (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_pixel_formats.gtest.xml'
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/test_pixel_formats.gtest.xml'
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"test_pixel_formats" end time: Nov 16 22:41 CST
+"test_pixel_formats" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/10 Testing: copyright
+3/10 Test: copyright
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/copyright.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_copyright/copyright.txt" "--command" "/opt/ros/humble/bin/ament_copyright" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/copyright.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"copyright" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_copyright --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/copyright.xunit.xml
+No problems found, checked 25 files
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/copyright.xunit.xml'
+<end of output>
+Test time =   0.91 sec
+----------------------------------------------------------
+Test Passed.
+"copyright" end time: Nov 16 22:41 CST
+"copyright" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/10 Testing: cppcheck
+4/10 Test: cppcheck
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cppcheck.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/humble/bin/ament_cppcheck" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cppcheck.xunit.xml" "--include_dirs" "/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"cppcheck" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_cppcheck --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cppcheck.xunit.xml --include_dirs /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include
+cppcheck 2.7 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cppcheck.xunit.xml'
+<end of output>
+Test time =   0.27 sec
+----------------------------------------------------------
+Test Passed.
+"cppcheck" end time: Nov 16 22:41 CST
+"cppcheck" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/10 Testing: cpplint
+5/10 Test: cpplint
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cpplint.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_cpplint/cpplint.txt" "--command" "/opt/ros/humble/bin/ament_cpplint" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cpplint.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"cpplint" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_cpplint --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cpplint.xunit.xml
+Using '--root=/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include' argument
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/constants.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/conversions.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/av_pixel_format_helper.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/m420.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/mjpeg.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/mono.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/pixel_format_base.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/rgb.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/utils.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/uyvy.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/formats/yuyv.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/usb_cam.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/usb_cam_node.hpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/utils.hpp
+
+Using '--root=/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/src' argument
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/src/ros1/usb_cam_node.cpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/src/ros2/usb_cam_node.cpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/src/usb_cam.cpp
+
+Using '--root=/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/test' argument
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/test/gtest_main.cpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/test/test_pixel_formats.cpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/test/test_usb_cam_lib.cpp
+
+Done processing /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam/test/test_usb_cam_utils.cpp
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/cpplint.xunit.xml'
+<end of output>
+Test time =   1.80 sec
+----------------------------------------------------------
+Test Passed.
+"cpplint" end time: Nov 16 22:41 CST
+"cpplint" time elapsed: 00:00:01
+----------------------------------------------------------
+
+6/10 Testing: flake8
+6/10 Test: flake8
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/flake8.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/flake8.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"flake8" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_flake8 --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/flake8.xunit.xml
+
+4 files checked
+No problems found
+
+Checked files:
+
+* ./scripts/show_image.py
+* ./launch/camera.launch.py
+* ./launch/__init__.py
+* ./launch/camera_config.py
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/flake8.xunit.xml'
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"flake8" end time: Nov 16 22:41 CST
+"flake8" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/10 Testing: lint_cmake
+7/10 Test: lint_cmake
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/lint_cmake.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/lint_cmake.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"lint_cmake" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/lint_cmake.xunit.xml
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/lint_cmake.xunit.xml'
+<end of output>
+Test time =   0.27 sec
+----------------------------------------------------------
+Test Passed.
+"lint_cmake" end time: Nov 16 22:41 CST
+"lint_cmake" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/10 Testing: pep257
+8/10 Test: pep257
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/pep257.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/pep257.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"pep257" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_pep257 --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/pep257.xunit.xml
+checking ./launch/__init__.py
+checking ./launch/camera.launch.py
+checking ./launch/camera_config.py
+checking ./scripts/show_image.py
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/pep257.xunit.xml'
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"pep257" end time: Nov 16 22:41 CST
+"pep257" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/10 Testing: uncrustify
+9/10 Test: uncrustify
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/uncrustify.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/humble/bin/ament_uncrustify" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/uncrustify.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"uncrustify" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_uncrustify --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/uncrustify.xunit.xml
+No code style divergence in file 'include/usb_cam/constants.hpp'
+
+No code style divergence in file 'include/usb_cam/conversions.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/av_pixel_format_helper.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/m420.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/mjpeg.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/mono.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/pixel_format_base.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/rgb.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/utils.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/uyvy.hpp'
+
+No code style divergence in file 'include/usb_cam/formats/yuyv.hpp'
+
+No code style divergence in file 'include/usb_cam/usb_cam.hpp'
+
+No code style divergence in file 'include/usb_cam/usb_cam_node.hpp'
+
+No code style divergence in file 'include/usb_cam/utils.hpp'
+
+No code style divergence in file 'src/ros1/usb_cam_node.cpp'
+
+No code style divergence in file 'src/ros2/usb_cam_node.cpp'
+
+No code style divergence in file 'src/usb_cam.cpp'
+
+No code style divergence in file 'test/gtest_main.cpp'
+
+No code style divergence in file 'test/test_pixel_formats.cpp'
+
+No code style divergence in file 'test/test_usb_cam_lib.cpp'
+
+No code style divergence in file 'test/test_usb_cam_utils.cpp'
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/uncrustify.xunit.xml'
+<end of output>
+Test time =   0.44 sec
+----------------------------------------------------------
+Test Passed.
+"uncrustify" end time: Nov 16 22:41 CST
+"uncrustify" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/10 Testing: xmllint
+10/10 Test: xmllint
+Command: "/usr/bin/python3" "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/xmllint.xunit.xml" "--package-name" "usb_cam" "--output-file" "/tmp/usb-camera-ros2/build/usb_cam/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/xmllint.xunit.xml"
+Directory: /home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam
+"xmllint" start time: Nov 16 22:41 CST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/src/usb_cam':
+ - /opt/ros/humble/bin/ament_xmllint --xunit-file /tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/xmllint.xunit.xml
+File 'package.xml' is valid
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/tmp/usb-camera-ros2/build/usb_cam/test_results/usb_cam/xmllint.xunit.xml'
+<end of output>
+Test time =   5.15 sec
+----------------------------------------------------------
+Test Passed.
+"xmllint" end time: Nov 16 22:41 CST
+"xmllint" time elapsed: 00:00:05
+----------------------------------------------------------
+
+End testing: Nov 16 22:41 CST
+
+copyright =   0.91 sec*proc
+
+cppcheck =   0.27 sec*proc
+
+cpplint =   1.80 sec*proc
+
+flake8 =   0.46 sec*proc
+
+gtest =   0.28 sec*proc
+
+lint_cmake =   0.27 sec*proc
+
+linter =   9.66 sec*proc
+
+pep257 =   0.35 sec*proc
+
+uncrustify =   0.44 sec*proc
+
+xmllint =   5.15 sec*proc
+
