@@ -1,0 +1,7 @@
+004ab1fa39f01bc9b9072c7fae540e3fdec0467c556987297cf7ad8c6e33a630  /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra
+cab8cc720d736646fea7910dfbb057c03c02602d4e173b53898a1780b2d0da47  /tmp/gimbal-native-observer/build/observer
+active
+ M 01_apps/mission_demo/workspace/src/rtsp_test/src/rtsp_hw_pub_ultra.cpp
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enP3p49s0        DOWN           
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:af0a:7930:a292:9ac3/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 

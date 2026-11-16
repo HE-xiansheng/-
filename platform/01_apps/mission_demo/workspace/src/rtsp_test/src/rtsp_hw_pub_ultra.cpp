@@ -244,6 +244,8 @@ int main(int argc, char **argv) {
     RCLCPP_INFO(nh->get_logger(), "rtsp_hw_pub_ultra running: %s -> /rtsp_cam/image_raw (mono8), color %.1f Hz @ %d px",
              url.c_str(), color_hz, color_width);
 
+    // 仅启用子logger的debug时记录真实发布消息源戳，便于区分订阅漏帧与重写。
+    const auto frame_logger = nh->get_logger().get_child("frames");
     unsigned long gray_frames = 0, color_frames = 0;
     rclcpp::Time rate_start = nh->now();
 
@@ -287,6 +289,8 @@ int main(int argc, char **argv) {
                                         (uint8_t*)plane + size_t(row) * hor_stride, width);
                     }
                     gray_pub->publish(*message);
+                    RCLCPP_DEBUG(frame_logger, "published_raw stamp_ns=%lld",
+                        static_cast<long long>(rclcpp::Time(message->header.stamp).nanoseconds()));
                     ++gray_frames;
                 }
                 if (plane && color_hz > 0 && color_pub->get_subscription_count() > 0 &&
@@ -302,7 +306,10 @@ int main(int argc, char **argv) {
                     cv::resize(uv_full(cv::Rect(0, 0, width / 2, height / 2)), uv_small,
                                cv::Size(cw / 2, ch / 2), 0, 0, cv::INTER_AREA);
                     cv::cvtColorTwoPlane(y_small, uv_small, bgr, cv::COLOR_YUV2BGR_NV12);
-                    color_pub->publish(*cv_bridge::CvImage(header, "bgr8", bgr).toImageMsg());
+                    const auto color_message = cv_bridge::CvImage(header, "bgr8", bgr).toImageMsg();
+                    color_pub->publish(*color_message);
+                    RCLCPP_DEBUG(frame_logger, "published_color stamp_ns=%lld",
+                        static_cast<long long>(rclcpp::Time(color_message->header.stamp).nanoseconds()));
                     ++color_frames;
                 }
                 mpp_frame_deinit(&dec.frame);

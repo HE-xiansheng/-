@@ -1,0 +1,1 @@
+{"frames": 238, "different_frames": 238, "fps": 29.657943995958053, "size": [640, 360], "format": "RGB", "passed": true, "scope": "actual physical camera via .235 -> SSH -> .224 relay -> SSH -> desktop GStreamer; no gimbal commands"}

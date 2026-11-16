@@ -2,7 +2,7 @@
 """Read synthetic relay through SSH forwarding with the Linux GCS decoder pipeline."""
 import hashlib,json,os,selectors,signal,socket,subprocess,time
 from pathlib import Path
-out=Path('records/2026-11-16/gimbal-relay');out.mkdir(parents=True,exist_ok=True)
+out=Path(os.environ.get('GIMBAL_DESKTOP_TEST_OUTPUT','records/2026-11-16/gimbal-relay'));out.mkdir(parents=True,exist_ok=True)
 ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=8','-o','ExitOnForwardFailure=yes','-o','UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts','-o','HostKeyAlias=opi-ros2-emmc','-N','-L','127.0.0.1:11954:127.0.0.1:18554','orangepi@192.168.1.224']
 procs=[];frames=0;unique=set();times=[];completed=False
 with (out/'ssh-tunnel.log').open('w') as tunnel_log,(out/'desktop-decoder.log').open('w') as decoder_log:
@@ -35,6 +35,6 @@ with (out/'ssh-tunnel.log').open('w') as tunnel_log,(out/'desktop-decoder.log').
    try:p.wait(timeout=8)
    except subprocess.TimeoutExpired:os.killpg(p.pid,signal.SIGKILL);p.wait(timeout=5)
   hz=(len(times)-1)/(times[-1]-times[0]) if len(times)>1 else 0
-  result={'frames':frames,'different_frames':len(unique),'fps':hz,'size':[640,360],'format':'RGB','passed':completed and frames>=60 and len(unique)>=30 and hz>10,'scope':'actual SSH-forwarded RTSP and same GStreamer pipeline as Qt; synthetic input, no gimbal motion'}
+  result={'frames':frames,'different_frames':len(unique),'fps':hz,'size':[640,360],'format':'RGB','passed':completed and frames>=60 and len(unique)>=30 and hz>10,'scope':os.environ.get('GIMBAL_DESKTOP_TEST_SCOPE','actual SSH-forwarded RTSP and same GStreamer pipeline as Qt; synthetic input, no gimbal motion')}
   (out/'desktop-result.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
 assert result['passed']

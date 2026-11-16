@@ -1,0 +1,5 @@
+[INFO] [1794843899.889745700] [rtsp_hw_pub_ultra]: rtsp_hw_pub_ultra running: rtsp://127.0.0.1:18554/gimbal -> /rtsp_cam/image_raw (mono8), color 15.0 Hz @ 960 px
+[INFO] [1794843909.893133444] [rtsp_hw_pub_ultra]: RTSP decode: gray 26.3 Hz, color 13.0 Hz, subscribers gray=2 color=2
+[INFO] [1794843919.910238134] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=2 color=2
+[INFO] [1794843929.935789889] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.1 Hz, color 15.1 Hz, subscribers gray=2 color=2
+[INFO] [1794843932.409036342] [rclcpp]: signal_handler(SIGINT/SIGTERM)

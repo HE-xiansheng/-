@@ -1,0 +1,6 @@
+Live camera relay ready on .224
+{"passed": false, "output": "/home/tyzk/drone-migration-github/records/2026-11-16/gimbal-live"}
+Traceback (most recent call last):
+  File "tools/run_gimbal_live_check.py", line 65, in <module>
+    print(json.dumps({'passed':passed,'output':str(out)}));assert passed
+AssertionError

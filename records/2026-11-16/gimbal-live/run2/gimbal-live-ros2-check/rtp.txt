@@ -1,0 +1,10 @@
+{
+  "url": "rtsp://127.0.0.1:18554/gimbal",
+  "codec": "H264",
+  "seconds": 5.001,
+  "rtp_packets": 1015,
+  "frame_markers": 128,
+  "fps": 25.59,
+  "mbps": 1.821,
+  "first_packet_ms": 739.89
+}

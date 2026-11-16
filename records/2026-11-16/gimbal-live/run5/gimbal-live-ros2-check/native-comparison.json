@@ -1,0 +1,14 @@
+{
+  "python_match_fraction": 0.9625550660792952,
+  "native_match_fraction": 0.975929978118162,
+  "streams": {
+    "raw": {
+      "messages": 881,
+      "hz": 28.311115348937623
+    },
+    "color": {
+      "messages": 457,
+      "hz": 14.732742541035316
+    }
+  }
+}

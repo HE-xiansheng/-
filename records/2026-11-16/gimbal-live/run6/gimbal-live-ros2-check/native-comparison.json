@@ -1,0 +1,20 @@
+{
+  "python_match_fraction": 0.9530201342281879,
+  "native_match_fraction": 0.9711111111111111,
+  "streams": {
+    "raw": {
+      "messages": 847,
+      "hz": 27.195397069107216,
+      "published_in_observer_window": 935,
+      "missing_received_frames": 88,
+      "published_unique": 941
+    },
+    "color": {
+      "messages": 450,
+      "hz": 14.465564620261695,
+      "published_in_observer_window": 453,
+      "missing_received_frames": 3,
+      "published_unique": 456
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "source_probe": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "avg_frame_rate": "30/1"
+  },
+  "checks": {
+    "live_h264_packets": true,
+    "raw_rate": true,
+    "raw_stamps": true,
+    "raw_changing_pixels": true,
+    "raw_buffer_geometry": true,
+    "color_rate": true,
+    "color_stamps": true,
+    "color_changing_pixels": true,
+    "color_buffer_geometry": true,
+    "formats_match_real_source": true,
+    "optical_frames": true,
+    "native_observer_raw_rate": true,
+    "native_observer_color_rate": true,
+    "color_retains_decoded_frame_stamp": false,
+    "normal_shutdown": true
+  },
+  "streams": {
+    "raw": {
+      "width": 1920,
+      "height": 1080,
+      "encoding": "mono8",
+      "frame": "gimbal_camera_optical_frame",
+      "step": 1920,
+      "bytes": 2073600,
+      "hz": 27.546976234771133,
+      "messages": 857,
+      "different_sample_hashes": 85,
+      "age_min_s": 0.005097714,
+      "age_max_s": 0.057097724
+    },
+    "color": {
+      "width": 960,
+      "height": 540,
+      "encoding": "bgr8",
+      "frame": "gimbal_camera_optical_frame",
+      "step": 2880,
+      "bytes": 1555200,
+      "hz": 14.61762919255834,
+      "messages": 454,
+      "different_sample_hashes": 45,
+      "age_min_s": 0.019222449,
+      "age_max_s": 0.103286024
+    }
+  },
+  "shutdown_codes": [
+    0,
+    0,
+    0
+  ],
+  "passed": false,
+  "scope": "actual camera via .235 read-only relay and temporary SSH tunnels; .224 physical camera network not validated; ROS stamps are decoder receipt time"
+}

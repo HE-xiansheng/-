@@ -1,0 +1,1 @@
+All phase evidence retrieved. Removed phase-owned /tmp/gimbal-live-ros2-check (runner), /tmp/gimbal-native-observer and /tmp/gimbal-live-build. No test processes remained at final snapshot; NoMachine active. Reference relay remains running with original PID1419.

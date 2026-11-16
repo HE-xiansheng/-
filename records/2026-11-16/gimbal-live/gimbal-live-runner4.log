@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "tools/run_gimbal_live_check.py", line 33, in <module>
+    if time.monotonic()>deadline:raise RuntimeError('reverse tunnel unavailable')
+RuntimeError: reverse tunnel unavailable
