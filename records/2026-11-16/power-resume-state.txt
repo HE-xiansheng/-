@@ -1,0 +1,62 @@
+2026-11-16T19:25:29+08:00
+ 19:25:29 up 57 min,  3 users,  load average: 2.06, 1.83, 1.76
+TARGET SOURCE         FSTYPE OPTIONS
+/      /dev/mmcblk1p2 ext4   rw,noatime,errors=remount-ro,commit=600
+  UNIT            LOAD   ACTIVE SUB    DESCRIPTION
+● dnsmasq.service loaded failed failed dnsmasq - A lightweight DHCP and caching DNS server
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+Nov 16 18:28:11 orangepi5ultra systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+Nov 16 18:28:11 orangepi5ultra dnsmasq[1261]: dnsmasq: failed to create listening socket for port 53: Address already in use
+Nov 16 18:28:11 orangepi5ultra dnsmasq[1261]: failed to create listening socket for port 53: Address already in use
+Nov 16 18:28:11 orangepi5ultra dnsmasq[1261]: FAILED to start up
+Nov 16 18:28:11 orangepi5ultra systemd[1]: dnsmasq.service: Control process exited, code=exited, status=2/INVALIDARGUMENT
+Nov 16 18:28:11 orangepi5ultra systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+Nov 16 18:28:11 orangepi5ultra systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+Reference ID    : F12EF878 (2408:400a:76a:b00::1)
+Stratum         : 3
+Ref time (UTC)  : Mon Nov 16 11:22:21 2026
+System time     : 0.001013408 seconds fast of NTP time
+Last offset     : +0.000181722 seconds
+RMS offset      : 0.000804632 seconds
+Frequency       : 4.402 ppm fast
+Residual freq   : +0.006 ppm
+Skew            : 0.888 ppm
+Root delay      : 0.059271373 seconds
+Root dispersion : 0.003000632 seconds
+Update interval : 513.2 seconds
+Leap status     : Normal
+Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 008 Device 002: ID 2bc5:0804 Orbbec 3D Technology International, Inc Orbbec Gemini 335L
+Bus 008 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 007 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 004 Device 003: ID 1b8c:0036 Altium Limited HKUST UAV NxtPX4
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+active
+Nov 16 19:21:42 orangepi5ultra systemd[38274]: Failed to start Timed resync.
+Nov 16 19:21:42 orangepi5ultra systemd[38274]: Reached target Main User Target.
+Nov 16 19:21:42 orangepi5ultra systemd[38274]: Startup finished in 127ms.
+Nov 16 19:21:43 orangepi5ultra sshd[38271]: Received disconnect from 192.168.1.89 port 58836:11: disconnected by user
+--
+Nov 16 19:21:55 orangepi5ultra profile-sync-daemon[38440]:  WARNING: Do not call /usr/bin/profile-sync-daemon as root.
+Nov 16 19:21:55 orangepi5ultra systemd[38432]: psd-resync.service: Main process exited, code=exited, status=1/FAILURE
+Nov 16 19:21:55 orangepi5ultra systemd[38432]: psd-resync.service: Failed with result 'exit-code'.
+Nov 16 19:21:55 orangepi5ultra systemd[38432]: Failed to start Timed resync.
+Nov 16 19:21:55 orangepi5ultra systemd[38432]: Reached target Main User Target.
+Nov 16 19:21:55 orangepi5ultra systemd[38432]: Startup finished in 132ms.
+Nov 16 19:21:56 orangepi5ultra sshd[38429]: Received disconnect from 192.168.1.89 port 54278:11: disconnected by user
+--
+Nov 16 19:23:42 orangepi5ultra profile-sync-daemon[39481]:  WARNING: Do not call /usr/bin/profile-sync-daemon as root.
+Nov 16 19:23:42 orangepi5ultra systemd[39472]: psd-resync.service: Main process exited, code=exited, status=1/FAILURE
+Nov 16 19:23:42 orangepi5ultra systemd[39472]: psd-resync.service: Failed with result 'exit-code'.
+Nov 16 19:23:42 orangepi5ultra systemd[39472]: Failed to start Timed resync.
+Nov 16 19:23:42 orangepi5ultra systemd[39472]: Reached target Main User Target.
+Nov 16 19:23:42 orangepi5ultra systemd[39472]: Startup finished in 116ms.
+Nov 16 19:23:42 orangepi5ultra sshd[39469]: Received disconnect from 192.168.1.89 port 49454:11: disconnected by user

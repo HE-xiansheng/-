@@ -1,0 +1,22 @@
+UNCONN 0      0                          127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=854,fd=13))
+Nov 16 19:26:35 orangepi5ultra systemd[1]: Started Session 167 of User root.
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: Finished Profile-sync-daemon.
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: Starting Timed resync...
+Nov 16 19:26:35 orangepi5ultra profile-sync-daemon[41074]:  WARNING: Do not call /usr/bin/profile-sync-daemon as root.
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: psd-resync.service: Main process exited, code=exited, status=1/FAILURE
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: psd-resync.service: Failed with result 'exit-code'.
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: Failed to start Timed resync.
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: Reached target Main User Target.
+Nov 16 19:26:35 orangepi5ultra systemd[41065]: Startup finished in 118ms.
+2026-11-16T19:26:51+08:00
+NTP=yes
+NTPSynchronized=yes
+ M 01_apps/ego_planner/config/planner.yaml
+ M 01_apps/ego_planner/workspace/src/plan_manage/CMakeLists.txt
+ M 01_apps/ego_planner/workspace/src/plan_manage/package.xml
+?? 01_apps/ego_planner/config/manual_preview.yaml
+?? 01_apps/ego_planner/launch/
+?? 01_apps/ego_planner/map_navigation.py
+?? 01_apps/ego_planner/workspace/src/plan_manage/include/plan_manage/replan_fsm.h
+?? 01_apps/ego_planner/workspace/src/plan_manage/src/planner_node.cpp
+?? 01_apps/ego_planner/workspace/src/plan_manage/src/replan_fsm.cpp

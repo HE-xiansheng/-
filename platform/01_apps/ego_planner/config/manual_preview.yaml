@@ -1,0 +1,15 @@
+/**:
+  ros__parameters:
+    fsm.flight_type: 1
+    fsm.waypoint_num: 0
+    fsm.manual_preview: true
+    fsm.thresh_replan_time: 1.0
+    fsm.planning_horizon: 4.0
+    fsm.emergency_time: 1.0
+    fsm.realworld_experiment: true
+    fsm.fail_safe: true
+    fsm.odom_vel_is_body: false
+    fsm.manual_replan_period: 0.5
+    fsm.manual_arrival_radius: 0.25
+    fsm.manual_arrival_speed: 0.15
+    fsm.manual_arrival_hold: 1.0
