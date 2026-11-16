@@ -1,0 +1,25 @@
+PASS expectations.json output.json
+PASS read independent SQL expectations
+静态点云加载器绑定主几何：0x7fff71d73ff0
+静态点云显示上限变更：70000
+点云几何收到空点集：sequence=0
+点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+PASS open all recovered split files in reverse order
+录制位姿更新：positionMs=0，poseIndex=1/229，位置=[0.440,0.000,0.000]，yaw=0.00
+设置静态点云回放数据：累计点=70000，交互预览点=70000，回放点=279996，时间戳=279996，位姿=229，durationMs=8023，frameDurationMs=100，playbackAvailable=true
+点云几何更新：sequence=0，点数=70000，boundsMin=(0.45,2.00,3.00)，boundsMax=(2.70,2.00,3.00)
+静态点云后台加载完成：token=1，path=/home/tyzk/drone-migration-work/recording-crash-run3/recording-crash-check/recovered/inputs-da64603f63584476aca92312b0833f11_2.db3，source=552000，visible=70000，playback=279996，poses=229，durationMs=8023
+PASS actual Qt reader parses recovered bag
+PASS all recovered poses present
+PASS trajectory available
+PASS first recovered pose matches CDR
+PASS last recovered pose matches CDR
+PASS source time span matches CDR
+PASS recovered world cloud available
+PASS correct world sources selected
+点云几何更新：sequence=0，点数=11666，boundsMin=(1.55,2.00,3.00)，boundsMax=(1.60,2.00,3.00)
+录制文件回放帧更新：positionMs=4011，window=3861..4161，显示点=11666
+录制位姿更新：positionMs=4011，poseIndex=114/229，位置=[1.570,0.000,0.000]，yaw=0.00
+PASS timeline cursor selects recovered pose
+PASS save evidence on computer
+销毁静态点云加载器，取消未完成加载任务

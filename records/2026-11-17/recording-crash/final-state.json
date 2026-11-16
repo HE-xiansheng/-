@@ -1,0 +1,12 @@
+{
+  "head": "623e8d5",
+  "git_status": "",
+  "nomachine": "active",
+  "test_directory_absent": true,
+  "owned_processes": [],
+  "recording_source_sha256": {
+    "record_session.py": "1b512f94687e2c7bd5d4e6d4b3a32c9aea2e9cb2edf8067ee3836b66e134b4fa",
+    "recording_manage.py": "1e05eee8d7bd88b1e86c052f7d6728c711362192c3cc23987270ef7bedee6187",
+    "recording_auto.py": "c2d915ac16b5d568ff25d2647c449cd557ba33fe44c0c770c87a25df7fa7a97e"
+  }
+}

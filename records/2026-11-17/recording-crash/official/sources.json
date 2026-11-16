@@ -1,0 +1,15 @@
+{
+  "reindexer-0.15.17.cpp": "https://raw.githubusercontent.com/ros2/rosbag2/0.15.17/rosbag2_cpp/src/rosbag2_cpp/reindexer.cpp",
+  "reindexer-humble.cpp": "https://raw.githubusercontent.com/ros2/rosbag2/humble/rosbag2_cpp/src/rosbag2_cpp/reindexer.cpp",
+  "wal.html": "https://www.sqlite.org/wal.html",
+  "failed_requests": [
+    {
+      "url": "https://raw.githubusercontent.com/ros2/rosbag2/humble/rosbag2_storage_sqlite3/README.md",
+      "status": 404
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ros2/rosbag2/humble/rosbag2_storage_default_plugins/README.md",
+      "status": 404
+    }
+  ]
+}

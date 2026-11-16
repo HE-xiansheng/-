@@ -1,0 +1,12 @@
+{
+  "head": "623e8d5",
+  "status": "",
+  "nxserver": "active",
+  "temporary_removed": true,
+  "owned_test_processes": "224970 python3 -c import hashlib,json,subprocess from pathlib import Path root=Path('/home/orangepi/drone_platform') print(json.dumps(dict(head=subprocess.check_output(['git','-C',str(root),'rev-parse','--short','HEAD']).decode().strip(),status=subprocess.check_output(['git','-C',str(root),'status','--porcelain']).decode(),nxserver=subprocess.check_output(['systemctl','is-active','nxserver']).decode().strip(),temporary_removed=not Path('/tmp/recording-crash-check').exists(),owned_test_processes=subprocess.run(['pgrep','-af','[r]ecording-crash-check'],capture_output=True,text=True).stdout,source_sha256={n:hashlib.sha256((root/'01_apps/ego_planner'/n).read_bytes()).hexdigest() for n in ['record_session.py','recording_manage.py','recording_auto.py']}),indent=2)) \n",
+  "source_sha256": {
+    "record_session.py": "1b512f94687e2c7bd5d4e6d4b3a32c9aea2e9cb2edf8067ee3836b66e134b4fa",
+    "recording_manage.py": "1e05eee8d7bd88b1e86c052f7d6728c711362192c3cc23987270ef7bedee6187",
+    "recording_auto.py": "c2d915ac16b5d568ff25d2647c449cd557ba33fe44c0c770c87a25df7fa7a97e"
+  }
+}

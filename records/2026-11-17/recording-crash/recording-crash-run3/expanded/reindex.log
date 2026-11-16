@@ -1,0 +1,5 @@
+[INFO] [1794852289.440877052] [rosbag2_cpp]: Beginning reindexing bag in directory: /tmp/recording-crash-check/recovered
+[INFO] [1794852289.443259078] [rosbag2_storage]: Opened database '/tmp/recording-crash-check/recovered/inputs-da64603f63584476aca92312b0833f11_0.db3' for READ_ONLY.
+[INFO] [1794852289.444368863] [rosbag2_storage]: Opened database '/tmp/recording-crash-check/recovered/inputs-da64603f63584476aca92312b0833f11_1.db3' for READ_ONLY.
+[INFO] [1794852289.445160149] [rosbag2_storage]: Opened database '/tmp/recording-crash-check/recovered/inputs-da64603f63584476aca92312b0833f11_2.db3' for READ_ONLY.
+[INFO] [1794852289.446200517] [rosbag2_cpp]: Reindexing complete.

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "inputs-da64603f63584476aca92312b0833f11_0.db3",
+    "without_wal_messages": 97,
+    "with_wal_messages": 97,
+    "without_wal_error": null
+  },
+  {
+    "file": "inputs-da64603f63584476aca92312b0833f11_1.db3",
+    "without_wal_messages": 96,
+    "with_wal_messages": 96,
+    "without_wal_error": null
+  },
+  {
+    "file": "inputs-da64603f63584476aca92312b0833f11_2.db3",
+    "without_wal_messages": null,
+    "with_wal_messages": 86,
+    "without_wal_error": "no such table: messages"
+  }
+]

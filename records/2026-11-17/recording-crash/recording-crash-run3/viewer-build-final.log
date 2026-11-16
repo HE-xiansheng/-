@@ -1,0 +1,7 @@
+[  0%] Built target check_recovered_autogen_timestamp_deps
+[ 16%] Automatic MOC for target check_recovered
+[ 16%] Built target check_recovered_autogen
+[ 33%] Building CXX object CMakeFiles/check_recovered.dir/main.cpp.o
+[ 50%] Building CXX object CMakeFiles/check_recovered.dir/home/tyzk/drone-migration-github/groundstation/pointcloudgeometry.cpp.o
+[ 66%] Linking CXX executable check_recovered
+[100%] Built target check_recovered

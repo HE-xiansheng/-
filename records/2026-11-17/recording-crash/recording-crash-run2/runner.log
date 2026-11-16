@@ -1,0 +1,34 @@
+{"owned_recorder_identity": true}
+{"records_before_crash": true}
+{"both_owned_processes_terminated": true}
+{"crash_is_reported_as_error": true}
+{"active_marker_retained": true}
+{"new_recording_blocked": true}
+{"blocked_start_preserves_all_original_files": true}
+{"one_owned_clip": true}
+{"split_databases_exist": true}
+{"unfinished_tail_has_no_final_metadata": true}
+{"wal_sidecar_preserved": true}
+{"integrity_inputs-92d52b516dee47438bd4393ab1185536_0.db3": true}
+{
+  "restart_rejection": "\u5b58\u5728\u672a\u6536\u5c3e\u5f55\u5305\uff0c\u8bf7\u5148\u68c0\u67e5\u6587\u4ef6\uff0c\u4e0d\u5f00\u59cb\u65b0\u5f55\u5236",
+  "checks": {
+    "owned_recorder_identity": true,
+    "records_before_crash": true,
+    "both_owned_processes_terminated": true,
+    "crash_is_reported_as_error": true,
+    "active_marker_retained": true,
+    "new_recording_blocked": true,
+    "blocked_start_preserves_all_original_files": true,
+    "one_owned_clip": true,
+    "split_databases_exist": true,
+    "unfinished_tail_has_no_final_metadata": true,
+    "wal_sidecar_preserved": true,
+    "integrity_inputs-92d52b516dee47438bd4393ab1185536_0.db3": true
+  },
+  "scope": "SIGKILL of owned synthetic recorder processes only; preserves originals and reindexes a copied SQLite/WAL bag; NOT a physical power-cut or durability guarantee"
+}
+Traceback (most recent call last):
+  File "/tmp/recording-crash-check/test.py", line 77, in <module>
+    digest=hashlib.sha256(payload).hexdigest();assert (name,digest) in source,(name,digest)
+AssertionError: ('/rosout', 'b2f40c250de3f38930ba81318edeaca3ce3dd094f5b2e6e952ebbdc704b197cd')

@@ -1,0 +1,92 @@
+{"owned_recorder_identity": true}
+{"records_before_crash": true}
+{"both_owned_processes_terminated": true}
+{"crash_is_reported_as_error": true}
+{"active_marker_retained": true}
+{"new_recording_blocked": true}
+{"blocked_start_preserves_all_original_files": true}
+{"one_owned_clip": true}
+{"split_databases_exist": true}
+{"unfinished_tail_has_no_final_metadata": true}
+{"wal_sidecar_preserved": true}
+{"integrity_inputs-a74d2950804b40b4861d7d5b6b2e5875_0.db3": true}
+{"integrity_inputs-a74d2950804b40b4861d7d5b6b2e5875_1.db3": true}
+{"integrity_inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3": true}
+{"all_committed_messages_match_real_source_cdr": true}
+{"copied_bag_reindex_succeeds": true}
+{"copied_bag_info_succeeds": true}
+[INFO] [1794852561.242116655] [rosbag2_storage]: Opened database '/tmp/recording-crash-check/recovered/inputs-a74d2950804b40b4861d7d5b6b2e5875_0.db3' for READ_ONLY.
+[INFO] [1794852561.252027131] [rosbag2_storage]: Opened database '/tmp/recording-crash-check/recovered/inputs-a74d2950804b40b4861d7d5b6b2e5875_1.db3' for READ_ONLY.
+[INFO] [1794852561.260703574] [rosbag2_storage]: Opened database '/tmp/recording-crash-check/recovered/inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3' for READ_ONLY.
+{"reindexed_reader_exactly_matches_committed_rows": true}
+{"recovery_does_not_modify_originals": true}
+{"original_active_marker_still_requires_manual_review": true}
+{"no_flight_command_publishers": true}
+{"manual_review_retains_old_pointer_and_active_marker": true}
+{"new_session_after_manual_review_is_distinct": true}
+{"new_session_finalizes_normally": true}
+{"new_session_never_changes_interrupted_originals": true}
+{
+  "restart_rejection": "\u5b58\u5728\u672a\u6536\u5c3e\u5f55\u5305\uff0c\u8bf7\u5148\u68c0\u67e5\u6587\u4ef6\uff0c\u4e0d\u5f00\u59cb\u65b0\u5f55\u5236",
+  "committed_counts": {
+    "/rosout": 4,
+    "/factory_fastlio/odometry": 227,
+    "/factory_fastlio/cloud_world": 46
+  },
+  "database_messages": {
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875_0.db3": 96,
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875_1.db3": 96,
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3": 85
+  },
+  "source_messages": 322,
+  "original_inventory": {
+    "recording-status.json": "3c261b5ec16ec0e85825ae0939f35b67238d36d182f9b649f8544d5e9e6fefb0",
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875.active": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "params-start-a74d2950804b40b4861d7d5b6b2e5875.json": "fe155c20a83f6b99a8c5ae7146e490b9bdb5259157698a13b3340c12e1ec06ba",
+    "storage.yaml": "0386d5fddb897952663aa9f458fbe6ef26ceaf8de0e78b8b11347e78f72577bc",
+    "qos.yaml": "9e0e5de62952e6e4f7598f76514200024caa45d901e6c64f2fffd3bdfedae846",
+    "params-before.json": "fe155c20a83f6b99a8c5ae7146e490b9bdb5259157698a13b3340c12e1ec06ba",
+    "runtime.txt": "803fc1ab0c0b530b00a86e25f2b98c051128628c9eec9b44322012a84f3b9567",
+    "manifest.json": "9b303ff3324aa75f1f08b1e7e8e0921310c724cb33b620cb2882a999235d4850",
+    "sources.tgz": "5339f1f7da10b81116e16bccd4a72e000cadac9824af15fbd01e1938baca19d9",
+    "rosbag.log": "f621718c0521fb73b2fda8724e6cff26df2ac9acf15668f81313185153308906",
+    "recording-control.json": "a6c0414943dd1e6a896ad98088a6cbef11ad4edae193b528d5b1ba7fcbb93481",
+    "supervisor.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875/inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3-shm": "b04f4b3f24bfd136566f414919df51cda40133cd9e3cce323991a8dd737e1e4d",
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875/inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3-wal": "77f448a0621c968d47f88bad9e7720174c428f5fe190cd5d58a3bbb56d139e0b",
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875/inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3": "a928d6f73a13ed50a77a86f625d57969cca4c120d0f1c9c9d3ebe0c4499d86cc",
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875/inputs-a74d2950804b40b4861d7d5b6b2e5875_1.db3": "5495ef52633022a5320a649d69f7e4537aea8a8592b202acee081f6ff8ec22fe",
+    "inputs-a74d2950804b40b4861d7d5b6b2e5875/inputs-a74d2950804b40b4861d7d5b6b2e5875_0.db3": "42adf801ee3a9966b24c2f59b04a813fd28722112c447161b687f5239701716a"
+  },
+  "reviewed_pointer": ".flight-recording-reviewed-1794852561285783241.json",
+  "next_session": "/tmp/recording-crash-check/source/flight-records/20261117-020921-32bab0",
+  "passed": true,
+  "checks": {
+    "owned_recorder_identity": true,
+    "records_before_crash": true,
+    "both_owned_processes_terminated": true,
+    "crash_is_reported_as_error": true,
+    "active_marker_retained": true,
+    "new_recording_blocked": true,
+    "blocked_start_preserves_all_original_files": true,
+    "one_owned_clip": true,
+    "split_databases_exist": true,
+    "unfinished_tail_has_no_final_metadata": true,
+    "wal_sidecar_preserved": true,
+    "integrity_inputs-a74d2950804b40b4861d7d5b6b2e5875_0.db3": true,
+    "integrity_inputs-a74d2950804b40b4861d7d5b6b2e5875_1.db3": true,
+    "integrity_inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3": true,
+    "all_committed_messages_match_real_source_cdr": true,
+    "copied_bag_reindex_succeeds": true,
+    "copied_bag_info_succeeds": true,
+    "reindexed_reader_exactly_matches_committed_rows": true,
+    "recovery_does_not_modify_originals": true,
+    "original_active_marker_still_requires_manual_review": true,
+    "no_flight_command_publishers": true,
+    "manual_review_retains_old_pointer_and_active_marker": true,
+    "new_session_after_manual_review_is_distinct": true,
+    "new_session_finalizes_normally": true,
+    "new_session_never_changes_interrupted_originals": true
+  },
+  "scope": "SIGKILL of owned synthetic recorder processes only; preserves originals and reindexes a copied SQLite/WAL bag; NOT a physical power-cut or durability guarantee"
+}

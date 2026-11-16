@@ -1,0 +1,14 @@
+
+Files:             inputs-a74d2950804b40b4861d7d5b6b2e5875_0.db3
+                   inputs-a74d2950804b40b4861d7d5b6b2e5875_1.db3
+                   inputs-a74d2950804b40b4861d7d5b6b2e5875_2.db3
+Bag size:          9.6 MiB
+Storage id:        sqlite3
+Duration:          8.033693819s
+Start:             Nov 17 2026 02:09:12.296207958 (1794852552.296207958)
+End:               Nov 17 2026 02:09:20.329901777 (1794852560.329901777)
+Messages:          277
+Topic information: Topic: /factory_fastlio/cloud_world | Type: sensor_msgs/msg/PointCloud2 | Count: 46 | Serialization Format: cdr
+                   Topic: /factory_fastlio/odometry | Type: nav_msgs/msg/Odometry | Count: 227 | Serialization Format: cdr
+                   Topic: /rosout | Type: rcl_interfaces/msg/Log | Count: 4 | Serialization Format: cdr
+

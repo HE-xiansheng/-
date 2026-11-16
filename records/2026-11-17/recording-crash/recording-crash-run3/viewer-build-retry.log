@@ -1,0 +1,41 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+-- Found WrapOpenGL: TRUE
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Found WrapVulkanHeaders: /usr/include
+-- Found SQLite3: /usr/include (found version "3.31.1")
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-recording-recovery
+[  0%] Built target check_recovered_autogen_timestamp_deps
+[ 16%] Automatic MOC for target check_recovered
+[ 16%] Built target check_recovered_autogen
+[ 33%] Building CXX object CMakeFiles/check_recovered.dir/check_recovered_autogen/mocs_compilation.cpp.o
+[ 50%] Building CXX object CMakeFiles/check_recovered.dir/main.cpp.o
+/home/tyzk/drone-migration-github/tools/recording_recovery_viewer_check/main.cpp: In function ‘int main(int, char**)’:
+/home/tyzk/drone-migration-github/tools/recording_recovery_viewer_check/main.cpp:22:19: error: ‘const class QJsonArray’ has no member named ‘rbegin’; did you mean ‘begin’?
+   22 |  for(auto i=parts.rbegin();i!=parts.rend();++i)urls.append(QUrl::fromLocalFile(i->toString()));
+      |                   ^~~~~~
+      |                   begin
+/home/tyzk/drone-migration-github/tools/recording_recovery_viewer_check/main.cpp:22:37: error: ‘const class QJsonArray’ has no member named ‘rend’; did you mean ‘end’?
+   22 |  for(auto i=parts.rbegin();i!=parts.rend();++i)urls.append(QUrl::fromLocalFile(i->toString()));
+      |                                     ^~~~
+      |                                     end
+[ 66%] Building CXX object CMakeFiles/check_recovered.dir/home/tyzk/drone-migration-github/groundstation/pointcloudfileloader.cpp.o
+make[2]: *** [CMakeFiles/check_recovered.dir/build.make:93：CMakeFiles/check_recovered.dir/main.cpp.o] 错误 1
+make[2]: *** 正在等待未完成的任务....
+make[1]: *** [CMakeFiles/Makefile2:90：CMakeFiles/check_recovered.dir/all] 错误 2
+make: *** [Makefile:91：all] 错误 2
