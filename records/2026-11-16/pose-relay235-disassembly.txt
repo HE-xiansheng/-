@@ -1,0 +1,770 @@
+000000000000b948 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)>:
+    b948:	a9a67bfd 	stp	x29, x30, [sp, #-416]!
+    b94c:	910003fd 	mov	x29, sp
+    b950:	a90153f3 	stp	x19, x20, [sp, #16]
+    b954:	d00000d4 	adrp	x20, 25000 <__FRAME_END__+0x105a0>
+    b958:	aa0103f3 	mov	x19, x1
+    b95c:	f947fa81 	ldr	x1, [x20, #4080]
+    b960:	a9025bf5 	stp	x21, x22, [sp, #32]
+    b964:	aa0003f5 	mov	x21, x0
+    b968:	f9400020 	ldr	x0, [x1]
+    b96c:	f900cfe0 	str	x0, [sp, #408]
+    b970:	d2800000 	mov	x0, #0x0                   	// #0
+    b974:	97ffee23 	bl	7200 <ros::Time::now()@plt>
+    b978:	f9002fe0 	str	x0, [sp, #88]
+    b97c:	f9400261 	ldr	x1, [x19]
+    b980:	b40020c1 	cbz	x1, bd98 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x450>
+    b984:	91001021 	add	x1, x1, #0x4
+    b988:	910163e0 	add	x0, sp, #0x58
+    b98c:	97ffed59 	bl	6ef0 <ros::TimeBase<ros::Time, ros::Duration>::operator-(ros::Time const&) const@plt>
+    b990:	9360fc01 	asr	x1, x0, #32
+    b994:	f9400276 	ldr	x22, [x19]
+    b998:	b4002016 	cbz	x22, bd98 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x450>
+    b99c:	b94006c2 	ldr	w2, [x22, #4]
+    b9a0:	350003c2 	cbnz	w2, ba18 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0xd0>
+    b9a4:	b9400ac2 	ldr	w2, [x22, #8]
+    b9a8:	35000382 	cbnz	w2, ba18 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0xd0>
+    b9ac:	d00000c0 	adrp	x0, 25000 <__FRAME_END__+0x105a0>
+    b9b0:	f947fc00 	ldr	x0, [x0, #4088]
+    b9b4:	39400000 	ldrb	w0, [x0]
+    b9b8:	34001b20 	cbz	w0, bd1c <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x3d4>
+    b9bc:	f00000d3 	adrp	x19, 26000 <__data_start>
+    b9c0:	9102c275 	add	x21, x19, #0xb0
+    b9c4:	3942c260 	ldrb	w0, [x19, #176]
+    b9c8:	34001760 	cbz	w0, bcb4 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x36c>
+    b9cc:	9102c275 	add	x21, x19, #0xb0
+    b9d0:	b94006a0 	ldr	w0, [x21, #4]
+    b9d4:	7100081f 	cmp	w0, #0x2
+    b9d8:	54001961 	b.ne	bd04 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x3bc>  // b.any
+    b9dc:	9102c260 	add	x0, x19, #0xb0
+    b9e0:	39400415 	ldrb	w21, [x0, #1]
+    b9e4:	97ffee07 	bl	7200 <ros::Time::now()@plt>
+    b9e8:	d360fc01 	lsr	x1, x0, #32
+    b9ec:	350019d5 	cbnz	w21, bd24 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x3dc>
+    b9f0:	f947fa94 	ldr	x20, [x20, #4080]
+    b9f4:	f940cfe0 	ldr	x0, [sp, #408]
+    b9f8:	f9400281 	ldr	x1, [x20]
+    b9fc:	eb010000 	subs	x0, x0, x1
+    ba00:	d2800001 	mov	x1, #0x0                   	// #0
+    ba04:	54001d01 	b.ne	bda4 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x45c>  // b.any
+    ba08:	a94153f3 	ldp	x19, x20, [sp, #16]
+    ba0c:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    ba10:	a8da7bfd 	ldp	x29, x30, [sp], #416
+    ba14:	d65f03c0 	ret
+    ba18:	1e620021 	scvtf	d1, w1
+    ba1c:	90000041 	adrp	x1, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    ba20:	1e620000 	scvtf	d0, w0
+    ba24:	fd4012a2 	ldr	d2, [x21, #32]
+    ba28:	fd400423 	ldr	d3, [x1, #8]
+    ba2c:	1f430020 	fmadd	d0, d1, d3, d0
+    ba30:	1e614041 	fneg	d1, d2
+    ba34:	1e602030 	fcmpe	d1, d0
+    ba38:	54fffbac 	b.gt	b9ac <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x64>
+    ba3c:	fd400ea1 	ldr	d1, [x21, #24]
+    ba40:	1e602030 	fcmpe	d1, d0
+    ba44:	54fffb44 	b.mi	b9ac <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x64>  // b.first
+    ba48:	b94002a1 	ldr	w1, [x21]
+    ba4c:	6d0327e8 	stp	d8, d9, [sp, #48]
+    ba50:	6d042fea 	stp	d10, d11, [sp, #64]
+    ba54:	6d46aacb 	ldp	d11, d10, [x22, #104]
+    ba58:	6d47a2c9 	ldp	d9, d8, [x22, #120]
+    ba5c:	35000061 	cbnz	w1, ba68 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x120>
+    ba60:	b94006a0 	ldr	w0, [x21, #4]
+    ba64:	34001960 	cbz	w0, bd90 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x448>
+    ba68:	aa1503e1 	mov	x1, x21
+    ba6c:	910012c0 	add	x0, x22, #0x4
+    ba70:	97ffee2c 	bl	7320 <ros::TimeBase<ros::Time, ros::Duration>::operator<=(ros::Time const&) const@plt>
+    ba74:	72001c1f 	tst	w0, #0xff
+    ba78:	54001181 	b.ne	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>  // b.any
+    ba7c:	f9400260 	ldr	x0, [x19]
+    ba80:	b4001900 	cbz	x0, bda0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x458>
+    ba84:	d0000021 	adrp	x1, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ba88:	91004000 	add	x0, x0, #0x10
+    ba8c:	912a6021 	add	x1, x1, #0xa98
+    ba90:	97ffedf0 	bl	7250 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const@plt>
+    ba94:	350010a0 	cbnz	w0, bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>
+    ba98:	f9400260 	ldr	x0, [x19]
+    ba9c:	b4001820 	cbz	x0, bda0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x458>
+    baa0:	d0000021 	adrp	x1, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    baa4:	9100c000 	add	x0, x0, #0x30
+    baa8:	912aa021 	add	x1, x1, #0xaa8
+    baac:	97ffede9 	bl	7250 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const@plt>
+    bab0:	35000fc0 	cbnz	w0, bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>
+    bab4:	fd402ac1 	ldr	d1, [x22, #80]
+    bab8:	92f00200 	mov	x0, #0x7fefffffffffffff    	// #9218868437227405311
+    babc:	9e670000 	fmov	d0, x0
+    bac0:	910142d6 	add	x22, x22, #0x50
+    bac4:	1e60c021 	fabs	d1, d1
+    bac8:	1e602020 	fcmp	d1, d0
+    bacc:	54000ee8 	b.hi	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>  // b.pmore
+    bad0:	fd4006c1 	ldr	d1, [x22, #8]
+    bad4:	1e60c021 	fabs	d1, d1
+    bad8:	1e602020 	fcmp	d1, d0
+    badc:	54000e68 	b.hi	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>  // b.pmore
+    bae0:	fd400ac1 	ldr	d1, [x22, #16]
+    bae4:	1e60c021 	fabs	d1, d1
+    bae8:	1e602020 	fcmp	d1, d0
+    baec:	54000de8 	b.hi	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>  // b.pmore
+    baf0:	1e6b096b 	fmul	d11, d11, d11
+    baf4:	1f4a2d4a 	fmadd	d10, d10, d10, d11
+    baf8:	1f492929 	fmadd	d9, d9, d9, d10
+    bafc:	1f482508 	fmadd	d8, d8, d8, d9
+    bb00:	1e60c101 	fabs	d1, d8
+    bb04:	1e602020 	fcmp	d1, d0
+    bb08:	54000d08 	b.hi	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>  // b.pmore
+    bb0c:	90000040 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    bb10:	fd400800 	ldr	d0, [x0, #16]
+    bb14:	1e602110 	fcmpe	d8, d0
+    bb18:	54000c84 	b.mi	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>  // b.first
+    bb1c:	90000040 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    bb20:	fd400c00 	ldr	d0, [x0, #24]
+    bb24:	1e602110 	fcmpe	d8, d0
+    bb28:	54000c0c 	b.gt	bca8 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x360>
+    bb2c:	f9400260 	ldr	x0, [x19]
+    bb30:	b4001380 	cbz	x0, bda0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x458>
+    bb34:	f8404000 	ldur	x0, [x0, #4]
+    bb38:	f90002a0 	str	x0, [x21]
+    bb3c:	97ffedd9 	bl	72a0 <std::chrono::_V2::steady_clock::now()@plt>
+    bb40:	f9400262 	ldr	x2, [x19]
+    bb44:	f9000aa0 	str	x0, [x21, #16]
+    bb48:	b40012c2 	cbz	x2, bda0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x458>
+    bb4c:	6d460041 	ldp	d1, d0, [x2, #96]
+    bb50:	9101c2b3 	add	x19, x21, #0x70
+    bb54:	6d450843 	ldp	d3, d2, [x2, #80]
+    bb58:	aa1303e1 	mov	x1, x19
+    bb5c:	fd003aa0 	str	d0, [x21, #112]
+    bb60:	910363e0 	add	x0, sp, #0xd8
+    bb64:	fd403840 	ldr	d0, [x2, #112]
+    bb68:	6d060be3 	stp	d3, d2, [sp, #96]
+    bb6c:	fd003ea0 	str	d0, [x21, #120]
+    bb70:	fd403c40 	ldr	d0, [x2, #120]
+    bb74:	fd003be1 	str	d1, [sp, #112]
+    bb78:	fd0042a0 	str	d0, [x21, #128]
+    bb7c:	fd404040 	ldr	d0, [x2, #128]
+    bb80:	fd0046a0 	str	d0, [x21, #136]
+    bb84:	97fff66b 	bl	9530 <tf::Matrix3x3::setRotation(tf::Quaternion const&)>
+    bb88:	6d4d9fe2 	ldp	d2, d7, [sp, #216]
+    bb8c:	aa1303e1 	mov	x1, x19
+    bb90:	6d4f9be1 	ldp	d1, d6, [sp, #248]
+    bb94:	9104e3e0 	add	x0, sp, #0x138
+    bb98:	6d4d12a5 	ldp	d5, d4, [x21, #208]
+    bb9c:	6d5203e3 	ldp	d3, d0, [sp, #288]
+    bba0:	6d0907e2 	stp	d2, d1, [sp, #144]
+    bba4:	fd4066a2 	ldr	d2, [x21, #200]
+    bba8:	3dc027e1 	ldr	q1, [sp, #144]
+    bbac:	fd006be0 	str	d0, [sp, #208]
+    bbb0:	1e640800 	fmul	d0, d0, d4
+    bbb4:	6d0a9be7 	stp	d7, d6, [sp, #168]
+    bbb8:	1f450060 	fmadd	d0, d3, d5, d0
+    bbbc:	4fc29021 	fmul	v1.2d, v1.2d, v2.d[0]
+    bbc0:	fd005fe3 	str	d3, [sp, #184]
+    bbc4:	3cca83e8 	ldur	q8, [sp, #168]
+    bbc8:	fd4077e7 	ldr	d7, [sp, #232]
+    bbcc:	fd4087e6 	ldr	d6, [sp, #264]
+    bbd0:	4fc51101 	fmla	v1.2d, v8.2d, v5.d[0]
+    bbd4:	fd408fe3 	ldr	d3, [sp, #280]
+    bbd8:	6d0c1be7 	stp	d7, d6, [sp, #192]
+    bbdc:	1f420060 	fmadd	d0, d3, d2, d0
+    bbe0:	3dc033e5 	ldr	q5, [sp, #192]
+    bbe4:	fd0053e3 	str	d3, [sp, #160]
+    bbe8:	3dc01be3 	ldr	q3, [sp, #96]
+    bbec:	4fc410a1 	fmla	v1.2d, v5.2d, v4.d[0]
+    bbf0:	fd403be2 	ldr	d2, [sp, #112]
+    bbf4:	1e603840 	fsub	d0, d2, d0
+    bbf8:	4ee1d461 	fsub	v1.2d, v3.2d, v1.2d
+    bbfc:	fd0047e0 	str	d0, [sp, #136]
+    bc00:	3c8783e1 	stur	q1, [sp, #120]
+    bc04:	3c8582a1 	stur	q1, [x21, #88]
+    bc08:	fd0036a0 	str	d0, [x21, #104]
+    bc0c:	97fff649 	bl	9530 <tf::Matrix3x3::setRotation(tf::Quaternion const&)>
+    bc10:	fd40bfe0 	ldr	d0, [sp, #376]
+    bc14:	1e6e1001 	fmov	d1, #1.000000000000000000e+00
+    bc18:	1e60c002 	fabs	d2, d0
+    bc1c:	1e612050 	fcmpe	d2, d1
+    bc20:	54000c8b 	b.lt	bdb0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x468>  // b.tstop
+    bc24:	1e602018 	fcmpe	d0, #0.0
+    bc28:	6d5407e0 	ldp	d0, d1, [sp, #320]
+    bc2c:	540010a4 	b.mi	be40 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x4f8>  // b.first
+    bc30:	90000040 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    bc34:	1e614021 	fneg	d1, d1
+    bc38:	1e614000 	fneg	d0, d0
+    bc3c:	2f00e40a 	movi	d10, #0x0
+    bc40:	fd401409 	ldr	d9, [x0, #40]
+    bc44:	97ffedbf 	bl	7340 <atan2@plt>
+    bc48:	1e604008 	fmov	d8, d0
+    bc4c:	394242a0 	ldrb	w0, [x21, #144]
+    bc50:	35000260 	cbnz	w0, bc9c <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x354>
+    bc54:	3cc582a2 	ldur	q2, [x21, #88]
+    bc58:	3cc982a5 	ldur	q5, [x21, #152]
+    bc5c:	6d4a92a1 	ldp	d1, d4, [x21, #168]
+    bc60:	6d4b82a3 	ldp	d3, d0, [x21, #184]
+    bc64:	fd4036a6 	ldr	d6, [x21, #104]
+    bc68:	1e682888 	fadd	d8, d4, d8
+    bc6c:	4e65d442 	fadd	v2.2d, v2.2d, v5.2d
+    bc70:	b94096a0 	ldr	w0, [x21, #148]
+    bc74:	1e692869 	fadd	d9, d3, d9
+    bc78:	1e6a2800 	fadd	d0, d0, d10
+    bc7c:	1e662821 	fadd	d1, d1, d6
+    bc80:	11000400 	add	w0, w0, #0x1
+    bc84:	b90096a0 	str	w0, [x21, #148]
+    bc88:	71018c1f 	cmp	w0, #0x63
+    bc8c:	3c8982a2 	stur	q2, [x21, #152]
+    bc90:	6d0aa2a1 	stp	d1, d8, [x21, #168]
+    bc94:	6d0b82a9 	stp	d9, d0, [x21, #184]
+    bc98:	54000e4c 	b.gt	be60 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x518>
+    bc9c:	6d4327e8 	ldp	d8, d9, [sp, #48]
+    bca0:	6d442fea 	ldp	d10, d11, [sp, #64]
+    bca4:	17ffff53 	b	b9f0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0xa8>
+    bca8:	6d4327e8 	ldp	d8, d9, [sp, #48]
+    bcac:	6d442fea 	ldp	d10, d11, [sp, #64]
+    bcb0:	17ffff3f 	b	b9ac <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x64>
+    bcb4:	9104e3f6 	add	x22, sp, #0x138
+    bcb8:	52800003 	mov	w3, #0x0                   	// #0
+    bcbc:	910042c4 	add	x4, x22, #0x10
+    bcc0:	aa1603e0 	mov	x0, x22
+    bcc4:	d0000021 	adrp	x1, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    bcc8:	d0000022 	adrp	x2, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    bccc:	912ac021 	add	x1, x1, #0xab0
+    bcd0:	912b0c42 	add	x2, x2, #0xac3
+    bcd4:	f9009fe4 	str	x4, [sp, #312]
+    bcd8:	97fffe98 	bl	b738 <void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)>
+    bcdc:	aa1503e0 	mov	x0, x21
+    bce0:	aa1603e1 	mov	x1, x22
+    bce4:	52800042 	mov	w2, #0x2                   	// #2
+    bce8:	97ffed36 	bl	71c0 <ros::console::initializeLogLocation(ros::console::LogLocation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ros::console::levels::Level)@plt>
+    bcec:	f9409fe0 	ldr	x0, [sp, #312]
+    bcf0:	910042d6 	add	x22, x22, #0x10
+    bcf4:	eb16001f 	cmp	x0, x22
+    bcf8:	54ffe6a0 	b.eq	b9cc <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x84>  // b.none
+    bcfc:	97ffecc1 	bl	7000 <operator delete(void*)@plt>
+    bd00:	17ffff33 	b	b9cc <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x84>
+    bd04:	52800041 	mov	w1, #0x2                   	// #2
+    bd08:	aa1503e0 	mov	x0, x21
+    bd0c:	97ffeda1 	bl	7390 <ros::console::setLogLocationLevel(ros::console::LogLocation*, ros::console::levels::Level)@plt>
+    bd10:	aa1503e0 	mov	x0, x21
+    bd14:	97ffed3f 	bl	7210 <ros::console::checkLogLocationEnabled(ros::console::LogLocation*)@plt>
+    bd18:	17ffff31 	b	b9dc <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x94>
+    bd1c:	97ffeccd 	bl	7050 <ros::console::initialize()@plt>
+    bd20:	17ffff27 	b	b9bc <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x74>
+    bd24:	1e630021 	ucvtf	d1, w1
+    bd28:	90000041 	adrp	x1, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    bd2c:	1e630000 	ucvtf	d0, w0
+    bd30:	1e601002 	fmov	d2, #2.000000000000000000e+00
+    bd34:	fd400424 	ldr	d4, [x1, #8]
+    bd38:	f00000c1 	adrp	x1, 26000 <__data_start>
+    bd3c:	fd407423 	ldr	d3, [x1, #232]
+    bd40:	1f440020 	fmadd	d0, d1, d4, d0
+    bd44:	1e622861 	fadd	d1, d3, d2
+    bd48:	1e602030 	fcmpe	d1, d0
+    bd4c:	54000069 	b.ls	bd58 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x410>  // b.plast
+    bd50:	1e602070 	fcmpe	d3, d0
+    bd54:	54ffe4ed 	b.le	b9f0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0xa8>
+    bd58:	9102c273 	add	x19, x19, #0xb0
+    bd5c:	fd007420 	str	d0, [x1, #232]
+    bd60:	d0000026 	adrp	x6, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    bd64:	d0000025 	adrp	x5, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    bd68:	912b20c6 	add	x6, x6, #0xac8
+    bd6c:	912c60a5 	add	x5, x5, #0xb18
+    bd70:	b9400662 	ldr	w2, [x19, #4]
+    bd74:	d0000023 	adrp	x3, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    bd78:	f9400661 	ldr	x1, [x19, #8]
+    bd7c:	912d4063 	add	x3, x3, #0xb50
+    bd80:	52800824 	mov	w4, #0x41                  	// #65
+    bd84:	d2800000 	mov	x0, #0x0                   	// #0
+    bd88:	97ffec42 	bl	6e90 <ros::console::print(ros::console::FilterBase*, void*, ros::console::levels::Level, char const*, int, char const*, char const*, ...)@plt>
+    bd8c:	17ffff19 	b	b9f0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0xa8>
+    bd90:	aa1603e0 	mov	x0, x22
+    bd94:	17ffff3c 	b	ba84 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x13c>
+    bd98:	6d0327e8 	stp	d8, d9, [sp, #48]
+    bd9c:	6d042fea 	stp	d10, d11, [sp, #64]
+    bda0:	97ffeed4 	bl	78f0 <boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const>::operator->() const [clone .isra.0] [clone .part.0]>
+    bda4:	6d0327e8 	stp	d8, d9, [sp, #48]
+    bda8:	6d042fea 	stp	d10, d11, [sp, #64]
+    bdac:	97ffed69 	bl	7350 <__stack_chk_fail@plt>
+    bdb0:	1e7e1002 	fmov	d2, #-1.000000000000000000e+00
+    bdb4:	1e622010 	fcmpe	d0, d2
+    bdb8:	54000504 	b.mi	be58 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x510>  // b.first
+    bdbc:	1e612000 	fcmp	d0, d1
+    bdc0:	1e61dc00 	fcsel	d0, d0, d1, le
+    bdc4:	97ffec9b 	bl	7030 <asin@plt>
+    bdc8:	1e60400b 	fmov	d11, d0
+    bdcc:	97ffec85 	bl	6fe0 <cos@plt>
+    bdd0:	1e60400a 	fmov	d10, d0
+    bdd4:	6d5807e2 	ldp	d2, d1, [sp, #384]
+    bdd8:	1e614169 	fneg	d9, d11
+    bddc:	1e601821 	fdiv	d1, d1, d0
+    bde0:	1e601840 	fdiv	d0, d2, d0
+    bde4:	97ffed57 	bl	7340 <atan2@plt>
+    bde8:	1e604008 	fmov	d8, d0
+    bdec:	90000040 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    bdf0:	fd401800 	ldr	d0, [x0, #48]
+    bdf4:	1e602960 	fadd	d0, d11, d0
+    bdf8:	97ffec7a 	bl	6fe0 <cos@plt>
+    bdfc:	1e60400b 	fmov	d11, d0
+    be00:	6d5807e2 	ldp	d2, d1, [sp, #384]
+    be04:	1e601821 	fdiv	d1, d1, d0
+    be08:	1e601840 	fdiv	d0, d2, d0
+    be0c:	97ffed4d 	bl	7340 <atan2@plt>
+    be10:	fd409fe1 	ldr	d1, [sp, #312]
+    be14:	fd40afe0 	ldr	d0, [sp, #344]
+    be18:	1e6a1821 	fdiv	d1, d1, d10
+    be1c:	1e6a1800 	fdiv	d0, d0, d10
+    be20:	97ffed48 	bl	7340 <atan2@plt>
+    be24:	1e60400a 	fmov	d10, d0
+    be28:	fd409fe1 	ldr	d1, [sp, #312]
+    be2c:	fd40afe2 	ldr	d2, [sp, #344]
+    be30:	1e6b1821 	fdiv	d1, d1, d11
+    be34:	1e6b1840 	fdiv	d0, d2, d11
+    be38:	97ffed42 	bl	7340 <atan2@plt>
+    be3c:	17ffff84 	b	bc4c <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x304>
+    be40:	90000040 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    be44:	2f00e40a 	movi	d10, #0x0
+    be48:	fd401009 	ldr	d9, [x0, #32]
+    be4c:	97ffed3d 	bl	7340 <atan2@plt>
+    be50:	1e604008 	fmov	d8, d0
+    be54:	17ffff7e 	b	bc4c <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x304>
+    be58:	1e604040 	fmov	d0, d2
+    be5c:	17ffffda 	b	bdc4 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x47c>
+    be60:	90000040 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    be64:	3dc02ea4 	ldr	q4, [x21, #176]
+    be68:	3dc01405 	ldr	q5, [x0, #80]
+    be6c:	d2e80b20 	mov	x0, #0x4059000000000000    	// #4636737291354636288
+    be70:	9e670003 	fmov	d3, x0
+    be74:	52800020 	mov	w0, #0x1                   	// #1
+    be78:	390242a0 	strb	w0, [x21, #144]
+    be7c:	1e631821 	fdiv	d1, d1, d3
+    be80:	1e631800 	fdiv	d0, d0, d3
+    be84:	6e65fc42 	fdiv	v2.2d, v2.2d, v5.2d
+    be88:	6e65fc83 	fdiv	v3.2d, v4.2d, v5.2d
+    be8c:	fd0056a1 	str	d1, [x21, #168]
+    be90:	fd0062a0 	str	d0, [x21, #192]
+    be94:	3c8982a2 	stur	q2, [x21, #152]
+    be98:	3d802ea3 	str	q3, [x21, #176]
+    be9c:	6d4327e8 	ldp	d8, d9, [sp, #48]
+    bea0:	6d442fea 	ldp	d10, d11, [sp, #64]
+    bea4:	17fffed3 	b	b9f0 <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0xa8>
+    bea8:	f9409fe1 	ldr	x1, [sp, #312]
+    beac:	910042d6 	add	x22, x22, #0x10
+    beb0:	6d0327e8 	stp	d8, d9, [sp, #48]
+    beb4:	aa0003f3 	mov	x19, x0
+    beb8:	eb16003f 	cmp	x1, x22
+    bebc:	6d042fea 	stp	d10, d11, [sp, #64]
+    bec0:	54000060 	b.eq	becc <VisionToMavros::visionCallback(boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&)+0x584>  // b.none
+    bec4:	aa0103e0 	mov	x0, x1
+    bec8:	97ffec4e 	bl	7000 <operator delete(void*)@plt>
+    becc:	aa1303e0 	mov	x0, x19
+    bed0:	97ffec74 	bl	70a0 <_Unwind_Resume@plt>
+    bed4:	d503201f 	nop
+
+000000000000c8a0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)>:
+    c8a0:	a9ac7bfd 	stp	x29, x30, [sp, #-320]!
+    c8a4:	910003fd 	mov	x29, sp
+    c8a8:	a90153f3 	stp	x19, x20, [sp, #16]
+    c8ac:	b00000d4 	adrp	x20, 25000 <__FRAME_END__+0x105a0>
+    c8b0:	aa0003f3 	mov	x19, x0
+    c8b4:	f947fa81 	ldr	x1, [x20, #4080]
+    c8b8:	6d052fea 	stp	d10, d11, [sp, #80]
+    c8bc:	39424000 	ldrb	w0, [x0, #144]
+    c8c0:	f9400022 	ldr	x2, [x1]
+    c8c4:	f9009fe2 	str	x2, [sp, #312]
+    c8c8:	d2800002 	mov	x2, #0x0                   	// #0
+    c8cc:	f9001bf7 	str	x23, [sp, #48]
+    c8d0:	6d0637ec 	stp	d12, d13, [sp, #96]
+    c8d4:	34000740 	cbz	w0, c9bc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x11c>
+    c8d8:	b9400260 	ldr	w0, [x19]
+    c8dc:	34000880 	cbz	w0, c9ec <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x14c>
+    c8e0:	91002261 	add	x1, x19, #0x8
+    c8e4:	aa1303e0 	mov	x0, x19
+    c8e8:	97ffea8e 	bl	7320 <ros::TimeBase<ros::Time, ros::Duration>::operator<=(ros::Time const&) const@plt>
+    c8ec:	72001c1f 	tst	w0, #0xff
+    c8f0:	54000661 	b.ne	c9bc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x11c>  // b.any
+    c8f4:	a9025bf5 	stp	x21, x22, [sp, #32]
+    c8f8:	6d0427e8 	stp	d8, d9, [sp, #64]
+    c8fc:	97ffea41 	bl	7200 <ros::Time::now()@plt>
+    c900:	aa0003e2 	mov	x2, x0
+    c904:	aa1303e1 	mov	x1, x19
+    c908:	910243e0 	add	x0, sp, #0x90
+    c90c:	f9004be2 	str	x2, [sp, #144]
+    c910:	97ffe978 	bl	6ef0 <ros::TimeBase<ros::Time, ros::Duration>::operator-(ros::Time const&) const@plt>
+    c914:	1e620008 	scvtf	d8, w0
+    c918:	f0000021 	adrp	x1, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    c91c:	fd400421 	ldr	d1, [x1, #8]
+    c920:	9360fc01 	asr	x1, x0, #32
+    c924:	1e620020 	scvtf	d0, w1
+    c928:	1f412008 	fmadd	d8, d0, d1, d8
+    c92c:	97ffea5d 	bl	72a0 <std::chrono::_V2::steady_clock::now()@plt>
+    c930:	fd401260 	ldr	d0, [x19, #32]
+    c934:	f9400a61 	ldr	x1, [x19, #16]
+    c938:	1e614000 	fneg	d0, d0
+    c93c:	1e682010 	fcmpe	d0, d8
+    c940:	5400018c 	b.gt	c970 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0xd0>
+    c944:	fd400e61 	ldr	d1, [x19, #24]
+    c948:	1e682030 	fcmpe	d1, d8
+    c94c:	54000124 	b.mi	c970 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0xd0>  // b.first
+    c950:	cb010000 	sub	x0, x0, x1
+    c954:	d2d9aca1 	mov	x1, #0xcd6500000000        	// #225833675390976
+    c958:	f2e839a1 	movk	x1, #0x41cd, lsl #48
+    c95c:	9e670022 	fmov	d2, x1
+    c960:	9e620000 	scvtf	d0, x0
+    c964:	1e621800 	fdiv	d0, d0, d2
+    c968:	1e602030 	fcmpe	d1, d0
+    c96c:	54000b85 	b.pl	cadc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x23c>  // b.nfrst
+    c970:	b00000c0 	adrp	x0, 25000 <__FRAME_END__+0x105a0>
+    c974:	f947fc00 	ldr	x0, [x0, #4088]
+    c978:	39400000 	ldrb	w0, [x0]
+    c97c:	34000780 	cbz	w0, ca6c <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x1cc>
+    c980:	d00000d3 	adrp	x19, 26000 <__data_start>
+    c984:	91028276 	add	x22, x19, #0xa0
+    c988:	39428260 	ldrb	w0, [x19, #160]
+    c98c:	34000740 	cbz	w0, ca74 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x1d4>
+    c990:	91028275 	add	x21, x19, #0xa0
+    c994:	b94006a0 	ldr	w0, [x21, #4]
+    c998:	7100081f 	cmp	w0, #0x2
+    c99c:	54000941 	b.ne	cac4 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x224>  // b.any
+    c9a0:	91028260 	add	x0, x19, #0xa0
+    c9a4:	39400415 	ldrb	w21, [x0, #1]
+    c9a8:	97ffea16 	bl	7200 <ros::Time::now()@plt>
+    c9ac:	d360fc01 	lsr	x1, x0, #32
+    c9b0:	35000255 	cbnz	w21, c9f8 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x158>
+    c9b4:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    c9b8:	6d4427e8 	ldp	d8, d9, [sp, #64]
+    c9bc:	f947fa80 	ldr	x0, [x20, #4080]
+    c9c0:	f9409fe1 	ldr	x1, [sp, #312]
+    c9c4:	f9400002 	ldr	x2, [x0]
+    c9c8:	eb020021 	subs	x1, x1, x2
+    c9cc:	d2800002 	mov	x2, #0x0                   	// #0
+    c9d0:	54002601 	b.ne	ce90 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x5f0>  // b.any
+    c9d4:	a94153f3 	ldp	x19, x20, [sp, #16]
+    c9d8:	f9401bf7 	ldr	x23, [sp, #48]
+    c9dc:	6d452fea 	ldp	d10, d11, [sp, #80]
+    c9e0:	6d4637ec 	ldp	d12, d13, [sp, #96]
+    c9e4:	a8d47bfd 	ldp	x29, x30, [sp], #320
+    c9e8:	d65f03c0 	ret
+    c9ec:	b9400660 	ldr	w0, [x19, #4]
+    c9f0:	34fffe60 	cbz	w0, c9bc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x11c>
+    c9f4:	17ffffbb 	b	c8e0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x40>
+    c9f8:	1e630021 	ucvtf	d1, w1
+    c9fc:	f0000021 	adrp	x1, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    ca00:	1e630000 	ucvtf	d0, w0
+    ca04:	1e601002 	fmov	d2, #2.000000000000000000e+00
+    ca08:	fd400424 	ldr	d4, [x1, #8]
+    ca0c:	d00000c1 	adrp	x1, 26000 <__data_start>
+    ca10:	fd407023 	ldr	d3, [x1, #224]
+    ca14:	1f440020 	fmadd	d0, d1, d4, d0
+    ca18:	1e622861 	fadd	d1, d3, d2
+    ca1c:	1e602030 	fcmpe	d1, d0
+    ca20:	54000069 	b.ls	ca2c <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x18c>  // b.plast
+    ca24:	1e602070 	fcmpe	d3, d0
+    ca28:	54fffc6d 	b.le	c9b4 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x114>
+    ca2c:	91028273 	add	x19, x19, #0xa0
+    ca30:	fd007020 	str	d0, [x1, #224]
+    ca34:	b0000026 	adrp	x6, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ca38:	b0000025 	adrp	x5, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ca3c:	913540c6 	add	x6, x6, #0xd50
+    ca40:	913640a5 	add	x5, x5, #0xd90
+    ca44:	b9400662 	ldr	w2, [x19, #4]
+    ca48:	b0000023 	adrp	x3, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ca4c:	f9400661 	ldr	x1, [x19, #8]
+    ca50:	912d4063 	add	x3, x3, #0xb50
+    ca54:	52800f64 	mov	w4, #0x7b                  	// #123
+    ca58:	d2800000 	mov	x0, #0x0                   	// #0
+    ca5c:	97ffe90d 	bl	6e90 <ros::console::print(ros::console::FilterBase*, void*, ros::console::levels::Level, char const*, int, char const*, char const*, ...)@plt>
+    ca60:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    ca64:	6d4427e8 	ldp	d8, d9, [sp, #64]
+    ca68:	17ffffd5 	b	c9bc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x11c>
+    ca6c:	97ffe979 	bl	7050 <ros::console::initialize()@plt>
+    ca70:	17ffffc4 	b	c980 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0xe0>
+    ca74:	910343f5 	add	x21, sp, #0xd0
+    ca78:	52800003 	mov	w3, #0x0                   	// #0
+    ca7c:	910042a4 	add	x4, x21, #0x10
+    ca80:	aa1503e0 	mov	x0, x21
+    ca84:	b0000021 	adrp	x1, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ca88:	b0000022 	adrp	x2, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ca8c:	912ac021 	add	x1, x1, #0xab0
+    ca90:	912b0c42 	add	x2, x2, #0xac3
+    ca94:	f9006be4 	str	x4, [sp, #208]
+    ca98:	97fffb28 	bl	b738 <void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)>
+    ca9c:	aa1603e0 	mov	x0, x22
+    caa0:	aa1503e1 	mov	x1, x21
+    caa4:	52800042 	mov	w2, #0x2                   	// #2
+    caa8:	97ffe9c6 	bl	71c0 <ros::console::initializeLogLocation(ros::console::LogLocation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ros::console::levels::Level)@plt>
+    caac:	f9406be0 	ldr	x0, [sp, #208]
+    cab0:	910042b5 	add	x21, x21, #0x10
+    cab4:	eb15001f 	cmp	x0, x21
+    cab8:	54fff6c0 	b.eq	c990 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0xf0>  // b.none
+    cabc:	97ffe951 	bl	7000 <operator delete(void*)@plt>
+    cac0:	17ffffb4 	b	c990 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0xf0>
+    cac4:	52800041 	mov	w1, #0x2                   	// #2
+    cac8:	aa1503e0 	mov	x0, x21
+    cacc:	97ffea31 	bl	7390 <ros::console::setLogLocationLevel(ros::console::LogLocation*, ros::console::levels::Level)@plt>
+    cad0:	aa1503e0 	mov	x0, x21
+    cad4:	97ffe9cf 	bl	7210 <ros::console::checkLogLocationEnabled(ros::console::LogLocation*)@plt>
+    cad8:	17ffffb2 	b	c9a0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x100>
+    cadc:	910343f5 	add	x21, sp, #0xd0
+    cae0:	b0000023 	adrp	x3, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    cae4:	f9400266 	ldr	x6, [x19]
+    cae8:	910082a5 	add	x5, x21, #0x20
+    caec:	910042a0 	add	x0, x21, #0x10
+    caf0:	91374063 	add	x3, x3, #0xdd0
+    caf4:	d2800064 	mov	x4, #0x3                   	// #3
+    caf8:	d2800002 	mov	x2, #0x0                   	// #0
+    cafc:	d2800001 	mov	x1, #0x0                   	// #0
+    cb00:	b900d3ff 	str	wzr, [sp, #208]
+    cb04:	f80d43e6 	stur	x6, [sp, #212]
+    cb08:	a90e7fe5 	stp	x5, xzr, [sp, #224]
+    cb0c:	3903c3ff 	strb	wzr, [sp, #240]
+    cb10:	a9107fff 	stp	xzr, xzr, [sp, #256]
+    cb14:	a9117fff 	stp	xzr, xzr, [sp, #272]
+    cb18:	a9127fff 	stp	xzr, xzr, [sp, #288]
+    cb1c:	f9009bff 	str	xzr, [sp, #304]
+    cb20:	97ffe92c 	bl	6fd0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long)@plt>
+    cb24:	6d479268 	ldp	d8, d4, [x19, #120]
+    cb28:	1e601002 	fmov	d2, #2.000000000000000000e+00
+    cb2c:	6d468665 	ldp	d5, d1, [x19, #104]
+    cb30:	1e6e100b 	fmov	d11, #1.000000000000000000e+00
+    cb34:	1e680900 	fmul	d0, d8, d8
+    cb38:	fd404663 	ldr	d3, [x19, #136]
+    cb3c:	3cc58266 	ldur	q6, [x19, #88]
+    cb40:	1f410020 	fmadd	d0, d1, d1, d0
+    cb44:	3cc98267 	ldur	q7, [x19, #152]
+    cb48:	fd405669 	ldr	d9, [x19, #168]
+    cb4c:	1f440080 	fmadd	d0, d4, d4, d0
+    cb50:	4ee7d4c6 	fsub	v6.2d, v6.2d, v7.2d
+    cb54:	1e6938a5 	fsub	d5, d5, d9
+    cb58:	1f430060 	fmadd	d0, d3, d3, d0
+    cb5c:	3c8983e6 	stur	q6, [sp, #152]
+    cb60:	fd0057e5 	str	d5, [sp, #168]
+    cb64:	fd008be5 	str	d5, [sp, #272]
+    cb68:	6d4997e6 	ldp	d6, d5, [sp, #152]
+    cb6c:	1e601842 	fdiv	d2, d2, d0
+    cb70:	6d1017e6 	stp	d6, d5, [sp, #256]
+    cb74:	1e620906 	fmul	d6, d8, d2
+    cb78:	1e620885 	fmul	d5, d4, d2
+    cb7c:	1e660867 	fmul	d7, d3, d6
+    cb80:	1e65082a 	fmul	d10, d1, d5
+    cb84:	1e65086d 	fmul	d13, d3, d5
+    cb88:	1e660829 	fmul	d9, d1, d6
+    cb8c:	1e673940 	fsub	d0, d10, d7
+    cb90:	1e60c00c 	fabs	d12, d0
+    cb94:	1e6b2190 	fcmpe	d12, d11
+    cb98:	540009eb 	b.lt	ccd4 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x434>  // b.tstop
+    cb9c:	1e602018 	fcmpe	d0, #0.0
+    cba0:	1e6a28e1 	fadd	d1, d7, d10
+    cba4:	1e6d3920 	fsub	d0, d9, d13
+    cba8:	54000ec4 	b.mi	cd80 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x4e0>  // b.first
+    cbac:	f0000020 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    cbb0:	1e614021 	fneg	d1, d1
+    cbb4:	1e614000 	fneg	d0, d0
+    cbb8:	2f00e408 	movi	d8, #0x0
+    cbbc:	fd40140c 	ldr	d12, [x0, #40]
+    cbc0:	97ffe9e0 	bl	7340 <atan2@plt>
+    cbc4:	1e60400b 	fmov	d11, d0
+    cbc8:	fd406260 	ldr	d0, [x19, #192]
+    cbcc:	1e6c100d 	fmov	d13, #5.000000000000000000e-01
+    cbd0:	910223f6 	add	x22, sp, #0x88
+    cbd4:	910203f7 	add	x23, sp, #0x80
+    cbd8:	aa1603e0 	mov	x0, x22
+    cbdc:	aa1703e1 	mov	x1, x23
+    cbe0:	1e603900 	fsub	d0, d8, d0
+    cbe4:	1e6d0800 	fmul	d0, d0, d13
+    cbe8:	97ffe992 	bl	7230 <sincos@plt>
+    cbec:	fd405e60 	ldr	d0, [x19, #184]
+    cbf0:	aa1703e1 	mov	x1, x23
+    cbf4:	aa1603e0 	mov	x0, x22
+    cbf8:	1e603980 	fsub	d0, d12, d0
+    cbfc:	6d4833ea 	ldp	d10, d12, [sp, #128]
+    cc00:	1e6d0800 	fmul	d0, d0, d13
+    cc04:	97ffe98b 	bl	7230 <sincos@plt>
+    cc08:	fd405a60 	ldr	d0, [x19, #176]
+    cc0c:	aa1703e1 	mov	x1, x23
+    cc10:	6d4823e9 	ldp	d9, d8, [sp, #128]
+    cc14:	aa1603e0 	mov	x0, x22
+    cc18:	1e603960 	fsub	d0, d11, d0
+    cc1c:	1e6d0800 	fmul	d0, d0, d13
+    cc20:	97ffe984 	bl	7230 <sincos@plt>
+    cc24:	6d480be0 	ldp	d0, d2, [sp, #128]
+    cc28:	aa1503e1 	mov	x1, x21
+    cc2c:	9100e260 	add	x0, x19, #0x38
+    cc30:	1e600901 	fmul	d1, d8, d0
+    cc34:	1e600920 	fmul	d0, d9, d0
+    cc38:	1e620908 	fmul	d8, d8, d2
+    cc3c:	1e620929 	fmul	d9, d9, d2
+    cc40:	1e610983 	fmul	d3, d12, d1
+    cc44:	1e69098b 	fmul	d11, d12, d9
+    cc48:	1e680942 	fmul	d2, d10, d8
+    cc4c:	1e680988 	fmul	d8, d12, d8
+    cc50:	1f412d4b 	fmadd	d11, d10, d1, d11
+    cc54:	1f698d49 	fnmsub	d9, d10, d9, d3
+    cc58:	1f60898c 	fnmsub	d12, d12, d0, d2
+    cc5c:	1f402148 	fmadd	d8, d10, d0, d8
+    cc60:	6d11afe9 	stp	d9, d11, [sp, #280]
+    cc64:	6d12a3ec 	stp	d12, d8, [sp, #296]
+    cc68:	97fffc9c 	bl	bed8 <void ros::Publisher::publish<geometry_msgs::PoseStamped_<std::allocator<void> > >(geometry_msgs::PoseStamped_<std::allocator<void> > const&) const>
+    cc6c:	b00000c0 	adrp	x0, 25000 <__FRAME_END__+0x105a0>
+    cc70:	f9400261 	ldr	x1, [x19]
+    cc74:	f9000661 	str	x1, [x19, #8]
+    cc78:	f947fc00 	ldr	x0, [x0, #4088]
+    cc7c:	39400000 	ldrb	w0, [x0]
+    cc80:	34000900 	cbz	w0, cda0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x500>
+    cc84:	d00000d3 	adrp	x19, 26000 <__data_start>
+    cc88:	39424260 	ldrb	w0, [x19, #144]
+    cc8c:	34000980 	cbz	w0, cdbc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x51c>
+    cc90:	91024260 	add	x0, x19, #0x90
+    cc94:	b9400401 	ldr	w1, [x0, #4]
+    cc98:	7100043f 	cmp	w1, #0x1
+    cc9c:	54000861 	b.ne	cda8 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x508>  // b.any
+    cca0:	91024260 	add	x0, x19, #0x90
+    cca4:	39400416 	ldrb	w22, [x0, #1]
+    cca8:	97ffe956 	bl	7200 <ros::Time::now()@plt>
+    ccac:	d360fc01 	lsr	x1, x0, #32
+    ccb0:	35000af6 	cbnz	w22, ce0c <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x56c>
+    ccb4:	f94073e0 	ldr	x0, [sp, #224]
+    ccb8:	910082b5 	add	x21, x21, #0x20
+    ccbc:	eb15001f 	cmp	x0, x21
+    ccc0:	54ffe7a0 	b.eq	c9b4 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x114>  // b.none
+    ccc4:	97ffe8cf 	bl	7000 <operator delete(void*)@plt>
+    ccc8:	a9425bf5 	ldp	x21, x22, [sp, #32]
+    cccc:	6d4427e8 	ldp	d8, d9, [sp, #64]
+    ccd0:	17ffff3b 	b	c9bc <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x11c>
+    ccd4:	1e7e1007 	fmov	d7, #-1.000000000000000000e+00
+    ccd8:	6d073fee 	stp	d14, d15, [sp, #112]
+    ccdc:	1e672010 	fcmpe	d0, d7
+    cce0:	540005c4 	b.mi	cd98 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x4f8>  // b.first
+    cce4:	1e6b2000 	fcmp	d0, d11
+    cce8:	1e6bdc00 	fcsel	d0, d0, d11, le
+    ccec:	1e620822 	fmul	d2, d1, d2
+    ccf0:	1e65088a 	fmul	d10, d4, d5
+    ccf4:	1f46290a 	fmadd	d10, d8, d6, d10
+    ccf8:	1e6e100e 	fmov	d14, #1.000000000000000000e+00
+    ccfc:	1e6929a9 	fadd	d9, d13, d9
+    cd00:	1e620821 	fmul	d1, d1, d2
+    cd04:	1e620862 	fmul	d2, d3, d2
+    cd08:	1f460501 	fmadd	d1, d8, d6, d1
+    cd0c:	1f450908 	fmadd	d8, d8, d5, d2
+    cd10:	1e6a39ca 	fsub	d10, d14, d10
+    cd14:	1e6139ce 	fsub	d14, d14, d1
+    cd18:	97ffe8c6 	bl	7030 <asin@plt>
+    cd1c:	1e60400d 	fmov	d13, d0
+    cd20:	97ffe8b0 	bl	6fe0 <cos@plt>
+    cd24:	1e60400f 	fmov	d15, d0
+    cd28:	1e6019c1 	fdiv	d1, d14, d0
+    cd2c:	1e6141ac 	fneg	d12, d13
+    cd30:	1e601900 	fdiv	d0, d8, d0
+    cd34:	97ffe983 	bl	7340 <atan2@plt>
+    cd38:	1e60400b 	fmov	d11, d0
+    cd3c:	f0000020 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    cd40:	fd401800 	ldr	d0, [x0, #48]
+    cd44:	1e6029a0 	fadd	d0, d13, d0
+    cd48:	97ffe8a6 	bl	6fe0 <cos@plt>
+    cd4c:	1e60400d 	fmov	d13, d0
+    cd50:	1e6019c1 	fdiv	d1, d14, d0
+    cd54:	1e601900 	fdiv	d0, d8, d0
+    cd58:	97ffe97a 	bl	7340 <atan2@plt>
+    cd5c:	1e6f1941 	fdiv	d1, d10, d15
+    cd60:	1e6f1920 	fdiv	d0, d9, d15
+    cd64:	97ffe977 	bl	7340 <atan2@plt>
+    cd68:	1e604008 	fmov	d8, d0
+    cd6c:	1e6d1941 	fdiv	d1, d10, d13
+    cd70:	1e6d1920 	fdiv	d0, d9, d13
+    cd74:	97ffe973 	bl	7340 <atan2@plt>
+    cd78:	6d473fee 	ldp	d14, d15, [sp, #112]
+    cd7c:	17ffff93 	b	cbc8 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x328>
+    cd80:	f0000020 	adrp	x0, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    cd84:	2f00e408 	movi	d8, #0x0
+    cd88:	fd40100c 	ldr	d12, [x0, #32]
+    cd8c:	97ffe96d 	bl	7340 <atan2@plt>
+    cd90:	1e60400b 	fmov	d11, d0
+    cd94:	17ffff8d 	b	cbc8 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x328>
+    cd98:	1e6040e0 	fmov	d0, d7
+    cd9c:	17ffffd4 	b	ccec <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x44c>
+    cda0:	97ffe8ac 	bl	7050 <ros::console::initialize()@plt>
+    cda4:	17ffffb8 	b	cc84 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x3e4>
+    cda8:	52800021 	mov	w1, #0x1                   	// #1
+    cdac:	97ffe979 	bl	7390 <ros::console::setLogLocationLevel(ros::console::LogLocation*, ros::console::levels::Level)@plt>
+    cdb0:	91024260 	add	x0, x19, #0x90
+    cdb4:	97ffe917 	bl	7210 <ros::console::checkLogLocationEnabled(ros::console::LogLocation*)@plt>
+    cdb8:	17ffffba 	b	cca0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x400>
+    cdbc:	9102c3f6 	add	x22, sp, #0xb0
+    cdc0:	b0000021 	adrp	x1, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    cdc4:	910042c4 	add	x4, x22, #0x10
+    cdc8:	b0000022 	adrp	x2, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    cdcc:	aa1603e0 	mov	x0, x22
+    cdd0:	912ac021 	add	x1, x1, #0xab0
+    cdd4:	912b0c42 	add	x2, x2, #0xac3
+    cdd8:	52800003 	mov	w3, #0x0                   	// #0
+    cddc:	f9005be4 	str	x4, [sp, #176]
+    cde0:	97fffa56 	bl	b738 <void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)>
+    cde4:	aa1603e1 	mov	x1, x22
+    cde8:	91024260 	add	x0, x19, #0x90
+    cdec:	52800022 	mov	w2, #0x1                   	// #1
+    cdf0:	97ffe8f4 	bl	71c0 <ros::console::initializeLogLocation(ros::console::LogLocation*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ros::console::levels::Level)@plt>
+    cdf4:	f9405be0 	ldr	x0, [sp, #176]
+    cdf8:	910042d6 	add	x22, x22, #0x10
+    cdfc:	eb16001f 	cmp	x0, x22
+    ce00:	54fff480 	b.eq	cc90 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x3f0>  // b.none
+    ce04:	97ffe87f 	bl	7000 <operator delete(void*)@plt>
+    ce08:	17ffffa2 	b	cc90 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x3f0>
+    ce0c:	1e630020 	ucvtf	d0, w1
+    ce10:	f0000021 	adrp	x1, 13000 <boost::system::detail::is_generic_value(int)::gen+0x138>
+    ce14:	1e630007 	ucvtf	d7, w0
+    ce18:	d00000c3 	adrp	x3, 26000 <__data_start>
+    ce1c:	fd400423 	ldr	d3, [x1, #8]
+    ce20:	1e601001 	fmov	d1, #2.000000000000000000e+00
+    ce24:	fd406c62 	ldr	d2, [x3, #216]
+    ce28:	1f431c07 	fmadd	d7, d0, d3, d7
+    ce2c:	1e612840 	fadd	d0, d2, d1
+    ce30:	1e672010 	fcmpe	d0, d7
+    ce34:	54000069 	b.ls	ce40 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x5a0>  // b.plast
+    ce38:	1e672050 	fcmpe	d2, d7
+    ce3c:	54fff3cd 	b.le	ccb4 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x414>
+    ce40:	91024273 	add	x19, x19, #0x90
+    ce44:	1e604106 	fmov	d6, d8
+    ce48:	1e604185 	fmov	d5, d12
+    ce4c:	1e604164 	fmov	d4, d11
+    ce50:	1e604123 	fmov	d3, d9
+    ce54:	fd4057e2 	ldr	d2, [sp, #168]
+    ce58:	b9400662 	ldr	w2, [x19, #4]
+    ce5c:	b0000026 	adrp	x6, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ce60:	f9400661 	ldr	x1, [x19, #8]
+    ce64:	b0000025 	adrp	x5, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ce68:	6d4987e0 	ldp	d0, d1, [sp, #152]
+    ce6c:	fd006c67 	str	d7, [x3, #216]
+    ce70:	913760c6 	add	x6, x6, #0xdd8
+    ce74:	b0000023 	adrp	x3, 11000 <ros::SubscriptionCallbackHelperT<boost::shared_ptr<nav_msgs::Odometry_<std::allocator<void> > const> const&, void>::call(ros::SubscriptionCallbackHelperCallParams&)+0x188>
+    ce78:	913640a5 	add	x5, x5, #0xd90
+    ce7c:	912d4063 	add	x3, x3, #0xb50
+    ce80:	528013a4 	mov	w4, #0x9d                  	// #157
+    ce84:	d2800000 	mov	x0, #0x0                   	// #0
+    ce88:	97ffe802 	bl	6e90 <ros::console::print(ros::console::FilterBase*, void*, ros::console::levels::Level, char const*, int, char const*, char const*, ...)@plt>
+    ce8c:	17ffff8a 	b	ccb4 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x414>
+    ce90:	a9025bf5 	stp	x21, x22, [sp, #32]
+    ce94:	6d0427e8 	stp	d8, d9, [sp, #64]
+    ce98:	6d073fee 	stp	d14, d15, [sp, #112]
+    ce9c:	97ffe92d 	bl	7350 <__stack_chk_fail@plt>
+    cea0:	f9406be1 	ldr	x1, [sp, #208]
+    cea4:	910042b5 	add	x21, x21, #0x10
+    cea8:	6d073fee 	stp	d14, d15, [sp, #112]
+    ceac:	aa0003f3 	mov	x19, x0
+    ceb0:	eb15003f 	cmp	x1, x21
+    ceb4:	54000160 	b.eq	cee0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x640>  // b.none
+    ceb8:	aa0103e0 	mov	x0, x1
+    cebc:	97ffe851 	bl	7000 <operator delete(void*)@plt>
+    cec0:	14000008 	b	cee0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x640>
+    cec4:	aa0003f3 	mov	x19, x0
+    cec8:	f94073e0 	ldr	x0, [sp, #224]
+    cecc:	910082b5 	add	x21, x21, #0x20
+    ced0:	6d073fee 	stp	d14, d15, [sp, #112]
+    ced4:	eb15001f 	cmp	x0, x21
+    ced8:	54000040 	b.eq	cee0 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x640>  // b.none
+    cedc:	97ffe849 	bl	7000 <operator delete(void*)@plt>
+    cee0:	aa1303e0 	mov	x0, x19
+    cee4:	97ffe86f 	bl	70a0 <_Unwind_Resume@plt>
+    cee8:	f9405be1 	ldr	x1, [sp, #176]
+    ceec:	910042d6 	add	x22, x22, #0x10
+    cef0:	aa0003f3 	mov	x19, x0
+    cef4:	eb16003f 	cmp	x1, x22
+    cef8:	54fffe80 	b.eq	cec8 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x628>  // b.none
+    cefc:	aa0103e0 	mov	x0, x1
+    cf00:	97ffe840 	bl	7000 <operator delete(void*)@plt>
+    cf04:	17fffff1 	b	cec8 <VisionToMavros::publishVisionPose(ros::TimerEvent const&)+0x628>
+

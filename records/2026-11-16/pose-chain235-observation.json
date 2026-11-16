@@ -1,0 +1,189 @@
+{
+  "topics": {
+    "odom": {
+      "count": 100,
+      "receipt_hz": 10.044064904569584,
+      "unique_stamps": 100,
+      "stamp_regressions": 0,
+      "frames": {
+        "camera_init": 100
+      },
+      "age_min_max_seconds": [
+        0.021722316,
+        0.096034288
+      ],
+      "first": {
+        "receipt": 15607.590319127,
+        "stamp_ns": 1794827323429735899,
+        "age": 0.082685232,
+        "frame": "camera_init",
+        "position": [
+          -0.035307158723616415,
+          -0.04137986876608395,
+          0.017132843138075317
+        ],
+        "quaternion": [
+          0.024101469290987027,
+          0.012150736794521031,
+          -0.15721575526677195,
+          0.9871953631718513
+        ],
+        "child_frame": "body"
+      },
+      "last": {
+        "receipt": 15617.446886258,
+        "stamp_ns": 1794827333329707146,
+        "age": 0.039272308,
+        "frame": "camera_init",
+        "position": [
+          -0.031540318937501186,
+          -0.03720843874298802,
+          0.009999078146904787
+        ],
+        "quaternion": [
+          0.024548795203675942,
+          0.011965601478711415,
+          -0.15828205941059512,
+          0.987016195765188
+        ],
+        "child_frame": "body"
+      }
+    },
+    "vision": {
+      "count": 100,
+      "receipt_hz": 9.989862481297548,
+      "unique_stamps": 100,
+      "stamp_regressions": 0,
+      "frames": {
+        "map": 100
+      },
+      "age_min_max_seconds": [
+        0.048480749,
+        0.116750955
+      ],
+      "first": {
+        "receipt": 15607.45625418,
+        "stamp_ns": 1794827323329674721,
+        "age": 0.048665523,
+        "frame": "map",
+        "position": [
+          -0.03443676901512804,
+          -0.054264055851937554,
+          0.018081052304234325
+        ],
+        "quaternion": [
+          0.022068703294325327,
+          0.011368778473954459,
+          -0.1580406239067805,
+          0.9871205014617378
+        ]
+      },
+      "last": {
+        "receipt": 15617.366300508,
+        "stamp_ns": 1794827333229835510,
+        "age": 0.058550119,
+        "frame": "map",
+        "position": [
+          -0.024636130228673423,
+          -0.05007488041469659,
+          0.00869906135486269
+        ],
+        "quaternion": [
+          0.023454724417105617,
+          0.011093576484918901,
+          -0.15838728567545377,
+          0.9870361068368537
+        ]
+      }
+    },
+    "local": {
+      "count": 300,
+      "receipt_hz": 29.998902009085754,
+      "unique_stamps": 300,
+      "stamp_regressions": 0,
+      "frames": {
+        "map": 300
+      },
+      "age_min_max_seconds": [
+        0.001407088,
+        0.01577859
+      ],
+      "first": {
+        "receipt": 15607.457236798,
+        "stamp_ns": 1794827323369698112,
+        "age": 0.009621794,
+        "frame": "map",
+        "position": [
+          -0.029554761946201324,
+          -0.0544942207634449,
+          0.012256169691681862
+        ],
+        "quaternion": [
+          0.012917811505236677,
+          -0.0051267479212211645,
+          0.15747976070592415,
+          -0.9874244591081395
+        ]
+      },
+      "last": {
+        "receipt": 15617.424268255,
+        "stamp_ns": 1794827333341734720,
+        "age": 0.004623102,
+        "frame": "map",
+        "position": [
+          -0.034928977489471436,
+          -0.05410696193575859,
+          0.016891974955797195
+        ],
+        "quaternion": [
+          0.012779763124934037,
+          -0.004962920816153541,
+          0.15770823877170168,
+          -0.9873906151887852
+        ]
+      }
+    },
+    "state": {
+      "count": 11,
+      "receipt_hz": 1.110130380488087,
+      "unique_stamps": 11,
+      "stamp_regressions": 0,
+      "frames": {
+        "": 11
+      },
+      "age_min_max_seconds": [
+        0.000450061,
+        0.991466537
+      ],
+      "first": {
+        "receipt": 15607.451230841,
+        "stamp_ns": 1794827322381849274,
+        "age": 0.991466537,
+        "frame": "",
+        "connected": true,
+        "armed": false,
+        "mode": "AUTO.LOITER"
+      },
+      "last": {
+        "receipt": 15616.459181777,
+        "stamp_ns": 1794827332380781459,
+        "age": 0.000481081,
+        "frame": "",
+        "connected": true,
+        "armed": false,
+        "mode": "AUTO.LOITER"
+      }
+    }
+  },
+  "read_only_observation": true,
+  "flight_commands_sent": false,
+  "comparison": {
+    "vision_poses_exactly_matching_observed_odom": 0,
+    "vision_stamps_matching_observed_odom": 99,
+    "pose_error_min_max": [
+      0.00350271752570328,
+      0.01748203939320393
+    ],
+    "limitations": "Short observation can identify repeated/copied samples, but cannot prove ENU/NED axes or frame alignment."
+  }
+}

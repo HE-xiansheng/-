@@ -1,0 +1,49 @@
+Starting >>> plan_env
+Starting >>> traj_utils
+Finished <<< traj_utils [0.85s]
+[Processing: plan_env]
+Finished <<< plan_env [59.8s]
+Starting >>> path_searching
+--- stderr: plan_env
+CMake Warning (dev) at CMakeLists.txt:14 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  CMake variable PCL_ROOT is set to:
+
+    /usr
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+---
+Finished <<< path_searching [13.6s]
+Starting >>> traj_opt
+[Processing: traj_opt]
+Finished <<< traj_opt [42.3s]
+Starting >>> plan_manage
+[Processing: plan_manage]
+Finished <<< plan_manage [39.3s]
+
+Summary: 5 packages finished [2min 35s]
+  1 package had stderr output: plan_env
+[ 50%] Building CXX object CMakeFiles/ego_bench.dir/validate_ego_libraries.cpp.o
+[100%] Linking CXX executable ego_bench
+[100%] Built target ego_bench
+hit: 0.847298
+miss: -0.619039
+min log: -1.99243
+max: 3.4761
+thresh log: 1.38629
+lidar hit: 2.19722
+lidar miss: -0.0400053
+lidar min log: -1.99243
+lidar max: 3.89182
+lidar thresh log: 1.7346
+[47;30m
+[1.79483e+09] Drone 0 Replan 0[0m
+Success=yes
+Time:[42m0.845ms,[0m init:0.365ms, optimize:0.479ms, avg=0.845ms
+des manager
+EGO_RESULT {"passed":true,"checks":{"astar_routes_around_wall":true,"duplicate_stamp_rejected":true,"free_ray_is_free":true,"free_segment_accepted":true,"invalid_snapshot_rejected":true,"manager_produces_trajectory":true,"map_frames":true,"map_output_received":true,"map_source_stamps":true,"obstacle_is_inflated":true,"obstacle_is_occupied":true,"preview_snapshot_roundtrip":true,"segment_through_wall_rejected":true,"trajectory_clear":true,"trajectory_dynamic_limits":true,"trajectory_endpoints":true,"trajectory_finite":true,"truncated_snapshot_rejected":true,"unknown_map_segment_rejected":true,"wrong_frame_rejected":true,"zero_stamp_rejected":true},"map_messages":12,"path_points":20,"flight_commands_sent":false}

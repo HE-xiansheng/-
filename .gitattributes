@@ -1,2 +1,3 @@
 records/**/*.log -whitespace
 patches/*.patch -whitespace
+records/**/*.txt -whitespace

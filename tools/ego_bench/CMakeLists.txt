@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project(ego_bench)
+set(CMAKE_CXX_STANDARD 17)
+find_package(ament_cmake REQUIRED)
+find_package(plan_manage REQUIRED)
+find_package(pcl_conversions REQUIRED)
+add_executable(ego_bench validate_ego_libraries.cpp)
+ament_target_dependencies(ego_bench plan_manage pcl_conversions)

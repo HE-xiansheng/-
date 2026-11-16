@@ -1,0 +1,26 @@
+{
+  "passed": false,
+  "checks": {
+    "astar_routes_around_wall": false,
+    "duplicate_stamp_rejected": true,
+    "free_ray_is_free": true,
+    "invalid_snapshot_rejected": true,
+    "manager_produces_trajectory": true,
+    "map_frames": true,
+    "map_output_received": true,
+    "map_source_stamps": true,
+    "obstacle_is_inflated": true,
+    "obstacle_is_occupied": true,
+    "preview_snapshot_roundtrip": true,
+    "trajectory_clear": true,
+    "trajectory_dynamic_limits": true,
+    "trajectory_endpoints": true,
+    "trajectory_finite": true,
+    "truncated_snapshot_rejected": true,
+    "wrong_frame_rejected": true,
+    "zero_stamp_rejected": true
+  },
+  "map_messages": 12,
+  "path_points": 20,
+  "flight_commands_sent": false
+}

@@ -1,0 +1,41 @@
+body_lidar_x: 0.0
+body_lidar_y: 0.0
+body_lidar_z: 0.0
+publish_rate: 30.0
+vision_pose_topic: /factory_fastlio/odometry
+window_size: 50
+
+--------------------------------------------------------------------------------
+Node [/factory_vision2mavros]
+Publications: 
+ * /mavros/vision_pose/pose [geometry_msgs/PoseStamped]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /factory_fastlio/odometry [nav_msgs/Odometry]
+
+Services: 
+ * /factory_vision2mavros/get_loggers
+ * /factory_vision2mavros/set_logger_level
+
+
+contacting node http://127.0.0.1:41095/ ...
+Pid: 31178
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound (43099 - 127.0.0.1:43776) [11]
+    * transport: TCPROS
+ * topic: /mavros/vision_pose/pose
+    * to: /flight_desk_readonly_monitor_15919_1794813630239
+    * direction: outbound (43099 - 127.0.0.1:43766) [14]
+    * transport: TCPROS
+ * topic: /mavros/vision_pose/pose
+    * to: /mavros
+    * direction: outbound (43099 - 127.0.0.1:43788) [10]
+    * transport: TCPROS
+ * topic: /factory_fastlio/odometry
+    * to: /factory_laserMapping (http://127.0.0.1:33929/)
+    * direction: inbound (39366 - 127.0.0.1:60691) [15]
+    * transport: TCPROS
+

@@ -1,0 +1,10 @@
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage
+	libunistring.so.2 => /lib/aarch64-linux-gnu/libunistring.so.2 (0x0000007f987b0000)
+	libhogweed.so.6 => /lib/aarch64-linux-gnu/libhogweed.so.6 (0x0000007f98750000)
+	libgmp.so.10 => /lib/aarch64-linux-gnu/libgmp.so.10 (0x0000007f986c0000)
+	libbrotlicommon.so.1 => /lib/aarch64-linux-gnu/libbrotlicommon.so.1 (0x0000007f98680000)
+	libp11-kit.so.0 => /lib/aarch64-linux-gnu/libp11-kit.so.0 (0x0000007f98530000)
+	libtasn1.so.6 => /lib/aarch64-linux-gnu/libtasn1.so.6 (0x0000007f98500000)
+	libkeyutils.so.1 => /lib/aarch64-linux-gnu/libkeyutils.so.1 (0x0000007f984e0000)
+	libffi.so.8 => /lib/aarch64-linux-gnu/libffi.so.8 (0x0000007f984c0000)
+Residual isolated test processes: []

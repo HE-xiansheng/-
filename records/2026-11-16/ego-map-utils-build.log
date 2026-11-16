@@ -1,0 +1,202 @@
+Starting >>> plan_env
+Starting >>> traj_utils
+--- stderr: traj_utils
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp: In member function ‘void ego_planner::PlanningVisualization::displayArrowList(rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> > >::SharedPtr&, const std::vector<Eigen::Matrix<double, 3, 1> >&, double, Eigen::Vector4d, int)’:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:314:17: error: no matching function for call to ‘rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> > >::publish(visualization_msgs::msg::MarkerArray&)’
+  314 |     pub->publish(array);
+      |     ~~~~~~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:254:3: note: candidate: ‘template<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::ros_message_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::ros_message_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type> >::type>) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  254 |   publish(std::unique_ptr<T, ROSMessageTypeDeleter> msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:254:3: note:   template argument deduction/substitution failed:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:314:17: note:   ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’ is not derived from ‘std::unique_ptr<T, std::default_delete<visualization_msgs::msg::Marker_<std::allocator<void> > > >’
+  314 |     pub->publish(array);
+      |     ~~~~~~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3: note: candidate: ‘template<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  295 |   publish(const T & msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/11/bits/move.h:57,
+                 from /usr/include/c++/11/bits/stl_pair.h:59,
+                 from /usr/include/c++/11/bits/stl_algobase.h:64,
+                 from /usr/include/c++/11/bits/specfun.h:45,
+                 from /usr/include/c++/11/cmath:1935,
+                 from /usr/include/eigen3/Eigen/src/Core/util/Macros.h:679,
+                 from /usr/include/eigen3/Eigen/Core:19,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /usr/include/eigen3/Eigen/Eigen:1,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:4,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/usr/include/c++/11/type_traits: In substitution of ‘template<bool _Cond, class _Tp> using enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = void]’:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3:   required by substitution of ‘template<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, visualization_msgs::msg::Marker_<std::allocator<void> > >::value), void> rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> > >::publish<T>(const T&) [with T = visualization_msgs::msg::MarkerArray_<std::allocator<void> >]’
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:314:17:   required from here
+/usr/include/c++/11/type_traits:2579:11: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+ 2579 |     using enable_if_t = typename enable_if<_Cond, _Tp>::type;
+      |           ^~~~~~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:325:3: note: candidate: ‘template<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::custom_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::custom_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type> >::type>) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  325 |   publish(std::unique_ptr<T, PublishedTypeDeleter> msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:325:3: note:   template argument deduction/substitution failed:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:314:17: note:   ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’ is not derived from ‘std::unique_ptr<T, std::default_delete<visualization_msgs::msg::Marker_<std::allocator<void> > > >’
+  314 |     pub->publish(array);
+      |     ~~~~~~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:367:3: note: candidate: ‘template<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  367 |   publish(const T & msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:367:3: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:386:3: note: candidate: ‘void rclcpp::Publisher<MessageT, AllocatorT>::publish(const rcl_serialized_message_t&) [with MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>; rcl_serialized_message_t = rcutils_uint8_array_s]’
+  386 |   publish(const rcl_serialized_message_t & serialized_msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:386:44: note:   no known conversion for argument 1 from ‘visualization_msgs::msg::MarkerArray’ {aka ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’} to ‘const rcl_serialized_message_t&’ {aka ‘const rcutils_uint8_array_s&’}
+  386 |   publish(const rcl_serialized_message_t & serialized_msg)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:392:3: note: candidate: ‘void rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  392 |   publish(const SerializedMessage & serialized_msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:392:37: note:   no known conversion for argument 1 from ‘visualization_msgs::msg::MarkerArray’ {aka ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’} to ‘const rclcpp::SerializedMessage&’
+  392 |   publish(const SerializedMessage & serialized_msg)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:406:3: note: candidate: ‘void rclcpp::Publisher<MessageT, AllocatorT>::publish(rclcpp::LoanedMessage<typename rclcpp::TypeAdapter<MessageT>::ros_message_type, AllocatorT>&&) [with MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>; typename rclcpp::TypeAdapter<MessageT>::ros_message_type = visualization_msgs::msg::Marker_<std::allocator<void> >]’
+  406 |   publish(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:406:64: note:   no known conversion for argument 1 from ‘visualization_msgs::msg::MarkerArray’ {aka ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’} to ‘rclcpp::LoanedMessage<visualization_msgs::msg::Marker_<std::allocator<void> >, std::allocator<void> >&&’
+  406 |   publish(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:318:17: error: no matching function for call to ‘rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> > >::publish(visualization_msgs::msg::MarkerArray&)’
+  318 |     pub->publish(array);
+      |     ~~~~~~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:254:3: note: candidate: ‘template<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::ros_message_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::ros_message_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type> >::type>) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  254 |   publish(std::unique_ptr<T, ROSMessageTypeDeleter> msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:254:3: note:   template argument deduction/substitution failed:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:318:17: note:   ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’ is not derived from ‘std::unique_ptr<T, std::default_delete<visualization_msgs::msg::Marker_<std::allocator<void> > > >’
+  318 |     pub->publish(array);
+      |     ~~~~~~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3: note: candidate: ‘template<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  295 |   publish(const T & msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:325:3: note: candidate: ‘template<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::custom_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::custom_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type> >::type>) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  325 |   publish(std::unique_ptr<T, PublishedTypeDeleter> msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:325:3: note:   template argument deduction/substitution failed:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:318:17: note:   ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’ is not derived from ‘std::unique_ptr<T, std::default_delete<visualization_msgs::msg::Marker_<std::allocator<void> > > >’
+  318 |     pub->publish(array);
+      |     ~~~~~~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h:7,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:367:3: note: candidate: ‘template<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with T = T; MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  367 |   publish(const T & msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:367:3: note:   template argument deduction/substitution failed:
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:386:3: note: candidate: ‘void rclcpp::Publisher<MessageT, AllocatorT>::publish(const rcl_serialized_message_t&) [with MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>; rcl_serialized_message_t = rcutils_uint8_array_s]’
+  386 |   publish(const rcl_serialized_message_t & serialized_msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:386:44: note:   no known conversion for argument 1 from ‘visualization_msgs::msg::MarkerArray’ {aka ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’} to ‘const rcl_serialized_message_t&’ {aka ‘const rcutils_uint8_array_s&’}
+  386 |   publish(const rcl_serialized_message_t & serialized_msg)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:392:3: note: candidate: ‘void rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>]’
+  392 |   publish(const SerializedMessage & serialized_msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:392:37: note:   no known conversion for argument 1 from ‘visualization_msgs::msg::MarkerArray’ {aka ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’} to ‘const rclcpp::SerializedMessage&’
+  392 |   publish(const SerializedMessage & serialized_msg)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:406:3: note: candidate: ‘void rclcpp::Publisher<MessageT, AllocatorT>::publish(rclcpp::LoanedMessage<typename rclcpp::TypeAdapter<MessageT>::ros_message_type, AllocatorT>&&) [with MessageT = visualization_msgs::msg::Marker_<std::allocator<void> >; AllocatorT = std::allocator<void>; typename rclcpp::TypeAdapter<MessageT>::ros_message_type = visualization_msgs::msg::Marker_<std::allocator<void> >]’
+  406 |   publish(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)
+      |   ^~~~~~~
+/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:406:64: note:   no known conversion for argument 1 from ‘visualization_msgs::msg::MarkerArray’ {aka ‘visualization_msgs::msg::MarkerArray_<std::allocator<void> >’} to ‘rclcpp::LoanedMessage<visualization_msgs::msg::Marker_<std::allocator<void> >, std::allocator<void> >&&’
+  406 |   publish(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+gmake[2]: *** [CMakeFiles/planning_visualization.dir/build.make:76: CMakeFiles/planning_visualization.dir/src/planning_visualization.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:611: CMakeFiles/planning_visualization.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< traj_utils [12.9s, exited with code 2]
+Aborted  <<< plan_env [32.0s]
+
+Summary: 0 packages finished [32.2s]
+  1 package failed: traj_utils
+  1 package aborted: plan_env
+  2 packages had stderr output: plan_env traj_utils

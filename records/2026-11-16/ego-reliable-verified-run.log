@@ -1,0 +1,29 @@
+Starting >>> plan_env
+Starting >>> traj_utils
+Finished <<< traj_utils [0.79s]
+[Processing: plan_env]
+Finished <<< plan_env [57.6s]
+Starting >>> path_searching
+Finished <<< path_searching [1.14s]
+Starting >>> traj_opt
+Finished <<< traj_opt [1.02s]
+Starting >>> plan_manage
+Finished <<< plan_manage [1.23s]
+
+Summary: 5 packages finished [1min 1s]
+hit: 0.847298
+miss: -0.619039
+min log: -1.99243
+max: 3.4761
+thresh log: 1.38629
+lidar hit: 2.19722
+lidar miss: -0.0400053
+lidar min log: -1.99243
+lidar max: 3.89182
+lidar thresh log: 1.7346
+[47;30m
+[1.79483e+09] Drone 0 Replan 0[0m
+Success=yes
+Time:[42m0.740ms,[0m init:0.281ms, optimize:0.459ms, avg=0.740ms
+des manager
+EGO_RESULT {"passed":true,"checks":{"astar_preserves_grid_endpoints":true,"astar_routes_around_wall":true,"duplicate_stamp_rejected":true,"failed_search_clears_previous_path":true,"free_ray_is_free":true,"free_segment_accepted":true,"invalid_search_rejected":true,"invalid_snapshot_rejected":true,"manager_produces_trajectory":true,"map_frames":true,"map_output_received":true,"map_source_stamps":true,"obstacle_is_inflated":true,"obstacle_is_occupied":true,"preview_snapshot_roundtrip":true,"segment_through_wall_rejected":true,"trajectory_clear":true,"trajectory_dynamic_limits":true,"trajectory_endpoints":true,"trajectory_finite":true,"truncated_snapshot_rejected":true,"unknown_map_segment_rejected":true,"wrong_frame_rejected":true,"zero_stamp_rejected":true},"map_messages":12,"path_points":21,"flight_commands_sent":false}

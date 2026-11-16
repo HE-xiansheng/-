@@ -1,0 +1,12 @@
+Starting >>> plan_env
+Starting >>> traj_utils
+Finished <<< traj_utils [0.86s]
+[Processing: plan_env]
+Finished <<< plan_env [57.3s]
+Starting >>> path_searching
+Finished <<< path_searching [20.6s]
+Starting >>> traj_opt
+[Processing: traj_opt]
+Finished <<< traj_opt [50.4s]
+
+Summary: 4 packages finished [2min 9s]

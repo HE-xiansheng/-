@@ -1,0 +1,44 @@
+[master c33f78b] Port customized EGO map search optimizer and manager libraries to ROS2
+ 33 files changed, 11765 insertions(+), 1 deletion(-)
+ create mode 100644 01_apps/ego_planner/config/planner.yaml
+ create mode 100644 01_apps/ego_planner/workspace/src/path_searching/CMakeLists.txt
+ create mode 100755 01_apps/ego_planner/workspace/src/path_searching/include/path_searching/dyn_a_star.h
+ create mode 100644 01_apps/ego_planner/workspace/src/path_searching/package.xml
+ create mode 100755 01_apps/ego_planner/workspace/src/path_searching/src/dyn_a_star.cpp
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_env/CMakeLists.txt
+ create mode 100755 01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h
+ create mode 100755 01_apps/ego_planner/workspace/src/plan_env/include/plan_env/raycast.h
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_env/package.xml
+ create mode 100755 01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp
+ create mode 100755 01_apps/ego_planner/workspace/src/plan_env/src/raycast.cpp
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_env/src/segment_check.cpp
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_manage/CMakeLists.txt
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_manage/include/plan_manage/candidate_preview_io.h
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_manage/include/plan_manage/planner_manager.h
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_manage/package.xml
+ create mode 100644 01_apps/ego_planner/workspace/src/plan_manage/src/planner_manager.cpp
+ create mode 100644 01_apps/ego_planner/workspace/src/traj_opt/CMakeLists.txt
+ create mode 100644 01_apps/ego_planner/workspace/src/traj_opt/include/optimizer/continuous_voxel_check.hpp
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_opt/include/optimizer/gcopter.hpp
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_opt/include/optimizer/lbfgs.hpp
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_opt/include/optimizer/poly_traj_optimizer.h
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_opt/include/optimizer/poly_traj_utils.hpp
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_opt/include/optimizer/root_finder.hpp
+ create mode 100644 01_apps/ego_planner/workspace/src/traj_opt/package.xml
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_opt/src/poly_traj_optimizer.cpp
+ create mode 100644 01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/diagnostics.hpp
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/plan_container.hpp
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_utils/include/traj_utils/planning_visualization.h
+ create mode 100755 01_apps/ego_planner/workspace/src/traj_utils/src/planning_visualization.cpp
+c33f78bbb305bea7024546b27103aee2d6317f7c
+Removed own temporary directory: /tmp/ego-native-log
+Removed own temporary directory: /tmp/ego-native-build
+Removed own temporary directory: /tmp/ego-bench-src
+Removed own temporary directory: /tmp/ego-bench-build
+Removed own temporary directory: /tmp/ros2-livox-sdk-build
+Removed own temporary directory: /tmp/ros2-vision-build
+Removed own temporary directory: /tmp/ros2-livox-build
+Removed own temporary directory: /tmp/ros2-fastlio-build
+Removed own temporary directory: /tmp/ros2-planner-build
+Removed own temporary directory: /tmp/ros2-rtsp-asan-build
+active

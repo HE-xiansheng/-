@@ -1,0 +1,19 @@
+Consolidate compiler generated dependencies of target ego_bench
+[100%] Built target ego_bench
+hit: 0.847298
+miss: -0.619039
+min log: -1.99243
+max: 3.4761
+thresh log: 1.38629
+lidar hit: 2.19722
+lidar miss: -0.0400053
+lidar min log: -1.99243
+lidar max: 3.89182
+lidar thresh log: 1.7346
+AStar result=0 path: [ 0.1 0.05 0.05] [ 0.2 0.15 0.05] [ 0.3 0.25 0.05] [ 0.4 0.35 0.05] [ 0.5 0.45 0.05] [ 0.6 0.55 0.05] [ 0.7 0.65 0.05] [ 0.8 0.75 0.05] [ 0.9 0.75 0.05] [   1 0.75 0.05] [ 1.1 0.75 0.05] [ 1.2 0.75 0.05] [ 1.3 0.65 0.05] [ 1.4 0.55 0.05] [ 1.5 0.45 0.05] [ 1.6 0.35 0.05] [ 1.7 0.25 0.05] [ 1.8 0.15 0.05] [ 1.9 0.05 0.05] [   2 0.05 0.05]
+[47;30m
+[1.79483e+09] Drone 0 Replan 0[0m
+Success=yes
+Time:[42m0.771ms,[0m init:0.254ms, optimize:0.516ms, avg=0.771ms
+des manager
+EGO_RESULT {"passed":false,"checks":{"astar_routes_around_wall":false,"duplicate_stamp_rejected":true,"free_ray_is_free":true,"invalid_snapshot_rejected":true,"manager_produces_trajectory":true,"map_frames":true,"map_output_received":true,"map_source_stamps":true,"obstacle_is_inflated":true,"obstacle_is_occupied":true,"preview_snapshot_roundtrip":true,"trajectory_clear":true,"trajectory_dynamic_limits":true,"trajectory_endpoints":true,"trajectory_finite":true,"truncated_snapshot_rejected":true,"wrong_frame_rejected":true,"zero_stamp_rejected":true},"map_messages":12,"path_points":20,"flight_commands_sent":false}

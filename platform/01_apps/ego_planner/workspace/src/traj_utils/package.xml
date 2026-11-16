@@ -6,6 +6,9 @@
 <buildtool_depend>ament_cmake</buildtool_depend>
 <build_depend>rosidl_default_generators</build_depend>
 <depend>std_msgs</depend>
+<depend>rclcpp</depend>
+<depend>visualization_msgs</depend>
+<depend>eigen</depend>
 <depend>geometry_msgs</depend>
 <depend>nav_msgs</depend>
 <depend>builtin_interfaces</depend>

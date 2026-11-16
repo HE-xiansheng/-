@@ -21,5 +21,21 @@
   "mediamtx": {
     "version": "1.21.1",
     "source": "192.168.1.235:/home/orangepi/drone_platform/03_tools/gimbal_relay/mediamtx.tar.gz"
+  },
+  "ego_planner": {
+    "source": "192.168.1.235:/home/orangepi/drone_platform/01_apps/ego_planner/src/ego_planner",
+    "source_git_repository": false,
+    "source_manifest": "records/2026-11-16/source235-manifest.json",
+    "native_packages": [
+      "plan_env",
+      "path_searching",
+      "traj_opt",
+      "traj_utils",
+      "quadrotor_msgs",
+      "plan_manage"
+    ],
+    "runtime_state_machine": "pending; native manager is a library only",
+    "parameters": "platform/01_apps/ego_planner/config/planner.yaml",
+    "onboard_runtime_commit": "c33f78bbb305bea7024546b27103aee2d6317f7c"
   }
 }

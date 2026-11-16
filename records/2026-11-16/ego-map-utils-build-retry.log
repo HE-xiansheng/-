@@ -1,0 +1,89 @@
+Starting >>> plan_env
+Starting >>> traj_utils
+Finished <<< traj_utils [11.9s]
+--- stderr: plan_env
+In file included from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:1:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h:205:46: error: ‘TimerEvent’ in namespace ‘rclcpp’ does not name a type
+  205 |   void updateOccupancyCallback(const rclcpp::TimerEvent & /*event*/);
+      |                                              ^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h:206:34: error: ‘TimerEvent’ in namespace ‘rclcpp’ does not name a type
+  206 |   void visCallback(const rclcpp::TimerEvent & /*event*/);
+      |                                  ^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h:207:37: error: ‘TimerEvent’ in namespace ‘rclcpp’ does not name a type
+  207 |   void fadingCallback(const rclcpp::TimerEvent & /*event*/);
+      |                                     ^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h:246:11: error: ‘Timer’ in namespace ‘rclcpp’ does not name a type; did you mean ‘Time’?
+  246 |   rclcpp::Timer occ_timer_, vis_timer_, fading_timer_;
+      |           ^~~~~
+      |           Time
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp: In member function ‘void GridMap::initMap(const SharedPtr&)’:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:236:3: error: ‘occ_timer_’ was not declared in this scope; did you mean ‘rcl_timer_t’?
+  236 |   occ_timer_ = rclcpp::create_timer(node_, node_->get_clock(), rclcpp::Duration::from_seconds(0.032), std::bind(&GridMap::updateOccupancyCallback, this));
+      |   ^~~~~~~~~~
+      |   rcl_timer_t
+In file included from /usr/include/eigen3/Eigen/Core:85,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /usr/include/eigen3/Eigen/Eigen:1,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h:4,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:1:
+/usr/include/c++/11/functional: In instantiation of ‘struct std::_Bind_check_arity<void (GridMap::*)(const int&), GridMap*>’:
+/usr/include/c++/11/functional:768:12:   required from ‘struct std::_Bind_helper<false, void (GridMap::*)(const int&), GridMap*>’
+/usr/include/c++/11/functional:789:5:   required by substitution of ‘template<class _Func, class ... _BoundArgs> typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type std::bind(_Func&&, _BoundArgs&& ...) [with _Func = void (GridMap::*)(const int&); _BoundArgs = {GridMap*}]’
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:236:112:   required from here
+/usr/include/c++/11/functional:756:21: error: static assertion failed: Wrong number of arguments for pointer-to-member
+  755 |       static_assert(_Varargs::value
+      |                               ~~~~~
+  756 |                     ? sizeof...(_BoundArgs) >= _Arity::value + 1
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  757 |                     : sizeof...(_BoundArgs) == _Arity::value + 1,
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/functional:756:21: note: ‘(false ? (1 >= (((long unsigned int)std::integral_constant<long unsigned int, 1>::value) + 1)) : (1 == (((long unsigned int)std::integral_constant<long unsigned int, 1>::value) + 1)))’ evaluates to false
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:237:3: error: ‘vis_timer_’ was not declared in this scope
+  237 |   vis_timer_ = rclcpp::create_timer(node_, node_->get_clock(), rclcpp::Duration::from_seconds(0.125), std::bind(&GridMap::visCallback, this));
+      |   ^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:239:5: error: ‘fading_timer_’ was not declared in this scope
+  239 |     fading_timer_ = rclcpp::create_timer(node_, node_->get_clock(), rclcpp::Duration::from_seconds(0.5), std::bind(&GridMap::fadingCallback, this));
+      |     ^~~~~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp: At global scope:
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:254:53: error: ‘TimerEvent’ in namespace ‘rclcpp’ does not name a type
+  254 | void GridMap::updateOccupancyCallback(const rclcpp::TimerEvent & /*event*/)
+      |                                                     ^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:301:41: error: ‘TimerEvent’ in namespace ‘rclcpp’ does not name a type
+  301 | void GridMap::visCallback(const rclcpp::TimerEvent & /*event*/)
+      |                                         ^~~~~~~~~~
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:317:44: error: ‘TimerEvent’ in namespace ‘rclcpp’ does not name a type
+  317 | void GridMap::fadingCallback(const rclcpp::TimerEvent & /*event*/)
+      |                                            ^~~~~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/create_subscription.hpp:33,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:43,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/include/plan_env/grid_map.h:14,
+                 from /home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp: In instantiation of ‘rclcpp::TimerBase::SharedPtr rclcpp::create_timer(std::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>, std::shared_ptr<rclcpp::node_interfaces::NodeTimersInterface>, rclcpp::Clock::SharedPtr, rclcpp::Duration, CallbackT&&, rclcpp::CallbackGroup::SharedPtr) [with CallbackT = std::_Bind<void (GridMap::*(GridMap*))(const int&)>; rclcpp::TimerBase::SharedPtr = std::shared_ptr<rclcpp::TimerBase>; rclcpp::Clock::SharedPtr = std::shared_ptr<rclcpp::Clock>; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>]’:
+/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:64:22:   required from ‘rclcpp::TimerBase::SharedPtr rclcpp::create_timer(NodeT, rclcpp::Clock::SharedPtr, rclcpp::Duration, CallbackT&&, rclcpp::CallbackGroup::SharedPtr) [with NodeT = std::shared_ptr<rclcpp::Node>; CallbackT = std::_Bind<void (GridMap::*(GridMap*))(const int&)>; rclcpp::TimerBase::SharedPtr = std::shared_ptr<rclcpp::TimerBase>; rclcpp::Clock::SharedPtr = std::shared_ptr<rclcpp::Clock>; rclcpp::CallbackGroup::SharedPtr = std::shared_ptr<rclcpp::CallbackGroup>]’
+/home/orangepi/drone_platform/01_apps/ego_planner/workspace/src/plan_env/src/grid_map.cpp:236:36:   required from here
+/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:44:60: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+   44 |   auto timer = rclcpp::GenericTimer<CallbackT>::make_shared(
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+   45 |     clock,
+      |     ~~~~~~                                                  
+   46 |     period.to_chrono<std::chrono::nanoseconds>(),
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           
+   47 |     std::forward<CallbackT>(callback),
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                      
+   48 |     node_base->get_context());
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~                               
+/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:44:60: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+/opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:44:60: note: invalid template non-type parameter
+gmake[2]: *** [CMakeFiles/plan_env.dir/build.make:76: CMakeFiles/plan_env.dir/src/grid_map.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/plan_env.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< plan_env [22.6s, exited with code 2]
+
+Summary: 1 package finished [22.9s]
+  1 package failed: plan_env
+  1 package had stderr output: plan_env
