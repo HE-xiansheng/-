@@ -1,5 +1,5 @@
-"""One on-board read-only sampler for the workstation; JSON over one SSH stream."""
-import argparse,json,math,os,struct,sys,threading,time,zlib,socket,xmlrpc.client
+"""ROS2机载只读采样：类型化订阅、DDS图与只读栅格参数；不提供飞控控制接口。"""
+import argparse,json,math,os,struct,sys,threading,time,zlib,socket
 from collections import deque
 from pathlib import Path
 
@@ -9,65 +9,28 @@ def source_frequency(samples,now,window_s):
     if len(samples)<2 or samples[-1]<=samples[0]:return None
     return (len(samples)-1)/(samples[-1]-samples[0])
 
-def sensor_values(raw, ros_type):
-    """只解码传感器的小字段，绝不把雷达点数组塞进状态包。"""
-    try:
-        offset=16+struct.unpack_from('<I',raw,12)[0]
-        if offset>len(raw):return {}
-        if ros_type=='sensor_msgs/Imu':
-            gyro=struct.unpack_from('<3d',raw,offset+104)
-            accel=struct.unpack_from('<3d',raw,offset+200)
-            if not all(math.isfinite(v) for v in gyro+accel):return {}
-            return {'angular_velocity':list(gyro),'acceleration':list(accel)}
-        if ros_type=='sensor_msgs/FluidPressure':
-            value=struct.unpack_from('<d',raw,offset)[0]
-            return {'pressure_pa':value} if math.isfinite(value) else {}
-        if ros_type in ('livox_ros_driver2/CustomMsg','livox_ros_driver/CustomMsg'):
-            return {'point_count':struct.unpack_from('<I',raw,offset+8)[0]}
-        if ros_type=='sensor_msgs/PointCloud2':
-            height,width=struct.unpack_from('<II',raw,offset)
-            return {'point_count':height*width}
-    except (struct.error,ValueError):pass
+def stamp_seconds(stamp):
+    return float(stamp.sec)+float(stamp.nanosec)*1e-9
+
+
+def sensor_values(msg, key):
+    """只取类型化消息的小字段，不依赖ROS1序列化偏移或ROS2的CDR布局。"""
+    if key in ('imu','fc_imu'):
+        gyro=msg.angular_velocity;accel=msg.linear_acceleration
+        values=[gyro.x,gyro.y,gyro.z,accel.x,accel.y,accel.z]
+        return {'angular_velocity':values[:3],'acceleration':values[3:]} if all(math.isfinite(v) for v in values) else {}
+    if key=='pressure':
+        return {'pressure_pa':msg.fluid_pressure} if math.isfinite(msg.fluid_pressure) else {}
+    if key=='lidar':return {'point_count':int(msg.point_num)}
+    if key=='cloud':return {'point_count':int(msg.height)*int(msg.width)}
     return {}
 
-def demo_status(root):
-    try:
-        d=json.loads((root/'active-control-demo.json').read_text());run=Path(d['run'])
-        try:
-            argv=(Path('/proc')/str(int(d['pid']))/'cmdline').read_bytes().split(b'\0')
-            alive=d['entry'].encode() in argv and b'--run' in argv and argv[argv.index(b'--run')+1].decode()==str(run)
-        except (OSError,ValueError,IndexError):alive=False
-        try:s=json.loads((run/'status.json').read_text())
-        except (OSError,ValueError):s={}
-        result=dict(d,alive=alive,status=s,status_age_s=time.monotonic()-s.get('monotonic',0))
-        for name,key in [('completion.json','completion'),('lock-result.json','lock')]:
-            try:result[key]=json.loads((run/name).read_text())
-            except (OSError,ValueError):pass
-        return result
-    except (OSError,ValueError,KeyError,TypeError,IndexError):return {'alive':False}
 
 def cache_planner_status(cache,key,value,receipt):
     # 轨迹ID可在新规划会话中重用，禁止将前一会话缓存配给新状态。
     if key=='status' and value.get('session_id')!=cache.get('status',{}).get('data',{}).get('session_id'):
         cache.pop('trajectory',None);cache.pop('candidate_trajectory',None);cache.pop('grid',None)
     cache[key]={'data':value,'receipt':receipt}
-
-
-def localization_status(root,boot_id):
-    # 只读进程身份，旧 active-*.json 不作为存活证据；不引入 ROS 发布者。
-    result={'lio_running':False,'relay_running':False,'session_id':''}
-    for kind,key in [('localization','lio'),('flight-pose-relay','relay')]:
-        try:
-            d=json.loads((root/('active-'+kind+'.json')).read_text());p=Path('/proc')/str(int(d['pid']))
-            args=p.joinpath('cmdline').read_bytes().split(b'\0')
-            if key=='lio':owned=str(Path(d['run'])/'localization.launch').encode() in args and str(root/'runs') in d['run']
-            else:owned=p.joinpath('exe').resolve()==(Path.home()/'drone_platform/02_drivers/sensors/lib/to_mavros/vision2mavros').resolve() and b'__name:=factory_vision2mavros' in args
-            if not owned:continue
-            tick=p.joinpath('stat').read_text().rsplit(')',1)[1].split()[19]
-            result[key+'_running']=True
-            if key=='lio':result['session_id']=boot_id+':'+str(d['pid'])+':'+tick
-        except (OSError,ValueError,KeyError,IndexError):pass
-    return result
 
 
 def grid_display_payload(msg,resolution,max_points=18000):
@@ -121,184 +84,221 @@ def grid_transmissions(packet,sequence,previous):
     return groups,(session,grid_sequence,chunks)
 
 
-def main():
-    p=argparse.ArgumentParser();p.add_argument('--seconds',type=float,default=0)
-    p.add_argument('--cloud-topic',default='/factory_fastlio/cloud_body')
-    p.add_argument('--stream-id',default='');p.add_argument('--udp-host');p.add_argument('--udp-port',type=int,default=9005);p.add_argument('--grid-only',action='store_true');p.add_argument('--no-rosout',action='store_true');p.add_argument('--planner',action='store_true');a=p.parse_args()
-    parent_pid=os.getppid()
-    if a.udp_host and parent_pid==1:raise SystemExit('只读采样的SSH管理进程已退出')
-    udp=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) if a.udp_host else None
-    if udp and not a.grid_only:
-        try:udp.setsockopt(socket.IPPROTO_IP,socket.IP_TOS,0xb8)  # 只读状态小包优先，不修改系统网络配置。
-        except OSError:pass
-    udp_sequence=time.monotonic_ns()&0xffffffff
-    import rospy
-    from mavros_msgs.msg import State,ExtendedState,EstimatorStatus,RCIn,StatusText
-    from sensor_msgs.msg import BatteryState
-    rospy.init_node('flight_desk_readonly_monitor',anonymous=True,disable_signals=True,disable_rosout=a.no_rosout)
-    definitions={
-      'lidar':('/livox/lidar',rospy.AnyMsg,.4), 'imu':('/livox/imu',rospy.AnyMsg,.4),
-      'fc_imu':('/mavros/imu/data',rospy.AnyMsg,.5),
-      'pressure':('/mavros/imu/static_pressure',rospy.AnyMsg,3.),
-      'lio':('/factory_fastlio/odometry',rospy.AnyMsg,.4),
-      'cloud':(a.cloud_topic,rospy.AnyMsg,.4),
-      'relay':('/mavros/vision_pose/pose',rospy.AnyMsg,.4),
-      'fc_odom':('/mavros/local_position/odom',rospy.AnyMsg,.4),
-      'fc':('/mavros/state',State,3.), 'landed':('/mavros/extended_state',ExtendedState,3.),
-      'ekf':('/mavros/estimator_status',EstimatorStatus,3.), 'rc':('/mavros/rc/in',RCIn,1.),
-      'battery':('/mavros/battery',BatteryState,5.), 'text':('/mavros/statustext/recv',StatusText,120.)}
-    if a.grid_only:definitions={}
-    cache={};times={k:deque(maxlen=3000) for k in definitions};texts=deque(maxlen=12);lock=threading.Lock()
-    def receive(m,k):
-        now=time.monotonic(); stamp=0.;frame=''
-        if isinstance(m,rospy.AnyMsg):
+COMMAND_TOPICS={
+    '/mavros/setpoint_position/local','/mavros/setpoint_position/global',
+    '/mavros/setpoint_velocity/cmd_vel','/mavros/setpoint_velocity/cmd_vel_unstamped',
+    '/mavros/setpoint_raw/local','/mavros/setpoint_raw/global'}
+# MAVROS反馈target_*和desired不是外部控制指令。
+COMMAND_TOPICS.update('/mavros/'+name for name in (
+    'setpoint_raw/attitude','setpoint_attitude/attitude','setpoint_attitude/thrust',
+    'actuator_control','rc/override','setpoint_trajectory/local','setpoint_accel/accel',
+    'setpoint_attitude/cmd_vel','setpoint_attitude/cmd_vel_unstamped'))
+
+
+def node_name(info):
+    return info.node_namespace.rstrip('/')+'/'+info.node_name
+
+
+class TelemetryReader:
+    """标准执行器负责回调；主线程快照不等待飞控或参数RPC。"""
+    def __init__(self,args):
+        import rclpy
+        from rclpy.qos import QoSProfile,DurabilityPolicy,qos_profile_sensor_data
+        from mavros_msgs.msg import State,ExtendedState,EstimatorStatus,RCIn,StatusText
+        from sensor_msgs.msg import BatteryState,Imu,FluidPressure,PointCloud2
+        from nav_msgs.msg import Odometry
+        from geometry_msgs.msg import PoseStamped
+        from livox_ros_driver2.msg import CustomMsg
+        import uuid
+        self.args=args;self.node=rclpy.create_node('flight_desk_readonly_'+uuid.uuid4().hex[:8],enable_rosout=not args.no_rosout)
+        self.boot=Path('/proc/sys/kernel/random/boot_id').read_text().strip()
+        self.definitions={
+            'lidar':('/livox/lidar',CustomMsg,.4),'imu':('/livox/imu',Imu,.4),
+            'fc_imu':('/mavros/imu/data',Imu,.5),'pressure':('/mavros/imu/static_pressure',FluidPressure,3.),
+            'lio':('/factory_fastlio/odometry',Odometry,.4),'cloud':(args.cloud_topic,PointCloud2,.4),
+            'relay':('/mavros/vision_pose/pose',PoseStamped,.4),'fc_odom':('/mavros/local_position/odom',Odometry,.4),
+            'fc':('/mavros/state',State,3.),'landed':('/mavros/extended_state',ExtendedState,3.),
+            'ekf':('/mavros/estimator_status',EstimatorStatus,3.),'rc':('/mavros/rc/in',RCIn,1.),
+            'battery':('/mavros/battery',BatteryState,5.),'text':('/mavros/statustext/recv',StatusText,120.)}
+        if args.grid_only:self.definitions={}
+        self.lock=threading.RLock();self.cache={};self.times={k:deque(maxlen=3000) for k in self.definitions}
+        self.texts=deque(maxlen=12);self.planning={};self.graph={'pubs':{},'endpoints':{},'received':None}
+        self.resolution=None;self.resolution_receipt=0.;self.parameter_pending=None;self.grid_last=0.;self.subs=[]
+        for key,(topic,typ,_) in self.definitions.items():
+            qos=QoSProfile(depth=1) if key in ('cloud','lidar') else qos_profile_sensor_data
+            self.subs.append(self.node.create_subscription(typ,topic,lambda m,k=key:self.receive(m,k),qos))
+        if args.planner:
+            from std_msgs.msg import String
+            from traj_utils.msg import PolyTraj
+            retained=QoSProfile(depth=1,durability=DurabilityPolicy.TRANSIENT_LOCAL)
+            self.subs.append(self.node.create_subscription(String,'/ego_planner/manual_preview/status',lambda m:self.plan_status(m,'status'),retained))
+            if args.grid_only:
+                from rcl_interfaces.srv import GetParameters
+                self.parameters=self.node.create_client(GetParameters,args.planner_node.rstrip('/')+'/get_parameters')
+                self.parameter_timer=self.node.create_timer(1.,self.poll_resolution)
+                self.subs.append(self.node.create_subscription(PointCloud2,args.grid_topic,self.grid,QoSProfile(depth=1)))
+            else:
+                self.subs.append(self.node.create_subscription(String,'/ego_planner/px4_execution/status',lambda m:self.plan_status(m,'execution'),retained))
+                for topic,key in [('/ego_planner/manual_preview/trajectory','trajectory'),('/ego_planner/navigation/candidate_trajectory','candidate_trajectory')]:
+                    self.subs.append(self.node.create_subscription(PolyTraj,topic,lambda m,k=key:self.poly(m,k),retained))
+        self.graph_timer=self.node.create_timer(.5,self.poll_graph)
+
+    def receive(self,m,key):
+        receipt=time.monotonic();stamp=stamp_seconds(m.header.stamp);frame=m.header.frame_id
+        values=sensor_values(m,key)
+        if key=='fc':values={k:getattr(m,k) for k in ('connected','armed','mode','system_status')}
+        elif key=='landed':values={'landed_state':m.landed_state}
+        elif key=='ekf':values={k:getattr(m,k) for k in ('attitude_status_flag','velocity_horiz_status_flag','velocity_vert_status_flag','pos_horiz_rel_status_flag','pos_vert_abs_status_flag','gps_glitch_status_flag','accel_error_status_flag')}
+        elif key=='battery':values={k:float(getattr(m,k)) if math.isfinite(getattr(m,k)) else None for k in ('voltage','percentage','current')}
+        elif key=='rc':values={'rssi':m.rssi,'channels':list(m.channels)}
+        elif key=='text':values={'severity':m.severity,'text':m.text}
+        elif key in ('lio','fc_odom','relay'):
+            pose=m.pose if key=='relay' else m.pose.pose
+            xyz=[pose.position.x,pose.position.y,pose.position.z];q=pose.orientation
+            quat=[q.x,q.y,q.z,q.w]
+            # 无效数值不能破坏整份JSON；空位姿由显示端明确标为无效。
+            values={'position':xyz,'quaternion':quat} if all(math.isfinite(v) for v in xyz+quat) else {}
+            if key!='relay':values['child_frame_id']=m.child_frame_id
+        with self.lock:
+            self.cache[key]={'receipt':receipt,'stamp':stamp,'frame':frame,'values':values}
+            self.times[key].append(receipt)
+            if key=='text':self.texts.append({'received_monotonic':receipt,**values})
+
+    def poll_graph(self):
+        try:
+            pubs={};endpoints={}
+            topics={topic for topic,_,_ in self.definitions.values()}|COMMAND_TOPICS|{self.args.grid_topic}
+            for topic in topics:
+                infos=self.node.get_publishers_info_by_topic(topic)
+                if infos:
+                    # 相同节点名的两个实例也保留两项，不通过set掩盖冲突。
+                    pubs[topic]=sorted(node_name(i) for i in infos)
+                    endpoints[topic]=[dict(node=node_name(i),gid=bytes(i.endpoint_gid).hex()) for i in infos]
+            with self.lock:self.graph={'pubs':pubs,'endpoints':endpoints,'received':time.monotonic()}
+        except RuntimeError:pass
+
+    def plan_status(self,msg,key):
+        try:
+            value=json.loads(msg.data,parse_constant=lambda _:(_ for _ in ()).throw(ValueError('非有限JSON')))
+            if not isinstance(value,dict):return
+            # 包括数值溢出产生的Infinity；拒绝后保留原接收时刻，不延长旧缓存寿命。
+            json.dumps(value,allow_nan=False)
+            with self.lock:cache_planner_status(self.planning,key,value,time.monotonic())
+        except (ValueError,TypeError):pass
+
+    def poly(self,msg,key):
+        value={'id':msg.traj_id,'start_time':stamp_seconds(msg.start_time),'order':msg.order,
+               'duration':list(msg.duration),'x':list(msg.coef_x),'y':list(msg.coef_y),'z':list(msg.coef_z)}
+        try:json.dumps(value,allow_nan=False)
+        except ValueError:return
+        with self.lock:self.planning[key]={'data':value,'receipt':time.monotonic()}
+
+    def poll_resolution(self):
+        from rcl_interfaces.msg import ParameterType
+        from rcl_interfaces.srv import GetParameters
+        now=time.monotonic()
+        if self.parameter_pending is not None:
+            future,started=self.parameter_pending
+            if not future.done():
+                if now-started>2.:
+                    self.parameters.remove_pending_request(future)
+                    future.cancel();self.parameter_pending=None
+                return
+            self.parameter_pending=None
             try:
-                _,sec,ns=struct.unpack_from('<III',m._buff);stamp=sec+ns*1e-9
-                n=struct.unpack_from('<I',m._buff,12)[0];frame=m._buff[16:16+n].decode(errors='replace')
-            except (struct.error,ValueError):pass
-        else:stamp=m.header.stamp.to_sec();frame=m.header.frame_id
-        values=sensor_values(m._buff,m._connection_header.get('type','')) if isinstance(m,rospy.AnyMsg) else {}
-        if k=='fc':values={x:getattr(m,x) for x in ['connected','armed','mode','system_status']}
-        elif k=='landed':values={'landed_state':m.landed_state}
-        elif k=='ekf':values={x:getattr(m,x) for x in ['attitude_status_flag','velocity_horiz_status_flag','velocity_vert_status_flag','pos_horiz_rel_status_flag','pos_vert_abs_status_flag','gps_glitch_status_flag','accel_error_status_flag']}
-        elif k=='battery':values={x:float(getattr(m,x)) if math.isfinite(getattr(m,x)) else None for x in ['voltage','percentage','current']}
-        elif k=='rc':values={'rssi':m.rssi,'channels':list(m.channels)}
-        elif k=='text':values={'severity':m.severity,'text':m.text}
-        elif k in ['lio','fc_odom','relay']:
-            # Decode only the small pose messages; no cloud/raw-lidar payload crosses SSH.
-            import roslib.message
-            typ=roslib.message.get_message_class(m._connection_header.get('type',''))
-            if typ:
-                decoded=typ();decoded.deserialize(m._buff)
-                pose=decoded.pose if k=='relay' else decoded.pose.pose
-                values={'position':[pose.position.x,pose.position.y,pose.position.z],
-                        'quaternion':[pose.orientation.x,pose.orientation.y,pose.orientation.z,pose.orientation.w]}
-                if k!='relay':values['child_frame_id']=decoded.child_frame_id
-        with lock:
-            cache[k]={'receipt':now,'stamp':stamp,'frame':frame,'values':values}
-            times[k].append(now)
-            if k=='text':texts.append({'received_monotonic':now,**values})
-    subs=[rospy.Subscriber(t,typ,receive,callback_args=k,queue_size=1,buff_size=4*1024*1024) for k,(t,typ,_) in definitions.items()]
-    # 仅订阅已有EGO-Planner，栅格保留原坐标，抽样只影响显示。
-    planning={};plan_lock=threading.Lock();grid_last=[0.];previous_grid=None
-    if a.planner:
-        from std_msgs.msg import String
-        from traj_utils.msg import PolyTraj
-        from sensor_msgs.msg import PointCloud2
-        from sensor_msgs import point_cloud2
-        import numpy as np
-        def plan_status(msg,key):
-            try:
-                value=json.loads(msg.data)
-                if not isinstance(value,dict):return
-                with plan_lock:cache_planner_status(planning,key,value,time.monotonic())
-            except (ValueError,TypeError):pass
-        def poly(msg,key='trajectory'):
-            value={'id':msg.traj_id,'start_time':msg.start_time.to_sec(),'order':msg.order,
-                   'duration':list(msg.duration),'x':list(msg.coef_x),'y':list(msg.coef_y),'z':list(msg.coef_z)}
-            with plan_lock:planning[key]={'data':value,'receipt':time.monotonic()}
-        def grid(msg):
-            now=time.monotonic()
-            if now-grid_last[0]<.5:return
-            grid_last[0]=now
-            if msg.header.frame_id not in ('world','camera_init'):return
-            try:
-                value=grid_display_payload(msg,rospy.get_param('/drone_0_ego_planner_node/grid_map/resolution',None))
-            except (ValueError,KeyError,TypeError,OverflowError) as exc:
-                rospy.logwarn_throttle(5.,'栅格显示帧无效: %s',str(exc));return
-            value.update(frame=msg.header.frame_id,stamp=msg.header.stamp.to_sec(),sequence=time.monotonic())
-            with plan_lock:planning['grid']={'data':value,'receipt':now}
-        subs.append(rospy.Subscriber('/ego_planner/manual_preview/status',String,plan_status,callback_args='status',queue_size=1))
-        if a.grid_only:
-            subs.append(rospy.Subscriber('/drone_0_ego_planner_node/grid_map/occupancy_inflate',PointCloud2,grid,queue_size=1,buff_size=4*1024*1024))
-        else:
-            subs.extend([rospy.Subscriber('/ego_planner/px4_execution/status',String,plan_status,callback_args='execution',queue_size=1),
-                         rospy.Subscriber('/ego_planner/manual_preview/trajectory',PolyTraj,poly,queue_size=1),
-                         rospy.Subscriber('/ego_planner/navigation/candidate_trajectory',PolyTraj,poly,callback_args='candidate_trajectory',queue_size=1)])
-    recorder=None
-    try:
-        import importlib.util
-        spec=importlib.util.spec_from_file_location('gcs_recording_status',Path.home()/'drone_platform/01_apps/ego_planner/recording_manage.py')
-        recorder=importlib.util.module_from_spec(spec);spec.loader.exec_module(recorder)
-    except (OSError,ImportError):pass
-    graph_cache={'pubs':{},'received':None};graph_lock=threading.Lock()
-    class GraphTransport(xmlrpc.client.Transport):
-        def make_connection(self,host):
-            connection=super().make_connection(host);connection.timeout=2.;return connection
-    def poll_graph():
-        while not rospy.is_shutdown():
-            try:
-                code,_,state=xmlrpc.client.ServerProxy('http://127.0.0.1:11311',transport=GraphTransport()).getSystemState('/gcs_readonly_graph')
-                if code==1:
-                    with graph_lock:graph_cache.update(pubs=dict(state[0]),received=time.monotonic())
-            except (OSError,xmlrpc.client.Error):pass
-            time.sleep(1.)
-    if not a.grid_only:threading.Thread(target=poll_graph,daemon=True).start()
-    root=Path.home()/'drone_platform/01_apps/fast_lio';start=time.monotonic()
-    try:
-        while not rospy.is_shutdown() and (not a.udp_host or os.getppid()==parent_pid) and (not a.seconds or time.monotonic()-start<a.seconds):
-            iteration_started=time.monotonic()
-            if a.grid_only:
-                with plan_lock:display={k:dict(v,receipt_age_s=time.monotonic()-v['receipt']) for k,v in planning.items()}
-                packet={'type':'GRID1','stream_id':a.stream_id,'boot_id':Path('/proc/sys/kernel/random/boot_id').read_text().strip(),
-                        'server_monotonic':time.monotonic(),'sent_wall':time.time(),'ego_planner':display}
-                if udp:
-                    udp_sequence=(udp_sequence+1)&0xffffffff
-                    groups,previous_grid=grid_transmissions(packet,udp_sequence,previous_grid)
-                    # 补发保留原始时间；解码端丢弃重复与乱序帧，不会延长数据有效期。
-                    for chunks in groups:
-                        for datagram in chunks:udp.sendto(datagram,(a.udp_host,a.udp_port))
-                else:print(json.dumps(packet,allow_nan=False),flush=True)
-                time.sleep(max(0,.5-(time.monotonic()-iteration_started)));continue
-            with graph_lock:
-                graph_age=None if graph_cache['received'] is None else time.monotonic()-graph_cache['received']
-                graph_fresh=graph_age is not None and 0<=graph_age<=2.5
-                pubs=dict(graph_cache['pubs']) if graph_fresh else {}
+                value=future.result().values[0]
+                resolution=value.double_value if value.type==ParameterType.PARAMETER_DOUBLE else None
+                if resolution is None or not math.isfinite(resolution) or resolution<=0:raise ValueError('分辨率参数无效')
+                with self.lock:self.resolution=resolution;self.resolution_receipt=now
+            except (RuntimeError,ValueError,AttributeError,IndexError):
+                with self.lock:self.resolution=None
+        if self.parameters.service_is_ready():
+            self.parameter_pending=(self.parameters.call_async(GetParameters.Request(names=['grid_map.resolution'])),now)
+
+    def grid(self,msg):
+        now=time.monotonic();rosnow=self.node.get_clock().now().nanoseconds*1e-9
+        if now-self.grid_last<.5:return
+        self.grid_last=now
+        stamp=stamp_seconds(msg.header.stamp)
+        with self.lock:
+            status=self.planning.get('status',{}).get('data',{})
+            resolution=self.resolution if now-self.resolution_receipt<=3. else None
+            publishers=self.graph['pubs'].get(self.args.grid_topic,[])
+        if publishers!=[self.args.planner_node]:return
+        if not status.get('session_id') or msg.header.frame_id!=status.get('goal_frame') or not -.05<=rosnow-stamp<=1.5:return
+        try:
+            value=grid_display_payload(msg,resolution)
+        except (ValueError,KeyError,TypeError,OverflowError):return
+        value.update(frame=msg.header.frame_id,stamp=stamp,sequence=now,session_id=status['session_id'])
+        with self.lock:self.planning['grid']={'data':value,'receipt':now}
+
+    def snapshot(self,period):
+        now=time.monotonic();rosnow=self.node.get_clock().now().nanoseconds*1e-9
+        with self.lock:
+            graph_age=None if self.graph['received'] is None else now-self.graph['received']
+            fresh=graph_age is not None and 0<=graph_age<=2.5
+            pubs=self.graph['pubs'] if fresh else {};endpoints=self.graph['endpoints'] if fresh else {}
+            display={k:dict(v,receipt_age_s=now-v['receipt']) for k,v in self.planning.items()}
+            if self.args.grid_only:
+                return {'type':'GRID1','stream_id':self.args.stream_id,'boot_id':self.boot,'server_monotonic':now,'sent_wall':time.time(),'ego_planner':display}
             rows={}
-            with lock:
-                # RPC can take long enough for callbacks to replace the cache.
-                # Timestamp the actual snapshot after the RPC, under its lock.
-                now=time.monotonic();rosnow=rospy.Time.now().to_sec()
-                for k,(topic,_,limit) in definitions.items():
-                    # 电池常以约 0.5 Hz 更新；3 秒窗口会周期性只剩一帧。
-                    hz=source_frequency(times[k],now,12. if k=='battery' else 3.)
-                    row={'topic':topic,'publishers':pubs.get(topic,[]),'graph_fresh':graph_fresh,'graph_age_s':graph_age,'samples':len(times[k]),'hz':hz,'limit_s':limit}
-                    if k in cache:
-                        c=cache[k];row.update(source_age_s=rosnow-c['stamp'],receipt_age_s=now-c['receipt'],frame=c['frame'],values=c['values'])
-                    rows[k]=row
-                messages=[{**t,'age_s':now-t['received_monotonic']} for t in texts]
-            plan={}
-            try:
-                d=json.loads((root/'active-flight-preview.json').read_text());argv=(Path('/proc')/str(d['pid'])/'cmdline').read_bytes().split(b'\0')
-                if b'worker' in argv and b'--run' in argv and argv[argv.index(b'--run')+1].decode()==d['run'] and any(x.endswith(b'/flight_board.py') for x in argv):
-                    run=Path(d['run']);status=json.loads((run/'status.json').read_text());age=time.monotonic()-status['monotonic'] if 'monotonic' in status else time.time()-status.get('time',0)
-                    plan={'active':d,'status':status,'status_age_s':age}
-                    try:plan['goal_lock']=json.loads((run/'goal-lock-result.json').read_text())
-                    except (OSError,ValueError):pass
-                    f=run/'results/frames.jsonl'
-                    if f.exists():
-                        with f.open('rb') as stream:
-                            stream.seek(max(0,f.stat().st_size-65536));lines=stream.read().splitlines()
-                        if lines:
-                            frame=json.loads(lines[-1]);plan['last_prediction']={'source_age_s':rosnow-frame['sampling']['source_stamp'],'candidate':frame['candidate'],'quality':frame['sampling'].get('quality'),'goal_world':frame['goal_world']}
-            except (OSError,ValueError,KeyError,IndexError):pass
-            command_topics={'/mavros/setpoint_position/local','/mavros/setpoint_position/global','/mavros/setpoint_velocity/cmd_vel','/mavros/setpoint_velocity/cmd_vel_unstamped','/mavros/setpoint_raw/local','/mavros/setpoint_raw/global','/mavros/setpoint_raw/attitude','/mavros/setpoint_attitude/attitude','/mavros/setpoint_attitude/thrust','/mavros/actuator_control','/mavros/rc/override','/mavros/setpoint_trajectory/local','/mavros/setpoint_accel/accel','/mavros/setpoint_attitude/cmd_vel','/mavros/setpoint_attitude/cmd_vel_unstamped'}
-            # /mavros/setpoint_trajectory/desired and raw/target_* are MAVROS
-            # feedback outputs, not evidence of an external command publisher.
-            commands={t:n for t,n in pubs.items() if t in command_topics}
-            packet={'schema':1,'server_monotonic':now,'sample_period_s':(.2 if udp else 1.),'boot_id':Path('/proc/sys/kernel/random/boot_id').read_text().strip(),'topics':rows,'messages':messages,'plan':plan,'demo_session':demo_status(root),'control_publishers':commands,'scope':'read-only observation, not full arming permission'}
-            packet['localization']=localization_status(root,packet['boot_id'])
-            packet['recording']=recorder.summary(recorder.health()) if recorder else {'available':False,'phase':'UNAVAILABLE','status_fresh':False}
-            with plan_lock:packet['ego_planner']={'now':rosnow,**{k:dict(v,receipt_age_s=time.monotonic()-v['receipt']) for k,v in planning.items()}}
-            packet['stream_id']=a.stream_id
-            packet['sent_wall']=time.time();packet['sample_cost_s']=time.monotonic()-iteration_started
+            for key,(topic,_,limit) in self.definitions.items():
+                row={'topic':topic,'publishers':pubs.get(topic,[]),'graph_fresh':fresh,'graph_age_s':graph_age,
+                     'samples':len(self.times[key]),'hz':source_frequency(self.times[key],now,12. if key=='battery' else 3.),'limit_s':limit}
+                if key in self.cache:
+                    c=self.cache[key];row.update(source_age_s=rosnow-c['stamp'],receipt_age_s=now-c['receipt'],frame=c['frame'],values=c['values'])
+                rows[key]=row
+            messages=[dict(t,age_s=now-t['received_monotonic']) for t in self.texts]
+            # 基于当前图的进程存在性，不冒用旧ROS1 active文件；正常数据还需独立源时间校验。
+            lio=endpoints.get('/factory_fastlio/odometry',[]);relay=endpoints.get('/mavros/vision_pose/pose',[])
+            session=':'.join([self.boot,str(self.node.context.get_domain_id()),lio[0]['gid']]) if len(lio)==1 and lio[0]['node']=='/factory_laserMapping' else ''
+            localization={'lio_running':bool(lio),'relay_running':bool(relay),'session_id':session,'identity_source':'ros2_graph','graph_fresh':fresh}
+            return {'schema':1,'server_monotonic':now,'sample_period_s':period,'boot_id':self.boot,'topics':rows,'messages':messages,
+                    'plan':{},'demo_session':{'alive':False},'control_publishers':{t:pubs[t] for t in COMMAND_TOPICS if t in pubs},
+                    'scope':'read-only observation, not full arming permission','localization':localization,
+                    'recording':{'available':False,'phase':'UNAVAILABLE','status_fresh':False},
+                    'ego_planner':{'now':rosnow,**display},'stream_id':self.args.stream_id,'sent_wall':time.time()}
+
+
+def main():
+    import rclpy
+    from rclpy.executors import SingleThreadedExecutor,ExternalShutdownException
+    p=argparse.ArgumentParser();p.add_argument('--seconds',type=float,default=0)
+    p.add_argument('--cloud-topic',default='/factory_fastlio/cloud_world')
+    p.add_argument('--grid-topic',default='/grid_map/occupancy_inflate');p.add_argument('--planner-node',default='/ego_planner_node')
+    p.add_argument('--stream-id',default='');p.add_argument('--udp-host');p.add_argument('--udp-port',type=int,default=9005)
+    p.add_argument('--grid-only',action='store_true');p.add_argument('--no-rosout',action='store_true');p.add_argument('--planner',action='store_true');args=p.parse_args()
+    if not math.isfinite(args.seconds) or args.seconds<0 or not 1<=args.udp_port<=65535:p.error('时间或端口无效')
+    if args.grid_only and not args.planner:p.error('--grid-only requires --planner')
+    parent=os.getppid()
+    if args.udp_host and parent==1:raise SystemExit('只读采样的SSH管理进程已退出')
+    udp=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) if args.udp_host else None
+    if udp and not args.grid_only:
+        try:udp.setsockopt(socket.IPPROTO_IP,socket.IP_TOS,0xb8)
+        except OSError:pass
+    rclpy.init();reader=TelemetryReader(args);executor=SingleThreadedExecutor();executor.add_node(reader.node)
+    def spin():
+        try:executor.spin()
+        except ExternalShutdownException:pass
+    worker=threading.Thread(target=spin,daemon=True);worker.start()
+    start=time.monotonic();sequence=time.monotonic_ns()&0xffffffff;previous=None
+    period=.5 if args.grid_only else .2 if udp else 1.
+    try:
+        while rclpy.ok() and (not udp or os.getppid()==parent) and (not args.seconds or time.monotonic()-start<args.seconds):
+            tick=time.monotonic();packet=reader.snapshot(period);packet['sample_cost_s']=time.monotonic()-tick
             if udp:
-                udp_sequence=(udp_sequence+1)&0xffffffff
-                for datagram in status_datagrams(packet,udp_sequence):udp.sendto(datagram,(a.udp_host,a.udp_port))
+                sequence=(sequence+1)&0xffffffff
+                if args.grid_only:groups,previous=grid_transmissions(packet,sequence,previous)
+                else:groups=[status_datagrams(packet,sequence)]
+                for chunks in groups:
+                    for datagram in chunks:udp.sendto(datagram,(args.udp_host,args.udp_port))
             else:print(json.dumps(packet,ensure_ascii=False,allow_nan=False),flush=True)
-            time.sleep(max(0,(.2 if udp else 1.)-(time.monotonic()-iteration_started)))
+            time.sleep(max(0,period-(time.monotonic()-tick)))
     except (BrokenPipeError,KeyboardInterrupt):pass
     finally:
-        for sub in subs:sub.unregister()
+        executor.shutdown(timeout_sec=2.);worker.join(timeout=3.);reader.node.destroy_node()
+        if rclpy.ok():rclpy.shutdown()
         if udp:udp.close()
+
+
 if __name__=='__main__':main()

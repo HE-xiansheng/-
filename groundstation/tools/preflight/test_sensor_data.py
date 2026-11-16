@@ -1,26 +1,24 @@
-"""传感器字段偏移、无效输入和新鲜度回归。"""
-import struct
+"""ROS2类型化传感器小字段及显示新鲜度回归，无ROS环境也可运行。"""
 import unittest
+from types import SimpleNamespace as S
 from telemetry_reader import sensor_values
 from preflight_status import sensor_snapshot
 
 class Sensors(unittest.TestCase):
-    def header(self):return struct.pack('<IIII',1,10,20,3)+b'imu'
     def test_imu(self):
-        raw=self.header()+struct.pack('<37d',*range(37))
-        values=sensor_values(raw,'sensor_msgs/Imu')
-        self.assertEqual(values['angular_velocity'],[13,14,15])
-        self.assertEqual(values['acceleration'],[25,26,27])
-        self.assertEqual(sensor_values(raw[:30],'sensor_msgs/Imu'),{})
+        msg=S(angular_velocity=S(x=1.,y=2.,z=3.),linear_acceleration=S(x=4.,y=5.,z=6.))
+        self.assertEqual(sensor_values(msg,'imu'),{'angular_velocity':[1.,2.,3.],'acceleration':[4.,5.,6.]})
+        msg.angular_velocity.x=float('nan');self.assertEqual(sensor_values(msg,'imu'),{})
     def test_pressure_and_cloud(self):
-        self.assertEqual(sensor_values(self.header()+struct.pack('<dd',101500,0),'sensor_msgs/FluidPressure'),{'pressure_pa':101500})
-        self.assertEqual(sensor_values(self.header()+struct.pack('<d',float('nan')),'sensor_msgs/FluidPressure'),{})
-        self.assertEqual(sensor_values(self.header()+struct.pack('<QIB',0,20300,1),'livox_ros_driver2/CustomMsg'),{'point_count':20300})
-        self.assertEqual(sensor_values(self.header()+struct.pack('<II',2,100),'sensor_msgs/PointCloud2'),{'point_count':200})
-    def test_expiry(self):
-        row={'receipt_age_s':.1,'source_age_s':.1,'limit_s':.5,'values':{'acceleration':[1,2,3]}}
-        self.assertTrue(sensor_snapshot({'topics':{'imu':row}})['imu']['ok'])
-        self.assertFalse(sensor_snapshot({'topics':{'imu':row},'_transport_delay_s':1})['imu']['ok'])
-        self.assertFalse(sensor_snapshot({})['pressure']['ok'])
+        self.assertEqual(sensor_values(S(fluid_pressure=101500.),'pressure'),{'pressure_pa':101500.})
+        self.assertEqual(sensor_values(S(fluid_pressure=float('inf')),'pressure'),{})
+        self.assertEqual(sensor_values(S(point_num=20300),'lidar'),{'point_count':20300})
+        self.assertEqual(sensor_values(S(height=3,width=5),'cloud'),{'point_count':15})
+    def test_sensor_expiry(self):
+        row={'topic':'/livox/imu','source_age_s':.1,'receipt_age_s':.05,'limit_s':.4,'values':{'acceleration':[0,0,9.8]}}
+        packet={'topics':{'imu':row}}
+        self.assertTrue(sensor_snapshot(packet)['imu']['ok'])
+        packet['_transport_delay_s']=.35;self.assertFalse(sensor_snapshot(packet)['imu']['ok'])
+        packet['_transport_delay_s']=0;row['source_age_s']=2;self.assertFalse(sensor_snapshot(packet)['imu']['ok'])
 
-if __name__=='__main__':unittest.main()
+if __name__=='__main__':unittest.main(verbosity=2)

@@ -28,3 +28,7 @@
 - 实际Qt源码非Git工程，构建依赖原目录.deps/Qt及.venv-build内CMake；系统CMake不足以执行Qt6部署宏。原任务管理器Qt将map_session视为不透明对象，因此可保持版本4载荷并携带ROS2 DDS GID。遥测/视频/定位/录制入口仍有ROS1依赖，独立副本不能视为全功能已完成。
 
 - Qt ROS2适配必须隔离应用名与状态目录，避免覆盖正在使用的ROS1地面站；本阶段独立构建、独立QSettings。只读发送器可经SSH stdin运行，无需电脑ROS2，也不需要安装新的机载服务。保留既有PCD1/POS1，图形界面接收侧可继续复用；连接管理还依赖未迁移的飞前遥测，不应仅凭点云单项验证宣称整套连接可用。
+
+- 飞前采样仍使用ROS1 AnyMsg字节偏移/XMLRPC Master，必须改为ROS2类型化订阅和DDS图。原栅格订阅前缀/drone_0_ego_planner_node/grid_map/occupancy_inflate与原生ROS2相对话题/grid_map/occupancy_inflate不同；显示层仅接受world会拒绝camera_init。栅格分辨率应读取原生节点参数服务，不能直接使用旧ROS1参数路径。
+
+- Humble缺rclpy.parameter_client，原生异步GetParameters只读服务可用；domain从Context而非Node读取。现场原地面站已占用UDP9005，ROS2独立版默认9015并使用独立状态目录；同用户orangepi的实际SSH→ROS2→跨机UDP→Qt链路已通过，root发布/普通用户采样的首轮DDS异常仅作为问题证据，不宣称已定位所有跨用户原因。

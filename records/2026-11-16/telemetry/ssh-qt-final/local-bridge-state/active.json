@@ -1,0 +1,10 @@
+{
+  "pid": 1465770,
+  "start_tick": "64649223",
+  "host": "192.168.1.224",
+  "pc_ip": "192.168.1.89",
+  "port": 33202,
+  "log": "/tmp/gcs-ros2-link-jqzm81b8/state/sender-20261116-211234.log",
+  "with_pose": true,
+  "pose_port": 57710
+}

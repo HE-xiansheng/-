@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "qt_exit": -6,
+  "scope": "actual SSH and cross-host UDP, synthetic ROS2 domain 198 localhost inputs, no flight task"
+}

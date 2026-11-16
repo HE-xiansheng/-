@@ -1,3 +1,5 @@
+> ROS2试验版已用Livox CustomMsg合成数据验证只读字段和Qt跨机显示；实际雷达网络切换、现场数据质量和定位漂移仍待验证。详见仓库records/2026-11-16/telemetry，不能以合成检查代替实物接入验收。
+
 # 真实 Livox MID-360 接入说明
 
 当前地面站已经把真实雷达接入口预留在 UDP `PCD1` 协议上。后续接真实 MID-360 时，不需要改地面站的 QML 航线规划交互，只需要把 `radarsimulator` 替换成一个 Livox SDK2 适配器进程。

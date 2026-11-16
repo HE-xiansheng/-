@@ -5,10 +5,10 @@ from planner_display import snapshot
 from bridge import format_packet
 
 now=100.
-status={'mode':'manual_preview','goal_frame':'world','height_reference':'fastlio_session_origin','phase':'ACTIVE','trajectory_id':7,'stamp':now,'planning_mode':'measured_preview'}
+status={'session_id':'s','mode':'manual_preview','goal_frame':'world','height_reference':'fastlio_session_origin','phase':'ACTIVE','trajectory_id':7,'stamp':now,'planning_mode':'measured_preview'}
 trajectory={'id':7,'start_time':now-.1,'order':5,'duration':[1.],'x':[0,0,0,0,1,0],'y':[0]*6,'z':[0,0,0,0,0,1]}
 packet={'now':now,'status':{'data':status,'receipt_age_s':.1},'trajectory':{'data':trajectory,'receipt_age_s':.1},
-        'grid':{'data':{'count':10,'source_count':20,'resolution':.1,'sequence':1},'receipt_age_s':.1}}
+        'grid':{'data':{'frame':'world','stamp':now,'session_id':'s','count':10,'source_count':20,'resolution':.1,'sequence':1},'receipt_age_s':.1}}
 s=snapshot(packet);assert s['path_valid'] and s['grid_valid'] and s['path'][0]==[0,0,1] and s['path'][-1]==[1,0,1]
 p=copy.deepcopy(packet);p['trajectory']['data']['id']=8;assert not snapshot(p)['path_valid']
 p=copy.deepcopy(packet);p['status']['data']['phase']='GOAL_IN_COLLISION';assert not snapshot(p)['path_valid']
@@ -51,3 +51,9 @@ p=copy.deepcopy(packet);p['grid']['receipt_age_s']=3.1;assert not snapshot(p)['g
 p=copy.deepcopy(packet);p['status']['data']['phase']='CLOUD_STALE';assert not snapshot(p)['grid_display_valid']
 p=copy.deepcopy(packet);p['grid']['data']['count']=0;assert snapshot(p)['grid_display_valid'] and snapshot(p)['grid_count']==0
 print('栅格临界期限显示保持测试通过；实时有效期限仍为1.5秒')
+
+# ROS2使用实际camera_init，不能将其误判为旧world或接受跨会话栅格。
+p=copy.deepcopy(packet);p["status"]["data"]["goal_frame"]="camera_init";p["grid"]["data"]["frame"]="camera_init";assert snapshot(p)["grid_valid"]
+p["grid"]["data"]["session_id"]="old";assert not snapshot(p)["grid_display_valid"]
+p=copy.deepcopy(packet);p["grid"]["data"]["stamp"]=now-4;assert not snapshot(p)["grid_display_valid"]
+p=copy.deepcopy(packet);p["grid"]["data"]["stamp"]=now+1;assert not snapshot(p)["grid_valid"]

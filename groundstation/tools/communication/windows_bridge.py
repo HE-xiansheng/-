@@ -65,7 +65,7 @@ def main():
     parser.add_argument('--user', default='orangepi')
     parser.add_argument('--worker', choices=['cloud', 'monitor'])
     parser.add_argument('--pc-ip')
-    parser.add_argument('--raw-udp-port', type=int, default=9005)
+    parser.add_argument('--raw-udp-port', type=int, default=9015)
     for name, default in [('cloud-port', 9000), ('pose-port', 9001), ('preflight-port', 9003)]:
         parser.add_argument('--' + name, type=int, default=default)
     args = parser.parse_args()

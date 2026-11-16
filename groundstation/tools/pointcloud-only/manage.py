@@ -17,9 +17,10 @@ import time
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'communication'))
 from ssh_session import background_ssh
+from runtime_paths import state_directory
 
 ROOT = Path(__file__).resolve().parents[3]
-STATE = ROOT/'.pointcloud-link'
+STATE = state_directory()
 
 
 def identity(pid):
@@ -143,7 +144,7 @@ def main():
             parser.error('run 需要 --pc-ip')
         run(args)
         return
-    STATE.mkdir(exist_ok=True)
+    STATE.mkdir(parents=True,exist_ok=True)
     with (STATE/'manager.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX)
         existing = current()

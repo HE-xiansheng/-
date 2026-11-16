@@ -25,9 +25,10 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'pointcloud-only'))
 from cloud_sender import Lz4,packets
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'communication'))
 from ssh_session import background_ssh
+from runtime_paths import state_directory
 
 ROOT=Path(__file__).resolve().parents[3]
-STATE=ROOT/'.pointcloud-link'
+STATE=state_directory()
 
 
 def format_packet(packet,host):
@@ -97,10 +98,9 @@ def run(args):
     ssh_options, ssh_env = background_ssh()
     source=Path(__file__).with_name('telemetry_reader.py').read_bytes()
     def connect_reader(index,grid=False):
-        remote=('source /opt/ros/noetic/setup.bash; source ~/drone_platform/01_apps/ego_planner/devel/setup.bash; '
-                'export ROS_MASTER_URI=http://127.0.0.1:11311 ROS_IP=127.0.0.1 PYTHONNOUSERSITE=1; '
+        remote=('source ~/drone_platform/env.sh && '
                 'exec /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner'+
-                (' --grid-only' if grid else '')+' --udp-host \"${SSH_CONNECTION%% *}\" --udp-port '+str(getattr(args,'raw_udp_port',9005))+' --stream-id '+(grid_stream_id if grid else stream_id))
+                (' --grid-only' if grid else '')+' --udp-host \"${SSH_CONNECTION%% *}\" --udp-port '+str(getattr(args,'raw_udp_port',9015))+' --stream-id '+(grid_stream_id if grid else stream_id))
         child=subprocess.Popen(['ssh','-T',*ssh_options,'-o','ConnectTimeout=6',
             '-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2',args.user+'@'+args.host,remote],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=None,env=ssh_env)
         children[index]=child;child.stdin.write(source);child.stdin.close();return child
@@ -181,7 +181,7 @@ def run(args):
         output(format_packet(packet,args.host));last_status[0]=time.monotonic()
     def read_status_udp():
         sock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);sock.setsockopt(socket.SOL_SOCKET,socket.SO_RCVBUF,1024*1024)
-        sock.bind(('0.0.0.0',getattr(args,'raw_udp_port',9005)));sock.settimeout(.25);expected=socket.gethostbyname(args.host)
+        sock.bind(('0.0.0.0',getattr(args,'raw_udp_port',9015)));sock.settimeout(.25);expected=socket.gethostbyname(args.host)
         assemblers={b'TLM1':StatusAssembler(),b'TLG1':StatusAssembler(b'TLG1')}
         previous={b'TLM1':{'boot':None,'offset':None,'remote':-1.},b'TLG1':{'boot':None,'offset':None,'remote':-1.}}
         try:
@@ -230,11 +230,11 @@ def run(args):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action',choices=['start','stop','status','run'])
-    parser.add_argument('--host',default='192.168.1.235');parser.add_argument('--user',default='orangepi')
-    parser.add_argument('--port',type=int,default=9003);args=parser.parse_args()
-    if not 1<=args.port<=65535:parser.error('端口必须为1..65535')
+    parser.add_argument('--host',default='192.168.1.224');parser.add_argument('--user',default='orangepi')
+    parser.add_argument('--port',type=int,default=9003);parser.add_argument('--raw-udp-port',type=int,default=9015);args=parser.parse_args()
+    if not 1<=args.port<=65535 or not 1<=args.raw_udp_port<=65535 or args.port==args.raw_udp_port:parser.error('端口必须为1..65535')
     if args.action=='run':run(args);return
-    STATE.mkdir(exist_ok=True)
+    STATE.mkdir(parents=True,exist_ok=True)
     with (STATE/'preflight.lock').open('a') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX);existing=current()
         if args.action=='status':print(json.dumps(dict(existing or {},running=bool(existing)),ensure_ascii=False,indent=2));return
@@ -246,13 +246,13 @@ def main():
                     time.sleep(.1)
             print(json.dumps({'running':bool(current()),'stopped':bool(existing)}));return
         if existing:
-            if existing['host']!=args.host or existing['port']!=args.port:raise RuntimeError('已有其他监视配置；先停止监视再更换')
+            if existing['host']!=args.host or existing['port']!=args.port or existing.get('raw_udp_port',9015)!=args.raw_udp_port:raise RuntimeError('已有其他监视配置；先停止监视再更换')
             print(json.dumps(dict(existing,running=True),ensure_ascii=False,indent=2));return
         log=STATE/('preflight-'+time.strftime('%Y%m%d-%H%M%S')+'.log')
         _, ssh_env = background_ssh()
         with log.open('w') as f:
-            proc=subprocess.Popen(['/usr/bin/python3',str(Path(__file__).resolve()),'run','--host',args.host,'--user',args.user,'--port',str(args.port)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True,env=ssh_env)
-        tick,_=identity(proc.pid);data={'pid':proc.pid,'start_tick':tick,'host':args.host,'port':args.port,'log':str(log)}
+            proc=subprocess.Popen(['/usr/bin/python3',str(Path(__file__).resolve()),'run','--host',args.host,'--user',args.user,'--port',str(args.port),'--raw-udp-port',str(args.raw_udp_port)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True,env=ssh_env)
+        tick,_=identity(proc.pid);data={'pid':proc.pid,'start_tick':tick,'host':args.host,'port':args.port,'raw_udp_port':args.raw_udp_port,'log':str(log)}
         (STATE/'preflight-active.json').write_text(json.dumps(data,indent=2))
         time.sleep(.3)
         if proc.poll() is not None:raise RuntimeError(log.read_text()[-1500:])

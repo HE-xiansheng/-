@@ -1,0 +1,2 @@
+dbf01ed87d31d970a6b49d5c9de672ac0d91e7f36ca3496df42c38f67d3e1a89  groundstation/tools/preflight/telemetry_reader.py
+3df2aa3249ca24f58c07cece87a5acee1c6bc9eff9d6a2b23aca435201015900  tools/test_telemetry_ros2.py

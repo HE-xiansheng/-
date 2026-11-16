@@ -29,6 +29,8 @@ set_target_properties(customgeometry PROPERTIES
     MACOSX_BUNDLE TRUE
 )
 
+target_compile_definitions(customgeometry PRIVATE GCS_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
+
 target_link_libraries(customgeometry PUBLIC
     Qt::Core
     Qt::Gui
@@ -152,4 +154,9 @@ find_package(BZip2 QUIET)
 if(BZIP2_FOUND)
     target_link_libraries(customgeometry PRIVATE BZip2::BZip2)
     target_compile_definitions(customgeometry PRIVATE GCS_HAVE_BZIP2)
+endif()
+
+# Linux独立安装布局bin/../tools；Windows打包保留原有规则。
+if(UNIX AND NOT ANDROID AND NOT APPLE)
+    install(DIRECTORY tools/ DESTINATION tools FILES_MATCHING PATTERN "*.py" PATTERN "gcs-askpass" PATTERN "__pycache__" EXCLUDE)
 endif()

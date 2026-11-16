@@ -1,5 +1,6 @@
 #include "connectioncontroller.h"
 #include "sshsession.h"
+#include "runtimepaths.h"
 #include <QSettings>
 #include <QRegularExpression>
 #include <QCoreApplication>
@@ -71,7 +72,7 @@ void ConnectionController::finished(int code,QProcess::ExitStatus status) {
         emit endpointChanging();
         SshSession::password=m_pendingPassword;m_pendingPassword.clear();m_host=m_pendingHost;m_authenticated=true;
         QSettings().setValue("onboard/host",m_host);
-        const auto stateDir=QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("../../.pointcloud-link");
+        const auto stateDir=RuntimePaths::stateDirectory();
         if(QDir().mkpath(stateDir)) {
             QSaveFile saved(QDir(stateDir).filePath("connection.json"));
             if(saved.open(QIODevice::WriteOnly)) {
@@ -90,7 +91,7 @@ void ConnectionController::finished(int code,QProcess::ExitStatus status) {
         m_bridge.start(python,{"-u",helper,"--host",m_host,"--cloud-port",QString::number(m_cloudPort),"--pose-port",QString::number(m_posePort),"--preflight-port",QString::number(m_preflightPort)});
         emit changed();return;
 #else
-        const auto helper=QDir(QCoreApplication::applicationDirPath()).absoluteFilePath("../../dianyunGCS-master/tools/communication/manage_link.py");
+        const auto helper=RuntimePaths::tool("tools/communication/manage_link.py");
         if(!QFileInfo::exists(helper)){m_message=tr("SSH已连接；此安装目录未包含自动数据桥接工具");emit changed();return;}
         m_stage="link";m_message=tr("SSH已连接，正在接通点云和话题监视…");m_output.clear();
         SshSession::apply(m_process);

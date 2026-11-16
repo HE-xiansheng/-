@@ -1,0 +1,16 @@
+{
+  "baseline": "e9d6fad",
+  "target_platform": "5859393",
+  "ros": "Humble",
+  "qt": "6.8.3",
+  "files": {
+    "groundstation/tools/preflight/telemetry_reader.py": "dbf01ed87d31d970a6b49d5c9de672ac0d91e7f36ca3496df42c38f67d3e1a89",
+    "groundstation/tools/preflight/bridge.py": "15115fefc0c35df3fcbdfc3c7a333272585fc6a6d00151a50d4e5a0cc7abaa17",
+    "groundstation/tools/preflight/planner_display.py": "75dc6553d890aa0ac9d56b4afec3a85efe3c106c534f0c6e6adeb091d0f2c56a",
+    "groundstation/connectioncontroller.cpp": "5ee5b508c6a51e9ce7b31e4f410bb3a602938b01f966bd29a2a227d9cc4a4dc7",
+    "groundstation/runtimepaths.h": "5e5826781bcd8826e5df10219b4b8b3e84e21ee29b636a095f6b1cb9f5e83673",
+    "groundstation/tools/communication/runtime_paths.py": "207bc0cb318b2aaf21b4eb0f67ec031e23e49d9d300f055e6b750b99eec31d1d",
+    "tools/test_telemetry_ros2.py": "3df2aa3249ca24f58c07cece87a5acee1c6bc9eff9d6a2b23aca435201015900",
+    "tools/test_telemetry_ssh_qt.py": "7077293bde28509bac5aa71ec03ebd5e006bd08fdee7fe12bda0ddac3749cc17"
+  }
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """只管理现有点云/话题桥接进程；地址已由上位机验证，不操作网络或飞行服务。"""
 import argparse
+import os
 from pathlib import Path
 import subprocess
 
@@ -10,6 +11,7 @@ def main():
     parser.add_argument('--host',required=True)
     for name,default in [('cloud-port',9000),('pose-port',9001),('preflight-port',9003)]:
         parser.add_argument('--'+name,type=int,default=default)
+    parser.add_argument('--raw-udp-port',type=int,default=int(os.environ.get('GCS_RAW_UDP_PORT','9015')))
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[2]
     monitor=root/'tools/preflight/bridge.py'
@@ -19,7 +21,7 @@ def main():
         if result.returncode:raise RuntimeError('本地数据桥接操作失败：'+script.parent.name)
     run(cloud,'stop')
     run(monitor,'stop')
-    run(monitor,'start','--host',args.host,'--port',args.preflight_port)
+    run(monitor,'start','--host',args.host,'--port',args.preflight_port,'--raw-udp-port',args.raw_udp_port)
     run(cloud,'start','--host',args.host,'--port',args.cloud_port,'--with-pose','--pose-port',args.pose_port)
     print('只读数据桥接已启动',flush=True)
 

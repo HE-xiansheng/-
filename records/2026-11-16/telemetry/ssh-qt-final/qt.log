@@ -1,0 +1,18 @@
+PASS 测试状态目录显式隔离
+PASS 取得独立本机测试端口
+飞前状态仅监听本机127.0.0.1: 52785
+PASS 取得独立本机测试端口
+PASS 取得独立本机测试端口
+PASS Qt连接按钮路径经真实SSH接通只读遥测
+PASS 认证与本机桥接启动结束
+PASS 原Qt接收器收到有效FAST-LIO状态
+PASS 接收来源是目标机载地址
+PASS 自定义雷达消息小字段跨机传入Qt
+PASS 原生camera_init规划轨迹跨机进入Qt
+PASS 栅格参数与独立TLG1通道跨机进入Qt
+{"planning":{"candidate_path":[],"candidate_path_valid":false,"execution":{"output_enabled":false,"phase":"WAIT_OFFBOARD","stamp":1794834759.8299613},"grid_age_s":0.4384968730209948,"grid_count":1,"grid_display_valid":true,"grid_reason":"READY","grid_resolution":0.1,"grid_sequence":9877.779244639,"grid_source_count":1,"grid_valid":true,"path":[[0,0,1],[0.05,0,1],[0.1,0,1],[0.15000000000000002,0,1],[0.2,0,1],[0.25,0,1],[0.30000000000000004,0,1],[0.35000000000000003,0,1],[0.4,0,1],[0.45,0,1],[0.5,0,1],[0.55,0,1],[0.6000000000000001,0,1],[0.65,0,1],[0.7000000000000001,0,1],[0.75,0,1],[0.8,0,1],[0.8500000000000001,0,1],[0.9,0,1],[0.9500000000000001,0,1],[1,0,1]],"path_valid":true,"planning_mode":"upstream_fsm","start_time":1794834759.8299613,"status":{"candidate":{"available":false},"goal_frame":"camera_init","height_reference":"fastlio_session_origin","mode":"manual_preview","phase":"ACTIVE","planning_mode":"upstream_fsm","session_id":"fixture-session","stamp":1794834759.8299613,"trajectory_id":7},"trajectory_id":7},"sensors":{"fc_imu":{"age":0.02179075649473816,"frame":"","hz":19.775624778483262,"ok":true,"topic":"/mavros/imu/data","values":{"acceleration":[0,0,9.8],"angular_velocity":[0,0.1,0]}},"imu":{"age":0.02179075649473816,"frame":"","hz":19.708998794818267,"ok":true,"topic":"/livox/imu","values":{"acceleration":[0,0,9.8],"angular_velocity":[0,0.1,0]}},"lidar":{"age":0.02179075649473816,"frame":"","hz":19.714792312744738,"ok":true,"topic":"/livox/lidar","values":{"point_count":20300}},"pressure":{"age":0.02179075649473816,"frame":"","hz":19.771308616362983,"ok":true,"topic":"/mavros/imu/static_pressure","values":{"pressure_pa":101500}}}}
+{"running": false, "stopped": true}
+PASS 停止测试拥有的点云桥
+{"running": false, "stopped": true}
+PASS 停止测试拥有的监视桥
+PASS 断流后Qt不把旧采样标为实时

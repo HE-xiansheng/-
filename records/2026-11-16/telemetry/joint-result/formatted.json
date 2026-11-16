@@ -1,0 +1,343 @@
+{
+  "type": "PFS1",
+  "schema": 1,
+  "connected": true,
+  "source_host": "192.168.1.224",
+  "sample_period_s": 0.2,
+  "sensors": {
+    "imu": {
+      "ok": true,
+      "values": {
+        "angular_velocity": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "acceleration": [
+          0.0,
+          0.0,
+          9.8
+        ]
+      },
+      "topic": "/livox/imu",
+      "frame": "",
+      "hz": 23.65014591061518,
+      "age": 0.04423093795776367
+    },
+    "fc_imu": {
+      "ok": true,
+      "values": {
+        "angular_velocity": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "acceleration": [
+          0.0,
+          0.0,
+          9.8
+        ]
+      },
+      "topic": "/mavros/imu/data",
+      "frame": "",
+      "hz": 23.640107948859395,
+      "age": 0.04423093795776367
+    },
+    "lidar": {
+      "ok": true,
+      "values": {
+        "point_count": 20300
+      },
+      "topic": "/livox/lidar",
+      "frame": "",
+      "hz": 23.609202488143165,
+      "age": 0.04423093795776367
+    },
+    "pressure": {
+      "ok": true,
+      "values": {
+        "pressure_pa": 101500.0
+      },
+      "topic": "/mavros/imu/static_pressure",
+      "frame": "",
+      "hz": 23.63757242559611,
+      "age": 0.04423093795776367
+    }
+  },
+  "rows": [
+    {
+      "key": "lidar",
+      "label": "MID360点云",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "—",
+      "topic": "/livox/lidar",
+      "publishers": "/livox_lidar_publisher"
+    },
+    {
+      "key": "imu",
+      "label": "雷达IMU",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.7",
+      "age": "0.04",
+      "detail": "—",
+      "topic": "/livox/imu",
+      "publishers": "/livox_lidar_publisher"
+    },
+    {
+      "key": "lio",
+      "label": "FAST-LIO定位",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "Z 0.800m（定位原点，非离地）",
+      "topic": "/factory_fastlio/odometry",
+      "publishers": "/factory_laserMapping"
+    },
+    {
+      "key": "cloud",
+      "label": "规划点云",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "camera_init",
+      "topic": "/factory_fastlio/cloud_world",
+      "publishers": "/factory_laserMapping"
+    },
+    {
+      "key": "relay",
+      "label": "外部Pose转发",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "map",
+      "topic": "/mavros/vision_pose/pose",
+      "publishers": "/factory_vision2mavros"
+    },
+    {
+      "key": "fc_odom",
+      "label": "飞控里程计",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "map",
+      "topic": "/mavros/local_position/odom",
+      "publishers": "/mavros"
+    },
+    {
+      "key": "fc",
+      "label": "飞控连接/模式",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "POSCTL / 未解锁",
+      "topic": "/mavros/state",
+      "publishers": "/mavros"
+    },
+    {
+      "key": "landed",
+      "label": "着地状态",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "在地面",
+      "topic": "/mavros/extended_state",
+      "publishers": "/mavros"
+    },
+    {
+      "key": "ekf",
+      "label": "EKF估计",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "位置/速度有效",
+      "topic": "/mavros/estimator_status",
+      "publishers": "/mavros"
+    },
+    {
+      "key": "rc",
+      "label": "遥控输入",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "8通道 / RSSI 255",
+      "topic": "/mavros/rc/in",
+      "publishers": "/mavros"
+    },
+    {
+      "key": "battery",
+      "label": "电池",
+      "state": "正常",
+      "ok": true,
+      "hz": "23.6",
+      "age": "0.04",
+      "detail": "24.00V / 80%",
+      "topic": "/mavros/battery",
+      "publishers": "/mavros"
+    }
+  ],
+  "issues": [],
+  "stamp": 1794834388.4111836,
+  "planning": {
+    "status": {
+      "mode": "manual_preview",
+      "phase": "ACTIVE",
+      "session_id": "fixture-session",
+      "trajectory_id": 7,
+      "planning_mode": "upstream_fsm",
+      "goal_frame": "camera_init",
+      "height_reference": "fastlio_session_origin",
+      "candidate": {
+        "available": false
+      },
+      "stamp": 1794834388.364628
+    },
+    "execution": {
+      "stamp": 1794834388.364628,
+      "phase": "WAIT_OFFBOARD",
+      "output_enabled": false
+    },
+    "path": [
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.05,
+        0.0,
+        1.0
+      ],
+      [
+        0.1,
+        0.0,
+        1.0
+      ],
+      [
+        0.15000000000000002,
+        0.0,
+        1.0
+      ],
+      [
+        0.2,
+        0.0,
+        1.0
+      ],
+      [
+        0.25,
+        0.0,
+        1.0
+      ],
+      [
+        0.30000000000000004,
+        0.0,
+        1.0
+      ],
+      [
+        0.35000000000000003,
+        0.0,
+        1.0
+      ],
+      [
+        0.4,
+        0.0,
+        1.0
+      ],
+      [
+        0.45,
+        0.0,
+        1.0
+      ],
+      [
+        0.5,
+        0.0,
+        1.0
+      ],
+      [
+        0.55,
+        0.0,
+        1.0
+      ],
+      [
+        0.6000000000000001,
+        0.0,
+        1.0
+      ],
+      [
+        0.65,
+        0.0,
+        1.0
+      ],
+      [
+        0.7000000000000001,
+        0.0,
+        1.0
+      ],
+      [
+        0.75,
+        0.0,
+        1.0
+      ],
+      [
+        0.8,
+        0.0,
+        1.0
+      ],
+      [
+        0.8500000000000001,
+        0.0,
+        1.0
+      ],
+      [
+        0.9,
+        0.0,
+        1.0
+      ],
+      [
+        0.9500000000000001,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "path_valid": true,
+    "candidate_path": [],
+    "candidate_path_valid": false,
+    "grid_valid": false,
+    "grid_display_valid": false,
+    "grid_reason": "WAIT_GRID",
+    "trajectory_id": 7,
+    "planning_mode": "upstream_fsm",
+    "start_time": 1794834388.364628
+  },
+  "recording": {
+    "available": false,
+    "phase": "UNAVAILABLE",
+    "status_fresh": false
+  },
+  "localization": {
+    "lio_running": true,
+    "relay_running": true,
+    "session_id": "7227dae2-d65b-4a8a-be54-7717474e8fa5:198:010f2f61ea3f1cf100000000000078030000000000000000",
+    "identity_source": "ros2_graph",
+    "graph_fresh": true
+  },
+  "transport_delay_s": 0.0,
+  "sample_cost_s": null,
+  "transport": "ssh"
+}

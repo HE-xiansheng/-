@@ -1,0 +1,11 @@
+[ 14%] Running qmlimportscanner for check_preflight_link
+[ 14%] Built target check_preflight_link_qmlimportscan
+[ 14%] Built target check_preflight_link_autogen_timestamp_deps
+[ 28%] Automatic MOC for target check_preflight_link
+[ 28%] Built target check_preflight_link_autogen
+[ 42%] Building CXX object CMakeFiles/check_preflight_link.dir/check_preflight_link_autogen/mocs_compilation.cpp.o
+[ 57%] Building CXX object CMakeFiles/check_preflight_link.dir/check.cpp.o
+[ 71%] Building CXX object CMakeFiles/check_preflight_link.dir/home/tyzk/drone-migration-github/groundstation/connectioncontroller.cpp.o
+[ 85%] Building CXX object CMakeFiles/check_preflight_link.dir/home/tyzk/drone-migration-github/groundstation/preflightreceiver.cpp.o
+[100%] Linking CXX executable check_preflight_link
+[100%] Built target check_preflight_link

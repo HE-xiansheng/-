@@ -1,3 +1,5 @@
+> ROS2试验版点云/位姿/状态继续使用独立UDP数据面；本阶段仅做只读遥测迁移，没有新增MAVLink控制面、QGC集成或任务ACK。
+
 # QGC 集成链路建议
 
 本文记录未来把点云地面站能力集成到 QGroundControl（QGC）时的通信链路结论。当前项目尚未实现 QGC 插件或 QGC custom build，本文件只作为后续架构约束和对接说明。
