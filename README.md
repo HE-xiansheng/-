@@ -40,3 +40,5 @@
 [完整MAVROS候选与实际MAVLink验证](records/2026-11-16/mavros-platform/README.md)：22项localhost隔离检查通过，完整插件候选已部署，现有遥测服务未切换；真实PX4融合/SITL仍待验收。
 
 [独立USB相机适配记录](records/2026-11-16/usb-camera/README.md)：官方ROS2驱动、旧配置与采集服务候选已部署，隔离验证通过；实际独立相机尚未接入，未切换现有服务。
+
+[ArUco图像到控制器联合记录](records/2026-11-16/aruco-landing-chain/README.md)：21项实际节点隔离检查通过；合成数据不替代物理标定与飞控融合验收。

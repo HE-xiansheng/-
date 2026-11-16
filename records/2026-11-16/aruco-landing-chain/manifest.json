@@ -1,0 +1,13 @@
+{
+  "commit": "bd6c781a33d5389762481ea47379518fcfb75413",
+  "sha256": {
+    "01_apps/mission_demo/workspace/src/aruco_test/src/Safina_aruco_test.cpp": "93837845fd6e95e581c90524899e62f74637efdfece15074c699744f57f813de",
+    "01_apps/mission_demo/workspace/src/land_test/src/Safina_land_test.cpp": "4a4814d738eee3a8d09720e9b20ae7f77d9a30153a28fbd0f3f400179a2da367",
+    "01_apps/mission_demo/workspace/src/land_test/config/takeoff_land.yaml": "bac23c0f88770f31f8971f6db2b3bd8f6ac954f9ff660ed6ebc6e0d4e26f4207",
+    "01_apps/mission_demo/workspace/install/aruco_test/lib/aruco_test/Safina_aruco_test": "aecba6ab998807855600fd7c6732a3de065feb387fac2b2e71c065c257c7974e",
+    "01_apps/mission_demo/workspace/install/land_test/lib/land_test/Safina_land_test": "ca44b93128497bca0cdaae1b9755b830366a179081c3512d90c3992cd385003a"
+  },
+  "fixture_sha256": "b9cd817bac5204f75a4959ddfa44027d2636ecb3d1c55734fb35b32bbe24d62c",
+  "git_status": "",
+  "temporary_directory_cleaned": true
+}

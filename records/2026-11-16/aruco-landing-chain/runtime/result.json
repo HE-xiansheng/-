@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "actual image detector and controller diagnostics are ready",
+      "passed": true
+    },
+    {
+      "check": "PnP recovers synthetic optical position",
+      "passed": true
+    },
+    {
+      "check": "detector preserves actual image source header",
+      "passed": true
+    },
+    {
+      "check": "optical target maps to ENU at zero aircraft yaw",
+      "passed": true
+    },
+    {
+      "check": "marker is paired with pose history within configured tolerance",
+      "passed": true
+    },
+    {
+      "check": "healthy POSCTL standby produces only zero commands",
+      "passed": true
+    },
+    {
+      "check": "no flight service request before mode trigger",
+      "passed": true
+    },
+    {
+      "check": "image source wrong frame propagates and controller rejects it",
+      "passed": true
+    },
+    {
+      "check": "old image source cannot become a fresh control target",
+      "passed": true
+    },
+    {
+      "check": "future image source cannot become a control target",
+      "passed": true
+    },
+    {
+      "check": "blank image detector sentinel clears target",
+      "passed": true
+    },
+    {
+      "check": "calibration resolution mismatch cannot drive the controller",
+      "passed": true
+    },
+    {
+      "check": "unconfigured ArUco ID cannot drive the controller",
+      "passed": true
+    },
+    {
+      "check": "image target rotates into ENU using aircraft pose yaw",
+      "passed": true
+    },
+    {
+      "check": "fresh image chain enables task on simulated pilot mode edge",
+      "passed": true
+    },
+    {
+      "check": "controller moves toward the detected ENU target",
+      "passed": true
+    },
+    {
+      "check": "image dropout holds rather than continuing blind descent at 1.5m",
+      "passed": true
+    },
+    {
+      "check": "fresh images reacquire the control target",
+      "passed": true
+    },
+    {
+      "check": "pilot mode exit cancels without reclaiming control",
+      "passed": true
+    },
+    {
+      "check": "all generated commands obey finite ENU limits",
+      "passed": true
+    },
+    {
+      "check": "both native nodes exit normally",
+      "passed": true
+    }
+  ],
+  "returncodes": [
+    0,
+    0
+  ]
+}

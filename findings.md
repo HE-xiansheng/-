@@ -56,3 +56,5 @@
 2026-11-16：实际MAVROS2首PX4心跳可能先发布connected=true、mode=CMODE(65536)，随后才MANUAL；不能把连接位等同稳定模式。完整候选已验证真实MAVLink ENU/NED/FLU/FRD和源时刻语义，仍不证明PX4融合或SITL。
 
 2026-11-16：独立usb_cam在.235为0.3.7，/dev/usb_cam不存在且未注册capture服务；当前两台都无独立相机。ROS2官方0.8.1参数及采集API不同，已准备映射与兼容，并修复上游SetBool成功字段遗漏。Gemini/HDMI作为独立USB相机的错误选择现可在launch预检拒绝。
+
+2026-11-16：真实检测器与控制器在合成图像联合链路21项通过。现有本地PX4-1.16.1工程包含用户未提交的commander/板卡改动，不能把它当作官方1.16.0基线；为SITL准备独立官方v1.16.0checkout，不修改现有固件工程。
