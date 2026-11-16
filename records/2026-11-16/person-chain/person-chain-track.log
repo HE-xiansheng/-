@@ -1,0 +1,26 @@
+[INFO] [1794830859.152756449] [track]: track_test ready: control_rate=20.0 Hz require_offboard=1
+[INFO] [1794830859.152914240] [track]: The node never arms and never requests OFFBOARD; the pilot does that.
+[INFO] [1794830859.152932031] [track]: SWA mapping: up<=1211 pwm -> protection, <=1757 -> follow, above -> land
+[INFO] [1794830860.252859155] [track]: PX4 armed=1
+[INFO] [1794830863.256031197] [track]: OFFBOARD entered: holding at (2.00, 3.00, 1.00), SWA=mid(follow)
+[INFO] [1794830863.256344737] [track]: SWA mid: tracking enabled (z=1.00)
+[WARN] [1794830863.302942586] [track]: No primary target: holding position
+[INFO] [1794830863.352861625] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794830865.352924595] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794830867.402831479] [track]: tracking distance=2.00 m target=2.00 m source=2 valid=1 vx=0.00
+[INFO] [1794830869.452822155] [track]: tracking distance=1.00 m target=2.00 m source=2 valid=1 vx=-0.15
+[WARN] [1794830870.752975512] [track]: No primary target: holding position
+[WARN] [1794830871.803013806] [track]: No primary target: holding position
+[INFO] [1794830872.502805836] [track]: tracking distance=1.00 m target=2.00 m source=2 valid=1 vx=-0.15
+[INFO] [1794830874.552799720] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794830874.953053146] [track]: No primary target: holding position
+[WARN] [1794830876.002872024] [track]: No primary target: holding position
+[INFO] [1794830876.552828191] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[WARN] [1794830878.302918305] [track]: SWA up: protection hold
+[WARN] [1794830878.352891510] [track]: SWA up in OFFBOARD: protection hold (no takeoff, no altitude change)
+[INFO] [1794830880.302782319] [track]: SWA mid: tracking enabled (z=1.00)
+[INFO] [1794830880.352770190] [track]: tracking distance=3.00 m target=2.00 m source=2 valid=1 vx=0.30
+[INFO] [1794830882.302767081] [track]: Left OFFBOARD: SWA actions disabled, pilot has control
+[INFO] [1794830884.302748760] [track]: PX4 armed=0
+[INFO] [1794830884.302889635] [track]: OFFBOARD entered: holding at (2.00, 3.00, 1.00), SWA=mid(follow)
+[INFO] [1794830886.566710671] [rclcpp]: signal_handler(SIGINT/SIGTERM)

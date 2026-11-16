@@ -1,0 +1,67 @@
+Start testing: Nov 16 20:11 CST
+----------------------------------------------------------
+1/4 Testing: landing_task
+1/4 Test: landing_task
+Command: "/tmp/land-build/land_test/landing_task_test"
+Directory: /tmp/land-build/land_test
+"landing_task" start time: Nov 16 20:11 CST
+Output:
+----------------------------------------------------------
+48 landing lifecycle/scenario checks passed (ideal velocity response; no ROS/FCU)
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"landing_task" end time: Nov 16 20:11 CST
+"landing_task" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: mode_start_gate
+2/4 Test: mode_start_gate
+Command: "/tmp/land-build/land_test/mode_start_gate_test"
+Directory: /tmp/land-build/land_test
+"mode_start_gate" start time: Nov 16 20:11 CST
+Output:
+----------------------------------------------------------
+PX4 mode gate: startup, debounce, cancellation, no self-restart, telemetry loss, AUTO.LAND and airborne takeover passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"mode_start_gate" end time: Nov 16 20:11 CST
+"mode_start_gate" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: motion_limits
+3/4 Test: motion_limits
+Command: "/tmp/land-build/land_test/motion_limits_test"
+Directory: /tmp/land-build/land_test
+"motion_limits" start time: Nov 16 20:11 CST
+Output:
+----------------------------------------------------------
+Motion limits and takeoff arrival hold checks passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"motion_limits" end time: Nov 16 20:11 CST
+"motion_limits" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: takeoff_replay
+4/4 Test: takeoff_replay
+Command: "/tmp/land-build/land_test/takeoff_replay_test" "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/land_test/test/data/takeoff_hover_20261027.csv"
+Directory: /tmp/land-build/land_test
+"takeoff_replay" start time: Nov 16 20:11 CST
+Output:
+----------------------------------------------------------
+Recorded-flight replay: old gate remains TAKEOFF; new gate reaches TRANSLATE at +14.2 s and commands motion toward the accepted marker. 5 Hz measurements interpolated for offline policy regression only; no aircraft dynamics validation.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"takeoff_replay" end time: Nov 16 20:11 CST
+"takeoff_replay" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 16 20:11 CST

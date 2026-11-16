@@ -1,0 +1,18 @@
+{
+  "CMakeLists.txt": "5d1d172ff10c19f39b58c28a729530f4e13cdfe4d2c3e42d4bc2b35d0df14419",
+  "config/takeoff_land.yaml": "bac23c0f88770f31f8971f6db2b3bd8f6ac954f9ff660ed6ebc6e0d4e26f4207",
+  "include/gcu/gcu_control.c": "2bd465c70e28653329ce15bb4a1aeda19deca7aca4f1398891f04b6f59b4c6c8",
+  "include/gcu/gcu_control.h": "f46a180428a5fab9ede4540e2b0b093f89c70151c4a53132daa533ff6b4b8685",
+  "include/land_test/Safina_land_test.h": "29c34c6a2dd0e6afddd136b20f35879149c1a2bf80b7e46356fbb3871854db41",
+  "include/land_test/landing_task.h": "4ea63ffcd151999836789e949234a04dab0c883878817eeae0f2bb4db49ea058",
+  "include/land_test/mode_start_gate.h": "6de42bc9e72823adc32b35b4e3c827e8c67a8c7708e67144e1139d412bb24cfd",
+  "include/land_test/motion_limits.h": "d11cbc815e9b4f90e022441c07c45234e2221c64fc3981faf7959c862ab155b1",
+  "launch/Safina_land.launch.py": "3a0f7e6a9606e48a9071857166b1cb79188e82935bdb08602ebe669c422d9560",
+  "package.xml": "f7b18bc345a5c2a5d81ac9b17d4df6e6a847f80de8e8c9e730676abf0f93cc01",
+  "src/Safina_land_test.cpp": "4a4814d738eee3a8d09720e9b20ae7f77d9a30153a28fbd0f3f400179a2da367",
+  "test/data/takeoff_hover_20261027.csv": "8b9eb6198c956a65c4eeff3208265c7127380816aad1e0af3581e886baf57250",
+  "test/landing_task_test.cpp": "6063d77747968e8f365c57b846f7fc64a86fa09ad1c9d6c68a340aec7dd432b3",
+  "test/mode_start_gate_test.cpp": "2d477ee361e4c03622340d04716f07964088ae96abda675c47e73ed2fdecb6b6",
+  "test/motion_limits_test.cpp": "4eb1544f8189881812731d2d8cebce9b9c702e733e4d812f35616e05625a8cd0",
+  "test/takeoff_replay_test.cpp": "afeefc53f966ff0c900b5185d86964287f224927ebda312114f1276055320397"
+}

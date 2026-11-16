@@ -1,0 +1,32 @@
+[WARN] [1794831234.281595022] [Safina_land_test]: ArUco landing v3: WAITING. No arming or mode requests before trigger. Trigger=px4_mode auto_takeoff=false. Camera startup-down=false. PX4 mode trigger: wait for READY in POSCTL, then manually switch OFFBOARD. Standby streams zero velocity; PWM mapping is never interpreted here. Diagnostics: /tmp/land-bench-diags/landing_20261116_201354_62353.csv
+[WARN] [1794831236.215083492] [Safina_land_test]: RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for airborne landing takeover; no RC channel/slot mapping
+[WARN] [1794831237.415177717] [Safina_land_test]: PX4 mode gate waiting: competing_controller:/land_fake_px4:/mavros/setpoint_position/local
+[WARN] [1794831240.715112672] [Safina_land_test]: RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for airborne landing takeover; no RC channel/slot mapping
+[WARN] [1794831248.048433910] [Safina_land_test]: Landing task enabled by px4_mode; generation=1 auto_takeoff=0
+[WARN] [1794831248.048616492] [Safina_land_test]: Landing phase IDLE -> PRESTREAM reason=explicit_enable
+[WARN] [1794831249.281716013] [Safina_land_test]: Landing phase PRESTREAM -> ACQUIRE reason=takeover_confirmed
+[WARN] [1794831249.481706814] [Safina_land_test]: Landing phase ACQUIRE -> TRANSLATE reason=fresh_target_confirmed
+[WARN] [1794831249.815047081] [Safina_land_test]: Landing phase TRANSLATE -> STABILIZE reason=near_target_translation_stopped
+[WARN] [1794831250.148357597] [Safina_land_test]: Landing phase STABILIZE -> DESCEND reason=alignment_stable_descent_allowed
+[WARN] [1794831250.415026194] [Safina_land_test]: Landing phase DESCEND -> SHORT_LOSS reason=short_loss_inherit_world_target_pause_descent
+[WARN] [1794831250.615015245] [Safina_land_test]: Landing phase SHORT_LOSS -> LOST_HOLD reason=short_loss_budget_expired_hover
+[WARN] [1794831251.381704450] [Safina_land_test]: Landing phase LOST_HOLD -> TRANSLATE reason=fresh_target_confirmed
+[WARN] [1794831251.715031300] [Safina_land_test]: Landing phase TRANSLATE -> STABILIZE reason=near_target_translation_stopped
+[WARN] [1794831252.048813147] [Safina_land_test]: Landing phase STABILIZE -> DESCEND reason=alignment_stable_descent_allowed
+[WARN] [1794831252.748542225] [Safina_land_test]: Landing phase DESCEND -> CANCELLED reason=pilot_or_fcu_left_offboard
+[WARN] [1794831255.381589940] [Safina_land_test]: RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for airborne landing takeover; no RC channel/slot mapping
+[WARN] [1794831257.681570262] [Safina_land_test]: RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for airborne landing takeover; no RC channel/slot mapping
+[WARN] [1794831258.248355748] [Safina_land_test]: Landing task enabled by px4_mode; generation=3 auto_takeoff=0
+[WARN] [1794831258.248528997] [Safina_land_test]: Landing phase CANCELLED -> PRESTREAM reason=explicit_enable
+[WARN] [1794831259.481632392] [Safina_land_test]: Landing phase PRESTREAM -> ACQUIRE reason=takeover_confirmed
+[WARN] [1794831259.681661694] [Safina_land_test]: Landing phase ACQUIRE -> TRANSLATE reason=fresh_target_confirmed
+[WARN] [1794831260.014975127] [Safina_land_test]: Landing phase TRANSLATE -> STABILIZE reason=near_target_translation_stopped
+[WARN] [1794831260.348301435] [Safina_land_test]: Landing phase STABILIZE -> DESCEND reason=alignment_stable_descent_allowed
+[WARN] [1794831266.748246877] [Safina_land_test]: Landing phase DESCEND -> TERMINAL_ALIGN reason=terminal_hover_centered_align_offset
+[WARN] [1794831267.014908765] [Safina_land_test]: Landing phase TERMINAL_ALIGN -> TERMINAL_DESCEND reason=terminal_offset_corrected_descend
+[WARN] [1794831271.148279344] [Safina_land_test]: Landing phase TERMINAL_DESCEND -> LAND_HANDOFF reason=terminal_land_height_reached
+[INFO] [1794831271.184032789] [Safina_land_test]: Landing async request=land accepted=0 generation=3 current=3
+[INFO] [1794831272.217147508] [Safina_land_test]: Landing async request=land accepted=1 generation=3 current=3
+[WARN] [1794831272.248146233] [Safina_land_test]: Landing phase LAND_HANDOFF -> AUTO_LAND reason=auto_land_confirmed
+[WARN] [1794831276.048140171] [Safina_land_test]: Landing phase AUTO_LAND -> COMPLETE reason=landed_and_disarmed
+[INFO] [1794831277.023752288] [rclcpp]: signal_handler(SIGINT/SIGTERM)

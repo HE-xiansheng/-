@@ -1,0 +1,538 @@
+#include "land_test/Safina_land_test.h"
+#include <chrono>
+#include <future>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <ctime>
+#include <cstdlib>
+#include <cerrno>
+#include <iomanip>
+#include <sstream>
+#include <stdexcept>
+#include <utility>
+
+namespace {
+double steady() { return rclcpp::Clock(RCL_STEADY_TIME).now().seconds(); }
+bool recent(double then,double now,double timeout) { return then>=0 && now>=then && now-then<=timeout; }
+bool validQuaternion(const geometry_msgs::msg::Quaternion& q) {
+    double n=q.x*q.x+q.y*q.y+q.z*q.z+q.w*q.w;
+    return std::isfinite(n) && n>0.8*0.8 && n<1.2*1.2;
+}
+double yawOf(const geometry_msgs::msg::Quaternion& q) {
+    tf2::Quaternion quat(q.x,q.y,q.z,q.w);quat.normalize();
+    double r,p,y;tf2::Matrix3x3(quat).getRPY(r,p,y);return y;
+}
+bool finitePosition(const geometry_msgs::msg::Point& p) {
+    return std::isfinite(p.x)&&std::isfinite(p.y)&&std::isfinite(p.z);
+}
+}
+
+bool Safina_land::competingPublisher(std::string& reason) const {
+    for (const std::string topic : {"/mavros/setpoint_raw/local","/mavros/setpoint_position/local",
+        "/mavros/setpoint_raw/attitude","/mavros/setpoint_attitude/attitude",
+        "/mavros/setpoint_velocity/cmd_vel","/mavros/setpoint_velocity/cmd_vel_unstamped"}) {
+        try {
+            for (const auto &endpoint : node_->get_publishers_info_by_topic(topic)) {
+                auto ns=endpoint.node_namespace();
+                const auto name=(ns=="/" ? ns : ns+"/")+endpoint.node_name();
+                if (name!=node_->get_fully_qualified_name()) {reason="competing_controller:"+name+":"+topic;return true;}
+            }
+        } catch (const std::exception &e) {reason="cannot_check_control_publishers:"+std::string(e.what());return true;}
+    }
+    return false;
+}
+
+bool Safina_land::sourceFresh(const builtin_interfaces::msg::Time &stamp,double timeout) const {
+    const rclcpp::Time t(stamp); const double age=(node_->now()-t).seconds();
+    return t.nanoseconds()>0 && age>=-0.1 && age<=timeout;
+}
+
+Safina_land::Safina_land(rclcpp::Node::SharedPtr node) : node_(node) {
+    loadParameters();task_.reset(new land_task::Task(config_));openDiagnostics();
+    command_pub_=node_->create_publisher<mavros_msgs::msg::PositionTarget>("/mavros/setpoint_raw/local",1);
+    diagnostic_pub_=node_->create_publisher<std_msgs::msg::String>("/aruco_landing/status",rclcpp::QoS(1).transient_local());
+    header_pub_=node_->create_publisher<std_msgs::msg::String>("/aruco_landing/status_header",rclcpp::QoS(1).transient_local());
+    std_msgs::msg::String schema;schema.data=diagnostic_header_;header_pub_->publish(schema);
+    goal_pub_=node_->create_publisher<geometry_msgs::msg::PoseStamped>("/aruco_landing/active_goal",1);
+    target_pub_=node_->create_publisher<geometry_msgs::msg::PoseStamped>("/aruco_landing/accepted_target",1);
+    path_pub_=node_->create_publisher<nav_msgs::msg::Path>("/aruco_landing/guidance_path",1);
+    state_sub_=node_->create_subscription<mavros_msgs::msg::State>("/mavros/state",rclcpp::SensorDataQoS(),std::bind(&Safina_land::stateCallback,this,std::placeholders::_1));
+    pose_sub_=node_->create_subscription<geometry_msgs::msg::PoseStamped>("/mavros/local_position/pose",rclcpp::SensorDataQoS(),std::bind(&Safina_land::poseCallback,this,std::placeholders::_1));
+    velocity_sub_=node_->create_subscription<geometry_msgs::msg::TwistStamped>("/mavros/local_position/velocity_local",rclcpp::SensorDataQoS(),std::bind(&Safina_land::velocityCallback,this,std::placeholders::_1));
+    extended_sub_=node_->create_subscription<mavros_msgs::msg::ExtendedState>("/mavros/extended_state",rclcpp::SensorDataQoS(),std::bind(&Safina_land::extendedCallback,this,std::placeholders::_1));
+    marker_sub_=node_->create_subscription<geometry_msgs::msg::PoseStamped>("/aruco_poseresult",rclcpp::QoS(1),std::bind(&Safina_land::markerCallback,this,std::placeholders::_1));
+    mode_client_=node_->create_client<mavros_msgs::srv::SetMode>("/mavros/set_mode");
+    arm_client_=node_->create_client<mavros_msgs::srv::CommandBool>("/mavros/cmd/arming");
+    enable_service_=node_->create_service<std_srvs::srv::SetBool>("/aruco_landing/enable",
+        [this](const std::shared_ptr<std_srvs::srv::SetBool::Request> request,std::shared_ptr<std_srvs::srv::SetBool::Response> response) { enable(*request,*response); });
+    worker_=std::thread(&Safina_land::workerLoop,this);
+    if(command_gimbal_down_&&gimbal_down_on_startup_) {
+        std::lock_guard<std::mutex> lock(mutex_);
+        job_="gimbal_startup";job_generation_=generation_;pending_=true;gimbal_status_="startup_pending";jobs_.notify_one();
+    }
+    timer_=node_->create_wall_timer(std::chrono::duration<double>(1.0/30.0),std::bind(&Safina_land::tick,this));
+    RCLCPP_WARN(node_->get_logger(), "ArUco landing v3: WAITING. No arming or mode requests before trigger. "
+             "Trigger=%s auto_takeoff=%s. Camera startup-down=%s. PX4 mode trigger: wait for READY in POSCTL, then manually switch OFFBOARD. Standby streams zero velocity; PWM mapping is never interpreted here. Diagnostics: %s",
+             start_trigger_.c_str(),config_.auto_takeoff?"true":"false",
+             (command_gimbal_down_&&gimbal_down_on_startup_)?"true":"false",diagnostic_path_.c_str());
+}
+
+Safina_land::~Safina_land() {
+    timer_->cancel();
+    {std::lock_guard<std::mutex> lock(mutex_);stopping_=true;pending_=false;++generation_;}
+    jobs_.notify_all();
+    if(worker_.joinable())worker_.join();
+    // Destruction must never change flight mode or re-arm the aircraft.
+    if(diagnostic_file_)diagnostic_file_.flush();
+}
+
+void Safina_land::loadParameters() {
+
+    auto positive=[&](const char* key,double& value) {
+        value=node_->declare_parameter<double>(key,value);
+        if(!std::isfinite(value)||value<=0)throw std::runtime_error(std::string("Invalid positive parameter: ")+key);
+    };
+    local_frame_=node_->declare_parameter("local_frame",local_frame_);
+    marker_frame_=node_->declare_parameter("marker_frame",marker_frame_);
+    if(local_frame_.empty()||marker_frame_.empty())throw std::invalid_argument("Empty configured frame");
+    config_.takeoff_altitude=node_->declare_parameter<double>("takeOff_altitude",config_.takeoff_altitude);
+    config_.auto_takeoff=node_->declare_parameter("auto_takeoff",config_.auto_takeoff);
+    start_trigger_=node_->declare_parameter("start_trigger",start_trigger_);
+    // Accept old launch overrides as an alias, without restoring PWM decoding.
+    if(start_trigger_=="rc_offboard") {
+        RCLCPP_WARN(node_->get_logger(), "start_trigger=rc_offboard is deprecated; using PX4-reported mode instead of RC PWM");
+        start_trigger_="px4_mode";
+    }
+    mode_gate_.config.ready_hold_seconds=node_->declare_parameter("mode_ready_hold_seconds",mode_gate_.config.ready_hold_seconds);
+    mode_gate_.config.offboard_hold_seconds=node_->declare_parameter("mode_offboard_hold_seconds",mode_gate_.config.offboard_hold_seconds);
+    if((start_trigger_!="service"&&start_trigger_!="px4_mode")||!mode_gate_.config.valid())
+        throw std::runtime_error("Invalid start trigger or PX4 mode debounce parameters");
+
+    config_.align_yaw=node_->declare_parameter("align_yaw",config_.align_yaw);
+    config_.soft_yaw_enabled=node_->declare_parameter("soft_yaw_enabled",config_.soft_yaw_enabled);
+    config_.soft_yaw_to_top_edge=node_->declare_parameter("soft_yaw_to_top_edge",config_.soft_yaw_to_top_edge);
+    config_.soft_yaw_approach=node_->declare_parameter("soft_yaw_approach",config_.soft_yaw_approach);
+    positive("soft_yaw_kp",config_.soft_yaw_kp);
+    positive("soft_yaw_max_rate",config_.soft_yaw_max_rate);
+    config_.soft_yaw_deadband=node_->declare_parameter("soft_yaw_deadband",config_.soft_yaw_deadband);
+    if(!std::isfinite(config_.soft_yaw_deadband)||config_.soft_yaw_deadband<0)
+        throw std::runtime_error("Invalid soft yaw deadband");
+    config_.xy_kd=node_->declare_parameter("xy_kd",config_.xy_kd);
+    config_.z_kd=node_->declare_parameter("z_kd",config_.z_kd);
+    config_.xy_ki=node_->declare_parameter("xy_ki",config_.xy_ki);
+    config_.z_ki=node_->declare_parameter("z_ki",config_.z_ki);
+    positive("xy_integral_limit",config_.xy_integral_limit);
+    positive("z_integral_limit",config_.z_integral_limit);
+    config_.terminal_descent_enabled=node_->declare_parameter("terminal_descent_enabled",config_.terminal_descent_enabled);
+    positive("terminal_marker_depth",config_.terminal_marker_depth);
+    positive("terminal_height",config_.terminal_height);
+    positive("terminal_align_error",config_.terminal_align_error);
+    positive("terminal_align_confirm_seconds",config_.terminal_align_confirm_seconds);
+    positive("terminal_align_timeout",config_.terminal_align_timeout);
+    config_.terminal_heading_hold=node_->declare_parameter("terminal_heading_hold",config_.terminal_heading_hold);
+    positive("terminal_heading_kp",config_.terminal_heading_kp);
+    positive("terminal_heading_max_rate",config_.terminal_heading_max_rate);
+    positive("terminal_hold_kp",config_.terminal_hold_kp);
+    config_.terminal_hold_kd=node_->declare_parameter("terminal_hold_kd",config_.terminal_hold_kd);
+    config_.terminal_hold_ki=node_->declare_parameter("terminal_hold_ki",config_.terminal_hold_ki);
+    positive("terminal_integral_limit",config_.terminal_integral_limit);
+    positive("terminal_slow_height",config_.terminal_slow_height);
+    positive("terminal_slow_speed",config_.terminal_slow_speed);
+    positive("terminal_hold_speed",config_.terminal_hold_speed);
+    positive("terminal_land_height",config_.terminal_land_height);
+    positive("terminal_center_error",config_.terminal_center_error);
+    positive("terminal_descent_speed",config_.terminal_descent_speed);
+    positive("terminal_max_descent",config_.terminal_max_descent);
+    positive("terminal_timeout",config_.terminal_timeout);
+    positive("terminal_max_drift",config_.terminal_max_drift);
+    positive("terminal_confirm_seconds",config_.terminal_confirm_seconds);
+    positive("terminal_loss_depth",config_.terminal_loss_depth);
+    positive("terminal_loss_error",config_.terminal_loss_error);
+    image_latency_=node_->declare_parameter("image_latency_seconds",image_latency_);
+    if(!std::isfinite(image_latency_)||image_latency_<0||image_latency_>1.0)
+        throw std::runtime_error("Invalid image latency compensation");
+    config_.short_loss_enabled=node_->declare_parameter("short_loss_enabled",config_.short_loss_enabled);
+    positive("short_loss_seconds",config_.short_loss_seconds);positive("short_loss_speed",config_.short_loss_speed);
+    positive("short_loss_max_travel",config_.short_loss_max_travel);positive("reacquire_seconds",config_.reacquire_seconds);
+    positive("takeoff_speed",config_.takeoff_speed);positive("takeoff_kp",config_.takeoff_kp);
+    positive("hover_seconds",config_.hover_seconds);positive("xy_kp",config_.xy_kp);
+    positive("descend_xy_gain_height",config_.descend_xy_gain_height);
+    positive("descend_xy_kp",config_.descend_xy_kp);
+    positive("takeoff_xy_tolerance",config_.takeoff_xy_tolerance);
+    positive("takeoff_z_tolerance",config_.takeoff_z_tolerance);
+    positive("takeoff_stable_xy_speed",config_.takeoff_stable_xy_speed);
+    positive("takeoff_stable_z_speed",config_.takeoff_stable_z_speed);
+    positive("takeoff_stable_yaw_rate",config_.takeoff_stable_yaw_rate);
+    positive("z_kp",config_.z_kp);positive("yaw_kp",config_.yaw_kp);
+    positive("descent_speed",config_.descent_speed);positive("max_xy_speed",config_.max_xy_speed);
+    positive("max_z_speed",config_.max_z_speed);positive("max_yaw_rate",config_.max_yaw_rate);
+    positive("yaw_hold_speed",config_.yaw_hold_speed);positive("yaw_hold_kp",config_.yaw_hold_kp);
+    positive("max_xy_accel",config_.max_xy_accel);positive("max_z_accel",config_.max_z_accel);
+    positive("max_yaw_accel",config_.max_yaw_accel);positive("yaw_start_error",config_.yaw_start_error);
+    positive("yaw_exit_error",config_.yaw_exit_error);positive("align_enter_error",config_.align_enter_error);
+    positive("align_exit_error",config_.align_exit_error);positive("yaw_tolerance",config_.yaw_tolerance);
+    positive("yaw_exit_tolerance",config_.yaw_exit_tolerance);positive("stable_seconds",config_.stable_seconds);
+    positive("stable_xy_speed",config_.stable_xy_speed);positive("stable_z_speed",config_.stable_z_speed);
+    positive("stable_yaw_rate",config_.stable_yaw_rate);positive("target_confirm_seconds",config_.target_confirm_seconds);
+    positive("target_timeout",config_.target_timeout);positive("initial_target_timeout",config_.initial_target_timeout);
+    positive("final_marker_distance",config_.final_marker_distance);positive("final_confirm_seconds",config_.final_confirm_seconds);
+    positive("near_ground_loss_seconds",config_.near_ground_loss_seconds);positive("prestream_seconds",config_.prestream_seconds);
+    // READY must follow at least a full prestream interval, so PX4 accepts the manual switch.
+    mode_gate_.config.ready_hold_seconds=std::max(mode_gate_.config.ready_hold_seconds,config_.prestream_seconds);
+    positive("takeover_timeout",config_.takeover_timeout);positive("handoff_timeout",config_.handoff_timeout);
+    positive("retry_seconds",config_.retry_seconds);positive("max_tick_gap",config_.max_tick_gap);
+    positive("state_timeout",state_timeout_);positive("pose_timeout",pose_timeout_);
+    positive("velocity_timeout",velocity_timeout_);positive("extended_timeout",extended_timeout_);
+    positive("source_stamp_timeout",source_stamp_timeout_);positive("pose_image_tolerance",pose_image_tolerance_);
+    positive("target_alpha",target_alpha_);positive("max_marker_range",max_marker_range_);
+    positive("max_target_jump",max_target_jump_);positive("diagnostic_hz",diagnostic_hz_);
+    camera_offset_x_=node_->declare_parameter("camera_offset_x",camera_offset_x_);
+    camera_offset_y_=node_->declare_parameter("camera_offset_y",camera_offset_y_);
+    camera_offset_z_=node_->declare_parameter("camera_offset_z",camera_offset_z_);
+    command_gimbal_down_=node_->declare_parameter("command_gimbal_down",command_gimbal_down_);
+    gimbal_down_on_startup_=node_->declare_parameter("gimbal_down_on_startup",gimbal_down_on_startup_);
+    gimbal_ip_=node_->declare_parameter("gimbal_ip",gimbal_ip_);gimbal_port_=node_->declare_parameter("gimbal_port",gimbal_port_);
+    diagnostic_path_=node_->declare_parameter<std::string>("diagnostic_directory","");
+    std::string error;
+    if(!config_.valid(error))throw std::runtime_error(error);
+    if(target_alpha_>1||diagnostic_hz_>30||gimbal_port_<=0||gimbal_port_>65535||
+       !std::isfinite(camera_offset_x_)||!std::isfinite(camera_offset_y_)||!std::isfinite(camera_offset_z_))
+        throw std::runtime_error("Invalid filter, diagnostics, camera offset or gimbal parameter");
+}
+
+void Safina_land::openDiagnostics() {
+    if(diagnostic_path_.empty()) {
+        diagnostic_path_="/tmp/aruco_landing-"+std::to_string(::getuid());
+    }
+    if(::mkdir(diagnostic_path_.c_str(),0755)!=0 && errno!=EEXIST)
+        throw std::runtime_error("Cannot create diagnostics directory: "+diagnostic_path_);
+    std::time_t now=std::time(nullptr);char date[32];std::strftime(date,sizeof(date),"%Y%m%d_%H%M%S",std::localtime(&now));
+    diagnostic_path_+="/landing_"+std::string(date)+"_"+std::to_string(::getpid())+".csv";
+    diagnostic_file_.open(diagnostic_path_);
+    if(!diagnostic_file_)throw std::runtime_error("Cannot open diagnostic CSV");
+    diagnostic_file_<<"# auto_takeoff="<<config_.auto_takeoff<<",takeoff_altitude="<<config_.takeoff_altitude
+        <<",max_xy_speed="<<config_.max_xy_speed<<",descent_speed="<<config_.descent_speed
+        <<",max_yaw_rate="<<config_.max_yaw_rate<<",max_xy_accel="<<config_.max_xy_accel
+        <<",max_z_accel="<<config_.max_z_accel<<",max_yaw_accel="<<config_.max_yaw_accel
+        <<",takeoff_speed="<<config_.takeoff_speed<<",takeoff_xy_tolerance="<<config_.takeoff_xy_tolerance
+        <<",takeoff_z_tolerance="<<config_.takeoff_z_tolerance
+        <<",takeoff_stable_xy_speed="<<config_.takeoff_stable_xy_speed
+        <<",takeoff_stable_z_speed="<<config_.takeoff_stable_z_speed
+        <<",takeoff_stable_yaw_rate="<<config_.takeoff_stable_yaw_rate<<"\n";
+    diagnostic_header_="ros_time,steady_time,phase,reason,enabled,mode,armed,x,y,z,yaw,vx,vy,vz,yaw_rate,"
+        "target_valid,target_age,target_x,target_y,xy_error,marker_yaw,marker_depth,desired_vx,desired_vy,"
+        "desired_vz,desired_yaw_rate,cmd_vx,cmd_vy,cmd_vz,cmd_yaw_rate,published,planned_descent,"
+        "request_offboard,request_arm,request_land,search_elapsed,mode_state_fresh,legacy_rc_slot_unused,px4_offboard_selected,mode_edge_ready,"
+        "takeoff_xy_error,takeoff_z_error,takeoff_failed_gates,takeoff_hold_seconds,"
+        "marker_reason,marker_source_age,marker_pair_dt,marker_jump,marker_received,marker_accepted,"
+        "target_z,goal_x,goal_y,goal_z,goal_valid,marker_rx_age,gimbal_ready,gimbal_status,inherit_age,inherit_travel,yaw_hold_active,descent_failed_gates,alignment_hold_seconds";
+    diagnostic_file_<<diagnostic_header_<<'\n';
+    diagnostic_file_.flush();
+}
+
+land_task::Input Safina_land::input(double now) const {
+    land_task::Input i;i.now=now;
+    i.state_ok=recent(state_at_,now,state_timeout_)&&sourceFresh(state_.header.stamp,state_timeout_);i.pose_ok=pose_valid_&&recent(pose_at_,now,pose_timeout_)&&sourceFresh(pose_.header.stamp,source_stamp_timeout_);
+    i.velocity_ok=velocity_valid_&&recent(velocity_at_,now,velocity_timeout_)&&sourceFresh(velocity_.header.stamp,source_stamp_timeout_);
+    i.extended_ok=recent(extended_at_,now,extended_timeout_)&&sourceFresh(extended_.header.stamp,extended_timeout_);i.connected=state_.connected;
+    i.armed=state_.armed;i.mode=state_.mode;i.landed_state=extended_.landed_state;
+    i.x=pose_.pose.position.x;i.y=pose_.pose.position.y;i.z=pose_.pose.position.z;i.yaw=yaw_;
+    i.vx=velocity_.twist.linear.x;i.vy=velocity_.twist.linear.y;i.vz=velocity_.twist.linear.z;i.yaw_rate=yaw_rate_;
+    i.target_valid=marker_valid_&&recent(marker_rx_at_,now,config_.target_timeout);
+    i.target_time=marker_valid_at_;i.target_x=target_x_;i.target_y=target_y_;
+    i.target_body_x=target_body_x_;i.target_body_y=target_body_y_;
+    i.target_yaw=marker_yaw_;i.target_distance=marker_distance_;
+    i.gimbal_ready=!command_gimbal_down_||gimbal_ready_;
+    return i;
+}
+
+void Safina_land::stateCallback(const mavros_msgs::msg::State::ConstSharedPtr& m) {
+    std::lock_guard<std::mutex> lock(mutex_);state_=*m;state_at_=steady();
+    if(task_->active()&&task_->offboardSeen()&&m->mode!="OFFBOARD" &&
+       !(task_->phase()==land_task::Phase::LAND_HANDOFF&&task_->landRequested()&&m->mode=="AUTO.LAND") &&
+       !(task_->phase()==land_task::Phase::AUTO_LAND&&m->mode=="AUTO.LAND")) {
+        task_->cancel("pilot_or_fcu_left_offboard");pending_=false;++generation_;
+    }
+}
+void Safina_land::extendedCallback(const mavros_msgs::msg::ExtendedState::ConstSharedPtr& m) {
+    std::lock_guard<std::mutex> lock(mutex_);extended_=*m;extended_at_=steady();
+}
+void Safina_land::poseCallback(const geometry_msgs::msg::PoseStamped::ConstSharedPtr& m) {
+    std::lock_guard<std::mutex> lock(mutex_);const double now=steady();
+    pose_=*m;pose_at_=now;pose_valid_=m->header.frame_id==local_frame_&&finitePosition(m->pose.position)&&validQuaternion(m->pose.orientation);
+    const double age=(node_->now()-rclcpp::Time(m->header.stamp)).seconds();
+    pose_valid_=pose_valid_&&m->header.frame_id==local_frame_&&!(rclcpp::Time(m->header.stamp).nanoseconds()==0)&&age>=-0.1&&age<=source_stamp_timeout_;
+    if(!pose_valid_ || rclcpp::Time(m->header.stamp).seconds()<=last_pose_time_) {pose_valid_=false;return;}
+    yaw_=yawOf(m->pose.orientation);
+    const double source_time=rclcpp::Time(m->header.stamp).seconds();
+    if(last_pose_time_>=0&&source_time>last_pose_time_)
+        yaw_rate_=land_task::angle(yaw_-last_pose_yaw_)/(source_time-last_pose_time_);
+    last_pose_yaw_=yaw_;last_pose_time_=source_time;
+    poses_.push_back({*m,now});while(poses_.size()>90)poses_.pop_front();
+}
+void Safina_land::velocityCallback(const geometry_msgs::msg::TwistStamped::ConstSharedPtr& m) {
+    std::lock_guard<std::mutex> lock(mutex_);velocity_=*m;velocity_at_=steady();
+    const auto& v=m->twist.linear;
+    const double age=(node_->now()-rclcpp::Time(m->header.stamp)).seconds();
+    velocity_valid_=m->header.frame_id==local_frame_&&std::isfinite(v.x)&&std::isfinite(v.y)&&std::isfinite(v.z)&&
+        !(rclcpp::Time(m->header.stamp).nanoseconds()==0)&&age>=-0.1&&age<=source_stamp_timeout_;
+}
+void Safina_land::markerCallback(const geometry_msgs::msg::PoseStamped::ConstSharedPtr& m) {
+    std::lock_guard<std::mutex> lock(mutex_);const double now=steady();marker_rx_at_=now;
+    marker_valid_=false;++marker_received_;marker_pair_dt_=-1;marker_jump_=0;
+    const auto& p=m->pose.position;
+    const double age=(node_->now()-rclcpp::Time(m->header.stamp)).seconds();marker_source_age_=age;
+    if(m->header.frame_id!=marker_frame_)marker_reason_="unexpected_marker_frame";
+    else if(!finitePosition(p)||p.z<=0)marker_reason_="detector_no_selected_target";
+    else if(p.z>max_marker_range_)marker_reason_="marker_out_of_range";
+    else if(!validQuaternion(m->pose.orientation))marker_reason_="invalid_marker_quaternion";
+    else if((rclcpp::Time(m->header.stamp).nanoseconds()==0))marker_reason_="missing_source_stamp";
+    else if(age< -0.1||age>source_stamp_timeout_)marker_reason_="source_stamp_stale";
+    else if(!pose_valid_||!recent(pose_at_,now,pose_timeout_))marker_reason_="local_pose_unavailable";
+    else marker_reason_="pairing";
+    if(marker_reason_!="pairing") {
+        if(!recent(marker_valid_at_,now,std::max(config_.target_timeout,config_.short_loss_seconds)))target_filter_ready_=false;return;
+    }
+    // RTSP currently uses decode receipt time; a real capture stamp is preserved
+    // when provided. Pair the optical pose with the aircraft pose from image_latency_
+    // seconds earlier so motion during the capture/transport delay does not
+    // shift the world target (v * latency bias).
+    rclcpp::Time pair_stamp(m->header.stamp);
+    if(image_latency_>0) pair_stamp-=rclcpp::Duration::from_seconds(image_latency_);
+    auto find_pair=[&](const rclcpp::Time& target) {
+        const TimedPose* best=nullptr;double best_delta=pose_image_tolerance_;
+        for(const auto& pose:poses_) {
+            const double d=std::fabs((rclcpp::Time(pose.message.header.stamp)-target).seconds());
+            if(d<=best_delta) {best_delta=d;best=&pose;}
+        }
+        return std::make_pair(best,best_delta);
+    };
+    auto found_pair=find_pair(pair_stamp);
+    if(!found_pair.first&&image_latency_>0) found_pair=find_pair(rclcpp::Time(m->header.stamp));
+    const TimedPose* paired=found_pair.first;double delta=found_pair.second;
+    if(!paired){marker_reason_="pose_image_not_synchronized";
+        if(!recent(marker_valid_at_,now,std::max(config_.target_timeout,config_.short_loss_seconds)))target_filter_ready_=false;return;
+    }
+    marker_pair_dt_=delta;
+    const double y=yawOf(paired->message.pose.orientation),cy=std::cos(y),sy=std::sin(y);
+    // The approach drives the camera axis onto the marker: the body-centre
+    // offset is deliberately NOT included here. It is added to target_body_*
+    // and used only after the close-range hover, just before the blind descent.
+    const double bx=-p.y,by=-p.x;
+    const double tx=paired->message.pose.position.x+cy*bx-sy*by;
+    const double ty=paired->message.pose.position.y+sy*bx+cy*by;
+    marker_jump_=std::hypot(tx-target_x_,ty-target_y_);
+    if(target_filter_ready_&&recent(marker_valid_at_,now,std::max(config_.target_timeout,config_.short_loss_seconds))&&
+       marker_jump_>max_target_jump_){marker_reason_="target_jump_rejected";return;}
+    if(!target_filter_ready_||!recent(marker_valid_at_,now,std::max(config_.target_timeout,config_.short_loss_seconds))) {target_x_=tx;target_y_=ty;}
+    else {target_x_+=target_alpha_*(tx-target_x_);target_y_+=target_alpha_*(ty-target_y_);}
+    // Body-centre target = camera target + body-frame camera offset, rotated by
+    // the aircraft yaw at image time. Used only by the terminal offset stage.
+    target_body_x_=target_x_+cy*camera_offset_x_-sy*camera_offset_y_;
+    target_body_y_=target_y_+sy*camera_offset_x_+cy*camera_offset_y_;
+    target_filter_ready_=true;marker_valid_=true;marker_valid_at_=now;
+    marker_distance_=p.z-camera_offset_z_;
+    target_z_=paired->message.pose.position.z-marker_distance_;
+    marker_reason_="accepted";++marker_accepted_;
+    marker_yaw_=land_task::angle(yawOf(m->pose.orientation)+land_task::angle(yaw_-y));
+}
+
+bool Safina_land::enable(std_srvs::srv::SetBool::Request& request,std_srvs::srv::SetBool::Response& response) {
+    if(request.data&&start_trigger_=="px4_mode") {
+        response.success=false;response.message="PX4 mode trigger selected: wait in POSCTL, then manually switch OFFBOARD; no service enable needed";
+        return true;
+    }
+    if(request.data) {
+        std::string conflict;
+        if(competingPublisher(conflict)) {response.success=false;response.message=conflict;return true;}
+    }
+    std::lock_guard<std::mutex> lock(mutex_);
+    if(!request.data) {
+        task_->cancel("explicit_disable");pending_=false;++generation_;
+        response.success=true;response.message="Task cancelled; no mode is reclaimed. Select pilot mode if still OFFBOARD.";
+        return true;
+    }
+    std::string reason;response.success=startTask(steady(),reason);response.message=reason;
+    return true;
+}
+
+// Caller holds mutex; publisher-conflict check is done before entering here.
+bool Safina_land::startTask(double now,std::string& reason) {
+    if(worker_busy_||pending_) {reason="previous_async_job_still_running";return false;}
+    if(!task_->enable(input(now),reason))return false;
+    ++generation_;pending_=false;gimbal_ready_=!command_gimbal_down_;
+    if(command_gimbal_down_){gimbal_status_="task_down_pending";queueJob("gimbal_down",now);}
+    RCLCPP_WARN(node_->get_logger(), "Landing task enabled by %s; generation=%lu auto_takeoff=%d",start_trigger_.c_str(),generation_,config_.auto_takeoff);
+    return true;
+}
+
+void Safina_land::queueJob(const std::string& kind,double) {
+    if(pending_||worker_busy_||!task_->active())return;
+    job_=kind;job_generation_=generation_;job_mode_=state_.mode;pending_=true;jobs_.notify_one();
+}
+void Safina_land::workerLoop() {
+    for(;;) {
+        std::unique_lock<std::mutex> lock(mutex_);
+        jobs_.wait(lock,[this]{return stopping_||pending_;});if(stopping_)return;
+        const std::string kind=job_,expected_mode=job_mode_;const auto generation=job_generation_;
+        pending_=false;
+        // Explicit camera-only startup exception. It cannot call any FCU service,
+        // publish flight setpoints, or enable the task. All flight jobs below
+        // retain their task/PX4-mode/state/generation guards.
+        if(kind=="gimbal_startup") {
+            if(!command_gimbal_down_||!gimbal_down_on_startup_)continue;
+            worker_busy_=true;gimbal_status_="startup_down_running";lock.unlock();bool ok=false;
+            gcu_handle_t* handle=gcu_connect(gimbal_ip_.c_str(),gimbal_port_);
+            if(handle){ok=gcu_set_angle(handle,0,-90,0)==0;gcu_disconnect(handle);}
+            lock.lock();worker_busy_=false;gimbal_ready_=ok;
+            gimbal_status_=ok?"startup_down_acknowledged":"startup_down_failed";
+            RCLCPP_WARN(node_->get_logger(), "Camera startup-down acknowledged=%d; landing task remains disabled until PX4 mode trigger",ok);
+            continue;
+        }
+        if(generation!=generation_||!task_->active()||!recent(state_at_,steady(),state_timeout_)||!sourceFresh(state_.header.stamp,state_timeout_)||
+           !state_.connected||state_.mode!=expected_mode)continue;
+        if(start_trigger_=="px4_mode"&&state_.mode!="OFFBOARD")continue;
+        if(start_trigger_=="px4_mode"&&kind=="offboard")continue; // Never reclaim a pilot-selected mode.
+        if(kind=="offboard"&&task_->phase()!=land_task::Phase::PRESTREAM)continue;
+        if(kind=="arm"&&(!config_.auto_takeoff||task_->phase()!=land_task::Phase::PRESTREAM||state_.mode!="OFFBOARD"))continue;
+        if(kind=="land"&&task_->phase()!=land_task::Phase::LAND_HANDOFF)continue;
+        worker_busy_=true;lock.unlock();bool ok=false;
+        if(kind=="gimbal_down") {
+            gcu_handle_t* handle=gcu_connect(gimbal_ip_.c_str(),gimbal_port_);
+            if(handle){ok=gcu_set_angle(handle,0,-90,0)==0;gcu_disconnect(handle);}
+        } else if(kind=="arm") {
+            if (arm_client_->service_is_ready()) {
+                auto request=std::make_shared<mavros_msgs::srv::CommandBool::Request>();request->value=true;
+                auto future=arm_client_->async_send_request(request);
+                if(future.wait_for(std::chrono::seconds(2))==std::future_status::ready) ok=future.get()->success;
+                else arm_client_->remove_pending_request(future);
+            }
+        } else {
+            if (mode_client_->service_is_ready()) {
+                auto request=std::make_shared<mavros_msgs::srv::SetMode::Request>();
+                request->custom_mode=kind=="offboard"?"OFFBOARD":"AUTO.LAND";
+                auto future=mode_client_->async_send_request(request);
+                if(future.wait_for(std::chrono::seconds(2))==std::future_status::ready) ok=future.get()->mode_sent;
+                else mode_client_->remove_pending_request(future);
+            }
+        }
+        lock.lock();worker_busy_=false;
+        if(kind=="gimbal_down"&&generation==generation_&&task_->active()) {
+            gimbal_status_=ok?"task_down_acknowledged":"task_down_failed";
+            if(ok)gimbal_ready_=true;
+            else {task_->cancel("gimbal_setup_failed");++generation_;pending_=false;}
+        }
+        RCLCPP_INFO(node_->get_logger(), "Landing async request=%s accepted=%d generation=%lu current=%lu",kind.c_str(),ok,generation,generation_);
+    }
+}
+
+void Safina_land::tick() {
+    std::lock_guard<std::mutex> lock(mutex_);double now=steady();
+    bool standby_publish=false;
+    if(start_trigger_=="px4_mode") {
+        if(!task_->active()&&now-standby_check_at_>=1.0) {
+            std::string reason;standby_clear_=!competingPublisher(reason);standby_check_at_=steady();
+            now=steady();
+            if(!standby_clear_)RCLCPP_WARN_THROTTLE(node_->get_logger(), *node_->get_clock(), 3000,"PX4 mode gate waiting: %s",reason.c_str());
+        }
+        const auto in=input(now);
+        const bool healthy=in.state_ok&&in.connected&&in.pose_ok&&in.velocity_ok&&in.extended_ok;
+        const bool eligible=config_.auto_takeoff?
+            (in.landed_state==1&&(!in.armed||in.mode=="OFFBOARD")):(in.armed&&in.landed_state==2);
+        const bool clear=standby_clear_&&recent(standby_check_at_,now,1.5)&&!pending_&&!worker_busy_;
+        const bool expected_land=(task_->phase()==land_task::Phase::LAND_HANDOFF&&task_->landRequested())||
+            task_->phase()==land_task::Phase::AUTO_LAND;
+        if(mode_tick_at_>=0&&now-mode_tick_at_>config_.max_tick_gap)mode_gate_.reset();
+        mode_tick_at_=now;
+        const bool valid=healthy&&(task_->active()||(eligible&&clear));
+        standby_publish=!task_->active()&&valid&&
+            (in.mode=="POSCTL"||(in.mode=="OFFBOARD"&&mode_gate_.ready()));
+        const bool before_ready=mode_gate_.ready();
+        const auto event=mode_gate_.update(now,valid,in.mode,task_->active(),expected_land);
+        if(!before_ready&&mode_gate_.ready())
+            RCLCPP_WARN(node_->get_logger(), "RC gate READY in POSCTL (PX4 mode): manually switch OFFBOARD for %s; no RC channel/slot mapping",
+                config_.auto_takeoff?"autonomous takeoff and landing":"airborne landing takeover");
+        if(event==land_task::ModeEvent::CANCEL) {
+            task_->cancel("px4_mode_exit_or_telemetry_timeout");pending_=false;++generation_;
+        } else if(event==land_task::ModeEvent::START) {
+            std::string reason;
+            if(competingPublisher(reason)||!startTask(now,reason))
+                RCLCPP_WARN(node_->get_logger(), "PX4 OFFBOARD start rejected: %s; return to POSCTL, wait READY, then switch in again",reason.c_str());
+        }
+    }
+    const auto i=input(now);auto out=task_->step(i);
+    if(!task_->active())pending_=false;
+    if(!task_->active()&&standby_publish)out.publish=true; // Include standby in published diagnostics.
+    if(out.publish) {
+        mavros_msgs::msg::PositionTarget cmd;cmd.header.stamp=node_->now();cmd.header.frame_id=local_frame_;
+        cmd.coordinate_frame=mavros_msgs::msg::PositionTarget::FRAME_LOCAL_NED;
+        cmd.type_mask=mavros_msgs::msg::PositionTarget::IGNORE_PX|mavros_msgs::msg::PositionTarget::IGNORE_PY|
+            mavros_msgs::msg::PositionTarget::IGNORE_PZ|mavros_msgs::msg::PositionTarget::IGNORE_AFX|
+            mavros_msgs::msg::PositionTarget::IGNORE_AFY|mavros_msgs::msg::PositionTarget::IGNORE_AFZ|
+            mavros_msgs::msg::PositionTarget::IGNORE_YAW;
+        // MAVROS transforms ROS ENU to the FCU NED convention.
+        cmd.velocity.x=out.velocity.x;cmd.velocity.y=out.velocity.y;cmd.velocity.z=out.velocity.z;
+        cmd.yaw_rate=out.yaw_rate;command_pub_->publish(cmd);
+    }
+    if(out.request_offboard&&start_trigger_=="service")queueJob("offboard",i.now);
+    if(out.request_arm)queueJob("arm",i.now);
+    if(out.request_land)queueJob("land",i.now);
+    if(out.phase!=last_phase_) {
+        RCLCPP_WARN(node_->get_logger(), "Landing phase %s -> %s reason=%s",land_task::name(last_phase_),land_task::name(out.phase),task_->reason().c_str());
+        last_phase_=out.phase;last_diagnostic_=-1;
+    }
+    if(out.phase==land_task::Phase::TAKEOFF) {
+        RCLCPP_INFO_THROTTLE(node_->get_logger(), *node_->get_clock(), 3000,"Takeoff readiness: XY %.3f/%.3f m, Z %.3f/%.3f m, "
+            "Vxy %.3f/%.3f m/s, Vz %.3f/%.3f m/s, yaw-rate %.3f/%.3f rad/s, hold %.2f/%.2f s, failed=%u",
+            task_->takeoffXYError(i),config_.takeoff_xy_tolerance,std::fabs(task_->takeoffZError(i)),config_.takeoff_z_tolerance,
+            std::hypot(i.vx,i.vy),config_.takeoff_stable_xy_speed,std::fabs(i.vz),config_.takeoff_stable_z_speed,
+            std::fabs(i.yaw_rate),config_.takeoff_stable_yaw_rate,task_->takeoffHoldSeconds(i.now),config_.hover_seconds,
+            task_->takeoffFailedGates(i));
+    }
+    if(i.now-last_diagnostic_>=1.0/diagnostic_hz_) {diagnostics(i,out);last_diagnostic_=i.now;}
+}
+void Safina_land::diagnostics(const land_task::Input& i,const land_task::Command& out) {
+    const auto goal=task_->guidanceGoal(i);
+    const bool goal_valid=task_->active()&&out.publish&&out.phase!=land_task::Phase::PRESTREAM&&
+        out.phase!=land_task::Phase::LAND_HANDOFF&&out.phase!=land_task::Phase::AUTO_LAND;
+    std::ostringstream row;row<<std::setprecision(12)<<node_->now().seconds()<<','<<i.now<<','
+        <<land_task::name(out.phase)<<','<<task_->reason()<<','<<task_->active()<<','<<i.mode<<','<<i.armed<<','
+        <<i.x<<','<<i.y<<','<<i.z<<','<<i.yaw<<','<<i.vx<<','<<i.vy<<','<<i.vz<<','<<i.yaw_rate<<','
+        <<task_->targetFresh(i)<<','<<(i.target_time<0?-1:i.now-i.target_time)<<','<<i.target_x<<','<<i.target_y<<','
+        <<task_->targetError(i)<<','<<i.target_yaw<<','<<i.target_distance<<','
+        <<out.desired.x<<','<<out.desired.y<<','<<out.desired.z<<','<<out.desired_yaw_rate<<','
+        <<out.velocity.x<<','<<out.velocity.y<<','<<out.velocity.z<<','<<out.yaw_rate<<','<<out.publish<<','
+        <<out.planned_descent<<','<<out.request_offboard<<','<<out.request_arm<<','<<out.request_land<<','
+        <<(task_->searchStarted()<0?-1:i.now-task_->searchStarted())<<','
+        <<recent(state_at_,i.now,state_timeout_)<<','<<0<<','<<(i.mode=="OFFBOARD")<<','<<mode_gate_.ready()<<','
+        <<task_->takeoffXYError(i)<<','<<task_->takeoffZError(i)<<','<<task_->takeoffFailedGates(i)<<','
+        <<task_->takeoffHoldSeconds(i.now)<<','<<marker_reason_<<','<<marker_source_age_<<','
+        <<marker_pair_dt_<<','<<marker_jump_<<','<<marker_received_<<','<<marker_accepted_<<','
+        <<target_z_<<','<<goal.x<<','<<goal.y<<','<<goal.z<<','<<goal_valid<<','
+        <<(marker_rx_at_<0?-1:i.now-marker_rx_at_)<<','<<gimbal_ready_<<','<<gimbal_status_<<','<<task_->inheritedAge(i.now)<<','<<task_->inheritedTravel(i)<<','<<out.yaw_hold_active<<','<<task_->descentFailedGates(i)<<','<<task_->alignmentHoldSeconds(i.now);
+    if(diagnostic_file_) {diagnostic_file_<<row.str()<<'\n';diagnostic_file_.flush();}
+    else RCLCPP_ERROR_THROTTLE(node_->get_logger(), *node_->get_clock(), 5000,"Landing diagnostics CSV write failed");
+    std_msgs::msg::String status;status.data=row.str();diagnostic_pub_->publish(status);
+    nav_msgs::msg::Path path;path.header.stamp=node_->now();
+    path.header.frame_id=pose_.header.frame_id.empty()?"map":pose_.header.frame_id;
+    geometry_msgs::msg::PoseStamped point;point.header=path.header;point.pose.orientation.w=1;
+    if(task_->targetFresh(i)) {
+        point.pose.position.x=target_x_;point.pose.position.y=target_y_;point.pose.position.z=target_z_;
+        target_pub_->publish(point);
+    }
+    if(goal_valid) {
+        point.pose.position=pose_.pose.position;path.poses.push_back(point);
+        point.pose.position.x=goal.x;point.pose.position.y=goal.y;point.pose.position.z=goal.z;
+        path.poses.push_back(point);goal_pub_->publish(point);
+    }
+    path_pub_->publish(path); // Empty path explicitly invalidates the previous guidance.
+
+}
+
+int main(int argc,char** argv) {
+    rclcpp::init(argc,argv);auto node=std::make_shared<rclcpp::Node>("Safina_land_test");
+    int result=0;
+    try {Safina_land controller(node);rclcpp::spin(node);}
+    catch(const std::exception& error){RCLCPP_FATAL(node->get_logger(),"Landing initialization failed: %s",error.what());result=1;}
+    rclcpp::shutdown();return result;
+}

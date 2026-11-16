@@ -1,0 +1,45 @@
+PHASE healthy standby commands 9 phase IDLE marker accepted
+{"check": "POSCTL prestream zero with task disabled", "passed": true}
+{"check": "retained diagnostics schema available", "passed": true}
+{"check": "no service writes before trigger", "passed": true}
+PHASE service wait commands 9 phase IDLE marker accepted
+{"check": "PX4 mode workflow refuses service enable", "passed": true}
+PHASE competing publisher commands 0 phase IDLE marker accepted
+{"check": "competing controller graph blocks standby", "passed": true}
+PHASE conflict removed commands 8 phase IDLE marker accepted
+PHASE 90 degree optical transform commands 9 phase IDLE marker accepted
+{"check": "optical offsets rotate into ENU using paired aircraft yaw", "passed": true}
+PHASE bad marker frame commands 9 phase IDLE marker unexpected_marker_frame
+{"check": "wrong marker frame rejected", "passed": true}
+PHASE stale marker commands 9 phase IDLE marker source_stamp_stale
+{"check": "stale marker source rejected", "passed": true}
+PHASE future marker commands 9 phase IDLE marker source_stamp_stale
+{"check": "future marker source rejected", "passed": true}
+PHASE negative marker commands 9 phase IDLE marker detector_no_selected_target
+{"check": "detector no-target sentinel rejected", "passed": true}
+PHASE reset target filter commands 9 phase IDLE marker detector_no_selected_target
+PHASE ready centered commands 9 phase IDLE marker accepted
+PHASE manual OFFBOARD takeover commands 9 phase STABILIZE marker accepted
+{"check": "mode edge starts native landing task", "passed": true}
+{"check": "airborne task never asks arm or OFFBOARD", "passed": true}
+PHASE marker lost commands 9 phase TERMINAL_DESCEND marker accepted
+{"check": "marker loss pauses descent and enters lost hold", "passed": false}
+PHASE marker reacquired commands 9 phase TERMINAL_DESCEND marker accepted
+{"check": "marker return resumes alignment or descent", "passed": true}
+PHASE pilot cancels commands 9 phase CANCELLED marker accepted
+{"check": "pilot mode exit cancels active task", "passed": true}
+{"check": "cancel clears guidance path", "passed": true}
+PHASE stale state commands 0 phase CANCELLED marker accepted
+{"check": "stale FC source stamp blocks standby", "passed": true}
+PHASE state restored ready commands 9 phase CANCELLED marker accepted
+PHASE changed pose frame commands 0 phase CANCELLED marker local_pose_unavailable
+{"check": "wrong local pose frame blocks standby", "passed": true}
+PHASE fresh pose ready commands 10 phase CANCELLED marker accepted
+PHASE second takeover commands 9 phase STABILIZE marker accepted
+PHASE controlled simulated descent commands 0 phase AUTO_LAND marker accepted
+{"check": "native pipeline reaches AUTO.LAND handoff", "passed": true}
+{"check": "handoff rejects then retries without arming", "passed": true}
+PHASE landed confirmation commands 0 phase COMPLETE marker accepted
+{"check": "AUTO.LAND confirms landed/disarmed completion", "passed": true}
+{"check": "full control stream ENU velocity and finite bounded values", "passed": true}
+{"passed": 21, "total": 22, "results": [{"check": "POSCTL prestream zero with task disabled", "passed": true}, {"check": "retained diagnostics schema available", "passed": true}, {"check": "no service writes before trigger", "passed": true}, {"check": "PX4 mode workflow refuses service enable", "passed": true}, {"check": "competing controller graph blocks standby", "passed": true}, {"check": "optical offsets rotate into ENU using paired aircraft yaw", "passed": true}, {"check": "wrong marker frame rejected", "passed": true}, {"check": "stale marker source rejected", "passed": true}, {"check": "future marker source rejected", "passed": true}, {"check": "detector no-target sentinel rejected", "passed": true}, {"check": "mode edge starts native landing task", "passed": true}, {"check": "airborne task never asks arm or OFFBOARD", "passed": true}, {"check": "marker loss pauses descent and enters lost hold", "passed": false}, {"check": "marker return resumes alignment or descent", "passed": true}, {"check": "pilot mode exit cancels active task", "passed": true}, {"check": "cancel clears guidance path", "passed": true}, {"check": "stale FC source stamp blocks standby", "passed": true}, {"check": "wrong local pose frame blocks standby", "passed": true}, {"check": "native pipeline reaches AUTO.LAND handoff", "passed": true}, {"check": "handoff rejects then retries without arming", "passed": true}, {"check": "AUTO.LAND confirms landed/disarmed completion", "passed": true}, {"check": "full control stream ENU velocity and finite bounded values", "passed": true}]}
