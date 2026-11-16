@@ -1,6 +1,6 @@
 # Ubuntu22.04/Humble独立地面站
 
-本说明针对本仓库groundstation迁移副本和机载192.168.1.224。原地面站、.235 Noetic参考工程不自动替换。独立主程序已构建；物理任务和完整桌面交付仍需验证。
+本说明针对本仓库groundstation迁移副本和机载192.168.1.224。原地面站、.235 Noetic参考工程不自动替换。独立主程序已构建；独立Linux包已在当前电脑验证重定位和主界面首帧；物理任务仍需验证。
 
 ## 实际运行入口
 
@@ -35,4 +35,15 @@ cmake --install /absolute/build-directory --prefix /absolute/staging-directory -
 
 正式入口切换、传感器后台服务变更和真实飞控估计器配置仍需用户确认。实际任务准备会保留遥控触发语义，不应用于只读连通测试；只读检查可使用status/watch，地面阶段不解锁或执行飞行任务。
 
-旧tools/packaging/package_linux.py及install_user.py面向原先build/linux、.deps和dianyunGCS-master布局，尚未适配本独立安装布局；不将其生成物列为当前ROS2交付包。正式打包另行验证，不覆盖电脑现有快捷方式。
+旧tools/packaging/package_linux.py及install_user.py面向原布局，保持历史参考。当前独立包由tools/packaging/package_ros2_linux.py生成，直接使用CMake完整安装规则；不覆盖电脑现有快捷方式。
+
+```bash
+python3 tools/packaging/package_ros2_linux.py \
+  --build-dir /absolute/build-directory --cmake /absolute/cmake \
+  --output /absolute/package-output --version VERSION \
+  --extra-runtime /absolute/unpacked-ubuntu-runtime
+```
+
+补充运行库参数用于本机缺少的libxcb-cursor及许可文件。解压归档后执行start-groundstation.sh，可从任意工作目录启动。包含Qt库/QML/插件，系统Python/numpy、OpenSSH、OpenGL/X11和GStreamer仍为外部依赖；本机不需要ROS。此轮Ubuntu20.04 amd64桌面已验证，其他发行版未验收。文件摘要、权限和符号链接记录在payload-manifest.json；外层归档有sha256文件。
+
+下载目录的20261116-22c9b52-r2产物在含空格新路径解压后完成7项清单/依赖/主界面首帧检查、8项实际SSH/PFS1及桥接启停检查；测试没有发送飞行任务，完整物理工作流仍待验收。见records/2026-11-16/gcs-portable-linux。仅删除已关闭的解压目录即可移除此包，用户日志与设置继续留在各自用户数据目录。

@@ -1,0 +1,4 @@
+usage: package_ros2_linux.py [-h] --build-dir BUILD_DIR --output OUTPUT
+                             --version VERSION [--cmake CMAKE]
+                             [--extra-runtime EXTRA_RUNTIME]
+package_ros2_linux.py: error: 输出版本已存在，请使用新目录或新版本

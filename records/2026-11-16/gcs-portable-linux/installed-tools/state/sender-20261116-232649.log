@@ -1,0 +1,2 @@
+{"phase": "CONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "stamp": 1794842809.451052}
+{"phase": "WAIT_CLOUD", "topic": "/factory_fastlio/cloud_world", "destination": ["192.168.1.89", 19100], "protocol": "PCD1/LZ4", "display_max_hz": 2.0, "display_max_points": 4000, "ros_publishers": [], "node": "/dianyun_gcs_cloud_sender_750c858a", "pose_destination": ["192.168.1.89", 19101], "pose_topic": "/factory_fastlio/odometry", "pose_phase": "WAIT_ODOMETRY", "poses_sent": 0, "stamp": 1794842813.1594145, "frames_sent": 0, "datagrams_sent": 0, "errors": 0}

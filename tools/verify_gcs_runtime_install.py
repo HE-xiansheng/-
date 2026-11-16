@@ -11,7 +11,7 @@ import time
 stage=Path(sys.argv[1]).resolve();out=Path(sys.argv[2]).resolve();out.mkdir(parents=True,exist_ok=True)
 state=out/'state';env=dict(os.environ,GCS_STATE_DIR=str(state),PYTHONDONTWRITEBYTECODE='1')
 checks={};packets=[];commands=[]
-files=sorted(p.relative_to(stage).as_posix() for p in stage.rglob('*') if p.is_file())
+files=sorted(p.relative_to(stage).as_posix() for p in (stage/'tools').rglob('*') if p.is_file())
 checks['exact_runtime_file_count']=len(files)==12
 checks['legacy_installers_not_installed']=not any('automatic-navigation' in p or 'missions/' in p or 'test' in p or 'ros1_reference' in p for p in files)
 checks['askpass_executable']=os.access(stage/'tools/communication/gcs-askpass',os.X_OK)

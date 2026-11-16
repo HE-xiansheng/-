@@ -1,0 +1,16 @@
+{
+  "bundle": "/home/tyzk/drone-migration-work/portable relocation test3/drone-gcs-ros2-20261116-22c9b52-r2-linux-amd64",
+  "archive": "/home/tyzk/下载/科研飞行平台-ROS2地面站/drone-gcs-ros2-20261116-22c9b52-r2-linux-amd64.tar.gz",
+  "archive_sha256": "0ed30c3017f3065ce6794469f3dd7461233544ff797e7de9fa8d2c41dcb60aea",
+  "checks": {
+    "archive_manifest_and_modes": true,
+    "only_current_runtime_tools": true,
+    "no_historical_ros1_installers": true,
+    "all_elf_dependencies_and_qt_relocation": true,
+    "full_application_main_first_frame": true,
+    "loaded_qt_libraries_from_relocated_bundle": true,
+    "no_qml_load_errors": true
+  },
+  "application_exit": -15,
+  "passed": true
+}

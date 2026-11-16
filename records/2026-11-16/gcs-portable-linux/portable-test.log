@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "tools/verify_gcs_portable_linux.py", line 31, in <module>
+    assert str(Path(target).resolve()).startswith(str(bundle)+' /'.replace(' ','')),line
+AssertionError: 	libQt6Quick3D.so.6 => /home/tyzk/drone-migration-work/portable relocation test/drone-gcs-ros2-20261116-22c9b52-linux-amd64/bin/../lib/libQt6Quick3D.so.6 (0x00007f13326a7000)

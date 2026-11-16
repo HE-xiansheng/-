@@ -1,0 +1,798 @@
+{
+  "version": "20261116-22c9b52-r2",
+  "architecture": "amd64",
+  "build_dir": "/home/tyzk/drone-migration-work/build-groundstation",
+  "files": {
+    "README.md": {
+      "sha256": "2a06d097e32f850fd5cc0f6331fd995cece0ce501a6c2fa2950447d34598b4a2",
+      "mode": "0o644"
+    },
+    "bin/customgeometry": {
+      "sha256": "db264657d84120a722cd790ebc41af12c52e14fd0307b34b064438695c9205d4",
+      "mode": "0o755"
+    },
+    "bin/gst-launch-1.0": {
+      "sha256": "ff226665f7d7b3d6d4b6bd4c83ad2b0743df44d890882ca8ea950143d72d9166",
+      "mode": "0o755"
+    },
+    "bin/qt.conf": {
+      "sha256": "1869cf5f539f76e278ee90e6e64e8c266dfe4356fda9adda739358a1dfaafed1",
+      "mode": "0o664"
+    },
+    "bin/radarsimulator": {
+      "sha256": "cc5c1b4a0430519c4113d3dd07eb81dee32d6e29acab700c2a887609e533faae",
+      "mode": "0o755"
+    },
+    "lib/libQt6Concurrent.so.6": {
+      "symlink": "libQt6Concurrent.so.6.8.3"
+    },
+    "lib/libQt6Concurrent.so.6.8.3": {
+      "sha256": "ab0d5ccf44522523b44991e0cc892ad9639b8d1a56664951726c82168174b07f",
+      "mode": "0o644"
+    },
+    "lib/libQt6Core.so.6": {
+      "symlink": "libQt6Core.so.6.8.3"
+    },
+    "lib/libQt6Core.so.6.8.3": {
+      "sha256": "57ca362897ec9fe2b899ec5fec5e9d26677cdda8730df7299162d92bca4a8ac1",
+      "mode": "0o644"
+    },
+    "lib/libQt6DBus.so.6": {
+      "symlink": "libQt6DBus.so.6.8.3"
+    },
+    "lib/libQt6DBus.so.6.8.3": {
+      "sha256": "8e17fbe4600cb2b81ade8aef9f30d4a7a66745b29da830bcd0abd9afdf869251",
+      "mode": "0o644"
+    },
+    "lib/libQt6EglFSDeviceIntegration.so.6": {
+      "symlink": "libQt6EglFSDeviceIntegration.so.6.8.3"
+    },
+    "lib/libQt6EglFSDeviceIntegration.so.6.8.3": {
+      "sha256": "5b210e3ac33c47f1bf00f6db883eca64ca3b4c7be401420313d4acd196364e03",
+      "mode": "0o644"
+    },
+    "lib/libQt6EglFsKmsGbmSupport.so.6": {
+      "symlink": "libQt6EglFsKmsGbmSupport.so.6.8.3"
+    },
+    "lib/libQt6EglFsKmsGbmSupport.so.6.8.3": {
+      "sha256": "590824c10915aeb8a4bc6b7fbad57dab374badb9af059e127b3e44c321baa50c",
+      "mode": "0o644"
+    },
+    "lib/libQt6EglFsKmsSupport.so.6": {
+      "symlink": "libQt6EglFsKmsSupport.so.6.8.3"
+    },
+    "lib/libQt6EglFsKmsSupport.so.6.8.3": {
+      "sha256": "0a28262639669f9ebe19ef4d58667918dd866b30ad440e4b8643155588faeafe",
+      "mode": "0o644"
+    },
+    "lib/libQt6Gui.so.6": {
+      "symlink": "libQt6Gui.so.6.8.3"
+    },
+    "lib/libQt6Gui.so.6.8.3": {
+      "sha256": "e66a6797eba766cb65d5d7ba032ab16bed43476877907ff7be9b75b2b0259915",
+      "mode": "0o644"
+    },
+    "lib/libQt6LabsFolderListModel.so.6": {
+      "symlink": "libQt6LabsFolderListModel.so.6.8.3"
+    },
+    "lib/libQt6LabsFolderListModel.so.6.8.3": {
+      "sha256": "8eed9661b4fde98d3808f09fe6ac181c299f218a1ad53452a08279e8cd6f2f39",
+      "mode": "0o644"
+    },
+    "lib/libQt6Network.so.6": {
+      "symlink": "libQt6Network.so.6.8.3"
+    },
+    "lib/libQt6Network.so.6.8.3": {
+      "sha256": "f4eb6b919c66d3b164c61a5d3e9e7e2553c6577b68ccd5d4646a47f557ced221",
+      "mode": "0o644"
+    },
+    "lib/libQt6OpenGL.so.6": {
+      "symlink": "libQt6OpenGL.so.6.8.3"
+    },
+    "lib/libQt6OpenGL.so.6.8.3": {
+      "sha256": "96218145491945996ac4b0dca9775eb6e49ed0dfb04f6344912b8c9770e98884",
+      "mode": "0o644"
+    },
+    "lib/libQt6Qml.so.6": {
+      "symlink": "libQt6Qml.so.6.8.3"
+    },
+    "lib/libQt6Qml.so.6.8.3": {
+      "sha256": "f8f6206a13a5c1ed287364da117005c93ebb7728747c530ae581e773076dba6b",
+      "mode": "0o644"
+    },
+    "lib/libQt6QmlMeta.so.6": {
+      "symlink": "libQt6QmlMeta.so.6.8.3"
+    },
+    "lib/libQt6QmlMeta.so.6.8.3": {
+      "sha256": "e4ac2d1bac58843484ba19a0c8e3428b0f17c48c7a893f8c3bd3cc4a3345f434",
+      "mode": "0o644"
+    },
+    "lib/libQt6QmlModels.so.6": {
+      "symlink": "libQt6QmlModels.so.6.8.3"
+    },
+    "lib/libQt6QmlModels.so.6.8.3": {
+      "sha256": "65c8f225d472d905c445c565525be675a675a26582c5e0e408c2568928635aac",
+      "mode": "0o644"
+    },
+    "lib/libQt6QmlWorkerScript.so.6": {
+      "symlink": "libQt6QmlWorkerScript.so.6.8.3"
+    },
+    "lib/libQt6QmlWorkerScript.so.6.8.3": {
+      "sha256": "7ed6bfcb8129549d3c821c5e72005bd4cc5c1b8a3d04f9f2324328c4de8b6507",
+      "mode": "0o644"
+    },
+    "lib/libQt6Quick.so.6": {
+      "symlink": "libQt6Quick.so.6.8.3"
+    },
+    "lib/libQt6Quick.so.6.8.3": {
+      "sha256": "36fa19bae1928562f27f6aa749a8ac3655c8d1819ac59b276f18d950e47284c4",
+      "mode": "0o644"
+    },
+    "lib/libQt6Quick3D.so.6": {
+      "symlink": "libQt6Quick3D.so.6.8.3"
+    },
+    "lib/libQt6Quick3D.so.6.8.3": {
+      "sha256": "500c3aff5599f8b2ac34e9df1631cc3f8594126475e2e4ed5ac3cac8e8c21b26",
+      "mode": "0o644"
+    },
+    "lib/libQt6Quick3DHelpers.so.6": {
+      "symlink": "libQt6Quick3DHelpers.so.6.8.3"
+    },
+    "lib/libQt6Quick3DHelpers.so.6.8.3": {
+      "sha256": "cc03f7da54a1ceca6616807560cb1dc641872396c6ba9604bffbc37bdd340d66",
+      "mode": "0o644"
+    },
+    "lib/libQt6Quick3DHelpersImpl.so.6": {
+      "symlink": "libQt6Quick3DHelpersImpl.so.6.8.3"
+    },
+    "lib/libQt6Quick3DHelpersImpl.so.6.8.3": {
+      "sha256": "57746121d0c4cb38c78eff09ebcbb4d49390b88a89669050601b56efbede7a2f",
+      "mode": "0o644"
+    },
+    "lib/libQt6Quick3DRuntimeRender.so.6": {
+      "symlink": "libQt6Quick3DRuntimeRender.so.6.8.3"
+    },
+    "lib/libQt6Quick3DRuntimeRender.so.6.8.3": {
+      "sha256": "7bc1243fe46fb59ced156d153b797395e1ebd1ebe20ca5440a3beb9670d776ab",
+      "mode": "0o644"
+    },
+    "lib/libQt6Quick3DUtils.so.6": {
+      "symlink": "libQt6Quick3DUtils.so.6.8.3"
+    },
+    "lib/libQt6Quick3DUtils.so.6.8.3": {
+      "sha256": "798f8f17dbcf312242e28132005b5eabbafe73fa51f2f44bab66dd325692432c",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2.so.6": {
+      "symlink": "libQt6QuickControls2.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2.so.6.8.3": {
+      "sha256": "b14bb532c3e8c3149b142da661d3e319e37a5c5d5530096a99f216e49b956cfa",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2Basic.so.6": {
+      "symlink": "libQt6QuickControls2Basic.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2Basic.so.6.8.3": {
+      "sha256": "17148bc9f6db7f856bbe7b06e0d9dedc578a02ba986d01dbfd7a50e651f646cd",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2BasicStyleImpl.so.6": {
+      "symlink": "libQt6QuickControls2BasicStyleImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2BasicStyleImpl.so.6.8.3": {
+      "sha256": "c91430b902bd1d0d28cb64f736285185fda084381c238d6737fed91e4949531f",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2FluentWinUI3StyleImpl.so.6": {
+      "symlink": "libQt6QuickControls2FluentWinUI3StyleImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2FluentWinUI3StyleImpl.so.6.8.3": {
+      "sha256": "3c6b73464ac9202259e049a0a13e2a96d55b80fa8f31c70df2d2df913516b2b2",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2Fusion.so.6": {
+      "symlink": "libQt6QuickControls2Fusion.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2Fusion.so.6.8.3": {
+      "sha256": "c7d15f19e7260890810f850fbce418cbd3c63835d9cd8eac0c36f6acae94f864",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2FusionStyleImpl.so.6": {
+      "symlink": "libQt6QuickControls2FusionStyleImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2FusionStyleImpl.so.6.8.3": {
+      "sha256": "b58df489d90d3056e75637dd8936cfbee93eeb3b9ea2ab610d0e0de4ffba9962",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2Imagine.so.6": {
+      "symlink": "libQt6QuickControls2Imagine.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2Imagine.so.6.8.3": {
+      "sha256": "3cd399e1c8fae070e21664531f645bf6d59bc186b62d083000ed40fd09a01a65",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2ImagineStyleImpl.so.6": {
+      "symlink": "libQt6QuickControls2ImagineStyleImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2ImagineStyleImpl.so.6.8.3": {
+      "sha256": "c2e3f05eb5a78ba305e861e95ddd5b6145dac9ee6700c99e1e4fb74222501995",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2Impl.so.6": {
+      "symlink": "libQt6QuickControls2Impl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2Impl.so.6.8.3": {
+      "sha256": "9be1bc4f8d01f4fd770ce6aa69266f26000c8aeca7c910e2e35a902ef9033624",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2Material.so.6": {
+      "symlink": "libQt6QuickControls2Material.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2Material.so.6.8.3": {
+      "sha256": "1d1c61499b74db14143802da16935bcdb041d78a34cf59ce91970b4416bb5b01",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2MaterialStyleImpl.so.6": {
+      "symlink": "libQt6QuickControls2MaterialStyleImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2MaterialStyleImpl.so.6.8.3": {
+      "sha256": "c053b1a5d920d808ebde21f8bdfaddfcd16d0671a59b833fe166bc1f6d7f49c4",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2Universal.so.6": {
+      "symlink": "libQt6QuickControls2Universal.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2Universal.so.6.8.3": {
+      "sha256": "13711948397620b3157c6931ac1f6e9d464b39b84636d341422f7fa23bed5c55",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickControls2UniversalStyleImpl.so.6": {
+      "symlink": "libQt6QuickControls2UniversalStyleImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickControls2UniversalStyleImpl.so.6.8.3": {
+      "sha256": "48fc76224af4ce77c6c2a448005c41954e83aa5daa9037a3b2fefe7742f137b5",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickDialogs2.so.6": {
+      "symlink": "libQt6QuickDialogs2.so.6.8.3"
+    },
+    "lib/libQt6QuickDialogs2.so.6.8.3": {
+      "sha256": "8bdc41bda548fe5f66da4813ebc90c983657ab556022a030b1c3ce36e3cb306e",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickDialogs2QuickImpl.so.6": {
+      "symlink": "libQt6QuickDialogs2QuickImpl.so.6.8.3"
+    },
+    "lib/libQt6QuickDialogs2QuickImpl.so.6.8.3": {
+      "sha256": "c392cc57fba43aa01c75d60b4cb4d6600631e03ba829316e84d0f4b7fe961f1f",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickDialogs2Utils.so.6": {
+      "symlink": "libQt6QuickDialogs2Utils.so.6.8.3"
+    },
+    "lib/libQt6QuickDialogs2Utils.so.6.8.3": {
+      "sha256": "2d3a8dcee8d173410581f87503bc691f591de27f9e098592f476ff6ae8346a09",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickEffects.so.6": {
+      "symlink": "libQt6QuickEffects.so.6.8.3"
+    },
+    "lib/libQt6QuickEffects.so.6.8.3": {
+      "sha256": "06890176b53dffd9261f23d7c85cc1ce739a00732d4b31b0b6eaebffc341cf1a",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickLayouts.so.6": {
+      "symlink": "libQt6QuickLayouts.so.6.8.3"
+    },
+    "lib/libQt6QuickLayouts.so.6.8.3": {
+      "sha256": "aecffb1c2cc3e8ac1a022baba584d79398f5fb50ead8377a7811daad29cbe176",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickShapes.so.6": {
+      "symlink": "libQt6QuickShapes.so.6.8.3"
+    },
+    "lib/libQt6QuickShapes.so.6.8.3": {
+      "sha256": "d1342cb9ab6b9ab952ea38c6e13fe61f249972ad4e5fd66ca540aee3ef12c2b3",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickTemplates2.so.6": {
+      "symlink": "libQt6QuickTemplates2.so.6.8.3"
+    },
+    "lib/libQt6QuickTemplates2.so.6.8.3": {
+      "sha256": "690cc54e5c8899bb1461eb1bb87a34c25eead01160633cf98c147c797379f466",
+      "mode": "0o644"
+    },
+    "lib/libQt6QuickTest.so.6": {
+      "symlink": "libQt6QuickTest.so.6.8.3"
+    },
+    "lib/libQt6QuickTest.so.6.8.3": {
+      "sha256": "5401325e315fd2c9a11f3b9b5897afb684fca5250d85c6a059cad0611065f858",
+      "mode": "0o644"
+    },
+    "lib/libQt6ShaderTools.so.6": {
+      "symlink": "libQt6ShaderTools.so.6.8.3"
+    },
+    "lib/libQt6ShaderTools.so.6.8.3": {
+      "sha256": "c20ee12caa5fa9a0ac9b3c3322f82a4e03460f7c52077ccb546828313a9e5a7a",
+      "mode": "0o644"
+    },
+    "lib/libQt6Svg.so.6": {
+      "symlink": "libQt6Svg.so.6.8.3"
+    },
+    "lib/libQt6Svg.so.6.8.3": {
+      "sha256": "29341db4f6a8a412ae525b9453913a67f0a12c29074afc4de345cf64a597e37c",
+      "mode": "0o644"
+    },
+    "lib/libQt6Test.so.6": {
+      "symlink": "libQt6Test.so.6.8.3"
+    },
+    "lib/libQt6Test.so.6.8.3": {
+      "sha256": "cda690965ca0b18b20b9c280eb3c55a8e05cd1ad7e49fa6dbe462406b03b57dd",
+      "mode": "0o644"
+    },
+    "lib/libQt6XcbQpa.so.6": {
+      "symlink": "libQt6XcbQpa.so.6.8.3"
+    },
+    "lib/libQt6XcbQpa.so.6.8.3": {
+      "sha256": "b783bcc92feb244e71c9833f1b2b4070bc4a54ea25b4d6781a924f87f7eaa0a2",
+      "mode": "0o644"
+    },
+    "lib/libicudata.so.73": {
+      "symlink": "libicudata.so.73.2"
+    },
+    "lib/libicudata.so.73.2": {
+      "sha256": "4f182a855296cf96d39f75c9028b12765a78fe6afff3d3781d633110525b7a8b",
+      "mode": "0o644"
+    },
+    "lib/libicui18n.so.73": {
+      "symlink": "libicui18n.so.73.2"
+    },
+    "lib/libicui18n.so.73.2": {
+      "sha256": "a18e48266e59efff3ec872d9dc5cc99b776e180b8ede57269d354e6bc6595778",
+      "mode": "0o644"
+    },
+    "lib/libicuuc.so.73": {
+      "symlink": "libicuuc.so.73.2"
+    },
+    "lib/libicuuc.so.73.2": {
+      "sha256": "b76380b2c15c8ff8b3c94576ac98b40d34fc0a091db4a89324d72e271c7699f0",
+      "mode": "0o644"
+    },
+    "lib/libxcb-cursor.so.0": {
+      "symlink": "libxcb-cursor.so.0.0.0"
+    },
+    "lib/libxcb-cursor.so.0.0.0": {
+      "sha256": "729297e66519bdb0df3ac8d5a2950e2e09b1e8d0b9eeea33250fce57a27aafa3",
+      "mode": "0o644"
+    },
+    "licenses/ICU-LICENSE.txt": {
+      "sha256": "f3005e195ff74d8812cc1f182a1c446fab678d70a10e3dada497585befee5416",
+      "mode": "0o664"
+    },
+    "licenses/Qt-BSD-3-Clause.txt": {
+      "sha256": "9f0490f18656c6f2435bd14f603ef0c96434d1825615363dce43abb42ed1dcce",
+      "mode": "0o664"
+    },
+    "licenses/Qt-GPL-3.0.txt": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "mode": "0o664"
+    },
+    "licenses/Qt-LGPL-3.0.txt": {
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "mode": "0o664"
+    },
+    "licenses/SOURCES.txt": {
+      "sha256": "43e4a620538ee6a5aede3d1dd9164577db95bac236b66fa2ba483c8a4b5e9345",
+      "mode": "0o664"
+    },
+    "licenses/ubuntu-runtime/libxcb-cursor0/changelog.Debian.gz": {
+      "sha256": "1da6e7297909ece703c202a32adb89a1a3d36a6d8ddb0974cc0be0f03017581a",
+      "mode": "0o644"
+    },
+    "licenses/ubuntu-runtime/libxcb-cursor0/copyright": {
+      "sha256": "42dc92e851927a08d00db5a44122cff695e143d7a16aec391fe7290caea5e00f",
+      "mode": "0o644"
+    },
+    "plugins/egldeviceintegrations/libqeglfs-emu-integration.so": {
+      "sha256": "1244e2880dee7f03d6cf571722528cb0b58438be7ddd99fbefeef2be37404e87",
+      "mode": "0o644"
+    },
+    "plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so": {
+      "sha256": "e9cd14198af47b6d59b98aa683aa15239fbfdf20e49d3d98f53b11ab897d7504",
+      "mode": "0o644"
+    },
+    "plugins/egldeviceintegrations/libqeglfs-kms-integration.so": {
+      "sha256": "c5cb45a2ceef8022c948e5ea4f02f4a1d7330700d008df18ada3f1d86cb5d4d9",
+      "mode": "0o644"
+    },
+    "plugins/egldeviceintegrations/libqeglfs-x11-integration.so": {
+      "sha256": "db145963ed1100c96b289736a3d0bdbde73474731b0b796913625626427542f1",
+      "mode": "0o644"
+    },
+    "plugins/iconengines/libqsvgicon.so": {
+      "sha256": "c817505facbf894f4d298efd317978eb93d23c96b352751e7c26c26ea6953eac",
+      "mode": "0o644"
+    },
+    "plugins/imageformats/libqgif.so": {
+      "sha256": "31e450846f7d42ff32ceea333f7c041e713325337bb86c7499fd818a58747320",
+      "mode": "0o644"
+    },
+    "plugins/imageformats/libqico.so": {
+      "sha256": "3837919837caf6724d40e907521979913e73d8792c5a31d2c3b781871226b37d",
+      "mode": "0o644"
+    },
+    "plugins/imageformats/libqjpeg.so": {
+      "sha256": "3cbc6d3385a73f0be0bf3f228ce45bba1dd0ad334ae7a0f51ef50673776020ed",
+      "mode": "0o644"
+    },
+    "plugins/imageformats/libqsvg.so": {
+      "sha256": "335675476d1091d937d06269daef3debcae6bbc8c70dea839e481bff7cef1ff5",
+      "mode": "0o644"
+    },
+    "plugins/networkinformation/libqglib.so": {
+      "sha256": "b4bf64bbe55d438832252ddc155c607d588b68f8f47e93ae747045b92e9f43d9",
+      "mode": "0o644"
+    },
+    "plugins/networkinformation/libqnetworkmanager.so": {
+      "sha256": "53d2d1f1e33b7f2fa2eea8dcaba758983031977873783de409748eb5859936a6",
+      "mode": "0o644"
+    },
+    "plugins/platforms/libqxcb.so": {
+      "sha256": "0cfeff7788c8545f90f098c93fd284687ed2c813b1a259aada7c509fb08b0f89",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_debugger.so": {
+      "sha256": "e20270cf27f7a8835142e651ebf4c4044a83e545a7507fb2ccf1349e0ff23b49",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_inspector.so": {
+      "sha256": "5a4328530d8f5e018f24a59888052e659923dd8e77fcbabbd40d88271a8f5d1e",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_local.so": {
+      "sha256": "6f657fb416f97b3bf03af92a9e63d4a6ebaa29cb496ee4820500b0e84ec7281e",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_messages.so": {
+      "sha256": "15406fa189402830f97ce783ad4e9a4f65dd71f1c39e012b63e6ea4dc30ba76e",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_native.so": {
+      "sha256": "9bef248438aac845aa332114fe9cbe2d047825c6cba3df0688d85fb7b4dda27d",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_nativedebugger.so": {
+      "sha256": "507faa0d4560de6e5c09558f8eee02503296ee8e4da3247ab24128b0856de315",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_preview.so": {
+      "sha256": "8e611c754cb36b6976cd89cd1291109ff235b24f4ec1ce883405cfc299159ffe",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_profiler.so": {
+      "sha256": "f87f1cf8853e2d7e5333462f6db471fd389743aaf6cee5ddd8718309362b044c",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_quick3dprofiler.so": {
+      "sha256": "5514717d352ddff13db44b9c462351768baf492d4fa8239e3538f6796e7423e4",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_quickprofiler.so": {
+      "sha256": "4cae6d98dd4d6f4ed5402c8045a0acd2d519256d79b6ee246aafe0d290655ed6",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_server.so": {
+      "sha256": "d919855c0a55f239c76b8033f2828a5c8a68152c48ec63af84bbe7107fbce624",
+      "mode": "0o644"
+    },
+    "plugins/qmltooling/libqmldbg_tcp.so": {
+      "sha256": "92866189908e1d79b0ce9c9601f83f8a349bf03f744a50d15ee275674fa8d573",
+      "mode": "0o644"
+    },
+    "plugins/tls/libqopensslbackend.so": {
+      "sha256": "20530f6ad73e236d855bb9e31c8fb1ed56256452d6f004c089735ae9ddde75a9",
+      "mode": "0o644"
+    },
+    "plugins/xcbglintegrations/libqxcb-egl-integration.so": {
+      "sha256": "8ea45cac455d97974107ff0e5f3e089d6c2f16a39cb0b58977ca9a95cc300e63",
+      "mode": "0o644"
+    },
+    "plugins/xcbglintegrations/libqxcb-glx-integration.so": {
+      "sha256": "5f7b187477bc52f8f2f0f4e32fc200e8036d8dbd800d488cbd39607292b52a5c",
+      "mode": "0o644"
+    },
+    "qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so": {
+      "sha256": "32fe3baa7f3aa3309b6d1fc04f05bf55669fc4edcf7c27a41dfad27143f47ea5",
+      "mode": "0o755"
+    },
+    "qml/Qt/labs/folderlistmodel/qmldir": {
+      "sha256": "cb1d4c91ab43d52ca6dde5aae5a70c0c89811c132f77c69dc98b8820a147cd3a",
+      "mode": "0o644"
+    },
+    "qml/QtQml/Models/libmodelsplugin.so": {
+      "sha256": "54b008c1ff6177efb718e24d80a1200984ac5423acd6a517bfe8ad102415d980",
+      "mode": "0o755"
+    },
+    "qml/QtQml/Models/qmldir": {
+      "sha256": "4abed3b5d84d4252f6bb292998a566b09a21ae4f2a435e6807cf7047fe14c58a",
+      "mode": "0o644"
+    },
+    "qml/QtQml/WorkerScript/libworkerscriptplugin.so": {
+      "sha256": "b4019b2ba9bc16fbfc2b1836c3d030f9d63590cbdc62da2fc749c556581b8cf0",
+      "mode": "0o755"
+    },
+    "qml/QtQml/WorkerScript/qmldir": {
+      "sha256": "4ed1b6b0ad3980ae5c882f5c0a4eea8a84bcca35c300f0eec430b89cd30ff768",
+      "mode": "0o644"
+    },
+    "qml/QtQml/libqmlplugin.so": {
+      "sha256": "34cea3707717b1c77a0c3ba951e3d04a3e773a4a6757e3a42fd1f16b56df323d",
+      "mode": "0o755"
+    },
+    "qml/QtQml/qmldir": {
+      "sha256": "ff1b83e0cfee28b7dfc809f2acf8d1281e31f037481e80570ad4d23badbc67e2",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Basic/impl/libqtquickcontrols2basicstyleimplplugin.so": {
+      "sha256": "3c22c591bc469124bfc5d478d1fc6e3f727630775805053dc82f35e145c6b29c",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Basic/impl/qmldir": {
+      "sha256": "95dbb76acfcdcaa3b9bf55590796e249666505766ebc1f584754648c64fb7bd9",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so": {
+      "sha256": "4217ce7b117c11c1a31556217bbf0f7cc030c1aa094c9ad987aefc2136351e47",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Basic/qmldir": {
+      "sha256": "4b8486582bada6d43b8b6ba6676d93912e646df7d9114db50fd833a4ce76c92f",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/FluentWinUI3/impl/libqtquickcontrols2fluentwinui3styleimplplugin.so": {
+      "sha256": "fe9d6dfbbaa79e3eb9981e0cf17cf4b2327d1392642ed66c88a0a7c04948de60",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/FluentWinUI3/impl/qmldir": {
+      "sha256": "04a0e18e46934c261b14715866cad46b001cc5cc6d4b18ec2a58c9507eb9be35",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/FluentWinUI3/libqtquickcontrols2fluentwinui3styleplugin.so": {
+      "sha256": "e7af89953e42d5c38dd15c43a46c0406f0feee659f05e83ec37d07fa08a3d5b8",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/FluentWinUI3/qmldir": {
+      "sha256": "8fbb50ed6fdeb60e33440310cb209d5bd5f5bfdb8b15469e6d11d976f8b4d336",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so": {
+      "sha256": "698bdec0d804bc0baacf4f62127f1f6f42194e78f2bcd3848b8f44193bbc721a",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Fusion/impl/qmldir": {
+      "sha256": "3e4a381eb01b8ff1a14bd10fa2f02cbfc52156c3a84cc1ab3b56a61dbfef5b59",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Fusion/libqtquickcontrols2fusionstyleplugin.so": {
+      "sha256": "79ed789153faf2aae7267a3b2731b67b94ca8aa0d933d3bbc38b6778ffe460c1",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Fusion/qmldir": {
+      "sha256": "a198198bd2e56125bc3da36912d18f488be700ce4d6bba17a0a94338c4b162d5",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Imagine/impl/libqtquickcontrols2imaginestyleimplplugin.so": {
+      "sha256": "0b329087793ab9bad48d86eeee042b23ce2c91a8053fd1735a657be3d9f32bf7",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Imagine/impl/qmldir": {
+      "sha256": "74a6003b370209943f54d4ad1bf5b54822f1df2c52c0116880ad476182325608",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Imagine/libqtquickcontrols2imaginestyleplugin.so": {
+      "sha256": "38f5d1df0dfa86d4ebd862e22a50dea76816dc7477a720e7c26ce63d15243d62",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Imagine/qmldir": {
+      "sha256": "e22e6ffe6b2b6f1b350c4fc9f6328b1ad4b068a76ac0f52a7ee76520609603d5",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Material/impl/libqtquickcontrols2materialstyleimplplugin.so": {
+      "sha256": "819409bc65a257bfc24f6f44b2e1254140a7cca982ddbc969456e87f22262cd7",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Material/impl/qmldir": {
+      "sha256": "de97407cd3f559e607c26ddb5573740ded62e48e42a55a42f50649d5f71abdf8",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Material/libqtquickcontrols2materialstyleplugin.so": {
+      "sha256": "182002ff3887480abe2d9a5ed512de7d434822bb3d0ab910dd65873fe2d970fe",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Material/qmldir": {
+      "sha256": "0a1fdec78d593c9222ff45773046a0845a48e25dd003f06e4745be0a7e43fb8c",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Universal/impl/libqtquickcontrols2universalstyleimplplugin.so": {
+      "sha256": "0c3868f6600b523631925428f02dfff29da3011a7229c665a59566e608da600a",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Universal/impl/qmldir": {
+      "sha256": "e37f9c19b700ce1b78b41ebd8d35f95f87624cef9b926560cbb8eafb24e74ff8",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/Universal/libqtquickcontrols2universalstyleplugin.so": {
+      "sha256": "08cf7325b25f00ca398e56bffce258597c736644fd1c45d1319ecd26443077c6",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/Universal/qmldir": {
+      "sha256": "85ee8212063b212f882c0c5a7e21194342c00181c73b5a6965891c213c8a717f",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so": {
+      "sha256": "5e5faf55662baf2b0f23aecf54d384700ea50bb9d8905d6c5049735b42db1b5e",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/impl/qmldir": {
+      "sha256": "db0947fe68716f97d42718be3f8c6f831482a1e45c095145ac780e5c97f1e9c0",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Controls/libqtquickcontrols2plugin.so": {
+      "sha256": "d9317fc020be9ae9b87471cbe5a09be83db22932075d68ac535217e9f94f18b1",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Controls/qmldir": {
+      "sha256": "1a75339ddc08c14d320a4b542b69e498bf777ed4358138c5edde0133642c7793",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Dialogs/libqtquickdialogsplugin.so": {
+      "sha256": "d6a6713223addf54b15c869ec6934e5373b77ce6baee57afd925a9e1ec4e02f3",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Dialogs/qmldir": {
+      "sha256": "23345c74287693cd8846f2d159c361aa822b5e6416c4dfe705e0a5d44e17e5b4",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Dialogs/quickimpl/libqtquickdialogs2quickimplplugin.so": {
+      "sha256": "eac1ebe5208f931bbafcc598de93a357a6dd595b677303f4a41b8a5f286d4345",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Dialogs/quickimpl/qmldir": {
+      "sha256": "e144845815bf237d32738f3d6d1adca979a8b0baa6828f010a3fb1846bfd9ac3",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Effects/libeffectsplugin.so": {
+      "sha256": "5aeb83a40817dfaa3b3b48e72c5d10111dd72af62c5ab69f478f9e2f84e88d7b",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Effects/qmldir": {
+      "sha256": "6ee646310ccf12970f2e8e759db418da23691f152982f9d595ea2b7899f528d2",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Layouts/libqquicklayoutsplugin.so": {
+      "sha256": "68e947d59207c8daed9e9dbf042352da4b36f77388f316fcef7e0e55c067b891",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Layouts/qmldir": {
+      "sha256": "0601e05b583c24ee72158ab8553f9d2435dfe08dc5be20bf2e03fa24058ba4cb",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Shapes/libqmlshapesplugin.so": {
+      "sha256": "73bc70ab1b7f03520c84b30b03fb359cd05de374d1a1f655639be30dfbcf1645",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Shapes/qmldir": {
+      "sha256": "fbebfff93729f32b000c9d467282655814eea445a92f0979989207870ce25ddd",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Templates/libqtquicktemplates2plugin.so": {
+      "sha256": "7ff96016a26e555b360b27cf9df1f2fe55a8d096136155e066875e7059888e35",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Templates/qmldir": {
+      "sha256": "33785930717153199ad6d4303ade8835da09c67fbff681aaf535f0409c071d0a",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/Window/libquickwindowplugin.so": {
+      "sha256": "4c66e668d73cc7675c6ba1955cd79feec405da9fb96966c9ffe4f808e725ee4f",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/Window/qmldir": {
+      "sha256": "c0509023b1bcce5f27262aa84f3a6016fb188971fecc58eea98b897a9aa42eb5",
+      "mode": "0o644"
+    },
+    "qml/QtQuick/libqtquick2plugin.so": {
+      "sha256": "11ecea967d20899c65b05c9329cdd5a3de3acb6cfb6ec40f007d6c61f0b17767",
+      "mode": "0o755"
+    },
+    "qml/QtQuick/qmldir": {
+      "sha256": "c2fa2b26d9f8094c6eeb6ff924b18088ddcd512e133524e55b13fa3e5e70350b",
+      "mode": "0o644"
+    },
+    "qml/QtQuick3D/Helpers/impl/libqtquick3dhelpersimplplugin.so": {
+      "sha256": "f30612bc5e7405c2b30c98c4c9f5a21292e3736959b13f60674efcff786013b5",
+      "mode": "0o755"
+    },
+    "qml/QtQuick3D/Helpers/impl/qmldir": {
+      "sha256": "fc0b55de2bfc5523b62f04ea394d4ba4230496b6ce057446fee897a17e973598",
+      "mode": "0o644"
+    },
+    "qml/QtQuick3D/Helpers/libqtquick3dhelpersplugin.so": {
+      "sha256": "aa6f27b30ea9bfa6f69f2e5c6c1366d10b4ea0f1c926de4bf4c47330975fb4df",
+      "mode": "0o755"
+    },
+    "qml/QtQuick3D/Helpers/qmldir": {
+      "sha256": "b050da9b7e7eb7170a285d1f660eafa7c28e2a1d1fd27067525c5146551d6f73",
+      "mode": "0o644"
+    },
+    "qml/QtQuick3D/libqquick3dplugin.so": {
+      "sha256": "1f5243ae6385cfb2ce779341f5d826701a5f737a09aba2aa29f75047521909b4",
+      "mode": "0o755"
+    },
+    "qml/QtQuick3D/qmldir": {
+      "sha256": "b74a020cbff5e46830d569d36aa43b2e7aa83b13ed2bf3f92d8d0848306f3f68",
+      "mode": "0o644"
+    },
+    "qml/QtTest/libquicktestplugin.so": {
+      "sha256": "ffc8132b62788176f0672cf5e866b3e5d039bca6d791e37dd7c5d966924d3c1c",
+      "mode": "0o755"
+    },
+    "qml/QtTest/qmldir": {
+      "sha256": "cf8362e324aaf28a68a7aec050da52f2492f7c3a1b6a5f673bc640a5116f40b7",
+      "mode": "0o644"
+    },
+    "start-groundstation.sh": {
+      "sha256": "2767f552b834e8301573692b2d6125f8991fb8cef0ebd648618129c3ce98e936",
+      "mode": "0o755"
+    },
+    "tools/communication/gcs-askpass": {
+      "sha256": "0cc0b10fce9125b5aa9f925a553f4c08b2ac6dc8c624b20fd643a6151c7b063d",
+      "mode": "0o755"
+    },
+    "tools/communication/manage_link.py": {
+      "sha256": "72e59690e732de958f8b6e46cd26f238fee3371aa146ea46e5f64a99acc735ea",
+      "mode": "0o644"
+    },
+    "tools/communication/runtime_paths.py": {
+      "sha256": "207bc0cb318b2aaf21b4eb0f67ec031e23e49d9d300f055e6b750b99eec31d1d",
+      "mode": "0o644"
+    },
+    "tools/communication/ssh_session.py": {
+      "sha256": "fd4c484a259f714e9fa04422d6bc224d2bb187bb01c509b9ea921f670f1128ff",
+      "mode": "0o644"
+    },
+    "tools/pointcloud-only/cloud_sender.py": {
+      "sha256": "f1d4e9df78e607f5e8b009fa1af6ee5bb980f132d13f741c986b0dc94c2b0110",
+      "mode": "0o644"
+    },
+    "tools/pointcloud-only/manage.py": {
+      "sha256": "eab853e9e6c3b4f3337178f1601f737952c09a8452f98bcc3a272e11b2f8fa4b",
+      "mode": "0o644"
+    },
+    "tools/preflight/bridge.py": {
+      "sha256": "15115fefc0c35df3fcbdfc3c7a333272585fc6a6d00151a50d4e5a0cc7abaa17",
+      "mode": "0o644"
+    },
+    "tools/preflight/planner_display.py": {
+      "sha256": "75dc6553d890aa0ac9d56b4afec3a85efe3c106c534f0c6e6adeb091d0f2c56a",
+      "mode": "0o644"
+    },
+    "tools/preflight/planner_geometry.py": {
+      "sha256": "1c5184a97fb89dd31ddc003070ffa844cb5726c7a939f3813224c4054aa4f1c1",
+      "mode": "0o644"
+    },
+    "tools/preflight/preflight_status.py": {
+      "sha256": "6f06e6d9496b7ff5bab2006ee838e268137160782308d4aa6b924129cd5f3829",
+      "mode": "0o644"
+    },
+    "tools/preflight/stream_reader.py": {
+      "sha256": "6fe7d33870c41d89e74f71435867e05480ffefc0e12fad3da1539729987b0c1b",
+      "mode": "0o644"
+    },
+    "tools/preflight/telemetry_reader.py": {
+      "sha256": "2cfe318c1098210f1aa80a51c1cab18c3a7e6c63a5b6b74a244294b4e6c20aa0",
+      "mode": "0o644"
+    }
+  }
+}

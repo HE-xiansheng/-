@@ -68,3 +68,5 @@
 2026-11-16：审计Qt实际入口，确认automatic-navigation/offboard-retarget及旧task_manager为历史ROS1工具，不是当前ROS2入口；Linux原安装规则会复制整tools，改12文件白名单并移除无用ROS1资源。Qt重构建及真实独立安装目录8项SSH/PFS1/启停检查通过；初次未登记指纹被拒绝、使用已核实专用known_hosts复测通过。根README和ROS2部署说明已按当前证据更新；.224无Safina_sensor.service及传感器进程，正式服务/物理整链未切换。完整可搬移Qt包仍待准备。记录见records/2026-11-16/runtime-install-audit。
 
 2026-11-16：断电续接确认.224在线、飞控/Gemini在位。整套五模块传感器启动候选部署5993306，未安装或启用service。21项预检/真实双目+完整MAVROS检查及意外退出回收通过；彩色/深度约30Hz，飞控IMU50Hz/位姿30Hz，始终disarmed。首轮BEST_EFFORT图像接收率失败保留，RELIABLE复测通过但根因未定；timesync/参数重试与退出告警保留。证据取回电脑/GitHub、机载临时目录清理、Git干净。雷达网口carrier0，独立USB/云台/全链及正式切换未验收。见records/2026-11-16/platform-sensors。
+
+2026-11-16：完整Linux ROS2地面站独立包已生成到电脑下载目录20261116-22c9b52-r2，新增基于CMake完整部署的打包入口；修复发现的私有libxcb-cursor依赖遗漏并附许可。实际归档含空格路径重定位、所有ELF依赖、主界面首帧等7项及新包真实SSH/PFS1启停8项通过。测试封装空格解析/误导passed标记和缺库失败均保留并解释。无桌面入口覆盖、机载源码或服务切换；物理整链仍待完成。证据见records/2026-11-16/gcs-portable-linux。

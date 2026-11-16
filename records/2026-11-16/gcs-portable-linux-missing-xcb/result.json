@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "archive_manifest_and_modes": true,
+    "only_current_runtime_tools": true,
+    "no_historical_ros1_installers": true
+  },
+  "application_exit": null,
+  "passed": false
+}

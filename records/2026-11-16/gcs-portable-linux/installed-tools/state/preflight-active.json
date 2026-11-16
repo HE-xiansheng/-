@@ -1,0 +1,8 @@
+{
+  "pid": 1492385,
+  "start_tick": "65454726",
+  "host": "192.168.1.224",
+  "port": 19103,
+  "raw_udp_port": 19115,
+  "log": "/home/tyzk/drone-migration-github/records/2026-11-16/gcs-portable-linux/installed-tools/state/preflight-20261116-232649.log"
+}
