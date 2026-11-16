@@ -1,0 +1,18 @@
+[INFO] [launch]: All log files can be found below /tmp/platform-soak-check/ros-log/2026-11-17-02-16-19-770379-orangepi5ultra-225924
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [225954]
+[fastlio_mapping-1] [INFO] [1794852980.255834337] [factory_laserMapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1794852980.265669564] [factory_laserMapping]: Node init finished.
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1794852981.335703986] [factory_laserMapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1794852981.590511843] [factory_laserMapping]: Initialize the map kdtree
+[fastlio_mapping-1] Self sync IMU and LiDAR, time diff is 1.1297440529 
+[fastlio_mapping-1] lidar loop back, clear buffer
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+[fastlio_mapping-1] [INFO] [1794853225.717220621] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] [INFO] [1794853225.719401107] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-1]: process has finished cleanly [pid 225954]

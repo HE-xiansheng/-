@@ -1,0 +1,8 @@
+{
+  "source_sha256": "2c3f080533595144f0494d2df70efae00f24c2ee41a8ccce443b2b3a54963e9d",
+  "tested_binary_sha256": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd",
+  "branch_result": "branch-run2/result.json",
+  "soak_result": "../platform-soak/run2/result.json",
+  "soak_overall_passed": false,
+  "scope": "localization fix validated; camera observer mismatch remains separate"
+}

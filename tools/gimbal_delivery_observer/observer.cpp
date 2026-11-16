@@ -14,9 +14,19 @@ int main(int argc,char** argv) {
     if (!out) return 2;
     out<<"qos,key,stamp_ns,receipt_ns,age_ns,width,height,step,bytes,encoding,frame,hash\n";
     std::vector<rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr> subscriptions;
+    const bool camera = node->declare_parameter<bool>("include_camera", false);
+    std::vector<std::pair<std::string,std::string>> topics = {
+        {"raw","/rtsp_cam/image_raw"}, {"color","/rtsp_cam/image_color"}};
+    if (camera) {
+        topics.push_back({"stereo","/camera/color/image_raw"});
+        topics.push_back({"depth","/camera/depth/image_raw"});
+        topics.push_back({"person","/manual_person_follow/image"});
+    }
     for (const bool reliable : {true,false}) {
-    for (const auto& key: {std::string("raw"),std::string("color")}) {
-        subscriptions.push_back(node->create_subscription<sensor_msgs::msg::Image>("/rtsp_cam/image_"+key,reliable ? rclcpp::QoS(30).reliable() : rclcpp::QoS(30).best_effort(),
+    for (const auto& topic: topics) {
+        const auto key = topic.first;
+        if (!reliable && key != "raw" && key != "color") continue;
+        subscriptions.push_back(node->create_subscription<sensor_msgs::msg::Image>(topic.second,reliable ? rclcpp::QoS(30).reliable() : rclcpp::QoS(30).best_effort(),
           [&,key,reliable](sensor_msgs::msg::Image::ConstSharedPtr message) {
             auto stamp=rclcpp::Time(message->header.stamp).nanoseconds();
             auto receipt=std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();

@@ -1,0 +1,7 @@
+[INFO] [1794853614.277948473] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1794853614.290269850] [laser_mapping]: Node init finished.
+Multi thread started 
+Self sync IMU and LiDAR, time diff is 2.0053148270 
+lidar loop back, clear buffer
+[INFO] [1794853628.986209566] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

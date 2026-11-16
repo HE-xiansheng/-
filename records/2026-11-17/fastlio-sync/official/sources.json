@@ -1,0 +1,3 @@
+{
+  "rclcpp-time-humble.hpp": "https://raw.githubusercontent.com/ros2/rclcpp/humble/rclcpp/include/rclcpp/time.hpp"
+}

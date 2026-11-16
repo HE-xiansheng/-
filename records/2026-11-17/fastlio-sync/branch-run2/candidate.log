@@ -1,0 +1,10 @@
+[INFO] [1794853714.982801942] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1794853714.990548849] [laser_mapping]: Node init finished.
+Multi thread started 
+Self sync IMU and LiDAR, time diff is 2.0053145885 
+IMU Initial Done
+[WARN] [1794853715.485146661] [laser_mapping]: No point, skip this scan!
+
+[INFO] [1794853715.594945601] [laser_mapping]: Initialize the map kdtree
+[INFO] [1794853729.672451825] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

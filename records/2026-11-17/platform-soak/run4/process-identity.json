@@ -1,0 +1,54 @@
+[
+  {
+    "pid": "235328",
+    "exe": "/tmp/platform-soak-check/observer-build/observer",
+    "sha256": "28942ba886bbc9d11d6c3a8687a57c7cd112b29f7d2dd678bab93d6dd0025933",
+    "environment": {
+      "FASTRTPS_DEFAULT_PROFILES_FILE": null,
+      "FASTDDS_DEFAULT_PROFILES_FILE": null,
+      "ROS_DOMAIN_ID": "83",
+      "ROS_LOCALHOST_ONLY": "1",
+      "PLATFORM_SOAK_CAMERA_LAUNCH": "/tmp/platform-soak-check/camera-candidate/launch/gemini335l.launch.py",
+      "PLATFORM_SOAK_CAMERA_PROFILE": null
+    }
+  },
+  {
+    "pid": "235359",
+    "exe": "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/lib/yolo_ultra_test/person_preview",
+    "sha256": "81c86d3b8ef8e0f463a2e31454e40ecde869717be06cc67b2b727411f54465a0",
+    "environment": {
+      "FASTRTPS_DEFAULT_PROFILES_FILE": null,
+      "FASTDDS_DEFAULT_PROFILES_FILE": null,
+      "ROS_DOMAIN_ID": "83",
+      "ROS_LOCALHOST_ONLY": "1",
+      "PLATFORM_SOAK_CAMERA_LAUNCH": "/tmp/platform-soak-check/camera-candidate/launch/gemini335l.launch.py",
+      "PLATFORM_SOAK_CAMERA_PROFILE": null
+    }
+  },
+  {
+    "pid": "235363",
+    "exe": "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping",
+    "sha256": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd",
+    "environment": {
+      "FASTRTPS_DEFAULT_PROFILES_FILE": null,
+      "FASTDDS_DEFAULT_PROFILES_FILE": null,
+      "ROS_DOMAIN_ID": "83",
+      "ROS_LOCALHOST_ONLY": "1",
+      "PLATFORM_SOAK_CAMERA_LAUNCH": "/tmp/platform-soak-check/camera-candidate/launch/gemini335l.launch.py",
+      "PLATFORM_SOAK_CAMERA_PROFILE": null
+    }
+  },
+  {
+    "pid": "235411",
+    "exe": "/opt/ros/humble/lib/rclcpp_components/component_container",
+    "sha256": "550f80eecc0f6d907668c34f095e71a7eeb335ccbd7f5e6edbd2f778b77e4286",
+    "environment": {
+      "FASTRTPS_DEFAULT_PROFILES_FILE": "/tmp/platform-soak-check/camera-candidate/config/fastdds_large_images.xml",
+      "FASTDDS_DEFAULT_PROFILES_FILE": null,
+      "ROS_DOMAIN_ID": "83",
+      "ROS_LOCALHOST_ONLY": "1",
+      "PLATFORM_SOAK_CAMERA_LAUNCH": "/tmp/platform-soak-check/camera-candidate/launch/gemini335l.launch.py",
+      "PLATFORM_SOAK_CAMERA_PROFILE": null
+    }
+  }
+]

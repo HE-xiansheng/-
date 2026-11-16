@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "native_camera_count": 6024,
+  "python_camera_count": 5916,
+  "preview_count": 3221,
+  "missing_from_native_camera": [
+    1794853778928350001
+  ],
+  "missing_from_both_camera_observers": [
+    1794853778928350001
+  ],
+  "corroborated_by_python": [],
+  "scope": "Every native-observed preview stamp must occur in independent source-camera observation; no startup/end exemptions"
+}

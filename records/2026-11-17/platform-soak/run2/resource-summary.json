@@ -1,0 +1,46 @@
+{
+  "passed_checks": 42,
+  "checks": 43,
+  "aggregate_cpu_busy_pct_min": 63.12275295326143,
+  "aggregate_cpu_busy_pct_max": 69.38516260162602,
+  "aggregate_cpu_busy_pct_mean": 66.07994837325165,
+  "maximum_temperature_c": 84.076,
+  "minimum_available_memory_bytes": 13300875264,
+  "native_images": {
+    "best_effort/raw": {
+      "received": 5993,
+      "unique_stamps": 5993,
+      "max_age_ms": 54.467223
+    },
+    "reliable/raw": {
+      "received": 5993,
+      "unique_stamps": 5993,
+      "max_age_ms": 52.388528
+    },
+    "reliable/color": {
+      "received": 2996,
+      "unique_stamps": 2996,
+      "max_age_ms": 121.113782
+    },
+    "best_effort/color": {
+      "received": 2996,
+      "unique_stamps": 2996,
+      "max_age_ms": 122.889437
+    },
+    "reliable/depth": {
+      "received": 6035,
+      "unique_stamps": 6035,
+      "max_age_ms": 403.08483
+    },
+    "reliable/stereo": {
+      "received": 5975,
+      "unique_stamps": 5975,
+      "max_age_ms": 402.266685
+    },
+    "reliable/person": {
+      "received": 2652,
+      "unique_stamps": 2652,
+      "max_age_ms": 225.479992
+    }
+  }
+}

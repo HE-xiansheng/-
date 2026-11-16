@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "checks": {
+    "original_reproduces_stall": true,
+    "candidate_all_checks": false
+  },
+  "cases": {
+    "original": {
+      "checks": {
+        "sync_branch_exercised": true,
+        "sustained_odometry": false,
+        "sustained_cloud": false,
+        "source_order": false,
+        "valid_pose": false,
+        "clean_exit": true
+      },
+      "odometry": 0,
+      "clouds": 0,
+      "last_output_seconds": null,
+      "returncode": 0
+    },
+    "candidate": {
+      "checks": {
+        "sync_branch_exercised": true,
+        "sustained_odometry": false,
+        "sustained_cloud": true,
+        "source_order": true,
+        "valid_pose": true,
+        "clean_exit": true
+      },
+      "odometry": 126,
+      "clouds": 126,
+      "last_output_seconds": 13.517409726999176,
+      "returncode": 0
+    }
+  },
+  "imu_clock_offset_seconds": -2,
+  "scope": "recorded LiDAR/IMU with controlled clock offset; localhost domain84; no FC"
+}

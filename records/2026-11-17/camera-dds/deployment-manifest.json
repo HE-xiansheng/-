@@ -1,0 +1,10 @@
+{
+  "head": "bfc044a3b0a82bca28b539dd733722dfee286d2e",
+  "sha256": {
+    "launch/gemini335l.launch.py": "1a55e223520ce0c971af06c1861fe3f0bd786636c11e658e82047aa5bda70b80",
+    "config/fastdds_large_images.xml": "73967e234c74e6ea468ec353f403597b637f599402a5eebd9fddcc246b4a38bb"
+  },
+  "git_clean": true,
+  "services_changed": false,
+  "driver_binary_changed": false
+}

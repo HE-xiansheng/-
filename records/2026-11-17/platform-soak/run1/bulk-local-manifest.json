@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/home/tyzk/drone-migration-work/platform-soak-run1/inputs.tar",
+    "bytes": 20961280,
+    "sha256": "e09a194df530d112871e25daded0c2f92729659849f45c8bc058ba3da81c45a4"
+  },
+  {
+    "path": "/home/tyzk/drone-migration-work/platform-soak-run1/evidence.tar.gz",
+    "bytes": 420551359,
+    "sha256": "acffda6aa3e15441b6f77ee8614af0fcb09cc717a5c185a2a1ecd57d2d10cbd2"
+  }
+]

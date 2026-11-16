@@ -1,0 +1,116 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/platform-soak-check/observer-build
+[ 50%] Building CXX object CMakeFiles/observer.dir/observer.cpp.o
+[100%] Linking CXX executable observer
+[100%] Built target observer
+{"all_actual_processing_streams_ready": false}
+{"actual_recorder_ready": true}
+{"remaining_s": 175.0, "streams": {"color": 1799, "odom": 6, "cloud": 6, "depth": 1811, "preview": 880}, "bag_bytes": 20952872, "temperature_c": {"thermal_zone2": 64.692, "thermal_zone0": 63.769, "thermal_zone5": 61.0, "thermal_zone3": 64.692, "thermal_zone1": 64.692, "thermal_zone6": 62.846, "thermal_zone4": 61.923}}
+{"remaining_s": 169.9, "streams": {"color": 1945, "odom": 6, "cloud": 6, "depth": 1963, "preview": 934}, "bag_bytes": 42274344, "temperature_c": {"thermal_zone2": 65.615, "thermal_zone0": 64.692, "thermal_zone5": 61.923, "thermal_zone3": 64.692, "thermal_zone1": 65.615, "thermal_zone6": 62.846, "thermal_zone4": 62.846}}
+{"remaining_s": 164.8, "streams": {"color": 2093, "odom": 6, "cloud": 6, "depth": 2107, "preview": 980}, "bag_bytes": 61445736, "temperature_c": {"thermal_zone2": 68.384, "thermal_zone0": 66.538, "thermal_zone5": 62.846, "thermal_zone3": 67.461, "thermal_zone1": 67.461, "thermal_zone6": 64.692, "thermal_zone4": 63.769}}
+{"remaining_s": 159.7, "streams": {"color": 2234, "odom": 6, "cloud": 6, "depth": 2264, "preview": 1029}, "bag_bytes": 80639232, "temperature_c": {"thermal_zone2": 66.538, "thermal_zone0": 65.615, "thermal_zone5": 62.846, "thermal_zone3": 66.538, "thermal_zone1": 66.538, "thermal_zone6": 64.692, "thermal_zone4": 63.769}}
+{"remaining_s": 154.7, "streams": {"color": 2388, "odom": 6, "cloud": 6, "depth": 2414, "preview": 1085}, "bag_bytes": 99886504, "temperature_c": {"thermal_zone2": 67.461, "thermal_zone0": 66.538, "thermal_zone5": 63.769, "thermal_zone3": 66.538, "thermal_zone1": 67.461, "thermal_zone6": 64.692, "thermal_zone4": 64.692}}
+{"remaining_s": 149.7, "streams": {"color": 2535, "odom": 6, "cloud": 6, "depth": 2562, "preview": 1146}, "bag_bytes": 121938960, "temperature_c": {"thermal_zone2": 69.307, "thermal_zone0": 68.384, "thermal_zone5": 64.692, "thermal_zone3": 68.384, "thermal_zone1": 69.307, "thermal_zone6": 66.538, "thermal_zone4": 65.615}}
+{"remaining_s": 144.6, "streams": {"color": 2685, "odom": 6, "cloud": 6, "depth": 2720, "preview": 1214}, "bag_bytes": 141264560, "temperature_c": {"thermal_zone2": 70.23, "thermal_zone0": 68.384, "thermal_zone5": 65.615, "thermal_zone3": 68.384, "thermal_zone1": 70.23, "thermal_zone6": 66.538, "thermal_zone4": 66.538}}
+{"remaining_s": 139.6, "streams": {"color": 2835, "odom": 6, "cloud": 6, "depth": 2871, "preview": 1294}, "bag_bytes": 160945960, "temperature_c": {"thermal_zone2": 70.23, "thermal_zone0": 69.307, "thermal_zone5": 66.538, "thermal_zone3": 70.23, "thermal_zone1": 70.23, "thermal_zone6": 67.461, "thermal_zone4": 66.538}}
+{"remaining_s": 134.6, "streams": {"color": 2987, "odom": 6, "cloud": 6, "depth": 3023, "preview": 1375}, "bag_bytes": 176723056, "temperature_c": {"thermal_zone2": 70.23, "thermal_zone0": 69.307, "thermal_zone5": 66.538, "thermal_zone3": 70.23, "thermal_zone1": 70.23, "thermal_zone6": 68.384, "thermal_zone4": 67.461}}
+{"remaining_s": 129.6, "streams": {"color": 3138, "odom": 6, "cloud": 6, "depth": 3173, "preview": 1456}, "bag_bytes": 198145568, "temperature_c": {"thermal_zone2": 71.153, "thermal_zone0": 70.23, "thermal_zone5": 66.538, "thermal_zone3": 70.23, "thermal_zone1": 71.153, "thermal_zone6": 68.384, "thermal_zone4": 67.461}}
+{"remaining_s": 124.5, "streams": {"color": 3287, "odom": 6, "cloud": 6, "depth": 3323, "preview": 1535}, "bag_bytes": 216416864, "temperature_c": {"thermal_zone2": 72.076, "thermal_zone0": 71.153, "thermal_zone5": 67.461, "thermal_zone3": 71.153, "thermal_zone1": 72.076, "thermal_zone6": 68.384, "thermal_zone4": 68.384}}
+{"remaining_s": 119.5, "streams": {"color": 3439, "odom": 6, "cloud": 6, "depth": 3473, "preview": 1614}, "bag_bytes": 238269984, "temperature_c": {"thermal_zone2": 73.0, "thermal_zone0": 72.076, "thermal_zone5": 67.461, "thermal_zone3": 72.076, "thermal_zone1": 73.0, "thermal_zone6": 69.307, "thermal_zone4": 68.384}}
+{"remaining_s": 114.5, "streams": {"color": 3589, "odom": 6, "cloud": 6, "depth": 3626, "preview": 1689}, "bag_bytes": 257049784, "temperature_c": {"thermal_zone2": 73.923, "thermal_zone0": 72.076, "thermal_zone5": 68.384, "thermal_zone3": 72.076, "thermal_zone1": 73.0, "thermal_zone6": 69.307, "thermal_zone4": 69.307}}
+{"remaining_s": 109.4, "streams": {"color": 3740, "odom": 6, "cloud": 6, "depth": 3776, "preview": 1767}, "bag_bytes": 276342352, "temperature_c": {"thermal_zone2": 73.923, "thermal_zone0": 72.076, "thermal_zone5": 69.307, "thermal_zone3": 73.0, "thermal_zone1": 73.923, "thermal_zone6": 70.23, "thermal_zone4": 69.307}}
+{"remaining_s": 104.4, "streams": {"color": 3892, "odom": 6, "cloud": 6, "depth": 3926, "preview": 1847}, "bag_bytes": 295531728, "temperature_c": {"thermal_zone2": 73.0, "thermal_zone0": 72.076, "thermal_zone5": 69.307, "thermal_zone3": 73.0, "thermal_zone1": 73.0, "thermal_zone6": 70.23, "thermal_zone4": 70.23}}
+{"remaining_s": 99.4, "streams": {"color": 4032, "odom": 6, "cloud": 6, "depth": 4074, "preview": 1906}, "bag_bytes": 313398456, "temperature_c": {"thermal_zone2": 73.923, "thermal_zone0": 73.0, "thermal_zone5": 70.23, "thermal_zone3": 73.0, "thermal_zone1": 73.923, "thermal_zone6": 71.153, "thermal_zone4": 70.23}}
+{"remaining_s": 94.3, "streams": {"color": 4178, "odom": 6, "cloud": 6, "depth": 4226, "preview": 1956}, "bag_bytes": 336533144, "temperature_c": {"thermal_zone2": 73.923, "thermal_zone0": 73.0, "thermal_zone5": 70.23, "thermal_zone3": 73.923, "thermal_zone1": 73.923, "thermal_zone6": 71.153, "thermal_zone4": 70.23}}
+{"remaining_s": 89.3, "streams": {"color": 4322, "odom": 6, "cloud": 6, "depth": 4364, "preview": 2002}, "bag_bytes": 355971416, "temperature_c": {"thermal_zone2": 76.692, "thermal_zone0": 74.846, "thermal_zone5": 72.076, "thermal_zone3": 75.769, "thermal_zone1": 76.692, "thermal_zone6": 73.0, "thermal_zone4": 72.076}}
+{"remaining_s": 84.3, "streams": {"color": 4468, "odom": 6, "cloud": 6, "depth": 4521, "preview": 2055}, "bag_bytes": 375428736, "temperature_c": {"thermal_zone2": 77.615, "thermal_zone0": 75.769, "thermal_zone5": 72.076, "thermal_zone3": 75.769, "thermal_zone1": 76.692, "thermal_zone6": 73.923, "thermal_zone4": 73.0}}
+{"remaining_s": 79.2, "streams": {"color": 4618, "odom": 6, "cloud": 6, "depth": 4673, "preview": 2106}, "bag_bytes": 394047760, "temperature_c": {"thermal_zone2": 76.692, "thermal_zone0": 75.769, "thermal_zone5": 73.0, "thermal_zone3": 75.769, "thermal_zone1": 76.692, "thermal_zone6": 73.923, "thermal_zone4": 73.923}}
+{"remaining_s": 74.2, "streams": {"color": 4760, "odom": 6, "cloud": 6, "depth": 4814, "preview": 2152}, "bag_bytes": 413472240, "temperature_c": {"thermal_zone2": 79.461, "thermal_zone0": 77.615, "thermal_zone5": 73.923, "thermal_zone3": 77.615, "thermal_zone1": 79.461, "thermal_zone6": 74.846, "thermal_zone4": 74.846}}
+{"remaining_s": 69.2, "streams": {"color": 4905, "odom": 6, "cloud": 6, "depth": 4967, "preview": 2203}, "bag_bytes": 432715176, "temperature_c": {"thermal_zone2": 79.461, "thermal_zone0": 77.615, "thermal_zone5": 74.846, "thermal_zone3": 78.538, "thermal_zone1": 79.461, "thermal_zone6": 75.769, "thermal_zone4": 75.769}}
+{"remaining_s": 64.2, "streams": {"color": 5054, "odom": 6, "cloud": 6, "depth": 5120, "preview": 2274}, "bag_bytes": 452409128, "temperature_c": {"thermal_zone2": 82.23, "thermal_zone0": 79.461, "thermal_zone5": 74.846, "thermal_zone3": 80.384, "thermal_zone1": 82.23, "thermal_zone6": 76.692, "thermal_zone4": 75.769}}
+{"remaining_s": 59.1, "streams": {"color": 5208, "odom": 6, "cloud": 6, "depth": 5271, "preview": 2338}, "bag_bytes": 472045160, "temperature_c": {"thermal_zone2": 81.307, "thermal_zone0": 80.384, "thermal_zone5": 75.769, "thermal_zone3": 80.384, "thermal_zone1": 81.307, "thermal_zone6": 77.615, "thermal_zone4": 76.692}}
+{"remaining_s": 54.1, "streams": {"color": 5356, "odom": 6, "cloud": 6, "depth": 5422, "preview": 2406}, "bag_bytes": 491677288, "temperature_c": {"thermal_zone2": 82.23, "thermal_zone0": 81.307, "thermal_zone5": 76.692, "thermal_zone3": 81.307, "thermal_zone1": 82.23, "thermal_zone6": 78.538, "thermal_zone4": 77.615}}
+{"remaining_s": 49.0, "streams": {"color": 5507, "odom": 6, "cloud": 6, "depth": 5575, "preview": 2473}, "bag_bytes": 511661192, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 80.384, "thermal_zone5": 76.692, "thermal_zone3": 81.307, "thermal_zone1": 82.23, "thermal_zone6": 78.538, "thermal_zone4": 77.615}}
+{"remaining_s": 44.0, "streams": {"color": 5657, "odom": 6, "cloud": 6, "depth": 5725, "preview": 2537}, "bag_bytes": 528687712, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 77.615, "thermal_zone3": 82.23, "thermal_zone1": 83.153, "thermal_zone6": 78.538, "thermal_zone4": 78.538}}
+{"remaining_s": 38.9, "streams": {"color": 5809, "odom": 6, "cloud": 6, "depth": 5877, "preview": 2601}, "bag_bytes": 550507416, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 77.615, "thermal_zone3": 82.23, "thermal_zone1": 82.23, "thermal_zone6": 78.538, "thermal_zone4": 78.538}}
+{"remaining_s": 33.8, "streams": {"color": 5945, "odom": 6, "cloud": 6, "depth": 6020, "preview": 2653}, "bag_bytes": 569122320, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 77.615, "thermal_zone3": 81.307, "thermal_zone1": 82.23, "thermal_zone6": 79.461, "thermal_zone4": 78.538}}
+{"remaining_s": 28.7, "streams": {"color": 6093, "odom": 6, "cloud": 6, "depth": 6171, "preview": 2702}, "bag_bytes": 588678592, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 82.23, "thermal_zone5": 77.615, "thermal_zone3": 82.23, "thermal_zone1": 84.076, "thermal_zone6": 79.461, "thermal_zone4": 78.538}}
+{"remaining_s": 23.7, "streams": {"color": 6229, "odom": 6, "cloud": 6, "depth": 6323, "preview": 2752}, "bag_bytes": 608331176, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 78.538, "thermal_zone3": 82.23, "thermal_zone1": 83.153, "thermal_zone6": 79.461, "thermal_zone4": 78.538}}
+{"remaining_s": 18.7, "streams": {"color": 6367, "odom": 6, "cloud": 6, "depth": 6467, "preview": 2798}, "bag_bytes": 627549608, "temperature_c": {"thermal_zone2": 84.076, "thermal_zone0": 81.307, "thermal_zone5": 78.538, "thermal_zone3": 82.23, "thermal_zone1": 84.076, "thermal_zone6": 79.461, "thermal_zone4": 79.461}}
+{"remaining_s": 13.6, "streams": {"color": 6511, "odom": 6, "cloud": 6, "depth": 6620, "preview": 2843}, "bag_bytes": 647169232, "temperature_c": {"thermal_zone2": 84.076, "thermal_zone0": 82.23, "thermal_zone5": 78.538, "thermal_zone3": 82.23, "thermal_zone1": 84.076, "thermal_zone6": 79.461, "thermal_zone4": 78.538}}
+{"remaining_s": 8.6, "streams": {"color": 6663, "odom": 6, "cloud": 6, "depth": 6765, "preview": 2891}, "bag_bytes": 669755104, "temperature_c": {"thermal_zone2": 83.153, "thermal_zone0": 81.307, "thermal_zone5": 77.615, "thermal_zone3": 82.23, "thermal_zone1": 83.153, "thermal_zone6": 79.461, "thermal_zone4": 79.461}}
+{"remaining_s": 3.6, "streams": {"color": 6810, "odom": 6, "cloud": 6, "depth": 6917, "preview": 2949}, "bag_bytes": 688870368, "temperature_c": {"thermal_zone2": 84.076, "thermal_zone0": 81.307, "thermal_zone5": 78.538, "thermal_zone3": 82.23, "thermal_zone1": 83.153, "thermal_zone6": 79.461, "thermal_zone4": 79.461}}
+{"remaining_s": -0.0, "streams": {"color": 6919, "odom": 6, "cloud": 6, "depth": 7029, "preview": 2997}, "bag_bytes": 701141984, "temperature_c": {"thermal_zone2": 84.076, "thermal_zone0": 82.23, "thermal_zone5": 78.538, "thermal_zone3": 83.153, "thermal_zone1": 84.076, "thermal_zone6": 80.384, "thermal_zone4": 79.461}}
+{"recorder_normal_finalization": true}
+{"color_sustained_rate": true}
+{"color_source_order": true}
+{"color_no_long_gap": true}
+{"color_ages_bounded": true}
+{"depth_sustained_rate": true}
+{"depth_source_order": true}
+{"depth_no_long_gap": true}
+{"depth_ages_bounded": true}
+{"preview_sustained_rate": true}
+{"preview_source_order": true}
+{"preview_no_long_gap": true}
+{"preview_ages_bounded": true}
+{"odom_sustained_rate": false}
+{"odom_source_order": false}
+{"odom_no_long_gap": false}
+{"odom_ages_bounded": false}
+{"cloud_sustained_rate": false}
+{"cloud_source_order": false}
+{"cloud_no_long_gap": false}
+{"cloud_ages_bounded": false}
+{"vision_sustained_rate": false}
+{"vision_source_order": false}
+{"vision_no_long_gap": false}
+{"vision_ages_bounded": false}
+{"npu_preserves_camera_headers": false}
+{"relay_uses_actual_lio_stamps": false}
+{"lio_valid_frames_and_finite_unit_quaternion": true}
+{"all_recorded_sqlite_parts_valid": true}
+{"/livox/imu_all_stable_source_stamps_recorded": false}
+{"/livox/lidar_all_stable_source_stamps_recorded": true}
+{"/factory_fastlio/odometry_all_stable_source_stamps_recorded": false}
+{"/factory_fastlio/cloud_world_all_stable_source_stamps_recorded": false}
+{"/mavros/vision_pose/pose_all_stable_source_stamps_recorded": false}
+{"no_flight_command_interfaces": true}
+{"memory_headroom": true}
+{"mpp_reliable_raw_all_source_stamps": true}
+{"mpp_reliable_color_all_source_stamps": true}
+{"mpp_best_effort_raw_all_source_stamps": true}
+{"mpp_best_effort_color_all_source_stamps": true}
+{"passed": false, "checks": {"all_actual_processing_streams_ready": false, "actual_recorder_ready": true, "recorder_normal_finalization": true, "color_sustained_rate": true, "color_source_order": true, "color_no_long_gap": true, "color_ages_bounded": true, "depth_sustained_rate": true, "depth_source_order": true, "depth_no_long_gap": true, "depth_ages_bounded": true, "preview_sustained_rate": true, "preview_source_order": true, "preview_no_long_gap": true, "preview_ages_bounded": true, "odom_sustained_rate": false, "odom_source_order": false, "odom_no_long_gap": false, "odom_ages_bounded": false, "cloud_sustained_rate": false, "cloud_source_order": false, "cloud_no_long_gap": false, "cloud_ages_bounded": false, "vision_sustained_rate": false, "vision_source_order": false, "vision_no_long_gap": false, "vision_ages_bounded": false, "npu_preserves_camera_headers": false, "relay_uses_actual_lio_stamps": false, "lio_valid_frames_and_finite_unit_quaternion": true, "all_recorded_sqlite_parts_valid": true, "/livox/imu_all_stable_source_stamps_recorded": false, "/livox/lidar_all_stable_source_stamps_recorded": true, "/factory_fastlio/odometry_all_stable_source_stamps_recorded": false, "/factory_fastlio/cloud_world_all_stable_source_stamps_recorded": false, "/mavros/vision_pose/pose_all_stable_source_stamps_recorded": false, "no_flight_command_interfaces": true, "memory_headroom": true, "mpp_reliable_raw_all_source_stamps": true, "mpp_reliable_color_all_source_stamps": true, "mpp_best_effort_raw_all_source_stamps": true, "mpp_best_effort_color_all_source_stamps": true}}

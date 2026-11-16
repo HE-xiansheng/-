@@ -1,0 +1,19 @@
+[master d861281] Fix FAST-LIO self-sync IMU seconds conversion
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+{
+  "head": "d86128116d897e0c6a77c24ea2d65beb9d468959",
+  "old": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": "837e484a8dd06f1065079b89443723d2f3c0f1f483171616f234b82a6c31044b",
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": "04cda48cae7220bafe733dfaa5dd45b5776fa0b3d1f583c9dfa91ec774f0b8c8"
+  },
+  "new": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": "2c3f080533595144f0494d2df70efae00f24c2ee41a8ccce443b2b3a54963e9d",
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd"
+  },
+  "git_clean": true,
+  "services_changed": false,
+  "physical_fc_used": false
+}
+Traceback (most recent call last):
+  File "<stdin>", line 29, in <module>
+AssertionError

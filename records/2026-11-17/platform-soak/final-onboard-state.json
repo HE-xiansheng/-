@@ -1,0 +1,20 @@
+{
+  "head": "bfc044a3b0a82bca28b539dd733722dfee286d2e",
+  "git_clean": true,
+  "sha256": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": "2c3f080533595144f0494d2df70efae00f24c2ee41a8ccce443b2b3a54963e9d",
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd",
+    "02_drivers/orbbec/launch/gemini335l.launch.py": "1a55e223520ce0c971af06c1861fe3f0bd786636c11e658e82047aa5bda70b80",
+    "02_drivers/orbbec/config/fastdds_large_images.xml": "73967e234c74e6ea468ec353f403597b637f599402a5eebd9fddcc246b4a38bb"
+  },
+  "test_directories_removed": {
+    "/tmp/fastlio-sync-candidate": true,
+    "/tmp/platform-soak-check": true,
+    "/tmp/fastlio-self-sync-check": true
+  },
+  "nomachine_active": true,
+  "network": "lo               UNKNOWN        127.0.0.1/8 ::1/128 \nenP3p49s0        DOWN           \nwlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:af0a:7930:a292:9ac3/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 \n",
+  "uptime": " 02:41:29 up  8:13,  3 users,  load average: 1.93, 4.60, 4.70\n",
+  "services_changed": false,
+  "flight_commands_sent": false
+}

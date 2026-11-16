@@ -1,0 +1,31 @@
+{
+  "passed": false,
+  "native_camera_count": 5975,
+  "python_camera_count": 5916,
+  "preview_count": 2652,
+  "missing_from_native_camera": [
+    1794853409072369000,
+    1794853469610980000,
+    1794853519435653000,
+    1794853520403459000,
+    1794853525809927000,
+    1794853528179392000,
+    1794853531249688000,
+    1794853542829910000,
+    1794853577337952000
+  ],
+  "missing_from_both_camera_observers": [
+    1794853577337952000
+  ],
+  "corroborated_by_python": [
+    1794853409072369000,
+    1794853469610980000,
+    1794853519435653000,
+    1794853520403459000,
+    1794853525809927000,
+    1794853528179392000,
+    1794853531249688000,
+    1794853542829910000
+  ],
+  "scope": "Every native-observed preview stamp must occur in independent source-camera observation; no startup/end exemptions"
+}

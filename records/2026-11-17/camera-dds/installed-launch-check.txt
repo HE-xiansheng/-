@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "cases": {
+    "default": [
+      "PushLaunchConfigurations",
+      "PushEnvironment",
+      "SetEnvironmentVariable",
+      "SetRemap",
+      "IncludeLaunchDescription",
+      "PopEnvironment",
+      "PopLaunchConfigurations"
+    ],
+    "explicit_profile": [
+      "PushLaunchConfigurations",
+      "PushEnvironment",
+      "SetRemap",
+      "IncludeLaunchDescription",
+      "PopEnvironment",
+      "PopLaunchConfigurations"
+    ],
+    "cyclone": [
+      "PushLaunchConfigurations",
+      "PushEnvironment",
+      "SetRemap",
+      "IncludeLaunchDescription",
+      "PopEnvironment",
+      "PopLaunchConfigurations"
+    ]
+  },
+  "scope": "installed launch construction only; actual default camera runtime validated in run4; no hardware start"
+}

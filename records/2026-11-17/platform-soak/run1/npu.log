@@ -1,0 +1,17 @@
+[INFO] [1794852980.311602385] [gcs_person_preview]: Person preview ready: image only, RKNN model=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn
+[NN_INFO] rknn_init success!
+[NN_INFO] RKNN API version: 2.3.2 (429f97ae6b@2025-04-09T09:09:27)
+[NN_INFO] RKNN Driver version: 0.9.6
+[NN_INFO] model input num: 1, output num: 6
+[NN_INFO] input tensors:
+[NN_INFO]   index=0, name=data, n_dims=4, dims=[1, 640, 640, 3], n_elems=1228800, size=1228800, fmt=NHWC, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.003922
+[NN_INFO] output tensors:
+[NN_INFO]   index=0, name=reg1, n_dims=4, dims=[1, 1, 4, 6400], n_elems=25600, size=25600, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.048968
+[NN_INFO]   index=1, name=cls1, n_dims=4, dims=[1, 80, 80, 80], n_elems=512000, size=512000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=118, scale=0.134088
+[NN_INFO]   index=2, name=reg2, n_dims=4, dims=[1, 1, 4, 1600], n_elems=6400, size=6400, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.053783
+[NN_INFO]   index=3, name=cls2, n_dims=4, dims=[1, 80, 40, 40], n_elems=128000, size=128000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=114, scale=0.188033
+[NN_INFO]   index=4, name=reg3, n_dims=4, dims=[1, 1, 4, 400], n_elems=1600, size=1600, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=-128, scale=0.056636
+[NN_INFO]   index=5, name=cls3, n_dims=4, dims=[1, 80, 20, 20], n_elems=32000, size=32000, fmt=NCHW, type=INT8, qnt_type=AFFINE, zp=103, scale=0.169929
+=== yoloUltra Meshgrid  Generate success! 
+[INFO] [1794853226.182999874] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[NN_INFO] rknn context destroyed!
