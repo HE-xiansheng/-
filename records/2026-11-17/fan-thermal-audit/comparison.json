@@ -1,0 +1,11 @@
+{
+  "identical_device_tree": {
+    "rockchip,temp-trips": true,
+    "cooling-levels": true,
+    "pwms": true
+  },
+  "no_sysfs_writes": true,
+  "no_services_changed": true,
+  "historical_600s_limit_cause_proven": false,
+  "runtime_pwm_alone_does_not_prove_configuration_difference": true
+}

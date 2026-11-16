@@ -92,7 +92,20 @@ def resource():
    try:values[key]=(policy/key).read_text().strip()
    except OSError:values[key]=None
   clocks[policy.name]=values
- resources.append(dict(monotonic_ns=time.monotonic_ns(),wall_time_ns=time.time_ns(),cpu=list(map(int,Path('/proc/stat').read_text().splitlines()[0].split()[1:])),memory=mem,temperature_c=temps,rss=rss,orbbec_usb=usb,cpufreq=clocks))
+ cooling={}
+ for device in Path('/sys/class/thermal').glob('cooling_device*'):
+  values={}
+  for key in ['type','cur_state','max_state']:
+   try:values[key]=(device/key).read_text().strip()
+   except OSError:values[key]=None
+  cooling[device.name]=values
+ fans={}
+ for device in Path('/sys/class/hwmon').glob('hwmon*'):
+  try:
+   if (device/'name').read_text().strip()=='pwmfan':
+    fans[device.name]={'pwm1':int((device/'pwm1').read_text())}
+  except (OSError,ValueError):continue
+ resources.append(dict(monotonic_ns=time.monotonic_ns(),wall_time_ns=time.time_ns(),cpu=list(map(int,Path('/proc/stat').read_text().splitlines()[0].split()[1:])),memory=mem,temperature_c=temps,rss=rss,orbbec_usb=usb,cpufreq=clocks,cooling_devices=cooling,fan_pwm=fans))
 thread=None;observer=None;recorder=None;begin_ns=end_ns=None
 try:
  config=yaml.safe_load((root/'03_tools/gimbal_relay/gimbal.yml').read_text());config['rtspAddress']='127.0.0.1:18554';config['rtspTransports']=['tcp'];config['paths']={'gimbal':{'source':'publisher'}};config['authInternalUsers']=[{'user':'any','ips':['127.0.0.1'],'permissions':[{'action':'publish','path':'gimbal'},{'action':'read','path':'gimbal'}]}]

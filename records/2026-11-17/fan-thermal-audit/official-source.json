@@ -1,0 +1,8 @@
+{
+  "url": "https://raw.githubusercontent.com/orangepi-xunlong/linux-orangepi/eb1c681e5184e51d8ce1f351559d149d17f48b57/drivers/hwmon/pwm-fan.c",
+  "branch": "orange-pi-5.10-rk3588",
+  "revision": "eb1c681e5184e51d8ce1f351559d149d17f48b57",
+  "sha256": "271a8f37d8112336adcf985065b1ef220ee37dc183fb578d292fec18d2d8aed6",
+  "kernel_documentation": "https://www.kernel.org/doc/html/v5.10/hwmon/pwm-fan.html",
+  "limit": "Vendor source reference; not proof of binary-identical installed kernel"
+}
