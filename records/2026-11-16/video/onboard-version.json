@@ -1,0 +1,13 @@
+{
+  "kernel": "5.10.160-rockchip-rk3588",
+  "preview_binary_sha256": "81c86d3b8ef8e0f463a2e31454e40ecde869717be06cc67b2b727411f54465a0",
+  "bridge_sha256": "0b0b5a739d9e818501b0ffdf976b6e0939100559707102190194adf9c661d7fc",
+  "parent_code_commit": "5859393",
+  "code_commit": "2b0c0f9",
+  "cleanup": {
+    "test_processes": 0,
+    "test_directory_removed": true,
+    "build_directory_removed": true,
+    "lock_removed": true
+  }
+}

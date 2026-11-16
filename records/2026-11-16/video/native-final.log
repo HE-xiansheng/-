@@ -1,0 +1,31 @@
+PASS raw VID1 JPEG output
+PASS raw width limit
+PASS raw stale source rejected
+PASS raw future source rejected
+PASS raw graceful shutdown
+PASS tracking VID1 JPEG output
+PASS tracking width limit
+PASS tracking stale source rejected
+PASS tracking future source rejected
+PASS tracking graceful shutdown
+PASS aruco VID1 JPEG output
+PASS aruco width limit
+PASS aruco stale source rejected
+PASS aruco future source rejected
+PASS aruco graceful shutdown
+PASS actual NPU image to VID1
+PASS preview preserves source header
+PASS actual NPU person annotation
+PASS single preview provider
+PASS preview has no control publishers
+PASS preview rejects stale images
+PASS preview rejects future images
+PASS two viewers share one NPU provider
+PASS remaining viewer takes over provider
+PASS last viewer releases owned provider
+PASS external provider reused
+PASS external provider survives viewer close
+PASS missing model produces nonzero exit
+PASS missing model reports explicit UI error
+PASS provider exists before SIGKILL
+PASS SIGKILL bridge releases own provider through parent death signal

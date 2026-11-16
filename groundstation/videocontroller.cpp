@@ -116,7 +116,7 @@ bool VideoController::startStereo() {
     QFile script(QStringLiteral(":/qt/qml/CustomGeometryExample/tools/video/ros_image_bridge.py"));
     if (!script.open(QIODevice::ReadOnly)) { m_status = tr("无法读取视频桥接脚本"); emit changed(); return false; }
     const QByteArray encoded = script.readAll().toBase64();
-    const QString command = QStringLiteral("source /opt/ros/noetic/setup.bash; exec python3 -u -c 'exec(__import__(\"base64\").b64decode(\"%1\"))' --source %2")
+    const QString command = QStringLiteral("source /home/orangepi/drone_platform/env.sh && exec python3 -u -c 'exec(__import__(\"base64\").b64decode(\"%1\"))' --source %2")
             .arg(QString::fromLatin1(encoded), m_trackingMode ? QStringLiteral("tracking") : (m_personMode ? QStringLiteral("person") : QStringLiteral("raw")));
     SshSession::apply(m_stereo);
     SshSession::start(m_stereo, {QStringLiteral("-T"), QStringLiteral("-o"), SshSession::batchOption(), QStringLiteral("-o"), QStringLiteral("ConnectTimeout=5"), QStringLiteral("-o"), QStringLiteral("ServerAliveInterval=5"), QStringLiteral("-o"), QStringLiteral("ServerAliveCountMax=2"), QStringLiteral("orangepi@") + m_host, command});
@@ -228,7 +228,7 @@ void VideoController::startGimbal() {
     if (m_gimbalAruco) {
         QFile script(QStringLiteral(":/qt/qml/CustomGeometryExample/tools/video/ros_image_bridge.py"));
         if (!script.open(QIODevice::ReadOnly)) { m_status = tr("无法读取识别画面桥接脚本"); emit changed(); return; }
-        const QString command = QStringLiteral("source /opt/ros/noetic/setup.bash; exec python3 -u -c 'exec(__import__(\"base64\").b64decode(\"%1\"))' --source aruco")
+        const QString command = QStringLiteral("source /home/orangepi/drone_platform/env.sh && exec python3 -u -c 'exec(__import__(\"base64\").b64decode(\"%1\"))' --source aruco")
                 .arg(QString::fromLatin1(script.readAll().toBase64()));
         SshSession::apply(m_gimbal);
         SshSession::start(m_gimbal, {QStringLiteral("-T"), QStringLiteral("-o"), SshSession::batchOption(), QStringLiteral("-o"), QStringLiteral("ConnectTimeout=5"), QStringLiteral("-o"), QStringLiteral("ServerAliveInterval=5"), QStringLiteral("-o"), QStringLiteral("ServerAliveCountMax=2"), QStringLiteral("orangepi@") + m_host, command});

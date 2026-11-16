@@ -1,0 +1,7 @@
+PASS 真实SSH ROS2压缩图像进入Qt
+PASS 真实SSH图像尺寸符合显示限制
+PASS 真实SSH跟踪标注图进入Qt
+PASS 真实SSH ArUco标注图进入Qt
+PASS 真实SSH图像通过Qt provider
+PASS 真实SSH视频停止后状态失效
+PASS 真实SSH视频接收进程回收

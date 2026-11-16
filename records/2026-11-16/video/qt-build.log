@@ -1,0 +1,13 @@
+[ 11%] Running qmlimportscanner for video_reconnect_test
+[ 11%] Built target video_reconnect_test_qmlimportscan
+[ 11%] Built target video_reconnect_test_autogen_timestamp_deps
+[ 22%] Automatic MOC for target video_reconnect_test
+[ 22%] Built target video_reconnect_test_autogen
+[ 33%] Running rcc for resource video
+[ 44%] Building CXX object CMakeFiles/video_reconnect_test.dir/video_reconnect_test_autogen/mocs_compilation.cpp.o
+[ 55%] Building CXX object CMakeFiles/video_reconnect_test.dir/reconnect.cpp.o
+[ 66%] Building CXX object CMakeFiles/video_reconnect_test.dir/home/tyzk/drone-migration-github/groundstation/videocontroller.cpp.o
+[ 77%] Building CXX object CMakeFiles/video_reconnect_test.dir/home/tyzk/drone-migration-github/groundstation/connectioncontroller.cpp.o
+[ 88%] Building CXX object CMakeFiles/video_reconnect_test.dir/.qt/rcc/qrc_video.cpp.o
+[100%] Linking CXX executable video_reconnect_test
+[100%] Built target video_reconnect_test

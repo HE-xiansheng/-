@@ -33,6 +33,22 @@ static void require(bool ok, const char *message) {
 }
 int main(int argc, char **argv) {
     QGuiApplication app(argc, argv);
+    if (app.arguments().contains("--real-ssh")) {
+        VideoController c;c.setHost("192.168.1.224");c.setStreamEnabled(0,true);
+        QElapsedTimer timer;timer.start();
+        auto until=[&](const std::function<bool()> &predicate,int limit=12000){timer.restart();while(timer.elapsed()<limit){QCoreApplication::processEvents();if(predicate())return true;QThread::msleep(10);}return false;};
+        require(until([&]{return c.stereoFresh();}),"真实SSH ROS2压缩图像进入Qt");
+        require(c.image(0).width()==640,"真实SSH图像尺寸符合显示限制");
+        c.setTrackingMode(true);
+        require(until([&]{return c.stereoFresh();}),"真实SSH跟踪标注图进入Qt");
+        c.setGimbalAruco(true);c.setStreamEnabled(1,true);
+        require(until([&]{return c.gimbalFresh();}),"真实SSH ArUco标注图进入Qt");
+        VideoImageProvider provider(&c);QSize size;
+        require(!provider.requestImage("0",&size,QSize()).isNull(),"真实SSH图像通过Qt provider");
+        c.stop();require(!c.stereoFresh()&&!c.gimbalFresh(),"真实SSH视频停止后状态失效");
+        require(until([&]{return c.m_stereo.state()==QProcess::NotRunning&&c.m_gimbal.state()==QProcess::NotRunning;},5000),"真实SSH视频接收进程回收");
+        return 0;
+    }
     app.setProperty("startupOnboardHost", QStringLiteral("192.168.1.13"));
     ConnectionController connection;
     require(connection.host() == QStringLiteral("192.168.1.13") && !connection.authenticated(),

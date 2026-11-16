@@ -1,0 +1,7 @@
+[ 11%] Built target video_reconnect_test_qmlimportscan
+[ 11%] Built target video_reconnect_test_autogen_timestamp_deps
+[ 22%] Automatic MOC for target video_reconnect_test
+[ 22%] Built target video_reconnect_test_autogen
+[ 33%] Building CXX object CMakeFiles/video_reconnect_test.dir/reconnect.cpp.o
+[ 44%] Linking CXX executable video_reconnect_test
+[100%] Built target video_reconnect_test

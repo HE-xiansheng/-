@@ -1,0 +1,6 @@
+人物识别：已启动仅监视检测节点
+[INFO] [1794835402.314263735] [gcs_person_monitor_90133]: Person preview ready: image only, RKNN model=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn
+[INFO] [1794835404.459436907] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794835404.460943355] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794835404.479009069] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794835404.530680102] [rclcpp]: signal_handler(SIGINT/SIGTERM)

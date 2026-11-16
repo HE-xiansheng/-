@@ -32,3 +32,9 @@
 - 飞前采样仍使用ROS1 AnyMsg字节偏移/XMLRPC Master，必须改为ROS2类型化订阅和DDS图。原栅格订阅前缀/drone_0_ego_planner_node/grid_map/occupancy_inflate与原生ROS2相对话题/grid_map/occupancy_inflate不同；显示层仅接受world会拒绝camera_init。栅格分辨率应读取原生节点参数服务，不能直接使用旧ROS1参数路径。
 
 - Humble缺rclpy.parameter_client，原生异步GetParameters只读服务可用；domain从Context而非Node读取。现场原地面站已占用UDP9005，ROS2独立版默认9015并使用独立状态目录；同用户orangepi的实际SSH→ROS2→跨机UDP→Qt链路已通过，root发布/普通用户采样的首轮DDS异常仅作为问题证据，不宣称已定位所有跨用户原因。
+
+- 视频原图走CompressedImage/JPEG，人物/跟踪/ArUco走Image；云台原图走独立RTSP8554，不应改成ROS图像订阅。旧地面站人物预览指向manual_person_follow_20261027_Y8q9Nn，但.235全/home查找未找到此工程或manual_follow_yolo源文件。独立预览需复用已迁移RKNN引擎补齐图像功能，不能声称恢复了已丢失源码。
+
+视频ROS2：大图使用Reliable depth=1；保持VID1+大端长度+JPEG。DDS发现留2秒，预览flock按UID和domain隔离；SIGKILL经prctl父死亡信号清理自己的NPU子进程（实际验证）。跨机检查域199、localhost，源戳检查及真实NPU检查域198；不接生产飞控。
+
+视频阶段机载代码2b0c0f9，测试/构建/日志临时目录及测试锁已清理，确认无本阶段测试进程；源码摘要与测试副本一致。

@@ -1,0 +1,126 @@
+[
+  {
+    "label": "raw VID1 JPEG output",
+    "passed": true
+  },
+  {
+    "label": "raw width limit",
+    "passed": true
+  },
+  {
+    "label": "raw stale source rejected",
+    "passed": true
+  },
+  {
+    "label": "raw future source rejected",
+    "passed": true
+  },
+  {
+    "label": "raw graceful shutdown",
+    "passed": true
+  },
+  {
+    "label": "tracking VID1 JPEG output",
+    "passed": true
+  },
+  {
+    "label": "tracking width limit",
+    "passed": true
+  },
+  {
+    "label": "tracking stale source rejected",
+    "passed": true
+  },
+  {
+    "label": "tracking future source rejected",
+    "passed": true
+  },
+  {
+    "label": "tracking graceful shutdown",
+    "passed": true
+  },
+  {
+    "label": "aruco VID1 JPEG output",
+    "passed": true
+  },
+  {
+    "label": "aruco width limit",
+    "passed": true
+  },
+  {
+    "label": "aruco stale source rejected",
+    "passed": true
+  },
+  {
+    "label": "aruco future source rejected",
+    "passed": true
+  },
+  {
+    "label": "aruco graceful shutdown",
+    "passed": true
+  },
+  {
+    "label": "actual NPU image to VID1",
+    "passed": true
+  },
+  {
+    "label": "preview preserves source header",
+    "passed": true
+  },
+  {
+    "label": "actual NPU person annotation",
+    "passed": true
+  },
+  {
+    "label": "single preview provider",
+    "passed": true
+  },
+  {
+    "label": "preview has no control publishers",
+    "passed": true
+  },
+  {
+    "label": "preview rejects stale images",
+    "passed": true
+  },
+  {
+    "label": "preview rejects future images",
+    "passed": true
+  },
+  {
+    "label": "two viewers share one NPU provider",
+    "passed": true
+  },
+  {
+    "label": "remaining viewer takes over provider",
+    "passed": true
+  },
+  {
+    "label": "last viewer releases owned provider",
+    "passed": true
+  },
+  {
+    "label": "external provider reused",
+    "passed": true
+  },
+  {
+    "label": "external provider survives viewer close",
+    "passed": true
+  },
+  {
+    "label": "missing model produces nonzero exit",
+    "passed": true
+  },
+  {
+    "label": "missing model reports explicit UI error",
+    "passed": true
+  },
+  {
+    "label": "provider exists before SIGKILL",
+    "passed": true
+  },
+  {
+    "label": "SIGKILL bridge releases own provider through parent death signal",
+    "passed": true
+  }
+]

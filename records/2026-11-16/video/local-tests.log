@@ -1,0 +1,8 @@
+test_aruco_source_stamp_not_receipt_age (test_latest_sender.LatestTest) ... ok
+test_broken_pipe_shuts_down (test_latest_sender.LatestTest) ... ok
+test_slow_output_keeps_latest_pending_frame (test_latest_sender.LatestTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+OK

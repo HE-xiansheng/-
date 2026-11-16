@@ -15,12 +15,12 @@ class BlockingOutput:
     def flush(self):pass
 class LatestTest(unittest.TestCase):
     def test_aruco_source_stamp_not_receipt_age(self):
-        msg=types.SimpleNamespace(header=types.SimpleNamespace(stamp=types.SimpleNamespace(to_sec=lambda:100.)))
+        msg=types.SimpleNamespace(header=types.SimpleNamespace(stamp=types.SimpleNamespace(sec=100,nanosec=0)))
         self.assertTrue(bridge.aruco_source_fresh(msg,100.2))
         self.assertFalse(bridge.aruco_source_fresh(msg,101.1))
         self.assertFalse(bridge.aruco_source_fresh(msg,99.8))
         self.assertFalse(bridge.aruco_source_fresh(msg,float('nan')))
-        msg.header.stamp.to_sec=lambda:0.
+        msg.header.stamp.sec=0
         self.assertFalse(bridge.aruco_source_fresh(msg,0.))
     def test_slow_output_keeps_latest_pending_frame(self):
         output=BlockingOutput();sender=bridge.LatestFrameSender(output,0)
@@ -33,10 +33,10 @@ class LatestTest(unittest.TestCase):
             self.assertEqual(struct.unpack('>I',output.packets[1][4:8])[0],6)
         finally:output.release.set();sender.stop()
     def test_broken_pipe_shuts_down(self):
-        done=threading.Event();original=rospy.signal_shutdown;rospy.signal_shutdown=lambda reason:done.set()
+        done=threading.Event()
         class Broken:
             def write(self,data):raise BrokenPipeError()
-        sender=bridge.LatestFrameSender(Broken(),0)
+        sender=bridge.LatestFrameSender(Broken(),0,shutdown=lambda reason:done.set())
         try:sender.submit(lambda:b'x');self.assertTrue(done.wait(1))
-        finally:sender.stop();rospy.signal_shutdown=original
+        finally:sender.stop()
 if __name__=='__main__':unittest.main()
