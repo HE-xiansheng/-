@@ -1,0 +1,9 @@
+PASS args: part0.db3 part1.db3 output.json [reject]
+静态点云加载器绑定主几何：0x7fff00bb3620
+静态点云显示上限变更：70000
+点云几何收到空点集：sequence=0
+点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+PASS start invalid input check
+静态点云后台加载失败：token=1，path=/home/tyzk/drone-migration-work/fixtures/recording-replay/replay-fixture/part0/truncated.db3，error=truncated.db3: ROS2 CDR编码不支持或消息损坏
+PASS malformed recording rejected
+销毁静态点云加载器，取消未完成加载任务

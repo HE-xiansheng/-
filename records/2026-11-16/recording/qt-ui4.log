@@ -1,0 +1,3 @@
+PASS output.json
+PASS readonly remote status
+FAIL fresh completed recorder allows start

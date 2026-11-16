@@ -432,3 +432,7 @@ WSL完整包1.0.20261110.2继续合入现场云台视频修复：仅对当前机
 WSL完整包1.0.20261110.3增加一键卸载.cmd；另提供兼容旧版的独立卸载包。卸载只处理当前用户登记的地面站目录、快捷方式和专用防火墙规则，先备份目录内新增文件，保留WSL、Ubuntu、用户配置及飞行数据。详见[WSL安装说明](doc/wsl_oneclick.md)。
 
 WSL工具1.0.20261111.1修复卸载入口FunctionsOnly参数被dot-source安装脚本覆盖的问题，增加正常入口回归及依赖导入前日志。CMD在调用PowerShell前另写uninstall-launch日志并显示退出码；独立卸载工具兼容之前安装的版本。
+
+ROS2录制与回放适配见 [手动录制](doc/manual_recording.md) 和 [飞行记录查看器](doc/flight_records_viewer.md)。Linux构建安装libsqlite3-dev以启用`.db3`读取；原有ROS1 `.bag`读取保留。当前仍是独立迁移副本，物理整链待验收。
+
+ROS2独立迁移副本：录制入口使用机载`env.sh`，飞行记录支持ROS1 `.bag`及ROS2 sqlite3/CDR `.db3`；Linux构建使用可选SQLite3开发库。详见`doc/manual_recording.md`与`doc/flight_records_viewer.md`。物理整链仍待验证，未替换原桌面入口。

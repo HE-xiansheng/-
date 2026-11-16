@@ -23,3 +23,27 @@ qt_add_qml_module(check_records URI CustomGeometryExample VERSION 1.0
 qt_add_resources(check_records "helpers" PREFIX "/qt/qml/CustomGeometryExample" BASE ${GCS_SRC}
     FILES ${GCS_SRC}/tools/flight-records/remote_records.py ${GCS_SRC}/assets/tianyi-logo.jpg)
 qt_add_shaders(check_records "brand_shader" PREFIX "/" BASE ${GCS_SRC} FILES ${GCS_SRC}/shaders/brand.frag)
+
+find_package(SQLite3 REQUIRED)
+if(SQLite3_FOUND)
+    target_link_libraries(check_records PRIVATE SQLite::SQLite3)
+    target_compile_definitions(check_records PRIVATE GCS_HAVE_SQLITE3)
+endif()
+qt_add_executable(check_ros2_records check_ros2_records.cpp
+    ${GCS_SRC}/pointcloudfileloader.h ${GCS_SRC}/pointcloudfileloader.cpp
+    ${GCS_SRC}/pointcloudgeometry.h ${GCS_SRC}/pointcloudgeometry.cpp)
+target_include_directories(check_ros2_records PRIVATE ${GCS_SRC})
+target_link_libraries(check_ros2_records PRIVATE Qt6::Core Qt6::Gui Qt6::Quick Qt6::Quick3D Qt6::Network Qt6::Concurrent lz4 bz2 SQLite::SQLite3)
+target_compile_definitions(check_ros2_records PRIVATE GCS_HAVE_LZ4 GCS_HAVE_BZIP2 GCS_HAVE_SQLITE3)
+qt_add_executable(check_ros2_transfer check_ros2_transfer.cpp
+    ${GCS_SRC}/pointcloudfileloader.h ${GCS_SRC}/pointcloudfileloader.cpp
+    ${GCS_SRC}/pointcloudgeometry.h ${GCS_SRC}/pointcloudgeometry.cpp
+    ${GCS_SRC}/flightrecordcontroller.h ${GCS_SRC}/flightrecordcontroller.cpp)
+target_include_directories(check_ros2_transfer PRIVATE ${GCS_SRC})
+target_link_libraries(check_ros2_transfer PRIVATE Qt6::Core Qt6::Gui Qt6::Quick Qt6::Quick3D Qt6::Network Qt6::Concurrent lz4 bz2 SQLite::SQLite3)
+target_compile_definitions(check_ros2_transfer PRIVATE GCS_HAVE_LZ4 GCS_HAVE_BZIP2 GCS_HAVE_SQLITE3)
+qt_add_resources(check_ros2_transfer "helpers" PREFIX "/qt/qml/CustomGeometryExample" BASE ${GCS_SRC}
+    FILES ${GCS_SRC}/tools/flight-records/remote_records.py)
+qt_add_executable(check_recording_ui check_recording_ui.cpp ${GCS_SRC}/recordingcontroller.cpp ${GCS_SRC}/recordingcontroller.h)
+target_include_directories(check_recording_ui PRIVATE ${GCS_SRC})
+target_link_libraries(check_recording_ui PRIVATE Qt6::Core Qt6::Qml)

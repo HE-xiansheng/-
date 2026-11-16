@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/ros2-recording-test5/test_telemetry_ros2.py", line 129, in <module>
+    if __name__=='__main__':main()
+  File "/tmp/ros2-recording-test5/test_telemetry_ros2.py", line 23, in main
+    from bridge import format_packet
+  File "/tmp/ros2-recording-test5/helpers/preflight/bridge.py", line 22, in <module>
+    from planner_display import snapshot
+  File "/tmp/ros2-recording-test5/helpers/preflight/planner_display.py", line 4, in <module>
+    from planner_geometry import sample_poly,is_active
+ModuleNotFoundError: No module named 'planner_geometry'

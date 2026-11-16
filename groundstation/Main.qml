@@ -269,7 +269,7 @@ ApplicationWindow {
         id: staticPointDialog
         title: qsTr("选择静态点云模型")
         nameFilters: [
-            qsTr("点云模型 (*.lvx2 *.bag *.pcd *.ply *.xyz *.txt *.csv)"),
+            qsTr("点云模型 (*.lvx2 *.bag *.db3 *.pcd *.ply *.xyz *.txt *.csv)"),
             qsTr("所有文件 (*)")
         ]
         onAccepted: {

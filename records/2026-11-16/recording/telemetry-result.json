@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "all preflight rows healthy from typed ROS2 messages",
+      "passed": true
+    },
+    {
+      "name": "source frequency from callbacks instead of 5Hz monitor",
+      "passed": true
+    },
+    {
+      "name": "small sensor fields and custom Livox count",
+      "passed": true
+    },
+    {
+      "name": "nonfinite battery field becomes null",
+      "passed": true
+    },
+    {
+      "name": "frame and body pose retained",
+      "passed": true
+    },
+    {
+      "name": "ROS2 graph publisher identity and source nodes",
+      "passed": true
+    },
+    {
+      "name": "native recording readonly status",
+      "passed": true
+    },
+    {
+      "name": "native camera_init trajectory visible without candidate workflow",
+      "passed": true
+    },
+    {
+      "name": "asynchronous read-only native grid parameter",
+      "passed": true
+    },
+    {
+      "name": "grid frame session source time accepted",
+      "passed": true
+    },
+    {
+      "name": "unchanged TLM1 JSON compression and fragment format",
+      "passed": true
+    },
+    {
+      "name": "no control publishers from read-only monitors",
+      "passed": true
+    },
+    {
+      "name": "duplicate same-name publisher remains a conflict",
+      "passed": true
+    },
+    {
+      "name": "MAVROS target feedback not treated as command",
+      "passed": true
+    },
+    {
+      "name": "external command publisher detected without sending command messages",
+      "passed": true
+    },
+    {
+      "name": "source stream stop marks stale while monitor stays online",
+      "passed": true
+    },
+    {
+      "name": "invalid pose does not poison JSON and is explicitly rejected",
+      "passed": true
+    },
+    {
+      "name": "nonfinite status rejected without refreshing old cache",
+      "passed": true
+    },
+    {
+      "name": "wrong-frame grid cannot refresh previous cache",
+      "passed": true
+    },
+    {
+      "name": "session restart clears old trajectory or attaches current only",
+      "passed": true
+    }
+  ]
+}

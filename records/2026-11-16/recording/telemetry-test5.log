@@ -1,0 +1,20 @@
+PASS all preflight rows healthy from typed ROS2 messages
+PASS source frequency from callbacks instead of 5Hz monitor
+PASS small sensor fields and custom Livox count
+PASS nonfinite battery field becomes null
+PASS frame and body pose retained
+PASS ROS2 graph publisher identity and source nodes
+PASS native recording readonly status
+PASS native camera_init trajectory visible without candidate workflow
+PASS asynchronous read-only native grid parameter
+PASS grid frame session source time accepted
+PASS unchanged TLM1 JSON compression and fragment format
+PASS no control publishers from read-only monitors
+PASS duplicate same-name publisher remains a conflict
+PASS MAVROS target feedback not treated as command
+PASS external command publisher detected without sending command messages
+PASS source stream stop marks stale while monitor stays online
+PASS invalid pose does not poison JSON and is explicitly rejected
+PASS nonfinite status rejected without refreshing old cache
+PASS wrong-frame grid cannot refresh previous cache
+PASS session restart clears old trajectory or attaches current only

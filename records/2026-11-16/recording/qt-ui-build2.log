@@ -1,0 +1,7 @@
+[ 16%] Built target check_recording_ui_qmlimportscan
+[ 16%] Built target check_recording_ui_autogen_timestamp_deps
+[ 33%] Automatic MOC and UIC for target check_recording_ui
+[ 33%] Built target check_recording_ui_autogen
+[ 50%] Building CXX object CMakeFiles/check_recording_ui.dir/check_recording_ui.cpp.o
+[ 66%] Linking CXX executable check_recording_ui
+[100%] Built target check_recording_ui

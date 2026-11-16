@@ -1,0 +1,26 @@
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+/home/tyzk/drone-migration-github/groundstation/shaders/brand.frag -> shaders/brand.frag.qsb exposed as ://shaders/brand.frag.qsb
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-recording-ros2
+[ 14%] Built target check_ros2_records_qmlimportscan
+[ 14%] Built target check_ros2_records_autogen_timestamp_deps
+[ 28%] Automatic MOC and UIC for target check_ros2_records
+[ 28%] Built target check_ros2_records_autogen
+[ 42%] Building CXX object CMakeFiles/check_ros2_records.dir/home/tyzk/drone-migration-github/groundstation/pointcloudfileloader.cpp.o
+[ 57%] Linking CXX executable check_ros2_records
+[100%] Built target check_ros2_records
+[ 10%] Running qmlimportscanner for check_ros2_transfer
+[ 10%] Built target check_ros2_transfer_qmlimportscan
+[ 10%] Built target check_ros2_transfer_autogen_timestamp_deps
+[ 20%] Automatic MOC and UIC for target check_ros2_transfer
+[ 20%] Built target check_ros2_transfer_autogen
+[ 30%] Running rcc for resource helpers
+[ 40%] Building CXX object CMakeFiles/check_ros2_transfer.dir/check_ros2_transfer_autogen/mocs_compilation.cpp.o
+[ 50%] Building CXX object CMakeFiles/check_ros2_transfer.dir/check_ros2_transfer.cpp.o
+[ 60%] Building CXX object CMakeFiles/check_ros2_transfer.dir/home/tyzk/drone-migration-github/groundstation/pointcloudfileloader.cpp.o
+[ 70%] Building CXX object CMakeFiles/check_ros2_transfer.dir/home/tyzk/drone-migration-github/groundstation/pointcloudgeometry.cpp.o
+[ 80%] Building CXX object CMakeFiles/check_ros2_transfer.dir/home/tyzk/drone-migration-github/groundstation/flightrecordcontroller.cpp.o
+[ 90%] Building CXX object CMakeFiles/check_ros2_transfer.dir/.qt/rcc/qrc_helpers.cpp.o
+[100%] Linking CXX executable check_ros2_transfer
+[100%] Built target check_ros2_transfer

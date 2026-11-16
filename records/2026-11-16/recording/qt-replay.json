@@ -1,0 +1,7 @@
+{
+    "duration_ms": 4780,
+    "passed": true,
+    "points": 3600,
+    "poses": 240,
+    "sources": "点云 /factory_fastlio/cloud_world · 轨迹 /factory_fastlio/odometry"
+}

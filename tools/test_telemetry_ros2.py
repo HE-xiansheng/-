@@ -84,7 +84,7 @@ def main():
         check('nonfinite battery field becomes null',packet['topics']['battery']['values']['current'] is None)
         check('frame and body pose retained',packet['topics']['lio']['frame']=='camera_init' and packet['topics']['lio']['values']['child_frame_id']=='body')
         check('ROS2 graph publisher identity and source nodes',packet['topics']['lio']['publishers']==['/factory_laserMapping'] and packet['localization']['lio_running'] and packet['localization']['relay_running'] and packet['localization']['session_id'])
-        check('unmigrated recording is unavailable',packet['recording']['available'] is False and packet['recording']['phase']=='UNAVAILABLE')
+        check('native recording readonly status',packet['recording']['available'] is True and packet['recording']['phase']=='NOT_RECORDING' and packet['recording']['running'] is False)
         check('native camera_init trajectory visible without candidate workflow',formatted['planning']['path_valid'] and not formatted['planning']['candidate_path_valid'])
         g=grid_reader.snapshot(.5);row=g['ego_planner'].get('grid',{})
         check('asynchronous read-only native grid parameter',row.get('data',{}).get('resolution')==.1)

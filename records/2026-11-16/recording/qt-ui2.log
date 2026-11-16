@@ -1,0 +1,16 @@
+PASS output.json
+PASS readonly remote status
+PASS fresh completed recorder allows start
+录制管理请求 "start" "192.168.1.224"
+PASS SSH start asynchronously launched
+PASS readonly remote status
+PASS remote recorder healthy
+录制管理返回 start 0 {"phase": "PREPARING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.02008843421936035, "stamp": 1794837451.1844726, "run": "/tmp/ros2-recording-test5/flight-records/20261116-215731-f6eeba", "request_id": "644459fd4ed847149baef71f2f430bf9", "requested": "start", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "DISABLED", "auto_error": "", "pending_action": "start", "duration_s": 0.0, "warnings": [], "active_bags_count": 0, "available": true}
+PASS readonly remote status
+PASS remote recorder healthy
+PASS readonly remote status
+PASS remote recorder healthy
+PASS readonly remote status
+PASS remote recorder healthy
+PASS readonly remote status
+FAIL remote recorder healthy

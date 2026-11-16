@@ -1,0 +1,24 @@
+PASS args: host report.json
+PASS asynchronous operation completes
+PASS native recorder runs listed over real SSH
+PASS split capture listed
+机载飞行记录读取完成 "192.168.1.224" "20261116-215451-624597" 2 675840
+PASS asynchronous operation completes
+PASS all split files transferred
+PASS downloaded file available
+PASS hash downloaded bytes
+PASS downloaded file available
+PASS hash downloaded bytes
+静态点云加载器绑定主几何：0x7ffeacfb94a0
+点云几何收到空点集：sequence=0
+点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+PASS open downloaded actual recording
+录制位姿更新：positionMs=0，poseIndex=1/125，位置=[3.640,0.000,0.000]，yaw=0.00
+设置静态点云回放数据：累计点=30000，交互预览点=30000，回放点=30000，时间戳=30000，位姿=125，durationMs=7653，frameDurationMs=100，playbackAvailable=true
+点云几何更新：sequence=0，点数=30000，boundsMin=(0.00,0.00,1.00)，boundsMax=(4.90,2.30,1.00)
+静态点云后台加载完成：token=1，path=/home/tyzk/.local/share/ros2-recording-transfer-check/flight-records/192.168.1.224/20261116-215451-624597/inputs-27a023e901824c59b0cd1e71dba0578a_0.db3，source=30000，visible=30000，playback=30000，poses=125，durationMs=7653
+PASS asynchronous operation completes
+PASS downloaded rosbag2 decodes
+PASS recorded trajectory and clouds usable
+PASS evidence output
+销毁静态点云加载器，取消未完成加载任务

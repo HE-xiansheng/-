@@ -3,6 +3,9 @@
 
 #include "pointcloudfileloader.h"
 
+#ifdef GCS_HAVE_SQLITE3
+#include <sqlite3.h>
+#endif
 #include <QDateTime>
 #include <QDebug>
 #include <QDir>
@@ -215,7 +218,7 @@ QString suffixFromUrlOrName(const QUrl &url, const QString &fileName)
         return suffix;
 
     const QString decodedUrl = QUrl::fromPercentEncoding(url.toString().toUtf8());
-    const QRegularExpression suffixPattern(QStringLiteral(R"(\.(lvx2|bag|pcd|ply|xyz|txt|csv)(?:$|[/?#]))"),
+    const QRegularExpression suffixPattern(QStringLiteral(R"(\.(lvx2|bag|db3|pcd|ply|xyz|txt|csv)(?:$|[/?#]))"),
                                            QRegularExpression::CaseInsensitiveOption);
     const QRegularExpressionMatch match = suffixPattern.match(decodedUrl);
     return match.hasMatch() ? match.captured(1).toLower() : QString();
@@ -1204,11 +1207,123 @@ bool decodeBagChunk(const QByteArray &fileData,const RosBagChunk &chunk,QByteArr
     error=QStringLiteral("当前构建不支持%1压缩录包").arg(chunk.compression);return false;
 }
 
+// ROS2 sqlite3/CDR读取不依赖ROS运行时；保留ROS1读取路径。
+#ifdef GCS_HAVE_SQLITE3
+class CdrReader {
+public:
+    QByteArray data; qsizetype at=4; bool little=true; bool ok=true;
+    explicit CdrReader(const QByteArray &v):data(v){
+        ok=data.size()>=4 && data[0]==0 && (data[1]==0||data[1]==1);little=ok&&data[1]==1;
+    }
+    bool take(qsizetype n){if(!ok||n<0||at>data.size()-n){ok=false;return false;}return true;}
+    void align(int n){at+=((n-(at-4)%n)%n);if(at>data.size())ok=false;}
+    quint8 u8(){if(!take(1))return 0;return quint8(data[at++]);}
+    quint32 u32(){align(4);if(!take(4))return 0;auto p=reinterpret_cast<const uchar*>(data.constData()+at);at+=4;return little?qFromLittleEndian<quint32>(p):qFromBigEndian<quint32>(p);}
+    double f64(){align(8);if(!take(8))return 0;auto p=reinterpret_cast<const uchar*>(data.constData()+at);quint64 v=little?qFromLittleEndian<quint64>(p):qFromBigEndian<quint64>(p);at+=8;double d;std::memcpy(&d,&v,8);return d;}
+    QByteArray string(){quint32 n=u32();if(n<1||n>65536||!take(n)){ok=false;return {};}auto s=data.mid(at,n-1);if(data[at+n-1]!=0)ok=false;at+=n;return s;}
+    QByteArray bytes(){quint32 n=u32();if(!take(n))return {};auto s=data.mid(at,n);at+=n;return s;}
+};
+void ros2Append32(QByteArray &out,quint32 v){char b[4];qToLittleEndian(v,reinterpret_cast<uchar*>(b));out.append(b,4);}
+void ros2AppendString(QByteArray &out,const QByteArray &v){ros2Append32(out,v.size());out+=v;}
+QByteArray ros2ToRos1(const QByteArray &cdr,bool cloud,bool odometry,QString *frame){
+    CdrReader r(cdr);QByteArray out;
+    quint32 sec=r.u32(),ns=r.u32();auto f=r.string();*frame=QString::fromUtf8(f);
+    if(ns>=1000000000U){return {};}
+    ros2Append32(out,0);ros2Append32(out,sec);ros2Append32(out,ns);ros2AppendString(out,f);
+    if(!cloud){
+        if(odometry)ros2AppendString(out,r.string());
+        for(int i=0;i<7;++i){double d=r.f64();quint64 v;std::memcpy(&v,&d,8);char b[8];qToLittleEndian(v,reinterpret_cast<uchar*>(b));out.append(b,8);}
+    }else{
+        auto height=r.u32(),width=r.u32(),n=r.u32();if(n>256)return {};
+        ros2Append32(out,height);ros2Append32(out,width);ros2Append32(out,n);
+        for(quint32 i=0;i<n;++i){ros2AppendString(out,r.string());ros2Append32(out,r.u32());out.append(char(r.u8()));ros2Append32(out,r.u32());}
+        out.append(char(r.u8()));ros2Append32(out,r.u32());ros2Append32(out,r.u32());
+        auto bytes=r.bytes();ros2Append32(out,bytes.size());out+=bytes;out.append(char(r.u8()));
+    }
+    return r.ok?out:QByteArray();
+}
+TextLoadResult loadRos2Bag(const QString &path,int maxPoints,const ProgressCallback &progress,bool recordingMode){
+    TextLoadResult result;sqlite3 *raw=nullptr;
+    const auto encoded=QFile::encodeName(path);
+    if(sqlite3_open_v2(encoded.constData(),&raw,SQLITE_OPEN_READONLY,nullptr)!=SQLITE_OK){result.error="无法打开ROS2 SQLite录包";if(raw)sqlite3_close(raw);return result;}
+    std::unique_ptr<sqlite3,decltype(&sqlite3_close)> db(raw,sqlite3_close);
+    sqlite3_exec(raw,"BEGIN",nullptr,nullptr,nullptr);
+    auto query=[&](const char *sql){sqlite3_stmt *q=nullptr;if(sqlite3_prepare_v2(raw,sql,-1,&q,nullptr)!=SQLITE_OK)return static_cast<sqlite3_stmt*>(nullptr);return q;};
+    auto text=[](sqlite3_stmt *q,int i){auto p=sqlite3_column_text(q,i);return p?QString::fromUtf8(reinterpret_cast<const char*>(p)):QString();};
+    auto q=query("SELECT name,type,serialization_format FROM topics");
+    if(!q){result.error="ROS2录包topics表无效";return result;}
+    QHash<QString,QString> topics;
+    while(sqlite3_step(q)==SQLITE_ROW){if(text(q,2)=="cdr")topics.insert(text(q,0),text(q,1));}sqlite3_finalize(q);
+    QString cloud,pose;
+    for(const auto &s:QStringList{"/factory_fastlio/cloud_world","/cloud_registered","/laser_cloud_surround","/livox/cloud_world"})if(topics.value(s)=="sensor_msgs/msg/PointCloud2"){cloud=s;break;}
+    for(const auto &s:QStringList{"/factory_fastlio/odometry","/Odometry","/aft_mapped_to_init","/mavros/vision_pose/pose"})if(topics.value(s)=="nav_msgs/msg/Odometry"||topics.value(s)=="geometry_msgs/msg/PoseStamped"){pose=s;break;}
+    if(cloud.isEmpty()){result.error="ROS2录包缺少CDR世界点云";return result;}
+    result.sources=QStringLiteral("点云 %1 · 轨迹 %2").arg(cloud,pose.isEmpty()?QStringLiteral("未录制匹配的里程计"):pose);
+    q=query("SELECT topics.name,messages.timestamp,messages.data FROM messages JOIN topics ON topics.id=messages.topic_id WHERE topics.name=?1 OR topics.name=?2 ORDER BY messages.timestamp,messages.id");
+    if(!q){result.error="ROS2录包messages表无效";return result;}
+    std::unique_ptr<sqlite3_stmt,decltype(&sqlite3_finalize)> statement(q,sqlite3_finalize);
+    sqlite3_bind_text(q,1,cloud.toUtf8().constData(),-1,SQLITE_TRANSIENT);sqlite3_bind_text(q,2,pose.toUtf8().constData(),-1,SQLITE_TRANSIENT);
+    quint64 first=std::numeric_limits<quint64>::max(),last=0,total=0;QString world;
+    // 第一遍计算总点数和源时间，第二遍有界抽稀，避免按点云吞吐无限分配内存。
+    for(int pass=0;pass<2;++pass){
+        sqlite3_reset(q);quint64 rawIndex=0;int rc;
+        while((rc=sqlite3_step(q))==SQLITE_ROW){
+            const bool isCloud=text(q,0)==cloud;const int n=sqlite3_column_bytes(q,2);
+            if(n<=0||n>512*1024*1024){result.error="ROS2消息长度无效";return result;}
+            QByteArray cdr=QByteArray::fromRawData(static_cast<const char*>(sqlite3_column_blob(q,2)),n);QString frame;
+            auto bytes=ros2ToRos1(cdr,isCloud,topics.value(pose)=="nav_msgs/msg/Odometry",&frame);
+            if(bytes.isEmpty()){result.error="ROS2 CDR编码不支持或消息损坏";return result;}
+            const quint64 bagStamp=quint64(std::max<sqlite3_int64>(0,sqlite3_column_int64(q,1)))/1000;
+            quint64 stamp=0;RosPointCloud2View view;PointCloudPlaybackPoseSample sample;
+            if(isCloud){
+                if(!parseRosPointCloud2View(bytes,0,bytes.size(),bagStamp,&view)||view.pointStep==0||view.isBigEndian||quint64(view.rowStep)*view.height!=view.dataLength||view.rowStep<quint64(view.width)*view.pointStep){result.error="ROS2 PointCloud2布局无效";return result;}
+                if(world.isEmpty())world=frame;
+                if(frame!=world||(frame!="camera_init"&&frame!="world"&&frame!="map")){result.error="世界点云坐标系不一致";return result;}
+                stamp=view.stampUsec;
+            }else{
+                if(!parseRosPoseStampedSample(bytes,0,bytes.size(),bagStamp,&sample,&stamp,topics.value(pose)=="nav_msgs/msg/Odometry")){result.error="ROS2位姿无效";return result;}
+            }
+            if(pass==0){first=std::min(first,stamp);last=std::max(last,stamp);if(isCloud)total+=quint64(view.width)*view.height;continue;}
+            const int time=int(std::min<quint64>((stamp-first)/1000,std::numeric_limits<int>::max()));
+            if(!isCloud){if(frame!=world){result.error="点云与轨迹坐标系不一致";return result;}sample.timeMs=time;result.playbackPoseSamples.append(sample);continue;}
+            int xi=rosPointFieldIndex(view.fields,{"x"}),yi=rosPointFieldIndex(view.fields,{"y"}),zi=rosPointFieldIndex(view.fields,{"z"}),ii=rosPointFieldIndex(view.fields,{"intensity","reflectivity"});
+            if(xi<0||yi<0||zi<0){result.error="ROS2点云缺少XYZ";return result;}
+            for(int idx:{xi,yi,zi})if(!rosPointFieldFitsPointStep(view.fields[idx],view.pointStep)){result.error="ROS2字段超出点步长";return result;}
+            if(ii>=0&&!rosPointFieldFitsPointStep(view.fields[ii],view.pointStep))ii=-1;
+            const int limit=maxPoints>0?std::max(1000,maxPoints)*4:0;
+            for(quint32 row=0;row<view.height;++row)for(quint32 col=0;col<view.width;++col,++rawIndex){
+                if(!keepSampledRawPoint(rawIndex,total,limit))continue;
+                const char *p=bytes.constData()+view.dataOffset+quint64(row)*view.rowStep+quint64(col)*view.pointStep;
+                float x,y,z,intensity=.75f;
+                if(!readRosPointFieldScalar(p,view.fields[xi],&x)||!readRosPointFieldScalar(p,view.fields[yi],&y)||!readRosPointFieldScalar(p,view.fields[zi],&z))continue;
+                QVector3D pos(x,y,z);if(!isUsablePoint(pos))continue;
+                float value;if(ii>=0&&readRosPointFieldScalar(p,view.fields[ii],&value))intensity=normalizedIntensity(value);
+                result.playbackPoints.append({pos,intensity});result.playbackTimesMs.append(time);
+            }
+        }
+        if(rc!=SQLITE_DONE){result.error="ROS2 SQLite消息读取失败";return result;}
+        if(progress)progress(pass?98:45);
+    }
+    if(first==std::numeric_limits<quint64>::max() || (result.playbackPoints.isEmpty() && (!recordingMode || result.playbackPoseSamples.isEmpty()))){result.error="ROS2录包中没有有效世界点云/轨迹";return result;}
+    result.sourcePointCount=total;result.startStampUsec=first;result.playbackFrameDurationMs=50;
+    result.playbackDurationMs=int(std::min<quint64>((last-first)/1000,std::numeric_limits<int>::max()));
+    std::sort(result.playbackPoseSamples.begin(),result.playbackPoseSamples.end(),[](const auto&a,const auto&b){return a.timeMs<b.timeMs;});
+    result.points=uniformlyDecimatedPointsWithTimes(result.playbackPoints,result.playbackTimesMs,maxPoints,nullptr);result.ok=true;return result;
+}
+#endif
+
 TextLoadResult loadRosBagPointCloudStreaming(const QString &filePath,
                                              int maxPoints,
                                              const ProgressCallback &progressCallback,
                                              bool recordingMode = false)
 {
+    if(QFileInfo(filePath).suffix().toLower()=="db3"){
+#ifdef GCS_HAVE_SQLITE3
+        return loadRos2Bag(filePath,maxPoints,progressCallback,recordingMode);
+#else
+        TextLoadResult unsupported;unsupported.error="当前构建未启用ROS2 SQLite支持";return unsupported;
+#endif
+    }
     TextLoadResult result;
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly)) {
@@ -1910,7 +2025,7 @@ bool PointCloudFileLoader::loadFromUrl(const QUrl &url)
         return loadLvx2Async(filePath);
     }
 
-    if (suffix == QLatin1String("bag")) {
+    if (suffix == QLatin1String("bag") || suffix == QLatin1String("db3")) {
         return loadRosBagAsync(filePath);
     }
 
@@ -3057,7 +3172,7 @@ bool PointCloudFileLoader::loadRecordingFiles(const QVariantList &urls)
     if(!m_geometry||urls.isEmpty()||loading())return false;
     QStringList paths;
     for(const auto &v:urls){const QUrl url=v.toUrl();const QString path=url.isLocalFile()?url.toLocalFile():v.toString();
-        if(!QFileInfo(path).isFile()||QFileInfo(path).suffix().toLower()!="bag"){setStatus("请选择本地ROS bag录包");emit loadFinished(false);return false;}
+        if(!QFileInfo(path).isFile()||(QFileInfo(path).suffix().toLower()!="bag"&&QFileInfo(path).suffix().toLower()!="db3")){setStatus("请选择本地ROS bag或ROS2 db3录包");emit loadFinished(false);return false;}
         paths.append(path);
     }
     const quint64 token=++m_loadToken;const int limit=m_maxPoints>0?m_maxPoints:500000;

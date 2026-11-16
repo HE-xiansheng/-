@@ -91,7 +91,7 @@ void RecordingController::request(const QString &action){
     static const QRegularExpression hostPattern("^[a-zA-Z0-9][a-zA-Z0-9.-]{0,252}$");
     if(!hostPattern.match(m_host).hasMatch())return;
     m_action=action;m_output.clear();m_pendingAction=action.startsWith("auto-") ? QString() : action;m_pendingId.clear();m_message.clear();
-    const QString remote="source /opt/ros/noetic/setup.bash; source ~/drone_platform/01_apps/ego_planner/devel/setup.bash; export ROS_MASTER_URI=http://127.0.0.1:11311 ROS_IP=127.0.0.1 PYTHONNOUSERSITE=1; exec /usr/bin/python3 -B ~/drone_platform/01_apps/ego_planner/recording_manage.py "+action;
+    const QString remote="source ~/drone_platform/env.sh && export PYTHONNOUSERSITE=1 && exec /usr/bin/python3 -B ~/drone_platform/01_apps/ego_planner/recording_manage.py "+action;
     qInfo()<<"录制管理请求"<<action<<m_host;
     SshSession::apply(m_process);
     SshSession::start(m_process,{"-T","-o",SshSession::batchOption(),"-o","ConnectTimeout=5","-o","ServerAliveInterval=5","-o","ServerAliveCountMax=2","orangepi@"+m_host,"bash -lc "+quote(remote)});

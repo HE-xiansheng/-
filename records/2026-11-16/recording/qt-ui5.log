@@ -1,0 +1,19 @@
+PASS output.json
+PASS readonly remote status
+PASS fresh completed recorder allows start
+录制管理请求 "start" "192.168.1.224"
+PASS SSH start asynchronously launched
+PASS readonly remote status
+PASS readonly remote status
+录制管理返回 start 0 {"phase": "PREPARING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.029156923294067383, "stamp": 1794837661.1538234, "run": "/tmp/ros2-recording-test5/flight-records/20261116-220101-696c0c", "request_id": "0954acd6009e410797a0b194bd364203", "requested": "start", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "DISABLED", "auto_error": "", "pending_action": "start", "duration_s": 0.0, "warnings": [], "active_bags_count": 0, "available": true}
+PASS readonly remote status
+PASS native status confirms active recording
+PASS duplicate start disabled
+录制管理请求 "stop" "192.168.1.224"
+PASS readonly remote status
+录制管理返回 stop 0 {"phase": "RECORDING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.02066326141357422, "stamp": 1794837671.3493207, "run": "/tmp/ros2-recording-test5/flight-records/20261116-220101-696c0c", "clip_id": "0954acd6009e410797a0b194bd364203", "request_id": "1890ba972fe2465baf4cc9bde3ebf9ef", "requested": "stop", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "DISABLED", "auto_error": "", "pending_action": "stop", "duration_s": 9.636944366000535, "bag_pid": 117128, "bag_bytes": 102816, "free_bytes": 8352727040, "recording_started_wall": 1794837661.709161, "storage": "sqlite3", "missing_topics": ["/ego_planner/flight_execution", "/ego_planner/flight_execution/trajectory", "/ego_planner/manual_preview/status", "/ego_planner/manual_preview/trajectory", "/ego_planner/px4_execution/status", "/factory_fastlio/cloud_world", "/factory_fastlio/odometry", "/goal", "/grid_map/occupancy", "/grid_map/occupancy_inflate", "/livox/imu", "/livox/lidar", "/mandatory_stop_to_planner", "/mavros/battery", "/mavros/estimator_status", "/mavros/extended_state", "/mavros/imu/data", "/mavros/local_position/odom", "/mavros/local_position/pose", "/mavros/local_position/velocity_local", "/mavros/rc/in", "/mavros/setpoint_raw/local", "/mavros/setpoint_raw/target_local", "/mavros/state", "/mavros/statustext/recv", "/mavros/timesync_status", "/mavros/vision_pose/pose", "/move_base_simple/goal", "/planning/data_display", "/planning/trajectory", "/tf", "/tf_static"], "warnings": ["缺少32个话题；详见recording-status.json"], "active_bags_count": 1, "available": true}
+PASS readonly remote status
+PASS UI stop saved SQLite bag
+PASS UI returns to idle
+PASS stale telemetry disables start
+PASS report

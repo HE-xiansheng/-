@@ -1,0 +1,16 @@
+{
+    "files": [
+        {
+            "path": "/home/tyzk/.local/share/ros2-recording-transfer-check/flight-records/192.168.1.224/20261116-215451-624597/inputs-27a023e901824c59b0cd1e71dba0578a_0.db3",
+            "sha256": "926c105017984b52440135daafcc1e8e98eb8c6dd2065b87b3a78b0b3ab02f04"
+        },
+        {
+            "path": "/home/tyzk/.local/share/ros2-recording-transfer-check/flight-records/192.168.1.224/20261116-215451-624597/inputs-4c87e48e9ff9447b95acc6fcf90dd8a6_0.db3",
+            "sha256": "17109216d51c2ba935731167453b75490fc0df6fc899168d02da148b16556dbc"
+        }
+    ],
+    "passed": true,
+    "points": 30000,
+    "poses": 125,
+    "record": "20261116-215451-624597"
+}

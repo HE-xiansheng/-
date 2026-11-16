@@ -1,0 +1,4 @@
+[ 14%] Built target check_ros2_records_qmlimportscan
+[ 14%] Built target check_ros2_records_autogen_timestamp_deps
+[ 28%] Built target check_ros2_records_autogen
+[100%] Built target check_ros2_records

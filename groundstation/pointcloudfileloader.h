@@ -126,7 +126,7 @@ public:
 
     // 从本地 URL 加载静态点云。会根据后缀选择 LVX2/ROS bag/PLY/PCD/文本解析器。
     Q_INVOKABLE bool loadFromUrl(const QUrl &url);
-    // 同一次飞行的所有分包，在后台按绝对时间合并世界点云与FAST-LIO轨迹。
+    // 同一次飞行的ROS1 bag/ROS2 sqlite3-CDR分包，按源时间合并世界点云与FAST-LIO轨迹。
     Q_INVOKABLE bool loadRecordingFiles(const QVariantList &urls);
     QVariantList flightTrajectory() const;
     QVariantList playbackTrajectory() const;

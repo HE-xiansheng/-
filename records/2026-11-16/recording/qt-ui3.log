@@ -1,0 +1,7 @@
+PASS output.json
+PASS readonly remote status
+PASS fresh completed recorder allows start
+录制管理请求 "start" "192.168.1.224"
+PASS SSH start asynchronously launched
+PASS readonly remote status
+FAIL remote recorder healthy

@@ -1,0 +1,22 @@
+PASS args: part0.db3 part1.db3 output.json
+静态点云加载器绑定主几何：0x7ffe84b11120
+静态点云显示上限变更：70000
+点云几何收到空点集：sequence=0
+点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+PASS load reversed split
+录制位姿更新：positionMs=0，poseIndex=1/240，位置=[0.000,0.000,0.000]，yaw=0.00
+设置静态点云回放数据：累计点=57600，交互预览点=57600，回放点=57600，时间戳=57600，位姿=240，durationMs=4780，frameDurationMs=100，playbackAvailable=true
+点云几何更新：sequence=0，点数=57600，boundsMin=(1.00,2.00,3.00)，boundsMax=(1.00,2.00,3.00)
+静态点云后台加载完成：token=1，path=/home/tyzk/drone-migration-work/fixtures/recording-replay/replay-fixture/part1/part1_0.db3，source=57600，visible=57600，playback=57600，poses=240，durationMs=4780
+PASS ROS2 decode completed
+PASS exact source odometry count
+PASS absolute source timeline merge
+PASS exclude mismatched MAVROS local trajectory
+PASS exact CDR alignment and positions
+PASS world point cloud decoded
+点云几何更新：sequence=0，点数=3600，boundsMin=(1.00,2.00,3.00)，boundsMax=(1.00,2.00,3.00)
+录制文件回放帧更新：positionMs=2400，window=2250..2550，显示点=3600
+录制位姿更新：positionMs=2400，poseIndex=121/240，位置=[1.200,0.000,0.000]，yaw=0.00
+PASS timeline pose cursor
+PASS evidence output
+销毁静态点云加载器，取消未完成加载任务

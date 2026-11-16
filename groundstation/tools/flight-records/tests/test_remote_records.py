@@ -33,4 +33,19 @@ class RemoteRecords(unittest.TestCase):
     def test_invalid_bag_rejected(self):
         self.bag.write_bytes(b'not a bag'*20)
         with self.assertRaises(ValueError):self.stream()
+class Ros2Records(RemoteRecords):
+    def setUp(self):
+        super().setUp();self.bag.unlink();self.folder=self.run/'inputs-clip';self.folder.mkdir()
+        (self.folder/'metadata.yaml').write_text('rosbag2_bagfile_information: {}')
+        self.bag=self.folder/'inputs-clip_0.db3';self.bag.write_bytes(b'SQLite format 3\0'+bytes(range(256))*10)
+    def stream(self,path=None,size=None,mtime=None):
+        return super().stream(path or 'flight/inputs-clip/inputs-clip_0.db3',size,mtime)
+    def test_missing_metadata_is_not_finalized(self):
+        (self.folder/'metadata.yaml').unlink();self.assertEqual(remote.catalogue(self.root)['records'],[])
+        with self.assertRaises(ValueError):self.stream()
+    def test_symlinks_and_traversal_rejected(self):
+        (self.run/'inputs-link').symlink_to(self.folder,target_is_directory=True)
+        self.assertEqual(remote.catalogue(self.root)['records'][0]['parts'],1)
+        with self.assertRaises(ValueError):self.stream('flight/inputs-link/inputs-clip_0.db3')
+
 if __name__=='__main__':unittest.main()

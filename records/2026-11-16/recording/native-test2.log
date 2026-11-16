@@ -1,0 +1,37 @@
+[INFO] [1794837111.144827581] [rosbag2_storage]: Opened database '/tmp/ros2-recording-test2/replay-fixture/part0/part0_0.db3' for READ_WRITE.
+[INFO] [1794837111.326833060] [rosbag2_storage]: Opened database '/tmp/ros2-recording-test2/replay-fixture/part1/part1_0.db3' for READ_WRITE.
+{
+  "manual_run": "/tmp/ros2-recording-test2/flight-records/20261116-215145-4801f1",
+  "manual_counts": {
+    "/mavros/state": 129,
+    "/tf_static": 1,
+    "/mavros/extended_state": 129,
+    "/factory_fastlio/odometry": 129,
+    "/rosout": 4,
+    "/factory_fastlio/cloud_world": 26
+  },
+  "completed_checks": [
+    "auto defaults off",
+    "manual request acknowledged",
+    "manual records disarmed POSCTL",
+    "absent topics reported without failing recorder",
+    "start idempotent",
+    "normal stop clears active marker",
+    "stop finalizes independently of OFFBOARD",
+    "real sqlite odometry messages",
+    "best effort cloud recorded",
+    "late transient TF retained",
+    "runtime source hash archive",
+    "readonly parameter snapshot",
+    "native auto observer fresh",
+    "auto prepares without recording",
+    "mode exit keeps recording",
+    "landing alone keeps recording"
+  ]
+}
+Traceback (most recent call last):
+  File "/tmp/ros2-recording-test2/test_recording_ros2.py", line 96, in <module>
+    values.update(armed=False,landed=2);time.sleep(.5);check(m.health(root)['phase']=='RECORDING','disarm alone keeps recording')
+  File "/tmp/ros2-recording-test2/test_recording_ros2.py", line 38, in check
+    assert v,label;checks.append(label)
+AssertionError: disarm alone keeps recording

@@ -1,0 +1,21 @@
+[  1%] Running qmlimportscanner for customgeometry
+[  2%] Copying customgeometry qml sources into build dir
+[  4%] Built target customgeometry_copy_res
+[  4%] Built target customgeometry_copy_qml
+[  4%] Built target customgeometry_qmlimportscan
+[  4%] Built target customgeometry_autogen_timestamp_deps
+[  5%] Automatic MOC and UIC for target customgeometry
+[  5%] Built target customgeometry_autogen
+[  7%] Running AUTOMOC file extraction for target customgeometry
+[  8%] Running rcc for resource customgeometry_raw_qml_0
+[ 10%] Running moc --collect-json for target customgeometry
+[ 11%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 13%] Generating .rcc/qmlcache/customgeometry_FlightRecordWindow_qml.cpp, .rcc/qmlcache/customgeometry_FlightRecordWindow_qml.cpp.aotstats
+[ 14%] Generating .rcc/qmlcache/customgeometry_Main_qml.cpp, .rcc/qmlcache/customgeometry_Main_qml.cpp.aotstats
+[ 14%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 16%] Building CXX object CMakeFiles/customgeometry.dir/pointcloudfileloader.cpp.o
+[ 17%] Building CXX object CMakeFiles/customgeometry.dir/.qt/rcc/qrc_customgeometry_raw_qml_0.cpp.o
+[ 19%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_Main_qml.cpp.o
+[ 20%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_FlightRecordWindow_qml.cpp.o
+[ 22%] Linking CXX executable customgeometry
+[100%] Built target customgeometry

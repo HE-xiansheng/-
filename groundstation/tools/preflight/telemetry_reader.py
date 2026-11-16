@@ -99,6 +99,20 @@ def node_name(info):
     return info.node_namespace.rstrip('/')+'/'+info.node_name
 
 
+def recording_status():
+    # 仅加载管理器的文件状态读取；不prepare、不启动进程。
+    import importlib.util
+    import sys
+    from pathlib import Path
+    root=Path.home()/'drone_platform/01_apps/ego_planner'
+    if not (root/'recording_manage.py').is_file():return {'available':False,'phase':'UNAVAILABLE','status_fresh':False}
+    try:
+        spec=importlib.util.spec_from_file_location('recording_readonly',root/'recording_manage.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        return module.summary(module.health())
+    except Exception as exc:return {'available':False,'phase':'ERROR','status_fresh':False,'error':str(exc)}
+
+
 class TelemetryReader:
     """标准执行器负责回调；主线程快照不等待飞控或参数RPC。"""
     def __init__(self,args):
@@ -256,7 +270,7 @@ class TelemetryReader:
             return {'schema':1,'server_monotonic':now,'sample_period_s':period,'boot_id':self.boot,'topics':rows,'messages':messages,
                     'plan':{},'demo_session':{'alive':False},'control_publishers':{t:pubs[t] for t in COMMAND_TOPICS if t in pubs},
                     'scope':'read-only observation, not full arming permission','localization':localization,
-                    'recording':{'available':False,'phase':'UNAVAILABLE','status_fresh':False},
+                    'recording':recording_status(),
                     'ego_planner':{'now':rosnow,**display},'stream_id':self.args.stream_id,'sent_wall':time.time()}
 
 

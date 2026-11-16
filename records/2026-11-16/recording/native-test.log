@@ -1,0 +1,11 @@
+{
+  "completed_checks": [
+    "auto defaults off"
+  ]
+}
+Traceback (most recent call last):
+  File "/tmp/ros2-recording-stage/test_recording_ros2.py", line 57, in <module>
+    req=m.request('start',root);first=wait({'RECORDING'});check(req['requested']=='start','manual request acknowledged')
+  File "/tmp/ros2-recording-stage/test_recording_ros2.py", line 43, in wait
+    if h.get('phase')=='ERROR':raise AssertionError(h)
+AssertionError: {'schema': 3, 'policy': 'manual', 'phase': 'ERROR', 'stamp': 1794837070.1544738, 'run': '/tmp/ros2-recording-stage/flight-records/20261116-215109-692798', 'duration_s': 0.4143615770008182, 'bag_bytes': 0, 'bag_pid': None, 'storage': 'sqlite3', 'request_id': '770358ad912e4cd4a5fe6d6c2fe2a8a8', 'clip_id': '770358ad912e4cd4a5fe6d6c2fe2a8a8', 'recording_started_wall': 1794837069.7393584, 'error': 'rosbag2订阅未在12秒内就绪; rosbag2异常退出: 2', 'active_bags': ['inputs-770358ad912e4cd4a5fe6d6c2fe2a8a8.active'], 'running': True, 'worker_pid': 101182, 'status_age_s': 0.0026345252990722656, 'status_fresh': True, 'pending_action': None, 'auto_enabled': False, 'auto_running': False, 'auto_fresh': False, 'auto_phase': 'UNAVAILABLE', 'auto_error': ''}

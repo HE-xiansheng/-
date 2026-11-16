@@ -1,0 +1,33 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found Threads: TRUE
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+-- Found WrapOpenGL: TRUE
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Found WrapVulkanHeaders: /usr/include
+/home/tyzk/drone-migration-github/groundstation/shaders/brand.frag -> shaders/brand.frag.qsb exposed as ://shaders/brand.frag.qsb
+-- Configuring done (0.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-recording-ros2
+[ 14%] Running qmlimportscanner for check_ros2_records
+[ 14%] Built target check_ros2_records_qmlimportscan
+[ 14%] Built target check_ros2_records_autogen_timestamp_deps
+[ 28%] Automatic MOC and UIC for target check_ros2_records
+[ 28%] Built target check_ros2_records_autogen
+[ 42%] Building CXX object CMakeFiles/check_ros2_records.dir/check_ros2_records_autogen/mocs_compilation.cpp.o
+[ 57%] Building CXX object CMakeFiles/check_ros2_records.dir/check_ros2_records.cpp.o
+[ 71%] Building CXX object CMakeFiles/check_ros2_records.dir/home/tyzk/drone-migration-github/groundstation/pointcloudfileloader.cpp.o
+[ 85%] Building CXX object CMakeFiles/check_ros2_records.dir/home/tyzk/drone-migration-github/groundstation/pointcloudgeometry.cpp.o
+[100%] Linking CXX executable check_ros2_records
+[100%] Built target check_ros2_records

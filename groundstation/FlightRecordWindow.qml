@@ -54,7 +54,7 @@ Window {
     }
     FileDialog {
         id:localBags;title:qsTr("选择一个飞行分包")
-        fileMode:FileDialog.OpenFile;nameFilters:[qsTr("ROS1录包 (*.bag)")]
+        fileMode:FileDialog.OpenFile;nameFilters:[qsTr("ROS录包 (*.bag *.db3)")]
         onAccepted:viewer.parse([selectedFile],qsTr("本地飞行记录"))
     }
     Timer {

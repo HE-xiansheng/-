@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/ros2-recording-test5/test_telemetry_ros2.py", line 129, in <module>
+    if __name__=='__main__':main()
+  File "/tmp/ros2-recording-test5/test_telemetry_ros2.py", line 20, in main
+    assert os.environ.get('ROS_DOMAIN_ID')=='198' and os.environ.get('ROS_LOCALHOST_ONLY')=='1'
+AssertionError

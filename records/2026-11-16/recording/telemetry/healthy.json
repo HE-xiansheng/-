@@ -1,0 +1,487 @@
+{
+  "schema": 1,
+  "server_monotonic": 12778.389582473,
+  "sample_period_s": 0.2,
+  "boot_id": "7227dae2-d65b-4a8a-be54-7717474e8fa5",
+  "topics": {
+    "lidar": {
+      "topic": "/livox/lidar",
+      "publishers": [
+        "/livox_lidar_publisher"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.41412885802078,
+      "limit_s": 0.4,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.038652286000797176,
+      "frame": "",
+      "values": {
+        "point_count": 20300
+      }
+    },
+    "imu": {
+      "topic": "/livox/imu",
+      "publishers": [
+        "/livox_lidar_publisher"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.275012842436386,
+      "limit_s": 0.4,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.03375756900095439,
+      "frame": "",
+      "values": {
+        "angular_velocity": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "acceleration": [
+          0.0,
+          0.0,
+          9.8
+        ]
+      }
+    },
+    "fc_imu": {
+      "topic": "/mavros/imu/data",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.272684257200517,
+      "limit_s": 0.5,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.03315003100033209,
+      "frame": "",
+      "values": {
+        "angular_velocity": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "acceleration": [
+          0.0,
+          0.0,
+          9.8
+        ]
+      }
+    },
+    "pressure": {
+      "topic": "/mavros/imu/static_pressure",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.271454888917546,
+      "limit_s": 3.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.03276532500058238,
+      "frame": "",
+      "values": {
+        "pressure_pa": 101500.0
+      }
+    },
+    "lio": {
+      "topic": "/factory_fastlio/odometry",
+      "publishers": [
+        "/factory_laserMapping"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.268344305881858,
+      "limit_s": 0.4,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.03183404000083101,
+      "frame": "camera_init",
+      "values": {
+        "position": [
+          0.0,
+          0.0,
+          0.8
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_frame_id": "body"
+      }
+    },
+    "cloud": {
+      "topic": "/factory_fastlio/cloud_world",
+      "publishers": [
+        "/factory_laserMapping"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.266067388592496,
+      "limit_s": 0.4,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.031194127001072047,
+      "frame": "camera_init",
+      "values": {
+        "point_count": 1
+      }
+    },
+    "relay": {
+      "topic": "/mavros/vision_pose/pose",
+      "publishers": [
+        "/factory_vision2mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.26384811991858,
+      "limit_s": 0.4,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.030617215001257136,
+      "frame": "map",
+      "values": {
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "fc_odom": {
+      "topic": "/mavros/local_position/odom",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.260277574876653,
+      "limit_s": 0.4,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.029738429000644828,
+      "frame": "map",
+      "values": {
+        "position": [
+          0.0,
+          0.0,
+          0.8
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_frame_id": "body"
+      }
+    },
+    "fc": {
+      "topic": "/mavros/state",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.258619623443636,
+      "limit_s": 3.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.02931376500055194,
+      "frame": "",
+      "values": {
+        "connected": true,
+        "armed": false,
+        "mode": "POSCTL",
+        "system_status": 3
+      }
+    },
+    "landed": {
+      "topic": "/mavros/extended_state",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.25702821022221,
+      "limit_s": 3.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.02894335100063472,
+      "frame": "",
+      "values": {
+        "landed_state": 1
+      }
+    },
+    "ekf": {
+      "topic": "/mavros/estimator_status",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.25558103711868,
+      "limit_s": 3.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.028535311999803525,
+      "frame": "",
+      "values": {
+        "attitude_status_flag": true,
+        "velocity_horiz_status_flag": true,
+        "velocity_vert_status_flag": true,
+        "pos_horiz_rel_status_flag": true,
+        "pos_vert_abs_status_flag": true,
+        "gps_glitch_status_flag": false,
+        "accel_error_status_flag": false
+      }
+    },
+    "rc": {
+      "topic": "/mavros/rc/in",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.254214044744632,
+      "limit_s": 1.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.028146814000137965,
+      "frame": "",
+      "values": {
+        "rssi": 255,
+        "channels": [
+          1500,
+          1500,
+          1500,
+          1500,
+          1500,
+          1500,
+          1500,
+          1500
+        ]
+      }
+    },
+    "battery": {
+      "topic": "/mavros/battery",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.316364698737885,
+      "limit_s": 5.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.02768685900082346,
+      "frame": "",
+      "values": {
+        "voltage": 24.0,
+        "percentage": 0.800000011920929,
+        "current": null
+      }
+    },
+    "text": {
+      "topic": "/mavros/statustext/recv",
+      "publishers": [
+        "/mavros"
+      ],
+      "graph_fresh": true,
+      "graph_age_s": 0.2362407720011106,
+      "samples": 75,
+      "hz": 23.251032657210377,
+      "limit_s": 120.0,
+      "source_age_s": 0.0432741641998291,
+      "receipt_age_s": 0.027280862001134665,
+      "frame": "",
+      "values": {
+        "severity": 6,
+        "text": "synthetic fixture only"
+      }
+    }
+  },
+  "messages": [
+    {
+      "received_monotonic": 12777.879975592,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.5096068809998542
+    },
+    {
+      "received_monotonic": 12777.920974613,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.4686078600007022
+    },
+    {
+      "received_monotonic": 12777.97790407,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.4116784030011331
+    },
+    {
+      "received_monotonic": 12778.019384045,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.3701984280014585
+    },
+    {
+      "received_monotonic": 12778.082864834,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.30671763900136284
+    },
+    {
+      "received_monotonic": 12778.093082141,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.2965003320005053
+    },
+    {
+      "received_monotonic": 12778.149127146,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.24045532700074546
+    },
+    {
+      "received_monotonic": 12778.180151149,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.20943132400134346
+    },
+    {
+      "received_monotonic": 12778.225982763,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.16359971000019868
+    },
+    {
+      "received_monotonic": 12778.269361768,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.1202207050009747
+    },
+    {
+      "received_monotonic": 12778.319162063,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.07042041000022436
+    },
+    {
+      "received_monotonic": 12778.362301611,
+      "severity": 6,
+      "text": "synthetic fixture only",
+      "age_s": 0.027280862001134665
+    }
+  ],
+  "plan": {},
+  "demo_session": {
+    "alive": false
+  },
+  "control_publishers": {},
+  "scope": "read-only observation, not full arming permission",
+  "localization": {
+    "lio_running": true,
+    "relay_running": true,
+    "session_id": "7227dae2-d65b-4a8a-be54-7717474e8fa5:198:010f2f6155c6adac00000000000078030000000000000000",
+    "identity_source": "ros2_graph",
+    "graph_fresh": true
+  },
+  "recording": {
+    "phase": "NOT_RECORDING",
+    "policy": "manual",
+    "running": false,
+    "status_fresh": true,
+    "auto_enabled": false,
+    "auto_running": false,
+    "auto_fresh": false,
+    "auto_phase": "UNAVAILABLE",
+    "auto_error": "",
+    "duration_s": 0.0,
+    "warnings": [],
+    "active_bags_count": 0,
+    "available": true
+  },
+  "ego_planner": {
+    "now": 1794837660.0796156,
+    "status": {
+      "data": {
+        "mode": "manual_preview",
+        "phase": "ACTIVE",
+        "session_id": "fixture-session",
+        "trajectory_id": 7,
+        "planning_mode": "upstream_fsm",
+        "goal_frame": "camera_init",
+        "height_reference": "fastlio_session_origin",
+        "candidate": {
+          "available": false
+        },
+        "stamp": 1794837660.0363414
+      },
+      "receipt": 12778.362769733,
+      "receipt_age_s": 0.026812740001332713
+    },
+    "execution": {
+      "data": {
+        "stamp": 1794837660.0363414,
+        "phase": "WAIT_OFFBOARD",
+        "output_enabled": false
+      },
+      "receipt": 12778.363096689,
+      "receipt_age_s": 0.026485784001124557
+    },
+    "trajectory": {
+      "data": {
+        "id": 7,
+        "start_time": 1794837660.0363414,
+        "order": 5,
+        "duration": [
+          1.0
+        ],
+        "x": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "receipt": 12778.363537978,
+      "receipt_age_s": 0.026044494999950984
+    }
+  },
+  "stream_id": "fixture",
+  "sent_wall": 1794837660.091964
+}

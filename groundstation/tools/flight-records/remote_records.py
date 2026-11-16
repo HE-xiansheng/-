@@ -22,7 +22,9 @@ def catalogue(root):
     for run in sorted(root.iterdir(),key=lambda p:p.name,reverse=True):
         if not run.is_dir() or run.is_symlink() or not inside(root,run) or not closed(run):continue
         files=[]
-        for bag in sorted(run.glob('*.bag')):
+        for bag in sorted(list(run.glob('*.bag'))+list(run.glob('inputs-*/*.db3'))):
+            if bag.suffix=='.db3' and (bag.parent.is_symlink() or not (bag.parent/'metadata.yaml').is_file()):continue
+
             if bag.is_symlink() or not bag.is_file() or not inside(root,bag):continue
             st=bag.stat()
             if st.st_size<=13:continue
@@ -34,19 +36,24 @@ def catalogue(root):
 def stream(root, token, size, mtime):
     rel=base64.urlsafe_b64decode(token.encode()).decode('utf-8')
     path=root/rel
-    if Path(rel).is_absolute() or '..' in Path(rel).parts or not inside(root,path) or path.is_symlink() or path.suffix!='.bag' or not closed(path.parent):raise ValueError('录包路径无效或仍在录制')
+    parts=Path(rel).parts
+    run=root/parts[0] if parts else root
+    if Path(rel).is_absolute() or '..' in parts or not inside(root,path) or any((root.joinpath(*parts[:i])).is_symlink() for i in range(1,len(parts)+1)) or path.suffix not in ('.bag','.db3') or not run.is_dir() or (path.suffix=='.bag' and len(parts)!=2) or not closed(run):raise ValueError('录包路径无效或仍在录制')
+    if path.suffix=='.db3' and (len(parts)!=3 or not (path.parent/'metadata.yaml').is_file()):raise ValueError('ROS2录包尚未收尾')
+
     fd=os.open(str(path),os.O_RDONLY|getattr(os,'O_NOFOLLOW',0))
     with os.fdopen(fd,'rb') as f:
         before=os.fstat(f.fileno())
         if not stat.S_ISREG(before.st_mode) or before.st_size!=size or before.st_mtime_ns!=mtime:raise ValueError('录包已变化，请刷新列表')
-        if f.read(13)!=b'#ROSBAG V2.0\n':raise ValueError('文件不是ROS1 bag')
+        magic=f.read(16)
+        if (path.suffix=='.bag' and not magic.startswith(b'#ROSBAG V2.0\n')) or (path.suffix=='.db3' and magic!=b'SQLite format 3\0'):raise ValueError('录包文件头无效')
         f.seek(0)
         while True:
             block=f.read(1024*256)
             if not block:break
             sys.stdout.buffer.write(block)
         sys.stdout.buffer.flush();after=os.fstat(f.fileno())
-        if after.st_size!=before.st_size or after.st_mtime_ns!=before.st_mtime_ns or not closed(path.parent):raise ValueError('读取期间录包发生变化，请重试')
+        if after.st_size!=before.st_size or after.st_mtime_ns!=before.st_mtime_ns or not closed(run):raise ValueError('读取期间录包发生变化，请重试')
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('action',choices=['list','read']);p.add_argument('--path');p.add_argument('--size',type=int);p.add_argument('--mtime',type=int)
