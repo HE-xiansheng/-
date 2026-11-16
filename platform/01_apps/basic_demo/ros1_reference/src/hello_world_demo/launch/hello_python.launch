@@ -1,0 +1,3 @@
+<launch> <!-- launch 文件根标签，以下配置只启动 Python 节点。 -->
+  <node pkg="hello_world_demo" type="hello_python.py" name="hello_python" output="screen" /> <!-- 在 hello_world_demo 包中运行 hello_python.py，并显示终端输出。 -->
+</launch> <!-- 启动配置结束。 -->

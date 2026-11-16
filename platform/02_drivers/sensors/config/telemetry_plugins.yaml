@@ -1,0 +1,11 @@
+/**:
+  ros__parameters:
+    plugin_allowlist:
+      # sys_status uses command for read-only AUTOPILOT_VERSION requests.
+      - command
+      - sys_status
+      - sys_time
+      - imu
+      - local_position
+      - global_position
+      - param

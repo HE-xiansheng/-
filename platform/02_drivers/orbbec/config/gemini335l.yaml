@@ -1,0 +1,23 @@
+# Ported from the active .235 ROS1 launch; device binding is for the new board.
+camera_name: camera
+serial_number: CP253530009G
+color_width: 1280
+color_height: 720
+color_fps: 0
+depth_width: 848
+depth_height: 480
+depth_fps: 0
+enable_color: true
+enable_depth: true
+enable_left_ir: true
+enable_right_ir: true
+enable_point_cloud: true
+enable_colored_point_cloud: false
+enable_accel: false
+enable_gyro: false
+enable_frame_sync: false
+enable_sync_host_time: false
+depth_registration: false
+align_mode: SW
+publish_tf: true
+time_domain: global

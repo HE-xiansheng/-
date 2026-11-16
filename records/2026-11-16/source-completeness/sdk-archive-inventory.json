@@ -1,0 +1,8 @@
+{
+  "arm64_and_license_entries": 85,
+  "symlinks": {
+    "orbbec_camera/SDK/arm64/lib/extensions/depthengine/libdepthengine.so": "libdepthengine.so.2.0",
+    "orbbec_camera/SDK/arm64/lib/libOrbbecSDK.so": "libOrbbecSDK.so.2",
+    "orbbec_camera/SDK/arm64/lib/libOrbbecSDK.so.2": "libOrbbecSDK.so.2.10.6"
+  }
+}

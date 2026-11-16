@@ -1,0 +1,3 @@
+# Gemini335L userspace SDK access; no kernel driver replacement
+SUBSYSTEM=="usb", ATTR{idVendor}=="2bc5", ATTR{idProduct}=="0804", GROUP="video", MODE="0660"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="2bc5", ATTRS{idProduct}=="0804", GROUP="video", MODE="0660"

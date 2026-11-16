@@ -1,0 +1,4 @@
+<launch>
+  <!-- 保留手册命令，复用当前定位的托管启停和新定位话题。 -->
+  <node pkg="fast_lio" type="manual-launch.sh" name="$(anon localization_terminal)" args="localization" output="screen" />
+</launch>

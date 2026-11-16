@@ -1,0 +1,6 @@
+<launch>
+
+    <node pkg="qr_test" type="qr_test" name="qr_test" output="screen"/>
+
+
+</launch>

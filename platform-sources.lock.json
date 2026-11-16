@@ -53,5 +53,19 @@
     "ros_frame": "ENU",
     "mavlink_frame": "NED",
     "conversion_owner": "MAVROS setpoint_raw local_cb"
+  },
+  "orbbec": {
+    "url": "https://github.com/orbbec/OrbbecSDK_ROS2",
+    "tag": "v2.10.6",
+    "commit": "296156521b60bdf813cb94c46cbb55562bbdc453",
+    "archive": "platform/03_tools/install_assets/orbbec-ros2-v2.10.6-source.tar.gz",
+    "archive_sha256": "26109d03bb6f1372bb1db396661522f94665fe7d2ec64a780ff0b323d8e5dbb0",
+    "sdk_restore": "extract orbbec_camera/SDK/arm64 and orbbec_camera/SDK/licenses under the OrbbecSDK_ROS2 source directory; preserve relative symlinks"
+  },
+  "source_archive_audit": {
+    "onboard_commit": "c3dff85749c32ee62153f7426675cd750b55f4dd",
+    "record": "records/2026-11-16/source-completeness/README.md",
+    "onboard_tracked_regular_files_archived": true,
+    "runtime_build_artifacts_archived": false
   }
 }

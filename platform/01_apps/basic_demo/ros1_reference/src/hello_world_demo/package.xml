@@ -1,0 +1,11 @@
+<?xml version="1.0"?> <!-- 声明这是 XML 文件，使用默认的 UTF-8 编码。 -->
+<package format="2"> <!-- 定义 ROS 功能包，采用 package.xml 格式 2。 -->
+  <name>hello_world_demo</name> <!-- 功能包名称，须与 CMakeLists.txt 中的项目名一致。 -->
+  <version>0.0.1</version> <!-- 设置教学示例的版本号。 -->
+  <description>ROS1 C++ and Python hello world demo.</description> <!-- 简要说明功能包用途。 -->
+  <maintainer email="demo@example.com">Demo Maintainer</maintainer> <!-- 示例维护者信息，正式发布前请替换。 -->
+  <license>MIT</license> <!-- 声明此示例采用 MIT 许可证。 -->
+  <buildtool_depend>catkin</buildtool_depend> <!-- 指定使用 catkin 构建工具。 -->
+  <depend>roscpp</depend> <!-- 声明对 ROS C++ 客户端库的构建、导出和运行依赖。 -->
+  <depend>rospy</depend> <!-- 声明对 ROS Python 客户端库的构建、导出和运行依赖。 -->
+</package> <!-- 功能包描述结束。 -->

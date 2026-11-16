@@ -1,0 +1,4 @@
+<launch> <!-- launch 文件根标签，以下配置会同时启动两个 ROS 节点。 -->
+  <node pkg="hello_world_demo" type="hello_cpp" name="hello_cpp" output="screen" /> <!-- 启动编译后的 C++ 程序，并将节点输出显示在终端。 -->
+  <node pkg="hello_world_demo" type="hello_python.py" name="hello_python" output="screen" /> <!-- 启动 Python 脚本，并将节点输出显示在终端。 -->
+</launch> <!-- 启动配置结束。 -->

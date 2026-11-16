@@ -1,0 +1,66 @@
+<launch>
+    <arg name="drone_id" default="0"/>
+    <arg name="init_x" default="0.0"/>
+    <arg name="init_y" default="0.0"/>
+    <arg name="init_z" default="1.0"/>
+    <arg name="cloud_topic" default="mock_map"/>
+
+    <!-- 1. 模拟无人机：接收 pos_cmd，输出 100Hz 真实闭环里程计 -->
+    <node pkg="poscmd_2_odom" name="drone_$(arg drone_id)_poscmd_2_odom" type="poscmd_2_odom" output="screen">
+        <param name="init_x" value="$(arg init_x)"/>
+        <param name="init_y" value="$(arg init_y)"/>
+        <param name="init_z" value="$(arg init_z)"/>
+        <remap from="~command" to="/drone_$(arg drone_id)_planning/pos_cmd"/>
+        <remap from="~odometry" to="/drone_$(arg drone_id)_visual_slam/odom"/>
+    </node>
+
+    <!-- 2. EGO-Planner 规划算法主节点 -->
+    <include file="$(find ego_planner)/launch/include/advanced_param_sim.xml">
+        <arg name="drone_id" value="$(arg drone_id)"/>
+        <arg name="map_size_x_" value="40.0"/>
+        <arg name="map_size_y_" value="40.0"/>
+        <arg name="map_size_z_" value="5.0"/>
+        <arg name="odometry_topic" value="visual_slam/odom"/>
+        <arg name="camera_pose_topic" value="no_use0"/>
+        <arg name="depth_topic" value="no_use1"/>
+        <arg name="cloud_topic" value="$(arg cloud_topic)"/>
+        <arg name="cx" value="320.0"/>
+        <arg name="cy" value="240.0"/>
+        <arg name="fx" value="380.0"/>
+        <arg name="fy" value="380.0"/>
+        <arg name="max_vel" value="1.0"/>
+        <arg name="max_acc" value="2.0"/>
+        <arg name="max_jer" value="20.0"/>
+        <arg name="planning_horizon" value="7.5"/>
+        <arg name="use_multitopology_trajs" value="false"/>
+        <arg name="flight_type" value="1"/>
+        <arg name="point_num" value="1"/>
+        <arg name="point0_x" value="5.0"/>
+        <arg name="point0_y" value="0.0"/>
+        <arg name="point0_z" value="1.0"/>
+        <arg name="point1_x" value="0.0"/>
+        <arg name="point1_y" value="0.0"/>
+        <arg name="point1_z" value="0.0"/>
+        <arg name="point2_x" value="0.0"/>
+        <arg name="point2_y" value="0.0"/>
+        <arg name="point2_z" value="0.0"/>
+        <arg name="point3_x" value="0.0"/>
+        <arg name="point3_y" value="0.0"/>
+        <arg name="point3_z" value="0.0"/>
+        <arg name="point4_x" value="0.0"/>
+        <arg name="point4_y" value="0.0"/>
+        <arg name="point4_z" value="0.0"/>
+        <arg name="realworld_experiment" value="false"/>
+        <arg name="odom_vel_is_body" value="false"/>
+    </include>
+
+    <!-- 3. Trajectory Server: 采样多项式轨迹并向 poscmd_2_odom 发布控制命令 -->
+    <node pkg="ego_planner" name="drone_$(arg drone_id)_traj_server" type="traj_server" output="screen">
+        <remap from="position_cmd" to="/drone_$(arg drone_id)_planning/pos_cmd"/>
+        <remap from="~planning/trajectory" to="/drone_$(arg drone_id)_planning/trajectory"/>
+        <remap from="~heartbeat" to="/drone_$(arg drone_id)_traj_server/heartbeat"/>
+        <param name="traj_server/time_forward" value="1.0" type="double"/>
+        <param name="traj_server/yaw_dot_max" value="3.14" type="double"/>
+        <param name="traj_server/yaw_dot_dot_max" value="15.71" type="double"/>
+    </node>
+</launch>
