@@ -1,0 +1,92 @@
+hit: 0.619039
+miss: -0.619039
+min log: -1.99243
+max: 2.19722
+thresh log: 1.38629
+lidar hit: 2.19722
+lidar miss: -0.405465
+lidar min log: -1.99243
+lidar max: 3.89182
+lidar thresh log: 1.7346
+[47;30m
+[1.79485e+09] Drone 0 Replan 0[0m
+Success=yes
+Time:[42m1.714ms,[0m init:0.270ms, optimize:1.445ms, avg=1.714ms
+[PILOT_OFFBOARD]Drone:0, from INIT to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79485e+09] Drone 0 Replan 1[0m
+Success=yes
+Time:[42m1.733ms,[0m init:0.301ms, optimize:1.433ms, avg=1.724ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[FSM]Drone:0, from EXEC_TRAJ to REPLAN_TRAJ
+[47;30m
+[1.79485e+09] Drone 0 Replan 2[0m
+Success=yes
+Time:[42m2.448ms,[0m init:0.383ms, optimize:2.066ms, avg=1.965ms
+[FSM]Drone:0, from REPLAN_TRAJ to EXEC_TRAJ
+[FSM]Drone:0, from EXEC_TRAJ to REPLAN_TRAJ
+[47;30m
+[1.79485e+09] Drone 0 Replan 3[0m
+Success=yes
+Time:[42m1.128ms,[0m init:0.199ms, optimize:0.929ms, avg=1.756ms
+[FSM]Drone:0, from REPLAN_TRAJ to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79485e+09] Drone 0 Replan 4[0m
+Success=yes
+Time:[42m1.419ms,[0m init:0.148ms, optimize:1.271ms, avg=1.689ms
+[47;30m
+[1.79485e+09] Drone 0 Replan 5[0m
+Success=yes
+Time:[42m1.514ms,[0m init:0.204ms, optimize:1.310ms, avg=1.659ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79485e+09] Drone 0 Replan 6[0m
+Success=yes
+Time:[42m1.430ms,[0m init:0.202ms, optimize:1.228ms, avg=1.627ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79485e+09] Drone 0 Replan 7[0m
+Success=yes
+Time:[42m1.390ms,[0m init:0.158ms, optimize:1.232ms, avg=1.597ms
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79485e+09] Drone 0 Replan 8[0m
+Success=yes
+Time:[42m1.450ms,[0m init:0.213ms, optimize:1.237ms, avg=1.581ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to WAIT_TARGET
+[PILOT_OFFBOARD]Drone:0, from WAIT_TARGET to SEQUENTIAL_START
+[47;30m
+[1.79485e+09] Drone 0 Replan 9[0m
+Success=yes
+Time:[42m0.708ms,[0m init:0.111ms, optimize:0.597ms, avg=1.493ms
+[FSM]Drone:0, from SEQUENTIAL_START to EXEC_TRAJ
+[PILOT_MANUAL]Drone:0, from EXEC_TRAJ to WAIT_TARGET
+[47;30m
+[1.79485e+09] Drone 0 Replan 10[0m
+Success=yes
+Time:[42m1.354ms,[0m init:0.144ms, optimize:1.210ms, avg=1.481ms
+[47;30m
+[1.79485e+09] Drone 0 Replan 11[0m
+Success=yes
+Time:[42m1.550ms,[0m init:0.195ms, optimize:1.356ms, avg=1.487ms
+[47;30m
+[1.79485e+09] Drone 0 Replan 12[0m
+Success=yes
+Time:[42m1.723ms,[0m init:0.188ms, optimize:1.534ms, avg=1.505ms
+[47;30m
+[1.79485e+09] Drone 0 Replan 13[0m
+Success=yes
+Time:[42m1.503ms,[0m init:0.154ms, optimize:1.349ms, avg=1.505ms
+[47;30m
+[1.79485e+09] Drone 0 Replan 14[0m
+Success=yes
+Time:[42m1.736ms,[0m init:0.241ms, optimize:1.494ms, avg=1.520ms
+[INFO] [1794847444.315939841] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+des manager

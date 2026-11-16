@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(ego_qos_observer)
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(mavros_msgs REQUIRED)
+find_package(rmw REQUIRED)
+add_executable(observer observer.cpp)
+ament_target_dependencies(observer rclcpp mavros_msgs rmw)

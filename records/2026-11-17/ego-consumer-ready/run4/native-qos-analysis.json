@@ -1,0 +1,59 @@
+{
+  "scope": "diagnostic comparison only; actual all-message acceptance remains analysis.json",
+  "emitted_count": 231,
+  "unique_emission_stamps": 231,
+  "native_counts": {
+    "best_effort": 231,
+    "reliable": 231,
+    "sink": 231
+  },
+  "wire_count": 231,
+  "rmw": [
+    "rmw_fastrtps_cpp"
+  ],
+  "missing_source_indices": {
+    "best_effort": [],
+    "reliable": [],
+    "sink": [],
+    "wire": []
+  },
+  "native_best_effort_missing_equals_wire_missing": true,
+  "native_sink_equals_wire": true,
+  "native_reliable_full_coverage": true,
+  "wire_is_actual_source_subset": true,
+  "match_counts_for_wire_missing": [],
+  "match_transitions": [
+    {
+      "stamp_ns": 1794847431998220858,
+      "before_publish_monotonic": 22550.308507779,
+      "matched_subscriptions": 4,
+      "discovered_subscriptions": [
+        {
+          "node_name": "ego_wire_fixture",
+          "node_namespace": "/",
+          "reliability": 1,
+          "durability": 2
+        },
+        {
+          "node_name": "ego_native_qos_observer",
+          "node_namespace": "/",
+          "reliability": 2,
+          "durability": 2
+        },
+        {
+          "node_name": "ego_native_qos_observer",
+          "node_namespace": "/",
+          "reliability": 1,
+          "durability": 2
+        },
+        {
+          "node_name": "setpoint_raw",
+          "node_namespace": "/mavros",
+          "reliability": 2,
+          "durability": 2
+        }
+      ]
+    }
+  ],
+  "limitation": "Native observers share one executor, but are independent of MAVROS. Observations change load/scheduling. Matching delivery patterns alone do not identify a specific middleware bug."
+}

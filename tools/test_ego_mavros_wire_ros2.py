@@ -92,8 +92,6 @@ def main():
             '--ros-args','-r','/mavros/state:=/fixture/state'],capture_output=True,text=True)
         (base/'baseline.log').write_text(baseline.stdout+baseline.stderr)
         check('old_adapter_reproduces_ros_remap_argparse_failure',baseline.returncode==2 and 'unrecognized arguments' in baseline.stderr)
-        start('mavros',['ros2','launch',str(base/'mavros_platform.launch.py'),'fcu_url:=udp://127.0.0.1:14640@127.0.0.1:14641'])
-        check('real_px4_connected_disarmed',pump(25,lambda:actual_states and actual_states[-1].connected and not actual_states[-1].armed))
         if (base/'native-build/observer').exists():
             start('native-observer',[str(base/'native-build/observer')])
             check('native_qos_observer_ready',pump(5,lambda:'"kind":"ready"' in (base/'native-observer.log').read_text()))
@@ -105,7 +103,12 @@ def main():
         adapter=start('adapter',[sys.executable,str(entry),'--publish','--isolated-test','--run',str(base/'execution'),
             '--ros-args','-r','/mavros/state:=/fixture/state','-r','/mavros/extended_state:=/fixture/landed',
             '-r','/mavros/local_position/pose:=/fixture/pose'])
+        check('recorder_does_not_unlock_command_output',pump(8,lambda:statuses and 'command_consumer:waiting' in statuses[-1]['hard_errors']) and quiet() and not commands)
+        check('consumer_initially_not_ready',not statuses[-1]['command_consumer_ready'])
+        start('mavros',['ros2','launch',str(base/'mavros_platform.launch.py'),'fcu_url:=udp://127.0.0.1:14640@127.0.0.1:14641'])
+        check('real_px4_connected_disarmed',pump(25,lambda:actual_states and actual_states[-1].connected and not actual_states[-1].armed))
         check('standard_ros_remaps_allow_ready',phase('READY'))
+        check('actual_mavros_consumer_ready',statuses[-1]['command_consumer_ready'] and statuses[-1]['command_consumer_node']=='/mavros/setpoint_raw')
         check('prestream_observed',pump(4,lambda:len(commands)>25))
         check('prestream_measured_fc_position_yaw',all(np.allclose(c['position'],[10,20,3]) and abs(c['yaw']-math.pi/2)<1e-5 for c in commands))
         m=PoseStamped();m.header.stamp=node.get_clock().now().to_msg();m.header.frame_id='camera_init';m.pose.position.x=-.5;m.pose.orientation.w=1.;pubs['goal'].publish(m)
@@ -123,7 +126,7 @@ def main():
         planner.send_signal(signal.SIGSTOP)
         check('frozen_planner_stops_output',pump(4,lambda:statuses and 'status:stale' in statuses[-1]['hard_errors']) and quiet())
         planner.send_signal(signal.SIGCONT);check('planner_recovers_track',phase('TRACK'));pump(.5)
-        check('adapter_has_no_flight_service_clients',not node.get_client_names_and_types_by_node('ego_planner_px4_execution','/'))
+        check('adapter_has_no_flight_service_clients',all(name=='/mavros/setpoint_raw/get_parameters' and types==['rcl_interfaces/srv/GetParameters'] for name,types in node.get_client_names_and_types_by_node('ego_planner_px4_execution','/')))
         (base/'execution/stop-request').touch()
         check('operator_stop_holds',phase('STOP_HOLD'));n=len(commands);pump(.5)
         check('stop_hold_measured_pose_zero_va',len(commands)>n and all(np.allclose(c['position'],[10,20,3]) and np.allclose(c['velocity'],0) and np.allclose(c['acceleration'],0) for c in commands[n:]))

@@ -63,6 +63,12 @@ def main():
         fcntl.flock(singleton, fcntl.LOCK_EX | fcntl.LOCK_NB)
     rclpy.init(signal_handler_options=SignalHandlerOptions.NO)
     node = rclpy.create_node('ego_planner_px4_execution')
+    consumer_node = node.declare_parameter('command_consumer_node', '/mavros/setpoint_raw').value
+    if not isinstance(consumer_node, str) or not consumer_node.startswith('/') or consumer_node.endswith('/'):
+        raise ValueError('command_consumer_node must be an absolute ROS node name')
+    transport_topic = node.declare_parameter('command_transport_topic', '/uas1/mavlink_sink').value
+    if not isinstance(transport_topic, str) or not transport_topic.startswith('/') or transport_topic.endswith('/'):
+        raise ValueError('command_transport_topic must be an absolute ROS topic name')
     retained = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
     cache, polys = {}, deque(maxlen=10)
     planner_session = None
@@ -112,6 +118,11 @@ def main():
     statuspub = node.create_publisher(String, '/ego_planner/px4_execution/' +
                                       ('status' if args.publish else 'check_status'), retained)
     pub = node.create_publisher(PositionTarget, '/mavros/setpoint_raw/local', 1) if args.publish else None
+    from rcl_interfaces.srv import GetParameters
+    consumer_client = node.create_client(GetParameters, consumer_node + '/get_parameters') if pub is not None else None
+    consumer_probe = None
+    consumer_ready = pub is None
+    next_consumer_check = 0.
 
     def request_stop(*_):
         nonlocal stopped
@@ -123,11 +134,36 @@ def main():
     def tick():
         nonlocal lastloop, execution_mode, alignment, active, activekey, frozen_yaw
         nonlocal lastpacket, lastlog, check_exit, anchor
+        nonlocal consumer_ready, next_consumer_check, consumer_probe
         now = time.monotonic()
         rosnow = node.get_clock().now().nanoseconds * 1e-9
         gap = now - lastloop
         lastloop = now
         errors, ages = [], {}
+        # 只在首次输出前等待真实MAVROS读者；记录器等其他订阅者不能解除等待。
+        # 一旦开始输出不依赖图缓存反复开关，已有状态/输入时效保护负责运行时停发。
+        if not consumer_ready and now >= next_consumer_check:
+            next_consumer_check = now + .1
+            for endpoint in node.get_subscriptions_info_by_topic(pub.topic_name):
+                name = endpoint.node_namespace.rstrip('/') + '/' + endpoint.node_name
+                if name == consumer_node and endpoint.topic_type == 'mavros_msgs/msg/PositionTarget' and pub.get_subscription_count() > 0:
+                    if consumer_probe is None and consumer_client.service_is_ready():
+                        request = GetParameters.Request()
+                        request.names = ['thrust_scaling']
+                        consumer_probe = consumer_client.call_async(request)
+                    break
+        # 端点构造早于插件执行器启动；只读参数响应证明插件已经能处理回调。
+        if consumer_probe is not None and consumer_probe.done() and not consumer_ready:
+            try:
+                reply = consumer_probe.result()
+                consumer_ready = bool(reply and len(reply.values) == 1 and reply.values[0].type == 3
+                                      and node.get_publishers_info_by_topic(transport_topic))
+            except Exception:
+                consumer_ready = False
+            if not consumer_ready:
+                consumer_probe = None
+        if not consumer_ready:
+            errors.append('command_consumer:waiting')
         status = {}
         if 'status' in cache:
             try:
@@ -242,6 +278,8 @@ def main():
                 'mode': fc.mode, 'armed': fc.armed, 'airborne': landed == 2, 'hard_errors': errors,
                 'planning_errors': planning_errors, 'warnings': [], 'competing_publishers': {},
                 'publish_requested': args.publish, 'output_enabled': emitted,
+                'command_consumer_node': consumer_node, 'command_consumer_ready': consumer_ready,
+                'command_transport_topic': transport_topic,
                 'tracking_output_enabled': bool(emitted and session.phase == 'TRACK'),
                 'output_kind': ('path_tracking' if session.phase == 'TRACK' else 'upstream_hold' if session.phase == 'UPSTREAM_HOLD'
                     else 'prestream_current_pose' if fc.mode == 'POSCTL' else 'position_hold') if emitted else 'none',

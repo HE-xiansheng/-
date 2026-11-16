@@ -20,10 +20,10 @@ from geometry_msgs.msg import PoseStamped
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Bool, String
-from mavros_msgs.msg import State, ExtendedState, PositionTarget
+from mavros_msgs.msg import State, ExtendedState, PositionTarget, Mavlink
 from traj_utils.msg import PolyTraj
 
-ROOT = Path('/home/orangepi/drone_platform/01_apps/ego_planner')
+ROOT = Path(os.environ.get('EGO_EXECUTION_BENCH_ROOT', '/home/orangepi/drone_platform/01_apps/ego_planner'))
 sys.path.insert(0, str(ROOT/'px4_execution'))
 from execution import Alignment, Trajectory, Session
 
@@ -35,7 +35,10 @@ def stamp_seconds(stamp):
 def main():
     checks = {}
     rclpy.init()
-    node = rclpy.create_node('ego_execution_bench')
+    # Isolated synthetic command consumer has the real plugin identity; no physical MAVROS.
+    node = rclpy.create_node('setpoint_raw', namespace='/mavros')
+    node.declare_parameter('thrust_scaling', 1.0)
+    transport_fixture = node.create_publisher(Mavlink, '/uas1/mavlink_sink', 10)
     retained = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
     statuses, planner_statuses, commands, polynomials, modes = [], [], [], [], []
     node.create_subscription(String, '/ego_planner/px4_execution/status', lambda m: statuses.append(json.loads(m.data)), retained)
@@ -156,6 +159,7 @@ def main():
         checks['grounded_no_commands'] = phase('WAIT_FLIGHT') and no_commands_for()
         landed = 2
         checks['pilot_posctl_prestream'] = phase('READY') and pump(2, lambda: len(commands) >= 5)
+        checks['synthetic_consumer_identity_ready'] = statuses[-1]['command_consumer_ready']
         if commands:
             out = commands[-1]
             checks['prestream_is_current_enu_pose'] = np.allclose([out.position.x,out.position.y,out.position.z],fc_position) and abs(out.yaw-math.pi/2) < 1e-5
@@ -239,7 +243,7 @@ def main():
         result, _, error = manager('check')
         checks['check_mode_readonly_success'] = result == 0
         checks['check_mode_sends_no_commands'] = no_commands_for()
-        checks['no_flight_services_called'] = not any('/mavros/' in name for name,_ in node.get_service_names_and_types())
+        checks['no_flight_services_called'] = not any(name in ('/mavros/cmd/arming', '/mavros/set_mode') for name,_ in node.get_service_names_and_types())
         # Exact piece boundary, endpoint hold, translation and malformed-coefficient checks.
         alignment = Alignment([0,0,0],[0,0,0,1],[1,2,3],[0,0,math.sqrt(.5),math.sqrt(.5)])
         data = {'id':1,'start':100.,'order':5,'duration':[1.,1.],

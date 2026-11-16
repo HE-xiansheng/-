@@ -1,0 +1,3 @@
+b686e5590de9b2511518bcf187b7480d04397e62
+active
+ 183914 bash -c test ! -e /tmp/ego-mavros-wire && rm -rf -- /tmp/ego-consumer-regression && git -C /home/orangepi/drone_platform status --porcelain && git -C /home/orangepi/drone_platform rev-parse HEAD; systemctl is-active nxserver; ps -eo pid,args | grep -E "[t]est_ego_mavros_wire_ros2|[e]go-consumer-regression|[n]ative-build/observer|[s]itl_stdio_transport|[p]lanner_node|[m]avros_node"
