@@ -1,0 +1,38 @@
+# Ubuntu22.04/Humble独立地面站
+
+本说明针对本仓库groundstation迁移副本和机载192.168.1.224。原地面站、.235 Noetic参考工程不自动替换。独立主程序已构建；物理任务和完整桌面交付仍需验证。
+
+## 实际运行入口
+
+| 功能 | 当前ROS2入口 |
+| --- | --- |
+| 点云、位姿与状态 | 本机tools/communication/manage_link.py，调用pointcloud-only/manage.py与preflight/bridge.py；原生ROS2采样代码通过SSH运行 |
+| 定位启停 | Qt资源tools/localization/manage_stack.py调用机载01_apps/fast_lio/manage_stack.py |
+| 避障与地图目标 | 机载01_apps/ego_planner/run_board.sh、map_navigation.py、run_px4_execution.sh |
+| 航点、ArUco、人物任务 | 机载01_apps/mission_demo/tools/gcs_task_manager.py |
+| 图像视频 | Qt资源tools/video/ros_image_bridge.py；云台原图仍使用既有RTSP路径 |
+| 录制与文件读取 | 机载01_apps/ego_planner/recording_manage.py与Qt资源tools/flight-records/remote_records.py |
+
+机载命令统一先source `~/drone_platform/env.sh`。点云PCD1/LZ4、POS1、PFS1和视频VID1继续使用已有协议；任务JSON保持version4及定位会话身份。默认本机原始遥测UDP端口9015，运行状态目录为用户数据目录drone-gcs-ros2，可用GCS_STATE_DIR指定独立位置。
+
+`tools/missions/task_manager.py`、`tools/planner/automatic-navigation/`、`tools/planner/offboard-retarget/`以及Noetic/roslaunch资料属于历史ROS1参考。当前Qt任务入口不使用该task_manager资源（Linux安装组件也不打包它），地图选点也不运行automatic-navigation安装器。ROS2任务管理器源码见仓库platform/01_apps/mission_demo/tools/gcs_task_manager.py。不要按旧说明把ROS1管理器覆盖到.224。
+
+## Linux独立安装
+
+主程序、Qt插件部署规则保持原有构建方式。Linux运行工具由cmake/ros2_runtime_tools.cmake显式列出，保持bin/../tools相对布局。该组件只安装11个当前运行所需Python文件及一个具有执行权限的gcs-askpass；历史ROS1安装器、开发测试和备份源码仍保存在仓库，不随Linux运行工具安装。
+
+可以使用独立前缀先查看工具组件，不切换现有地面站：
+
+```bash
+cmake --install /absolute/build-directory --prefix /absolute/staging-directory --component ros2_tools
+```
+
+此命令仅安装工具组件，不能单独作为包含主程序和Qt依赖的完整交付包。电脑端Python需要numpy，LZ4动态库用于既有点云压缩。本机无需安装ROS2，机载需有Humble和对应源码构建产物。Windows/Android安装条件和现有交付路径不因本次Linux工具清单调整而改变；未在本次声明Windows/Android运行验收。
+
+## 已有验证及限制
+
+原生任务、规划、定位、录制、视频、真实相机/NPU和SSH/Qt接口验证见仓库records/2026-11-16各阶段记录。实际FAST-LIO/转发/MAVROS到官方PX4仿真已完成回放数据融合及停流验证；这不等同新雷达采集、真实PX4融合或实飞。
+
+正式入口切换、传感器后台服务变更和真实飞控估计器配置仍需用户确认。实际任务准备会保留遥控触发语义，不应用于只读连通测试；只读检查可使用status/watch，地面阶段不解锁或执行飞行任务。
+
+旧tools/packaging/package_linux.py及install_user.py面向原先build/linux、.deps和dianyunGCS-master布局，尚未适配本独立安装布局；不将其生成物列为当前ROS2交付包。正式打包另行验证，不覆盖电脑现有快捷方式。

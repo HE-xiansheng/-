@@ -1,0 +1,16 @@
+{"phase": "CONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "stamp": 1794841766.944353}
+No ED25519 host key is known for 192.168.1.224 and you have requested strict checking.
+Host key verification failed.
+{"phase": "RECONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "retry_s": 2.0, "exit_code": 255, "stamp": 1794841767.0148017}
+{"phase": "CONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "stamp": 1794841769.0152967}
+No ED25519 host key is known for 192.168.1.224 and you have requested strict checking.
+Host key verification failed.
+{"phase": "RECONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "retry_s": 4.0, "exit_code": 255, "stamp": 1794841769.0869327}
+{"phase": "CONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "stamp": 1794841773.0873885}
+No ED25519 host key is known for 192.168.1.224 and you have requested strict checking.
+Host key verification failed.
+{"phase": "RECONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "retry_s": 8.0, "exit_code": 255, "stamp": 1794841773.1457415}
+{"phase": "CONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "stamp": 1794841781.1461391}
+No ED25519 host key is known for 192.168.1.224 and you have requested strict checking.
+Host key verification failed.
+{"phase": "RECONNECTING", "host": "192.168.1.224", "destination": ["192.168.1.89", 19100], "retry_s": 15.0, "exit_code": 255, "stamp": 1794841781.229898}

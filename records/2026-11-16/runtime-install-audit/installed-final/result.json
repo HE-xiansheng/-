@@ -1,0 +1,761 @@
+{
+  "checks": {
+    "exact_runtime_file_count": true,
+    "legacy_installers_not_installed": true,
+    "askpass_executable": true,
+    "installed_imports_and_cli": true,
+    "installed_ssh_receives_live_PFS1": true,
+    "cloud_manager_running": true,
+    "cloud_manager_stopped": true,
+    "monitor_manager_stopped": true
+  },
+  "passed": true,
+  "installed_files": [
+    "tools/communication/gcs-askpass",
+    "tools/communication/manage_link.py",
+    "tools/communication/runtime_paths.py",
+    "tools/communication/ssh_session.py",
+    "tools/pointcloud-only/cloud_sender.py",
+    "tools/pointcloud-only/manage.py",
+    "tools/preflight/bridge.py",
+    "tools/preflight/planner_display.py",
+    "tools/preflight/planner_geometry.py",
+    "tools/preflight/preflight_status.py",
+    "tools/preflight/stream_reader.py",
+    "tools/preflight/telemetry_reader.py"
+  ],
+  "commands": [
+    {
+      "script": "communication/manage_link.py",
+      "args": [
+        "--help"
+      ],
+      "code": 0,
+      "output": "usage: manage_link.py [-h] --host HOST [--cloud-port CLOUD_PORT]\n                      [--pose-port POSE_PORT]\n                      [--preflight-port PREFLIGHT_PORT]\n                      [--raw-udp-port RAW_UDP_PORT]\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --host HOST\n  --cloud-port CLOUD_PORT\n  --pose-port POSE_PORT\n  --preflight-port PREFLIGHT_PORT\n  --raw-udp-port RAW_UDP_PORT\n"
+    },
+    {
+      "script": "pointcloud-only/manage.py",
+      "args": [
+        "--help"
+      ],
+      "code": 0,
+      "output": "usage: manage.py [-h] [--host HOST] [--user USER] [--pc-ip PC_IP]\n                 [--port PORT] [--with-pose] [--pose-port POSE_PORT]\n                 {start,stop,status,run}\n\n\u4e0a\u4f4d\u673a\u7ba1\u7406\u672c\u5de5\u5177\u81ea\u5df1\u7684 SSH \u70b9\u4e91\u53d1\u9001\u4f1a\u8bdd\uff1b\u673a\u8f7d\u6e90\u7801\u901a\u8fc7 stdin \u8fd0\u884c\uff0c\u4e0d\u5b89\u88c5\u670d\u52a1\u3002\n\npositional arguments:\n  {start,stop,status,run}\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --host HOST\n  --user USER\n  --pc-ip PC_IP\n  --port PORT\n  --with-pose           \u540c\u65f6\u53d1\u9001\u540c\u4f1a\u8bddFAST-LIO\u4f4d\u7f6e/\u59ff\u6001\uff0c\u4ec5\u9065\u6d4b\n  --pose-port POSE_PORT\n"
+    },
+    {
+      "script": "preflight/bridge.py",
+      "args": [
+        "--help"
+      ],
+      "code": 0,
+      "output": "usage: bridge.py [-h] [--host HOST] [--user USER] [--port PORT]\n                 [--raw-udp-port RAW_UDP_PORT]\n                 {start,stop,status,run}\n\n\u590d\u7528\u5df2\u6709\u98de\u524d\u91c7\u6837/\u8bc4\u4f30\uff0cSSH\u53ea\u8bfb\u5feb\u7167\u2192\u672c\u673aUDP9003\uff1b\u4e0d\u5b89\u88c5\u673a\u8f7d\u6587\u4ef6\u6216\u8c03\u7528\u98de\u63a7\u670d\u52a1\u3002\n\npositional arguments:\n  {start,stop,status,run}\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --host HOST\n  --user USER\n  --port PORT\n  --raw-udp-port RAW_UDP_PORT\n"
+    },
+    {
+      "script": "communication/manage_link.py",
+      "args": [
+        "--host",
+        "192.168.1.224",
+        "--cloud-port",
+        "19100",
+        "--pose-port",
+        "19101",
+        "--preflight-port",
+        "19103",
+        "--raw-udp-port",
+        "19115"
+      ],
+      "code": 0,
+      "output": "\u53ea\u8bfb\u6570\u636e\u6865\u63a5\u5df2\u542f\u52a8\n"
+    },
+    {
+      "script": "pointcloud-only/manage.py",
+      "args": [
+        "status"
+      ],
+      "code": 0,
+      "output": "{\n  \"pid\": 1488844,\n  \"start_tick\": \"65355069\",\n  \"host\": \"192.168.1.224\",\n  \"pc_ip\": \"192.168.1.89\",\n  \"port\": 19100,\n  \"log\": \"/home/tyzk/drone-migration-github/records/2026-11-16/runtime-install-audit/installed-final/state/sender-20261116-231012.log\",\n  \"with_pose\": true,\n  \"pose_port\": 19101,\n  \"running\": true,\n  \"sender\": {\n    \"phase\": \"WAIT_CLOUD\",\n    \"topic\": \"/factory_fastlio/cloud_world\",\n    \"destination\": [\n      \"192.168.1.89\",\n      19100\n    ],\n    \"protocol\": \"PCD1/LZ4\",\n    \"display_max_hz\": 2.0,\n    \"display_max_points\": 4000,\n    \"ros_publishers\": [],\n    \"node\": \"/dianyun_gcs_cloud_sender_f78f9040\",\n    \"pose_destination\": [\n      \"192.168.1.89\",\n      19101\n    ],\n    \"pose_topic\": \"/factory_fastlio/odometry\",\n    \"pose_phase\": \"WAIT_ODOMETRY\",\n    \"poses_sent\": 0,\n    \"stamp\": 1794841816.2410257,\n    \"frames_sent\": 0,\n    \"datagrams_sent\": 0,\n    \"errors\": 0\n  },\n  \"status_age_s\": 0.3236243724822998\n}\n"
+    },
+    {
+      "script": "pointcloud-only/manage.py",
+      "args": [
+        "stop"
+      ],
+      "code": 0,
+      "output": "{\"running\": false, \"stopped\": true}\n"
+    },
+    {
+      "script": "preflight/bridge.py",
+      "args": [
+        "stop"
+      ],
+      "code": 0,
+      "output": "{\"running\": false, \"stopped\": true}\n"
+    },
+    {
+      "script": "pointcloud-only/manage.py",
+      "args": [
+        "status"
+      ],
+      "code": 0,
+      "output": "{\n  \"running\": false\n}\n"
+    },
+    {
+      "script": "preflight/bridge.py",
+      "args": [
+        "status"
+      ],
+      "code": 0,
+      "output": "{\n  \"running\": false\n}\n"
+    }
+  ],
+  "packets": [
+    {
+      "type": "PFS1",
+      "schema": 1,
+      "connected": false,
+      "source_host": "192.168.1.224",
+      "error": "\u6b63\u5728\u8fde\u63a5\u673a\u8f7d\u53ea\u8bfb\u76d1\u89c6"
+    },
+    {
+      "type": "PFS1",
+      "schema": 1,
+      "connected": true,
+      "source_host": "192.168.1.224",
+      "sample_period_s": 0.2,
+      "sensors": {
+        "imu": {
+          "ok": false,
+          "values": {},
+          "topic": "/livox/imu",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "fc_imu": {
+          "ok": false,
+          "values": {},
+          "topic": "/mavros/imu/data",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "lidar": {
+          "ok": false,
+          "values": {},
+          "topic": "/livox/lidar",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "pressure": {
+          "ok": false,
+          "values": {},
+          "topic": "/mavros/imu/static_pressure",
+          "frame": "",
+          "hz": null,
+          "age": null
+        }
+      },
+      "rows": [
+        {
+          "key": "lidar",
+          "label": "MID360\u70b9\u4e91",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/livox/lidar",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "imu",
+          "label": "\u96f7\u8fbeIMU",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/livox/imu",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "lio",
+          "label": "FAST-LIO\u5b9a\u4f4d",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/factory_fastlio/odometry",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "cloud",
+          "label": "\u89c4\u5212\u70b9\u4e91",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/factory_fastlio/cloud_world",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "relay",
+          "label": "\u5916\u90e8Pose\u8f6c\u53d1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/vision_pose/pose",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "fc_odom",
+          "label": "\u98de\u63a7\u91cc\u7a0b\u8ba1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/local_position/odom",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "fc",
+          "label": "\u98de\u63a7\u8fde\u63a5/\u6a21\u5f0f",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u8fde\u63a5/\u6a21\u5f0f/\u89e3\u9501\u72b6\u6001\u672a\u77e5",
+          "topic": "/mavros/state",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "landed",
+          "label": "\u7740\u5730\u72b6\u6001",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/extended_state",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "ekf",
+          "label": "EKF\u4f30\u8ba1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/estimator_status",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "rc",
+          "label": "\u9065\u63a7\u8f93\u5165",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/rc/in",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "battery",
+          "label": "\u7535\u6c60",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u7535\u538b\u672a\u77e5 / \u7535\u91cf\u672a\u77e5",
+          "topic": "/mavros/battery",
+          "publishers": "\u2014"
+        }
+      ],
+      "issues": [
+        "MID360\u70b9\u4e91:\u7f3a\u5931/\u8fc7\u671f",
+        "\u96f7\u8fbeIMU:\u7f3a\u5931/\u8fc7\u671f",
+        "FAST-LIO\u5b9a\u4f4d:\u7f3a\u5931/\u8fc7\u671f",
+        "\u89c4\u5212\u70b9\u4e91:\u7f3a\u5931/\u8fc7\u671f",
+        "\u5916\u90e8Pose\u8f6c\u53d1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u98de\u63a7\u91cc\u7a0b\u8ba1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u98de\u63a7\u8fde\u63a5/\u6a21\u5f0f:\u7f3a\u5931/\u8fc7\u671f",
+        "\u7740\u5730\u72b6\u6001:\u7f3a\u5931/\u8fc7\u671f",
+        "EKF\u4f30\u8ba1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u9065\u63a7\u8f93\u5165:\u7f3a\u5931/\u8fc7\u671f",
+        "\u7535\u6c60:\u7f3a\u5931/\u8fc7\u671f"
+      ],
+      "stamp": 1794841816.1365774,
+      "planning": {
+        "status": {},
+        "execution": {},
+        "path": [],
+        "path_valid": false,
+        "candidate_path": [],
+        "candidate_path_valid": false,
+        "grid_valid": false,
+        "grid_display_valid": false,
+        "grid_reason": "WAIT_PLANNER"
+      },
+      "recording": {
+        "phase": "NOT_RECORDING",
+        "policy": "manual",
+        "running": false,
+        "status_fresh": true,
+        "auto_enabled": false,
+        "auto_running": false,
+        "auto_fresh": false,
+        "auto_phase": "UNAVAILABLE",
+        "auto_error": "",
+        "duration_s": 0.0,
+        "warnings": [],
+        "active_bags_count": 0,
+        "available": true
+      },
+      "localization": {
+        "lio_running": false,
+        "relay_running": false,
+        "session_id": "",
+        "identity_source": "ros2_graph",
+        "graph_fresh": false
+      },
+      "transport_delay_s": 0.0,
+      "sample_cost_s": 0.005807623001601314,
+      "transport": "udp"
+    },
+    {
+      "type": "PFS1",
+      "schema": 1,
+      "connected": true,
+      "source_host": "192.168.1.224",
+      "sample_period_s": 0.2,
+      "sensors": {
+        "imu": {
+          "ok": false,
+          "values": {},
+          "topic": "/livox/imu",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "fc_imu": {
+          "ok": false,
+          "values": {},
+          "topic": "/mavros/imu/data",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "lidar": {
+          "ok": false,
+          "values": {},
+          "topic": "/livox/lidar",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "pressure": {
+          "ok": false,
+          "values": {},
+          "topic": "/mavros/imu/static_pressure",
+          "frame": "",
+          "hz": null,
+          "age": null
+        }
+      },
+      "rows": [
+        {
+          "key": "lidar",
+          "label": "MID360\u70b9\u4e91",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/livox/lidar",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "imu",
+          "label": "\u96f7\u8fbeIMU",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/livox/imu",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "lio",
+          "label": "FAST-LIO\u5b9a\u4f4d",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/factory_fastlio/odometry",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "cloud",
+          "label": "\u89c4\u5212\u70b9\u4e91",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/factory_fastlio/cloud_world",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "relay",
+          "label": "\u5916\u90e8Pose\u8f6c\u53d1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/vision_pose/pose",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "fc_odom",
+          "label": "\u98de\u63a7\u91cc\u7a0b\u8ba1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/local_position/odom",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "fc",
+          "label": "\u98de\u63a7\u8fde\u63a5/\u6a21\u5f0f",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u8fde\u63a5/\u6a21\u5f0f/\u89e3\u9501\u72b6\u6001\u672a\u77e5",
+          "topic": "/mavros/state",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "landed",
+          "label": "\u7740\u5730\u72b6\u6001",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/extended_state",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "ekf",
+          "label": "EKF\u4f30\u8ba1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/estimator_status",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "rc",
+          "label": "\u9065\u63a7\u8f93\u5165",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/rc/in",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "battery",
+          "label": "\u7535\u6c60",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u7535\u538b\u672a\u77e5 / \u7535\u91cf\u672a\u77e5",
+          "topic": "/mavros/battery",
+          "publishers": "\u2014"
+        }
+      ],
+      "issues": [
+        "MID360\u70b9\u4e91:\u7f3a\u5931/\u8fc7\u671f",
+        "\u96f7\u8fbeIMU:\u7f3a\u5931/\u8fc7\u671f",
+        "FAST-LIO\u5b9a\u4f4d:\u7f3a\u5931/\u8fc7\u671f",
+        "\u89c4\u5212\u70b9\u4e91:\u7f3a\u5931/\u8fc7\u671f",
+        "\u5916\u90e8Pose\u8f6c\u53d1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u98de\u63a7\u91cc\u7a0b\u8ba1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u98de\u63a7\u8fde\u63a5/\u6a21\u5f0f:\u7f3a\u5931/\u8fc7\u671f",
+        "\u7740\u5730\u72b6\u6001:\u7f3a\u5931/\u8fc7\u671f",
+        "EKF\u4f30\u8ba1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u9065\u63a7\u8f93\u5165:\u7f3a\u5931/\u8fc7\u671f",
+        "\u7535\u6c60:\u7f3a\u5931/\u8fc7\u671f"
+      ],
+      "stamp": 1794841816.3350077,
+      "planning": {
+        "status": {},
+        "execution": {},
+        "path": [],
+        "path_valid": false,
+        "candidate_path": [],
+        "candidate_path_valid": false,
+        "grid_valid": false,
+        "grid_display_valid": false,
+        "grid_reason": "WAIT_PLANNER"
+      },
+      "recording": {
+        "phase": "NOT_RECORDING",
+        "policy": "manual",
+        "running": false,
+        "status_fresh": true,
+        "auto_enabled": false,
+        "auto_running": false,
+        "auto_fresh": false,
+        "auto_phase": "UNAVAILABLE",
+        "auto_error": "",
+        "duration_s": 0.0,
+        "warnings": [],
+        "active_bags_count": 0,
+        "available": true
+      },
+      "localization": {
+        "lio_running": false,
+        "relay_running": false,
+        "session_id": "",
+        "identity_source": "ros2_graph",
+        "graph_fresh": false
+      },
+      "transport_delay_s": 0.0,
+      "sample_cost_s": 0.0030659769981866702,
+      "transport": "udp"
+    },
+    {
+      "type": "PFS1",
+      "schema": 1,
+      "connected": true,
+      "source_host": "192.168.1.224",
+      "sample_period_s": 0.2,
+      "sensors": {
+        "imu": {
+          "ok": false,
+          "values": {},
+          "topic": "/livox/imu",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "fc_imu": {
+          "ok": false,
+          "values": {},
+          "topic": "/mavros/imu/data",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "lidar": {
+          "ok": false,
+          "values": {},
+          "topic": "/livox/lidar",
+          "frame": "",
+          "hz": null,
+          "age": null
+        },
+        "pressure": {
+          "ok": false,
+          "values": {},
+          "topic": "/mavros/imu/static_pressure",
+          "frame": "",
+          "hz": null,
+          "age": null
+        }
+      },
+      "rows": [
+        {
+          "key": "lidar",
+          "label": "MID360\u70b9\u4e91",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/livox/lidar",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "imu",
+          "label": "\u96f7\u8fbeIMU",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/livox/imu",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "lio",
+          "label": "FAST-LIO\u5b9a\u4f4d",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/factory_fastlio/odometry",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "cloud",
+          "label": "\u89c4\u5212\u70b9\u4e91",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/factory_fastlio/cloud_world",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "relay",
+          "label": "\u5916\u90e8Pose\u8f6c\u53d1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/vision_pose/pose",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "fc_odom",
+          "label": "\u98de\u63a7\u91cc\u7a0b\u8ba1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/local_position/odom",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "fc",
+          "label": "\u98de\u63a7\u8fde\u63a5/\u6a21\u5f0f",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u8fde\u63a5/\u6a21\u5f0f/\u89e3\u9501\u72b6\u6001\u672a\u77e5",
+          "topic": "/mavros/state",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "landed",
+          "label": "\u7740\u5730\u72b6\u6001",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/extended_state",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "ekf",
+          "label": "EKF\u4f30\u8ba1",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/estimator_status",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "rc",
+          "label": "\u9065\u63a7\u8f93\u5165",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u2014",
+          "topic": "/mavros/rc/in",
+          "publishers": "\u2014"
+        },
+        {
+          "key": "battery",
+          "label": "\u7535\u6c60",
+          "state": "\u7f3a\u5931/\u8fc7\u671f",
+          "ok": false,
+          "hz": "\u2014",
+          "age": "\u2014",
+          "detail": "\u7535\u538b\u672a\u77e5 / \u7535\u91cf\u672a\u77e5",
+          "topic": "/mavros/battery",
+          "publishers": "\u2014"
+        }
+      ],
+      "issues": [
+        "MID360\u70b9\u4e91:\u7f3a\u5931/\u8fc7\u671f",
+        "\u96f7\u8fbeIMU:\u7f3a\u5931/\u8fc7\u671f",
+        "FAST-LIO\u5b9a\u4f4d:\u7f3a\u5931/\u8fc7\u671f",
+        "\u89c4\u5212\u70b9\u4e91:\u7f3a\u5931/\u8fc7\u671f",
+        "\u5916\u90e8Pose\u8f6c\u53d1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u98de\u63a7\u91cc\u7a0b\u8ba1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u98de\u63a7\u8fde\u63a5/\u6a21\u5f0f:\u7f3a\u5931/\u8fc7\u671f",
+        "\u7740\u5730\u72b6\u6001:\u7f3a\u5931/\u8fc7\u671f",
+        "EKF\u4f30\u8ba1:\u7f3a\u5931/\u8fc7\u671f",
+        "\u9065\u63a7\u8f93\u5165:\u7f3a\u5931/\u8fc7\u671f",
+        "\u7535\u6c60:\u7f3a\u5931/\u8fc7\u671f"
+      ],
+      "stamp": 1794841816.5351245,
+      "planning": {
+        "status": {},
+        "execution": {},
+        "path": [],
+        "path_valid": false,
+        "candidate_path": [],
+        "candidate_path_valid": false,
+        "grid_valid": false,
+        "grid_display_valid": false,
+        "grid_reason": "WAIT_PLANNER"
+      },
+      "recording": {
+        "phase": "NOT_RECORDING",
+        "policy": "manual",
+        "running": false,
+        "status_fresh": true,
+        "auto_enabled": false,
+        "auto_running": false,
+        "auto_fresh": false,
+        "auto_phase": "UNAVAILABLE",
+        "auto_error": "",
+        "duration_s": 0.0,
+        "warnings": [],
+        "active_bags_count": 0,
+        "available": true
+      },
+      "localization": {
+        "lio_running": false,
+        "relay_running": false,
+        "session_id": "",
+        "identity_source": "ros2_graph",
+        "graph_fresh": false
+      },
+      "transport_delay_s": 0.0,
+      "sample_cost_s": 0.002954268999019405,
+      "transport": "udp"
+    }
+  ]
+}

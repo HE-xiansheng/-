@@ -1,44 +1,36 @@
-# 科研飞行平台 ROS2 迁移记录
+# 科研飞行平台 ROS2 迁移
 
-目标：将 Orange Pi 5 Ultra 参考机 `.235` 的完整平台迁入 `.224`，使用 Ubuntu 22.04 ARM64 / ROS2 Humble。
+将Orange Pi 5 Ultra参考机`.235`的完整平台迁入`.224`，使用Ubuntu22.04 ARM64 / ROS2 Humble。**迁移进行中，尚未完成实物整链验收或正式入口切换。**
 
-## 最新状态（2026-11-16）
+## 当前状态（2026-11-16）
 
-- `.224` 已从 eMMC 启动 Ubuntu 22.04，Humble 基础环境已验证。
-- Gemini 335L：官方 ROS2 wrapper / SDK v2.10.6，已完成短时地面数据验证。
-- MAVROS2 2.16.0：遥测接收正常；相机约 30 Hz、飞控本地位置约 30 Hz、IMU 约 50 Hz。尚未验证外部定位融合。
-- NoMachine 8.5.3-1 ARM64 已安装，服务已启用，电脑连接 `.224:4000` 成功；桌面登录尚未验证。
-- Livox SDK2 1.3.0 + ROS2 driver 1.2.6 已构建；FAST-LIO 已用旧机数据隔离回放，输出 40 帧里程计及点云，检查通过。新机物理雷达尚未接入。
-- 原生 ArUco 合成图、RK3588 MPP RTSP 合成视频和正常停止验证通过，物理云台待验证。
-- EGO 的28个消息接口和原生地图、A*、优化、管理库已构建，24项隔离检查通过；[详细记录](records/2026-11-16/ego-native-stage-report.md)。EGO原生状态机及地图选点工具31项隔离检查通过，见[状态机阶段记录](records/2026-11-16/ego-fsm-stage-report.md)。[执行适配器与会话管理](records/2026-11-16/ego-execution-stage-report.md)完成46项及19项隔离检查；任务控制、人物跟踪、位姿转发、录制、地面站与物理链路验证仍未完成。
-- 当前阶段详情、限制和版本见 [原生迁移阶段记录](records/2026-11-16/native-stage-report.md)。
+机载`.224`从eMMC启动Ubuntu22.04，Humble和NoMachine8.5.3已安装。当前部署源码`bd6c781`，工作区干净。最近只读检查未发现Safina_sensor.service，也没有运行相机、MAVROS、FAST-LIO或本轮测试进程；不能将以前的短时数据验证当作当前传感器正在运行。以太网口仍NO-CARRIER。
 
-- 新增[录制与地面站回放阶段记录](records/2026-11-16/recording/README.md)：原生录制26项、遥测20项、远端读取13项及Qt真实SSH开始/停止/分包下载与回放通过；机载b779e23。物理整链仍待验收。
+| 模块 | 已有直接证据 | 仍需验证 |
+| --- | --- | --- |
+| Gemini335L | 官方wrapper/SDK2.10.6，实际约30Hz，当前设备内部标定及相机→NPU预览 | 机体外参、度量精度和完整任务 |
+| Livox / FAST-LIO | SDK2 1.3.0、ROS2 driver1.2.6构建；旧机实采雷达/IMU回放实际FAST-LIO | 新机物理雷达采集、网络/时钟及运动精度 |
+| 定位转发 / MAVROS2 | 旧二进制71条几何对照；原生100帧初始化；MAVROS2 2.16.0物理未解锁遥测和22项实际MAVLink接口检查 | 实际安装外参、真实PX4外部视觉融合与时间同步 |
+| 定位到PX4仿真 | 旧机实采回放→实际FAST-LIO/转发/MAVROS→官方PX4 1.16.0，18项；564条源戳/坐标匹配，EV融合与停流检查 | 回放与软件仿真不替代新雷达、真实飞控和轨迹精度验收 |
+| EGO规划 | 原生消息、地图/优化库、状态机、地图选点、执行器及所属会话管理隔离检查 | 实物地图/任务/地面站全链 |
+| 航点 / ArUco / 人物 | 原生包、任务管理器、实际RK3588 NPU；ArUco图像到控制器21项、触发路径39项 | 物理云台/标记/运动目标、任务地面整链 |
+| USB相机 / 云台视频 | 官方usb_cam0.8.1候选与API适配；MPP/RTSP合成视频及退出检查 | 独立相机未接入，物理云台与RTSP源待验 |
+| Linux地面站 | 独立Qt源码/构建；任务、遥测、点云/位姿、视频、定位、规划、录制与SSH接口；原生Linux运行工具安装组件 | 完整安装包/可见桌面/实际任务及正式切换 |
+| 录制与回放 | rosbag2/SQLite/CDR、分包下载、实际Qt回放与损坏包拒绝 | 与实物整链持续运行联合验证 |
 
-## 记录位置与时效
+PX4源码与ULog已证实：其自身同步收敛前会用接收时刻替代源时刻，本次回放约仿真时钟72秒后才保留非零源时龄。不能只凭融合标志或MAVLink源戳正确认定实机时间对齐，也不能把该时间当作实机固定等待时长。
 
-- `records/2026-11-16/onboard-224/`：从机载电脑取出的原始说明、参数快照、验证结果、安装及编译日志，保留原目录结构。
-- `records/2026-11-16/computer-audit/`：电脑端此前的审计和迁移记录。
-- `tools/`：电脑端维护的验证脚本；外设验证结果输出至 stdout，应通过 SSH 重定向保存到电脑。
+## 证据与源码
 
-原始记录按发生时点保留，其中“尚未安装 NoMachine”“外设暂缓”“apt 相机驱动”等描述属于历史状态，以此首页及后续记录为准。机载相机实际使用源码编译的 v2.10.6。
+- [完整计划](task_plan.md)、[进展](progress.md)、[发现与问题](findings.md)。
+- [源码/驱动归档核对](records/2026-11-16/source-completeness/README.md)、[初期原生迁移](records/2026-11-16/native-stage-report.md)。
+- [定位及旧转发对照](records/2026-11-16/localization/README.md)、[完整MAVROS候选](records/2026-11-16/mavros-platform/README.md)、[实际定位到PX4仿真](records/2026-11-16/fastlio-px4-sitl/README.md)。
+- [EGO原生库](records/2026-11-16/ego-native-stage-report.md)、[状态机](records/2026-11-16/ego-fsm-stage-report.md)、[执行器](records/2026-11-16/ego-execution-stage-report.md)、[Qt规划入口](records/2026-11-16/planner-ui/README.md)。
+- [物理相机/NPU](records/2026-11-16/camera-npu/README.md)、[ArUco控制链](records/2026-11-16/aruco-landing-chain/README.md)、[降落触发路径](records/2026-11-16/land-modes/README.md)、[USB相机](records/2026-11-16/usb-camera/README.md)。
+- [视频](records/2026-11-16/video/README.md)、[录制回放](records/2026-11-16/recording/README.md)、[Linux ROS2部署入口](groundstation/doc/ros2_deployment.md)、[运行工具安装核对](records/2026-11-16/runtime-install-audit/README.md)。
 
-新迁移记录只保存在电脑及本仓库。机载保留运行代码、配置及第三方许可证，不再保存迁移报告和验证记录。系统、驱动或正式运行环境切换按用户确认执行；不解锁、不起飞、不执行飞行任务。
+`platform/`保存机载运行源码及配置，`groundstation/`是独立地面站适配副本，`tools/`是电脑端验证脚本。ROS1参考、旧测试和安装器仍在源码中供对照；不得按历史说明覆盖ROS2入口。Linux运行工具组件只安装当前依赖，历史ROS1自动导航安装器不参与现有Qt调用。
 
-视频阶段：独立地面站原生ROS2图像桥、真实NPU人物预览及SSH→Qt验证已完成，物理视频与整链任务仍待验证。见[视频阶段记录](records/2026-11-16/video/README.md)。
+新迁移报告、参数快照和验证日志仅保存在电脑/GitHub。机载保留运行代码、配置、必要运行状态与许可证，不留迁移报告。本仓库各阶段原始记录按发生时点保留，不能把其中的历史状态当作当前部署。
 
-规划Qt入口及ROS2受控停止保护已完成隔离适配，见[规划界面记录](records/2026-11-16/planner-ui/README.md)。定位转发、录制与物理整链验证继续进行。
-
-定位阶段：原部署转发71条黑盒几何对照、原生ROS2转发、定位管理/Qt/双终端入口及21项真实FAST-LIO回放联合完成。物理雷达与PX4接收融合待验证，见[定位记录](records/2026-11-16/localization/README.md)。
-
-2026-11-16：新增[物理相机与NPU验证](records/2026-11-16/camera-npu/README.md)及[精准降落补充路径](records/2026-11-16/land-modes/README.md)：13/39项通过，当前相机内部标定已修正并通过18项推理回归。物理任务与整链仍待验证。
-
-新增[物理相机与NPU记录](records/2026-11-16/camera-npu/README.md)、[降落其他触发路径](records/2026-11-16/land-modes/README.md)及[ArUco前台操作流程](records/2026-11-16/aruco-vision/README.md)。真实相机预览和额外隔离验证完成，云台/雷达/飞控融合及任务整链仍待验收。
-
-[源码与驱动归档核对](records/2026-11-16/source-completeness/README.md)：机载已跟踪普通文件已补齐到仓库；含SDK2源码和Orbbec2.10.6离线SDK资料。当前传感器入口仍为MAVROS遥测配置，完整任务插件与独立USB相机继续适配。
-
-[完整MAVROS候选与实际MAVLink验证](records/2026-11-16/mavros-platform/README.md)：22项localhost隔离检查通过，完整插件候选已部署，现有遥测服务未切换；真实PX4融合/SITL仍待验收。
-
-[独立USB相机适配记录](records/2026-11-16/usb-camera/README.md)：官方ROS2驱动、旧配置与采集服务候选已部署，隔离验证通过；实际独立相机尚未接入，未切换现有服务。
-
-[ArUco图像到控制器联合记录](records/2026-11-16/aruco-landing-chain/README.md)：21项实际节点隔离检查通过；合成数据不替代物理标定与飞控融合验收。
+系统/BSP、已有服务停止及正式运行环境切换需用户确认。不自动解锁、起飞或执行飞行任务。

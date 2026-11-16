@@ -1,5 +1,10 @@
 # ROS2 地面站独立适配版（进行中）
 
+## 当前ROS2迁移副本
+
+此目录是适配Ubuntu22.04/Humble的独立Linux地面站副本，面向机载192.168.1.224；原电脑地面站及.235 ROS1参考机未被替换。ROS2入口、兼容范围和当前验证结果见[ROS2部署说明](doc/ros2_deployment.md)。下方ROS1历史部署、旧工具和早期Windows说明按原时点保留，不能作为向.224安装ROS1脚本的操作指南。
+
+
 本目录来自电脑当前地面站源码的独立副本，来源摘要见 `../records/2026-11-16/groundstation/source-manifest.json`。不覆盖原程序、桌面入口或原地面站设置。Qt 应用设置使用独立名称 `customgeometry-ros2-staging`，默认机载地址 `.224`，可用 `--host` 指定。
 
 当前已适配：ROS2任务管理入口、只读点云/位姿/飞前遥测桥、视频图像采样器、定位和规划操作入口。使用统一 `~/drone_platform/env.sh`，保留原PCD1/LZ4、POS1、TLM1/TLG1和PFS1格式；ROS2实际节点/话题和camera_init坐标系已接入显示。

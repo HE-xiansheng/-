@@ -1,0 +1,50 @@
+{
+  "tools/communication/ssh_session.py": {
+    "sha256": "fd4c484a259f714e9fa04422d6bc224d2bb187bb01c509b9ea921f670f1128ff",
+    "mode": "0o644"
+  },
+  "tools/communication/runtime_paths.py": {
+    "sha256": "207bc0cb318b2aaf21b4eb0f67ec031e23e49d9d300f055e6b750b99eec31d1d",
+    "mode": "0o644"
+  },
+  "tools/communication/manage_link.py": {
+    "sha256": "72e59690e732de958f8b6e46cd26f238fee3371aa146ea46e5f64a99acc735ea",
+    "mode": "0o644"
+  },
+  "tools/communication/gcs-askpass": {
+    "sha256": "0cc0b10fce9125b5aa9f925a553f4c08b2ac6dc8c624b20fd643a6151c7b063d",
+    "mode": "0o755"
+  },
+  "tools/preflight/stream_reader.py": {
+    "sha256": "6fe7d33870c41d89e74f71435867e05480ffefc0e12fad3da1539729987b0c1b",
+    "mode": "0o644"
+  },
+  "tools/preflight/planner_display.py": {
+    "sha256": "75dc6553d890aa0ac9d56b4afec3a85efe3c106c534f0c6e6adeb091d0f2c56a",
+    "mode": "0o644"
+  },
+  "tools/preflight/telemetry_reader.py": {
+    "sha256": "2cfe318c1098210f1aa80a51c1cab18c3a7e6c63a5b6b74a244294b4e6c20aa0",
+    "mode": "0o644"
+  },
+  "tools/preflight/bridge.py": {
+    "sha256": "15115fefc0c35df3fcbdfc3c7a333272585fc6a6d00151a50d4e5a0cc7abaa17",
+    "mode": "0o644"
+  },
+  "tools/preflight/planner_geometry.py": {
+    "sha256": "1c5184a97fb89dd31ddc003070ffa844cb5726c7a939f3813224c4054aa4f1c1",
+    "mode": "0o644"
+  },
+  "tools/preflight/preflight_status.py": {
+    "sha256": "6f06e6d9496b7ff5bab2006ee838e268137160782308d4aa6b924129cd5f3829",
+    "mode": "0o644"
+  },
+  "tools/pointcloud-only/manage.py": {
+    "sha256": "eab853e9e6c3b4f3337178f1601f737952c09a8452f98bcc3a272e11b2f8fa4b",
+    "mode": "0o644"
+  },
+  "tools/pointcloud-only/cloud_sender.py": {
+    "sha256": "f1d4e9df78e607f5e8b009fa1af6ee5bb980f132d13f741c986b0dc94c2b0110",
+    "mode": "0o644"
+  }
+}

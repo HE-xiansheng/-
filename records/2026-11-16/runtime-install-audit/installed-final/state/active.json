@@ -1,0 +1,10 @@
+{
+  "pid": 1488844,
+  "start_tick": "65355069",
+  "host": "192.168.1.224",
+  "pc_ip": "192.168.1.89",
+  "port": 19100,
+  "log": "/home/tyzk/drone-migration-github/records/2026-11-16/runtime-install-audit/installed-final/state/sender-20261116-231012.log",
+  "with_pose": true,
+  "pose_port": 19101
+}

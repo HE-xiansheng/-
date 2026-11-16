@@ -1,0 +1,10 @@
+{
+  "exact_runtime_file_count": true,
+  "legacy_installers_not_installed": true,
+  "askpass_executable": true,
+  "installed_imports_and_cli": true,
+  "installed_ssh_receives_live_PFS1": false,
+  "cloud_manager_running": true,
+  "cloud_manager_stopped": true,
+  "monitor_manager_stopped": true
+}

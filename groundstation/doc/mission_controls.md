@@ -1,5 +1,8 @@
 # 航点、精准降落、人物跟踪入口
 
+> ROS2迁移副本：当前源文件为平台`platform/01_apps/mission_demo/tools/gcs_task_manager.py`，机载入口仍为`~/drone_platform/01_apps/mission_demo/tools/gcs_task_manager.py`，运行前source `~/drone_platform/env.sh`。本文下面的`tools/missions/task_manager.py`、roslaunch、Noetic及.235部署记录属于ROS1历史参考，禁止据此覆盖.224原生ROS2入口。当前部署与验证边界见[ROS2部署说明](ros2_deployment.md)。
+
+
 地面站现有三个功能栏已连接机载独立工作空间 `~/drone_platform/01_apps/mission_demo`。任务入口包含进程管理、只读状态、地图航点编辑。原有遥控触发保留，航点原生状态机增加可选manual_airborne模式；没有真实起飞验收。新版已于2026-10-30部署至机载192.168.1.235，原生航点编译、地图任务dry_run、ArUco启动参数和上位机SSH只读监视通过。未做真实飞行验收。
 
 ## 界面操作

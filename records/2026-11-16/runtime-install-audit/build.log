@@ -1,0 +1,56 @@
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+shaders/brand.frag -> shaders/brand.frag.qsb exposed as ://shaders/brand.frag.qsb
+-- Configuring done (0.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tyzk/drone-migration-work/build-groundstation
+[  1%] Running qmlimportscanner for customgeometry
+[  2%] Built target customgeometry_copy_qml
+[  4%] Built target customgeometry_copy_res
+[  4%] Built target radarsimulator_autogen_timestamp_deps
+[  5%] Automatic MOC and UIC for target radarsimulator
+[  5%] Built target radarsimulator_autogen
+[ 13%] Built target radarsimulator
+[ 13%] Built target customgeometry_qmlimportscan
+[ 13%] Built target customgeometry_autogen_timestamp_deps
+[ 14%] Automatic MOC and UIC for target customgeometry
+[ 14%] Built target customgeometry_autogen
+[ 16%] Running AUTOMOC file extraction for target customgeometry
+[ 17%] Running rcc for resource customgeometry_raw_qml_0
+[ 18%] Generating .rcc/qmlcache/customgeometry_qmlcache_loader.cpp
+[ 20%] Running moc --collect-json for target customgeometry
+[ 21%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 22%] Generating .rcc/qmlcache/customgeometry_BrandBadge_qml.cpp, .rcc/qmlcache/customgeometry_BrandBadge_qml.cpp.aotstats
+[ 24%] Generating .rcc/qmlcache/customgeometry_ConnectionPanel_qml.cpp, .rcc/qmlcache/customgeometry_ConnectionPanel_qml.cpp.aotstats
+[ 25%] Generating .rcc/qmlcache/customgeometry_FlightRecordWindow_qml.cpp, .rcc/qmlcache/customgeometry_FlightRecordWindow_qml.cpp.aotstats
+[ 27%] Generating .rcc/qmlcache/customgeometry_LocalizationPanel_qml.cpp, .rcc/qmlcache/customgeometry_LocalizationPanel_qml.cpp.aotstats
+[ 28%] Generating .rcc/qmlcache/customgeometry_Main_qml.cpp, .rcc/qmlcache/customgeometry_Main_qml.cpp.aotstats
+[ 29%] Generating .rcc/qmlcache/customgeometry_MissionControls_qml.cpp, .rcc/qmlcache/customgeometry_MissionControls_qml.cpp.aotstats
+[ 31%] Generating .rcc/qmlcache/customgeometry_PlannerPanel_qml.cpp, .rcc/qmlcache/customgeometry_PlannerPanel_qml.cpp.aotstats
+[ 32%] Generating .rcc/qmlcache/customgeometry_PreflightPanel_qml.cpp, .rcc/qmlcache/customgeometry_PreflightPanel_qml.cpp.aotstats
+[ 33%] Generating .rcc/qmlcache/customgeometry_RecordingPanel_qml.cpp, .rcc/qmlcache/customgeometry_RecordingPanel_qml.cpp.aotstats
+[ 35%] Generating .rcc/qmlcache/customgeometry_SectionHeader_qml.cpp, .rcc/qmlcache/customgeometry_SectionHeader_qml.cpp.aotstats
+[ 36%] Generating .rcc/qmlcache/customgeometry_SensorsPanel_qml.cpp, .rcc/qmlcache/customgeometry_SensorsPanel_qml.cpp.aotstats
+[ 37%] Generating .rcc/qmlcache/customgeometry_StartupWindow_qml.cpp, .rcc/qmlcache/customgeometry_StartupWindow_qml.cpp.aotstats
+[ 39%] Generating .rcc/qmlcache/customgeometry_StudioButton_qml.cpp, .rcc/qmlcache/customgeometry_StudioButton_qml.cpp.aotstats
+[ 40%] Generating .rcc/qmlcache/customgeometry_TorusMesh_qml.cpp, .rcc/qmlcache/customgeometry_TorusMesh_qml.cpp.aotstats
+[ 41%] Generating .rcc/qmlcache/customgeometry_VideoPanel_qml.cpp, .rcc/qmlcache/customgeometry_VideoPanel_qml.cpp.aotstats
+[ 41%] Generating meta_types/qt6customgeometry_release_metatypes.json
+[ 43%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_qmlcache_loader.cpp.o
+[ 44%] Building CXX object CMakeFiles/customgeometry.dir/.qt/rcc/qrc_customgeometry_raw_qml_0.cpp.o
+[ 45%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_Main_qml.cpp.o
+[ 47%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_StartupWindow_qml.cpp.o
+[ 48%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_PreflightPanel_qml.cpp.o
+[ 50%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_PlannerPanel_qml.cpp.o
+[ 51%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_RecordingPanel_qml.cpp.o
+[ 52%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_MissionControls_qml.cpp.o
+[ 54%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_LocalizationPanel_qml.cpp.o
+[ 55%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_SectionHeader_qml.cpp.o
+[ 56%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_StudioButton_qml.cpp.o
+[ 58%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_ConnectionPanel_qml.cpp.o
+[ 59%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_TorusMesh_qml.cpp.o
+[ 60%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_VideoPanel_qml.cpp.o
+[ 62%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_SensorsPanel_qml.cpp.o
+[ 63%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_BrandBadge_qml.cpp.o
+[ 64%] Building CXX object CMakeFiles/customgeometry.dir/.rcc/qmlcache/customgeometry_FlightRecordWindow_qml.cpp.o
+[ 66%] Linking CXX executable customgeometry
+[100%] Built target customgeometry

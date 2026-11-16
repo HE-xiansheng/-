@@ -1,0 +1,13 @@
+-- Install configuration: "Release"
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/communication/manage_link.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/communication/runtime_paths.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/communication/ssh_session.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/pointcloud-only/manage.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/pointcloud-only/cloud_sender.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/preflight/bridge.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/preflight/planner_display.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/preflight/planner_geometry.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/preflight/preflight_status.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/preflight/stream_reader.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/preflight/telemetry_reader.py
+-- Installing: /home/tyzk/drone-migration-work/stage/gcs-ros2-runtime/tools/communication/gcs-askpass

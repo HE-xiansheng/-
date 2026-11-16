@@ -74,7 +74,7 @@ qt_add_qml_module(customgeometry
         flightrecordcontroller.cpp flightrecordcontroller.h
         localizationcontroller.cpp localizationcontroller.h
         videocontroller.cpp videocontroller.h
-    RESOURCES tools/missions/task_manager.py qt_logo_rect.png assets/tianyi-logo.jpg assets/icons/research-flight-gcs-v1.png tools/planner/stop_preview.py tools/localization/manage_stack.py tools/video/ros_image_bridge.py tools/flight-records/remote_records.py
+    RESOURCES qt_logo_rect.png assets/tianyi-logo.jpg assets/icons/research-flight-gcs-v1.png tools/planner/stop_preview.py tools/localization/manage_stack.py tools/video/ros_image_bridge.py tools/flight-records/remote_records.py
     IMPORTS
         QtQuick3D
 )
@@ -158,7 +158,7 @@ endif()
 
 # Linux独立安装布局bin/../tools；Windows打包保留原有规则。
 if(UNIX AND NOT ANDROID AND NOT APPLE)
-    install(DIRECTORY tools/ DESTINATION tools FILES_MATCHING PATTERN "*.py" PATTERN "gcs-askpass" PATTERN "__pycache__" EXCLUDE)
+    include(cmake/ros2_runtime_tools.cmake)
 endif()
 
 find_package(SQLite3 QUIET)

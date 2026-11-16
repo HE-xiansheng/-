@@ -1,0 +1,3 @@
+#!/bin/sh
+# 复用此前已核实的eMMC设备主机指纹；不关闭SSH身份验证。
+exec /usr/bin/ssh -o UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts -o HostKeyAlias=opi-ros2-emmc "$@"
