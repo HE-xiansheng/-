@@ -1,7 +1,7 @@
 """Read-only RTSP/TCP H264 packet check; no external Python dependencies."""
 import socket, re, time, struct, json, sys
 from urllib.parse import urlsplit
-url=sys.argv[1] if len(sys.argv)>1 else 'rtsp://192.168.1.235:8554/gimbal'
+url=sys.argv[1] if len(sys.argv)>1 else 'rtsp://192.168.1.224:8554/gimbal'
 u=urlsplit(url);s=socket.create_connection((u.hostname,u.port or 554),5);s.settimeout(8);f=s.makefile('rb');seq=0
 
 def request(method,target,headers=''):

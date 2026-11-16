@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "shutdown": true
+  },
+  "streams": {},
+  "shutdown_codes": [
+    0,
+    255,
+    0
+  ],
+  "passed": false,
+  "scope": "synthetic source, localhost relay and real RK3588 MPP decoder; timestamps are decoder receipt times"
+}

@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /tmp/gimbal-relay-ros2-check/build/rtsp_test
+Test project /tmp/gimbal-relay-ros2-check/build/rtsp_test
+    Start 1: frame_rate_gate_jitter
+1/1 Test #1: frame_rate_gate_jitter ...........   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec

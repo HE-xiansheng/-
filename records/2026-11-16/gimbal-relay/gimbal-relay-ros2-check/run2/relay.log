@@ -1,0 +1,28 @@
+2026/11/16 23:32:03 INF MediaMTX v1.21.1, linux, arm64
+2026/11/16 23:32:03 INF configuration loaded from /tmp/gimbal-relay-ros2-check/run2/relay.yml
+2026/11/16 23:32:03 INF [path gimbal] [RTSP source] started
+2026/11/16 23:32:03 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/16 23:32:03 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/16 23:32:04 INF [RTSP] [conn 127.0.0.1:52136] opened
+2026/11/16 23:32:04 INF [RTSP] [conn 127.0.0.1:52136] closed: EOF
+2026/11/16 23:32:04 INF [RTSP] [conn 127.0.0.1:48432] opened
+2026/11/16 23:32:04 INF [RTSP] [session 3a50488b] created by 127.0.0.1:48432
+2026/11/16 23:32:04 INF [RTSP] [session 3a50488b] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/16 23:32:09 INF [RTSP] [conn 127.0.0.1:48432] closed: EOF
+2026/11/16 23:32:09 INF [RTSP] [session 3a50488b] destroyed: write tcp 127.0.0.1:18554->127.0.0.1:48432: use of closed network connection
+2026/11/16 23:32:09 INF [RTSP] [conn 127.0.0.1:48442] opened
+2026/11/16 23:32:09 INF [RTSP] [session b9eda37b] created by 127.0.0.1:48442
+2026/11/16 23:32:09 INF [RTSP] [session b9eda37b] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/16 23:32:14 INF [RTSP] [conn 127.0.0.1:51420] opened
+2026/11/16 23:32:14 INF [RTSP] [conn 127.0.0.1:51434] opened
+2026/11/16 23:32:14 INF [RTSP] [conn 127.0.0.1:51420] closed: EOF
+2026/11/16 23:32:14 INF [RTSP] [session 94fa43e3] created by 127.0.0.1:51434
+2026/11/16 23:32:15 INF [RTSP] [session 94fa43e3] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/16 23:32:23 INF [RTSP] [conn 127.0.0.1:51434] closed: EOF
+2026/11/16 23:32:23 INF [RTSP] [session 94fa43e3] destroyed: not in use
+2026/11/16 23:32:44 INF [RTSP] [conn 127.0.0.1:48442] closed: read tcp 127.0.0.1:18554->127.0.0.1:48442: read: connection reset by peer
+2026/11/16 23:32:44 INF [RTSP] [session b9eda37b] destroyed: not in use
+2026/11/16 23:32:44 INF shutting down gracefully
+2026/11/16 23:32:44 INF [RTSP] closing
+2026/11/16 23:32:44 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/16 23:32:44 INF waiting for running hooks

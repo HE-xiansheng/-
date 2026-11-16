@@ -1,0 +1,1 @@
+Evidence retrieved; phase-owned /tmp/gimbal-relay-ros2-check removed, no test processes remaining. Rollback binary retained on computer only.

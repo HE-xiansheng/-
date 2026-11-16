@@ -1,0 +1,20 @@
+2026/11/16 23:37:25 INF MediaMTX v1.21.1, linux, arm64
+2026/11/16 23:37:25 INF configuration loaded from /tmp/gimbal-relay-ros2-check/run4/source.yml
+2026/11/16 23:37:25 INF [RTSP] started with listeners on 127.0.0.1:18555 (TCP/RTSP)
+2026/11/16 23:37:25 INF [RTSP] [conn 127.0.0.1:45088] opened
+2026/11/16 23:37:25 INF [RTSP] [conn 127.0.0.1:45088] closed: EOF
+2026/11/16 23:37:26 INF [RTSP] [conn 127.0.0.1:45090] opened
+2026/11/16 23:37:26 INF [RTSP] [session f6f81585] created by 127.0.0.1:45090
+2026/11/16 23:37:26 INF [path upstream] stream is available and online, 1 track (H264)
+2026/11/16 23:37:26 INF [RTSP] [session f6f81585] is publishing to path 'upstream'
+2026/11/16 23:37:26 INF [path upstream] RTP packets are too big (1460 > 1188), remuxing them into smaller ones
+2026/11/16 23:37:26 INF [RTSP] [conn 127.0.0.1:45104] opened
+2026/11/16 23:37:26 INF [RTSP] [session ae5f11d3] created by 127.0.0.1:45104
+2026/11/16 23:37:26 INF [RTSP] [session ae5f11d3] is reading from path 'upstream', with TCP, 1 track (H264)
+2026/11/16 23:38:06 INF [RTSP] [session ae5f11d3] destroyed: torn down by 127.0.0.1:45104
+2026/11/16 23:38:06 INF [RTSP] [conn 127.0.0.1:45104] closed: EOF
+2026/11/16 23:38:06 INF [RTSP] [session f6f81585] destroyed: torn down by 127.0.0.1:45090
+2026/11/16 23:38:06 INF [RTSP] [conn 127.0.0.1:45090] closed: EOF
+2026/11/16 23:38:06 INF shutting down gracefully
+2026/11/16 23:38:06 INF [RTSP] closing
+2026/11/16 23:38:06 INF waiting for running hooks

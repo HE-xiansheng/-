@@ -1,0 +1,23 @@
+[Unit]
+Description=Gimbal H264 RTSP relay (MediaMTX, ROS2 platform candidate)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=orangepi
+Group=orangepi
+ExecStart=/bin/bash /home/orangepi/drone_platform/03_tools/gimbal_relay/start_relay.sh
+Restart=always
+RestartSec=2
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

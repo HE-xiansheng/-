@@ -1,0 +1,5 @@
+错误：来自组件 /GstPipeline:pipeline0/GstRTSPSrc:rtspsrc0：无法从资源阅读。
+额外的调试信息：
+gstrtspsrc.c(6323): gst_rtsp_src_receive_response (): /GstPipeline:pipeline0/GstRTSPSrc:rtspsrc0:
+Could not receive message. (System error)
+错误: 管道不需要 preroll.

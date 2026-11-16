@@ -1,0 +1,12 @@
+{
+  "frames": 121,
+  "different_frames": 121,
+  "fps": 15.104461123986582,
+  "size": [
+    640,
+    360
+  ],
+  "format": "RGB",
+  "passed": true,
+  "scope": "actual SSH-forwarded RTSP and same GStreamer pipeline as Qt; synthetic input, no gimbal motion"
+}

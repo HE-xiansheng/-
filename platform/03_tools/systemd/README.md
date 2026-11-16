@@ -30,3 +30,23 @@ Installing/enabling the service or replacing an existing startup entry requires
 user confirmation. Existing `start_sensors.sh` and `sensors.launch.py` remain
 available. To abandon this candidate before activation, simply stop its owned
 foreground launch with Ctrl-C; no system service change needs reverting.
+
+## Gimbal original-video relay candidate
+
+`gimbal-rtsp-relay.service` is a separate source-controlled candidate. The old
+platform ran MediaMTX separately from Safina_sensor; the same separation is kept.
+The current board contains MediaMTX v1.21.1 with the same SHA256 as the reference
+board. Its `gimbal.yml` retains the original H264 source and client access list.
+
+This relay forwards the camera's compressed stream to
+`rtsp://<onboard-address>:8554/gimbal` for the Linux groundstation. It does not
+publish ROS images or command the gimbal. The rtsp_test MPP node separately
+provides gray/color ROS images for detection and photographs. Its image stamp
+represents decoder receipt time, not a hardware camera exposure timestamp.
+
+The candidate runs as orangepi from the project directory, with ProtectHome set
+to read-only because its executable is inside that home directory. No /usr/local
+or /etc files are installed. `start_relay.sh [config.yml]` accepts a separate
+configuration for isolated tests. The default still reads the original gimbal.yml.
+Confirm the physical camera network before activating the service; this source
+candidate has not been installed, enabled or started through systemd.

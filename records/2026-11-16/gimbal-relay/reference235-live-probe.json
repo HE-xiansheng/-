@@ -1,0 +1,11 @@
+{
+  "source": "observed read-only SSH check_rtsp.py output from reference .235",
+  "url": "rtsp://127.0.0.1:8554/gimbal",
+  "codec": "H264",
+  "seconds": 5.011,
+  "rtp_packets": 1151,
+  "frame_markers": 150,
+  "fps": 29.93,
+  "mbps": 2.061,
+  "first_packet_ms": 11.04
+}

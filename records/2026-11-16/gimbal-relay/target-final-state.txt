@@ -1,0 +1,4 @@
+d6a28d6a296108b7287a5a546e9272d316ea814e149d111b60471d1b4b3ac542  /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra
+08d61a4c07d8cf124e037a86af09e616fce132e9c1edbbc673caa72cf9794810  /home/orangepi/drone_platform/03_tools/gimbal_relay/mediamtx
+active
+Failed to get unit file state for gimbal-rtsp-relay.service: No such file or directory

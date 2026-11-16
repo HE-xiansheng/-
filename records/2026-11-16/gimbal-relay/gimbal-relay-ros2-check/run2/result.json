@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "actual_relay_h264_packets": true,
+    "raw_rate": true,
+    "raw_source_stamps": true,
+    "color_rate": false,
+    "color_source_stamps": true,
+    "image_formats": true,
+    "optical_frames": true,
+    "shutdown": true
+  },
+  "streams": {
+    "raw": {
+      "width": 1920,
+      "height": 1080,
+      "encoding": "mono8",
+      "frame": "gimbal_camera_optical_frame",
+      "hz": 14.971221920726878,
+      "messages": 466,
+      "age_min_s": 0.006207787,
+      "age_max_s": 0.057840694
+    },
+    "color": {
+      "width": 960,
+      "height": 540,
+      "encoding": "bgr8",
+      "frame": "gimbal_camera_optical_frame",
+      "hz": 9.369150700672758,
+      "messages": 292,
+      "age_min_s": 0.018549862,
+      "age_max_s": 0.103852976
+    }
+  },
+  "shutdown_codes": [
+    0,
+    255,
+    0,
+    0
+  ],
+  "passed": false,
+  "scope": "synthetic source, localhost relay and real RK3588 MPP decoder; timestamps are decoder receipt times"
+}

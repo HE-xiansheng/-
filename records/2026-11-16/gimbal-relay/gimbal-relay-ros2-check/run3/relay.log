@@ -1,0 +1,21 @@
+2026/11/16 23:35:04 INF MediaMTX v1.21.1, linux, arm64
+2026/11/16 23:35:04 INF configuration loaded from /tmp/gimbal-relay-ros2-check/run3/relay.yml
+2026/11/16 23:35:04 INF [path gimbal] [RTSP source] started
+2026/11/16 23:35:04 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/16 23:35:04 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/16 23:35:04 INF [RTSP] [conn 127.0.0.1:33398] opened
+2026/11/16 23:35:04 INF [RTSP] [conn 127.0.0.1:33398] closed: EOF
+2026/11/16 23:35:04 INF [RTSP] [conn 127.0.0.1:33404] opened
+2026/11/16 23:35:04 INF [RTSP] [session 6e2e636f] created by 127.0.0.1:33404
+2026/11/16 23:35:04 INF [RTSP] [session 6e2e636f] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/16 23:35:09 INF [RTSP] [conn 127.0.0.1:33404] closed: read tcp 127.0.0.1:18554->127.0.0.1:33404: read: connection reset by peer
+2026/11/16 23:35:09 INF [RTSP] [session 6e2e636f] destroyed: not in use
+2026/11/16 23:35:09 INF [RTSP] [conn 127.0.0.1:33410] opened
+2026/11/16 23:35:09 INF [RTSP] [session e5c41635] created by 127.0.0.1:33410
+2026/11/16 23:35:09 INF [RTSP] [session e5c41635] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/16 23:35:44 INF [RTSP] [conn 127.0.0.1:33410] closed: terminated
+2026/11/16 23:35:44 INF [RTSP] [session e5c41635] destroyed: write tcp 127.0.0.1:18554->127.0.0.1:33410: write: connection reset by peer
+2026/11/16 23:35:44 INF shutting down gracefully
+2026/11/16 23:35:44 INF [RTSP] closing
+2026/11/16 23:35:44 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/16 23:35:44 INF waiting for running hooks

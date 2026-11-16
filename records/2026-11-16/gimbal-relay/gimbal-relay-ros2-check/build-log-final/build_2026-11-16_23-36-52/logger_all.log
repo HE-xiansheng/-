@@ -1,0 +1,91 @@
+[0.136s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', '--log-base', '/tmp/gimbal-relay-ros2-check/build-log-final', 'build', '--base-paths', '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test', '--build-base', '/tmp/gimbal-relay-ros2-check/build', '--install-base', '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release', '-DBUILD_TESTING=ON']
+[0.136s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base='/tmp/gimbal-relay-ros2-check/build-log-final', log_level=None, verb_name='build', build_base='/tmp/gimbal-relay-ros2-check/build', install_base='/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=['-DCMAKE_BUILD_TYPE=Release', '-DBUILD_TESTING=ON'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7facea37c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7facea32b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7facea32b0>>)
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.305s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extensions ['colcon_meta']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extension 'colcon_meta'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extensions ['ros']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test) by extension 'ros'
+[0.324s] DEBUG:colcon.colcon_core.package_identification:Package '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test' with type 'ros.ament_cmake' and name 'rtsp_test'
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.354s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release', '-DBUILD_TESTING=ON']'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'cmake_target' from command line to 'None'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.355s] Level 5:colcon.colcon_core.verb:set package 'rtsp_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.355s] DEBUG:colcon.colcon_core.verb:Building package 'rtsp_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/tmp/gimbal-relay-ros2-check/build/rtsp_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release', '-DBUILD_TESTING=ON'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test', 'merge_install': False, 'path': '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test', 'symlink_install': False, 'test_result_base': None}
+[0.355s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.357s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.357s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test' with build type 'ament_cmake'
+[0.357s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test'
+[0.360s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.360s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.360s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /tmp/gimbal-relay-ros2-check/build/rtsp_test -- -j8 -l8
+[12.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /tmp/gimbal-relay-ros2-check/build/rtsp_test -- -j8 -l8
+[12.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /tmp/gimbal-relay-ros2-check/build/rtsp_test
+[12.330s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rtsp_test)
+[12.331s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /tmp/gimbal-relay-ros2-check/build/rtsp_test
+[12.342s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test' for CMake module files
+[12.344s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test' for CMake config files
+[12.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('rtsp_test', 'cmake_prefix_path')
+[12.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/hook/cmake_prefix_path.ps1'
+[12.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/hook/cmake_prefix_path.dsv'
+[12.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/hook/cmake_prefix_path.sh'
+[12.354s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib'
+[12.355s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/bin'
+[12.355s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/pkgconfig/rtsp_test.pc'
+[12.362s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/python3.10/site-packages'
+[12.364s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/bin'
+[12.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.ps1'
+[12.370s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.dsv'
+[12.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.sh'
+[12.376s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.bash'
+[12.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.zsh'
+[12.379s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/colcon-core/packages/rtsp_test)
+[12.381s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rtsp_test)
+[12.381s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test' for CMake module files
+[12.382s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test' for CMake config files
+[12.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('rtsp_test', 'cmake_prefix_path')
+[12.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/hook/cmake_prefix_path.ps1'
+[12.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/hook/cmake_prefix_path.dsv'
+[12.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/hook/cmake_prefix_path.sh'
+[12.386s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib'
+[12.386s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/bin'
+[12.386s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/pkgconfig/rtsp_test.pc'
+[12.387s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/python3.10/site-packages'
+[12.388s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/bin'
+[12.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.ps1'
+[12.390s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.dsv'
+[12.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.sh'
+[12.392s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.bash'
+[12.392s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.zsh'
+[12.393s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/colcon-core/packages/rtsp_test)
+[12.393s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.394s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.394s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[12.394s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.395s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.395s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/local_setup.ps1'
+[12.397s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/_local_setup_util_ps1.py'
+[12.399s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/setup.ps1'
+[12.402s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/local_setup.sh'
+[12.402s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/_local_setup_util_sh.py'
+[12.403s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/setup.sh'
+[12.406s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/local_setup.bash'
+[12.406s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/setup.bash'
+[12.409s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/local_setup.zsh'
+[12.409s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/setup.zsh'

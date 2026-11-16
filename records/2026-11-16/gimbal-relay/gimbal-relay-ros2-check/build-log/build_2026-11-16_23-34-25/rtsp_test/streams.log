@@ -1,0 +1,71 @@
+[0.018s] Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/opt/ros/humble /usr/bin/cmake /home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test
+[0.205s] -- The C compiler identification is GNU 11.4.0
+[0.374s] -- The CXX compiler identification is GNU 11.4.0
+[0.404s] -- Detecting C compiler ABI info
+[0.649s] -- Detecting C compiler ABI info - done
+[0.687s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.688s] -- Detecting C compile features
+[0.689s] -- Detecting C compile features - done
+[0.701s] -- Detecting CXX compiler ABI info
+[0.958s] -- Detecting CXX compiler ABI info - done
+[0.985s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.986s] -- Detecting CXX compile features
+[0.988s] -- Detecting CXX compile features - done
+[1.009s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.386s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.609s] -- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+[1.684s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.694s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.708s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.729s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.755s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.832s] -- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.837s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.083s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.147s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.225s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.244s] -- Looking for pthread.h
+[2.487s] -- Looking for pthread.h - found
+[2.488s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.736s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.740s] -- Found Threads: TRUE  
+[2.873s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.922s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[2.940s] -- Found OpenCV: /usr (found version "4.5.4") found components: core imgproc 
+[2.949s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[2.950s] -- Checking for modules 'libavformat;libavcodec;libavutil'
+[3.009s] --   Found libavformat, version 58.76.100
+[3.045s] --   Found libavcodec, version 58.134.100
+[3.079s] --   Found libavutil, version 56.70.100
+[3.331s] -- Configuring done
+[3.356s] -- Generating done
+[3.362s] -- Build files have been written to: /tmp/gimbal-relay-ros2-check/build/rtsp_test
+[3.381s] Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/opt/ros/humble /usr/bin/cmake /home/orangepi/drone_platform/01_apps/mission_demo/workspace/src/rtsp_test -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test
+[3.386s] Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/opt/ros/humble /usr/bin/cmake --build /tmp/gimbal-relay-ros2-check/build/rtsp_test -- -j8 -l8
+[3.561s] [ 25%] Building CXX object CMakeFiles/frame_rate_gate_test.dir/test/frame_rate_gate_test.cpp.o
+[3.566s] [ 50%] Building CXX object CMakeFiles/rtsp_hw_pub_ultra.dir/src/rtsp_hw_pub_ultra.cpp.o
+[4.183s] [ 75%] Linking CXX executable frame_rate_gate_test
+[4.368s] [ 75%] Built target frame_rate_gate_test
+[14.678s] [100%] Linking CXX executable rtsp_hw_pub_ultra
+[15.480s] [100%] Built target rtsp_hw_pub_ultra
+[15.516s] Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/opt/ros/humble /usr/bin/cmake --build /tmp/gimbal-relay-ros2-check/build/rtsp_test -- -j8 -l8
+[15.557s] Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/opt/ros/humble /usr/bin/cmake --install /tmp/gimbal-relay-ros2-check/build/rtsp_test
+[15.586s] -- Install configuration: "Release"
+[15.588s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra
+[15.594s] -- Set runtime path of "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra" to ""
+[15.594s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/package_run_dependencies/rtsp_test
+[15.595s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/parent_prefix_path/rtsp_test
+[15.597s] -- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/ament_prefix_path.sh
+[15.598s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/ament_prefix_path.dsv
+[15.600s] -- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/path.sh
+[15.600s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/path.dsv
+[15.601s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.bash
+[15.601s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.sh
+[15.601s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.zsh
+[15.602s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.dsv
+[15.603s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.dsv
+[15.603s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/packages/rtsp_test
+[15.603s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/cmake/rtsp_testConfig.cmake
+[15.604s] -- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/cmake/rtsp_testConfig-version.cmake
+[15.604s] -- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.xml
+[15.606s] Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/opt/ros/humble /usr/bin/cmake --install /tmp/gimbal-relay-ros2-check/build/rtsp_test

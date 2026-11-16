@@ -1,0 +1,157 @@
+[0.000000] (-) TimerEvent: {}
+[0.000198] (rtsp_test) JobQueued: {'identifier': 'rtsp_test', 'dependencies': OrderedDict()}
+[0.000315] (rtsp_test) JobStarted: {'identifier': 'rtsp_test'}
+[0.016738] (rtsp_test) JobProgress: {'identifier': 'rtsp_test', 'progress': 'cmake'}
+[0.017543] (rtsp_test) JobProgress: {'identifier': 'rtsp_test', 'progress': 'build'}
+[0.018563] (rtsp_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/tmp/gimbal-relay-ros2-check/build/rtsp_test', '--', '-j8', '-l8'], 'cwd': '/tmp/gimbal-relay-ros2-check/build/rtsp_test', 'env': OrderedDict([('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.1.89 53974 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_opt/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/path_searching/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_env/lib:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/lib:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera/lib:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install:/home/orangepi/drone_platform/02_drivers/sensors/workspace/install:/home/orangepi/drone_platform/02_drivers/orbbec/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '989'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('AMENT_PREFIX_PATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros:/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_opt:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/path_searching:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_env:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/track_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/waypoint_mission:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/platform_gcs_support:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/land_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/aruco_test:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('PWD', '/tmp/gimbal-relay-ros2-check/build/rtsp_test'), ('LC_ALL', 'C.UTF-8'), ('SSH_CONNECTION', '192.168.1.89 53974 192.168.1.224 22'), ('PYTHONPATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros:/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_opt:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/path_searching:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_env:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/track_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/waypoint_mission:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/platform_gcs_support:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/land_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/aruco_test:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[0.098675] (-) TimerEvent: {}
+[0.165079] (rtsp_test) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target frame_rate_gate_test\n'}
+[0.175958] (rtsp_test) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target rtsp_hw_pub_ultra\n'}
+[0.198901] (-) TimerEvent: {}
+[0.206375] (rtsp_test) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/frame_rate_gate_test.dir/test/frame_rate_gate_test.cpp.o\n'}
+[0.232676] (rtsp_test) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/rtsp_hw_pub_ultra.dir/src/rtsp_hw_pub_ultra.cpp.o\n'}
+[0.299014] (-) TimerEvent: {}
+[0.399366] (-) TimerEvent: {}
+[0.499918] (-) TimerEvent: {}
+[0.600453] (-) TimerEvent: {}
+[0.700872] (-) TimerEvent: {}
+[0.801304] (-) TimerEvent: {}
+[0.857769] (rtsp_test) StdoutLine: {'line': b'[ 75%] Linking CXX executable frame_rate_gate_test\n'}
+[0.901673] (-) TimerEvent: {}
+[1.002229] (-) TimerEvent: {}
+[1.040563] (rtsp_test) StdoutLine: {'line': b'[ 75%] Built target frame_rate_gate_test\n'}
+[1.102427] (-) TimerEvent: {}
+[1.202846] (-) TimerEvent: {}
+[1.303285] (-) TimerEvent: {}
+[1.403697] (-) TimerEvent: {}
+[1.504115] (-) TimerEvent: {}
+[1.604529] (-) TimerEvent: {}
+[1.704945] (-) TimerEvent: {}
+[1.805358] (-) TimerEvent: {}
+[1.905775] (-) TimerEvent: {}
+[2.006331] (-) TimerEvent: {}
+[2.106867] (-) TimerEvent: {}
+[2.207281] (-) TimerEvent: {}
+[2.307700] (-) TimerEvent: {}
+[2.408116] (-) TimerEvent: {}
+[2.508537] (-) TimerEvent: {}
+[2.608954] (-) TimerEvent: {}
+[2.709374] (-) TimerEvent: {}
+[2.809790] (-) TimerEvent: {}
+[2.910339] (-) TimerEvent: {}
+[3.010864] (-) TimerEvent: {}
+[3.111443] (-) TimerEvent: {}
+[3.212005] (-) TimerEvent: {}
+[3.312621] (-) TimerEvent: {}
+[3.413190] (-) TimerEvent: {}
+[3.513603] (-) TimerEvent: {}
+[3.614026] (-) TimerEvent: {}
+[3.714439] (-) TimerEvent: {}
+[3.814845] (-) TimerEvent: {}
+[3.915260] (-) TimerEvent: {}
+[4.015668] (-) TimerEvent: {}
+[4.116079] (-) TimerEvent: {}
+[4.216650] (-) TimerEvent: {}
+[4.317182] (-) TimerEvent: {}
+[4.417611] (-) TimerEvent: {}
+[4.518036] (-) TimerEvent: {}
+[4.618480] (-) TimerEvent: {}
+[4.718921] (-) TimerEvent: {}
+[4.819343] (-) TimerEvent: {}
+[4.919755] (-) TimerEvent: {}
+[5.020174] (-) TimerEvent: {}
+[5.120588] (-) TimerEvent: {}
+[5.221002] (-) TimerEvent: {}
+[5.321422] (-) TimerEvent: {}
+[5.421838] (-) TimerEvent: {}
+[5.522442] (-) TimerEvent: {}
+[5.622972] (-) TimerEvent: {}
+[5.723578] (-) TimerEvent: {}
+[5.824102] (-) TimerEvent: {}
+[5.924516] (-) TimerEvent: {}
+[6.024926] (-) TimerEvent: {}
+[6.125344] (-) TimerEvent: {}
+[6.225749] (-) TimerEvent: {}
+[6.326151] (-) TimerEvent: {}
+[6.426581] (-) TimerEvent: {}
+[6.526986] (-) TimerEvent: {}
+[6.627583] (-) TimerEvent: {}
+[6.728106] (-) TimerEvent: {}
+[6.828518] (-) TimerEvent: {}
+[6.928928] (-) TimerEvent: {}
+[7.029362] (-) TimerEvent: {}
+[7.129781] (-) TimerEvent: {}
+[7.230187] (-) TimerEvent: {}
+[7.330587] (-) TimerEvent: {}
+[7.430989] (-) TimerEvent: {}
+[7.531398] (-) TimerEvent: {}
+[7.631800] (-) TimerEvent: {}
+[7.732398] (-) TimerEvent: {}
+[7.832910] (-) TimerEvent: {}
+[7.933477] (-) TimerEvent: {}
+[8.034000] (-) TimerEvent: {}
+[8.134626] (-) TimerEvent: {}
+[8.235127] (-) TimerEvent: {}
+[8.335754] (-) TimerEvent: {}
+[8.436279] (-) TimerEvent: {}
+[8.536694] (-) TimerEvent: {}
+[8.637098] (-) TimerEvent: {}
+[8.737508] (-) TimerEvent: {}
+[8.837910] (-) TimerEvent: {}
+[8.938312] (-) TimerEvent: {}
+[9.038716] (-) TimerEvent: {}
+[9.139128] (-) TimerEvent: {}
+[9.239785] (-) TimerEvent: {}
+[9.340331] (-) TimerEvent: {}
+[9.440731] (-) TimerEvent: {}
+[9.541137] (-) TimerEvent: {}
+[9.641548] (-) TimerEvent: {}
+[9.741950] (-) TimerEvent: {}
+[9.842348] (-) TimerEvent: {}
+[9.942908] (-) TimerEvent: {}
+[10.043462] (-) TimerEvent: {}
+[10.144059] (-) TimerEvent: {}
+[10.244474] (-) TimerEvent: {}
+[10.344883] (-) TimerEvent: {}
+[10.445283] (-) TimerEvent: {}
+[10.545697] (-) TimerEvent: {}
+[10.646112] (-) TimerEvent: {}
+[10.746550] (-) TimerEvent: {}
+[10.847081] (-) TimerEvent: {}
+[10.947611] (-) TimerEvent: {}
+[11.048010] (-) TimerEvent: {}
+[11.083327] (rtsp_test) StdoutLine: {'line': b'[100%] Linking CXX executable rtsp_hw_pub_ultra\n'}
+[11.148212] (-) TimerEvent: {}
+[11.248628] (-) TimerEvent: {}
+[11.349049] (-) TimerEvent: {}
+[11.449600] (-) TimerEvent: {}
+[11.550114] (-) TimerEvent: {}
+[11.650542] (-) TimerEvent: {}
+[11.750972] (-) TimerEvent: {}
+[11.851391] (-) TimerEvent: {}
+[11.858947] (rtsp_test) StdoutLine: {'line': b'[100%] Built target rtsp_hw_pub_ultra\n'}
+[11.897738] (rtsp_test) CommandEnded: {'returncode': 0}
+[11.899916] (rtsp_test) JobProgress: {'identifier': 'rtsp_test', 'progress': 'install'}
+[11.934139] (rtsp_test) Command: {'cmd': ['/usr/bin/cmake', '--install', '/tmp/gimbal-relay-ros2-check/build/rtsp_test'], 'cwd': '/tmp/gimbal-relay-ros2-check/build/rtsp_test', 'env': OrderedDict([('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.1.89 53974 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_opt/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/path_searching/lib:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_env/lib:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/lib:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera/lib:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install:/home/orangepi/drone_platform/02_drivers/sensors/workspace/install:/home/orangepi/drone_platform/02_drivers/orbbec/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_ID', '989'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('AMENT_PREFIX_PATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros:/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_opt:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/path_searching:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_env:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/track_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/waypoint_mission:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/platform_gcs_support:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/land_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/aruco_test:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('PWD', '/tmp/gimbal-relay-ros2-check/build/rtsp_test'), ('LC_ALL', 'C.UTF-8'), ('SSH_CONNECTION', '192.168.1.89 53974 192.168.1.224 22'), ('PYTHONPATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/local/lib/python3.10/dist-packages:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros:/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_manage:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_opt:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/traj_utils:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/quadrotor_msgs:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/path_searching:/home/orangepi/drone_platform/01_apps/ego_planner/workspace/install/plan_env:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/track_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/waypoint_mission:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/platform_gcs_support:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/land_test:/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/aruco_test:/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera:/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera_msgs:/opt/ros/humble')]), 'shell': False}
+[11.951492] (-) TimerEvent: {}
+[11.961659] (rtsp_test) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[11.962413] (rtsp_test) StdoutLine: {'line': b'-- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra\n'}
+[11.964903] (rtsp_test) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra" to ""\n'}
+[11.965716] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/package_run_dependencies/rtsp_test\n'}
+[11.966015] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/parent_prefix_path/rtsp_test\n'}
+[11.966329] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/ament_prefix_path.sh\n'}
+[11.966627] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/ament_prefix_path.dsv\n'}
+[11.966924] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/path.sh\n'}
+[11.967220] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/path.dsv\n'}
+[11.967514] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.bash\n'}
+[11.967825] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.sh\n'}
+[11.968193] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.zsh\n'}
+[11.968553] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.dsv\n'}
+[11.968914] (rtsp_test) StdoutLine: {'line': b'-- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.dsv\n'}
+[11.969276] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/packages/rtsp_test\n'}
+[11.969657] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/cmake/rtsp_testConfig.cmake\n'}
+[11.970024] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/cmake/rtsp_testConfig-version.cmake\n'}
+[11.970565] (rtsp_test) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.xml\n'}
+[11.972380] (rtsp_test) CommandEnded: {'returncode': 0}
+[12.036189] (rtsp_test) JobEnded: {'identifier': 'rtsp_test', 'rc': 0}
+[12.037237] (-) EventReactorShutdown: {}

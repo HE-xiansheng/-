@@ -4,6 +4,7 @@
 #include <opencv2/opencv.hpp>
 #include <algorithm>
 #include <cstring>
+#include "frame_rate_gate.hpp"
 
 extern "C" {
 #include <libavformat/avformat.h>
@@ -199,6 +200,7 @@ int main(int argc, char **argv) {
     publish_gray = nh->declare_parameter("publish_gray", publish_gray);
     color_hz = nh->declare_parameter("color_hz", color_hz);
     color_width = nh->declare_parameter("color_width", color_width);
+    FrameRateGate color_gate(color_hz);
     // RTSP URL is a declared ROS2 parameter; --ros-args is never treated as a URL.
 
     AVFormatContext *fmt_ctx = NULL;
@@ -242,7 +244,6 @@ int main(int argc, char **argv) {
     RCLCPP_INFO(nh->get_logger(), "rtsp_hw_pub_ultra running: %s -> /rtsp_cam/image_raw (mono8), color %.1f Hz @ %d px",
              url.c_str(), color_hz, color_width);
 
-    rclcpp::Time last_color(0, 0, nh->get_clock()->get_clock_type());
     unsigned long gray_frames = 0, color_frames = 0;
     rclcpp::Time rate_start = nh->now();
 
@@ -289,7 +290,7 @@ int main(int argc, char **argv) {
                     ++gray_frames;
                 }
                 if (plane && color_hz > 0 && color_pub->get_subscription_count() > 0 &&
-                    (last_color.nanoseconds() == 0 || (stamp - last_color).seconds() >= 1.0 / color_hz)) {
+                    color_gate.ready(FrameRateGate::Clock::now())) {
                     const int cw = std::max(16, std::min<int>(color_width, int(width)));
                     const int ch = std::max(2, (int(height) * cw / int(width)) & ~1);
                     cv::Mat y_full(ver_stride, hor_stride, CV_8UC1, plane);
@@ -302,7 +303,6 @@ int main(int argc, char **argv) {
                                cv::Size(cw / 2, ch / 2), 0, 0, cv::INTER_AREA);
                     cv::cvtColorTwoPlane(y_small, uv_small, bgr, cv::COLOR_YUV2BGR_NV12);
                     color_pub->publish(*cv_bridge::CvImage(header, "bgr8", bgr).toImageMsg());
-                    last_color = stamp;
                     ++color_frames;
                 }
                 mpp_frame_deinit(&dec.frame);

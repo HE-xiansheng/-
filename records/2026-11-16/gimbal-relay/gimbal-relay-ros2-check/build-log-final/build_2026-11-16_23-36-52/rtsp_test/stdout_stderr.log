@@ -1,0 +1,26 @@
+Consolidate compiler generated dependencies of target frame_rate_gate_test
+Consolidate compiler generated dependencies of target rtsp_hw_pub_ultra
+[ 25%] Building CXX object CMakeFiles/frame_rate_gate_test.dir/test/frame_rate_gate_test.cpp.o
+[ 50%] Building CXX object CMakeFiles/rtsp_hw_pub_ultra.dir/src/rtsp_hw_pub_ultra.cpp.o
+[ 75%] Linking CXX executable frame_rate_gate_test
+[ 75%] Built target frame_rate_gate_test
+[100%] Linking CXX executable rtsp_hw_pub_ultra
+[100%] Built target rtsp_hw_pub_ultra
+-- Install configuration: "Release"
+-- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra
+-- Set runtime path of "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra" to ""
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/package_run_dependencies/rtsp_test
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/parent_prefix_path/rtsp_test
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/ament_prefix_path.sh
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/path.sh
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/environment/path.dsv
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.bash
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.sh
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.zsh
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/local_setup.dsv
+-- Installing: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.dsv
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/ament_index/resource_index/packages/rtsp_test
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/cmake/rtsp_testConfig.cmake
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/cmake/rtsp_testConfig-version.cmake
+-- Up-to-date: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/package.xml

@@ -1,0 +1,4 @@
+Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /tmp/gimbal-relay-ros2-check/build/rtsp_test -- -j8 -l8
+Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /tmp/gimbal-relay-ros2-check/build/rtsp_test -- -j8 -l8
+Invoking command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /tmp/gimbal-relay-ros2-check/build/rtsp_test
+Invoked command in '/tmp/gimbal-relay-ros2-check/build/rtsp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /tmp/gimbal-relay-ros2-check/build/rtsp_test
