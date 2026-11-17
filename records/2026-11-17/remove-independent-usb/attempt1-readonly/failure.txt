@@ -1,0 +1,1 @@
+Read-only archive step failed: 03_tools/systemd/README.md is computer-only and is absent on the onboard product. No deployment directory was created and no product file changed. Retry deploys only the two runtime files, keeping documentation on computer/GitHub.

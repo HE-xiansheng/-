@@ -1,0 +1,11 @@
+1794899481.0002463 [INFO] [launch]: All log files can be found below /tmp/remove-independent-usb-ros2/ros-log/2026-11-17-15-11-20-998008-orangepi5ultra-20434
+1794899481.0004420 [INFO] [launch]: Default logging verbosity is set to INFO
+1794899481.0056510 [INFO] [python3-1]: process started with pid [20435]
+1794899481.0063648 [INFO] [python3-2]: process started with pid [20437]
+1794899483.0617280 [ERROR] [python3-2]: process has died [pid 20437, exit code 7, cmd '/usr/bin/python3 -c import time;time.sleep(2);raise SystemExit(7)'].
+1794899483.0643840 [ERROR] [launch]: Caught exception in launch (see debug for traceback): Sensor process exited unexpectedly (code 7): <launch.actions.execute_process.ExecuteProcess object at 0x7f8e213070>
+1794899483.0678022 [INFO] [python3-1]: sending signal 'SIGINT' to process[python3-1]
+1794899483.0684769 [python3-1] Traceback (most recent call last):
+1794899483.0686216 [python3-1]   File "<string>", line 1, in <module>
+1794899483.0689399 [python3-1] KeyboardInterrupt
+1794899483.0752821 [ERROR] [python3-1]: process has died [pid 20435, exit code -2, cmd '/usr/bin/python3 -c import os,time;from pathlib import Path;Path('/tmp/remove-independent-usb-ros2/checks/sentinel.pid').write_text(str(os.getpid()));time.sleep(90)'].

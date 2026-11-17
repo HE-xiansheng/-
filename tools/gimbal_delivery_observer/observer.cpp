@@ -22,9 +22,6 @@ int main(int argc,char** argv) {
         topics.push_back({"depth","/camera/depth/image_raw"});
         topics.push_back({"person","/manual_person_follow/image"});
     }
-    if (node->declare_parameter<bool>("include_usb", false)) {
-        topics.push_back({"usb","/usb_cam/image_raw"});
-    }
     for (const bool reliable : {true,false}) {
     for (const auto& topic: topics) {
         const auto key = topic.first;

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Actual USB/Gemini/direct gimbal -> installed ROS2 drivers; no flight interfaces."""
+"""Actual Gemini/direct gimbal -> installed ROS2 drivers; no flight interfaces."""
 import csv
 import json
 import os
@@ -12,10 +12,6 @@ import yaml
 from ament_index_python.packages import get_package_prefix
 import rclpy
 from rclpy.signals import SignalHandlerOptions
-from rclpy.qos import QoSProfile, DurabilityPolicy
-from sensor_msgs.msg import CameraInfo
-from std_msgs.msg import String
-from std_srvs.srv import Empty
 
 root = Path('/tmp/new-camera-ground-check')
 platform = Path('/home/orangepi/drone_platform')
@@ -23,22 +19,12 @@ assert os.environ['ROS_DOMAIN_ID'] == '189' and os.environ['ROS_LOCALHOST_ONLY']
 processes = []
 logs = []
 checks = {}
-infos = []
-statuses = []
-actions = []
-report = {'passed': False, 'scope': 'actual independent USB, Gemini335L and physical gimbal direct Ethernet; no camera/gimbal motion commands'}
-usb_module = platform/'02_drivers/usb_camera' if os.environ.get('CAMERA_CHECK_INSTALLED') == '1' else root/'candidate-usb'
-include_usb = os.environ.get('CAMERA_CHECK_NO_USB') != '1'
-if not include_usb:
-    report['scope'] = 'actual Gemini335L and physical gimbal only; independent USB absent/untested; no motion commands'
-report['software_paths'] = {'usb_module': str(usb_module), **{
-    name: get_package_prefix(name) for name in ('usb_cam', 'rtsp_test', 'orbbec_camera')}}
+report = {'passed': False, 'scope': 'actual Gemini335L and physical gimbal direct Ethernet; no motion commands'}
+report['software_paths'] = {
+    name: get_package_prefix(name) for name in ('rtsp_test', 'orbbec_camera')}
+report['camera_entrypoint'] = str(platform/'03_tools/config script/start_platform_sensors.sh')
 rclpy.init(signal_handler_options=SignalHandlerOptions.NO)
 node = rclpy.create_node('new_physical_camera_observer')
-sub = node.create_subscription(CameraInfo, '/usb_cam/camera_info', infos.append, 50)
-status_sub = node.create_subscription(String, '/usb_cam/capture_status', lambda m: statuses.append(json.loads(m.data)),
-                                     QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL))
-clients = {action: node.create_client(Empty, '/usb_cam/'+action+'_capture') for action in ('start', 'stop')}
 
 
 def start(name, command):
@@ -75,19 +61,6 @@ def check(name, ok):
     print(json.dumps({name: bool(ok)}), flush=True)
 
 
-def capture(action):
-    client = clients[action]
-    if not pump(8, client.service_is_ready):
-        raise RuntimeError('capture service missing: '+action)
-    count = len(statuses)
-    future = client.call_async(Empty.Request())
-    if not pump(5, lambda: future.done() and len(statuses) > count):
-        raise RuntimeError('capture response/status timeout: '+action)
-    actions.append({'action': action, 'receipt_monotonic_ns': time.monotonic_ns(), 'status': statuses[-1]})
-    check('actual_'+action+'_capture_accepted', future.result() is not None and statuses[-1]['success']
-          and statuses[-1]['requested_capture'] == (action == 'start'))
-
-
 def stop(child):
     if child.poll() is None:
         os.killpg(child.pid, signal.SIGINT)
@@ -115,30 +88,20 @@ try:
     if not pump(15, lambda: 'stream is available and online' in (root/'relay.log').read_text()):
         raise RuntimeError('direct gimbal relay not online')
     print('PHYSICAL_GIMBAL_RELAY_READY', flush=True)
-    reader = start('observer', [str(root/'observer-build/observer'), '--ros-args', '-p', 'include_usb:='+str(include_usb).lower(),
+    reader = start('observer', [str(root/'observer-build/observer'), '--ros-args',
         '-p', 'include_camera:=true', '-p', 'output:='+str(root/'headers.csv'), '-p', 'stop_file:='+str(root/'observer.stop')])
-    start('gemini', ['ros2', 'launch', str(platform/'02_drivers/orbbec/launch/gemini335l.launch.py')])
+    start('gemini', ['bash', str(platform/'03_tools/config script/start_platform_sensors.sh'),
+        'enable_mavros:=false', 'enable_lidar:=false', 'enable_rtsp:=false'])
     if not pump(25, lambda: received('stereo') and received('depth')):
         raise RuntimeError('Gemini did not produce real color/depth frames')
     print('PHYSICAL_GEMINI_FRAMES_READY', flush=True)
-    if include_usb:
-        start('usb', ['ros2', 'launch', str(usb_module/'launch/usb_camera.launch.py')])
-        if not pump(12, lambda: received('usb')):
-            raise RuntimeError('independent USB camera did not produce real frames')
-        print('PHYSICAL_USB_FRAMES_READY', flush=True)
     start('mpp', ['ros2', 'run', 'rtsp_test', 'rtsp_hw_pub_ultra', '--ros-args', '-p',
                   'rtsp_url:=rtsp://127.0.0.1:18554/gimbal', '--log-level', 'rtsp_hw_pub_ultra.frames:=debug'])
     begin = time.monotonic_ns()
     if not pump(15, lambda: received('raw') and received('color')):
         raise RuntimeError('gimbal MPP did not produce real mono/color frames')
     pump(17)
-    if include_usb:
-        capture('stop')
-    pause = time.monotonic_ns()
-    pump(3)
-    resume = time.monotonic_ns()
-    if include_usb:
-        capture('start')
+    stable_end = time.monotonic_ns()
     pump(17)
     # End publishers, drain the reader, then close its context via stop marker.
     for name, child in reversed(processes):
@@ -151,13 +114,11 @@ try:
     reader.wait(timeout=10)
     rows = list(csv.DictReader((root/'headers.csv').open()))
     streams = {}
-    for key, minimum in [('usb', 22), ('stereo', 25), ('depth', 25), ('raw', 20), ('color', 10)]:
-        if key == 'usb' and not include_usb:
-            continue
+    for key, minimum in [('stereo', 25), ('depth', 25), ('raw', 20), ('color', 10)]:
         qs = ('reliable', 'best_effort') if key in ('raw', 'color') else ('reliable',)
         for qos in qs:
             data = [r for r in rows if r['key'] == key and r['qos'] == qos]
-            stable = [r for r in data if begin+5*10**9 < int(r['receipt_ns']) < pause]
+            stable = [r for r in data if begin+5*10**9 < int(r['receipt_ns']) < stable_end]
             hz = (len(stable)-1)*1e9/(int(stable[-1]['receipt_ns'])-int(stable[0]['receipt_ns'])) if len(stable) > 1 else 0
             name = qos+'_'+key
             streams[name] = {'messages': len(data), 'stable_hz': hz,
@@ -168,13 +129,6 @@ try:
                 int(r['bytes']) == int(r['step'])*int(r['height']) > 0 and -.1e9 < int(r['age_ns']) < 1e9 for r in data))
             check(name+'_stamps_increase', bool(data) and all(int(b['stamp_ns']) > int(a['stamp_ns']) for a, b in zip(data, data[1:])))
             check(name+'_changing_pixels', len({r['hash'] for r in data}) > 10)
-    usb = [r for r in rows if r['key'] == 'usb']
-    if include_usb:
-        check('USB_exact_configuration', bool(usb) and all((r['width'],r['height'],r['encoding'],r['frame']) ==
-              ('1280','720','rgb8','head_camera') for r in usb))
-        check('USB_capture_pause_stops_real_images', not any(pause+.7e9 < int(r['receipt_ns']) < resume-.2e9 for r in usb))
-        check('USB_capture_resume_restores_real_images', sum(int(r['receipt_ns']) > resume+2e9 for r in usb) > 200)
-        check('USB_camera_info_matches_images', len(infos) > 200 and all(m.width == 1280 and m.height == 720 and m.header.frame_id == 'head_camera' for m in infos))
     trace = (root/'mpp.log').read_text()
     emitted = {key: {int(v) for v in re.findall('published_'+key+r' stamp_ns=([0-9]+)', trace)} for key in ('raw', 'color')}
     for key in ('raw', 'color'):
@@ -182,9 +136,7 @@ try:
             received = {int(r['stamp_ns']) for r in rows if r['key'] == key and r['qos'] == qos}
             check(qos+'_'+key+'_all_published_frames_received', bool(emitted[key]) and received == emitted[key])
     check('gimbal_color_source_stamps_preserved', bool(emitted['color']) and emitted['color'] <= emitted['raw'])
-    report.update(streams=streams, capture_actions=actions, source_probe=video,
-        USB_calibration={'camera_info_count': len(infos), 'K': list(infos[-1].k) if infos else [],
-                         'tested': include_usb, 'calibrated': bool(infos and infos[-1].k[0] > 0)})
+    report.update(streams=streams, source_probe=video)
 except Exception as exc:
     report['error'] = repr(exc)
     print(repr(exc), flush=True)

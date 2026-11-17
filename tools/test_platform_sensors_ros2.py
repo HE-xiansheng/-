@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Candidate startup ground checks; never invokes flight command services."""
-import json, os, signal, subprocess, time
+import json, os, signal, subprocess, sys, time
 from pathlib import Path
 import rclpy
 from rclpy.qos import qos_profile_sensor_data, QoSProfile
@@ -10,7 +10,7 @@ from mavros_msgs.msg import State
 assert os.environ['ROS_LOCALHOST_ONLY']=='1' and os.environ['ROS_DOMAIN_ID']=='81'
 out=Path(os.environ['SENSOR_TEST_OUTPUT']);out.mkdir(parents=True,exist_ok=True)
 base=['bash','/home/orangepi/drone_platform/03_tools/config script/start_platform_sensors.sh']
-flags={k:False for k in ['mavros','camera','usb_camera','lidar','rtsp']}
+flags={k:False for k in ['mavros','camera','lidar','rtsp']}
 checks=[];streams={};states=[]
 def args(**kw):
     f=dict(flags);f.update(kw)
@@ -25,10 +25,17 @@ def reject(name,extra,expected):
 reject('empty',args(),'Select at least one')
 reject('invalid_bool',args(camera='maybe'),'must be true or false')
 reject('missing_serial',args(mavros=True)+['fcu_url:=/dev/nonexistent_px4'],'serial device missing')
-reject('missing_usb',args(camera=True,usb_camera=True),'USB')
-reject('missing_lidar_ip',args(camera=True,lidar=True),'host IP is not assigned')
+config=json.loads(Path('/home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json').read_text())
+for host in config['Mid360s']['host_net_info']:host['host_ip']='192.0.2.17'
+missing_config=out/'unassigned-host.json';missing_config.write_text(json.dumps(config,indent=2))
+reject('missing_lidar_ip',args(camera=True,lidar=True)+['device_config:='+str(missing_config)],'host IP is not assigned')
 show=subprocess.run(base+['--show-args'],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=25)
-(out/'show-args.log').write_text(show.stdout);check('launch arguments',show.returncode==0 and 'enable_lidar' in show.stdout)
+(out/'show-args.log').write_text(show.stdout)
+check('launch arguments',show.returncode==0 and all('enable_'+k in show.stdout for k in flags)
+      and 'enable_usb_camera' not in show.stdout and 'video_device' not in show.stdout)
+if '--preflight-only' in sys.argv:
+    (out/'preflight-result.json').write_text(json.dumps({'passed':all(c['passed'] for c in checks),'checks':checks},indent=2))
+    raise SystemExit(0)
 rclpy.init();node=rclpy.create_node('physical_sensor_candidate_audit')
 def receive(key,m):
     row=streams.setdefault(key,{'times':[],'stamps':[],'ages':[],'frames':[]})

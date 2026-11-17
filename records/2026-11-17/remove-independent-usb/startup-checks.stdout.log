@@ -1,0 +1,18 @@
+{"check": "empty", "passed": true}
+{"check": "invalid_bool", "passed": true}
+{"check": "missing_serial", "passed": true}
+{"check": "missing_lidar_ip", "passed": true}
+{"check": "launch arguments", "passed": true}
+[INFO] [launch]: All log files can be found below /tmp/remove-independent-usb-ros2/ros-log/2026-11-17-15-11-20-998008-orangepi5ultra-20434
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [python3-1]: process started with pid [20435]
+[INFO] [python3-2]: process started with pid [20437]
+[ERROR] [python3-2]: process has died [pid 20437, exit code 7, cmd '/usr/bin/python3 -c import time;time.sleep(2);raise SystemExit(7)'].
+[ERROR] [launch]: Caught exception in launch (see debug for traceback): Sensor process exited unexpectedly (code 7): <launch.actions.execute_process.ExecuteProcess object at 0x7f8e213070>
+[INFO] [python3-1]: sending signal 'SIGINT' to process[python3-1]
+[python3-1] Traceback (most recent call last):
+[python3-1]   File "<string>", line 1, in <module>
+[python3-1] KeyboardInterrupt
+[ERROR] [python3-1]: process has died [pid 20435, exit code -2, cmd '/usr/bin/python3 -c import os,time;from pathlib import Path;Path('/tmp/remove-independent-usb-ros2/checks/sentinel.pid').write_text(str(os.getpid()));time.sleep(90)'].
+{"returncode": 1, "remaining_sentinel": false, "passed": true}
+REMOVED_USB_PACKAGE_UNAVAILABLE

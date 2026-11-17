@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "date": "2026-11-17T15:13:04+08:00",
+  "onboard_head": "1de5c3d35e01b7fdcc5dd5443cb5c179a0087054",
+  "git_clean": true,
+  "removed_paths": [
+    "02_drivers/usb_camera",
+    "03_tools/config script/start_usb_camera.sh"
+  ],
+  "sha256": {
+    "02_drivers/sensors/launch/platform_sensors.launch.py": "c802e1b46e508a5f0a38df93456bf6e7e646e02bf6563f5f31a0a3ff6f9f7258",
+    "03_tools/config script/start_platform_sensors.sh": "e9f7bea45e7221aca9b23ab1b96b1d186632ba8dc38bb66618cfba5fd02a58b1",
+    "02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so": "292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3",
+    "01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra": "94893a7ce46d139b4f00ed228d3bbb689d60827cd724483732457e7b5bbe9817"
+  },
+  "remaining_camera_processes": [],
+  "temporary_directories_removed": true,
+  "temporary_network_removed": true,
+  "routes": {
+    "192.168.1.158": "192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 \n    cache",
+    "1.1.1.1": "1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 \n    cache"
+  },
+  "NoMachine": "active",
+  "Safina_sensor": "inactive",
+  "uvcvideo_module_present": true
+}

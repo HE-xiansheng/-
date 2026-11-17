@@ -1,5 +1,4 @@
 """整套ROS2传感器候选；所有选中设备先预检，再共同启动。"""
-import importlib.util
 import json
 import os
 from pathlib import Path
@@ -18,7 +17,7 @@ from launch_ros.actions import Node
 def start(context):
     drivers=Path(__file__).resolve().parents[2]
     selected={}
-    for name in ['mavros','camera','usb_camera','lidar','rtsp']:
+    for name in ['mavros','camera','lidar','rtsp']:
         value=LaunchConfiguration('enable_'+name).perform(context).lower()
         if value not in ['true','false']:
             raise RuntimeError('enable_'+name+' must be true or false')
@@ -34,12 +33,6 @@ def start(context):
                 raise RuntimeError('PX4 serial device missing or inaccessible: '+str(device))
     if selected['camera']:
         get_package_share_directory('orbbec_camera')
-    usb=LaunchConfiguration('video_device').perform(context)
-    if selected['usb_camera']:
-        get_package_share_directory('usb_cam')
-        spec=importlib.util.spec_from_file_location('independent_usb_launch',drivers/'usb_camera/launch/usb_camera.launch.py')
-        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-        module.validate_device(usb)
     config=LaunchConfiguration('device_config').perform(context)
     if selected['lidar']:
         get_package_share_directory('livox_ros_driver2')
@@ -63,8 +56,6 @@ def start(context):
         actions.append(include(drivers/'sensors/launch/mavros_platform.launch.py',fcu_url=fcu))
     if selected['camera']:
         actions.append(include(drivers/'orbbec/launch/gemini335l.launch.py'))
-    if selected['usb_camera']:
-        actions.append(include(drivers/'usb_camera/launch/usb_camera.launch.py',video_device=usb))
     if selected['lidar']:
         actions.append(include(drivers/'sensors/launch/livox_mid360s.launch.py',device_config=config))
     if selected['rtsp']:
@@ -74,9 +65,8 @@ def start(context):
 
 
 def generate_launch_description():
-    defaults={**{'enable_'+name:'true' for name in ['mavros','camera','usb_camera','lidar','rtsp']},
+    defaults={**{'enable_'+name:'true' for name in ['mavros','camera','lidar','rtsp']},
         'fcu_url':'/dev/serial/by-id/usb-Matek_HKUST_UAV_NxtPX4_0-if00:57600',
-        'video_device':'/dev/v4l/by-id/usb-0806-180602-N_XCX-S8130B-video-index0',
         'device_config':'/home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json',
         'rtsp_url':'rtsp://192.168.144.108'}
     return LaunchDescription([DeclareLaunchArgument(k,default_value=v) for k,v in defaults.items()]+

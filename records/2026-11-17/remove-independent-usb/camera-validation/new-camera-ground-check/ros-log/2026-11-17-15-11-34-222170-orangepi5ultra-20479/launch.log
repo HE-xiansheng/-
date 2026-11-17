@@ -1,0 +1,220 @@
+1794899494.2235634 [INFO] [launch]: All log files can be found below /tmp/new-camera-ground-check/ros-log/2026-11-17-15-11-34-222170-orangepi5ultra-20479
+1794899494.2237842 [INFO] [launch]: Default logging verbosity is set to INFO
+1794899494.5375679 [INFO] [component_container-1]: process started with pid [20571]
+1794899494.8111439 [component_container-1] [INFO] [1794899494.810608341] [camera.camera_container]: Load Library: /home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera/lib/liborbbec_camera.so
+1794899494.9102030 [component_container-1] [INFO] [1794899494.909752093] [camera.camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+1794899494.9105139 [component_container-1] [INFO] [1794899494.909826466] [camera.camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+1794899494.9231327 [component_container-1] [INFO] [1794899494.922324651] [camera.camera]: SDK log file path set to: /home/orangepi/.ros/Log/camera/OrbbecSDK_20261117_151134.log
+1794899494.9316566 [component_container-1] [11/17 15:11:34.931198][info][20571][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+1794899494.9656534 [component_container-1] [INFO] [1794899494.965162238] [camera.camera]: Device access mode: Default (4)
+1794899494.9664338 [component_container-1] [INFO] [1794899494.965309818] [camera.camera]: Set UVC backend to libuvc
+1794899495.0620184 [component_container-1] [11/17 15:11:35.061302][info][20571][LinuxUsbPal.cpp:334] Create PollingDeviceWatcher!
+1794899495.0623724 [component_container-1] [11/17 15:11:35.061395][info][20571][DeviceManager.cpp:25] Current found device(s): (1)
+1794899495.0625570 [component_container-1] [11/17 15:11:35.061407][info][20571][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP253530009G, Connection: USB3.2
+1794899495.0627637 [component_container-1] [11/17 15:11:35.061420][info][20571][DeviceManager.cpp:488] Enable net device enumeration: true
+1794899496.0813971 [component_container-1] [11/17 15:11:36.080710][info][20571][DeviceManager.cpp:25] Current device(s) list: (1)
+1794899496.0816934 [component_container-1] [11/17 15:11:36.080787][info][20571][DeviceManager.cpp:34] 	- Name: Gemini 335L, PID: 0x0804, SN/ID: CP253530009G, Connection: USB3.2
+1794899496.0818524 [component_container-1] [11/17 15:11:36.080802][info][20571][DeviceManager.cpp:488] Enable net device enumeration: true
+1794899496.0889988 [component_container-1] [INFO] [1794899496.088414686] [camera.camera]: startDevice called
+1794899496.0911622 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/camera/camera' in container '/camera/camera_container'
+1794899496.0991764 [component_container-1] [INFO] [1794899496.098675261] [camera.camera]: Connecting to device with serial number: CP253530009G
+1794899496.0998642 [component_container-1] [INFO] [1794899496.098800091] [camera.camera]: Matched device serial number: CP253530009G
+1794899496.1031008 [component_container-1] [11/17 15:11:36.102652][info][20603][G330Device.cpp:660] UVCAutoRebootOnFault=true for device: Gemini 335L
+1794899496.1046901 [component_container-1] [11/17 15:11:36.104307][info][20603][DeviceBase.cpp:833] key: AppSlot,value:1
+1794899496.1049168 [component_container-1] [11/17 15:11:36.104331][info][20603][DeviceBase.cpp:833] key: HwType,value:L2
+1794899496.1050739 [component_container-1] [11/17 15:11:36.104342][info][20603][DeviceBase.cpp:833] key: HwVer,value:V1.1
+1794899496.1052201 [component_container-1] [11/17 15:11:36.104347][info][20603][DeviceBase.cpp:833] key: IspFwVer,value:20241125
+1794899496.1053643 [component_container-1] [11/17 15:11:36.104351][info][20603][DeviceBase.cpp:833] key: IspNeedVer,value:20241125
+1794899496.1055110 [component_container-1] [11/17 15:11:36.104356][info][20603][DeviceBase.cpp:833] key: PresetVer,value:1.2.2
+1794899496.2750885 [component_container-1] [11/17 15:11:36.274416][warning][20603][PropertyServer.cpp:55] [CP253530009G] Property not found to register callback, propertyId: 5525
+1794899496.2753825 [component_container-1] [11/17 15:11:36.274525][warning][20603][PropertyServer.cpp:55] [CP253530009G] Property not found to register callback, propertyId: 277
+1794899496.2761376 [component_container-1] [11/17 15:11:36.275096][warning][20603][PropertyConfigHandler.hpp:53] Unsupported property '223', skipping getting, return nullvalue
+1794899496.3407631 [component_container-1] [11/17 15:11:36.340232][warning][20603][PropertyConfigHandler.hpp:95] Exporting property '190' while stream is not active; the value may differ from what will be applied after streaming starts
+1794899496.3423517 [component_container-1] [11/17 15:11:36.342018][warning][20603][PresetHandler.cpp:337] Exporting ROI property '1061' while stream is not active; the value may differ from what will be applied after streaming starts
+1794899496.3431084 [component_container-1] [11/17 15:11:36.342815][warning][20603][PresetHandler.cpp:710] Exporting disparity search properties while stream is not active; the values may differ from what will be applied after streaming starts
+1794899496.3447995 [component_container-1] [11/17 15:11:36.344467][warning][20603][PropertyConfigHandler.hpp:53] Unsupported property '5525', skipping getting, return nullvalue
+1794899496.4246173 [component_container-1] [11/17 15:11:36.424005][warning][20603][PropertyConfigHandler.hpp:95] Exporting property '189' while stream is not active; the value may differ from what will be applied after streaming starts
+1794899496.4257739 [component_container-1] [11/17 15:11:36.425437][warning][20603][PropertyConfigHandler.hpp:53] Unsupported property '259', skipping getting, return nullvalue
+1794899496.4259596 [component_container-1] [11/17 15:11:36.425462][warning][20603][PropertyConfigHandler.hpp:53] Unsupported property '277', skipping getting, return nullvalue
+1794899496.4266655 [component_container-1] [11/17 15:11:36.425701][warning][20603][PresetHandler.cpp:337] Exporting ROI property '1060' while stream is not active; the value may differ from what will be applied after streaming starts
+1794899496.4268823 [component_container-1] [11/17 15:11:36.425973][info][20603][DeviceManager.cpp:200] Device created successfully! Name: Gemini 335L, PID: 0x0804, SN/ID: CP253530009G FW: 1.4.60
+1794899496.4274812 [component_container-1] [INFO] [1794899496.426103511] [camera.camera]: OBCameraNode: use_intra_process: OFF
+1794899496.4281793 [component_container-1] OBFormatFromString: ANY
+1794899496.4287457 [component_container-1] OBFormatFromString: ANY
+1794899496.4293756 [component_container-1] OBFormatFromString: Y16
+1794899496.4298410 [component_container-1] OBFormatFromString: ANY
+1794899496.4303348 [component_container-1] OBFormatFromString: ANY
+1794899496.4361379 [component_container-1] [INFO] [1794899496.435423485] [camera.camera]: Current time domain: global
+1794899496.4371910 [component_container-1] [INFO] [1794899496.435546273] [camera.camera]: Loaded device preset: Default
+1794899496.4427335 [component_container-1] [11/17 15:11:36.442333][warning][20603][SensorBase.cpp:161] [CP253530009G] Failed to update default stream profile for sensor due to no matching stream profile found
+1794899496.4445298 [component_container-1] [11/17 15:11:36.444191][warning][20603][SensorBase.cpp:161] [CP253530009G] Failed to update default stream profile for sensor due to no matching stream profile found
+1794899496.5708468 [component_container-1] [INFO] [1794899496.570199839] [camera.camera]: Current heartbeat: OFF
+1794899496.5712667 [component_container-1] [INFO] [1794899496.570275379] [camera.camera]: Set firmware log to OFF
+1794899496.5721169 [component_container-1] [INFO] [1794899496.570778199] [camera.camera]: Disparity to depth mode: HW
+1794899496.5723579 [component_container-1] [INFO] [1794899496.571652886] [camera.camera]: Current LDP: OFF
+1794899496.5730569 [component_container-1] [INFO] [1794899496.572089500] [camera.camera]: Current G300 laser control: ON
+1794899496.5732911 [component_container-1] [INFO] [1794899496.572127415] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+1794899496.5735438 [component_container-1] [INFO] [1794899496.572159498] [camera.camera]: Current color mirror: OFF
+1794899496.5737860 [component_container-1] [INFO] [1794899496.572181956] [camera.camera]: Current color flip: OFF
+1794899496.5740147 [component_container-1] [INFO] [1794899496.572203830] [camera.camera]: Current depth mirror: OFF
+1794899496.5742393 [component_container-1] [INFO] [1794899496.572223080] [camera.camera]: Current depth flip: OFF
+1794899496.5744641 [component_container-1] [INFO] [1794899496.572243204] [camera.camera]: Current left_ir mirror: OFF
+1794899496.5746884 [component_container-1] [INFO] [1794899496.572262162] [camera.camera]: Current left_ir flip: OFF
+1794899496.5749128 [component_container-1] [INFO] [1794899496.572283161] [camera.camera]: Current right_ir mirror: OFF
+1794899496.5751364 [component_container-1] [INFO] [1794899496.572302411] [camera.camera]: Current right_ir flip: OFF
+1794899496.5753610 [component_container-1] [INFO] [1794899496.572625278] [camera.camera]: Current color auto white balance: ON
+1794899496.5755856 [component_container-1] [WARN] [1794899496.572643652] [camera.camera]: Color preset is not supported by this device
+1794899496.5762317 [component_container-1] [INFO] [1794899496.572841689] [camera.camera]: Current color auto exposure priority: OFF
+1794899496.5764692 [component_container-1] [INFO] [1794899496.573292886] [camera.camera]: Current color auto exposure: ON
+1794899496.5766988 [component_container-1] [INFO] [1794899496.573758666] [camera.camera]: Current depth auto exposure priority: OFF
+1794899496.5774643 [component_container-1] [INFO] [1794899496.576220854] [camera.camera]: Current IR auto exposure: ON
+1794899496.5777202 [component_container-1] [INFO] [1794899496.576247686] [camera.camera]: Current accel data correction: ON
+1794899496.5779581 [component_container-1] [INFO] [1794899496.576266353] [camera.camera]: Current gyro data correction: ON
+1794899496.5782204 [component_container-1] [INFO] [1794899496.576324976] [camera.camera]: Set depth filter DecimationFilter to disabled
+1794899496.5784571 [component_container-1] [INFO] [1794899496.576344517] [camera.camera]: Set depth filter ThresholdFilter to disabled
+1794899496.5786893 [component_container-1] [INFO] [1794899496.576359392] [camera.camera]: Set depth filter HDRMerge to disabled
+1794899496.5789199 [component_container-1] [INFO] [1794899496.576373975] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+1794899496.5791504 [component_container-1] [INFO] [1794899496.576389433] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+1794899496.5793808 [component_container-1] [INFO] [1794899496.576405183] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+1794899496.5796111 [component_container-1] [INFO] [1794899496.576420640] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+1794899496.5798416 [component_container-1] [INFO] [1794899496.576435807] [camera.camera]: Set depth filter TemporalFilter to disabled
+1794899496.5800719 [component_container-1] [INFO] [1794899496.576450390] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+1794899496.5803273 [component_container-1] [INFO] [1794899496.576465264] [camera.camera]: Set depth filter DisparityTransform to enabled
+1794899496.5811503 [component_container-1] [INFO] [1794899496.577928519] [camera.camera]: Set color filter DecimationFilter to disabled
+1794899496.5813930 [component_container-1] [INFO] [1794899496.577980726] [camera.camera]: Set right IR filter SequenceIdFilter to disabled
+1794899496.5816243 [component_container-1] [INFO] [1794899496.578002017] [camera.camera]: Set left IR filter SequenceIdFilter to disabled
+1794899496.6662409 [component_container-1] [INFO] [1794899496.664901536] [camera.camera]: color/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+1794899496.6749179 [component_container-1] [INFO] [1794899496.674447837] [camera.camera]: depth/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+1794899496.6876037 [component_container-1] [INFO] [1794899496.687159809] [camera.camera]: left_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+1794899496.6916590 [component_container-1] [INFO] [1794899496.691239247] [camera.camera]: right_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+1794899496.6948092 [component_container-1] [INFO] [1794899496.694417459] [camera.camera]: Publish diagnostics every 1 seconds
+1794899496.9931850 [component_container-1] [INFO] [1794899496.990260755] [camera.camera]: Device Orbbec Gemini 335L connected
+1794899496.9954579 [component_container-1] [INFO] [1794899496.990609871] [camera.camera]: Serial number: CP253530009G
+1794899496.9961462 [component_container-1] [INFO] [1794899496.990718660] [camera.camera]: Firmware version: 1.4.60
+1794899496.9964614 [component_container-1] [INFO] [1794899496.990821032] [camera.camera]: ROS Wrapper version: 2.10.6
+1794899496.9967458 [component_container-1] [INFO] [1794899496.990932155] [camera.camera]: SDK version: 2.10.6
+1794899496.9970343 [component_container-1] [INFO] [1794899496.991034819] [camera.camera]: Hardware version: 0.1
+1794899496.9972992 [component_container-1] [INFO] [1794899496.991140691] [camera.camera]: ISP firmware version: 20241125
+1794899496.9985025 [component_container-1] [INFO] [1794899496.991242772] [camera.camera]: ISP needed version: 20241125
+1794899496.9987864 [component_container-1] [INFO] [1794899496.991342519] [camera.camera]: usb connect type: USB3.2
+1794899496.9990356 [component_container-1] [INFO] [1794899496.991438184] [camera.camera]: device unique id: 8-1-2
+1794899496.9992986 [component_container-1] [INFO] [1794899496.991544348] [camera.camera]: Current node pid: 20571
+1794899497.0001111 [component_container-1] [11/17 15:11:36.991941][info][20603][Pipeline.cpp:54] [CP253530009G] Pipeline created with device: {name: Gemini 335L, sn: CP253530009G}, @0x7F6C61E430
+1794899497.0010378 [component_container-1] [11/17 15:11:36.992945][info][20603][Pipeline.cpp:228] [CP253530009G] Check and set config done!
+1794899497.0014596 [component_container-1] [11/17 15:11:36.994280][info][20603][Pipeline.cpp:266] [CP253530009G] Try to start streams!
+1794899497.0016072 [component_container-1] [11/17 15:11:36.994390][info][20603][VideoSensor.cpp:62] [CP253530009G] Try to start stream: {type: Color, format: MJPG, width: 1280, height: 720, fps: 30}
+1794899497.0017607 [component_container-1] [11/17 15:11:36.994592][info][20603][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPED to STARTING@Color
+1794899497.0019069 [component_container-1] [11/17 15:11:36.994645][info][20603][VideoSensor.cpp:131] [CP253530009G] Start backend stream: {type: Color, format: MJPG, width: 1280, height: 720, fps: 30}
+1794899497.0040991 [component_container-1] [11/17 15:11:36.999717][info][20603][VideoSensor.cpp:62] [CP253530009G] Try to start stream: {type: Depth, format: Y16, width: 848, height: 480, fps: 30}
+1794899497.0043080 [component_container-1] [11/17 15:11:36.999780][info][20603][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPED to STARTING@Depth
+1794899497.0045910 [component_container-1] [11/17 15:11:36.999805][info][20603][VideoSensor.cpp:131] [CP253530009G] Start backend stream: {type: Depth, format: Z16, width: 848, height: 480, fps: 30}
+1794899497.0058851 [component_container-1] [11/17 15:11:37.003829][info][20603][VideoSensor.cpp:62] [CP253530009G] Try to start stream: {type: Left IR, format: Y8, width: 848, height: 480, fps: 30}
+1794899497.0060480 [component_container-1] [11/17 15:11:37.003914][info][20603][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPED to STARTING@LeftIR
+1794899497.0061975 [component_container-1] [11/17 15:11:37.003936][info][20603][VideoSensor.cpp:131] [CP253530009G] Start backend stream: {type: Left IR, format: Y8, width: 848, height: 480, fps: 30}
+1794899497.0086060 [component_container-1] [11/17 15:11:37.008090][info][20603][VideoSensor.cpp:62] [CP253530009G] Try to start stream: {type: Right IR, format: Y8, width: 848, height: 480, fps: 30}
+1794899497.0088112 [component_container-1] [11/17 15:11:37.008171][info][20603][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPED to STARTING@RightIR
+1794899497.0094936 [component_container-1] [11/17 15:11:37.008194][info][20603][VideoSensor.cpp:131] [CP253530009G] Start backend stream: {type: Right IR, format: BA81, width: 848, height: 480, fps: 30}
+1794899497.0128095 [component_container-1] [11/17 15:11:37.012315][info][20603][Pipeline.cpp:293] [CP253530009G] Start streams done!
+1794899497.0133066 [component_container-1] [11/17 15:11:37.012359][info][20603][Pipeline.cpp:250] [CP253530009G] Pipeline start done!
+1794899497.0140562 [component_container-1] [INFO] [1794899497.012510194] [camera.camera]: Disable frame sync
+1794899497.0919785 [component_container-1] [11/17 15:11:37.089967][info][20619][SensorBase.cpp:224] [CP253530009G] Stream state changed from STARTING to STREAMING@LeftIR
+1794899497.1004272 [component_container-1] [11/17 15:11:37.091267][info][20621][SensorBase.cpp:224] [CP253530009G] Stream state changed from STARTING to STREAMING@RightIR
+1794899497.1015668 [component_container-1] [11/17 15:11:37.094269][info][20617][SensorBase.cpp:224] [CP253530009G] Stream state changed from STARTING to STREAMING@Depth
+1794899497.1614323 [component_container-1] [INFO] [1794899497.160198681] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+1794899497.1632912 [component_container-1] [INFO] [1794899497.160493841] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+1794899497.1649113 [component_container-1] [INFO] [1794899497.164065792] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+1794899497.4708297 [component_container-1] [11/17 15:11:37.469923][info][20615][SensorBase.cpp:224] [CP253530009G] Stream state changed from STARTING to STREAMING@Color
+1794899497.4720438 [component_container-1] [INFO] [1794899497.471041016] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+1794899498.0150068 [component_container-1] [INFO] [1794899498.012779241] [camera.camera]: current interleave_ae_mode_: laser
+1794899498.0179088 [component_container-1] [INFO] [1794899498.015490798] [camera.camera]: Enable enable_interleave_depth_frame to false
+1794899498.0186944 [component_container-1] [INFO] [1794899498.015686210] [camera.camera]: Initialize device cost: 1589 ms
+1794899502.0978601 [component_container-1] [11/17 15:11:42.095523][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=30.163803fps
+1794899502.0982852 [component_container-1] [11/17 15:11:42.096014][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=30.163803fps
+1794899502.1004455 [component_container-1] [11/17 15:11:42.099649][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=30.151758fps
+1794899502.1013749 [component_container-1] [11/17 15:11:42.099841][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=30.151758fps
+1794899502.1053376 [component_container-1] [11/17 15:11:42.102589][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=30.151758fps
+1794899502.1355851 [component_container-1] [11/17 15:11:42.134610][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=30.393921fps
+1794899502.4749587 [component_container-1] [11/17 15:11:42.474197][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=30.169830fps
+1794899502.4788785 [component_container-1] [11/17 15:11:42.478226][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=30.193962fps
+1794899507.1005058 [component_container-1] [11/17 15:11:47.099181][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.976019fps
+1794899507.1022596 [component_container-1] [11/17 15:11:47.101509][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.988007fps
+1794899507.1026380 [component_container-1] [11/17 15:11:47.101717][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.970030fps
+1794899507.1029041 [component_container-1] [11/17 15:11:47.101765][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.988007fps
+1794899507.1343300 [component_container-1] [11/17 15:11:47.133056][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=30.013912fps
+1794899507.1416724 [component_container-1] [11/17 15:11:47.140556][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.964043fps
+1794899507.4808574 [component_container-1] [11/17 15:11:47.479978][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.964043fps
+1794899507.4850814 [component_container-1] [11/17 15:11:47.484052][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.964043fps
+1794899512.1059115 [component_container-1] [11/17 15:11:52.104807][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.964043fps
+1794899512.1066339 [component_container-1] [11/17 15:11:52.104921][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.976019fps
+1794899512.1083987 [component_container-1] [11/17 15:11:52.105064][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.976019fps
+1794899512.1089628 [component_container-1] [11/17 15:11:52.105087][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.976019fps
+1794899512.1395893 [component_container-1] [11/17 15:11:52.138733][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.964043fps
+1794899512.1459651 [component_container-1] [11/17 15:11:52.144879][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.970030fps
+1794899512.4879696 [component_container-1] [11/17 15:11:52.486773][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.958059fps
+1794899512.4927711 [component_container-1] [11/17 15:11:52.491612][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.958059fps
+1794899517.1119943 [component_container-1] [11/17 15:11:57.110905][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.964043fps
+1794899517.1123328 [component_container-1] [11/17 15:11:57.111000][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.964043fps
+1794899517.1125135 [component_container-1] [11/17 15:11:57.111088][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.964043fps
+1794899517.1126590 [component_container-1] [11/17 15:11:57.111152][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.964043fps
+1794899517.1463699 [component_container-1] [11/17 15:11:57.145245][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.964043fps
+1794899517.1519411 [component_container-1] [11/17 15:11:57.151223][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.964043fps
+1794899517.4932933 [component_container-1] [11/17 15:11:57.492063][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.970030fps
+1794899517.4979978 [component_container-1] [11/17 15:11:57.496925][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.964043fps
+1794899522.1178141 [component_container-1] [11/17 15:12:02.116710][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.964043fps
+1794899522.1197951 [component_container-1] [11/17 15:12:02.116936][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.964043fps
+1794899522.1200235 [component_container-1] [11/17 15:12:02.117033][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.964043fps
+1794899522.1202111 [component_container-1] [11/17 15:12:02.117125][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.964043fps
+1794899522.1527328 [component_container-1] [11/17 15:12:02.151653][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.958059fps
+1794899522.1732283 [component_container-1] [11/17 15:12:02.169760][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.886431fps
+1794899522.4984486 [component_container-1] [11/17 15:12:02.497555][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.964043fps
+1794899522.5022037 [component_container-1] [11/17 15:12:02.501543][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.970030fps
+1794899527.1232331 [component_container-1] [11/17 15:12:07.122247][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.970030fps
+1794899527.1238415 [component_container-1] [11/17 15:12:07.122332][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.964043fps
+1794899527.1239965 [component_container-1] [11/17 15:12:07.122367][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.964043fps
+1794899527.1241415 [component_container-1] [11/17 15:12:07.122392][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.964043fps
+1794899527.1569428 [component_container-1] [11/17 15:12:07.156057][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.976019fps
+1794899527.2141509 [component_container-1] [11/17 15:12:07.212889][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=29.942493fps
+1794899527.5041926 [component_container-1] [11/17 15:12:07.503352][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.964043fps
+1794899527.5084662 [component_container-1] [11/17 15:12:07.507620][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.964043fps
+1794899532.1294560 [component_container-1] [11/17 15:12:12.128068][info][20619][VideoSensor.cpp:181] [CP253530009G] LeftIR backend frame callback, frameRate=29.964043fps
+1794899532.1297979 [component_container-1] [11/17 15:12:12.128187][info][20624][SensorBase.cpp:415] [CP253530009G] LeftIR Streaming... frameRate=29.964043fps
+1794899532.1299560 [component_container-1] [11/17 15:12:12.128213][info][20621][VideoSensor.cpp:181] [CP253530009G] RightIR backend frame callback, frameRate=29.964043fps
+1794899532.1304328 [component_container-1] [11/17 15:12:12.128263][info][20625][SensorBase.cpp:415] [CP253530009G] RightIR Streaming... frameRate=29.964043fps
+1794899532.1642644 [component_container-1] [11/17 15:12:12.162387][info][20617][VideoSensor.cpp:181] [CP253530009G] Depth backend frame callback, frameRate=29.958059fps
+1794899532.2347548 [component_container-1] [11/17 15:12:12.233969][info][20626][SensorBase.cpp:415] [CP253530009G] Depth Streaming... frameRate=30.073690fps
+1794899532.5101819 [component_container-1] [11/17 15:12:12.509308][info][20615][VideoSensor.cpp:181] [CP253530009G] Color backend frame callback, frameRate=29.964043fps
+1794899532.5120993 [component_container-1] [11/17 15:12:12.510746][info][20631][SensorBase.cpp:415] [CP253530009G] Color Streaming... frameRate=29.982012fps
+1794899534.8895886 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794899535.1664686 [INFO] [component_container-1]: sending signal 'SIGINT' to process[component_container-1]
+1794899535.1680398 [component_container-1] [INFO] [1794899534.888072453] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+1794899535.1696200 [component_container-1] [11/17 15:12:14.912608][info][20571][Pipeline.cpp:367] [CP253530009G] Try to stop pipeline!
+1794899535.1698232 [component_container-1] [11/17 15:12:14.912643][info][20571][Pipeline.cpp:343] [CP253530009G] Try to stop streams!
+1794899535.1699815 [component_container-1] [11/17 15:12:14.912660][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@RightIR
+1794899535.1701996 [component_container-1] [11/17 15:12:14.969906][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@RightIR
+1794899535.1704140 [component_container-1] [11/17 15:12:14.970295][info][20571][Pipeline.cpp:357] [CP253530009G] Sensor stream stopped, sensorType=RightIR
+1794899535.1709137 [component_container-1] [11/17 15:12:14.970359][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@LeftIR
+1794899535.1710632 [component_container-1] [11/17 15:12:15.035658][warning][20617][VideoSensor.cpp:241] [CP253530009G] This frame will be dropped because the data size does not match the expectation! size=654311, expected=814080 @Depth
+1794899535.1714802 [component_container-1] [11/17 15:12:15.036510][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@LeftIR
+1794899535.1716261 [component_container-1] [11/17 15:12:15.036957][info][20571][Pipeline.cpp:357] [CP253530009G] Sensor stream stopped, sensorType=LeftIR
+1794899535.1717703 [component_container-1] [11/17 15:12:15.037018][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@Depth
+1794899535.1719141 [component_container-1] [11/17 15:12:15.099190][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@Depth
+1794899535.1720574 [component_container-1] [11/17 15:12:15.099584][info][20571][Pipeline.cpp:357] [CP253530009G] Sensor stream stopped, sensorType=Depth
+1794899535.1722007 [component_container-1] [11/17 15:12:15.099634][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STREAMING to STOPPING@Color
+1794899535.1723707 [component_container-1] [11/17 15:12:15.143158][info][20571][SensorBase.cpp:224] [CP253530009G] Stream state changed from STOPPING to STOPPED@Color
+1794899535.1727858 [component_container-1] [11/17 15:12:15.143454][info][20571][Pipeline.cpp:357] [CP253530009G] Sensor stream stopped, sensorType=Color
+1794899535.1729298 [component_container-1] [11/17 15:12:15.143469][info][20571][Pipeline.cpp:363] [CP253530009G] Stop streams done!
+1794899535.1733527 [component_container-1] [11/17 15:12:15.143841][info][20571][Pipeline.cpp:393] [CP253530009G] Stop pipeline done!
+1794899535.1742148 [component_container-1] [INFO] [1794899535.167109964] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+1794899535.2694538 [component_container-1] [11/17 15:12:15.267954][info][20571][Pipeline.cpp:65] [CP253530009G] Pipeline destroyed! @0x7F6C61E430
+1794899535.2730818 [component_container-1] [11/17 15:12:15.272073][info][20571][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794899535.2736955 [component_container-1] [11/17 15:12:15.272098][info][20571][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794899535.2749767 [component_container-1] [11/17 15:12:15.272217][info][20571][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794899535.2752426 [component_container-1] [11/17 15:12:15.272346][info][20571][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794899535.2758377 [component_container-1] [11/17 15:12:15.272427][info][20571][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794899535.2760389 [component_container-1] [11/17 15:12:15.272554][info][20571][SensorBase.cpp:61] [CP253530009G] SensorBase is destroyed
+1794899535.2833240 [component_container-1] [11/17 15:12:15.278176][info][20571][ObLibuvcDevicePort.cpp:87] uvc_close done.
+1794899535.2840056 [component_container-1] [11/17 15:12:15.278196][info][20571][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+1794899535.2857699 [component_container-1] [11/17 15:12:15.285125][info][20571][ObLibuvcDevicePort.cpp:87] uvc_close done.
+1794899535.2861445 [component_container-1] [11/17 15:12:15.285151][info][20571][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+1794899535.3590782 [component_container-1] [11/17 15:12:15.356713][warning][20867][VideoSensor.cpp:241] [CP253530009G] This frame will be dropped because the data size does not match the expectation! size=32764, expected=814080 @Depth [**1 logs in 320ms, last: 15:12:15.035791**]
+1794899535.5464075 [INFO] [component_container-1]: process has finished cleanly [pid 20571]

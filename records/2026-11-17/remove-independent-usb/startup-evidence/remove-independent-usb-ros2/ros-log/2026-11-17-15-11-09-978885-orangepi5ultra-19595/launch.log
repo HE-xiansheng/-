@@ -1,0 +1,3 @@
+1794899469.9803405 [INFO] [launch]: All log files can be found below /tmp/remove-independent-usb-ros2/ros-log/2026-11-17-15-11-09-978885-orangepi5ultra-19595
+1794899469.9805398 [INFO] [launch]: Default logging verbosity is set to INFO
+1794899470.0238266 [ERROR] [launch]: Caught exception in launch (see debug for traceback): enable_camera must be true or false

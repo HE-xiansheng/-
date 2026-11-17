@@ -1,0 +1,9 @@
+{
+  "head": "e35a2f5c8915a20369842fc82725f7171d0235fe",
+  "clean": true,
+  "active_camera_processes": [],
+  "preserved_binary_sha256": {
+    "02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so": "292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3",
+    "01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra": "94893a7ce46d139b4f00ed228d3bbb689d60827cd724483732457e7b5bbe9817"
+  }
+}

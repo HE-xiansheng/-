@@ -1,0 +1,12 @@
+{
+  "head": "1de5c3d35e01b7fdcc5dd5443cb5c179a0087054",
+  "clean": true,
+  "removed": [
+    "02_drivers/usb_camera",
+    "03_tools/config script/start_usb_camera.sh"
+  ],
+  "changed": {
+    "02_drivers/sensors/launch/platform_sensors.launch.py": "c802e1b46e508a5f0a38df93456bf6e7e646e02bf6563f5f31a0a3ff6f9f7258",
+    "03_tools/config script/start_platform_sensors.sh": "e9f7bea45e7221aca9b23ab1b96b1d186632ba8dc38bb66618cfba5fd02a58b1"
+  }
+}
