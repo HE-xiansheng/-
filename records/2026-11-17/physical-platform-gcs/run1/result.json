@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "scope": "Full actual main/QML, SSH, UDP, physical native Livox/Gemini/gimbal, LIO/passive EGO/NPU and isolated recorder; no physical MAVROS or flight commands"
+}

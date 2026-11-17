@@ -1,0 +1,7 @@
+{
+  "temporary_directory": "/tmp/platform-soak-check",
+  "temporary_profile": "ROS2-Gimbal-soak-bf9df4bd",
+  "original_profile_uuid": "bdf7de49-dfe9-3b15-85b0-9cc6241c73c1",
+  "cleanup_verified": false,
+  "remote_process_state": "unknown after connection lost; do not start overlapping check"
+}

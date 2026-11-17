@@ -86,7 +86,7 @@ void run(){
  }catch(const QString &s){error=s;}
  if(video)video->stop();if(mission)mission->disconnectMonitor();
  for(const auto &name:{"tools/pointcloud-only/manage.py","tools/preflight/bridge.py"})QProcess::execute("/usr/bin/python3",{RuntimePaths::tool(name),"stop"});
- result["passed"]=passed;result["error"]=error;result["checks"]=checks;result["scope"]="Actual main/QML/controllers; actual camera/NPU/LIO replay; synthetic gimbal RTSP on independent port; record writes redirected to isolated copy; no flight commands";
+ result["passed"]=passed;result["error"]=error;result["checks"]=checks;result["scope"]=qEnvironmentVariableIsSet("GCS_TEST_PHYSICAL") ? "Actual main/QML/controllers; physical native Livox/Gemini/gimbal and NPU/LIO/passive EGO; record writes redirected to isolated copy; no physical MAVROS or flight commands" : "Actual main/QML/controllers; actual camera/NPU/LIO replay; synthetic gimbal RTSP on independent port; record writes redirected to isolated copy; no flight commands";
  QFile file(qEnvironmentVariable("GCS_CONCURRENT_RESULT"));if(file.open(QIODevice::WriteOnly))file.write(QJsonDocument(result).toJson());QCoreApplication::exit(passed?0:1);
 }
 void schedule(){if(!qEnvironmentVariable("GCS_CONCURRENT_RESULT").isEmpty())QTimer::singleShot(1500,run);}

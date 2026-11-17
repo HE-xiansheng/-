@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-17T15:26:52.524379+08:00",
+  "host": "192.168.1.224",
+  "ssh_exit": 255,
+  "error": "No route to host",
+  "local_experiment_owner_state": "terminal; exit1 fixture readiness timeout",
+  "remote_owned_process_state": "unknown until authenticated access returns",
+  "cleanup_and_remote_log_retrieval": "unverified",
+  "goal": "active; first occurrence of this access blocker"
+}

@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-17T15:22:42+0800",
+  "elapsed_s": 6.1833977699279785,
+  "scope": "SSH22 discovery in directly connected management /23; compare saved .224 public host keys; no authentication to unrelated hosts",
+  "ssh_hosts": [
+    {
+      "host": "192.168.1.1",
+      "banner": "SSH-2.0-dropbear\r\n\u0000\u0000\u0001,\u0005\u0014\"\ufffd\ufffd\ufffd\u0010*\ufffdn\ufffdX\b\ufffd[\ufffdY\ufffd\u0000\u0000\u0000Lcurve25519-sha256,curve25519-sha256@libssh.org,diffie-hellman-group14-sha256\u0000\u0000\u0000\u0014rsa-",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.50",
+      "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.54",
+      "banner": "SSH-2.0-OpenSSH_for_Windows_9.5",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.56",
+      "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.58",
+      "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.60",
+      "banner": "SSH-2.0-OpenSSH_for_Windows_9.5",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.71",
+      "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.13",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.88",
+      "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.13",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.123",
+      "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.4",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.193",
+      "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.18",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.234",
+      "banner": "SSH-2.0-OpenSSH_for_Windows_9.5",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.235",
+      "banner": "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.246",
+      "banner": "SSH-2.0-OpenSSH_for_Windows_9.5",
+      "matches_saved_onboard_key": false
+    }
+  ],
+  "matching_onboard_hosts": []
+}

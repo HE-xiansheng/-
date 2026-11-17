@@ -21,6 +21,7 @@ elif '--cloud-topic /factory_fastlio/cloud_world --no-rosout --planner' in remot
 elif '--pc-ip ' in remote and '# dianyun-pointcloud-only' in remote:kind='cloud_readonly'
 elif 'b64decode' in remote and ('--source raw' in remote or '--source tracking' in remote):kind='video_readonly'
 else:raise RuntimeError('unexpected GUI command: '+remote)
+if kind=='recording':remote='cd /tmp/platform-soak-check && '+remote
 if kind!='authenticate':remote='env ROS_DOMAIN_ID=83 ROS_LOCALHOST_ONLY=1 RECORDING_ROOT='+root+' ROS_LOG_DIR=/tmp/platform-soak-check/gcs-ros-log bash -lc '+shlex.quote(remote)
 args[-1]=remote
 with open(os.environ['GCS_TEST_SSH_CALLS'],'a') as f:f.write(json.dumps({'kind':kind,'original':original,'effective':remote})+'\n')

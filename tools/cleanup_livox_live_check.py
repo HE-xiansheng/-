@@ -10,7 +10,7 @@ import time
 root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('/tmp/livox-live-check')
 domains = {Path('/tmp/livox-live-check'): 183, Path('/tmp/livox-native-check'): 183,
            Path('/tmp/livox-shutdown-debug'): 185, Path('/tmp/px4-ev-ground-check'): 187,
-           Path('/tmp/new-camera-ground-check'): 189}
+           Path('/tmp/new-camera-ground-check'): 189, Path('/tmp/platform-soak-check'): 83}
 assert root in domains
 registry = root/'owned-processes.json'
 owned = json.loads(registry.read_text()) if registry.exists() else []
