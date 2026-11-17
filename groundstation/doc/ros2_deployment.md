@@ -65,3 +65,12 @@ r3独立包位于电脑下载目录 `科研飞行平台-ROS2地面站/drone-gcs-
 ## 2026-11-17实物主窗口联调进展
 
 当前使用本仓库ROS2 Humble适配的独立Qt版，电脑无需安装ROS2；原桌面快捷方式尚未切换。实际原生雷达、Gemini和直连云台的两轮完整主窗口各24项通过，包含跨机点云/位姿、双路视频和隔离录制正常收尾。默认参数机载43/51、临时关闭LIO自同步诊断48/51，整轮仍失败，不能宣称整平台验收完成。真实PX4此前静态接收/融合专项已通过，本轮未运行真实MAVROS；全负载真实飞控、运动外参、实际任务及长期稳定性仍缺。详见仓库records/2026-11-17/physical-platform-gcs/README.md。
+
+
+## 2026-11-17 当前窗口的管理接口修复
+
+早期独立副本使用内嵌的空modules配置，定位按钮会返回“需要api_version=1”；仅改磁盘上的Python配置无法更新已运行的Qt资源。当前r4包由本仓库canonical源码重新构建，定位直接委托机载fast_lio/manage_stack.py，任务状态直接读取原生gcs_task_manager.py。当前已运行的r4窗口与旧窗口使用独立端口和状态目录。
+
+电脑入口为仓库tools/launch_ros2_repaired_gcs.sh，默认使用下载目录中的20261117-ros2-r4包；可用GCS_BUNDLE_DIR指定同布局包。运行`bash /home/tyzk/drone-migration-github/tools/launch_ros2_repaired_gcs.sh`。未替换原桌面快捷方式。r4端口为点云9100、位姿9101、飞前状态9103、机载遥测19115，ROS域0。
+
+机载任务监视的退出现已处理Humble提前关闭context与重复清理，修复只改变生命周期，不准备任务或发送控制命令。真实只读候选/安装版本各12项退出检查及原生定位复用检查见records/2026-11-17/gcs-manager-integration。定位源时效与全负载仍独立验收，接口成功不等于定位健康。

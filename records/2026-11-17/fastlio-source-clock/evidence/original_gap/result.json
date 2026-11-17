@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": {
+    "clean exit": true,
+    "clock decision observed": true,
+    "unmodified node reproduces false offset on missing IMU": true
+  },
+  "measured_offsets_s": [
+    1.1195747852
+  ],
+  "odometry": 101,
+  "clouds": 101,
+  "returncode": 0,
+  "source_shift_ns": 0,
+  "startup_imu_gap": true
+}

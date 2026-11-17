@@ -1,0 +1,12 @@
+{
+  "pid": 69447,
+  "bundle": "/home/tyzk/下载/科研飞行平台-ROS2地面站/drone-gcs-ros2-20261117-ros2-r4-linux-amd64",
+  "state": "/home/tyzk/.local/share/drone-gcs-ros2-r4",
+  "ports": {
+    "cloud": 9100,
+    "pose": 9101,
+    "preflight": 9103,
+    "raw_udp": 19115
+  },
+  "configuration": "/home/tyzk/.config/drone-gcs-ros2-r4"
+}

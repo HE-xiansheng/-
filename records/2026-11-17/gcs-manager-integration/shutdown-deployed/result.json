@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "checks": {
+    "normal process exits zero": true,
+    "normal no traceback": true,
+    "normal reports all lifecycle checks": true,
+    "external process exits zero": true,
+    "external no traceback": true,
+    "external reports all lifecycle checks": true,
+    "passive watch stays running until SIGINT": true,
+    "watch exits zero after SIGINT": true,
+    "watch returns at least five valid status records": true,
+    "watch no traceback or shutdown error": true,
+    "watch helper was observed and exited": true,
+    "watch observed connected unarmed controller": true
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "returncode": 0,
+      "result": [
+        {
+          "case": "normal_close",
+          "checks": {
+            "no background executor exception": true,
+            "executor thread exited": true,
+            "owned identity helper exited": true,
+            "context closed": true
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "case": "external",
+      "returncode": 0,
+      "result": [
+        {
+          "case": "external_shutdown",
+          "checks": {
+            "no background executor exception": true,
+            "executor thread exited": true,
+            "owned identity helper exited": true,
+            "context closed": true
+          },
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "watch": {
+    "returncode": 0,
+    "records": 9,
+    "helper_pids": [
+      99942
+    ]
+  },
+  "manager": "/home/orangepi/drone_platform/01_apps/mission_demo/tools/gcs_task_manager.py",
+  "domain": "0",
+  "scope": "passive status subscriptions and own-process shutdown only"
+}

@@ -1,0 +1,60 @@
+[INFO] [1794908098.418972635] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1794908098.433393520] [laser_mapping]: Node init finished.
+[WARN] [1794908100.152660382] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.162575598] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.172578313] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.182607279] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.192607369] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.202629918] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.212599384] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.222633016] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.233441899] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.242613947] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.252621913] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.262597795] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.273275427] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.282624518] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.292558691] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.355939945] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.456176809] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.554252130] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.656463578] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.762602321] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.853104511] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908100.956315502] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908101.055755824] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908101.154113478] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908101.255675676] [laser_mapping]: No point, skip this scan!
+
+Multi thread started 
+Self sync IMU and LiDAR, time diff is 1.1195747852 
+IMU Initial Done
+[WARN] [1794908101.360012210] [laser_mapping]: No point, skip this scan!
+
+[INFO] [1794908101.458105322] [laser_mapping]: Initialize the map kdtree
+[INFO] [1794908112.680305524] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

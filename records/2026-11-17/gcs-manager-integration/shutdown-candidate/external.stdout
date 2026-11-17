@@ -1,0 +1,1 @@
+{"case": "external_shutdown", "checks": {"no background executor exception": true, "executor thread exited": true, "owned identity helper exited": true, "context closed": true}, "errors": []}

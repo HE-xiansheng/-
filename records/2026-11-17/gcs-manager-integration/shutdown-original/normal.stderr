@@ -1,0 +1,17 @@
+[INFO] [1794907535.262361647] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Traceback (most recent call last):
+  File "/tmp/gcs-manager-api-check/tools/test_task_manager_shutdown_ros2.py", line 110, in <module>
+    raise SystemExit(main())
+  File "/tmp/gcs-manager-api-check/tools/test_task_manager_shutdown_ros2.py", line 53, in main
+    return close_case(args.manager, args.case == 'external')
+  File "/tmp/gcs-manager-api-check/tools/test_task_manager_shutdown_ros2.py", line 35, in close_case
+    ros.close()
+  File "/home/orangepi/drone_platform/01_apps/mission_demo/tools/gcs_task_manager.py", line 193, in close
+    self.node.destroy_node();self.rclpy.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 100, in shutdown
+    raise RuntimeError('Context must be initialized before it can be shutdown')
+RuntimeError: Context must be initialized before it can be shutdown

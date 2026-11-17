@@ -146,7 +146,7 @@ class RosState:
         self.rclpy=rclpy
         rclpy.init()
         self.node=rclpy.create_node('gcs_flight_task_manager_'+uuid.uuid4().hex[:8])
-        self.cache={};self.lock=threading.RLock();self.subs=[]
+        self.cache={};self.lock=threading.RLock();self.subs=[];self.closed=False
         def sub(topic,typ,key,convert,latched=False):
             def receive(m):
                 try:
@@ -182,15 +182,23 @@ class RosState:
         self.helper=subprocess.Popen([str(executable),'--ros-args','-r','__node:=gcs_identity_'+uuid.uuid4().hex[:8],'-p','identity_topic:='+identity_topic],
             stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,start_new_session=True)
         self.executor=SingleThreadedExecutor();self.executor.add_node(self.node)
-        self.thread=threading.Thread(target=self.executor.spin,daemon=True);self.thread.start()
+        self.thread=threading.Thread(target=self.spin,daemon=True);self.thread.start()
+    def spin(self):
+        from rclpy.executors import ExternalShutdownException
+        try:self.executor.spin()
+        except ExternalShutdownException:
+            # Humble的SIGINT处理可能先关闭context，这是正常的监视退出。
+            pass
     def close(self):
+        if self.closed:return
+        self.closed=True
         if self.helper.poll() is None:
             self.helper.send_signal(signal.SIGINT)
             try:self.helper.wait(timeout=3)
             except subprocess.TimeoutExpired:self.helper.kill();self.helper.wait()
         self.executor.shutdown(timeout_sec=2)
         self.thread.join(timeout=2)
-        self.node.destroy_node();self.rclpy.shutdown()
+        self.node.destroy_node();self.rclpy.try_shutdown()
     def value(self,key,max_age=3):
         with self.lock: value,at,stamp,_=self.cache.get(key,(None,0,None,None))
         if time.monotonic()-at>=max_age:return None

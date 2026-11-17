@@ -1,0 +1,25 @@
+{
+  "status": "tested_candidate_not_applied",
+  "files": {
+    "evidence.tar.gz": {
+      "sha256": "95a8f01bb6c21db13b6e8c07a0e1afda19b11f423c8dc09d7868ea59e109340c",
+      "size": 720560
+    },
+    "previous-runtime.tar.gz": {
+      "sha256": "b7aa9347a36deb3fe675831bf4faa3476476c4c50cb2e56a7cee0ce11c0cb39e",
+      "size": 520504
+    },
+    "evidence/source/fast_lio/src/laserMapping.cpp": {
+      "sha256": "1bd1cb006c51b1409b343d4c14a483dd80819a0daa288257ba3f35eb8f029686",
+      "size": 52610
+    },
+    "evidence/source/fast_lio/include/source_clock_alignment.hpp": {
+      "sha256": "0c4d759277d651e06cd5a2ce09b74dbb6162ff502734689522df2a203b2a96d8",
+      "size": 2618
+    },
+    "evidence/install/lib/fast_lio/fastlio_mapping": {
+      "sha256": "26a503fb47180dc777271e0128348a5e5a91f4cfc11e435c530b34dbc66ac611",
+      "size": 2058040
+    }
+  }
+}

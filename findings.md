@@ -257,3 +257,18 @@ MPP单包正式构建16.6秒成功，随后Git提交因机载未配置作者身�
 
 
 2026-11-17 基础自启与当前GCS收尾：最终180个PFS1快照/35.9158秒、独立canonical18秒共16项通过，原健康门槛未变。雷达9.9–10Hz/age<=0.21s，IMU199.5–201Hz，FCU IMU约50Hz/里程计29.9–30.1Hz；没有定位、转发或控制发布者，飞控未解锁。元数据官方参照41项/本地14个回归通过；旧快照竞争测试在历史源码按预期失败、现版通过。机载29838fa干净、两基础服务enabled/active/NRestarts0、NoMachine active、tmp已清理。完整迁移仍有全负载误同步/规划时效/灰度交付及运动外参/实际目标门槛，正式GCS入口未切换。此次只修改既有独立ROS2副本的列明文件，未覆盖其他未跟踪内容。
+
+
+2026-11-17 用户授权继续修复：当前实际窗口早期ROS2构建C++使用remoteros2.h内嵌profile/manager，modules={}且进程未设置GCS_ROS2_PROFILE；上轮只改Pythonprofile不会更新已运行Qt资源。其localization状态还依赖未实现的04_data/gcs_ros2/status.json，而机载已有原生ROS2管理器。canonical已迁移定位/规划/任务/录制接口并实测，当前窗口版本不一致是根因。先将独立测试构建与canonical源码统一并验证，保留早期目录及正式桌面入口；不为旧占位协议再复制任务状态机。启动定位/转发仅按未解锁地面门控验证，不运行真实任务或云台动作。
+
+
+2026-11-17 任务watch实际退出负例：正常读取7秒、只发送SIGINT结束自己的只读监视，原生gcs_task_manager.py退出1，后台spin报ExternalShutdownException，finally再次shutdown报rcl_shutdown already called。原JSON/stderr已保存，运行中的定位不受影响。候选仅对RosState.spin捕获正常外部context关闭，close增加幂等标记并用rclpy.try_shutdown；不修改任务启动/停止、坐标转换、飞控或底层驱动。准备候选被动watch/外部关闭/重复close检查，验证后部署单文件。
+
+
+2026-11-17 任务监视退出根因确认：Humble默认SIGINT会先关闭rclpy context，后台Executor抛ExternalShutdownException，finally再shutdown导致already called并使返回码1；当前文件曾未修复。候选捕获正常外部关闭、close幂等并try_shutdown，12项只读生命周期检查通过。实际原工具同项失败提供对照；仅修复此生命周期，不改变任务/飞控语义。原子替换需要root目录权限（文件本身属于orangepi）；安装后保持原权限/所有者。
+
+
+2026-11-17 误同步实物新证据：当前使用中的LIO在17:26打印+1.1714196205秒自动偏移，发生在启动约12分钟之后；持续源雷达与IMU、飞控里程计仍健康，转发按原0.2秒源时效拒绝输出，最近60秒132快照过期。原回调仅在两条最后处理消息相差>1秒时锁定同步，已对齐时不锁，故迟到回调仍可触发。候选将callback时刻从估计中移除，用各流DDS发布戳减测量戳（LiDAR末点），重叠稳定窗口决定并锁定；真实±2秒偏差仍准备回放验证。不直接关闭自同步，不更改正式帧龄/外参/参数。候选正在/tmp独立构建，原使用会话未停。
+
+
+2026-11-17 源时间候选验证完成：旧版在IMU停流时实测误校+1.1195747852s；新候选同输入不偏移，真实±2s偏差估计误差<0.6ms且定位持续。75秒真实MID360旁路稳定700帧、9.999928Hz、max age0.103651s通过原0.2s限制；仅/gcs_clock_candidate输出，无飞控转发，当前用户会话未切换。候选依赖有效DDS source_timestamp/共享发布机时钟，缺少/不稳定窗口不估计；长期运动/外参未验证。恢复包与完整证据在fastlio-source-clock。

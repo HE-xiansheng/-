@@ -1,0 +1,38 @@
+[INFO] [1794908113.533218804] [laser_mapping]: p_pre->lidar_type 1
+[INFO] [1794908113.548227398] [laser_mapping]: Node init finished.
+[WARN] [1794908115.267353094] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.278087310] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.287254108] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.297596907] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.307302414] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.317283838] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.327259429] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.337333894] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.347371318] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.357357117] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.367494291] [laser_mapping]: No point, skip this scan!
+
+Multi thread started 
+Source clock alignment verified, no automatic IMU shift (-0.0002341660 s)
+[WARN] [1794908115.377368382] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.387395305] [laser_mapping]: No point, skip this scan!
+
+[WARN] [1794908115.408353904] [laser_mapping]: No point, skip this scan!
+
+IMU Initial Done
+[WARN] [1794908115.408898446] [laser_mapping]: No point, skip this scan!
+
+[INFO] [1794908115.482918249] [laser_mapping]: Initialize the map kdtree
+[INFO] [1794908127.796782278] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

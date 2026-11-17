@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "candidate clock locks without false shift": true,
+    "at least 600 unique real source measurements": true,
+    "strictly increasing source stamps": true,
+    "settled source ages meet existing relay 0.2s limit": true,
+    "finite unit poses and expected frames": true,
+    "real controller connected and never armed": true,
+    "candidate exits cleanly": true
+  },
+  "streams": {
+    "count": 700,
+    "cloud_count": 719,
+    "source_hz": 9.999928461312926,
+    "max_source_age_s": 0.10365127,
+    "max_receipt_gap_s": 0.16747686999997313
+  },
+  "scope": "actual existing MID360 input; candidate outputs only under /gcs_clock_candidate; no MAVROS relay, no task or control calls"
+}

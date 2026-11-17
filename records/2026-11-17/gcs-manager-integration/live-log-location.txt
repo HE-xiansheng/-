@@ -1,0 +1,2 @@
+/home/tyzk/drone-migration-work/gcs-r4-live-20261117-1714.log
+Archived application-r4.log is a frozen snapshot; the running GUI keeps writing the same open inode at the path above.

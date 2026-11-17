@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": {
+    "all packaged file hashes match manifest": true,
+    "current metadata sampler included": true,
+    "native localization helper embedded source": true
+  },
+  "version": "20261117-ros2-r4",
+  "archive_sha256": "10110472b6bfc04081b1d39627d84f53e142f7520d2e9fad47ec331fea32b3eb",
+  "binary_sha256": "bec8e896d01dbae016cb47964809bc9de3e1d1bffc6e8657596b88c5de609cfe"
+}

@@ -1,0 +1,12 @@
+[INFO] [1794908170.886909125] [gcs_clock_candidate.laser_mapping]: p_pre->lidar_type 1
+[INFO] [1794908170.908012390] [gcs_clock_candidate.laser_mapping]: Node init finished.
+[WARN] [1794908173.654662408] [gcs_clock_candidate.laser_mapping]: No point, skip this scan!
+
+Multi thread started 
+IMU Initial Done
+[WARN] [1794908173.664684957] [gcs_clock_candidate.laser_mapping]: No point, skip this scan!
+
+[INFO] [1794908173.731299630] [gcs_clock_candidate.laser_mapping]: Initialize the map kdtree
+Source clock alignment verified, no automatic IMU shift (-0.0029953300 s)
+[INFO] [1794908245.692630422] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

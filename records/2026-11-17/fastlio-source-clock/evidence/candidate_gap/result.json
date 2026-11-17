@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": {
+    "clean exit": true,
+    "clock decision observed": true,
+    "sustained odometry and clouds": true,
+    "output reaches end of input": true,
+    "source stamps strictly increase": true,
+    "finite poses and expected frames": true,
+    "settled output age below existing relay threshold": true,
+    "no fabricated offset during missing IMU": true
+  },
+  "measured_offsets_s": [],
+  "odometry": 112,
+  "clouds": 112,
+  "returncode": 0,
+  "source_shift_ns": 0,
+  "startup_imu_gap": true
+}

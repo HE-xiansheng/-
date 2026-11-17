@@ -307,9 +307,12 @@ void standard_pcl_cbk(const sensor_msgs::msg::PointCloud2::UniquePtr msg)
     sig_buffer.notify_all();
 }
 
+#include "source_clock_alignment.hpp"
+SourceClockAlignment source_clock_alignment;
 double timediff_lidar_wrt_imu = 0.0;
 bool   timediff_set_flg = false;
-void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg) 
+void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg,
+                   const rclcpp::MessageInfo &message_info)
 {
     mtx_buffer.lock();
     double cur_time = get_time_sec(msg->header.stamp);
@@ -331,11 +334,25 @@ void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg)
         printf("IMU and LiDAR not Synced, IMU time: %lf, lidar header time: %lf \n",last_timestamp_imu, last_timestamp_lidar);
     }
 
-    if (time_sync_en && !timediff_set_flg && abs(last_timestamp_lidar - last_timestamp_imu) > 1 && !imu_buffer.empty())
+    if (time_sync_en && !timediff_set_flg)
     {
-        timediff_set_flg = true;
-        timediff_lidar_wrt_imu = last_timestamp_lidar + 0.1 - last_timestamp_imu;
-        printf("Self sync IMU and LiDAR, time diff is %.10lf \n", timediff_lidar_wrt_imu);
+        uint32_t scan_duration_ns = 0;
+        for (const auto &point : msg->points)
+            scan_duration_ns = std::max(scan_duration_ns, point.offset_time);
+        const int64_t scan_end_ns = rclcpp::Time(msg->header.stamp).nanoseconds() + scan_duration_ns;
+        source_clock_alignment.lidar(scan_end_ns, message_info.get_rmw_message_info().source_timestamp);
+        double offset = 0.;
+        if (source_clock_alignment.offset(offset)) {
+            // 即使两流已对齐也锁定启动结果，不在后续负载突增时重新猜测偏差。
+            timediff_set_flg = true;
+            if (std::abs(offset) > 1.) {
+                timediff_lidar_wrt_imu = offset;
+                printf("Self sync IMU and LiDAR, time diff is %.10lf \n", offset);
+            } else {
+                printf("Source clock alignment verified, no automatic IMU shift (%.10lf s)\n", offset);
+            }
+            fflush(stdout);
+        }
     }
 
     PointCloudXYZI::Ptr  ptr(new PointCloudXYZI());
@@ -348,9 +365,13 @@ void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg)
     sig_buffer.notify_all();
 }
 
-void imu_cbk(const sensor_msgs::msg::Imu::UniquePtr msg_in)
+void imu_cbk(const sensor_msgs::msg::Imu::UniquePtr msg_in,
+             const rclcpp::MessageInfo &message_info)
 {
     publish_count ++;
+    if (time_sync_en && !timediff_set_flg)
+        source_clock_alignment.imu(rclcpp::Time(msg_in->header.stamp).nanoseconds(),
+                                  message_info.get_rmw_message_info().source_timestamp);
     // cout<<"IMU got at: "<<msg_in->header.stamp.toSec()<<endl;
     sensor_msgs::msg::Imu::SharedPtr msg(new sensor_msgs::msg::Imu(*msg_in));
     

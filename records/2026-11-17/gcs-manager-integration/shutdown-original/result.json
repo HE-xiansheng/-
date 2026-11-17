@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "checks": {
+    "normal process exits zero": false,
+    "normal no traceback": false,
+    "normal reports all lifecycle checks": false,
+    "external process exits zero": false,
+    "external no traceback": false,
+    "external reports all lifecycle checks": false,
+    "passive watch stays running until SIGINT": true,
+    "watch exits zero after SIGINT": false,
+    "watch returns at least five valid status records": false,
+    "watch no traceback or shutdown error": false,
+    "watch helper was observed and exited": true,
+    "watch observed connected unarmed controller": true
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "returncode": 1,
+      "result": []
+    },
+    {
+      "case": "external",
+      "returncode": 1,
+      "result": []
+    }
+  ],
+  "watch": {
+    "returncode": 1,
+    "records": 10,
+    "helper_pids": [
+      97179
+    ]
+  },
+  "manager": "/home/orangepi/drone_platform/01_apps/mission_demo/tools/gcs_task_manager.py",
+  "domain": "0",
+  "scope": "passive status subscriptions and own-process shutdown only"
+}

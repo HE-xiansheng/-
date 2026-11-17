@@ -1,0 +1,29 @@
+{
+  "old_source": "/home/tyzk/工作项目/地面站与平台/dianyunGCS-ros2-20261116/dianyunGCS-master",
+  "head": "ab299db",
+  "old_process": {
+    "pid": 64096,
+    "argv": [
+      "/home/tyzk/工作项目/地面站与平台/dianyunGCS-ros2-20261116/build/linux/customgeometry",
+      "--cloud-port",
+      "9000",
+      "--pose-port",
+      "9001",
+      "--preflight-port",
+      "9003",
+      "--host",
+      "192.168.1.224"
+    ],
+    "gcs_environment": [
+      "DISPLAY=:1"
+    ]
+  },
+  "files": {
+    "localizationcontroller.cpp": "e17b15a51e02ac0a243d7097310d3a2689949eda6e317a497b32f6e8e78ae336",
+    "plannercontroller.cpp": "51e650084deff5ab42b5993fb1a68d6a0985551e1ac0b6f3fc5c2921f6b21af8",
+    "missioncontroller.cpp": "bd3e5ead6005efd8559690bf3cb95291bc24bd903bee2b3c01c128ff7896d8a2",
+    "remoteros2.h": "051ca70f82febfc9cd88048f097ab5c0076184dd7e7068629ba5ff5fde187f7d",
+    "tools/ros2/profile.json": "bba6124a4a9a0de22bd29fcbac87e938b882b061cb3014d021427f1fbebbb953",
+    "tools/ros2/manager.py": "35c1a6054b348cb680bcdc8231d841e78fa8e73ca4918e0daed2ace7122776a4"
+  }
+}
