@@ -1,0 +1,45 @@
+{
+  "scope": "unchanged installed driver; temporary preload only; no FCU",
+  "candidate_sdk": "/tmp/livox-sdk-symbol-check/build/sdk_core",
+  "cases": [
+    {
+      "case": "direct-single-signal",
+      "returncode": 0,
+      "messages": {
+        "lidar": 86,
+        "imu": 1490
+      },
+      "loaded_sdk": [
+        "/tmp/livox-sdk-symbol-check/build/sdk_core/liblivox_lidar_sdk_shared.so"
+      ],
+      "segfault": false,
+      "backtrace": false
+    },
+    {
+      "case": "launch-group-signal-1",
+      "returncode": 0,
+      "messages": {
+        "lidar": 81,
+        "imu": 1409
+      },
+      "loaded_sdk": [
+        "/tmp/livox-sdk-symbol-check/build/sdk_core/liblivox_lidar_sdk_shared.so"
+      ],
+      "segfault": false,
+      "backtrace": false
+    },
+    {
+      "case": "launch-group-signal-2",
+      "returncode": 0,
+      "messages": {
+        "lidar": 81,
+        "imu": 1648
+      },
+      "loaded_sdk": [
+        "/tmp/livox-sdk-symbol-check/build/sdk_core/liblivox_lidar_sdk_shared.so"
+      ],
+      "segfault": false,
+      "backtrace": false
+    }
+  ]
+}

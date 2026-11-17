@@ -1,0 +1,20 @@
+{
+  "original": {
+    "remote_path": "/home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so",
+    "computer_path": "/home/tyzk/drone-migration-work/livox-sdk-symbol-build1/original/liblivox_lidar_sdk_shared.so",
+    "bytes": 1151016,
+    "sha256": "480fd4377886adca14c95256d9ff0a7a1a0817b15f62eba93c965c8b6a68a6d7"
+  },
+  "candidate": {
+    "remote_path": "/tmp/livox-sdk-symbol-check/build/sdk_core/liblivox_lidar_sdk_shared.so",
+    "computer_path": "/home/tyzk/drone-migration-work/livox-sdk-symbol-build1/candidate/liblivox_lidar_sdk_shared.so",
+    "bytes": 1131144,
+    "sha256": "292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3"
+  },
+  "control": {
+    "remote_path": "/tmp/livox-sdk-symbol-check/control/liblivox_lidar_sdk_shared.so",
+    "computer_path": "/home/tyzk/drone-migration-work/livox-sdk-symbol-build1/control/liblivox_lidar_sdk_shared.so",
+    "bytes": 1151016,
+    "sha256": "510cb4be0b48a4dc7d32dc87166e5a4ca420d99314a6f1db8eea2b21afbfb455"
+  }
+}

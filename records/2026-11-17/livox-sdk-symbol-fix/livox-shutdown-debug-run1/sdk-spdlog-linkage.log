@@ -1,0 +1,73 @@
+libspdlog-dev:arm64	1:1.9.2+ds-0.2
+libspdlog1:arm64	1:1.9.2+ds-0.2
+// Copyright(c) 2015-present, Gabi Melman & spdlog contributors.
+// Distributed under the MIT License (http://opensource.org/licenses/MIT)
+
+#pragma once
+
+#define SPDLOG_VER_MAJOR 1
+#define SPDLOG_VER_MINOR 9
+#define SPDLOG_VER_PATCH 2
+
+#define SPDLOG_VERSION (SPDLOG_VER_MAJOR * 10000 + SPDLOG_VER_MINOR * 100 + SPDLOG_VER_PATCH)
+
+Dynamic section at offset 0xde738 contains 30 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]
+ 0x000000000000000e (SONAME)             Library soname: [liblivox_lidar_sdk_shared.so]
+ 0x000000000000000c (INIT)               0x370a0
+ 0x000000000000000d (FINI)               0xb8ff0
+ 0x0000000000000019 (INIT_ARRAY)         0xec378
+ 0x000000000000001b (INIT_ARRAYSZ)       128 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0xec3f8
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x228
+ 0x0000000000000005 (STRTAB)             0xcdb8
+ 0x0000000000000006 (SYMTAB)             0x2dc8
+ 0x000000000000000a (STRSZ)              125459 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000003 (PLTGOT)             0xeefe8
+ 0x0000000000000002 (PLTRELSZ)           14688 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0x33740
+ 0x000000006ffffef6 (TLSDESC_PLT)        0x39700
+ 0x000000006ffffef7 (TLSDESC_GOT)        0xeefe0
+ 0x0000000000000007 (RELA)               0x2c6c0
+ 0x0000000000000008 (RELASZ)             28800 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffe (VERNEED)            0x2c520
+ 0x000000006fffffff (VERNEEDNUM)         4
+ 0x000000006ffffff0 (VERSYM)             0x2b7cc
+ 0x000000006ffffff9 (RELACOUNT)          94
+ 0x0000000000000000 (NULL)               0x0
+	linux-vdso.so.1 (0x0000007f9ad7e000)
+	librclcpp.so => not found
+	librmw.so => not found
+	librcutils.so => not found
+	librcl.so => not found
+	libtracetools.so => not found
+	libsensor_msgs__rosidl_typesupport_cpp.so => not found
+	liblivox_ros_driver2__rosidl_typesupport_cpp.so => not found
+	liblivox_lidar_sdk_shared.so => /home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so (0x0000007f9aba0000)
+	libclass_loader.so => not found
+	libconsole_bridge.so.1.0 => /lib/aarch64-linux-gnu/libconsole_bridge.so.1.0 (0x0000007f9ab80000)
+	libstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000007f9a950000)
+	libm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000007f9a8b0000)
+	libgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000007f9a880000)
+	libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000007f9a6d0000)
+	/lib/ld-linux-aarch64.so.1 (0x0000007f9ad45000)
+spdlog::sinks::stdout_sink_base<spdlog::details::console_mutex>::set_formatter(std::unique_ptr<spdlog::formatter, std::default_delete<spdlog::formatter> >)
+??:?
+0000000000048320 W spdlog::logger::~logger()
+00000000000481e0 W spdlog::logger::~logger()
+00000000000481e0 W spdlog::logger::~logger()
+00000000000699d0 W std::shared_ptr<spdlog::logger>::~shared_ptr()
+00000000000699d0 W std::shared_ptr<spdlog::logger>::~shared_ptr()
+00000000000ec728 V typeinfo for spdlog::logger
+00000000000bd9e0 V typeinfo name for spdlog::logger
+00000000000ec828 V vtable for spdlog::logger
+00000000000f0d30 B logger
+480fd4377886adca14c95256d9ff0a7a1a0817b15f62eba93c965c8b6a68a6d7  /home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so

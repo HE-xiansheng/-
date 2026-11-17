@@ -8,7 +8,9 @@ import sys
 import time
 
 root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('/tmp/livox-live-check')
-assert root in [Path('/tmp/livox-live-check'), Path('/tmp/livox-native-check')]
+domains = {Path('/tmp/livox-live-check'): 183, Path('/tmp/livox-native-check'): 183,
+           Path('/tmp/livox-shutdown-debug'): 185}
+assert root in domains
 registry = root/'owned-processes.json'
 owned = json.loads(registry.read_text()) if registry.exists() else []
 groups = {int(entry['pid']) for entry in owned}
@@ -27,7 +29,8 @@ def members():
             if stat[0] == 'Z':
                 continue
             environment = (proc/'environ').read_bytes().split(b'\0')
-            if b'ROS_DOMAIN_ID=183' not in environment or (proc/'cwd').resolve() != root:
+            domain = ('ROS_DOMAIN_ID='+str(domains[root])).encode()
+            if domain not in environment or (proc/'cwd').resolve() != root:
                 raise RuntimeError('refusing unowned group member '+str(pid))
             # A group leader must still be the exact registered process.
             if pid in groups:

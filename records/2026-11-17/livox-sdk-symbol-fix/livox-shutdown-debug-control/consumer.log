@@ -1,0 +1,1 @@
+{"case": "direct-single-signal", "returncode": -11, "messages": {"lidar": 86, "imu": 1485}, "loaded_sdk": ["/tmp/livox-sdk-symbol-check/control/liblivox_lidar_sdk_shared.so"], "segfault": true, "backtrace": true}

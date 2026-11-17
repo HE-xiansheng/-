@@ -18,7 +18,7 @@ lidar_ip = str(ipaddress.IPv4Address(sys.argv[2] if len(sys.argv) > 2 else '192.
 if not lidar_ip.startswith('192.168.1.') or lidar_ip in ('192.168.1.51', '192.168.1.224', '192.168.1.235'):
     raise ValueError('unexpected sensor address')
 flags = set(sys.argv[3:])
-if flags - {'--existing-network', '--passive-planner', '--ready-start'}:
+if flags - {'--existing-network', '--passive-planner', '--ready-start', '--candidate-sdk'}:
     raise ValueError('unknown check option')
 existing_network = '--existing-network' in flags
 ssh = ['ssh','-o','BatchMode=yes','-o','ConnectTimeout=8','-o','ServerAliveInterval=15',
@@ -94,7 +94,8 @@ try:
                    +remote+'/test_livox_native_ros2.py'
                    + (' --deployed-config' if existing_network else '')
                    + (' --passive-planner' if '--passive-planner' in flags else '')
-                   + (' --ready-start' if '--ready-start' in flags else ''))
+                   + (' --ready-start' if '--ready-start' in flags else '')
+                   + (' --candidate-sdk' if '--candidate-sdk' in flags else ''))
         process = subprocess.Popen(ssh+[command], stdin=subprocess.DEVNULL, stdout=log,
                                    stderr=subprocess.STDOUT, start_new_session=True)
         process.wait(timeout=150)

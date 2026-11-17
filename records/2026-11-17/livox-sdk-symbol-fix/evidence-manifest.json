@@ -1,0 +1,22 @@
+{
+  "livox-shutdown-debug-run1": {
+    "archive": "records/2026-11-17/livox-sdk-symbol-fix/livox-shutdown-debug-run1/evidence.tar.gz",
+    "bytes": 9855,
+    "sha256": "f83391f9c947ec271669c0ad8fef638d6698fa4a34781634918e82be570b93fd"
+  },
+  "livox-shutdown-debug-run2": {
+    "archive": "records/2026-11-17/livox-sdk-symbol-fix/livox-shutdown-debug-run2/evidence.tar.gz",
+    "bytes": 9786,
+    "sha256": "6bca0dd564b9a171486cf8ac11162673e218e0f6265f6c09b9bc39d895f9824a"
+  },
+  "livox-shutdown-debug-control": {
+    "archive": "records/2026-11-17/livox-sdk-symbol-fix/livox-shutdown-debug-control/evidence.tar.gz",
+    "bytes": 8915,
+    "sha256": "6a07548f943b659f72b2420c1db82440e9fe96b84fd23aa50b06577a8f10257a"
+  },
+  "livox-native-run7": {
+    "archive": "records/2026-11-17/livox-sdk-symbol-fix/livox-native-run7/evidence.tar.gz",
+    "bytes": 1825053,
+    "sha256": "ba850efa58dbbcefd5fedda1812a4d50f86b8079a55c4ce7775ecd907ac92651"
+  }
+}

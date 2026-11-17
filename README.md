@@ -66,3 +66,5 @@ PX4源码与ULog已证实：其自身同步收敛前会用接收时刻替代源�
 最新[ArUco启动就绪修正](records/2026-11-17/aruco-consumer-ready/README.md)：真实控制端点、只读插件参数响应及路由出口就绪后才预发送和允许任务启动。冷启动两轮872/872、871/871，44项严格检查通过，4组CTest和61项原生触发/取消回归通过；候选dae36a8已部署，未正式切换服务。
 
 - [新雷达持久网络、.235启动方式核对及真实联合验证](records/2026-11-17/livox-persistent-network/README.md)：保留time_sync_en=true/offset0，等待新鲜双流后启动定位；驱动退出-11仍未修复，未开启正式服务/真实FCU。
+
+- [SDK日志符号隔离候选](records/2026-11-17/livox-sdk-symbol-fix/README.md)：同版本1.3.0仅修改链接绑定，原库/control复现、候选三轮退出正常、真实联合40/40通过；机载原安装SDK尚未替换。

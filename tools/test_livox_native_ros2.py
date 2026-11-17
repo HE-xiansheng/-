@@ -136,11 +136,11 @@ def subscribe():
 
 subs = [] if "--ready-start" in sys.argv else subscribe()
 
-def start(name, command):
+def start(name, command, env=None):
     log = (root/(name+'.log')).open('w')
     logs.append(log)
     p = subprocess.Popen(command, cwd=root, stdin=subprocess.DEVNULL, stdout=log,
-                         stderr=subprocess.STDOUT, start_new_session=True)
+                         stderr=subprocess.STDOUT, start_new_session=True, env=env)
     processes.append((name, p))
     (root/'owned-processes.json').write_text(json.dumps([
         {'name': n, 'pid': child.pid, 'start_ticks': Path('/proc/'+str(child.pid)+'/stat').read_text().split()[21]}
@@ -156,7 +156,12 @@ try:
     driver_command = ['ros2', 'launch', str(platform/'02_drivers/sensors/launch/livox_mid360s.launch.py')]
     if '--deployed-config' not in sys.argv:
         driver_command.append('device_config:='+str(root/'device-config.json'))
-    start('driver', driver_command)
+    driver_env = None
+    if '--candidate-sdk' in sys.argv:
+        sdk_dir = Path('/tmp/livox-sdk-symbol-check/build/sdk_core')
+        assert (sdk_dir/'liblivox_lidar_sdk_shared.so').is_file()
+        driver_env = dict(os.environ, LD_LIBRARY_PATH=str(sdk_dir)+':'+os.environ.get('LD_LIBRARY_PATH', ''))
+    start('driver', driver_command, env=driver_env)
     if '--ready-start' in sys.argv:
         import sensor_readiness
         readiness = sensor_readiness.wait_for_sensors()
@@ -227,6 +232,20 @@ try:
                           capture_output=True,text=True,timeout=15)
     (root/'lio-parameters.yaml').write_text(dump.stdout+dump.stderr)
     check('lio_parameter_snapshot', dump.returncode == 0)
+    if '--candidate-sdk' in sys.argv:
+        driver_group = next(p.pid for name, p in processes if name == 'driver')
+        loaded = set()
+        for proc in Path('/proc').iterdir():
+            if not proc.name.isdigit():
+                continue
+            try:
+                if os.getpgid(int(proc.name)) == driver_group:
+                    loaded.update(line.split()[-1] for line in (proc/'maps').read_text().splitlines()
+                                  if 'liblivox_lidar_sdk_shared.so' in line)
+            except (FileNotFoundError, ProcessLookupError, PermissionError):
+                pass
+        result['loaded_sdk'] = sorted(loaded)
+        check('actual_driver_loads_candidate_sdk', bool(loaded) and all(str(sdk_dir) in path for path in loaded))
 except Exception as exc:
     result['error'] = repr(exc)
     print(repr(exc), flush=True)

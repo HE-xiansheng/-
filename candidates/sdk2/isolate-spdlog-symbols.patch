@@ -1,0 +1,11 @@
+--- a/sdk_core/CMakeLists.txt
++++ b/sdk_core/CMakeLists.txt
+@@ -142,3 +142,8 @@
+         PUBLIC_HEADER DESTINATION include
+         ARCHIVE DESTINATION lib
+         LIBRARY DESTINATION lib)
++
++# Keep bundled spdlog 1.3.1 symbols local to SDK calls alongside ROS2 spdlog 1.9.2.
++if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
++  set_property(TARGET ${SDK_LIBRARY_SHARED} APPEND_STRING PROPERTY LINK_FLAGS " -Wl,-Bsymbolic")
++endif()
