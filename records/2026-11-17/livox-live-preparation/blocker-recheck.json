@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-11-17T09:36:26+08:00",
+  "scope": "read-only blocker revalidation",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "5dbf36",
+        "wall_time_seconds": 2.9373633679999998,
+        "exit_code": 255,
+        "original_token_count": 16,
+        "output": "ssh: connect to host 192.168.1.235 port 22: No route to host\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "a4bb7d",
+        "wall_time_seconds": 0.509532433,
+        "exit_code": 0,
+        "original_token_count": 185,
+        "output": "2026-11-17T09:36:26+08:00\n0\nenP3p49s0\nlo\nwlan0\nBus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 008 Device 012: ID 2bc5:0804 Orbbec 3D Technology International, Inc Orbbec Gemini 335L\nBus 008 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 007 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 004 Device 003: ID 1b8c:0036 Altium Limited HKUST UAV NxtPX4\nBus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub\nBus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub\nBus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nd896200\nLIVE_TEST_DIR_ABSENT\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "875b08",
+        "wall_time_seconds": 4.856241882,
+        "exit_code": 0,
+        "original_token_count": 25,
+        "output": "809f624cf2df870e2444afe2d83edec41e332058\n809f624cf2df870e2444afe2d83edec41e332058\trefs/heads/main\n"
+      }
+    }
+  ],
+  "consecutive_blocker_observations": [
+    "09:34 archive turn",
+    "09:35:54 revalidation turn",
+    "09:36:26 revalidation turn"
+  ],
+  "classification": "no progress; no live job to wait for",
+  "next_required": "Restore reference host connectivity or connect target physical sensors; physical acceptance and formal switch remain incomplete"
+}

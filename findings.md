@@ -143,3 +143,5 @@ GCS诊断更新：run4独立端口直连仍失败，排除仅SSH隧道解释；�
 2026-11-17 风扇/温控只读核对：初次.224约50.846°C/PWM50、.235约77.615°C/PWM255，不可认定配置差异；两机DT温度阈值50/55/60/65/70°C与PWM档0/50/100/150/200/255及PWM控制器字段相同，新机自然冷却47.153°C时自动PWM0。官方BSP驱动源码eb1c681e…通过rockchip system monitor温度通知调速，故无单独pwmfan cooling_device或pwm-fan.service inactive不说明内核控制失效。CPU/devfreq cdev绑定soc85°C阈值，事后cur_state0不证明历史限频原因。未写PWM/改服务/换驱动；不添加固定255服务。后续测试仅新增fan_pwm/cooling_devices只读字段，语法检查通过，未重跑600秒或改写原结果。证据records/2026-11-17/fan-thermal-audit。
 
 2026-11-17 09:34续查：新机.224在线、d896200干净、NoMachine active，/tmp/livox-live-check不存在且所属测试进程为空；旧机.235仍No route to host，同网段此前公钥发现无匹配。已保存实时雷达转发实验工具及协议8项/实际接收端损坏帧负向6项通过证据；run1来源SSH预检失败保留，未取得实时雷达输入，不能标记实时定位通过。记录见records/2026-11-17/livox-live-preparation；未切换服务/网络/正式入口，未操作物理飞控。下一步等待旧机恢复联网或现场可接线。
+
+2026-11-17 09:36受阻复核：09:34、09:35:54、09:36:26连续三轮同一外部条件未变，上一轮及本轮为no progress而非等待运行中任务。.235仍No route to host；.224雷达carrier=0、仅板载网口/WiFi/lo、双目和PX4在位，d896200干净，无所属实时LIO测试进程和临时目录。电脑与GitHub809f624一致。无可推进的独立软件缺项，不重复既有隔离测试；完整目标未完成，转为blocked，待旧机联网或实物接入后恢复。证据见records/2026-11-17/livox-live-preparation/blocker-recheck.json；无机载写入。
