@@ -1,0 +1,20 @@
+{
+  "wall": 1794911823.571206,
+  "removed": [
+    "/tmp/fastlio-cause-20261117-180200-7e3e69",
+    "/tmp/fastlio-cause-profile-182024-8ec53b",
+    "/tmp/fastlio-cause-stall-182354-d0bab4",
+    "/tmp/fastlio-cause-qos-183218-3d84aa"
+  ],
+  "all_removed": true,
+  "live_diagnostic_processes": [],
+  "original_pids": [
+    73086,
+    73150,
+    73273
+  ],
+  "original_source_binary_unchanged": true,
+  "original_git_clean": true,
+  "services_active": true,
+  "source_clock_candidate_preserved": "/tmp/fastlio-source-clock-candidate"
+}

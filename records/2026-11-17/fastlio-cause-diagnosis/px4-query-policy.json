@@ -1,0 +1,20 @@
+{
+  "official_roundtrips": 7,
+  "permitted_queries": 6,
+  "mutating_message_types_rejected": [
+    11,
+    23,
+    76,
+    84,
+    85
+  ],
+  "commands": [
+    "listener estimator_status_flags 1\n",
+    "listener estimator_aid_src_ev_hgt 1\n",
+    "listener vehicle_visual_odometry 1\n",
+    "listener estimator_aid_src_ev_hgt 1\n",
+    "listener estimator_status_flags 1\n",
+    "listener estimator_aid_src_ev_hgt 1\n",
+    ""
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "remote_root": "/tmp/fastlio-cause-stall-182354-d0bab4",
+  "scope": "SIGSTOP/CONT only private diagnostic clone process group; actual session untouched"
+}

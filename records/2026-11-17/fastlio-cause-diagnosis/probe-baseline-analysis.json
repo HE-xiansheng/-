@@ -1,0 +1,94 @@
+[
+  {
+    "source": "profile-instrumented_direct.log",
+    "rows": {
+      "lidar": 80,
+      "mapping": 444,
+      "imu": 88
+    },
+    "malformed_lines": [],
+    "detected_offsets_s": [],
+    "imu_hz_from_counter": 196.7526188679414,
+    "imu_raw_age_s": {
+      "min": 0.00018405914306640625,
+      "median": 0.0037202835083007812,
+      "p95": 0.03192925453186035,
+      "max": 0.04384160041809082
+    },
+    "imu_prepublish_age_s": {
+      "min": 4.220008850097656e-05,
+      "median": 0.0001609325408935547,
+      "p95": 0.012041568756103516,
+      "max": 0.01789069175720215
+    },
+    "imu_publish_to_callback_s": {
+      "min": 0.0001418590545654297,
+      "median": 0.0008401870727539062,
+      "p95": 0.028254270553588867,
+      "max": 0.04376029968261719
+    },
+    "imu_publish_to_rmw_receive_s": null,
+    "imu_rmw_receive_to_callback_s": null,
+    "compute_s": {
+      "min": 0.009993968,
+      "median": 0.015690515,
+      "p95": 0.055897387,
+      "max": 0.085944331
+    },
+    "mapping_source_age_s": {
+      "min": 0.015862703323364258,
+      "median": 0.031355857849121094,
+      "p95": 0.06771397590637207,
+      "max": 0.1017000675201416
+    },
+    "slow_callback_spans": {},
+    "span_censoring": "Only callback durations >0.025s are logged; not a distribution of all callbacks."
+  },
+  {
+    "source": "stall-instrumented_stall.log",
+    "rows": {
+      "lidar": 76,
+      "mapping": 432,
+      "imu": 9
+    },
+    "malformed_lines": [],
+    "detected_offsets_s": [
+      1.1515760422
+    ],
+    "imu_hz_from_counter": 20.59741460218298,
+    "imu_raw_age_s": {
+      "min": 1.2676491737365723,
+      "median": 1.2748749256134033,
+      "p95": 1.2802979946136475,
+      "max": 1.2802979946136475
+    },
+    "imu_prepublish_age_s": {
+      "min": 5.7220458984375e-05,
+      "median": 0.00030517578125,
+      "p95": 0.011199235916137695,
+      "max": 0.011199235916137695
+    },
+    "imu_publish_to_callback_s": {
+      "min": 1.264564037322998,
+      "median": 1.2745730876922607,
+      "p95": 1.2801101207733154,
+      "max": 1.2801101207733154
+    },
+    "imu_publish_to_rmw_receive_s": null,
+    "imu_rmw_receive_to_callback_s": null,
+    "compute_s": {
+      "min": 0.006548214,
+      "median": 0.012922595,
+      "p95": 0.043871958,
+      "max": 0.066640355
+    },
+    "mapping_source_age_s": {
+      "min": 0.1418135166168213,
+      "median": 0.21957612037658691,
+      "p95": 0.491534948348999,
+      "max": 1.518829107284546
+    },
+    "slow_callback_spans": {},
+    "span_censoring": "Only callback durations >0.025s are logged; not a distribution of all callbacks."
+  }
+]

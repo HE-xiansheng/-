@@ -1,0 +1,10 @@
+[INFO] [1794909774.162219161] [gcs_cause_diag.cause_mapping]: p_pre->lidar_type 1
+[INFO] [1794909774.204247792] [gcs_cause_diag.cause_mapping]: Node init finished.
+Multi thread started 
+IMU Initial Done
+[WARN] [1794909776.630563680] [gcs_cause_diag.cause_mapping]: No point, skip this scan!
+
+[INFO] [1794909776.732386669] [gcs_cause_diag.cause_mapping]: Initialize the map kdtree
+Source clock alignment verified, no automatic IMU shift (0.0169695670 s)
+[INFO] [1794909818.928992253] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Rebuild thread terminated normally

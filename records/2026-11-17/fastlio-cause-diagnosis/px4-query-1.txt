@@ -1,0 +1,40 @@
+listener estimator_aid_src_ev_hgt 1
+
+TOPIC: estimator_aid_src_ev_hgt 2 instances
+
+Instance 0:
+ estimator_aid_src_ev_hgt
+    timestamp: 5725586307 (0.118903 seconds ago)
+    timestamp_sample: 5725358810 (227497 us before timestamp)
+    time_last_fuse: 5725361263
+    device_id: 0 (Type: 0x00, UNKNOWN:0 (0x00))
+    observation: -0.00307
+    observation_variance: 0.01000
+    innovation: -0.00329
+    innovation_filtered: -0.02892
+    innovation_variance: 0.02011
+    test_ratio: 0.00002
+    test_ratio_filtered: -0.00112
+    estimator_instance: 0
+    innovation_rejected: False
+    fused: True
+
+
+Instance 1:
+ estimator_aid_src_ev_hgt
+    timestamp: 5725583510 (0.158694 seconds ago)
+    timestamp_sample: 5725358818 (224692 us before timestamp)
+    time_last_fuse: 5725361371
+    device_id: 0 (Type: 0x00, UNKNOWN:0 (0x00))
+    observation: -0.00307
+    observation_variance: 0.01000
+    innovation: 0.00064
+    innovation_filtered: 0.01977
+    innovation_variance: 0.02013
+    test_ratio: 0.00000
+    test_ratio_filtered: 0.00056
+    estimator_instance: 1
+    innovation_rejected: False
+    fused: True
+
+nsh> [K

@@ -1,0 +1,144 @@
+[
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 43,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 0,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 40263,
+    "payload64": [
+      146929937842962432,
+      7308890796095794210,
+      7020383343013601394,
+      8386112020011970420,
+      8315722355164803957,
+      667936
+    ],
+    "signature": []
+  },
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 45,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 1,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 30567,
+    "payload64": [
+      146929937842962432,
+      7308890796095794212,
+      7020383343013601394,
+      6873734798208298868,
+      7520860080496145011,
+      43773883495
+    ],
+    "signature": []
+  },
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 44,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 2,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 36997,
+    "payload64": [
+      146929937842962432,
+      7308890796095794211,
+      7810202075890327666,
+      7809652367388204901,
+      8247328338316914527,
+      170991737
+    ],
+    "signature": []
+  },
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 45,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 3,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 34979,
+    "payload64": [
+      146929937842962432,
+      7308890796095794212,
+      7020383343013601394,
+      6873734798208298868,
+      7520860080496145011,
+      43773883495
+    ],
+    "signature": []
+  },
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 43,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 4,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 56369,
+    "payload64": [
+      146929937842962432,
+      7308890796095794210,
+      7020383343013601394,
+      8386112020011970420,
+      8315722355164803957,
+      667936
+    ],
+    "signature": []
+  },
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 45,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 5,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 33022,
+    "payload64": [
+      146929937842962432,
+      7308890796095794212,
+      7020383343013601394,
+      6873734798208298868,
+      7520860080496145011,
+      43773883495
+    ],
+    "signature": []
+  },
+  {
+    "framing_status": 1,
+    "magic": 253,
+    "len": 7,
+    "incompat_flags": 0,
+    "compat_flags": 0,
+    "seq": 6,
+    "sysid": 245,
+    "compid": 190,
+    "msgid": 126,
+    "checksum": 31542,
+    "payload64": [
+      2814749767106560
+    ],
+    "signature": []
+  }
+]

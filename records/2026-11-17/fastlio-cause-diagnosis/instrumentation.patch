@@ -1,0 +1,62 @@
+--- installed/laserMapping.cpp
++++ diagnostic/laserMapping.cpp
+@@ -307,13 +307,26 @@
+     sig_buffer.notify_all();
+ }
+ 
++static double diag_imu_raw = 0., diag_imu_pub = 0., diag_imu_cb = 0.;
++static uint64_t diag_imu_count = 0;
++static double diag_wall() {
++    return std::chrono::duration<double>(std::chrono::system_clock::now().time_since_epoch()).count();
++}
+ double timediff_lidar_wrt_imu = 0.0;
+ bool   timediff_set_flg = false;
+-void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg) 
++void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg, const rclcpp::MessageInfo &diag_info) 
+ {
+     mtx_buffer.lock();
+     double cur_time = get_time_sec(msg->header.stamp);
+     double preprocess_start_time = omp_get_wtime();
++    static double diag_last_lidar = 0.;
++    const double diag_lidar_now = diag_wall();
++    if (diag_lidar_now-diag_last_lidar >= .5) {
++        printf("DIAG {\"kind\":\"lidar\",\"wall\":%.9f,\"raw_start\":%.9f,\"published\":%.9f,\"imu_raw\":%.9f,\"imu_callback\":%.9f,\"lidar_queue\":%zu}\n",
++               diag_lidar_now,cur_time,diag_info.get_rmw_message_info().source_timestamp*1e-9,
++               diag_imu_raw,diag_imu_cb,lidar_buffer.size());
++        fflush(stdout);diag_last_lidar=diag_lidar_now;
++    }
+     scan_count ++;
+     if (!is_first_lidar && cur_time < last_timestamp_lidar)
+     {
+@@ -348,8 +361,16 @@
+     sig_buffer.notify_all();
+ }
+ 
+-void imu_cbk(const sensor_msgs::msg::Imu::UniquePtr msg_in)
+-{
++void imu_cbk(const sensor_msgs::msg::Imu::UniquePtr msg_in, const rclcpp::MessageInfo &diag_info)
++{
++    diag_imu_raw = get_time_sec(msg_in->header.stamp);
++    diag_imu_pub = diag_info.get_rmw_message_info().source_timestamp * 1e-9;
++    diag_imu_cb = diag_wall();
++    if (++diag_imu_count % 100 == 0) {
++        printf("DIAG {\"kind\":\"imu\",\"wall\":%.9f,\"raw\":%.9f,\"published\":%.9f,\"age\":%.9f,\"count\":%llu}\n",
++               diag_imu_cb,diag_imu_raw,diag_imu_pub,diag_imu_cb-diag_imu_raw,(unsigned long long)diag_imu_count);
++        fflush(stdout);
++    }
+     publish_count ++;
+     // cout<<"IMU got at: "<<msg_in->header.stamp.toSec()<<endl;
+     sensor_msgs::msg::Imu::SharedPtr msg(new sensor_msgs::msg::Imu(*msg_in));
+@@ -1060,6 +1081,12 @@
+ 
+             /******* Publish odometry *******/
+             publish_odometry(pubOdomAftMapped_, tf_broadcaster_);
++            printf("DIAG {\"kind\":\"mapping\",\"wall\":%.9f,\"source_end\":%.9f,\"compute_s\":%.9f,\"match_s\":%.9f,\"imu_raw\":%.9f,\"imu_published\":%.9f,\"imu_callback\":%.9f,\"imu_count\":%llu,\"lidar_queue\":%zu,\"imu_queue\":%zu,\"shift\":%.9f}\n",
++                   diag_wall(),lidar_end_time,t_update_end-t0,match_time,
++                   diag_imu_raw,diag_imu_pub,diag_imu_cb,(unsigned long long)diag_imu_count,
++                   lidar_buffer.size(),imu_buffer.size(),timediff_lidar_wrt_imu);
++            fflush(stdout);
++
+ 
+             /*** add the feature points to map kdtree ***/
+             t3 = omp_get_wtime();

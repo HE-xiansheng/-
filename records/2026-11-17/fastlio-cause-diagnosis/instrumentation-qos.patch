@@ -1,0 +1,75 @@
+--- diagnostic-v1/laserMapping.cpp
++++ diagnostic-qos/laserMapping.cpp
+@@ -312,10 +312,23 @@
+ static double diag_wall() {
+     return std::chrono::duration<double>(std::chrono::system_clock::now().time_since_epoch()).count();
+ }
++struct DiagSpan {
++    const char *kind;
++    double begin;
++    explicit DiagSpan(const char *label) : kind(label), begin(omp_get_wtime()) {}
++    ~DiagSpan() {
++        const double duration = omp_get_wtime() - begin;
++        if (duration > .025) {
++            printf("DIAG {\"kind\":\"span\",\"callback\":\"%s\",\"wall\":%.9f,\"duration\":%.9f}\n", kind, diag_wall(), duration);
++            fflush(stdout);
++        }
++    }
++};
+ double timediff_lidar_wrt_imu = 0.0;
+ bool   timediff_set_flg = false;
+ void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg, const rclcpp::MessageInfo &diag_info) 
+ {
++    DiagSpan diag_span("lidar");
+     mtx_buffer.lock();
+     double cur_time = get_time_sec(msg->header.stamp);
+     double preprocess_start_time = omp_get_wtime();
+@@ -363,12 +376,16 @@
+ 
+ void imu_cbk(const sensor_msgs::msg::Imu::UniquePtr msg_in, const rclcpp::MessageInfo &diag_info)
+ {
++    DiagSpan diag_span("imu");
+     diag_imu_raw = get_time_sec(msg_in->header.stamp);
+     diag_imu_pub = diag_info.get_rmw_message_info().source_timestamp * 1e-9;
+     diag_imu_cb = diag_wall();
+-    if (++diag_imu_count % 100 == 0) {
+-        printf("DIAG {\"kind\":\"imu\",\"wall\":%.9f,\"raw\":%.9f,\"published\":%.9f,\"age\":%.9f,\"count\":%llu}\n",
+-               diag_imu_cb,diag_imu_raw,diag_imu_pub,diag_imu_cb-diag_imu_raw,(unsigned long long)diag_imu_count);
++    ++diag_imu_count;
++    static double diag_last_imu_log = 0.;
++    if (diag_imu_cb - diag_last_imu_log >= .5) {
++        diag_last_imu_log = diag_imu_cb;
++        printf("DIAG {\"kind\":\"imu\",\"wall\":%.9f,\"raw\":%.9f,\"published\":%.9f,\"received\":%.9f,\"age\":%.9f,\"count\":%llu}\n",
++               diag_imu_cb,diag_imu_raw,diag_imu_pub,diag_info.get_rmw_message_info().received_timestamp*1e-9,diag_imu_cb-diag_imu_raw,(unsigned long long)diag_imu_count);
+         fflush(stdout);
+     }
+     publish_count ++;
+@@ -945,7 +962,11 @@
+         {
+             sub_pcl_pc_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, rclcpp::SensorDataQoS(), standard_pcl_cbk);
+         }
+-        sub_imu_ = this->create_subscription<sensor_msgs::msg::Imu>(imu_topic, 10, imu_cbk);
++        const bool diag_best_effort = this->declare_parameter<bool>("diag_imu_best_effort", false);
++        auto diag_imu_qos = rclcpp::QoS(rclcpp::KeepLast(10));
++        if (diag_best_effort) diag_imu_qos.best_effort();
++        RCLCPP_INFO(this->get_logger(), "DIAG IMU QoS: %s depth 10", diag_best_effort ? "best_effort" : "reliable");
++        sub_imu_ = this->create_subscription<sensor_msgs::msg::Imu>(imu_topic, diag_imu_qos, imu_cbk);
+         pubLaserCloudFull_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered", 20);
+         pubLaserCloudFull_body_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered_body", 20);
+         pubLaserCloudEffect_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_effected", 20);
+@@ -976,6 +997,7 @@
+ private:
+     void timer_callback()
+     {
++        DiagSpan diag_span("timer");
+         if(sync_packages(Measures))
+         {
+             if (flg_first_scan)
+@@ -1134,6 +1156,7 @@
+ 
+     void map_publish_callback()
+     {
++        DiagSpan diag_span("map_publish");
+         if (map_pub_en) publish_map(pubLaserCloudMap_);
+     }
+ 

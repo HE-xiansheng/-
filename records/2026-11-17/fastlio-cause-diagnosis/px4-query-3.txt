@@ -1,0 +1,26 @@
+listener estimator_aid_src_ev_hgt 1
+
+TOPIC: estimator_aid_src_ev_hgt 2Type: 0x00, UNKNOWN:0 (0x00))
+    observation: -0.00620
+    observation_variance: 0.01000
+    innovation: -0.00913
+    innovation_filtered: -0.02193
+    innovation_variance: 0.04027
+    test_ratio: 0.00008
+    test_ratio_filtered: -0.00068
+    estimator_instance: 0
+    innovation_rejected: False
+    fused: False
+
+
+Instance 1:
+ estimator_aid_src_ev_ple: 5731059725 (229324 us before timestamp)
+    time_last_fuse: 57310  innovation_filtered: -0.00100
+    innovation_variance: 0.04007
+    test_ratio: 0.00023
+    test_ratio_filtered: -0.00002
+    estimator_instance: 1
+    innovation_rejected: False
+    fused: False
+
+nsh> [K

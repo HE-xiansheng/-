@@ -1,0 +1,17 @@
+listener vehicle_visual_odometry 1
+
+TOPIC: vehicle_visual_odometry
+ vehicle_visual_odometry
+    timestamp: 5728645582 (0.058205 seconds ago)
+    timestamp_sample: 5728465568 (180014 us before timestamp)
+    position: [-0.01531, -0.01223, -0.00810]
+    q: [0.80049, 0.00511, -0.00479, 0.59929] (Roll: 0.1 deg, Pitch: -0.7 deg, Yaw: 73.6 deg)
+    velocn_variance: [0.00000, 0.00000, 0.00000]
+    orientation_variance: [0.00000, 0.00000, 0.00000]
+    velocity_variance: [nan, nan, nan]
+    pose_frame: 1
+    velocity_frame: 0
+    reset_counter: 0
+    quality: 0
+
+nsh> [K

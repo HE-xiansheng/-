@@ -1,0 +1,134 @@
+
+NuttShell (NSH) NuttX-11.0.0
+nsh> [Klistener estimator_status_flags 1
+
+TOPIC: estimator_status_flags 2 instances
+
+Instance 0:
+ estimator_stamp_sample: 5721677848 (222022 us before timestamp)
+    control_status_changes: 8286
+    fault_status_changes: 0
+    innovation_fault_status_changes: 0
+    cs_tilt_align: True
+    cs_yaw_align: True
+    cs_gnss_pos: False
+    cs_opt_flow: False
+    cs_mag_hdg: False
+    cs_mag_3d: False
+    cs_mag_dec: False
+    cs_in_air: False
+    cs_wind: False
+    cs_baro_hgt: False
+    cs_rng_hgt: False
+    cs_gps_hgt: False
+    cs_ev_pos: False
+    cs_ev_yaw: False
+    cs_ev_hgt: False
+    cs_fuse_beta: False
+    cs_mag_field_disturbed: False
+    cs_fixed_wing: False
+    cs_mag_fault: False
+    cs_fuse_aspd: False
+    cs_gnd_effect:
+    cs_vehicle_at_rest: False
+    cs_gnss_yaw_fault: False
+    cs_rng_fault: False
+    cs_inertial_dead_reckoning: True
+    cs_wind_dead_reckoning: False
+    cs_rng_kin_consistent: False
+    cs_fake_pos: False
+    cs_fake_hgt: False
+    cs_gravity_vector: True
+    cs_mag: False
+    cs_ev_yaw_fault: False
+    cs_mag_heading_consistent: False
+    cs_aux_gpos: False
+    cs_rng_terrain: False
+    cs_opt_flow_terrain: False
+    cs_valid_fake_pos: False
+    cs_constant_pos: False
+    cs_baro_fault: False
+    cs_gnss_vel: False
+    fs_bad_mag_x: False
+    fs_bad_mag_y: False
+    fs_bad_mag_z: False
+    fs_bad_hdg: False
+    fs_bad_mag_decl: False
+    fs_bad_airspeed: False
+    fs_bad_sideslip: False
+    fs_bad_optflow_x: False
+    fs_bad_optflow_y: False
+    fs_bad_acc_vertical: False
+    fs_bad_acc_clipping: False
+    reject_hor_vel: False
+    reject_ver_vel: False
+    reject_hor_pos: False
+    reject_ver_pos: False
+    reject_yaw: False
+    reject_airspeed: False
+    reject_sideslip: False
+    reject_hagl: False
+    reject_optflow_x: Fals  timestamp: 5721898486 (0.895179 seconds ago)
+    timestamp_sample: 5721675333 (223153 us before timestamp)
+    control_status_changes: 8281
+    fault_status_changes: 0
+    innovation_fault_status_changes: 0
+    cs_tilt_align: True
+    cs_yaw_align: True
+    cs_gnss_pos: False
+    cs_opt_flow: False
+    cs_mag_hdg: False
+    cs_mag_3d: False
+    cs_mag_dec: False
+    cs_in_air: False
+    cs_wind: False
+    cs_baro_halse
+    cs_ev_yaw: False
+    cs_ev_hgt: False
+    cs_fuse_beta: False
+    cs_mag_field_disturbed: False
+    cs_fixed_wing: False
+    cs_mag_fault: False
+    cs_fuse_aspd: False
+    cs_gnd_effect: False
+    cs_rng_stuck: False
+    cs_gnss_yaw: False
+    cs_mag_aligned_in_flight: False
+    cs_ev_vel: False
+    cs_synthetic_mag_z: False
+    cs_vehicle_at_rest: False
+    cs_gnss_yaw_fault: False
+    cs_rng_fault: False
+    cs_inertial_dead_reckoning: True
+    cs_wind_dead_reckoning: False
+    cs_rng_kin_consistent: False
+    cs_fake_pos: False
+    cs_fake_hfault: False
+    cs_mag_heading_consistent: False
+    cs_aux_gpos: Falid_fake_pos: False
+    cs_constant_pos: False
+    cs_baro_fault: False
+    cs_gnss_vel: False
+    fs_bad_mag_x: False
+    fs_bad_mag_y: False
+    fs_bad_mag_z: False
+    fs_bad_hdg: False
+    fs_bad_mag_decl: False
+    fs_bad_airspeed: False
+    fs_bad_sideslip: False
+    fs_bad_optflow_x: False
+    fs_bad_optflow_y: False
+    fs_bad_acc_vertical: False
+    fs_bad_acc_clipping: False
+    reject_hor_vel: False
+    reject_ver_vel: False
+    reject_hor_pos: False
+    reject_ver_pos: False
+    reject_yaw: False
+    reject_airspeed: False
+    reject_sideslip: False
+    reject_hagl: False
+    reject_optflow_x: False
+    reject_optflow_y: False
+
+nsh> [K

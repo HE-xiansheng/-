@@ -1,0 +1,5 @@
+{
+  "remote_root": "/tmp/fastlio-cause-profile-182024-8ec53b",
+  "binary": "/tmp/fastlio-cause-20261117-180200-7e3e69/probe_build/fastlio_mapping",
+  "input": "original /livox/lidar and /livox/imu; no private pause or IMU republishing"
+}

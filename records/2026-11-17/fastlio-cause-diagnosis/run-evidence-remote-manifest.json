@@ -1,0 +1,86 @@
+{
+  "/tmp/fastlio-cause-20261117-180200-7e3e69": {
+    "candidate_gap.log": {
+      "bytes": 559,
+      "sha256": "da479e49b924cc8c05d2fa7a9604c1f31ea4eb2b3bc6f12909b34cd282aeb7af"
+    },
+    "observations.json": {
+      "bytes": 5337625,
+      "sha256": "7559e1572283e57d49a1bcd88e1fc4bdfa2f22b856c9e4d632081e1949cd77b1"
+    },
+    "original_gap.log": {
+      "bytes": 627,
+      "sha256": "25e106d3f1609fa24e0dc501d3191cbbb4103304867bd7172722c3224bf21f0f"
+    },
+    "read_runtime.py": {
+      "bytes": 4414,
+      "sha256": "8eef5dc05589da7f296d78fbaa42fb7e130db6cf8a5564c223a8125281d33f2f"
+    },
+    "read_runtime_with_flags.py": {
+      "bytes": 4562,
+      "sha256": "71f39f17f1f0d6e0247de00bee704245e312beaa3640da58983f7d08dc4d2b27"
+    },
+    "runtime-flags.json": {
+      "bytes": 65928,
+      "sha256": "081ebca5ec3c0cc68e63f4637d2d71231d4ff6e4145a33f27e538622bb66698e"
+    },
+    "runtime-globals.json": {
+      "bytes": 311152,
+      "sha256": "aafe8561ca96af13c51ee43c09ac815bc2e5a677c238cdb7c54e639176c8d5bf"
+    },
+    "summary.json": {
+      "bytes": 2808,
+      "sha256": "fcc6f3d97e883d8d05ef98e2542caf0aac74cc0796106b4fe9cce2898ec2321e"
+    }
+  },
+  "/tmp/fastlio-cause-profile-182024-8ec53b": {
+    "instrumented_direct.log": {
+      "bytes": 163111,
+      "sha256": "eeb2132e7db8d169ed1ea4cd76619adc1398813c25cbc7e92c4d29488962499b"
+    },
+    "observations.json": {
+      "bytes": 2737880,
+      "sha256": "5f344c325bdb0342b64f4368301093491b63625f1be83aea07c77a3ab5ccfaaf"
+    },
+    "summary.json": {
+      "bytes": 1417,
+      "sha256": "02c7bfcb143b6ebdae15fba349e800b8da09ed66aca61e151ada1027d59ce5b4"
+    }
+  },
+  "/tmp/fastlio-cause-stall-182354-d0bab4": {
+    "instrumented_stall.log": {
+      "bytes": 148209,
+      "sha256": "dab6597c42b0f93df4fdedd3e5aa2c26ba6360341883a2aab5ef1d4264cfcb3f"
+    },
+    "observations.json": {
+      "bytes": 2766862,
+      "sha256": "bed1eb865a799e435947e8a3f0422c9dcd16390aec16e451e344472eeb8230b7"
+    },
+    "summary.json": {
+      "bytes": 1438,
+      "sha256": "be2e56c2b82ab481c1db56f6e302082620bef164c91400ea017311c419a6a2b1"
+    }
+  },
+  "/tmp/fastlio-cause-qos-183218-3d84aa": {
+    "best_effort.log": {
+      "bytes": 131146,
+      "sha256": "8e8f62f626d2c3f433b18a9d922d1ed915180a8ef86618681f0b43f330628a90"
+    },
+    "observations.json": {
+      "bytes": 6275797,
+      "sha256": "ebe2f24103f32cc85d523dfd95e5f0cc44eff1b01a12648af830dce1e2fc6b0f"
+    },
+    "reliable_1.log": {
+      "bytes": 134710,
+      "sha256": "990eb8f1ca25d8defd3733dbd216ab758b3c82b76cc9a302095a3a5310820b99"
+    },
+    "reliable_2.log": {
+      "bytes": 135737,
+      "sha256": "fb4c295e18c797b29bf6af98f4be12c1366a24e5547ce33470ba9f21e29119c6"
+    },
+    "summary.json": {
+      "bytes": 4411,
+      "sha256": "b69b17d4cc9392fa73ae718cef02030a5cdf42dc35808fd3b8bfb501276f5cf7"
+    }
+  }
+}

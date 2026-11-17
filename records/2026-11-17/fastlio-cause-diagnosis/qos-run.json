@@ -1,0 +1,13 @@
+{
+  "remote_root": "/tmp/fastlio-cause-qos-183218-3d84aa",
+  "seconds_per_phase": 35,
+  "phases": [
+    "reliable_1",
+    "best_effort",
+    "reliable_2"
+  ],
+  "pause_clone_only_s": [
+    10,
+    11.4
+  ]
+}

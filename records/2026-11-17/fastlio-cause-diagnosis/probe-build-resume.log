@@ -1,0 +1,6 @@
+[ 12%] Built target fast_lio__cpp
+Consolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_cpp
+[ 50%] Built target fast_lio__rosidl_typesupport_cpp
+Consolidate compiler generated dependencies of target fastlio_mapping
+[ 62%] Linking CXX executable fastlio_mapping
+[100%] Built target fastlio_mapping

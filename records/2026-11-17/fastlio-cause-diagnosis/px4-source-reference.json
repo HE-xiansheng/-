@@ -1,0 +1,38 @@
+[
+  {
+    "version": "v1.16.0",
+    "path": "src/modules/ekf2/EKF/common.h",
+    "sha256": "644e928f076791f168551342eb61c833c3e2ab733b5784ad8cc3ec7bd4757a9a",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/v1.16.0/src/modules/ekf2/EKF/common.h",
+    "first_line": 65,
+    "last_line": 77,
+    "excerpt": "using math::Utilities::sq;\nusing math::Utilities::updateYawInRotMat;\n\n// maximum sensor intervals in usec\nstatic constexpr uint64_t BARO_MAX_INTERVAL     =\n\t200e3;  ///< Maximum allowable time interval between pressure altitude measurements (uSec)\nstatic constexpr uint64_t EV_MAX_INTERVAL       =\n\t200e3;  ///< Maximum allowable time interval between external vision system measurements (uSec)\nstatic constexpr uint64_t GNSS_MAX_INTERVAL     =\n\t500e3;  ///< Maximum allowable time interval between GNSS measurements (uSec)\nstatic constexpr uint64_t GNSS_YAW_MAX_INTERVAL =\n\t1500e3; ///< Maximum allowable time interval between GNSS yaw measurements (uSec)\nstatic constexpr uint64_t MAG_MAX_INTERVAL      =\n"
+  },
+  {
+    "version": "v1.16.0",
+    "path": "src/modules/ekf2/EKF/aid_sources/external_vision/ev_control.cpp",
+    "sha256": "746e260126af14a375277fdfafbba04069a2693e841b877b5842ffd4fcdf9148",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/v1.16.0/src/modules/ekf2/EKF/aid_sources/external_vision/ev_control.cpp",
+    "first_line": 94,
+    "last_line": 115,
+    "excerpt": "\t\t\t\t      _aid_src_ev_hgt);\n\n\t\tif (quality_sufficient) {\n\t\t\t_ev_sample_prev = ev_sample;\n\t\t}\n\n\t} else if ((_control_status.flags.ev_pos || _control_status.flags.ev_vel || _control_status.flags.ev_yaw\n\t\t    || _control_status.flags.ev_hgt)\n\t\t   && isTimedOut(_ev_sample_prev.time_us, 2 * EV_MAX_INTERVAL)) {\n\n\t\t// Turn off EV fusion mode if no data has been received\n\t\tstopEvPosFusion();\n\t\tstopEvVelFusion();\n\t\tstopEvYawFusion();\n\t\tstopEvHgtFusion();\n\n\t\t_ev_q_error_initialized = false;\n\n\t\tECL_WARN(\"vision data stopped\");\n\t}\n}\n\n"
+  },
+  {
+    "version": "v1.16.0",
+    "path": "src/modules/ekf2/EKF/ekf_helper.cpp",
+    "sha256": "8fd22668f86dcf460ce7329c31293175c9e984d42d96b415d19d52e1307f5435",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/v1.16.0/src/modules/ekf2/EKF/ekf_helper.cpp",
+    "first_line": 696,
+    "last_line": 712,
+    "excerpt": "\t// 4\tESTIMATOR_VELOCITY_VERT\tTrue if the vertical velocity estimate is good\n\tsoln_status.flags.velocity_vert = isLocalVerticalVelocityValid() || isLocalVerticalPositionValid();\n\n\t// 8\tESTIMATOR_POS_HORIZ_REL\tTrue if the horizontal position (relative) estimate is good\n\tsoln_status.flags.pos_horiz_rel = isLocalHorizontalPositionValid();\n\n\t// 16\tESTIMATOR_POS_HORIZ_ABS\tTrue if the horizontal position (absolute) estimate is good\n\tsoln_status.flags.pos_horiz_abs = isGlobalHorizontalPositionValid();\n\n\t// 32\tESTIMATOR_POS_VERT_ABS\tTrue if the vertical position (absolute) estimate is good\n\tsoln_status.flags.pos_vert_abs = isVerticalAidingActive();\n\n\t// 64\tESTIMATOR_POS_VERT_AGL\tTrue if the vertical position (above ground) estimate is good\n#if defined(CONFIG_EKF2_TERRAIN)\n\tsoln_status.flags.pos_vert_agl = isTerrainEstimateValid();\n#endif // CONFIG_EKF2_TERRAIN\n\n"
+  },
+  {
+    "version": "v1.16.0",
+    "path": "src/modules/ekf2/EKF/estimator_interface.cpp",
+    "sha256": "b9c651a97dc0e47759eb9611aff1273955067491b3b58fdfd06dcd25af0a36a2",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/v1.16.0/src/modules/ekf2/EKF/estimator_interface.cpp",
+    "first_line": 660,
+    "last_line": 683,
+    "excerpt": "\t       + int(_control_status.flags.rng_hgt)\n\t       + int(_control_status.flags.ev_hgt);\n}\n\nbool EstimatorInterface::isVerticalAidingActive() const\n{\n\treturn isVerticalPositionAidingActive() || isVerticalVelocityAidingActive();\n}\n\nbool EstimatorInterface::isVerticalVelocityAidingActive() const\n{\n\treturn getNumberOfActiveVerticalVelocityAidingSources() > 0;\n}\n\nint EstimatorInterface::getNumberOfActiveVerticalVelocityAidingSources() const\n{\n\treturn int(_control_status.flags.gnss_vel)\n\t       + int(_control_status.flags.ev_vel);\n}\n\nbool EstimatorInterface::isNorthEastAidingActive() const\n{\n\treturn _control_status.flags.gnss_pos\n\t       || _control_status.flags.gnss_vel\n"
+  }
+]

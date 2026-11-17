@@ -1,0 +1,189 @@
+[
+  {
+    "command": "listener estimator_status_flags 1\n",
+    "chars": 3525,
+    "instances": [
+      {
+        "instance": 0,
+        "fields": {
+          "cs_baro_hgt": false,
+          "cs_rng_hgt": false,
+          "cs_gps_hgt": false,
+          "cs_ev_pos": false,
+          "cs_ev_yaw": false,
+          "cs_ev_hgt": false,
+          "timestamp_sample": 5721675333,
+          "timestamp_sample_annotation": {
+            "value": 223153.0,
+            "unit": "us before timestamp"
+          },
+          "cs_ev_vel": false
+        }
+      }
+    ],
+    "rejected_fields": []
+  },
+  {
+    "command": "listener estimator_aid_src_ev_hgt 1\n",
+    "chars": 1112,
+    "instances": [
+      {
+        "instance": 0,
+        "fields": {
+          "timestamp": 5725586307,
+          "timestamp_annotation": {
+            "value": 0.118903,
+            "unit": "seconds ago"
+          },
+          "timestamp_sample": 5725358810,
+          "timestamp_sample_annotation": {
+            "value": 227497.0,
+            "unit": "us before timestamp"
+          },
+          "time_last_fuse": 5725361263,
+          "innovation_rejected": false,
+          "fused": true
+        }
+      },
+      {
+        "instance": 1,
+        "fields": {
+          "timestamp": 5725583510,
+          "timestamp_annotation": {
+            "value": 0.158694,
+            "unit": "seconds ago"
+          },
+          "timestamp_sample": 5725358818,
+          "timestamp_sample_annotation": {
+            "value": 224692.0,
+            "unit": "us before timestamp"
+          },
+          "time_last_fuse": 5725361371,
+          "innovation_rejected": false,
+          "fused": true
+        }
+      }
+    ],
+    "rejected_fields": []
+  },
+  {
+    "command": "listener vehicle_visual_odometry 1\n",
+    "chars": 568,
+    "instances": [],
+    "rejected_fields": []
+  },
+  {
+    "command": "listener estimator_aid_src_ev_hgt 1\n",
+    "chars": 696,
+    "instances": [
+      {
+        "instance": 1,
+        "fields": {
+          "innovation_rejected": false,
+          "fused": false
+        }
+      }
+    ],
+    "rejected_fields": [
+      {
+        "instance": 1,
+        "field": "time_last_fuse",
+        "raw": "57310  innovation_filtered: -0.00100"
+      }
+    ]
+  },
+  {
+    "command": "listener estimator_status_flags 1\n",
+    "chars": 3623,
+    "instances": [
+      {
+        "instance": 0,
+        "fields": {
+          "timestamp": 5734481826,
+          "timestamp_annotation": {
+            "value": 0.240189,
+            "unit": "seconds ago"
+          },
+          "timestamp_sample": 5734258482,
+          "timestamp_sample_annotation": {
+            "value": 223344.0,
+            "unit": "us before timestamp"
+          },
+          "cs_baro_hgt": false,
+          "cs_rng_hgt": false,
+          "cs_gps_hgt": false,
+          "cs_ev_pos": false,
+          "cs_ev_yaw": false,
+          "cs_ev_hgt": false,
+          "cs_ev_vel": false
+        }
+      },
+      {
+        "instance": 1,
+        "fields": {
+          "timestamp": 5734471192,
+          "timestamp_annotation": {
+            "value": 0.34422,
+            "unit": "seconds ago"
+          },
+          "timestamp_sample": 5734248117,
+          "timestamp_sample_annotation": {
+            "value": 223075.0,
+            "unit": "us before timestamp"
+          },
+          "cs_baro_hgt": false,
+          "cs_rng_hgt": false,
+          "cs_gps_hgt": false,
+          "cs_ev_pos": false,
+          "cs_ev_yaw": false,
+          "cs_ev_hgt": false,
+          "cs_ev_vel": false
+        }
+      }
+    ],
+    "rejected_fields": []
+  },
+  {
+    "command": "listener estimator_aid_src_ev_hgt 1\n",
+    "chars": 1112,
+    "instances": [
+      {
+        "instance": 0,
+        "fields": {
+          "timestamp": 5737186872,
+          "timestamp_annotation": {
+            "value": 0.538292,
+            "unit": "seconds ago"
+          },
+          "timestamp_sample": 5736959056,
+          "timestamp_sample_annotation": {
+            "value": 227816.0,
+            "unit": "us before timestamp"
+          },
+          "time_last_fuse": 5736964820,
+          "innovation_rejected": false,
+          "fused": true
+        }
+      },
+      {
+        "instance": 1,
+        "fields": {
+          "timestamp": 5737186913,
+          "timestamp_annotation": {
+            "value": 0.575045,
+            "unit": "seconds ago"
+          },
+          "timestamp_sample": 5736959038,
+          "timestamp_sample_annotation": {
+            "value": 227875.0,
+            "unit": "us before timestamp"
+          },
+          "time_last_fuse": 5736961335,
+          "innovation_rejected": false,
+          "fused": true
+        }
+      }
+    ],
+    "rejected_fields": []
+  }
+]
