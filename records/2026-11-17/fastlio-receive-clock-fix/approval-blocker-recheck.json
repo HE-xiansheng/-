@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-17T20:09:27.889378+08:00",
+  "classification": "no progress",
+  "consecutive_blocker_round": 3,
+  "blocker": "User confirmation is required before stopping the current localization session and rebuilding the map origin; no reply has arrived.",
+  "source": "Initial user instruction: stop existing services or switch the production runtime only after explaining the effect and receiving confirmation.",
+  "current_state": {
+    "boot": "98055533-8b20-4466-9b95-dbffe318060f",
+    "formal_ticks": {
+      "73086": "197619",
+      "73150": "197662",
+      "73273": "197826"
+    },
+    "candidate_processes": [],
+    "candidate_deployed": false
+  },
+  "independent_work_complete": true,
+  "active_verification_jobs": [],
+  "goal_achieved": false,
+  "next_action": "After explicit approval, repeat the gate and stop only owned localization/relay; perform the prepared single-instance validation."
+}
