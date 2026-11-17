@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "scope": "existing production base services, passive subscriptions only",
+  "checks": {
+    "native_observer_normal_exit": true,
+    "lidar_rate": true,
+    "lidar_timestamps": true,
+    "lidar_age": true,
+    "lidar_imu_rate": true,
+    "lidar_imu_timestamps": true,
+    "lidar_imu_age": true,
+    "color_rate": true,
+    "color_timestamps": true,
+    "color_age": true,
+    "depth_rate": true,
+    "depth_timestamps": true,
+    "depth_age": true,
+    "gimbal_raw_rate": true,
+    "gimbal_raw_timestamps": true,
+    "gimbal_raw_age": true,
+    "gimbal_color_rate": true,
+    "gimbal_color_timestamps": true,
+    "gimbal_color_age": true,
+    "fcu_imu_rate": true,
+    "fcu_imu_timestamps": true,
+    "fcu_imu_age": true,
+    "fcu_pose_rate": true,
+    "fcu_pose_timestamps": true,
+    "fcu_pose_age": true,
+    "PX4_connected_disarmed": true,
+    "no_task_publisher:/mavros/vision_pose/pose": true,
+    "no_task_publisher:/mavros/setpoint_position/local": true,
+    "no_task_publisher:/mavros/setpoint_raw/local": true,
+    "no_task_publisher:/mavros/setpoint_raw/attitude": true,
+    "Safina_sensor.service": true,
+    "gimbal-rtsp-relay.service": true
+  },
+  "streams": {
+    "lidar": {
+      "messages": 300,
+      "hz": 9.998207720949653,
+      "min_age_s": 0.094607377,
+      "max_age_s": 0.124563414
+    },
+    "lidar_imu": {
+      "messages": 6002,
+      "hz": 199.99885149135045,
+      "min_age_s": 0.000127749,
+      "max_age_s": 0.016675655
+    },
+    "color": {
+      "messages": 900,
+      "hz": 29.96523778928525,
+      "min_age_s": 0.040627327,
+      "max_age_s": 0.075300405
+    },
+    "depth": {
+      "messages": 900,
+      "hz": 29.965397138667488,
+      "min_age_s": 0.063819426,
+      "max_age_s": 0.097057306
+    },
+    "gimbal_raw": {
+      "messages": 900,
+      "hz": 29.995504012273862,
+      "min_age_s": 0.003300189,
+      "max_age_s": 0.029012793
+    },
+    "gimbal_color": {
+      "messages": 450,
+      "hz": 15.03757057835696,
+      "min_age_s": 0.016644446,
+      "max_age_s": 0.100518843
+    },
+    "fcu_imu": {
+      "messages": 1500,
+      "hz": 49.99716010460465,
+      "min_age_s": 0.00160083,
+      "max_age_s": 0.020059439
+    },
+    "fcu_pose": {
+      "messages": 901,
+      "hz": 29.998385218922238,
+      "min_age_s": 0.001647735,
+      "max_age_s": 0.031989476
+    }
+  },
+  "boot_id": "0de97dc1-35d4-4017-9098-634ce01a8627",
+  "Safina_sensor.service": {
+    "NRestarts": "0",
+    "ActiveState": "active",
+    "UnitFileState": "enabled"
+  },
+  "gimbal-rtsp-relay.service": {
+    "NRestarts": "0",
+    "ActiveState": "active",
+    "UnitFileState": "enabled"
+  },
+  "last_states": [
+    {
+      "receipt": 3710.725285385,
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "receipt": 3711.726060045,
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "receipt": 3712.726585039,
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "receipt": 3713.724685714,
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    },
+    {
+      "receipt": 3714.72635841,
+      "connected": true,
+      "armed": false,
+      "mode": "AUTO.LOITER"
+    }
+  ]
+}

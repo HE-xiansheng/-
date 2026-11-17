@@ -1,0 +1,5 @@
+ab6927ed2ced2d38f375e0fdc1ea21ff9d4868ccd89acf05c99aa9d064c08627  /home/orangepi/drone_platform/03_tools/systemd/Safina_sensor.service
+ab6927ed2ced2d38f375e0fdc1ea21ff9d4868ccd89acf05c99aa9d064c08627  /etc/systemd/system/Safina_sensor.service
+b2ec07f9612db51c79dac4d052c1cb4393551cd4e82c5d9da6438b1ba6dc35c3  /home/orangepi/drone_platform/03_tools/systemd/gimbal-rtsp-relay.service
+b2ec07f9612db51c79dac4d052c1cb4393551cd4e82c5d9da6438b1ba6dc35c3  /etc/systemd/system/gimbal-rtsp-relay.service
+c3b64f9260464f4a2047e4f317c2e9b663025f95f2a12ac0791b2fbf7395c79a  /home/orangepi/drone_platform/03_tools/systemd/wait_for_sensor_devices.py

@@ -1,0 +1,12 @@
+{
+  "source": "/home/tyzk/工作项目/地面站与平台/dianyunGCS-ros2-20261116/dianyunGCS-master",
+  "profile_domain_before": 175,
+  "profile_domain_after": 0,
+  "reader_source_sha256": {
+    "tools/preflight/bridge.py": "21e2d5cdca19fffd3e9ef812d8c8ba3e8ec9c4d4b9d4bdd8cc6eae850882f9f6",
+    "tools/preflight/telemetry_reader.py": "247e1ee89725f4dddcf20b10e95d348dcc7a3d0f23887b7fd451bfb2c3bc5d8f",
+    "tools/ros2/gcs_profile.py": "c3e08c0bd9230d4b1e7e5a93087b4ea58f24ec016ae7b20a456bb611075c00e8",
+    "tools/ros2/runtime.py": "054143505ec3767a04a660dd0c6f2f7055663a2b56d888c9bb174b29b682aa16"
+  },
+  "scope": "仅修改当前独立ROS2构建profile的通信域并重启只读桥接，未切换桌面入口或启动任务"
+}

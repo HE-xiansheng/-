@@ -124,3 +124,12 @@ void onLivoxPointCloud(const LivoxPointPacket &packet)
 当前仅上行显示位置和水平前向，不建立目标下行或任何飞控控制通道。
 
 EGO-Planner实时模式已增加飞前话题表、原生膨胀栅格及同会话目标预览/确认，具体数据源、坐标和实机待验边界见 [EGO-Planner接入](ego_planner_groundstation.md)。原始雷达IMU继续用于监视，地图始终取FAST-LIO cloud_world，不混入cloud_body或MAVROS原点。
+
+
+### 2026-11-17 ROS2飞前元数据采样
+
+当前.224基础服务已启用并通过实际重启验证（雷达/IMU、Gemini、MAVROS、云台视频；定位/转发/任务仍按需）。飞前采样仅对Livox CustomMsg使用ROS2 raw订阅，校验CDR1封装、端序、字符串、纳秒、点数及整帧长度后提取源戳、坐标系和点数；其余消息继续类型化订阅，地图仍使用FAST-LIO世界点云。避免Python逐点构造拖慢其他传感器，不更改传感器时间或新鲜度门槛。
+
+实际早期ROS2窗口domain175已对齐0；原约6.2Hz积压已修复。现场消息与官方序列化/解码对照41项、快照并发取时回归及现有14个本地测试通过；最终180个快照/35.9秒持续观察与独立canonical实流检查16项通过，雷达约10Hz、Livox IMU200Hz、飞控IMU50Hz/里程计30Hz。原先的积压和状态闪红失败均保留。详见迁移仓库`records/2026-11-17/base-autostart/`。
+
+基础服务通过不等于整平台验收完成；全负载定位自同步、EGO输入时效、云台灰度帧交付、运动外参及实际任务仍有待解决。正式桌面启动入口尚未切换。

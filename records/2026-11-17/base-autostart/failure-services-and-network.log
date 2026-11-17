@@ -1,0 +1,143 @@
+MainPID=46803
+NRestarts=0
+Id=Safina_sensor.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+
+MainPID=46790
+NRestarts=0
+Id=gimbal-rtsp-relay.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.713997344] [camera.camera]: Current depth auto exposure priority: OFF
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717070326] [camera.camera]: Current IR auto exposure: ON
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717170659] [camera.camera]: Current accel data correction: ON
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717193701] [camera.camera]: Current gyro data correction: ON
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717273617] [camera.camera]: Set depth filter DecimationFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717294908] [camera.camera]: Set depth filter ThresholdFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717310367] [camera.camera]: Set depth filter HDRMerge to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717326700] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717341283] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717354991] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717370158] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717385616] [camera.camera]: Set depth filter TemporalFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717399033] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.717412449] [camera.camera]: Set depth filter DisparityTransform to enabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.721153053] [camera.camera]: Set color filter DecimationFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.721283136] [camera.camera]: Set right IR filter SequenceIdFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.721344969] [camera.camera]: Set left IR filter SequenceIdFilter to disabled
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904202.725434987] [mavros]: Plugin sys_status created
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904202.725997317] [mavros]: Plugin sys_status initialized
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] GetFreeIndex key:livox_lidar_2650908864.
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] Init queue, real query size:16.
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] Lidar[0] storage queue size: 10
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] set pcl data type, handle: 2650908864, data type: 1
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] set scan pattern, handle: 2650908864, scan pattern: 0
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] begin to change work mode to 'Normal', handle: 2650908864
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] successfully set data type, handle: 2650908864, set_bit: 2
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] successfully set pattern mode, handle: 2650908864, set_bit: 0
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] successfully set lidar attitude, ip: 192.168.1.158
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] successfully change work mode, handle: 2650908864
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] successfully enable Livox Lidar imu, ip: 192.168.1.158
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.818920328] [camera.camera]: color/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.830885301] [camera.camera]: depth/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.846776961] [camera.camera]: left_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.852538803] [camera.camera]: right_ir/image_raw QoS: RELIABLE/VOLATILE/KEEP_LAST(10)
+2026-11-17T16:30:02+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904202.856121032] [camera.camera]: Publish diagnostics every 1 seconds
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.049765301] [mavros.time]: TM: Timesync mode: MAVLINK
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.075732820] [mavros]: Plugin sys_time created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.075827028] [mavros]: Plugin sys_time initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.132810202] [mavros]: Plugin tdr_radio created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.134107528] [mavros]: Plugin tdr_radio initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157338937] [camera.camera]: Device Orbbec Gemini 335L connected
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157431395] [camera.camera]: Serial number: CP253530009G
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157447145] [camera.camera]: Firmware version: 1.4.60
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157460853] [camera.camera]: ROS Wrapper version: 2.10.6
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157476603] [camera.camera]: SDK version: 2.10.6
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157490603] [camera.camera]: Hardware version: 0.1
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157504019] [camera.camera]: ISP firmware version: 20241125
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157516269] [camera.camera]: ISP needed version: 20241125
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157530269] [camera.camera]: usb connect type: USB3.2
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157543394] [camera.camera]: device unique id: 8-1-2
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.157557686] [camera.camera]: Current node pid: 47269
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.171268857] [camera.camera]: Disable frame sync
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.197092877] [mavros]: Plugin terrain created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.197420708] [mavros]: Plugin terrain initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.261167594] [mavros]: Plugin trajectory created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.261308177] [mavros]: Plugin trajectory initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.325063521] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.325916058] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.333423806] [mavros]: Plugin tunnel created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.333547181] [mavros]: Plugin tunnel initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.351772743] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.390754062] [mavros]: Plugin vfr_hud created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.390840103] [mavros]: Plugin vfr_hud initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.390857020] [mavros]: Plugin vibration ignored
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.451816172] [mavros]: Plugin vision_pose created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.452310544] [mavros]: Plugin vision_pose initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.535324528] [mavros]: Plugin vision_speed created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.536270690] [mavros]: Plugin vision_speed initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.613766955] [mavros]: Plugin waypoint created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.613932913] [mavros]: Plugin waypoint initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.613975496] [mavros]: Plugin wheel_odometry ignored
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904203.635790580] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.671249460] [mavros]: Plugin wind_estimation created
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.671359126] [mavros]: Plugin wind_estimation initialized
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.675402478] [mavros_router]: link[1001] detected remote address 1.191
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.681621943] [mavros]: Built-in SIMD instructions: ARM NEON
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.681687567] [mavros]: Built-in MAVLink package version: 2026.9.9
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.681699234] [mavros]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous loweheiser marsh paparazzi standard stemstudios storm32 uAvionix
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.681710317] [mavros]: MAVROS UAS via /uas1 started. MY ID 1.191, TARGET ID 1.1
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.711750062] [mavros.imu]: IMU: High resolution IMU detected!
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.714055966] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] [INFO] [1794904203.780943209] [livox_lidar_publisher2]: livox/imu publish use imu format
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [livox_ros_driver2_node-3] [INFO] [1794904203.782422242] [livox_lidar_publisher2]: livox/lidar publish use livox custom format
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.941022961] [mavros]: CON: Got HEARTBEAT, connected. FCU: PX4 Autopilot
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.941171127] [mavros.mission]: WP: detected enable_partial_push: 0
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.951142279] [mavros.imu]: IMU: High resolution IMU detected!
+2026-11-17T16:30:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904203.951467777] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+2026-11-17T16:30:04+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904204.171442395] [camera.camera]: current interleave_ae_mode_: laser
+2026-11-17T16:30:04+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904204.176109910] [camera.camera]: Enable enable_interleave_depth_frame to false
+2026-11-17T16:30:04+0800 orangepi5ultra bash[46803]: [component_container-2] [INFO] [1794904204.176261576] [camera.camera]: Initialize device cost: 1659 ms
+2026-11-17T16:30:05+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904205.978403034] [mavros.sys]: VER: broadcast request timeout, retries left 4
+2026-11-17T16:30:06+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904206.959655972] [mavros.sys]: VER: broadcast request timeout, retries left 3
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964294318] [mavros.geofence]: GF: Using MISSION_ITEM_INT
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964457358] [mavros.rallypoint]: RP: Using MISSION_ITEM_INT
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964513650] [mavros.mission]: WP: Using MISSION_ITEM_INT
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964557399] [mavros.sys]: VER: 1.1: Capabilities         0x000000000000e8ff
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964601732] [mavros.sys]: VER: 1.1: Flight software:     011000ff (6ea3539157000000)
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964634691] [mavros.sys]: VER: 1.1: Middleware software: 011000ff (6ea3539157000000)
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964666774] [mavros.sys]: VER: 1.1: OS software:         0b0000ff (886acbbdb4f061e5)
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964697982] [mavros.sys]: VER: 1.1: Board hardware:      00000036
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964728315] [mavros.sys]: VER: 1.1: VID/PID:             1b8c:0036
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904207.964758065] [mavros.sys]: VER: 1.1: UID:                 3333510f39303736
+2026-11-17T16:30:07+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904207.970523407] [mavros.sys]: VER: unicast request timeout, retries left 2
+2026-11-17T16:30:10+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904210.986992555] [rtsp_hw_pub_ultra]: RTSP decode: gray 25.0 Hz, color 12.5 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904213.948528350] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:17+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904217.488570299] [mavros.time]: TM: RTT too high for timesync: 2429.31 ms.
+2026-11-17T16:30:17+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904217.544920852] [mavros.time]: TM: RTT too high for timesync: 1390.58 ms.
+2026-11-17T16:30:17+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904217.602614522] [mavros.time]: TM: RTT too high for timesync: 346.36 ms.
+2026-11-17T16:30:18+0800 orangepi5ultra bash[46803]: [component_container-2] [WARN] [1794904218.347909308] [camera.camera]: Color frame queue overflow: queue=color count=1 capacity_frames=1
+2026-11-17T16:30:18+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904218.471216812] [mavros.param]: PR: request param #478 timeout, retries left 2, and 200 params still missing
+2026-11-17T16:30:18+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904218.959750730] [mavros.mission]: WP: mission received
+2026-11-17T16:30:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904221.000056494] [rtsp_hw_pub_ultra]: RTSP decode: gray 29.9 Hz, color 14.6 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904223.948517239] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904223.950265771] [mavros.rallypoint]: RP: mission received
+2026-11-17T16:30:28+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904228.946763444] [mavros.geofence]: GF: mission received
+2026-11-17T16:30:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904231.019456856] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.1 Hz, color 15.0 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904233.944965024] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904241.020316949] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904243.944715914] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904251.022390368] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=1 color=1
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enx00e09a5af420  UP             192.168.144.100/24 
+enP3p49s0        UP             192.168.1.51/32 
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:f215:b400:2519:f722/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 
+192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 
+    cache 
+192.168.144.108 dev enx00e09a5af420 src 192.168.144.100 uid 1000 
+    cache 
+1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 
+    cache 

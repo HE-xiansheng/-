@@ -1,0 +1,45 @@
+Configuration file /lib/systemd/system/rkaiq_3A.service is marked world-writable. Please remove world writability permission bits. Proceeding anyway.
+{
+  "passed": true,
+  "bytes_written": 0,
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 12,
+      "base_mode": 29,
+      "custom_mode": 50593792,
+      "system_status": 0,
+      "mavlink_version": 3,
+      "receipt_wall_ns": 1794904195250322636,
+      "armed": false
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 12,
+      "base_mode": 29,
+      "custom_mode": 50593792,
+      "system_status": 0,
+      "mavlink_version": 3,
+      "receipt_wall_ns": 1794904195250940383,
+      "armed": false
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 12,
+      "base_mode": 29,
+      "custom_mode": 50593792,
+      "system_status": 0,
+      "mavlink_version": 3,
+      "receipt_wall_ns": 1794904196239213447,
+      "armed": false
+    }
+  ]
+}
+Created symlink /etc/systemd/system/multi-user.target.wants/gimbal-rtsp-relay.service → /etc/systemd/system/gimbal-rtsp-relay.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/Safina_sensor.service → /etc/systemd/system/Safina_sensor.service.
+enabled
+enabled
+{"installed": ["gimbal-rtsp-relay.service", "Safina_sensor.service"], "enabled": true, "sensor_start_requested": true}

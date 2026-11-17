@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "bytes_written": 0,
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 12,
+      "base_mode": 29,
+      "custom_mode": 50593792,
+      "system_status": 0,
+      "mavlink_version": 3,
+      "receipt_wall_ns": 1794904099312287128,
+      "armed": false
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 12,
+      "base_mode": 29,
+      "custom_mode": 50593792,
+      "system_status": 0,
+      "mavlink_version": 3,
+      "receipt_wall_ns": 1794904099312294419,
+      "armed": false
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 12,
+      "base_mode": 29,
+      "custom_mode": 50593792,
+      "system_status": 0,
+      "mavlink_version": 3,
+      "receipt_wall_ns": 1794904100299920696,
+      "armed": false
+    }
+  ]
+}

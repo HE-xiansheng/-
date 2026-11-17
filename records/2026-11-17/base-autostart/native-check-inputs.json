@@ -1,0 +1,10 @@
+{
+  "native-observer": {
+    "computer_path": "/home/tyzk/drone-migration-github/records/2026-11-17/physical-platform-gcs/run3-no-self-sync-diagnostic/fixture/platform-soak-check/observer-build/observer",
+    "sha256": "af384671f85d350552cb0d5004cf277ce341adce154a1fe6b14bb0d333fbe62e"
+  },
+  "check_base_autostart_ros2.py": {
+    "computer_path": "/home/tyzk/drone-migration-github/tools/check_base_autostart_ros2.py",
+    "sha256": "f6fdfdff04644aa3c2cd99dba6936ed11ba2a1e310c95a5753c219cfe94ffa94"
+  }
+}

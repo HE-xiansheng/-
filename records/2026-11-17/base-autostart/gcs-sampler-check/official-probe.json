@@ -1,0 +1,20 @@
+{
+  "header": {
+    "sec": 1794905696,
+    "nanosec": 5045605,
+    "frame_id": "livox_frame",
+    "timebase": 1794905696005045605,
+    "point_num": 20064,
+    "points_length": 20064,
+    "lidar_id": 192
+  },
+  "bytes": 401327,
+  "official_deserialize_ms": [
+    181.76379,
+    137.846002,
+    138.997504,
+    138.561753,
+    138.909128
+  ],
+  "official_roundtrip_identical": true
+}

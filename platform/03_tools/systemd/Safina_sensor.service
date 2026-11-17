@@ -1,18 +1,22 @@
 [Unit]
 Description=Research platform ROS2 sensors
-After=network-online.target
-Wants=network-online.target
+After=network-online.target gimbal-rtsp-relay.service
+Wants=network-online.target gimbal-rtsp-relay.service
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
 User=orangepi
 Group=orangepi
 WorkingDirectory=/home/orangepi/drone_platform
-ExecStart=/bin/bash "/home/orangepi/drone_platform/03_tools/config script/start_platform_sensors.sh"
+ExecStartPre=/usr/bin/python3 /home/orangepi/drone_platform/03_tools/systemd/wait_for_sensor_devices.py --timeout 75
+ExecStart=/bin/bash "/home/orangepi/drone_platform/03_tools/config script/start_platform_sensors.sh" rtsp_url:=rtsp://127.0.0.1:8554/gimbal
 KillSignal=SIGINT
 KillMode=control-group
 TimeoutStopSec=30
-Restart=no
+TimeoutStartSec=100
+Restart=on-failure
+RestartSec=5
 Environment=ROS_DOMAIN_ID=0
 Environment=ROS_LOCALHOST_ONLY=0
 Environment=ROS_LOG_DIR=/run/drone-sensors/ros-log

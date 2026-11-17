@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-17T16:18:16+08:00",
+  "user_authorization": "用户在明确列出雷达、双目、MAVROS和云台视频基础自启动范围后回复ok，继续吧；定位/规划/视觉任务仍手动。",
+  "onboard_head": "1de5c3d",
+  "working_tree_clean": true,
+  "services": {
+    "Safina_sensor.service": "not-found",
+    "gimbal-rtsp-relay.service": "not-found"
+  },
+  "sensor_processes_running": false,
+  "lidar_address": "192.168.1.51/32",
+  "lidar_destination": "192.168.1.158",
+  "management_address": "192.168.1.224/23",
+  "gimbal_interface": "enx00e09a5af420",
+  "gimbal_mac": "00:e0:9a:5a:f4:20",
+  "gimbal_ipv4": null,
+  "original_gimbal_profile": "bdf7de49-dfe9-3b15-85b0-9cc6241c73c1",
+  "sudo_password_required": true,
+  "network_manager_permissions": "settings.modify.system and network-control yes",
+  "linger": false,
+  "known_unresolved": "完整负载定位误同步/规划过期/云台灰度丢帧；本轮基础自启动不等同这些问题已解决。",
+  "audit_notes": [
+    "platform_plugins.yaml不存在；MAVROS正式候选实际使用发行版px4_pluginlists.yaml。",
+    "本地SSH配置存在，当前规划目录没有按文件名标识的sudo/credential文件。"
+  ]
+}

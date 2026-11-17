@@ -1,10 +1,11 @@
-# Candidate bound to the actual USB Ethernet adapter on .224 (2026-11-17).
+# Approved base-service network, bound to the actual USB adapter on .224.
 [connection]
-id=ROS2 gimbal candidate
-uuid=64b8b688-2d42-4686-a6da-d19e2bdf5ca1
+id=ROS2 Gimbal
+uuid=15ad846c-9c2f-4f0f-b867-ca25838e7d6e
 type=ethernet
 interface-name=enx00e09a5af420
-autoconnect=false
+autoconnect=true
+autoconnect-priority=100
 
 [ethernet]
 mac-address=00:E0:9A:5A:F4:20
@@ -14,6 +15,8 @@ method=manual
 address1=192.168.144.100/24
 never-default=true
 ignore-auto-dns=true
+dad-timeout=3000
+may-fail=false
 
 [ipv6]
 method=disabled

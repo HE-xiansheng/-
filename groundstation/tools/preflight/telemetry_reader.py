@@ -3,6 +3,36 @@ import argparse,json,math,os,struct,sys,threading,time,zlib,socket
 from collections import deque
 from pathlib import Path
 
+def livox_metadata(data):
+    """读取Livox CustomMsg的CDR1头；校验长度/点数，避免构造整帧Python点对象。
+
+    对应当前livox_ros_driver2/msg/CustomMsg及CustomPoint定义，字节对齐
+    从4字节封装之后起算。只用于飞前元数据，不解析或重发点坐标。
+    """
+    raw=memoryview(data).cast('B')
+    if len(raw)<20:raise ValueError('Livox CDR头截断')
+    if bytes(raw[:4])==b'\x00\x01\x00\x00':endian='<'
+    elif bytes(raw[:4])==b'\x00\x00\x00\x00':endian='>'
+    else:raise ValueError('不支持的Livox CDR封装')
+    sec,nanosec,frame_length=struct.unpack_from(endian+'iII',raw,4)
+    if nanosec>=1000000000:raise ValueError('Livox纳秒字段无效')
+    frame_end=16+frame_length
+    if frame_length<1 or frame_end>len(raw) or raw[frame_end-1]!=0:
+        raise ValueError('Livox坐标系字符串截断或缺少终止符')
+    frame_bytes=bytes(raw[16:frame_end-1])
+    if b'\x00' in frame_bytes:raise ValueError('Livox坐标系包含空字符')
+    try:frame=frame_bytes.decode('utf-8')
+    except UnicodeDecodeError as exc:raise ValueError('Livox坐标系不是UTF-8') from exc
+    offset=4+((frame_end-4+7)//8)*8
+    if offset+20>len(raw):raise ValueError('Livox固定字段截断')
+    timebase,point_count,_,_,sequence_length=struct.unpack_from(endian+'QIB3sI',raw,offset)
+    if point_count!=sequence_length:raise ValueError('Livox点数与序列长度不一致')
+    # CustomPoint每项19字节，后续项先对齐4字节，末项不补尾部字节。
+    expected=offset+20+(20*sequence_length-1 if sequence_length else 0)
+    if len(raw)!=expected:raise ValueError('Livox点序列载荷长度不一致')
+    return {'sec':sec,'nanosec':nanosec,'frame':frame,'point_count':point_count,'timebase':timebase}
+
+
 def source_frequency(samples,now,window_s):
     """仅由接收时间计算源话题频率；样本不足时不冒充 0 Hz。"""
     while samples and now-samples[0]>window_s:samples.popleft()
@@ -135,12 +165,13 @@ class TelemetryReader:
             'ekf':('/mavros/estimator_status',EstimatorStatus,3.),'rc':('/mavros/rc/in',RCIn,1.),
             'battery':('/mavros/battery',BatteryState,5.),'text':('/mavros/statustext/recv',StatusText,120.)}
         if args.grid_only:self.definitions={}
-        self.lock=threading.RLock();self.cache={};self.times={k:deque(maxlen=3000) for k in self.definitions}
+        self.lock=threading.RLock();self.cache={};self.errors={};self.times={k:deque(maxlen=3000) for k in self.definitions}
         self.texts=deque(maxlen=12);self.planning={};self.graph={'pubs':{},'endpoints':{},'received':None}
         self.resolution=None;self.resolution_receipt=0.;self.parameter_pending=None;self.grid_last=0.;self.subs=[]
         for key,(topic,typ,_) in self.definitions.items():
             qos=QoSProfile(depth=1) if key in ('cloud','lidar') else qos_profile_sensor_data
-            self.subs.append(self.node.create_subscription(typ,topic,lambda m,k=key:self.receive(m,k),qos))
+            callback=self.receive_lidar if key=='lidar' else lambda m,k=key:self.receive(m,k)
+            self.subs.append(self.node.create_subscription(typ,topic,callback,qos,raw=key=='lidar'))
         if args.planner:
             from std_msgs.msg import String
             from traj_utils.msg import PolyTraj
@@ -156,6 +187,17 @@ class TelemetryReader:
                 for topic,key in [('/ego_planner/manual_preview/trajectory','trajectory'),('/ego_planner/navigation/candidate_trajectory','candidate_trajectory')]:
                     self.subs.append(self.node.create_subscription(PolyTraj,topic,lambda m,k=key:self.poly(m,k),retained))
         self.graph_timer=self.node.create_timer(.5,self.poll_graph)
+
+    def receive_lidar(self,data):
+        receipt=time.monotonic()
+        try:metadata=livox_metadata(data)
+        except ValueError as exc:
+            with self.lock:self.errors['lidar']=str(exc)
+            return
+        with self.lock:
+            self.cache['lidar']={'receipt':receipt,'stamp':metadata['sec']+metadata['nanosec']*1e-9,
+                                 'frame':metadata['frame'],'values':{'point_count':metadata['point_count']}}
+            self.times['lidar'].append(receipt);self.errors.pop('lidar',None)
 
     def receive(self,m,key):
         receipt=time.monotonic();stamp=stamp_seconds(m.header.stamp);frame=m.header.frame_id
@@ -247,8 +289,9 @@ class TelemetryReader:
         with self.lock:self.planning['grid']={'data':value,'receipt':now}
 
     def snapshot(self,period):
-        now=time.monotonic();rosnow=self.node.get_clock().now().nanoseconds*1e-9
         with self.lock:
+            # 缓存回调可能在等待锁期间更新，快照时钟须在拿锁后读取。
+            now=time.monotonic();rosnow=self.node.get_clock().now().nanoseconds*1e-9
             graph_age=None if self.graph['received'] is None else now-self.graph['received']
             fresh=graph_age is not None and 0<=graph_age<=2.5
             pubs=self.graph['pubs'] if fresh else {};endpoints=self.graph['endpoints'] if fresh else {}
@@ -261,6 +304,7 @@ class TelemetryReader:
                      'samples':len(self.times[key]),'hz':source_frequency(self.times[key],now,12. if key=='battery' else 3.),'limit_s':limit}
                 if key in self.cache:
                     c=self.cache[key];row.update(source_age_s=rosnow-c['stamp'],receipt_age_s=now-c['receipt'],frame=c['frame'],values=c['values'])
+                if key in self.errors:row['error']=self.errors[key]
                 rows[key]=row
             messages=[dict(t,age_s=now-t['received_monotonic']) for t in self.texts]
             # 基于当前图的进程存在性，不冒用旧ROS1 active文件；正常数据还需独立源时间校验。

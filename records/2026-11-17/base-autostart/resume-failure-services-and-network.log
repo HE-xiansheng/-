@@ -1,0 +1,143 @@
+MainPID=46803
+NRestarts=0
+Id=Safina_sensor.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+
+MainPID=46790
+NRestarts=0
+Id=gimbal-rtsp-relay.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+2026-11-17T16:30:10+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904210.986992555] [rtsp_hw_pub_ultra]: RTSP decode: gray 25.0 Hz, color 12.5 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904213.948528350] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:17+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904217.488570299] [mavros.time]: TM: RTT too high for timesync: 2429.31 ms.
+2026-11-17T16:30:17+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904217.544920852] [mavros.time]: TM: RTT too high for timesync: 1390.58 ms.
+2026-11-17T16:30:17+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904217.602614522] [mavros.time]: TM: RTT too high for timesync: 346.36 ms.
+2026-11-17T16:30:18+0800 orangepi5ultra bash[46803]: [component_container-2] [WARN] [1794904218.347909308] [camera.camera]: Color frame queue overflow: queue=color count=1 capacity_frames=1
+2026-11-17T16:30:18+0800 orangepi5ultra bash[46803]: [mavros_node-1] [WARN] [1794904218.471216812] [mavros.param]: PR: request param #478 timeout, retries left 2, and 200 params still missing
+2026-11-17T16:30:18+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904218.959750730] [mavros.mission]: WP: mission received
+2026-11-17T16:30:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904221.000056494] [rtsp_hw_pub_ultra]: RTSP decode: gray 29.9 Hz, color 14.6 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904223.948517239] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904223.950265771] [mavros.rallypoint]: RP: mission received
+2026-11-17T16:30:28+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904228.946763444] [mavros.geofence]: GF: mission received
+2026-11-17T16:30:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904231.019456856] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.1 Hz, color 15.0 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904233.944965024] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904241.020316949] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904243.944715914] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:30:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904251.022390368] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=1 color=1
+2026-11-17T16:30:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904253.941319448] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:31:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904261.051351384] [rtsp_hw_pub_ultra]: RTSP decode: gray 1.3 Hz, color 0.7 Hz, subscribers gray=0 color=0
+2026-11-17T16:31:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904263.941974375] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:31:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904271.068527592] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:31:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904273.942998176] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:31:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904281.121286388] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:31:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904283.941852447] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:31:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904291.135513030] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:31:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904293.943470660] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:31:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904301.148799718] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:31:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904303.941821475] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:31:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904311.176031827] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:31:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904313.943033275] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:32:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904321.185004790] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:32:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904323.942516208] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:32:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904331.206226433] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:32:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904333.942301432] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:32:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904341.237350645] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:32:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904343.942990235] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:32:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904351.239906603] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:32:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904353.941342883] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:32:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904361.241997147] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:32:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904363.941285065] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:32:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904371.249960033] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:32:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904373.940517958] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:33:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904381.290238192] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:33:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904383.941238760] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:33:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904391.304825790] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:33:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904393.941793730] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:33:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904401.334069637] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:33:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904403.941582162] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:33:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904411.343443265] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:33:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904413.941991507] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:33:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904421.380444068] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:33:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904423.941232901] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:33:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904431.407780842] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:33:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904433.942288159] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:34:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904441.421721819] [rtsp_hw_pub_ultra]: RTSP decode: gray 11.0 Hz, color 5.6 Hz, subscribers gray=2 color=2
+2026-11-17T16:34:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904443.944841951] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:34:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904451.458960954] [rtsp_hw_pub_ultra]: RTSP decode: gray 29.9 Hz, color 14.9 Hz, subscribers gray=2 color=2
+2026-11-17T16:34:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904453.941546359] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:34:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904461.469241826] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=2 color=2
+2026-11-17T16:34:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904463.940860919] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:34:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904471.491377423] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.1 Hz, color 15.1 Hz, subscribers gray=2 color=2
+2026-11-17T16:34:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904473.943241170] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:34:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904481.493044844] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.0 Hz, color 15.0 Hz, subscribers gray=2 color=2
+2026-11-17T16:34:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904483.943149851] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:34:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904491.502856886] [rtsp_hw_pub_ultra]: RTSP decode: gray 18.7 Hz, color 9.3 Hz, subscribers gray=0 color=0
+2026-11-17T16:34:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904493.944408817] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:35:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904501.507578748] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:35:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904503.940325271] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:35:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904511.542333064] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:35:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904513.942553398] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:35:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904521.572518573] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:35:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904523.946140017] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:35:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904531.578340512] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:35:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904533.939998983] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:35:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904541.631521264] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:35:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904543.940391412] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:35:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904551.636120586] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:35:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904553.942572997] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:36:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904561.650866404] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:36:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904563.940281516] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:36:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904571.672328177] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:36:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904573.940247287] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:36:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904581.680948316] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:36:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904583.940207975] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:36:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904591.710888958] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:36:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904593.939330752] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:36:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904601.730714158] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:36:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904603.939362231] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:36:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904611.746314632] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:36:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904613.940836077] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:37:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904621.791850185] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:37:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904623.939916603] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:37:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904631.805530087] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:37:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904633.941731156] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:37:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904641.843131852] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:37:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904643.940369643] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:37:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904651.844600448] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:37:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904653.939078922] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:37:41+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904661.868971955] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:37:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904663.941168556] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:37:51+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904671.900158590] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:37:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904673.941079495] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:38:01+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904681.912024960] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:38:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904683.940481811] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:38:11+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904691.932370032] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:38:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904693.939872544] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:38:21+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904701.944560609] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:38:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904703.938994945] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:38:31+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904711.971313311] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:38:33+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904713.940445875] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:38:42+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904722.006143092] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:38:43+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904723.942073095] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:38:52+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904732.013668320] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:38:53+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904733.940021128] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:39:02+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904742.038366201] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:39:03+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904743.940070232] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:39:12+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904752.038704053] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:39:13+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904753.938533387] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:39:22+0800 orangepi5ultra bash[46803]: [rtsp_hw_pub_ultra-4] [INFO] [1794904762.071358513] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:39:23+0800 orangepi5ultra bash[46803]: [mavros_node-1] [INFO] [1794904763.940028733] [mavros.home_position]: HP: requesting home position
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enx00e09a5af420  UP             192.168.144.100/24 
+enP3p49s0        UP             192.168.1.51/32 
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:f215:b400:2519:f722/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 
+192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 
+    cache 
+192.168.144.108 dev enx00e09a5af420 src 192.168.144.100 uid 1000 
+    cache 
+1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 
+    cache 

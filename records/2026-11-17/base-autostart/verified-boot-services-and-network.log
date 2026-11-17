@@ -1,0 +1,143 @@
+MainPID=2566
+NRestarts=0
+Id=Safina_sensor.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+
+MainPID=1235
+NRestarts=0
+Id=gimbal-rtsp-relay.service
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233751398] [camera.camera]: SDK version: 2.10.6
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233763064] [camera.camera]: Hardware version: 0.1
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233776773] [camera.camera]: ISP firmware version: 20241125
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233792231] [camera.camera]: ISP needed version: 20241125
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233805356] [camera.camera]: usb connect type: USB3.2
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233816148] [camera.camera]: device unique id: 8-1-2
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.233829272] [camera.camera]: Current node pid: 3314
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.256692309] [camera.camera]: Disable frame sync
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.414070373] [camera.camera]: right_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.414464704] [camera.camera]: left_ir Frame - Width: 848 Height: 480 fps: 30 Format: Y8
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.421056917] [camera.camera]: depth Frame - Width: 848 Height: 480 fps: 30 Format: Y16
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.540023282] [mavros]: Plugin obstacle_distance created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.540219864] [mavros]: Plugin obstacle_distance initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.624540219] [mavros]: Plugin obstacle_distance_3d created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.624629468] [mavros]: Plugin obstacle_distance_3d initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.668686634] [mavros]: Plugin odometry created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.668782884] [mavros]: Plugin odometry initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904945.689263309] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.702852273] [mavros]: Plugin onboard_computer_status created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.703136064] [mavros]: Plugin onboard_computer_status initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.773475455] [mavros]: Plugin open_drone_id created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.773644038] [mavros]: Plugin open_drone_id initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.845437088] [mavros]: Plugin optical_flow created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.847966115] [mavros]: Plugin optical_flow initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.890662664] [mavros]: Plugin param created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.890760956] [mavros]: Plugin param initialized
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.934701747] [mavros]: Plugin play_tune created
+2026-11-17T16:42:25+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904945.937697147] [mavros]: Plugin play_tune initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.047734772] [mavros]: Plugin px4flow created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.047854938] [mavros]: Plugin px4flow initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.120948522] [mavros]: Plugin rallypoint created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.121169896] [mavros]: Plugin rallypoint initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.121223854] [mavros]: Plugin rangefinder ignored
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.203147888] [mavros]: Plugin rc_io created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.203455887] [mavros]: Plugin rc_io initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904946.258304075] [camera.camera]: current interleave_ae_mode_: laser
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904946.260369063] [camera.camera]: Enable enable_interleave_depth_frame to false
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [component_container-2] [INFO] [1794904946.260566229] [camera.camera]: Initialize device cost: 2127 ms
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.327122434] [mavros]: Plugin setpoint_accel created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.329538295] [mavros]: Plugin setpoint_accel initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.404220871] [mavros]: Plugin setpoint_attitude created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.404430870] [mavros]: Plugin setpoint_attitude initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.465836854] [mavros]: Plugin setpoint_position created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.465929603] [mavros]: Plugin setpoint_position initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.520809583] [mavros]: Plugin setpoint_raw created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.520910791] [mavros]: Plugin setpoint_raw initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.592607883] [mavros]: Plugin setpoint_trajectory created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.592709966] [mavros]: Plugin setpoint_trajectory initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.647297698] [mavros]: Plugin setpoint_velocity created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.647384322] [mavros]: Plugin setpoint_velocity initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.730124143] [mavros]: Plugin sim_state created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.730222435] [mavros]: Plugin sim_state initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.838595235] [mavros]: Plugin sys_status created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.838721818] [mavros]: Plugin sys_status initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.891684975] [mavros.time]: TM: Timesync mode: MAVLINK
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.909028543] [mavros]: Plugin sys_time created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.909174084] [mavros]: Plugin sys_time initialized
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.976405785] [mavros]: Plugin tdr_radio created
+2026-11-17T16:42:26+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904946.976508452] [mavros]: Plugin tdr_radio initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.046123348] [mavros]: Plugin terrain created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.048795874] [mavros]: Plugin terrain initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.117553858] [mavros]: Plugin trajectory created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.118078855] [mavros]: Plugin trajectory initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.239023876] [mavros]: Plugin tunnel created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.239126251] [mavros]: Plugin tunnel initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.296643465] [mavros]: Plugin vfr_hud created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.296778215] [mavros]: Plugin vfr_hud initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.296807965] [mavros]: Plugin vibration ignored
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.405131474] [mavros]: Plugin vision_pose created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.405224223] [mavros]: Plugin vision_pose initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.568611292] [mavros]: Plugin vision_speed created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.568886940] [mavros]: Plugin vision_speed initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.709244043] [mavros]: Plugin waypoint created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.709355532] [mavros]: Plugin waypoint initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.709383337] [mavros]: Plugin wheel_odometry ignored
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.824107339] [mavros]: Plugin wind_estimation created
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.826900712] [mavros]: Plugin wind_estimation initialized
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.839980211] [mavros]: Built-in SIMD instructions: ARM NEON
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.840039030] [mavros]: Built-in MAVLink package version: 2026.9.9
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.840055606] [mavros]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous loweheiser marsh paparazzi standard stemstudios storm32 uAvionix
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.840068707] [mavros]: MAVROS UAS via /uas1 started. MY ID 1.191, TARGET ID 1.1
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.847158548] [mavros_router]: link[1001] detected remote address 1.191
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.857208328] [mavros.imu]: IMU: High resolution IMU detected!
+2026-11-17T16:42:27+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904947.859332500] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+2026-11-17T16:42:28+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904948.379174998] [mavros]: CON: Got HEARTBEAT, connected. FCU: PX4 Autopilot
+2026-11-17T16:42:28+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904948.379314827] [mavros.mission]: WP: detected enable_partial_push: 0
+2026-11-17T16:42:28+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904948.391129181] [mavros.imu]: IMU: High resolution IMU detected!
+2026-11-17T16:42:28+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904948.391459102] [mavros.imu]: IMU: Attitude quaternion IMU detected!
+2026-11-17T16:42:30+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904950.240166210] [mavros.sys]: VER: broadcast request timeout, retries left 4
+2026-11-17T16:42:31+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904951.176911613] [mavros.sys]: VER: broadcast request timeout, retries left 3
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.069514076] [mavros.geofence]: GF: Using MISSION_ITEM_INT
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.069675294] [mavros.rallypoint]: RP: Using MISSION_ITEM_INT
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.069765127] [mavros.mission]: WP: Using MISSION_ITEM_INT
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.069806300] [mavros.sys]: VER: 1.1: Capabilities         0x000000000000e8ff
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.070099594] [mavros.sys]: VER: 1.1: Flight software:     011000ff (6ea3539157000000)
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.070131677] [mavros.sys]: VER: 1.1: Middleware software: 011000ff (6ea3539157000000)
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.070164829] [mavros.sys]: VER: 1.1: OS software:         0b0000ff (886acbbdb4f061e5)
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.070194774] [mavros.sys]: VER: 1.1: Board hardware:      00000036
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.070223381] [mavros.sys]: VER: 1.1: VID/PID:             1b8c:0036
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904952.070252256] [mavros.sys]: VER: 1.1: UID:                 3333510f39303736
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904952.104496207] [mavros.sys]: VER: unicast request timeout, retries left 2
+2026-11-17T16:42:32+0800 orangepi5ultra bash[2566]: [rtsp_hw_pub_ultra-4] [INFO] [1794904952.546846934] [rtsp_hw_pub_ultra]: RTSP decode: gray 0.0 Hz, color 0.0 Hz, subscribers gray=0 color=0
+2026-11-17T16:42:37+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904957.700666148] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:42:38+0800 orangepi5ultra bash[2566]: [component_container-2] [WARN] [1794904958.203056588] [camera.camera]: Color frame queue overflow: queue=color count=1 capacity_frames=1
+2026-11-17T16:42:41+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904961.202375203] [mavros.time]: TM: RTT too high for timesync: 2369.84 ms.
+2026-11-17T16:42:41+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904961.226852723] [mavros.time]: TM: RTT too high for timesync: 1292.28 ms.
+2026-11-17T16:42:41+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904961.271213435] [mavros.time]: TM: RTT too high for timesync: 237.87 ms.
+2026-11-17T16:42:42+0800 orangepi5ultra bash[2566]: [mavros_node-1] [WARN] [1794904962.200679048] [mavros.param]: PR: request param #461 timeout, retries left 2, and 223 params still missing
+2026-11-17T16:42:42+0800 orangepi5ultra bash[2566]: [rtsp_hw_pub_ultra-4] [INFO] [1794904962.689880042] [rtsp_hw_pub_ultra]: RTSP decode: gray 28.3 Hz, color 13.2 Hz, subscribers gray=2 color=2
+2026-11-17T16:42:42+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904962.721327514] [mavros.mission]: WP: mission received
+2026-11-17T16:42:47+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904967.703803914] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:42:47+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904967.705425871] [mavros.rallypoint]: RP: mission received
+2026-11-17T16:42:52+0800 orangepi5ultra bash[2566]: [rtsp_hw_pub_ultra-4] [INFO] [1794904972.691432309] [rtsp_hw_pub_ultra]: RTSP decode: gray 31.2 Hz, color 13.8 Hz, subscribers gray=2 color=2
+2026-11-17T16:42:52+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904972.704026757] [mavros.geofence]: GF: mission received
+2026-11-17T16:42:57+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904977.700319686] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:43:02+0800 orangepi5ultra bash[2566]: [rtsp_hw_pub_ultra-4] [INFO] [1794904982.709943229] [rtsp_hw_pub_ultra]: RTSP decode: gray 29.8 Hz, color 14.9 Hz, subscribers gray=2 color=2
+2026-11-17T16:43:07+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904987.697918708] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:43:12+0800 orangepi5ultra bash[2566]: [rtsp_hw_pub_ultra-4] [INFO] [1794904992.722274613] [rtsp_hw_pub_ultra]: RTSP decode: gray 30.2 Hz, color 15.1 Hz, subscribers gray=2 color=2
+2026-11-17T16:43:17+0800 orangepi5ultra bash[2566]: [mavros_node-1] [INFO] [1794904997.698929351] [mavros.home_position]: HP: requesting home position
+2026-11-17T16:43:22+0800 orangepi5ultra bash[2566]: [rtsp_hw_pub_ultra-4] [INFO] [1794905002.743109822] [rtsp_hw_pub_ultra]: RTSP decode: gray 29.3 Hz, color 14.7 Hz, subscribers gray=0 color=0
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enx00e09a5af420  UP             192.168.144.100/24 
+enP3p49s0        UP             192.168.1.51/32 
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:9a98:2a51:f686:e7a9/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 
+192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 
+    cache 
+192.168.144.108 dev enx00e09a5af420 src 192.168.144.100 uid 1000 
+    cache 
+1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 
+    cache 

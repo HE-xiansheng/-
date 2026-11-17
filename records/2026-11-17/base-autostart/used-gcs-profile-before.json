@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "backend": "ros2",
+  "distro": "humble",
+  "user": "orangepi",
+  "host": "192.168.1.224",
+  "remote_env": "/home/orangepi/drone_platform/env.sh",
+  "app_root": "/home/orangepi/drone_platform",
+  "domain_id": 175,
+  "rmw": "rmw_fastrtps_cpp",
+  "overlays": [],
+  "topics": {
+    "lidar": "/livox/lidar", "imu": "/livox/imu", "fc_imu": "/mavros/imu/data",
+    "pressure": "/mavros/imu/static_pressure", "lio": "/factory_fastlio/odometry",
+    "cloud": "/factory_fastlio/cloud_world", "relay": "/mavros/vision_pose/pose",
+    "fc_odom": "/mavros/local_position/odom", "fc": "/mavros/state",
+    "landed": "/mavros/extended_state", "ekf": "/mavros/estimator_status",
+    "rc": "/mavros/rc/in", "battery": "/mavros/battery", "text": "/mavros/statustext/recv",
+    "video_raw": "/camera/color/image_raw/compressed", "video_aruco": "/aruco_imgresult",
+    "video_tracking": "/yoloUltra_imgresult", "video_person": "/manual_person_follow/image"
+  },
+  "qos": {
+    "fc": {"reliability":"reliable", "durability":"transient_local", "depth":10},
+    "landed": {"reliability":"reliable", "durability":"transient_local", "depth":10},
+    "ekf": {"reliability":"reliable", "durability":"transient_local", "depth":10},
+    "fc_imu": {"reliability":"best_effort", "depth":5},
+    "pressure": {"reliability":"best_effort", "depth":5},
+    "fc_odom": {"reliability":"best_effort", "depth":5},
+    "battery": {"reliability":"best_effort", "depth":5},
+    "rc": {"reliability":"best_effort", "depth":5},
+    "text": {"reliability":"best_effort", "depth":5},
+    "video_raw": {"reliability":"reliable", "depth":2}
+  },
+  "expected_publishers": {},
+  "modules": {}
+}

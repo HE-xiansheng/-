@@ -1,0 +1,17 @@
+{
+  "original_head": "1de5c3d",
+  "files": {
+    "product/03_tools/systemd/Safina_sensor.service": "ab6927ed2ced2d38f375e0fdc1ea21ff9d4868ccd89acf05c99aa9d064c08627",
+    "product/03_tools/systemd/gimbal-rtsp-relay.service": "b2ec07f9612db51c79dac4d052c1cb4393551cd4e82c5d9da6438b1ba6dc35c3",
+    "product/03_tools/systemd/wait_for_sensor_devices.py": "c3b64f9260464f4a2047e4f317c2e9b663025f95f2a12ac0791b2fbf7395c79a",
+    "probe_px4_disarmed.py": "b81f55a4a60ae2c656fc5116da62c7840b2c541f5fde3f83679de5f10f3ac30c",
+    "check_base_autostart_ros2.py": "c334a3c5905cd1dfea9d79801af7036f803f0d3c6974ce5af6caae1aa8567474",
+    "install_services.py": "e8cf72b845895334df4f1e89fc490ff8ab7ba0aac97b13d1f4540cfd386dc57d",
+    "common.py": "6c4dab96ad0faa3f3bb2796b3d62854eb02eb8e537315b82af773e9855d173a1"
+  },
+  "units": {
+    "Safina_sensor.service": "ab6927ed2ced2d38f375e0fdc1ea21ff9d4868ccd89acf05c99aa9d064c08627",
+    "gimbal-rtsp-relay.service": "b2ec07f9612db51c79dac4d052c1cb4393551cd4e82c5d9da6438b1ba6dc35c3"
+  },
+  "wait_helper": "c3b64f9260464f4a2047e4f317c2e9b663025f95f2a12ac0791b2fbf7395c79a"
+}

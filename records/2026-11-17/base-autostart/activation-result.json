@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "reboot_requested": false,
+  "boot_id_before": "0de97dc1-35d4-4017-9098-634ce01a8627",
+  "installed": true,
+  "error": "CalledProcessError(1, ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=6', '-o', 'ServerAliveInterval=5', '-o', 'ServerAliveCountMax=2', '-o', 'UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts', '-o', 'HostKeyAlias=opi-ros2-emmc', 'orangepi@192.168.1.224', 'source /home/orangepi/drone_platform/env.sh && ROS_DOMAIN_ID=0 ROS_LOCALHOST_ONLY=0 ROS_LOG_DIR=/tmp/drone-base-autostart/ros-log python3 -u /tmp/drone-base-autostart/check_base_autostart_ros2.py /tmp/drone-base-autostart/initial-check.json'], None, None)"
+}

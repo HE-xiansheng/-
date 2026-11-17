@@ -1,0 +1,14 @@
+192.168.144.108 dev enx00e09a5af420 src 192.168.144.100 uid 1000 
+    cache 
+192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 
+    cache 
+1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 
+    cache 
+connection.id:                          ROS2 Gimbal
+connection.uuid:                        15ad846c-9c2f-4f0f-b867-ca25838e7d6e
+connection.autoconnect:                 yes
+connection.autoconnect-priority:        100
+ipv4.addresses:                         192.168.144.100/24
+ipv4.never-default:                     yes
+ipv4.ignore-auto-dns:                   yes
+29838faeb425ece71b7180c52d076b6489ea1a7a

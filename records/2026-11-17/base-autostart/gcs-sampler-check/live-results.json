@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks": {
+    "at least 30 seconds of GUI bridge snapshots": true,
+    "all GUI bridge samples connected": true,
+    "no armed state in GUI snapshots": true,
+    "lidar healthy at true rate throughout GUI observation": true,
+    "imu healthy at true rate throughout GUI observation": true,
+    "fc_imu healthy at true rate throughout GUI observation": true,
+    "fc_odom healthy at true rate throughout GUI observation": true,
+    "LIO and vision relay remain manually stopped": true,
+    "canonical actual live sampler produced at least ten settled snapshots": true,
+    "lidar canonical original freshness and real frequency": true,
+    "imu canonical original freshness and real frequency": true,
+    "fc_imu canonical original freshness and real frequency": true,
+    "fc_odom canonical original freshness and real frequency": true,
+    "canonical no external control publishers": true,
+    "canonical PX4 connected and never armed": true,
+    "no sampled FAST-LIO/relay source in canonical": true
+  },
+  "used_gui_log": "/home/tyzk/工作项目/地面站与平台/dianyunGCS-ros2-20261116/.pointcloud-link/preflight-20261117-170010.log",
+  "snapshot_count": 180,
+  "duration_s": 35.91577625274658,
+  "streams": {
+    "lidar": {
+      "hz_min": 9.9,
+      "hz_median": 10.0,
+      "hz_max": 10.0,
+      "age_max_s": 0.21
+    },
+    "imu": {
+      "hz_min": 199.5,
+      "hz_median": 200.0,
+      "hz_max": 201.0,
+      "age_max_s": 0.01
+    },
+    "fc_imu": {
+      "hz_min": 49.79947299684114,
+      "hz_median": 50.0031363378377,
+      "hz_max": 50.27803761596225,
+      "age_max_s": 0.09647635145302047
+    },
+    "fc_odom": {
+      "hz_min": 29.9,
+      "hz_median": 30.0,
+      "hz_max": 30.1,
+      "age_max_s": 0.05
+    },
+    "canonical_lidar": {
+      "hz_min": 9.964155106472631,
+      "hz_max": 10.012599247230753,
+      "source_age_max_s": 0.16668200492858887
+    },
+    "canonical_imu": {
+      "hz_min": 198.94500199801183,
+      "hz_max": 200.99668392600213,
+      "source_age_max_s": 0.01945352554321289
+    },
+    "canonical_fc_imu": {
+      "hz_min": 49.81695485461067,
+      "hz_max": 50.04042156833382,
+      "source_age_max_s": 0.0281219482421875
+    },
+    "canonical_fc_odom": {
+      "hz_min": 29.936205867934206,
+      "hz_max": 30.049086303410174,
+      "source_age_max_s": 0.04185652732849121
+    }
+  },
+  "scope": "existing Qt GUI bridge and independent canonical sampler; read-only base streams; no localization or task start"
+}

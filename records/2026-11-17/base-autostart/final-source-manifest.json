@@ -1,0 +1,14 @@
+{
+  "platform/03_tools/systemd/Safina_sensor.service": "ab6927ed2ced2d38f375e0fdc1ea21ff9d4868ccd89acf05c99aa9d064c08627",
+  "platform/03_tools/systemd/wait_for_sensor_devices.py": "c3b64f9260464f4a2047e4f317c2e9b663025f95f2a12ac0791b2fbf7395c79a",
+  "candidates/network/ros2-gimbal.nmconnection": "96635d40a8c7951a39b2b49b4906d48ea45cfec4c4a10e962d150896ccbd30fa",
+  "groundstation/tools/preflight/telemetry_reader.py": "d55cdd7ab11df674a01dd72d72efe60bc5199034f445bc9a9076e125566a3dd6",
+  "tools/check_base_autostart_ros2.py": "f6fdfdff04644aa3c2cd99dba6936ed11ba2a1e310c95a5753c219cfe94ffa94",
+  "tools/activate_base_services.py": "6ebefcfed8bcee3be9f729bdf9cc4cc33632efb2dc64ffe7e859843ef481a4db",
+  "tools/probe_px4_disarmed.py": "b81f55a4a60ae2c656fc5116da62c7840b2c541f5fde3f83679de5f10f3ac30c",
+  "tools/capture_livox_metadata_probe.py": "0a809b71a69178537da070ea5d2adce4d0509a5b28ce926b77a32a2e6a98701e",
+  "tools/check_livox_metadata_ros2.py": "df2d4451670bcc8fee41c77bad7d0036a12a47fca35cdde66058e0afa81356d3",
+  "tools/check_base_gcs_live_results.py": "a7d34de3db2a5a48e17c3c3a9b11110415f4f950a47cc00c11ea35c219af73b8",
+  "tools/test_telemetry_ros2.py": "9dbff4dd81f609ea1ac385c208e8dcc12bab8ba1bbe51a48c7d9965dc4316fa1",
+  "groundstation/tools/preflight/test_snapshot_time.py": "f52989677ae0843a1ec80b71b186b3ba2876b57d2545262fbcf9fa8388b4c92f"
+}

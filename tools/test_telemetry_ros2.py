@@ -11,7 +11,7 @@ from sensor_msgs.msg import PointCloud2,PointField,Imu,FluidPressure,BatteryStat
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseStamped
 from mavros_msgs.msg import State,ExtendedState,EstimatorStatus,RCIn,StatusText,PositionTarget
-from livox_ros_driver2.msg import CustomMsg
+from livox_ros_driver2.msg import CustomMsg,CustomPoint
 from traj_utils.msg import PolyTraj
 
 
@@ -46,7 +46,8 @@ def main():
     msgs['relay'].header.frame_id='map';msgs['relay'].pose.orientation.w=1.
     for key in ['cloud']:
         msgs[key].header.frame_id='camera_init';msgs[key].height=1;msgs[key].width=1;msgs[key].point_step=12;msgs[key].row_step=12;msgs[key].fields=[PointField(name=n,offset=i*4,datatype=7,count=1) for i,n in enumerate('xyz')];msgs[key].data=__import__('struct').pack('<fff',.05,.15,.25)
-    msgs['lidar'].point_num=20300
+    # 使用有效的小型点序列，点数须与CDR序列长度一致。
+    msgs['lidar'].point_num=3;msgs['lidar'].points=[CustomPoint() for _ in range(3)]
     for key in ['imu','fc_imu']:msgs[key].linear_acceleration.z=9.8;msgs[key].angular_velocity.y=.1
     msgs['pressure'].fluid_pressure=101500.
     msgs['fc'].connected=True;msgs['fc'].mode='POSCTL';msgs['fc'].system_status=3
@@ -80,7 +81,7 @@ def main():
         formatted=format_packet(packet,'192.168.1.224')
         check('all preflight rows healthy from typed ROS2 messages',all(r['state']=='正常' for r in formatted['rows']))
         check('source frequency from callbacks instead of 5Hz monitor',15<packet['topics']['imu']['hz']<30)
-        check('small sensor fields and custom Livox count',packet['topics']['lidar']['values']=={'point_count':20300} and packet['topics']['pressure']['values']=={'pressure_pa':101500.})
+        check('small sensor fields and custom Livox count',packet['topics']['lidar']['values']=={'point_count':3} and packet['topics']['pressure']['values']=={'pressure_pa':101500.})
         check('nonfinite battery field becomes null',packet['topics']['battery']['values']['current'] is None)
         check('frame and body pose retained',packet['topics']['lio']['frame']=='camera_init' and packet['topics']['lio']['values']['child_frame_id']=='body')
         check('ROS2 graph publisher identity and source nodes',packet['topics']['lio']['publishers']==['/factory_laserMapping'] and packet['localization']['lio_running'] and packet['localization']['relay_running'] and packet['localization']['session_id'])

@@ -1,0 +1,7 @@
+..............
+----------------------------------------------------------------------
+Ran 14 tests in 0.640s
+
+OK
+{"passed": true, "checks": 21, "scope": "native-display-only, no ROS publishers or flight commands"}
+栅格临界期限显示保持测试通过；实时有效期限仍为1.5秒

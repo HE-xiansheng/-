@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "reboot_requested": true,
+  "boot_id_before": "0de97dc1-35d4-4017-9098-634ce01a8627",
+  "installed": true,
+  "initial_check_passed": true,
+  "boot_id_after": "98055533-8b20-4466-9b95-dbffe318060f",
+  "boot_check_passed": true,
+  "temporary_evidence_cleaned": true
+}

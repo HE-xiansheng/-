@@ -1,0 +1,14 @@
+{
+  "resume-before-reboot-evidence.tar.gz": {
+    "size": 3048063,
+    "sha256": "24568b03bbff82095dee94fac931d3f337d15cfbd54f753bb9a64a3128bfaba5"
+  },
+  "verified-after-boot-evidence.tar.gz": {
+    "size": 2408729,
+    "sha256": "76e3ea8e4b3c448f66a03a5b1cc4c4d5917572ae62e5da263a081a70a2c21003"
+  },
+  "verified-before-reboot-evidence.tar.gz": {
+    "size": 3048063,
+    "sha256": "24568b03bbff82095dee94fac931d3f337d15cfbd54f753bb9a64a3128bfaba5"
+  }
+}

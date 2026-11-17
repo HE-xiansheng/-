@@ -1,0 +1,15 @@
+test_message_arriving_while_snapshot_waits_for_cache (test_snapshot_time.SnapshotTime) ... FAIL
+
+======================================================================
+FAIL: test_message_arriving_while_snapshot_waits_for_cache (test_snapshot_time.SnapshotTime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tyzk/drone-migration-github/groundstation/tools/preflight/test_snapshot_time.py", line 47, in test_message_arriving_while_snapshot_waits_for_cache
+    self.assertGreaterEqual(result[0]['topics']['lidar']['receipt_age_s'],0)
+AssertionError: -2.1531999664148316e-05 not greater than or equal to 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+Expected regression reproduced on previous source; old code reports a negative receipt age.

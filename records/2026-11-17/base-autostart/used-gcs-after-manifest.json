@@ -1,0 +1,26 @@
+{
+  "source_root": "/home/tyzk/工作项目/地面站与平台/dianyunGCS-ros2-20261116/dianyunGCS-master",
+  "scope": "only listed files modified in existing independent ROS2 copy; unrelated untracked files retained",
+  "files": {
+    "tools/preflight/telemetry_reader.py": {
+      "sha256": "f7aa314cf7ff1d65194543adcbdbbc2feccc6fd043242aaf0dd399844b50ce3d",
+      "size": 20131
+    },
+    "tools/ros2/runtime.py": {
+      "sha256": "707c14e27aa460eef7203b9be83f1a54fdc4c179913286018382630218ab8c33",
+      "size": 3635
+    },
+    "tools/ros2/profile.json": {
+      "sha256": "bba6124a4a9a0de22bd29fcbac87e938b882b061cb3014d021427f1fbebbb953",
+      "size": 1662
+    },
+    "README.md": {
+      "sha256": "ebea4d144772bec52b004463759bbd67992cbe50bb2b617ca1412e0c818613d1",
+      "size": 6364
+    },
+    "docs/ROS2-validation.md": {
+      "sha256": "dded1d9c4d5bd3aafe26c50d4a10ff007804beb35f1506824ee85132b0d7fafd",
+      "size": 4994
+    }
+  }
+}

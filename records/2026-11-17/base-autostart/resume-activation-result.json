@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "reboot_requested": false,
+  "boot_id_before": "0de97dc1-35d4-4017-9098-634ce01a8627",
+  "installed": true,
+  "initial_check_passed": true,
+  "error": "TimeoutExpired(['zenity', '--password', '--title=\u9a8c\u8bc1 .224 \u57fa\u7840\u670d\u52a1\u5f00\u673a\u542f\u52a8', '--text=\u8bf7\u8f93\u5165\u673a\u8f7d\u7535\u8111 orangepi \u7684\u7ba1\u7406\u5458\u5bc6\u7801\u3002\\n\u7528\u4e8e\u5df2\u6279\u51c6\u7684\u7cfb\u7edf\u670d\u52a1\u90e8\u7f72\u6216\u91cd\u542f\u81ea\u542f\u52a8\u9a8c\u8bc1\u3002\\n\u5bc6\u7801\u4e0d\u4f1a\u5199\u5165\u65e5\u5fd7\u3002', '--width=520'], 240)"
+}
