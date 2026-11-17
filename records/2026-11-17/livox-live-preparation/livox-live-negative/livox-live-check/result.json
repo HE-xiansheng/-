@@ -1,0 +1,16 @@
+{
+  "scope": "live .235 sensor subscription over SSH to installed .224 LIO/relay; domain183 localhost; no physical FC input, no native .224 LiDAR driver",
+  "passed": false,
+  "error": "RuntimeError('input did not finish cleanly: [\"ValueError(\\'live input checksum mismatch\\')\"]')",
+  "checks": {
+    "actual_lio_consumers_ready": true
+  },
+  "input_counts": {},
+  "reader_errors": [
+    "ValueError('live input checksum mismatch')"
+  ],
+  "returncodes": {
+    "lio": 0,
+    "relay": 0
+  }
+}

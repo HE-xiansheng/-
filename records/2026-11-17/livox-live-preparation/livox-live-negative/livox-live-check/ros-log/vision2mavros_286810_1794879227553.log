@@ -1,0 +1,2 @@
+[INFO] [1794879227.570129142] [factory_vision2mavros]: Pose-only relay: 100 unique fresh samples for initialization, source stamps preserved
+[INFO] [1794879229.911091352] [rclcpp]: signal_handler(SIGINT/SIGTERM)

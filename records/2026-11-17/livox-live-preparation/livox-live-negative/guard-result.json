@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "actual_lio_startup_ready": true,
+    "damaged_transport_rejected": true,
+    "no_input_was_published": true,
+    "does_not_claim_live_pass": true,
+    "consumer_returns_failure": true,
+    "owned_LIO_relay_exit_normally": true
+  },
+  "passed": true,
+  "remote_removed": true,
+  "scope": "corrupt transport negative test; no source .235 process or live data"
+}

@@ -1,0 +1,3 @@
+[INFO] [1794879227.858156069] [factory_laserMapping]: p_pre->lidar_type 1
+[INFO] [1794879227.867138748] [factory_laserMapping]: Node init finished.
+[INFO] [1794879230.176499166] [rclcpp]: signal_handler(SIGINT/SIGTERM)

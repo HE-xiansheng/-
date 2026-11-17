@@ -1,0 +1,1 @@
+kind,monotonic_ns,source_stamp_ns,source_receipt_ns,publish_wall_ns,source_age_s,decode_publish_ms,queue_depth,raw_bytes,raw_sha256

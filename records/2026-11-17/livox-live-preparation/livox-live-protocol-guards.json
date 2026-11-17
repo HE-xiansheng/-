@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "payload_and_receipt_roundtrip": true,
+    "clean_EOF": true,
+    "truncated_header": true,
+    "truncated_body": true,
+    "CRC_mismatch": true,
+    "unknown_message_type": true,
+    "oversize_encoded_frame": true,
+    "decompression_limit": true
+  },
+  "passed": true,
+  "scope": "local transport only; no ROS or physical hardware"
+}

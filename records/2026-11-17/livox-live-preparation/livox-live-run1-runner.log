@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "tools/run_livox_live_check.py", line 44, in <module>
+    before=subprocess.run(source_host+['date -Is; ps -eo pid,args | grep -E "[l]ivox_ros_driver2_node|[f]astlio_mapping|[m]ediamtx"'],capture_output=True,text=True,check=True,timeout=12)
+  File "/usr/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', 'orangepi@192.168.1.235', 'date -Is; ps -eo pid,args | grep -E "[l]ivox_ros_driver2_node|[f]astlio_mapping|[m]ediamtx"']' returned non-zero exit status 255.
