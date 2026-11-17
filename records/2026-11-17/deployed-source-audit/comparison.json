@@ -1,0 +1,20 @@
+{
+  "commit": "d896200ce57edba07616a6c942a76200a83071ee",
+  "matching_regular_files": 1058,
+  "missing_local_regular_files": [],
+  "different_regular_files": [],
+  "symlinks": [
+    {
+      "path": "config",
+      "type": "symlink",
+      "target": "03_tools/ros2_migration/config"
+    },
+    {
+      "path": "humble_ws",
+      "type": "symlink",
+      "target": "02_drivers/sensors/workspace"
+    }
+  ],
+  "other": [],
+  "scope": "all currently tracked .224 ordinary files vs GitHub platform tree; no hardware or execution validation"
+}
