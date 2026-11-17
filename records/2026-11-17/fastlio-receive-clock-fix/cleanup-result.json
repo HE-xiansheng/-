@@ -1,0 +1,34 @@
+{
+  "cleaned": true,
+  "verified_files": 49,
+  "removed": [
+    "/tmp/fastlio-receive-clock-test-184905-470aa2",
+    "/tmp/fastlio-receive-clock-test-185253-521e52",
+    "/tmp/fastlio-receive-clock-test-185646-c60a65",
+    "/tmp/fastlio-receive-clock-test-190025-336993",
+    "/tmp/fastlio-receive-clock-test-191807-52d782",
+    "/tmp/fastlio-receive-clock-test-192539-5ae370",
+    "/tmp/fastlio-receive-clock-test-193121-b9a136",
+    "/tmp/fastlio-receive-clock-test-194114-84e5cc",
+    "/tmp/fastlio-receive-clock-test-194622-1e14f8",
+    "/tmp/fastlio-receive-clock-test-191354-5865ac",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/regression-result.json",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_gap/node.log",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_gap/odometry.json",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_gap/result.json",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_imu_behind/node.log",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_imu_behind/odometry.json",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_imu_behind/result.json",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_imu_ahead/node.log",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_imu_ahead/odometry.json",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/candidate_imu_ahead/result.json"
+  ],
+  "formal_ticks_unchanged": {
+    "73086": "197619",
+    "73150": "197662",
+    "73273": "197826",
+    "3311": "2089",
+    "3316": "2090"
+  },
+  "candidate_retained": "/tmp/fastlio-receive-clock-fix-184504-792c7c"
+}

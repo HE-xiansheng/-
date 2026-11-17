@@ -1,0 +1,118 @@
+[
+  {
+    "root": "/tmp/fastlio-receive-clock-test-184905-470aa2",
+    "hashes": {
+      "observations.json": "0fdf90b86a801c3c29f549e117e0fd2e97800743f517d04fca79ea1d8b1803bf",
+      "stall_recovery.log": "6cfe532f0295e8e5e0145e0b499a2e403ba6f302b9877b1a9f2cbe5ecb0aa064",
+      "result.json": "acf2183758b773c09b460cd0daaed60d9d1642a395e2815b6b55c10b9281136b",
+      "baseline.log": "e1bd3d7c3b5869ef9cf9de86c0c8765155018014c5613f53d8cdffec419c6bcf"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-185253-521e52",
+    "hashes": {
+      "observations.json": "c6e47b4707c2c9904a56f3bf64dd44276c6b45b23c1c9e6dbf236add9911b769",
+      "stall_recovery.log": "9d5b4587accb1756403f9ae278cb81c62997009956cbc9eb54003fb9cb3b7d1b",
+      "result.json": "c0ad1a0eefcf80002e174ee4720c89de54a02fb51538078c8976dd532f5020cc",
+      "baseline.log": "2b96812485e9da80f498972217faec826175425f2ebe20dcb89c38ba55db1b2b"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-185646-c60a65",
+    "hashes": {
+      "observations.json": "2ec4bd424c1015b10cbab4868f527c4ce10becdf4e925bb19b21f037e6e2cd23",
+      "stall_recovery.log": "92bbb5c535ea89ba7e8bbdc863c25a4462f3a32469b11428536524779f687b58",
+      "result.json": "798be0c249c2351a25ba07a15165e15181a3d262d6ef3203fc6ce9704cb91671",
+      "baseline.log": "4bbc4ed213517ff39183e474acdb074abd3216f5c09a6456f3ecc0d780ecbb88"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-190025-336993",
+    "hashes": {
+      "observations.json": "7e104d7d6cb93d5e9905c825982b5ae2ccb593d109b3c5b82af13b32dc12c682",
+      "stall_recovery.log": "b77a26d1b7f65f1837d3bf81eeb465d3b3f4ee4869574633e58312d16d4e8651",
+      "result.json": "d5626ede1149d5da22973373aa5ea3662917ef6e40d4d2455ebbe63aa835b279",
+      "baseline.log": "77427257b58a7b3b34c72d4cb81330e2f66e30641083f3e7e3d8669e291532b2"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-191807-52d782",
+    "hashes": {
+      "observations.json": "be9b0dc1b2104d61bc72dfff467dec609315d70e144a58a626fa144d9d77edf6",
+      "stall_recovery.log": "9aa33810cf90d634b9a043af241de2566f45ef22f92b2cd768514ec1ef083b17",
+      "result.json": "bdf23b27ef48c807e9b6285aa30038fe8dd949e5569edd012dc910a5d76f0aa6",
+      "baseline.log": "ddb9e958b4f49449e755b0c7bb763471158c58ecf86eae8df10bf74477f1bc05"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-192539-5ae370",
+    "hashes": {
+      "observations.json": "30e7651dc43351e75fd6c50f25d8278629cf029f0de81cc2fabe185a61544667",
+      "stall_recovery.log": "be7f038f96eb137fd3d8b08f09b45659b57a53fbb58d7bb54be30bbc64e4f763",
+      "result.json": "3a39c906f13c4f14f27666dc30151f16d98facb3e1442053e0ed885165bd7eb9",
+      "baseline.log": "5a572a75ad34e0bc10882e97e4acf1cf081a3406210d9ad3eb1e9ebf3388af96"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-193121-b9a136",
+    "hashes": {
+      "observations.json": "0dd0cde79655e1fa095829e274c951fabb061b85446eef1e84b6e3573d2e7ad5",
+      "result.json": "682a1a1fe0aab0c3483c199f84fd971afca3f0a3a6fed3fd6786624a9847454f",
+      "baseline.log": "9b97861c32dc56d77a1775d5b98475d1b3f2f8dca77534252c0f22b32b7e3cb4",
+      "stall_recovery.log": "e8e85a60999acf658880f281128170e4693209c79a3893ce7d0ec009f5ee418e"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-194114-84e5cc",
+    "hashes": {
+      "observations.json": "202113e9fe3fa82ce946063387f8aa8a5d1c2e351f3afb67bc8a860a7701a5d2",
+      "result.json": "1be1d1837ae97471d9e544338d35d52b7d2d15e7bd60b23f3928d9e404b55fce",
+      "baseline.log": "c29d5bc129060acc8cca9f8bf564d12a47cedfb749a65f286dbb8f321c6781f6",
+      "stall_recovery.log": "c364e0d2ac2c8c22bd97b8ba879f27fdfd9f5de7148591bb88bdf1516e64cb8e"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-194622-1e14f8",
+    "hashes": {
+      "observations.json": "d1e26462ce7c5d8c420218b8920e566ef279376357c9c63bfb72f47acb37f7ce",
+      "result.json": "5513f350195c7b1485e8987b0c6effdc08ffd275786cb27c86a5f0c85f8267fb",
+      "baseline.log": "22fe14642be71b0e433ef408b07cc873dcdbbfbf048b325fead98d1dd5d45496",
+      "stall_recovery.log": "a49cb6ecd366b888cf2b02f9ccac0bfafcf5db4955e42255ee2c39d4fdfe2a6a"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-test-191354-5865ac",
+    "hashes": {
+      "baseline.log": "ce2c95e26c80f080cdb81a4f76b9d997a448d6311ad73c0228a8704262593159",
+      "observations.json": "8bc7e1b635e433c2d46df0fe4669d8d64aba28f885b13b09dc9a83558cbc92e6",
+      "result.json": "d6fcd29f0bcf7cc8bebff59f3407df89fe4cdbe221536a83f64ffaa6fd5d5e03",
+      "SHA256.json": "c78869367ee3d07c19c4625ecab4c21f9cc68fe7026eab1b77f985d7acca0516"
+    },
+    "whole": true
+  },
+  {
+    "root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+    "hashes": {
+      "regression-result.json": "f450267e11357b5cef12cb30d4f3c475dafe9da3a2526d10943e566147106cb1",
+      "candidate_gap/node.log": "39e6a673dd81b30bb28e90ee6aea79b9d05e04b492163fc7f4c307171c2d7d69",
+      "candidate_gap/odometry.json": "0972ab7a401e5f683a0ea55b9685840fcce4a01998f553dbd991aad535b34617",
+      "candidate_gap/result.json": "ff5d1a009cc0067dd59e2f5c6b9a87100c2c39791e679bec887f8e6cea022d4e",
+      "candidate_imu_behind/node.log": "d10e5d41501f4f5edabae24effc4aa8b53fa96f661820fdd25a4ec14bd9f46f4",
+      "candidate_imu_behind/odometry.json": "2d476e791b24f39971cb151ed6ae588519f6dd56a03713ad43098d16ba252f4c",
+      "candidate_imu_behind/result.json": "5fb95912083be6bef9ab951a65cc0f61cf82c2483f1cc54df9b5e63a77cfd1c3",
+      "candidate_imu_ahead/node.log": "5c0a90ca2d2b90364c2dd5daf9dc8fed41f7a8fb8a147ba8b340f5526e38a5c5",
+      "candidate_imu_ahead/odometry.json": "69e5f3332a6e7c35f29b0151c818f575b57ae6832246fd6f71a110ee4372e58f",
+      "candidate_imu_ahead/result.json": "ddddd91c4a76cb197ba7612c324bee7eda259d8a7867cec62db6b327709502c5"
+    },
+    "whole": false
+  }
+]
