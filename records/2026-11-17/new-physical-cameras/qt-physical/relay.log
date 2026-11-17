@@ -1,0 +1,27 @@
+2026/11/17 15:00:47 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 15:00:47 INF configuration loaded from /tmp/gimbal-qt-live-check/relay.yml
+2026/11/17 15:00:47 INF [path gimbal] [RTSP source] started
+2026/11/17 15:00:47 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 15:00:47 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 15:00:47 INF [path gimbal] RTP packets are too big (1200 > 1188), remuxing them into smaller ones
+2026/11/17 15:00:48 INF [RTSP] [conn 127.0.0.1:36460] opened
+2026/11/17 15:00:48 INF [RTSP] [session f113f39a] created by 127.0.0.1:36460
+2026/11/17 15:00:49 INF [RTSP] [session f113f39a] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 15:00:51 INF [RTSP] [session f113f39a] destroyed: not in use
+2026/11/17 15:00:51 INF [RTSP] [conn 127.0.0.1:36460] closed: EOF
+2026/11/17 15:00:51 INF [RTSP] [conn 127.0.0.1:36476] opened
+2026/11/17 15:00:51 INF [RTSP] [session 73b690ee] created by 127.0.0.1:36476
+2026/11/17 15:00:52 INF [RTSP] [session 73b690ee] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 15:00:52 INF [RTSP] [conn 127.0.0.1:36476] closed: EOF
+2026/11/17 15:00:52 INF [RTSP] [session 73b690ee] destroyed: not in use
+2026/11/17 15:00:54 INF [RTSP] [conn 127.0.0.1:36482] opened
+2026/11/17 15:00:54 INF [RTSP] [conn 127.0.0.1:36482] closed: EOF
+2026/11/17 15:00:58 INF [RTSP] [conn 127.0.0.1:35112] opened
+2026/11/17 15:00:58 INF [RTSP] [session 53a64cba] created by 127.0.0.1:35112
+2026/11/17 15:00:59 INF [RTSP] [session 53a64cba] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 15:01:00 INF [RTSP] [conn 127.0.0.1:35112] closed: EOF
+2026/11/17 15:01:00 INF [RTSP] [session 53a64cba] destroyed: not in use
+2026/11/17 15:01:00 INF shutting down gracefully
+2026/11/17 15:01:00 INF [RTSP] closing
+2026/11/17 15:01:00 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 15:01:00 INF waiting for running hooks

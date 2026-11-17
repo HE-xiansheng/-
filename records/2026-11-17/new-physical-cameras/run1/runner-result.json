@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "cleanup_errors": [],
+  "temporary_profile": "ROS2-Gimbal-check-56f0c36d",
+  "fixture_exit": 1,
+  "owned_processes_cleaned": true,
+  "evidence_retrieved": true,
+  "remote_removed": true
+}

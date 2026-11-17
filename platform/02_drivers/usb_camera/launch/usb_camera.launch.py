@@ -46,6 +46,6 @@ def start(context):
 
 def generate_launch_description():
     return LaunchDescription([
-        DeclareLaunchArgument('video_device', default_value='/dev/usb_cam'),
+        DeclareLaunchArgument('video_device', default_value='/dev/v4l/by-id/usb-0806-180602-N_XCX-S8130B-video-index0'),
         OpaqueFunction(function=start),
     ])

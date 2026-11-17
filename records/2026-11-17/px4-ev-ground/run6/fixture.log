@@ -1,0 +1,18 @@
+PHYSICAL_EV_GROUND_RUNNING
+{"physical_PX4_connected_disarmed": true}
+{"sustained_actual_vision_packets": true}
+{"all_wire_timestamps_match_actual_relay": true}
+{"all_wire_NED_positions_match_ROS_ENU": true}
+{"relay_keeps_real_LIO_source_stamp": true}
+{"wire_stamps_increase": true}
+{"wire_poses_fresh": true}
+{"physical_feedback_and_ROS_local_pose": true}
+{"actual_MAVROS_timesync_received": true}
+{"only_allowlisted_MAVROS_packets": true}
+{"PX4_visual_odometry_sample_received": true}
+{"PX4_EV_position_height_yaw_active": true}
+{"PX4_estimator_aid_src_ev_pos_fused": true}
+{"PX4_estimator_aid_src_ev_hgt_fused": true}
+{"PX4_estimator_aid_src_ev_yaw_fused": true}
+{"all_owned_processes_exit_normally": true}
+{"all_launched_children_exit_normally": true}

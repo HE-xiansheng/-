@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "scope": "actual independent USB, Gemini335L and physical gimbal direct Ethernet; no camera/gimbal motion commands",
+  "error": "RuntimeError('owned camera process exited')",
+  "checks": {
+    "direct_physical_gimbal_h264": true,
+    "all_owned_camera_processes_exit_normally": true,
+    "no_launched_camera_child_crash": true
+  },
+  "returncodes": {
+    "relay": 0,
+    "observer": 0,
+    "usb": 0,
+    "gemini": 0,
+    "mpp": 0
+  }
+}

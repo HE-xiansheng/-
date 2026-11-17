@@ -76,7 +76,7 @@ def start(context):
 def generate_launch_description():
     defaults={**{'enable_'+name:'true' for name in ['mavros','camera','usb_camera','lidar','rtsp']},
         'fcu_url':'/dev/serial/by-id/usb-Matek_HKUST_UAV_NxtPX4_0-if00:57600',
-        'video_device':'/dev/usb_cam',
+        'video_device':'/dev/v4l/by-id/usb-0806-180602-N_XCX-S8130B-video-index0',
         'device_config':'/home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json',
         'rtsp_url':'rtsp://192.168.144.108'}
     return LaunchDescription([DeclareLaunchArgument(k,default_value=v) for k,v in defaults.items()]+

@@ -1,0 +1,10 @@
+2026-11-17T14:37:24+08:00
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enx00e09a5af420  UP             fe80::6f96:a63f:6994:cad7/64 
+enP3p49s0        UP             192.168.1.51/32 
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:be65:1cae:a3a2:e366/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 
+192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 
+    cache 
+1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 
+    cache 
+active

@@ -1,0 +1,63 @@
+{
+  "onboard_version": "e35a2f5c8915a20369842fc82725f7171d0235fe",
+  "files": [
+    {
+      "path": "01_apps/mission_demo/workspace/src/rtsp_test/src/rtsp_hw_pub_ultra.cpp",
+      "published_before_sha256": "e63eba8d537b4c9a533d6ad06bf61adce07492279cfd92f12ad5e0e3caeda8be",
+      "candidate_sha256": "8445cd64db7a3eef1cbfce205a78a668607a48e80d13c1bc81a200a4ae9953bf",
+      "onboard_sha256": "8445cd64db7a3eef1cbfce205a78a668607a48e80d13c1bc81a200a4ae9953bf",
+      "deployed": true,
+      "reason": "physical candidate and installed 32/32 passed"
+    },
+    {
+      "path": "02_drivers/sensors/launch/platform_sensors.launch.py",
+      "published_before_sha256": "214d938491fa4971fbdd1d0f3591ddaecbcd8348ef67e870a42308d999a6a761",
+      "candidate_sha256": "09697e6f09826cf2d5a19b8c411149514cda37a5dcb73c770b739623b171591f",
+      "onboard_sha256": "214d938491fa4971fbdd1d0f3591ddaecbcd8348ef67e870a42308d999a6a761",
+      "deployed": false,
+      "reason": "USB candidate; await re-enumeration and real three-camera regression"
+    },
+    {
+      "path": "02_drivers/usb_camera/capture_compat.py",
+      "published_before_sha256": "d5c02d9142fa9dc700d8da4f071886abfdc74626e0ca64dfeeee56b6f81c9d9f",
+      "candidate_sha256": "0e2218179fc4c14dd544a989fa10633b1ad28e4c9711c5bad8161775684ca68e",
+      "onboard_sha256": "d5c02d9142fa9dc700d8da4f071886abfdc74626e0ca64dfeeee56b6f81c9d9f",
+      "deployed": false,
+      "reason": "USB candidate; await re-enumeration and real three-camera regression"
+    },
+    {
+      "path": "02_drivers/usb_camera/config/usb_cam.yaml",
+      "published_before_sha256": "721a030d97c647d145bf0b9a41a33f47151651310a1ca3192ffc597bfc98356c",
+      "candidate_sha256": "7c62c2c5f0bd0bd0b5a97ca5428f26834a101888c9acae47ce43e938e386d50c",
+      "onboard_sha256": "721a030d97c647d145bf0b9a41a33f47151651310a1ca3192ffc597bfc98356c",
+      "deployed": false,
+      "reason": "USB candidate; await re-enumeration and real three-camera regression"
+    },
+    {
+      "path": "02_drivers/usb_camera/launch/usb_camera.launch.py",
+      "published_before_sha256": "a9c22659b509a4217c935e22a8525fb84abbdd6baa34085480ed73ade198e14b",
+      "candidate_sha256": "dc65ebb55ae17f095ec7b7d1779439ba43a64bb37e9c382bcfc8dfeafb72f8e7",
+      "onboard_sha256": "a9c22659b509a4217c935e22a8525fb84abbdd6baa34085480ed73ade198e14b",
+      "deployed": false,
+      "reason": "USB candidate; await re-enumeration and real three-camera regression"
+    },
+    {
+      "path": "02_drivers/usb_camera/workspace/src/usb_cam/include/usb_cam/utils.hpp",
+      "published_before_sha256": "aa758d0dbe8703bb12545dc3c6d114e00d17e436aaa3e8dc37c8a278560b1ae4",
+      "candidate_sha256": "e3db0bea1927081ff95387794e576fcd9f394a7bd70be92bdf40bec88acaf121",
+      "onboard_sha256": "aa758d0dbe8703bb12545dc3c6d114e00d17e436aaa3e8dc37c8a278560b1ae4",
+      "deployed": false,
+      "reason": "USB candidate; await re-enumeration and real three-camera regression"
+    },
+    {
+      "path": "02_drivers/usb_camera/workspace/src/usb_cam/src/ros2/usb_cam_node.cpp",
+      "published_before_sha256": "0b33d3892dd8c5efd32d963aedd36d2c2a31f8caba8d932f4abc33646ee458d4",
+      "candidate_sha256": "2442eb6be35da1e68d13d24046ff5e2b60c0cc4b047660a5935b34bf8be01209",
+      "onboard_sha256": "0b33d3892dd8c5efd32d963aedd36d2c2a31f8caba8d932f4abc33646ee458d4",
+      "deployed": false,
+      "reason": "USB candidate; await re-enumeration and real three-camera regression"
+    }
+  ],
+  "formal_services_enabled": false,
+  "gimbal_network_persistent_installed": false
+}

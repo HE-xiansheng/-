@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "cleanup_errors": [
+    "CalledProcessError(255, ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=3', '-o', 'UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts', '-o', 'HostKeyAlias=opi-ros2-emmc', 'orangepi@192.168.1.224', \"journalctl -k -b --since '2026-11-17 14:28:00' --no-pager\"], '', 'ssh: connect to host 192.168.1.224 port 22: No route to host\\n')"
+  ],
+  "temporary_profile": "ROS2-Gimbal-check-1346888d",
+  "error": "CalledProcessError(255, ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=3', '-o', 'UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts', '-o', 'HostKeyAlias=opi-ros2-emmc', 'orangepi@192.168.1.224', 'date -Is; ip -j address; nmcli -t -f NAME,UUID,DEVICE connection show --active; ls -l /dev/v4l/by-id; cat /sys/class/net/enx00e09a5af420/address; git -C /home/orangepi/drone_platform status --porcelain'], '', 'ssh: connect to host 192.168.1.224 port 22: Connection timed out\\n')"
+}

@@ -22,6 +22,9 @@ int main(int argc,char** argv) {
         topics.push_back({"depth","/camera/depth/image_raw"});
         topics.push_back({"person","/manual_person_follow/image"});
     }
+    if (node->declare_parameter<bool>("include_usb", false)) {
+        topics.push_back({"usb","/usb_cam/image_raw"});
+    }
     for (const bool reliable : {true,false}) {
     for (const auto& topic: topics) {
         const auto key = topic.first;
@@ -39,8 +42,14 @@ int main(int argc,char** argv) {
     const auto stop_file=node->declare_parameter<std::string>("stop_file", "");
     rclcpp::executors::SingleThreadedExecutor executor;
     executor.add_node(node);
+    auto last_flush = std::chrono::steady_clock::now();
     while (rclcpp::ok() && (stop_file.empty() || !std::filesystem::exists(stop_file))) {
         executor.spin_some();
+        const auto now = std::chrono::steady_clock::now();
+        if (now-last_flush > std::chrono::milliseconds(200)) {
+            out.flush();
+            last_flush = now;
+        }
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
     executor.remove_node(node);

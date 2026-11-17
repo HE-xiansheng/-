@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "missing reference alias fails without a fallback",
+      "passed": true
+    },
+    {
+      "check": "regular file rejected",
+      "passed": true
+    },
+    {
+      "check": "non-video character device rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video17 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video15 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video13 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video11 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video18 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video16 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video14 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical Gemini video12 is rejected",
+      "passed": true
+    },
+    {
+      "check": "physical HDMI receiver is rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy Empty service names appear",
+      "passed": true
+    },
+    {
+      "check": "start Empty forwards true to native SetBool",
+      "passed": true
+    },
+    {
+      "check": "stop Empty forwards false to native SetBool",
+      "passed": true
+    },
+    {
+      "check": "native rejection is retained in operator status",
+      "passed": true
+    },
+    {
+      "check": "nonresponsive native service has bounded timeout",
+      "passed": true
+    },
+    {
+      "check": "missing native service is reported within bound",
+      "passed": true
+    },
+    {
+      "check": "shutdown case has a real service callback in flight",
+      "passed": true
+    },
+    {
+      "check": "compatibility node is finishing its pending callback",
+      "passed": true
+    },
+    {
+      "check": "compatibility node shuts down normally",
+      "passed": true
+    }
+  ]
+}

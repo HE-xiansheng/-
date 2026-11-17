@@ -1,0 +1,15 @@
+2026/11/17 14:55:02 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 14:55:02 INF configuration loaded from /tmp/new-camera-ground-check/relay.yml
+2026/11/17 14:55:02 INF [path gimbal] [RTSP source] started
+2026/11/17 14:55:02 INF [RTSP] started with listeners on 127.0.0.1:18554 (TCP/RTSP)
+2026/11/17 14:55:02 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 14:55:03 INF [path gimbal] RTP packets are too big (1200 > 1188), remuxing them into smaller ones
+2026/11/17 14:55:08 INF [RTSP] [conn 127.0.0.1:45366] opened
+2026/11/17 14:55:08 INF [RTSP] [session 129cf1e4] created by 127.0.0.1:45366
+2026/11/17 14:55:08 INF [RTSP] [session 129cf1e4] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 14:55:46 INF [RTSP] [conn 127.0.0.1:45366] closed: EOF
+2026/11/17 14:55:46 INF [RTSP] [session 129cf1e4] destroyed: not in use
+2026/11/17 14:55:49 INF shutting down gracefully
+2026/11/17 14:55:49 INF [RTSP] closing
+2026/11/17 14:55:49 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 14:55:49 INF waiting for running hooks

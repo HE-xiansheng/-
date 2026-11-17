@@ -1,0 +1,35 @@
+[INFO] [launch]: All log files can be found below /tmp/new-camera-ground-check/ros-log/2026-11-17-14-40-04-853765-orangepi5ultra-10882
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [usb_cam_node_exe-1]: process started with pid [10900]
+[INFO] [python3-2]: process started with pid [10902]
+[usb_cam_node_exe-1] [INFO] [1794897605.126050037] [usb_cam.usb_cam]: camera_name value: head_camera
+[usb_cam_node_exe-1] [WARN] [1794897605.126202578] [usb_cam.usb_cam]: framerate: 25.000000
+[usb_cam_node_exe-1] [INFO] [1794897605.129449398] [usb_cam.usb_cam]: using default calibration URL
+[usb_cam_node_exe-1] [INFO] [1794897605.129515898] [usb_cam.usb_cam]: camera calibration URL: file:///home/orangepi/.ros/camera_info/head_camera.yaml
+[usb_cam_node_exe-1] [ERROR] [1794897605.129591731] [camera_calibration_parsers]: Unable to open camera calibration file [/home/orangepi/.ros/camera_info/head_camera.yaml]
+[usb_cam_node_exe-1] [WARN] [1794897605.129625856] [usb_cam.usb_cam]: Camera calibration file /home/orangepi/.ros/camera_info/head_camera.yaml not found
+[usb_cam_node_exe-1] Cannot open device: `/dev/video1`, double-check read / write permissions for device
+[usb_cam_node_exe-1] [ERROR] [1794897605.289575194] [usb_cam.usb_cam]: Device specified is not available or is not a vaild V4L2 device: `/dev/video1`
+[usb_cam_node_exe-1] [INFO] [1794897605.289654235] [usb_cam.usb_cam]: Available V4L2 devices are:
+[usb_cam_node_exe-1] [INFO] [1794897605.289672902] [usb_cam.usb_cam]:     /dev/video0
+[usb_cam_node_exe-1] [INFO] [1794897605.289687194] [usb_cam.usb_cam]:         rk_hdmirx
+[usb_cam_node_exe-1] [INFO] [1794897605.289701485] [usb_cam.usb_cam]:     /dev/video11
+[usb_cam_node_exe-1] [INFO] [1794897605.289730943] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289744943] [usb_cam.usb_cam]:     /dev/video12
+[usb_cam_node_exe-1] [INFO] [1794897605.289756902] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289771193] [usb_cam.usb_cam]:     /dev/video13
+[usb_cam_node_exe-1] [INFO] [1794897605.289783152] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289795110] [usb_cam.usb_cam]:     /dev/video14
+[usb_cam_node_exe-1] [INFO] [1794897605.289807651] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289819318] [usb_cam.usb_cam]:     /dev/video15
+[usb_cam_node_exe-1] [INFO] [1794897605.289830985] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289842360] [usb_cam.usb_cam]:     /dev/video16
+[usb_cam_node_exe-1] [INFO] [1794897605.289853735] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289865110] [usb_cam.usb_cam]:     /dev/video17
+[usb_cam_node_exe-1] [INFO] [1794897605.289876776] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [INFO] [1794897605.289888443] [usb_cam.usb_cam]:     /dev/video18
+[usb_cam_node_exe-1] [INFO] [1794897605.289899818] [usb_cam.usb_cam]:         Orbbec Gemini 335L: Orbbec Gemi
+[usb_cam_node_exe-1] [WARN] [1794897605.292035684] [usb_cam.usb_cam]: Shutting down
+[INFO] [usb_cam_node_exe-1]: process has finished cleanly [pid 10900]
+[INFO] [python3-2]: sending signal 'SIGINT' to process[python3-2]
+[INFO] [python3-2]: process has finished cleanly [pid 10902]

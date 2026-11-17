@@ -1,0 +1,47 @@
+{
+  "src/modules/mavlink/mavlink_receiver.cpp": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "cc65819a0400fb208cf9cdfd4b07c8b3d8bf138b1a63d66ac8aaeae1fa63edde",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/src/modules/mavlink/mavlink_receiver.cpp"
+  },
+  "msg/EstimatorStatusFlags.msg": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "265506ee09e64231bde67421d604b2cfa684da6e099bfc259c74fc833ce712a0",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/msg/EstimatorStatusFlags.msg"
+  },
+  "msg/EstimatorAidSource1d.msg": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "de37c10bf282c9d844d984e8a9a73536dd9e9e3c7b46e7bb9ef0fcf18c9149ee",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/msg/EstimatorAidSource1d.msg"
+  },
+  "msg/EstimatorAidSource2d.msg": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "6f79a92ef4009a5a5a82834033baafd8ddd724512bcb069607ab0ca286a002ae",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/msg/EstimatorAidSource2d.msg"
+  },
+  "msg/versioned/VehicleOdometry.msg": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "7d6ddeea5c0254fd70d0e86b77350ad5aa5ad45ae1ab736243a6fe5f3175bc41",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/msg/versioned/VehicleOdometry.msg"
+  },
+  "src/modules/mavlink/streams/ODOMETRY.hpp": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "4a921a61bed6234c38758c8c33f7026c30854d0621085fa37bfadbaf042e97c5",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/src/modules/mavlink/streams/ODOMETRY.hpp"
+  },
+  "src/lib/timesync/Timesync.cpp": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "0fb74f75bf3eb83df86e9a237a92681297966c384a98d0d6ad5fdbde55bc4a2f",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/src/lib/timesync/Timesync.cpp"
+  },
+  "src/lib/timesync/Timesync.hpp": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "36ab28ae32364ce2115c65d7741ab03c4c53656f8c6a22364423b7d208df3dc3",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/src/lib/timesync/Timesync.hpp"
+  },
+  "src/modules/mavlink/mavlink_timesync.cpp": {
+    "revision": "6ea3539157ca358c70a515878b77077af7d4611d",
+    "sha256": "85ed566fc553c62b9a1f7a7349626f4e978483f4714efd723b211bf5cd323356",
+    "url": "https://github.com/PX4/PX4-Autopilot/blob/6ea3539157ca358c70a515878b77077af7d4611d/src/modules/mavlink/mavlink_timesync.cpp"
+  }
+}

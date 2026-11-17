@@ -1,0 +1,11 @@
+{
+  "old": {
+    "exit": 1,
+    "output": "source-clock mapping lost fractional epoch time: 1\n"
+  },
+  "fixed": {
+    "exit": 0,
+    "output": "PASS 5 fixed source-clock mappings\n"
+  },
+  "passed": true
+}

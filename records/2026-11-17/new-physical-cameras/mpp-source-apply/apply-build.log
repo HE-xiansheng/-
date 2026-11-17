@@ -1,0 +1,18 @@
+{"source_replaced": true, "before_binary_sha256": "9b208175f65baa3307c20220d58e42e883a4762a56d3dca7dd7070b9bfce0686"}
+Starting >>> rtsp_test
+Finished <<< rtsp_test [16.6s]
+
+Summary: 1 package finished [16.9s]
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'orangepi@orangepi5ultra.(none)')

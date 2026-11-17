@@ -1,0 +1,4 @@
+PHYSICAL_EV_GROUND_RUNNING
+RuntimeError('blocked outgoing MAVROS packet COMMAND_LONG')
+{"all_owned_processes_exit_normally": true}
+{"all_launched_children_exit_normally": true}

@@ -1,0 +1,8 @@
+{
+  "px4_ground_link.py": "03dcfd36e0ec316f5786fdf03629fdfe7078acf2c11c00b5247286c3d529cb75",
+  "test_px4_live_localization_ros2.py": "dd5c8b49ecb0a42994162bcc3c1a2e1f373cdbb10f52712ca6cca2f55d4b255f",
+  "cleanup_livox_live_check.py": "7d365c3f815903a09c3079c65d241594135703b7c440afd24a76d5aaf48dbcf5",
+  "run_px4_live_localization.py": "03367e1114b2024ef975b98d9d012ac71ef1d040dc424b91c4c19e04af8a15b4",
+  "sensor_readiness.py": "3c1752e109d80ed425070ad3ae61ce4b0d25c6144591d385b85e659369640434",
+  "common.py": "6c4dab96ad0faa3f3bb2796b3d62854eb02eb8e537315b82af773e9855d173a1"
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Preserve Empty capture service names over the native ROS2 SetBool API."""
 import json
+import signal
 import threading
 
 import rclpy
@@ -8,6 +9,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, DurabilityPolicy
+from rclpy.signals import SignalHandlerOptions
 from std_msgs.msg import String
 from std_srvs.srv import Empty, SetBool
 
@@ -50,12 +52,18 @@ class CaptureCompat(Node):
 
 
 def main():
-    rclpy.init()
+    # ros2 launch and a group interrupt can both signal this child. Keep the
+    # context alive until callbacks finish, and make repeated stops idempotent.
+    stopping = threading.Event()
+    signal.signal(signal.SIGINT, lambda *_: stopping.set())
+    signal.signal(signal.SIGTERM, lambda *_: stopping.set())
+    rclpy.init(signal_handler_options=SignalHandlerOptions.NO)
     node = CaptureCompat()
     executor = MultiThreadedExecutor(num_threads=2)
     executor.add_node(node)
     try:
-        executor.spin()
+        while rclpy.ok() and not stopping.is_set():
+            executor.spin_once(timeout_sec=.1)
     except (KeyboardInterrupt, rclpy.executors.ExternalShutdownException):
         pass
     finally:

@@ -1,0 +1,16 @@
+[INFO] [launch]: All log files can be found below /tmp/new-camera-ground-check/ros-log/2026-11-17-14-40-04-859094-orangepi5ultra-10883
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container-1]: process started with pid [10949]
+[component_container-1] [INFO] [1794897605.500679446] [camera.camera_container]: Load Library: /home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera/lib/liborbbec_camera.so
+[component_container-1] [INFO] [1794897605.604037227] [camera.camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1794897605.604114518] [camera.camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1794897605.617606962] [camera.camera]: SDK log file path set to: /home/orangepi/.ros/Log/camera/OrbbecSDK_20261117_144005.log
+[component_container-1] [INFO] [1794897605.841097955] [camera.camera]: Device access mode: Default (4)
+[component_container-1] [INFO] [1794897605.841161830] [camera.camera]: Set UVC backend to libuvc
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[WARNING] [launch_ros.actions.load_composable_nodes]: Abandoning wait for the '/camera/camera_container/_container/load_node' service response, due to shutdown.
+[INFO] [component_container-1]: sending signal 'SIGINT' to process[component_container-1]
+[component_container-1] [INFO] [1794897606.215279074] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container-1] [INFO] [1794897607.243081115] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[component_container-1] [ERROR] [1794897607.876034747] [camera.camera_container]: Component constructor threw an exception: Couldn't initialize rcl timer handle: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
+[INFO] [component_container-1]: process has finished cleanly [pid 10949]

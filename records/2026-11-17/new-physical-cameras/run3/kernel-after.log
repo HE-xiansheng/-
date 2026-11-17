@@ -1,0 +1,1670 @@
+Nov 17 14:28:04 orangepi5ultra kernel: Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+Nov 17 14:28:04 orangepi5ultra kernel: Linux version 5.10.160-rockchip-rk3588 (root@orangepi) (aarch64-none-linux-gnu-gcc (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.14)) 11.2.1 20220111, GNU ld (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.14)) 2.37.20220122) #1.0.0 SMP Wed Sep 11 10:03:35 CST 2024
+Nov 17 14:28:04 orangepi5ultra kernel: Machine model: RK3588 OPi 5 Ultra
+Nov 17 14:28:04 orangepi5ultra kernel: efi: UEFI not found.
+Nov 17 14:28:04 orangepi5ultra kernel: OF: fdt: Reserved memory: failed to reserve memory for node 'drm-logo@00000000': base 0x0000000000000000, size 0 MiB
+Nov 17 14:28:04 orangepi5ultra kernel: OF: fdt: Reserved memory: failed to reserve memory for node 'drm-cubic-lut@00000000': base 0x0000000000000000, size 0 MiB
+Nov 17 14:28:04 orangepi5ultra kernel: Reserved memory: bypass cma node, using cmdline CMA params instead
+Nov 17 14:28:04 orangepi5ultra kernel: OF: reserved mem: node cma compatible matching fail
+Nov 17 14:28:04 orangepi5ultra kernel: Zone ranges:
+Nov 17 14:28:04 orangepi5ultra kernel:   DMA      [mem 0x0000000000200000-0x00000000ffffffff]
+Nov 17 14:28:04 orangepi5ultra kernel:   DMA32    empty
+Nov 17 14:28:04 orangepi5ultra kernel:   Normal   [mem 0x0000000100000000-0x00000004ffffffff]
+Nov 17 14:28:04 orangepi5ultra kernel: Movable zone start for each node
+Nov 17 14:28:04 orangepi5ultra kernel: Early memory node ranges
+Nov 17 14:28:04 orangepi5ultra kernel:   node   0: [mem 0x0000000000200000-0x00000000efffffff]
+Nov 17 14:28:04 orangepi5ultra kernel:   node   0: [mem 0x0000000100000000-0x00000003fbffffff]
+Nov 17 14:28:04 orangepi5ultra kernel:   node   0: [mem 0x00000003fc500000-0x00000003ffefffff]
+Nov 17 14:28:04 orangepi5ultra kernel:   node   0: [mem 0x00000004f0000000-0x00000004ffffffff]
+Nov 17 14:28:04 orangepi5ultra kernel: Initmem setup node 0 [mem 0x0000000000200000-0x00000004ffffffff]
+Nov 17 14:28:04 orangepi5ultra kernel: On node 0 totalpages: 4192256
+Nov 17 14:28:04 orangepi5ultra kernel:   DMA zone: 15352 pages used for memmap
+Nov 17 14:28:04 orangepi5ultra kernel:   DMA zone: 0 pages reserved
+Nov 17 14:28:04 orangepi5ultra kernel:   DMA zone: 982528 pages, LIFO batch:63
+Nov 17 14:28:04 orangepi5ultra kernel:   Normal zone: 50152 pages used for memmap
+Nov 17 14:28:04 orangepi5ultra kernel:   Normal zone: 3209728 pages, LIFO batch:63
+Nov 17 14:28:04 orangepi5ultra kernel: On node 0, zone Normal: 256 pages in unavailable ranges
+Nov 17 14:28:04 orangepi5ultra kernel: cma: Reserved 128 MiB at 0x00000000e8000000
+Nov 17 14:28:04 orangepi5ultra kernel: psci: probing for conduit method from DT.
+Nov 17 14:28:04 orangepi5ultra kernel: psci: PSCIv1.1 detected in firmware.
+Nov 17 14:28:04 orangepi5ultra kernel: psci: Using standard PSCI v0.2 function IDs
+Nov 17 14:28:04 orangepi5ultra kernel: psci: MIGRATE_INFO_TYPE not supported.
+Nov 17 14:28:04 orangepi5ultra kernel: psci: SMC Calling Convention v1.2
+Nov 17 14:28:04 orangepi5ultra kernel: percpu: Embedded 32 pages/cpu s93544 r8192 d29336 u131072
+Nov 17 14:28:04 orangepi5ultra kernel: pcpu-alloc: s93544 r8192 d29336 u131072 alloc=32*4096
+Nov 17 14:28:04 orangepi5ultra kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+Nov 17 14:28:04 orangepi5ultra kernel: Detected VIPT I-cache on CPU0
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: GIC system register CPU interface
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Virtualization Host Extensions
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+Nov 17 14:28:04 orangepi5ultra kernel: alternatives: patching kernel code
+Nov 17 14:28:04 orangepi5ultra kernel: Built 1 zonelists, mobility grouping on.  Total pages: 4126752
+Nov 17 14:28:04 orangepi5ultra kernel: Kernel command line: root=UUID=d61feabe-fd2f-439b-bcd6-65b20a25f616 rootwait rootfstype=ext4 splash plymouth.ignore-serial-consoles console=ttyS2,1500000 console=tty1 consoleblank=0 loglevel=1 ubootpart=2f736e92-219c-6c42-be3d-bb69bb537025 usb-storage.quirks= cma=128M  cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+Nov 17 14:28:04 orangepi5ultra kernel: Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+Nov 17 14:28:04 orangepi5ultra kernel: software IO TLB: mapped [mem 0x00000000e4000000-0x00000000e8000000] (64MB)
+Nov 17 14:28:04 orangepi5ultra kernel: Memory: 16194708K/16769024K available (16512K kernel code, 3504K rwdata, 6444K rodata, 6912K init, 631K bss, 443244K reserved, 131072K cma-reserved)
+Nov 17 14:28:04 orangepi5ultra kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+Nov 17 14:28:04 orangepi5ultra kernel: ftrace: allocating 63776 entries in 250 pages
+Nov 17 14:28:04 orangepi5ultra kernel: ftrace: allocated 250 pages with 6 groups
+Nov 17 14:28:04 orangepi5ultra kernel: rcu: Hierarchical RCU implementation.
+Nov 17 14:28:04 orangepi5ultra kernel: rcu:         RCU event tracing is enabled.
+Nov 17 14:28:04 orangepi5ultra kernel:         Rude variant of Tasks RCU enabled.
+Nov 17 14:28:04 orangepi5ultra kernel:         Tracing variant of Tasks RCU enabled.
+Nov 17 14:28:04 orangepi5ultra kernel: rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+Nov 17 14:28:04 orangepi5ultra kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: GIC: Using split EOI/Deactivate mode
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: 480 SPIs implemented
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: 0 Extended SPIs implemented
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: Distributor has no Range Selector support
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: 16 PPIs implemented
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU0: found redistributor 0 region 0:0x00000000fe680000
+Nov 17 14:28:04 orangepi5ultra kernel: ITS [mem 0xfe640000-0xfe65ffff]
+Nov 17 14:28:04 orangepi5ultra kernel: ITS@0x00000000fe640000: allocated 8192 Devices @100100000 (indirect, esz 8, psz 64K, shr 0)
+Nov 17 14:28:04 orangepi5ultra kernel: ITS@0x00000000fe640000: allocated 32768 Interrupt Collections @100110000 (flat, esz 2, psz 64K, shr 0)
+Nov 17 14:28:04 orangepi5ultra kernel: ITS: using cache flushing for cmd queue
+Nov 17 14:28:04 orangepi5ultra kernel: ITS [mem 0xfe660000-0xfe67ffff]
+Nov 17 14:28:04 orangepi5ultra kernel: ITS@0x00000000fe660000: allocated 8192 Devices @100130000 (indirect, esz 8, psz 64K, shr 0)
+Nov 17 14:28:04 orangepi5ultra kernel: ITS@0x00000000fe660000: allocated 32768 Interrupt Collections @100140000 (flat, esz 2, psz 64K, shr 0)
+Nov 17 14:28:04 orangepi5ultra kernel: ITS: using cache flushing for cmd queue
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: using LPI property table @0x0000000100150000
+Nov 17 14:28:04 orangepi5ultra kernel: GIC: using cache flushing for LPI property table
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU0: using allocated LPI pending table @0x0000000100160000
+Nov 17 14:28:04 orangepi5ultra kernel: arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+Nov 17 14:28:04 orangepi5ultra kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+Nov 17 14:28:04 orangepi5ultra kernel: sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+Nov 17 14:28:04 orangepi5ultra kernel: Console: colour dummy device 80x25
+Nov 17 14:28:04 orangepi5ultra kernel: printk: console [tty1] enabled
+Nov 17 14:28:04 orangepi5ultra kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=80000)
+Nov 17 14:28:04 orangepi5ultra kernel: pid_max: default: 32768 minimum: 301
+Nov 17 14:28:04 orangepi5ultra kernel: LSM: Security Framework initializing
+Nov 17 14:28:04 orangepi5ultra kernel: Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: rcu: Hierarchical SRCU implementation.
+Nov 17 14:28:04 orangepi5ultra kernel: Platform MSI: msi-controller@fe640000 domain created
+Nov 17 14:28:04 orangepi5ultra kernel: Platform MSI: msi-controller@fe660000 domain created
+Nov 17 14:28:04 orangepi5ultra kernel: PCI/MSI: /interrupt-controller@fe600000/msi-controller@fe640000 domain created
+Nov 17 14:28:04 orangepi5ultra kernel: PCI/MSI: /interrupt-controller@fe600000/msi-controller@fe660000 domain created
+Nov 17 14:28:04 orangepi5ultra kernel: EFI services will not be available.
+Nov 17 14:28:04 orangepi5ultra kernel: smp: Bringing up secondary CPUs ...
+Nov 17 14:28:04 orangepi5ultra kernel: Detected VIPT I-cache on CPU1
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU1: found redistributor 100 region 0:0x00000000fe6a0000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU1: using allocated LPI pending table @0x0000000100170000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+Nov 17 14:28:04 orangepi5ultra kernel: Detected VIPT I-cache on CPU2
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU2: found redistributor 200 region 0:0x00000000fe6c0000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU2: using allocated LPI pending table @0x0000000100180000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+Nov 17 14:28:04 orangepi5ultra kernel: Detected VIPT I-cache on CPU3
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU3: found redistributor 300 region 0:0x00000000fe6e0000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU3: using allocated LPI pending table @0x0000000100190000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Spectre-v4
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Spectre-BHB
+Nov 17 14:28:04 orangepi5ultra kernel: Detected PIPT I-cache on CPU4
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU4: found redistributor 400 region 0:0x00000000fe700000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU4: using allocated LPI pending table @0x00000001001a0000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU4: Booted secondary processor 0x0000000400 [0x414fd0b0]
+Nov 17 14:28:04 orangepi5ultra kernel: Detected PIPT I-cache on CPU5
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU5: found redistributor 500 region 0:0x00000000fe720000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU5: using allocated LPI pending table @0x00000001001b0000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU5: Booted secondary processor 0x0000000500 [0x414fd0b0]
+Nov 17 14:28:04 orangepi5ultra kernel: Detected PIPT I-cache on CPU6
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU6: found redistributor 600 region 0:0x00000000fe740000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU6: using allocated LPI pending table @0x00000001001c0000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU6: Booted secondary processor 0x0000000600 [0x414fd0b0]
+Nov 17 14:28:04 orangepi5ultra kernel: Detected PIPT I-cache on CPU7
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU7: found redistributor 700 region 0:0x00000000fe760000
+Nov 17 14:28:04 orangepi5ultra kernel: GICv3: CPU7: using allocated LPI pending table @0x00000001001d0000
+Nov 17 14:28:04 orangepi5ultra kernel: CPU7: Booted secondary processor 0x0000000700 [0x414fd0b0]
+Nov 17 14:28:04 orangepi5ultra kernel: smp: Brought up 1 node, 8 CPUs
+Nov 17 14:28:04 orangepi5ultra kernel: SMP: Total of 8 processors activated.
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Privileged Access Never
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: User Access Override
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: 32-bit EL0 Support
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Common not Private translations
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: RAS Extension Support
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: CRC32 instructions
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+Nov 17 14:28:04 orangepi5ultra kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+Nov 17 14:28:04 orangepi5ultra kernel: CPU: All CPU(s) started at EL2
+Nov 17 14:28:04 orangepi5ultra kernel: devtmpfs: initialized
+Nov 17 14:28:04 orangepi5ultra kernel: Registered cp15_barrier emulation handler
+Nov 17 14:28:04 orangepi5ultra kernel: Registered setend emulation handler
+Nov 17 14:28:04 orangepi5ultra kernel: KASLR disabled due to lack of seed
+Nov 17 14:28:04 orangepi5ultra kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+Nov 17 14:28:04 orangepi5ultra kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: pinctrl core: initialized pinctrl subsystem
+Nov 17 14:28:04 orangepi5ultra kernel: regulator-dummy: no parameters, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: DMI not present or invalid.
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 16
+Nov 17 14:28:04 orangepi5ultra kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+Nov 17 14:28:04 orangepi5ultra kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Nov 17 14:28:04 orangepi5ultra kernel: audit: initializing netlink subsys (disabled)
+Nov 17 14:28:04 orangepi5ultra kernel: audit: type=2000 audit(0.036:1): state=initialized audit_enabled=0 res=1
+Nov 17 14:28:04 orangepi5ultra kernel: Registered FIQ tty driver
+Nov 17 14:28:04 orangepi5ultra kernel: thermal_sys: Registered thermal governor 'fair_share'
+Nov 17 14:28:04 orangepi5ultra kernel: thermal_sys: Registered thermal governor 'step_wise'
+Nov 17 14:28:04 orangepi5ultra kernel: thermal_sys: Registered thermal governor 'user_space'
+Nov 17 14:28:04 orangepi5ultra kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Nov 17 14:28:04 orangepi5ultra kernel: thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+Nov 17 14:28:04 orangepi5ultra kernel: thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+Nov 17 14:28:04 orangepi5ultra kernel: thermal thermal_zone3: power_allocator: sustainable_power will be estimated
+Nov 17 14:28:04 orangepi5ultra kernel: thermal thermal_zone4: power_allocator: sustainable_power will be estimated
+Nov 17 14:28:04 orangepi5ultra kernel: thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+Nov 17 14:28:04 orangepi5ultra kernel: thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+Nov 17 14:28:04 orangepi5ultra kernel: cpuidle: using governor menu
+Nov 17 14:28:04 orangepi5ultra kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+Nov 17 14:28:04 orangepi5ultra kernel: ASID allocator initialised with 65536 entries
+Nov 17 14:28:04 orangepi5ultra kernel: ramoops: dmesg-0        0x20000@0x0000000000110000
+Nov 17 14:28:04 orangepi5ultra kernel: ramoops: console        0x80000@0x0000000000130000
+Nov 17 14:28:04 orangepi5ultra kernel: ramoops: pmsg        0x50000@0x00000000001b0000
+Nov 17 14:28:04 orangepi5ultra kernel: printk: console [ramoops-1] enabled
+Nov 17 14:28:04 orangepi5ultra kernel: pstore: Registered ramoops as persistent store backend
+Nov 17 14:28:04 orangepi5ultra kernel: ramoops: using 0xf0000@0x110000, ecc: 0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-gpio fd8a0000.gpio: probed /pinctrl/gpio@fd8a0000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-gpio fec20000.gpio: probed /pinctrl/gpio@fec20000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-gpio fec30000.gpio: probed /pinctrl/gpio@fec30000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-gpio fec40000.gpio: probed /pinctrl/gpio@fec40000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-gpio fec50000.gpio: probed /pinctrl/gpio@fec50000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pinctrl pinctrl: probed pinctrl
+Nov 17 14:28:04 orangepi5ultra kernel: HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+Nov 17 14:28:04 orangepi5ultra kernel: HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+Nov 17 14:28:04 orangepi5ultra kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Nov 17 14:28:04 orangepi5ultra kernel: HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx8   gen()  5556 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx8   xor()  4361 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx4   gen()  5698 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx4   xor()  4329 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx2   gen()  5229 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx2   xor()  4080 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx1   gen()  4376 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: neonx1   xor()  3545 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x8  gen()  1344 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x8  xor()   891 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x4  gen()  1667 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x4  xor()   911 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x2  gen()  2451 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x2  xor()  1347 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x1  gen()  2033 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: int64x1  xor()  1106 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: using algorithm neonx4 gen() 5698 MB/s
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: .... xor() 4329 MB/s, rmw enabled
+Nov 17 14:28:04 orangepi5ultra kernel: raid6: using neon recovery algorithm
+Nov 17 14:28:04 orangepi5ultra kernel: fiq_debugger fiq_debugger.0: IRQ fiq not found
+Nov 17 14:28:04 orangepi5ultra kernel: fiq_debugger fiq_debugger.0: IRQ wakeup not found
+Nov 17 14:28:04 orangepi5ultra kernel: fiq_debugger_probe: could not install nmi irq handler
+Nov 17 14:28:04 orangepi5ultra kernel: printk: console [ttyFIQ0] enabled
+Nov 17 14:28:04 orangepi5ultra kernel: Registered fiq debugger ttyFIQ0
+Nov 17 14:28:04 orangepi5ultra kernel: vcc12v_dcin: 12000 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc12v-dcin: vcc12v_dcin supplying 12000000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-sys: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: supplied by vcc12v_dcin
+Nov 17 14:28:04 orangepi5ultra kernel: vcc12v_dcin: could not add device link regulator.2: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: 5000 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-sys: vcc5v0_sys supplying 5000000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-usbdcin: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_usbdcin: supplied by vcc12v_dcin
+Nov 17 14:28:04 orangepi5ultra kernel: vcc12v_dcin: could not add device link regulator.3: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_usbdcin: 5000 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-usbdcin: vcc5v0_usbdcin supplying 5000000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-usb: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_usb: supplied by vcc5v0_usbdcin
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_usbdcin: could not add device link regulator.4: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_usb: 5000 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-usb: vcc5v0_usb supplying 5000000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc-1v1-nldo-s3: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.5: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: 1100 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc-1v1-nldo-s3: vcc_1v1_nldo_s3 supplying 1100000uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_3v3_sd_s0: 3300 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc-3v3-sd-s0: vcc_3v3_sd_s0 supplying 3300000uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc3v3_pcie30: 3300 mV, disabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc3v3-pcie30: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc3v3_pcie30: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc3v3-pcie30: vcc3v3_pcie30 supplying 3300000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-host: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_host: supplied by vcc5v0_usb
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_usb: could not add device link regulator.8: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_host: 5000 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-host: vcc5v0_host supplying 5000000uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_otg: 5000 mV, disabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-otg: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_otg: supplied by vcc5v0_usb
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc5v0-otg: vcc5v0_otg supplying 5000000uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc3v3_pcie2x1l0: 3300 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc3v3-pcie2x1l0: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc3v3_pcie2x1l0: supplied by vcc12v_dcin
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc3v3-pcie2x1l0: vcc3v3_pcie2x1l0 supplying 3300000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc3v3-pcie-eth: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc3v3_pcie_eth: supplied by vcc12v_dcin
+Nov 17 14:28:04 orangepi5ultra kernel: vcc12v_dcin: could not add device link regulator.11: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc3v3_pcie_eth: 3300 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc3v3-pcie-eth: vcc3v3_pcie_eth supplying 3300000uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_mipicsi0: no parameters, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc-mipicsi0-regulator: vcc_mipicsi0 supplying 0uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_mipicsi1: no parameters, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc-mipicsi1-regulator: vcc_mipicsi1 supplying 0uV
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_mipicsi1: no parameters, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: debugfs: Directory 'vcc_mipicsi1' with parent 'regulator' already present!
+Nov 17 14:28:04 orangepi5ultra kernel: debugfs: Directory 'vcc_mipicsi1' with parent 'vcc_mipicsi1' already present!
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage vcc-mipidcphy0-regulator: vcc_mipicsi1 supplying 0uV
+Nov 17 14:28:04 orangepi5ultra kernel: iommu: Default domain type: Translated 
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vdpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vdpu-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rga30-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rga30-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rga31-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rga31-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up venc0-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up venc0-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vcodec-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vcodec-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up venc1-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up venc1-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rkvdec0-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rkvdec0-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rkvdec1-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up rkvdec1-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vi-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vi-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: SCSI subsystem initialized
+Nov 17 14:28:04 orangepi5ultra kernel: libata version 3.00 loaded.
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver usbfs
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver hub
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new device driver usb
+Nov 17 14:28:04 orangepi5ultra kernel: mc: Linux media interface: v0.10
+Nov 17 14:28:04 orangepi5ultra kernel: videodev: Linux video capture interface: v2.00
+Nov 17 14:28:04 orangepi5ultra kernel: pps_core: LinuxPPS API ver. 1 registered
+Nov 17 14:28:04 orangepi5ultra kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Nov 17 14:28:04 orangepi5ultra kernel: PTP clock support registered
+Nov 17 14:28:04 orangepi5ultra kernel: arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+Nov 17 14:28:04 orangepi5ultra kernel: arm-scmi firmware:scmi: SCMI Protocol v2.0 'rockchip:' Firmware version 0x0
+Nov 17 14:28:04 orangepi5ultra kernel: Advanced Linux Sound Architecture Driver Initialized.
+Nov 17 14:28:04 orangepi5ultra kernel: NetLabel: Initializing
+Nov 17 14:28:04 orangepi5ultra kernel: NetLabel:  domain hash size = 128
+Nov 17 14:28:04 orangepi5ultra kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Nov 17 14:28:04 orangepi5ultra kernel: NetLabel:  unlabeled traffic allowed by default
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-cpuinfo cpuinfo: SoC                : 35881000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-cpuinfo cpuinfo: Serial                : 2a87e033b0a250bb
+Nov 17 14:28:04 orangepi5ultra kernel: clocksource: Switched to clocksource arch_sys_counter
+Nov 17 14:28:04 orangepi5ultra kernel: VFS: Disk quotas dquot_6.6.0
+Nov 17 14:28:04 orangepi5ultra kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 2
+Nov 17 14:28:04 orangepi5ultra kernel: IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: tcp_listen_portaddr_hash hash table entries: 8192 (order: 6, 327680 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: TCP: Hash tables configured (established 131072 bind 65536)
+Nov 17 14:28:04 orangepi5ultra kernel: MPTCP token hash table entries: 16384 (order: 7, 786432 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: UDP hash table entries: 8192 (order: 7, 786432 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: UDP-Lite hash table entries: 8192 (order: 7, 786432 bytes, linear)
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 1
+Nov 17 14:28:04 orangepi5ultra kernel: RPC: Registered named UNIX socket transport module.
+Nov 17 14:28:04 orangepi5ultra kernel: RPC: Registered udp transport module.
+Nov 17 14:28:04 orangepi5ultra kernel: RPC: Registered tcp transport module.
+Nov 17 14:28:04 orangepi5ultra kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Nov 17 14:28:04 orangepi5ultra kernel: PCI: CLS 0 bytes, default 64
+Nov 17 14:28:04 orangepi5ultra kernel: Trying to unpack rootfs image as initramfs...
+Nov 17 14:28:04 orangepi5ultra kernel: Freeing initrd memory: 20920K
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-thermal fec00000.tsadc: Missing rockchip,grf property
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-thermal fec00000.tsadc: tsadc is probed successfully!
+Nov 17 14:28:04 orangepi5ultra kernel: hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+Nov 17 14:28:04 orangepi5ultra kernel: kvm [1]: IPA Size Limit: 40 bits
+Nov 17 14:28:04 orangepi5ultra kernel: kvm [1]: GICv3: no GICV resource entry
+Nov 17 14:28:04 orangepi5ultra kernel: kvm [1]: disabling GICv2 emulation
+Nov 17 14:28:04 orangepi5ultra kernel: kvm [1]: GIC system register CPU interface enabled
+Nov 17 14:28:04 orangepi5ultra kernel: kvm [1]: vgic interrupt IRQ9
+Nov 17 14:28:04 orangepi5ultra kernel: kvm [1]: VHE mode initialized successfully
+Nov 17 14:28:04 orangepi5ultra kernel: Initialise system trusted keyrings
+Nov 17 14:28:04 orangepi5ultra kernel: workingset: timestamp_bits=46 max_order=22 bucket_order=0
+Nov 17 14:28:04 orangepi5ultra kernel: NFS: Registering the id_resolver key type
+Nov 17 14:28:04 orangepi5ultra kernel: Key type id_resolver registered
+Nov 17 14:28:04 orangepi5ultra kernel: Key type id_legacy registered
+Nov 17 14:28:04 orangepi5ultra kernel: nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+Nov 17 14:28:04 orangepi5ultra kernel: nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+Nov 17 14:28:04 orangepi5ultra kernel: Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+Nov 17 14:28:04 orangepi5ultra kernel: ntfs: driver 2.1.32 [Flags: R/W].
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 38
+Nov 17 14:28:04 orangepi5ultra kernel: xor: measuring software checksum speed
+Nov 17 14:28:04 orangepi5ultra kernel:    8regs           :  6365 MB/sec
+Nov 17 14:28:04 orangepi5ultra kernel:    32regs          :  8459 MB/sec
+Nov 17 14:28:04 orangepi5ultra kernel:    arm64_neon      : 10450 MB/sec
+Nov 17 14:28:04 orangepi5ultra kernel: xor: using function: arm64_neon (10450 MB/sec)
+Nov 17 14:28:04 orangepi5ultra kernel: Key type asymmetric registered
+Nov 17 14:28:04 orangepi5ultra kernel: Asymmetric key parser 'x509' registered
+Nov 17 14:28:04 orangepi5ultra kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+Nov 17 14:28:04 orangepi5ultra kernel: io scheduler mq-deadline registered
+Nov 17 14:28:04 orangepi5ultra kernel: io scheduler kyber registered
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-csi2-dphy-hw fedc0000.csi2-dphy0-hw: csi2 dphy hw probe successfully!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-csi2-dphy-hw fedc8000.csi2-dphy1-hw: csi2 dphy hw probe successfully!
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d0000.syscon:usb2-phy@0.0: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d0000.syscon:usb2-phy@0.0: Looking up phy-supply property in node /syscon@fd5d0000/usb2-phy@0/otg-port failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d0000.syscon:usb2-phy@0.0: Looking up vbus-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d8000.syscon:usb2-phy@8000.1: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_host: could not add device link phy-fd5d8000.syscon:usb2-phy@8000.1: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5dc000.syscon:usb2-phy@c000.2: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_host: could not add device link phy-fd5dc000.syscon:usb2-phy@c000.2: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d4000.syscon:usb2-phy@4000.3: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_host: could not add device link phy-fd5d4000.syscon:usb2-phy@4000.3: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d4000.syscon:usb2-phy@4000.3: Looking up vbus-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d4000.syscon:usb2-phy@4000.3: Looking up vbus-supply property in node /syscon@fd5d4000/usb2-phy@4000/otg-port failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee00000.phy.4: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee00000.phy.4: Looking up phy-supply property in node /phy@fee00000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee20000.phy.5: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee20000.phy.5: Looking up phy-supply property in node /phy@fee20000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee10000.phy.6: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee10000.phy.6: Looking up phy-supply property in node /phy@fee10000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-feda0000.phy.7: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-feda0000.phy.7: Looking up phy-supply property in node /phy@feda0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fedb0000.phy.8: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fedb0000.phy.8: Looking up phy-supply property in node /phy@fedb0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed70000.hdmiphy.9: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed70000.hdmiphy.9: Looking up phy-supply property in node /hdmiphy@fed70000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-hdptx-phy-hdmi fed70000.hdmiphy: hdptx phy init success
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee80000.phy.10: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fee80000.phy.10: Looking up phy-supply property in node /phy@fee80000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed80000.phy.11: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed80000.phy.11: Looking up phy-supply property in node /phy@fed80000/dp-port failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed80000.phy.12: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed80000.phy.12: Looking up phy-supply property in node /phy@fed80000/u3-port failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed90000.phy.13: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed90000.phy.13: Looking up phy-supply property in node /phy@fed90000/dp-port failed
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed90000.phy.14: Looking up phy-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fed90000.phy.14: Looking up phy-supply property in node /phy@fed90000/u3-port failed
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: invalid prsnt-gpios property in node
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: Looking up vpcie3v3-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: invalid prsnt-gpios property in node
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: Looking up vpcie3v3-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: Looking up vpcie3v3-supply property in node /pcie@fe190000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: Looking up vpcie3v3-supply property in node /pcie@fe180000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: no vpcie3v3 regulator found
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: no vpcie3v3 regulator found
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: invalid prsnt-gpios property in node
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: Looking up vpcie3v3-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: IRQ msi not found
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: use outband MSI support
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: host bridge /pcie@fe190000 ranges:
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie:      err 0x00f4000000..0x00f40fffff -> 0x00f4000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie:       IO 0x00f4100000..0x00f41fffff -> 0x00f4100000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie:      MEM 0x00f4200000..0x00f4ffffff -> 0x00f4200000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie:      MEM 0x0a00000000..0x0a3fffffff -> 0x0a00000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: invalid prsnt-gpios property in node
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: Looking up vpcie3v3-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: invalid resource
+Nov 17 14:28:04 orangepi5ultra kernel: pwm-backlight backlight: Looking up power-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: IRQ msi not found
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: use outband MSI support
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: host bridge /pcie@fe180000 ranges:
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie:      err 0x00f3000000..0x00f30fffff -> 0x00f3000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie:       IO 0x00f3100000..0x00f31fffff -> 0x00f3100000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie:      MEM 0x00f3200000..0x00f3ffffff -> 0x00f3200000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie:      MEM 0x09c0000000..0x09ffffffff -> 0x09c0000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: invalid resource
+Nov 17 14:28:04 orangepi5ultra kernel: pwm-backlight backlight: supply power not found, using dummy regulator
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: IRQ msi not found
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: use outband MSI support
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: host bridge /pcie@fe170000 ranges:
+Nov 17 14:28:04 orangepi5ultra kernel: iep: Module initialized.
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie:      err 0x00f2000000..0x00f20fffff -> 0x00f2000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie:       IO 0x00f2100000..0x00f21fffff -> 0x00f2100000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie:      MEM 0x00f2200000..0x00f2ffffff -> 0x00f2200000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie:      MEM 0x0980000000..0x09bfffffff -> 0x0980000000
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_service mpp-srv: 57be1fd9cfbd author: yml 2024-07-01 RK3588: NPU: Update to 0.9.6 version
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_service mpp-srv: probe start
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: invalid resource
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vdpu2 fdb50400.vdpu: Adding to iommu group 1
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vdpu2 fdb50400.vdpu: probe device
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vdpu2 fdb50400.vdpu: reset_group->rw_sem_on=0
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vdpu2 fdb50400.vdpu: reset_group->rw_sem_on=0
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vdpu2 fdb50400.vdpu: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 jpege-ccu: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 jpege-ccu: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdb50000.vepu: Adding to iommu group 1
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdb50000.vepu: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdb50000.vepu: reset_group->rw_sem_on=0
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdb50000.vepu: reset_group->rw_sem_on=0
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdb50000.vepu: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba0000.jpege-core: Adding to iommu group 5
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba0000.jpege-core: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba0000.jpege-core: attach ccu success
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba0000.jpege-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba4000.jpege-core: Adding to iommu group 6
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba4000.jpege-core: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba4000.jpege-core: attach ccu success
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba4000.jpege-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba8000.jpege-core: Adding to iommu group 7
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba8000.jpege-core: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba8000.jpege-core: attach ccu success
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdba8000.jpege-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdbac000.jpege-core: Adding to iommu group 8
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdbac000.jpege-core: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdbac000.jpege-core: attach ccu success
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_vepu2 fdbac000.jpege-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp-iep2 fdbb0000.iep: Adding to iommu group 9
+Nov 17 14:28:04 orangepi5ultra kernel: mpp-iep2 fdbb0000.iep: probe device
+Nov 17 14:28:04 orangepi5ultra kernel: mpp-iep2 fdbb0000.iep: allocate roi buffer failed
+Nov 17 14:28:04 orangepi5ultra kernel: mpp-iep2 fdbb0000.iep: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_jpgdec fdb90000.jpegd: Adding to iommu group 4
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_jpgdec fdb90000.jpegd: probe device
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_jpgdec fdb90000.jpegd: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc30000.rkvdec-ccu: rkvdec-ccu, probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc30000.rkvdec-ccu: ccu-mode: 1
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc30000.rkvdec-ccu: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: Adding to iommu group 12
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: rkvdec-core, probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: shared_niu_a is not found!
+Nov 17 14:28:04 orangepi5ultra kernel: rkvdec2_init:1022: No niu aclk reset resource define
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: shared_niu_h is not found!
+Nov 17 14:28:04 orangepi5ultra kernel: rkvdec2_init:1025: No niu hclk reset resource define
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: Looking up vdec-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: Looking up vdec-supply property in node /rkvdec-core@fdc38000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: no regulator, devfreq is disabled
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: core_mask=00010001
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: attach ccu as core 0
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: sram_start 0x00000000ff001000
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: rcb_iova 0x00000000fff00000
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: sram_size 491520
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: rcb_size 1048576
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: min_width 512
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: rcb_info_count 20
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [136, 24576]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [137, 49152]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [141, 90112]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [140, 49152]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [139, 180224]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [133, 49152]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [134, 8192]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [135, 4352]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [138, 13056]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: [142, 291584]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc38100.rkvdec-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: Adding to iommu group 13
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: rkvdec-core, probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: shared_niu_a is not found!
+Nov 17 14:28:04 orangepi5ultra kernel: rkvdec2_init:1022: No niu aclk reset resource define
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: shared_niu_h is not found!
+Nov 17 14:28:04 orangepi5ultra kernel: rkvdec2_init:1025: No niu hclk reset resource define
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: Looking up vdec-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: Looking up vdec-supply property in node /rkvdec-core@fdc48000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: no regulator, devfreq is disabled
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: core_mask=00020002
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: attach ccu as core 1
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: sram_start 0x00000000ff079000
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: rcb_iova 0x00000000ffe00000
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: sram_size 487424
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: rcb_size 1048576
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: min_width 512
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: rcb_info_count 20
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [136, 24576]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [137, 49152]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [141, 90112]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [140, 49152]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [139, 180224]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [133, 49152]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [134, 8192]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [135, 4352]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [138, 13056]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: [142, 291584]
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvdec2 fdc48100.rkvdec-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 rkvenc-ccu: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 rkvenc-ccu: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: Adding to iommu group 10
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: Looking up venc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: Looking up venc-supply property in node /rkvenc-core@fdbd0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: dev_pm_opp_set_regulators: no regulator (venc) found: -19
+Nov 17 14:28:04 orangepi5ultra kernel: rkvenc_init:1905: failed to add venc devfreq
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: attach ccu as core 0
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbd0000.rkvenc-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: Adding to iommu group 11
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: Looking up venc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: Looking up venc-supply property in node /rkvenc-core@fdbe0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: dev_pm_opp_set_regulators: no regulator (venc) found: -19
+Nov 17 14:28:04 orangepi5ultra kernel: rkvenc_init:1905: failed to add venc devfreq
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: attach ccu as core 1
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_rkvenc2 fdbe0000.rkvenc-core: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up av1-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up av1-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_av1dec: Adding child /av1d@fdc70000
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_av1dec: register device av1d-master
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_av1dec av1d-master: av1_iommu_of_xlate,784
+Nov 17 14:28:04 orangepi5ultra kernel: av1_iommu_probe_device,736, consumer : av1d-master, supplier : fdca0000.iommu
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_av1dec av1d-master: Adding to iommu group 17
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_av1dec av1d-master: probing start
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_av1dec av1d-master: probing finish
+Nov 17 14:28:04 orangepi5ultra kernel: mpp_service mpp-srv: probe success
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: IRQ msi not found
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: use outband MSI support
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: host bridge /pcie@fe150000 ranges:
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie:      err 0x00f0000000..0x00f00fffff -> 0x00f0000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie:       IO 0x00f0100000..0x00f01fffff -> 0x00f0100000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie:      MEM 0x00f0200000..0x00f0ffffff -> 0x00f0200000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie:      MEM 0x0900000000..0x093fffffff -> 0x0900000000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: Missing *config* reg space
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: invalid resource
+Nov 17 14:28:04 orangepi5ultra kernel: dma-pl330 fea10000.dma-controller: Loaded driver for PL330 DMAC-241330
+Nov 17 14:28:04 orangepi5ultra kernel: dma-pl330 fea10000.dma-controller:         DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+Nov 17 14:28:04 orangepi5ultra kernel: dma-pl330 fea30000.dma-controller: Loaded driver for PL330 DMAC-241330
+Nov 17 14:28:04 orangepi5ultra kernel: dma-pl330 fea30000.dma-controller:         DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+Nov 17 14:28:04 orangepi5ultra kernel: dma-pl330 fed10000.dma-controller: Loaded driver for PL330 DMAC-241330
+Nov 17 14:28:04 orangepi5ultra kernel: dma-pl330 fed10000.dma-controller:         DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pvtm fda40000.pvtm: pvtm@0 probed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pvtm fda50000.pvtm: pvtm@1 probed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pvtm fda60000.pvtm: pvtm@2 probed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pvtm fdaf0000.pvtm: pvtm@3 probed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pvtm fdb30000.pvtm: pvtm@4 probed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-system-monitor rockchip-system-monitor: system monitor probe
+Nov 17 14:28:04 orangepi5ultra kernel: Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+Nov 17 14:28:04 orangepi5ultra kernel: feba0000.serial: ttyS7 at MMIO 0xfeba0000 (irq = 103, base_baud = 1500000) is a 16550A
+Nov 17 14:28:04 orangepi5ultra kernel: random: crng init done
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: Adding to iommu group 16
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x5, primary plane phy id: 0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] vp1 assign plane mask: 0xa, primary plane phy id: 1
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x140, primary plane phy id: 6
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] vp3 assign plane mask: 0x280, primary plane phy id: 7
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] Esmart0-win0 as cursor plane for vp0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] Esmart1-win0 as cursor plane for vp1
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] Esmart2-win0 as cursor plane for vp2
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-vop2 fdd90000.vop: [drm:vop2_bind] Esmart3-win0 as cursor plane for vp3
+Nov 17 14:28:04 orangepi5ultra kernel: [drm] failed to init overlay plane Cluster0-win1
+Nov 17 14:28:04 orangepi5ultra kernel: [drm] failed to init overlay plane Cluster1-win1
+Nov 17 14:28:04 orangepi5ultra kernel: [drm] failed to init overlay plane Cluster2-win1
+Nov 17 14:28:04 orangepi5ultra kernel: [drm] failed to init overlay plane Cluster3-win1
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-drm display-subsystem: bound fdd90000.vop (ops 0xffffffc0091684c8)
+Nov 17 14:28:04 orangepi5ultra kernel: dwhdmi-rockchip fdea0000.hdmi: registered ddc I2C bus driver
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-drm display-subsystem: bound fdea0000.hdmi (ops 0xffffffc009176750)
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-drm display-subsystem: failed to parse loader memory
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-drm display-subsystem: [drm] Cannot find any crtc or sizes
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-drm display-subsystem: [drm] Cannot find any crtc or sizes
+Nov 17 14:28:04 orangepi5ultra kernel: [drm] Initialized rockchip 3.0.0 20140818 for display-subsystem on minor 0
+Nov 17 14:28:04 orangepi5ultra kernel: dw-hdmi-qp-hdcp dw-hdmi-qp-hdcp.2.auto: dw_hdcp_qp_hdcp_probe success
+Nov 17 14:28:04 orangepi5ultra kernel: brd: module loaded
+Nov 17 14:28:04 orangepi5ultra kernel: loop: module loaded
+Nov 17 14:28:04 orangepi5ultra kernel: zram: Added device: zram0
+Nov 17 14:28:04 orangepi5ultra kernel: lkdtm: No crash points registered, enable through debugfs
+Nov 17 14:28:04 orangepi5ultra kernel: system_heap: orders[0] = 6
+Nov 17 14:28:04 orangepi5ultra kernel: system_heap: orders[1] = 4
+Nov 17 14:28:04 orangepi5ultra kernel: system_heap: orders[2] = 0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-spi feb20000.spi: no high_speed pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: rk806 spi2.0: chip id: RK806,ver:0x2, 0x1
+Nov 17 14:28:04 orangepi5ultra kernel: rk806 spi2.0: ON: 0x40 OFF:0x0
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc1-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.15: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: 550 <--> 950 mV at 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc2-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_cpu_lit_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.16: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_cpu_lit_s0: 550 <--> 950 mV at 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc3-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_log_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.17: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_log_s0: 675 <--> 750 mV at 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc4-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_vdenc_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.18: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_vdenc_s0: 550 <--> 950 mV at 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc5-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_ddr_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.19: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_ddr_s0: 675 <--> 900 mV at 850 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc6-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd2_ddr_s3: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.20: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd2_ddr_s3: at 500 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc7-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_2v0_pldo_s3: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.21: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_2v0_pldo_s3: 2000 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc8-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_3v3_s3: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.22: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_3v3_s3: 3300 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc9-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vddq_ddr_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.23: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vddq_ddr_s0: at 500 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc10-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v8_s3: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.24: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v8_s3: 1800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc13-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v75_s3: supplied by vcc_1v1_nldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: could not add device link regulator.25: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v75_s3: 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc13-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_ddr_pll_s0: supplied by vcc_1v1_nldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: could not add device link regulator.26: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_ddr_pll_s0: 850 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_0v75_s0: Bringing 750000uV into 837500-837500uV
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_0v75_s0: ramp_delay not set
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc13-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_0v75_s0: supplied by vcc_1v1_nldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: could not add device link regulator.27: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_0v75_s0: 837 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc14-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v85_s0: supplied by vcc_1v1_nldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: could not add device link regulator.28: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v85_s0: 850 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc14-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v75_s0: supplied by vcc_1v1_nldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v1_nldo_s3: could not add device link regulator.29: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v75_s0: 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc11-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: avcc_1v8_s0: supplied by vdd_2v0_pldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_2v0_pldo_s3: could not add device link regulator.30: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: avcc_1v8_s0: 1800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc11-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v8_s0: supplied by vdd_2v0_pldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_2v0_pldo_s3: could not add device link regulator.31: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_1v8_s0: 1800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc11-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_1v2_s0: supplied by vdd_2v0_pldo_s3
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_2v0_pldo_s3: could not add device link regulator.32: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_1v2_s0: 1200 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc12-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_3v3_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.33: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vcc_3v3_s0: 3300 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcc12-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vccio_sd_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.34: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vccio_sd_s0: 1800 <--> 3300 mV at 3300 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806-regulator rk806-regulator.6.auto: Looking up vcca-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pldo6_s3: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.35: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: pldo6_s3: 1800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk806 spi2.0: no sleep-setting state
+Nov 17 14:28:04 orangepi5ultra kernel: rk806 spi2.0: no reset-setting pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: rk806 spi2.0: no dvs-setting pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-spi feb20000.spi: register misc device rkspi-dev2
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-spi feb20000.spi: probed, poll=0, rsd=0, cs-inactive=0, ready=0
+Nov 17 14:28:04 orangepi5ultra kernel: spi-nor spi5.0: XM25QU128C (16384 Kbytes) read_data x4
+Nov 17 14:28:04 orangepi5ultra kernel: 1 fixed-partitions partitions found on MTD device sfc_nor
+Nov 17 14:28:04 orangepi5ultra kernel: Creating 1 MTD partitions on "sfc_nor":
+Nov 17 14:28:04 orangepi5ultra kernel: 0x000000000000-0x000001000000 : "loader"
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver rndis_wlan
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver asix
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver cdc_ether
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver rndis_host
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver cdc_ncm
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up usb-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up usb-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-pci: EHCI PCI platform driver
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform: EHCI generic platform driver
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc800000.usb: EHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc800000.usb: new USB bus registered, assigned bus number 1
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc800000.usb: irq 20, io mem 0xfc800000
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc800000.usb: USB 2.0 started, EHCI 1.00
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb1: Product: EHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb1: Manufacturer: Linux 5.10.160-rockchip-rk3588 ehci_hcd
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb1: SerialNumber: fc800000.usb
+Nov 17 14:28:04 orangepi5ultra kernel: hub 1-0:1.0: USB hub found
+Nov 17 14:28:04 orangepi5ultra kernel: hub 1-0:1.0: 1 port detected
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc880000.usb: EHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc880000.usb: new USB bus registered, assigned bus number 2
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc880000.usb: irq 22, io mem 0xfc880000
+Nov 17 14:28:04 orangepi5ultra kernel: ehci-platform fc880000.usb: USB 2.0 started, EHCI 1.00
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb2: Product: EHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb2: Manufacturer: Linux 5.10.160-rockchip-rk3588 ehci_hcd
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb2: SerialNumber: fc880000.usb
+Nov 17 14:28:04 orangepi5ultra kernel: hub 2-0:1.0: USB hub found
+Nov 17 14:28:04 orangepi5ultra kernel: hub 2-0:1.0: 1 port detected
+Nov 17 14:28:04 orangepi5ultra kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform: OHCI generic platform driver
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform fc840000.usb: Generic Platform OHCI controller
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform fc840000.usb: new USB bus registered, assigned bus number 3
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform fc840000.usb: irq 21, io mem 0xfc840000
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb3: Product: Generic Platform OHCI controller
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb3: Manufacturer: Linux 5.10.160-rockchip-rk3588 ohci_hcd
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb3: SerialNumber: fc840000.usb
+Nov 17 14:28:04 orangepi5ultra kernel: hub 3-0:1.0: USB hub found
+Nov 17 14:28:04 orangepi5ultra kernel: hub 3-0:1.0: 1 port detected
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform fc8c0000.usb: Generic Platform OHCI controller
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform fc8c0000.usb: new USB bus registered, assigned bus number 4
+Nov 17 14:28:04 orangepi5ultra kernel: ohci-platform fc8c0000.usb: irq 23, io mem 0xfc8c0000
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: PCIe Linking... LTSSM is 0x0
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: PCIe Linking... LTSSM is 0x0
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb4: Product: Generic Platform OHCI controller
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb4: Manufacturer: Linux 5.10.160-rockchip-rk3588 ohci_hcd
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb4: SerialNumber: fc8c0000.usb
+Nov 17 14:28:04 orangepi5ultra kernel: hub 4-0:1.0: USB hub found
+Nov 17 14:28:04 orangepi5ultra kernel: hub 4-0:1.0: 1 port detected
+Nov 17 14:28:04 orangepi5ultra kernel: phy phy-fd5d4000.syscon:usb2-phy@4000.3: illegal mode
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: xHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: new USB bus registered, assigned bus number 5
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000200002010010
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: irq 149, io mem 0xfc400000
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb5: Product: xHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb5: Manufacturer: Linux 5.10.160-rockchip-rk3588 xhci-hcd
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb5: SerialNumber: xhci-hcd.7.auto
+Nov 17 14:28:04 orangepi5ultra kernel: hub 5-0:1.0: USB hub found
+Nov 17 14:28:04 orangepi5ultra kernel: hub 5-0:1.0: 1 port detected
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: xHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: new USB bus registered, assigned bus number 6
+Nov 17 14:28:04 orangepi5ultra kernel: xhci-hcd xhci-hcd.7.auto: Host supports USB 3.0 SuperSpeed
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb6: Product: xHCI Host Controller
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb6: Manufacturer: Linux 5.10.160-rockchip-rk3588 xhci-hcd
+Nov 17 14:28:04 orangepi5ultra kernel: usb usb6: SerialNumber: xhci-hcd.7.auto
+Nov 17 14:28:04 orangepi5ultra kernel: hub 6-0:1.0: USB hub found
+Nov 17 14:28:04 orangepi5ultra kernel: hub 6-0:1.0: 1 port detected
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver cdc_acm
+Nov 17 14:28:04 orangepi5ultra kernel: cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver uas
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver usb-storage
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver xpad
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver usbtouchscreen
+Nov 17 14:28:04 orangepi5ultra kernel: input: rk805 pwrkey as /devices/platform/feb20000.spi/spi_master/spi2/spi2.0/rk805-pwrkey.5.auto/input/input0
+Nov 17 14:28:04 orangepi5ultra kernel: i2c /dev entries driver
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: PCIe Link up, LTSSM is 0x130011
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe180000.pcie: PCI host bridge to bus 0003:30
+Nov 17 14:28:04 orangepi5ultra kernel: pci_bus 0003:30: root bus resource [bus 30-3f]
+Nov 17 14:28:04 orangepi5ultra kernel: pci_bus 0003:30: root bus resource [??? 0xf3000000-0xf30fffff flags 0x0]
+Nov 17 14:28:04 orangepi5ultra kernel: pci_bus 0003:30: root bus resource [io  0x100000-0x1fffff] (bus address [0xf3100000-0xf31fffff])
+Nov 17 14:28:04 orangepi5ultra kernel: pci_bus 0003:30: root bus resource [mem 0xf3200000-0xf3ffffff]
+Nov 17 14:28:04 orangepi5ultra kernel: pci_bus 0003:30: root bus resource [mem 0x9c0000000-0x9ffffffff pref]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: [1d87:3588] type 01 class 0x060400
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: supports D1 D2
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: PME# supported from D0 D1 D3hot
+Nov 17 14:28:04 orangepi5ultra kernel: rk860-regulator 0-0042: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_cpu_big0_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.36: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_cpu_big0_s0: 550 <--> 1050 mV at 800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: PCIe Linking... LTSSM is 0x1
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: Primary bus is hard wired to 0
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: bridge configuration invalid ([bus 01-ff]), reconfiguring
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: [10ec:8125] type 00 class 0x020000
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: reg 0x10: [io  0x0000-0x00ff]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: reg 0x18: [mem 0x00000000-0x0000ffff 64bit]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: reg 0x20: [mem 0x00000000-0x00003fff 64bit]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: supports D1 D2
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov 17 14:28:04 orangepi5ultra kernel: rk860-regulator 0-0043: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_cpu_big1_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.37: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_cpu_big1_s0: 550 <--> 1050 mV at 800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: PCIe Linking... LTSSM is 0x3
+Nov 17 14:28:04 orangepi5ultra kernel: rk860-regulator 1-0042: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: supplied by vcc5v0_sys
+Nov 17 14:28:04 orangepi5ultra kernel: vcc5v0_sys: could not add device link regulator.38: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: 550 <--> 950 mV at 800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: pci_bus 0003:31: busn_res: [bus 31-3f] end is updated to 31
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: BAR 8: assigned [mem 0xf3200000-0xf32fffff]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: BAR 6: assigned [mem 0xf3300000-0xf330ffff pref]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: BAR 7: assigned [io  0x100000-0x100fff]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: BAR 2: assigned [mem 0xf3200000-0xf320ffff 64bit]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: BAR 4: assigned [mem 0xf3210000-0xf3213fff 64bit]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:31:00.0: BAR 0: assigned [io  0x100000-0x1000ff]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0: PCI bridge to [bus 31]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0:   bridge window [io  0x100000-0x100fff]
+Nov 17 14:28:04 orangepi5ultra kernel: pci 0003:30:00.0:   bridge window [mem 0xf3200000-0xf32fffff]
+Nov 17 14:28:04 orangepi5ultra kernel: rtc-hym8563 6-0051: rtc information is valid
+Nov 17 14:28:04 orangepi5ultra kernel: rtc-hym8563 6-0051: registered as rtc0
+Nov 17 14:28:04 orangepi5ultra kernel: pcieport 0003:30:00.0: PME: Signaling with IRQ 159
+Nov 17 14:28:04 orangepi5ultra kernel: rtc-hym8563 6-0051: setting system clock to 2026-11-17T06:27:59 UTC (1794896879)
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: Looking up AVDD28-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: Looking up AVDD28-supply property in node /i2c@fec90000/touchscreen@14 failed
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: supply AVDD28 not found, using dummy regulator
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: Looking up VDDIO-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: Looking up VDDIO-supply property in node /i2c@fec90000/touchscreen@14 failed
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: supply VDDIO not found, using dummy regulator
+Nov 17 14:28:04 orangepi5ultra kernel: usb 1-1: new high-speed USB device number 2 using ehci-platform
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: i2c test failed attempt 1: -6
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: i2c test failed attempt 2: -6
+Nov 17 14:28:04 orangepi5ultra kernel: Goodix-TS 7-0014: I2C communication failure: -6
+Nov 17 14:28:04 orangepi5ultra kernel: rkcifhw fdce0000.rkcif: Adding to iommu group 15
+Nov 17 14:28:04 orangepi5ultra kernel: rkcifhw fdce0000.rkcif: No reserved memory region assign to CIF
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd10000.mipi0-csi2-hw: enter mipi csi2 hw probe!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd10000.mipi0-csi2-hw: probe success, v4l2_dev:mipi0-csi2-hw!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd20000.mipi1-csi2-hw: enter mipi csi2 hw probe!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd20000.mipi1-csi2-hw: probe success, v4l2_dev:mipi1-csi2-hw!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd30000.mipi2-csi2-hw: enter mipi csi2 hw probe!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd30000.mipi2-csi2-hw: probe success, v4l2_dev:mipi2-csi2-hw!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd40000.mipi3-csi2-hw: enter mipi csi2 hw probe!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd40000.mipi3-csi2-hw: probe success, v4l2_dev:mipi3-csi2-hw!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd50000.mipi4-csi2-hw: enter mipi csi2 hw probe!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd50000.mipi4-csi2-hw: probe success, v4l2_dev:mipi4-csi2-hw!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd60000.mipi5-csi2-hw: enter mipi csi2 hw probe!
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-mipi-csi2-hw fdd60000.mipi5-csi2-hw: probe success, v4l2_dev:mipi5-csi2-hw!
+Nov 17 14:28:04 orangepi5ultra kernel: rkisp_hw fdcb0000.rkisp: Adding to iommu group 14
+Nov 17 14:28:04 orangepi5ultra kernel: rkisp_hw fdcb0000.rkisp: is_thunderboot: 0
+Nov 17 14:28:04 orangepi5ultra kernel: rkisp_hw fdcb0000.rkisp: Missing rockchip,grf property
+Nov 17 14:28:04 orangepi5ultra kernel: rkisp_hw fdcb0000.rkisp: max input:0x0@0fps
+Nov 17 14:28:04 orangepi5ultra kernel: rkisp_hw fdcb0000.rkisp: no find phandle sram
+Nov 17 14:28:04 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: No reserved memory for HDMIRX, use default CMA
+Nov 17 14:28:04 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: hdmirx_probe: cpu_aff:0x400, Bound_cpu:4, wdt_cfg_bound_cpu:5
+Nov 17 14:28:04 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: rk_hdmirx_hdcp_register success
+Nov 17 14:28:04 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: fdee0000.hdmirx-controller driver probe ok!
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver uvcvideo
+Nov 17 14:28:04 orangepi5ultra kernel: USB Video Class driver (1.1.1)
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: bin=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: leakage=8
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: pvtm=1419
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: pvtm-volt-sel=1
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: bin=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: leakage=7
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: pvtm=1652
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: pvtm-volt-sel=3
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: bin=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: leakage=7
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: pvtm=1650
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: pvtm-volt-sel=3
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: Looking up cpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: avs=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: avs=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: avs=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: EM: OPP:816000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: EM: OPP:600000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: EM: created perf domain
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu0: l=10000 h=85000 hyst=5000 l_limit=0 h_limit=1608000000 h_table=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: EM: OPP:2304000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: EM: OPP:816000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: EM: OPP:600000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: EM: created perf domain
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu4: l=10000 h=85000 hyst=5000 l_limit=0 h_limit=2208000000 h_table=0
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: EM: OPP:2304000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: EM: OPP:816000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: EM: OPP:600000 is inefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: EM: created perf domain
+Nov 17 14:28:04 orangepi5ultra kernel: cpu cpu6: l=10000 h=85000 hyst=5000 l_limit=0 h_limit=2208000000 h_table=0
+Nov 17 14:28:04 orangepi5ultra kernel: usb 5-1: new high-speed USB device number 2 using xhci-hcd
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci: Secure Digital Host Controller Interface driver
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci: Copyright(c) Pierre Ossman
+Nov 17 14:28:04 orangepi5ultra kernel: Synopsys Designware Multimedia Card Interface Driver
+Nov 17 14:28:04 orangepi5ultra kernel: usb 1-1: New USB device found, idVendor=15aa, idProduct=1555, bcdDevice= 6.01
+Nov 17 14:28:04 orangepi5ultra kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Nov 17 14:28:04 orangepi5ultra kernel: usb 1-1: Product: XCX-S8130B
+Nov 17 14:28:04 orangepi5ultra kernel: usb 1-1: Manufacturer: 0806-180602-N
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci-pltfm: SDHCI platform and OF driver helper
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: No normal pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: No idle pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: IDMAC supports 32-bit address mode.
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Using internal DMA controller.
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Version ID is 270a
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: DW MMC controller at irq 91,32 bit host data width,256 deep fifo
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: No normal pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: No idle pinctrl state
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: IDMAC supports 32-bit address mode.
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: Using internal DMA controller.
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: Version ID is 270a
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: DW MMC controller at irq 90,32 bit host data width,256 deep fifo
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Looking up vmmc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Looking up vmmc-supply property in node /mmc@fe2d0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Looking up vqmmc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Looking up vqmmc-supply property in node /mmc@fe2d0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: Looking up vmmc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: allocated mmc-pwrseq
+Nov 17 14:28:04 orangepi5ultra kernel: mmc_host mmc2: card is non-removable.
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2c0000.mmc: Looking up vqmmc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci-dwcmshc fe2e0000.mmc: Looking up vmmc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci-dwcmshc fe2e0000.mmc: Looking up vmmc-supply property in node /mmc@fe2e0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci-dwcmshc fe2e0000.mmc: Looking up vqmmc-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: sdhci-dwcmshc fe2e0000.mmc: Looking up vqmmc-supply property in node /mmc@fe2e0000 failed
+Nov 17 14:28:04 orangepi5ultra kernel: uvcvideo: Found UVC 1.00 device XCX-S8130B (15aa:1555)
+Nov 17 14:28:04 orangepi5ultra kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Nov 17 14:28:04 orangepi5ultra kernel: arm-scmi firmware:scmi: Failed. SCMI protocol 17 not active.
+Nov 17 14:28:04 orangepi5ultra kernel: SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+Nov 17 14:28:04 orangepi5ultra kernel: cryptodev: driver 1.12 loaded.
+Nov 17 14:28:04 orangepi5ultra kernel: hid: raw HID events driver (C) Jiri Kosina
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver usbhid
+Nov 17 14:28:04 orangepi5ultra kernel: usbhid: USB HID core driver
+Nov 17 14:28:04 orangepi5ultra kernel: ashmem: initialized
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-saradc fec10000.saradc: Looking up vref-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+Nov 17 14:28:04 orangepi5ultra kernel: optee: probing for conduit method.
+Nov 17 14:28:04 orangepi5ultra kernel: optee: api uid mismatch
+Nov 17 14:28:04 orangepi5ultra kernel: optee: probe of firmware:optee failed with error -22
+Nov 17 14:28:04 orangepi5ultra kernel: usbcore: registered new interface driver snd-usb-audio
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-i2s-tdm fddf0000.i2s: CLK-ALWAYS-ON: mclk: 12288000, bclk: 3072000, fsync: 48000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up audio-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up audio-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-i2s-tdm fddf4000.i2s: CLK-ALWAYS-ON: mclk: 12288000, bclk: 3072000, fsync: 48000
+Nov 17 14:28:04 orangepi5ultra kernel: input: XCX-S8130B: XCX-S8130B as /devices/platform/fc800000.usb/usb1/1-1/1-1:1.0/input/input1
+Nov 17 14:28:04 orangepi5ultra kernel: input: rockchip-hdmi1 rockchip-hdmi1 as /devices/platform/hdmi1-sound/sound/card0/input2
+Nov 17 14:28:04 orangepi5ultra kernel: debugfs: File 'Capture' in directory 'dapm' already present!
+Nov 17 14:28:04 orangepi5ultra kernel: mmc1: SDHCI controller on fe2e0000.mmc [fe2e0000.mmc] using ADMA
+Nov 17 14:28:04 orangepi5ultra kernel: input: rockchip,hdmiin rockchip,hdmiin as /devices/platform/hdmiin-sound/sound/card1/input3
+Nov 17 14:28:04 orangepi5ultra kernel: input: headset-keys as /devices/platform/es8388-sound/input/input4
+Nov 17 14:28:04 orangepi5ultra kernel: ES8323 7-0011: ASoC: error at soc_component_write_no_lock on ES8323.7-0011: -5
+Nov 17 14:28:04 orangepi5ultra kernel: mmc1: Host Software Queue enabled
+Nov 17 14:28:04 orangepi5ultra kernel: mmc1: new HS400 Enhanced strobe MMC card at address 0001
+Nov 17 14:28:04 orangepi5ultra kernel: mmcblk1: mmc1:0001 A3V014 233 GiB 
+Nov 17 14:28:04 orangepi5ultra kernel: mmcblk1boot0: mmc1:0001 A3V014 partition 1 4.00 MiB
+Nov 17 14:28:04 orangepi5ultra kernel: mmcblk1boot1: mmc1:0001 A3V014 partition 2 4.00 MiB
+Nov 17 14:28:04 orangepi5ultra kernel: mmcblk1rpmb: mmc1:0001 A3V014 partition 3 16.0 MiB, chardev (237:0)
+Nov 17 14:28:04 orangepi5ultra kernel:  mmcblk1: p1 p2
+Nov 17 14:28:04 orangepi5ultra kernel: input: rockchip,es8388 Headset as /devices/platform/es8388-sound/sound/card2/input5
+Nov 17 14:28:04 orangepi5ultra kernel: Initializing XFRM netlink socket
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 17
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: Enter rfkill_rk_init
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: Enter rfkill_wlan_init
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: Enter rfkill_wlan_probe
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: can't find rockchip,grf property
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi_chip_type = ap6611
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: wlan_platdata_parse_dt: enable wifi power control.
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi power controled by gpio.
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: wlan_platdata_parse_dt: WIFI,poweren_gpio = 85 flags = 0.
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: wlan_platdata_parse_dt: WIFI,host_wake_irq = 8, flags = 0.
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: wlan_platdata_parse_dt: The ref_wifi_clk not found !
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: rfkill_wlan_probe: init gpio
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: rfkill_set_wifi_bt_power: 1
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: Exit rfkill_wlan_probe
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: uart_rts_gpios = 146.
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,reset_gpio = 148.
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_gpio = 149.
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_host_irq = 0.
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: Request irq for bt wakeup host
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: ** disable irq
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: bt_default device registered.
+Nov 17 14:28:04 orangepi5ultra kernel: Key type dns_resolver registered
+Nov 17 14:28:04 orangepi5ultra kernel: registered taskstats version 1
+Nov 17 14:28:04 orangepi5ultra kernel: Loading compiled-in X.509 certificates
+Nov 17 14:28:04 orangepi5ultra kernel: Btrfs loaded, crc32c=crc32c-generic
+Nov 17 14:28:04 orangepi5ultra kernel: pstore: Using crash dump compression: deflate
+Nov 17 14:28:04 orangepi5ultra kernel: rga3_core0 fdb60000.rga: Adding to iommu group 2
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga3_core0, irq = 34, match scheduler
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga3_core0 hardware loaded successfully, hw_version:3.0.76831.
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga3_core0 probe successfully
+Nov 17 14:28:04 orangepi5ultra kernel: rga3_core1 fdb70000.rga: Adding to iommu group 3
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga3_core1, irq = 35, match scheduler
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga3_core1 hardware loaded successfully, hw_version:3.0.76831.
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga3_core1 probe successfully
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga2, irq = 36, match scheduler
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga2 hardware loaded successfully, hw_version:3.2.63318.
+Nov 17 14:28:04 orangepi5ultra kernel: rga: rga2 probe successfully
+Nov 17 14:28:04 orangepi5ultra kernel: rga_iommu: IOMMU binding successfully, default mapping core[0x1]
+Nov 17 14:28:04 orangepi5ultra kernel: rga: Module initialized. v1.3.0
+Nov 17 14:28:04 orangepi5ultra kernel: 
+Nov 17 14:28:04 orangepi5ultra kernel: ********************************************************************
+Nov 17 14:28:04 orangepi5ultra kernel: **     NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE           **
+Nov 17 14:28:04 orangepi5ultra kernel: **                                                                **
+Nov 17 14:28:04 orangepi5ultra kernel: **  WRITEABLE clk DebugFS SUPPORT HAS BEEN ENABLED IN THIS KERNEL **
+Nov 17 14:28:04 orangepi5ultra kernel: **                                                                **
+Nov 17 14:28:04 orangepi5ultra kernel: ** This means that this kernel is built to expose clk operations  **
+Nov 17 14:28:04 orangepi5ultra kernel: ** such as parent or rate setting, enabling, disabling, etc.      **
+Nov 17 14:28:04 orangepi5ultra kernel: ** to userspace, which may compromise security on your system.    **
+Nov 17 14:28:04 orangepi5ultra kernel: **                                                                **
+Nov 17 14:28:04 orangepi5ultra kernel: ** If you see this message and you are not debugging the          **
+Nov 17 14:28:04 orangepi5ultra kernel: ** kernel, report this immediately to your vendor!                **
+Nov 17 14:28:04 orangepi5ultra kernel: **                                                                **
+Nov 17 14:28:04 orangepi5ultra kernel: **     NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE           **
+Nov 17 14:28:04 orangepi5ultra kernel: ********************************************************************
+Nov 17 14:28:04 orangepi5ultra kernel: vendor storage:20190527 ret = 0
+Nov 17 14:28:04 orangepi5ultra kernel: usb 5-1: New USB device found, idVendor=0fe6, idProduct=9900, bcdDevice=20.00
+Nov 17 14:28:04 orangepi5ultra kernel: usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Nov 17 14:28:04 orangepi5ultra kernel: usb 5-1: Product: USB 10/100 LAN
+Nov 17 14:28:04 orangepi5ultra kernel: usb 5-1: Manufacturer: CoreChips
+Nov 17 14:28:04 orangepi5ultra kernel: usb 5-1: SerialNumber: 00E09A5AF420
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up gpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up gpu-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Kernel DDK version g18p0-01eac0
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Looking up mali-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Looking up mali-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: could not add device link fb000000.gpu: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: could not add device link fb000000.gpu: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Looking up mali-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: could not add device link fb000000.gpu: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_gpu_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: bin=0
+Nov 17 14:28:04 orangepi5ultra kernel: cdc_ether 5-1:2.0 eth0: register 'cdc_ether' at usb-xhci-hcd.7.auto-1, CDC Ethernet Device, 00:e0:9a:5a:f4:20
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: leakage=11
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Looking up mali-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: debugfs: Directory 'fb000000.gpu-mali' with parent 'vdd_gpu_s0' already present!
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: pvtm=832
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: pvtm-volt-sel=1
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: avs=0
+Nov 17 14:28:04 orangepi5ultra kernel: W : [File] : drivers/gpu/arm/bifrost/platform/rk/mali_kbase_config_rk.c; [Line] : 143; [Func] : kbase_platform_rk_init(); power-off-delay-ms not available.
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: r0p0 status 5 not found in HW issues table;
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: falling back to closest match: r0p0 status 0
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Execution proceeding normally with fallback match
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: GPU identified as 0x7 arch 10.8.6 r0p0 status 0
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: No priority control manager is configured
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: No memory group manager is configured
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Protected memory allocator not available
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Capping CSF_FIRMWARE_TIMEOUT to CSF_FIRMWARE_PING_TIMEOUT
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: l=10000 h=85000 hyst=5000 l_limit=0 h_limit=800000000 h_table=0
+Nov 17 14:28:04 orangepi5ultra kernel: mali fb000000.gpu: Probed as mali0
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: new full-speed USB device number 2 using ohci-platform
+Nov 17 14:28:04 orangepi5ultra kernel: mmc_host mmc2: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie20-avdd0v85: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pcie20_avdd0v85: supplied by vdd_0v85_s0
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_0v85_s0: could not add device link regulator.39: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: pcie20_avdd0v85: 850 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie20-avdd0v85: pcie20_avdd0v85 supplying 850000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie20-avdd1v8: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pcie20_avdd1v8: supplied by avcc_1v8_s0
+Nov 17 14:28:04 orangepi5ultra kernel: avcc_1v8_s0: could not add device link regulator.40: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: pcie20_avdd1v8: 1800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie20-avdd1v8: pcie20_avdd1v8 supplying 1800000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie30-avdd0v75: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pcie30_avdd0v75: supplied by avdd_0v75_s0
+Nov 17 14:28:04 orangepi5ultra kernel: avdd_0v75_s0: could not add device link regulator.41: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: pcie30_avdd0v75: 750 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie30-avdd0v75: pcie30_avdd0v75 supplying 750000uV
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie30-avdd1v8: Looking up vin-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pcie30_avdd1v8: supplied by avcc_1v8_s0
+Nov 17 14:28:04 orangepi5ultra kernel: avcc_1v8_s0: could not add device link regulator.42: -ENOENT
+Nov 17 14:28:04 orangepi5ultra kernel: pcie30_avdd1v8: 1800 mV, enabled
+Nov 17 14:28:04 orangepi5ultra kernel: reg-fixed-voltage pcie30-avdd1v8: pcie30_avdd1v8 supplying 1800000uV
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: Looking up center-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: Looking up center-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_ddr_s0: could not add device link dmc: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_ddr_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_log_s0: could not add device link dmc: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_log_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: bin=0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: leakage=25
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: leakage-volt-sel=0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: soc version=0, speed=0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: avs=0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: current ATF version 0x100
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: normal_rate = 1968000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: reboot_rate = 2736000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: suspend_rate = 528000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: video_4k_rate = 1968000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: video_4k_10b_rate = 1968000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: video_svep_rate = 1968000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: boost_rate = 2736000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: fixed_rate(isp|cif0|cif1|dualview) = 2736000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: performance_rate = 2736000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: hdmirx_rate = 2736000000
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: failed to get vop bandwidth to dmc rate
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: failed to get vop pn to msch rl
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: l=10000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-dmc dmc: could not find power_model node
+Nov 17 14:28:04 orangepi5ultra kernel: input: adc-keys as /devices/platform/adc-keys/input/input6
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up gmac-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up gmac-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up npu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up npu-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Adding to iommu group 0
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Looking up rknpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: can't request region for resource [mem 0xfdab0000-0xfdabffff]
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: can't request region for resource [mem 0xfdac0000-0xfdacffff]
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: can't request region for resource [mem 0xfdad0000-0xfdadffff]
+Nov 17 14:28:04 orangepi5ultra kernel: [drm] Initialized rknpu 0.9.6 20240322 for fdab0000.npu on minor 1
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up nputop-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up nputop-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up npu1-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up npu1-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up npu2-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up npu2-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Looking up rknpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: could not add device link fdab0000.npu: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Looking up mem-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: could not add device link fdab0000.npu: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Looking up rknpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: could not add device link fdab0000.npu: -EEXIST
+Nov 17 14:28:04 orangepi5ultra kernel: vdd_npu_s0: Failed to create debugfs directory
+Nov 17 14:28:04 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: RKNPU: bin=0
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: leakage=6
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: Looking up rknpu-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: debugfs: Directory 'fdab0000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+Nov 17 14:28:04 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+Nov 17 14:28:04 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: pvtm=844
+Nov 17 14:28:04 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: pvtm-volt-sel=2
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: avs=0
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: l=10000 h=85000 hyst=5000 l_limit=0 h_limit=800000000 h_table=0
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: failed to find power_model node
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: RKNPU: failed to initialize power model
+Nov 17 14:28:04 orangepi5ultra kernel: RKNPU fdab0000.npu: RKNPU: failed to get dynamic-coefficient
+Nov 17 14:28:04 orangepi5ultra kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Nov 17 14:28:04 orangepi5ultra kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vo0-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vo0-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vop-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up vop-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm rockchip-suspend: not set pwm-regulator-config
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-suspend not set sleep-mode-config for mem-lite
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-suspend not set wakeup-config for mem-lite
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-suspend not set sleep-mode-config for mem-ultra
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-suspend not set wakeup-config for mem-ultra
+Nov 17 14:28:04 orangepi5ultra kernel: I : [File] : drivers/gpu/arm/mali400/mali/linux/mali_kernel_linux.c; [Line] : 406; [Func] : mali_module_init(); svn_rev_string_from_arm of this mali_ko is '', rk_ko_ver is '5', built at '20:31:22', on 'Aug  7 2024'.
+Nov 17 14:28:04 orangepi5ultra kernel: Mali: 
+Nov 17 14:28:04 orangepi5ultra kernel: Mali device driver loaded
+Nov 17 14:28:04 orangepi5ultra kernel: ALSA device list:
+Nov 17 14:28:04 orangepi5ultra kernel:   #0: rockchip-hdmi1
+Nov 17 14:28:04 orangepi5ultra kernel:   #1: rockchip,hdmiin
+Nov 17 14:28:04 orangepi5ultra kernel:   #2: rockchip,es8388
+Nov 17 14:28:04 orangepi5ultra kernel: Freeing unused kernel memory: 6912K
+Nov 17 14:28:04 orangepi5ultra kernel: mmc_host mmc2: Bus speed (slot 0) = 150000000Hz (slot req 150000000Hz, actual 150000000HZ div = 0)
+Nov 17 14:28:04 orangepi5ultra kernel: Run /init as init process
+Nov 17 14:28:04 orangepi5ultra kernel:   with arguments:
+Nov 17 14:28:04 orangepi5ultra kernel:     /init
+Nov 17 14:28:04 orangepi5ultra kernel:     splash
+Nov 17 14:28:04 orangepi5ultra kernel:   with environment:
+Nov 17 14:28:04 orangepi5ultra kernel:     HOME=/
+Nov 17 14:28:04 orangepi5ultra kernel:     TERM=linux
+Nov 17 14:28:04 orangepi5ultra kernel:     ubootpart=2f736e92-219c-6c42-be3d-bb69bb537025
+Nov 17 14:28:04 orangepi5ultra kernel:     cgroup_enable=memory
+Nov 17 14:28:04 orangepi5ultra kernel:     cgroup_memory=1
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: New USB device found, idVendor=3162, idProduct=004b, bcdDevice= 1.01
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: Product: HKUST UAV NxtPX4
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: Manufacturer: Matek
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: SerialNumber: 0
+Nov 17 14:28:04 orangepi5ultra kernel: cdc_acm 4-1:1.0: ttyACM0: USB ACM device
+Nov 17 14:28:04 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Successfully tuned phase to 64
+Nov 17 14:28:04 orangepi5ultra kernel: mmc2: new ultra high speed SDR104 SDIO card at address 0001
+Nov 17 14:28:04 orangepi5ultra kernel: r8125 2.5Gigabit Ethernet driver 9.009.00-NAPI-RSS loaded
+Nov 17 14:28:04 orangepi5ultra kernel: r8125 0003:31:00.0: enabling device (0000 -> 0003)
+Nov 17 14:28:04 orangepi5ultra kernel: r8125: This product is covered by one or more of the following patents: US6,570,884, US6,115,776, and US6,327,625.
+Nov 17 14:28:04 orangepi5ultra kernel: r8125  Copyright (C) 2022 Realtek NIC software team <nicfae@realtek.com> 
+                                        This program comes with ABSOLUTELY NO WARRANTY; for details, please see <http://www.gnu.org/licenses/>. 
+                                        This is free software, and you are welcome to redistribute it under certain conditions; see <http://www.gnu.org/licenses/>. 
+Nov 17 14:28:04 orangepi5ultra kernel: cdc_ether 5-1:2.0 enx00e09a5af420: renamed from eth0
+Nov 17 14:28:04 orangepi5ultra kernel: r8125 0003:31:00.0 enP3p49s0: renamed from eth1
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: USB disconnect, device number 2
+Nov 17 14:28:04 orangepi5ultra kernel: EXT4-fs (mmcblk1p2): mounted filesystem with writeback data mode. Opts: (null)
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: PCIe Link Fail
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe190000.pcie: failed to initialize host
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: PCIe Link Fail
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe150000.pcie: failed to initialize host
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up pcie-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: rockchip-pm-domain fd8d8000.power-management:power-controller: Looking up pcie-supply property in node /power-management@fd8d8000/power-controller failed
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: PCIe Link Fail
+Nov 17 14:28:04 orangepi5ultra kernel: rk-pcie fe170000.pcie: failed to initialize host
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 10
+Nov 17 14:28:04 orangepi5ultra kernel: Segment Routing with IPv6
+Nov 17 14:28:04 orangepi5ultra systemd[1]: systemd 249.11-0ubuntu3.12 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Detected architecture arm64.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Hostname set to <orangepi5ultra>.
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: new full-speed USB device number 3 using ohci-platform
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Configuration file /lib/systemd/system/rkaiq_3A.service is marked world-writable. Please remove world writability permission bits. Proceeding anyway.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Queued start job for default target Graphical Interface.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Created slice Slice /system/modprobe.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Created slice Slice /system/serial-getty.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Created slice Slice /system/systemd-fsck.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Created slice User and Session Slice.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target User and Group Name Lookups.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Remote File Systems.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Slice Units.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Swaps.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target System Time Set.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Local Verity Protected Volumes.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on Syslog Socket.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on fsck to fsckd communication Socket.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on initctl Compatibility Named Pipe.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on Journal Audit Socket.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on Journal Socket (/dev/log).
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on Journal Socket.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on udev Control Socket.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on udev Kernel Socket.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting Huge Pages File System...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting POSIX Message Queue File System...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting Kernel Debug File System...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting Kernel Trace File System...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Restore / save the current clock...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Set the console keyboard layout...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Create List of Static Device Nodes...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Module configfs...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Module drm...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Module efi_pstore...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Module fuse...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Nameserver information manager.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Preparation for Network.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Enable Rockchip camera engine rkaiq...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Modules...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Remount Root and Kernel File Systems...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Coldplug All udev Devices...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted Huge Pages File System.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted POSIX Message Queue File System.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted Kernel Debug File System.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted Kernel Trace File System.
+Nov 17 14:28:04 orangepi5ultra kernel: fuse: init (API version 7.32)
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Restore / save the current clock.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Create List of Static Device Nodes.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Module configfs.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: modprobe@drm.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Module drm.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Module efi_pstore.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Module fuse.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting FUSE Control File System...
+Nov 17 14:28:04 orangepi5ultra kernel: EXT4-fs (mmcblk1p2): re-mounted. Opts: commit=600,errors=remount-ro
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting Kernel Configuration File System...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Remount Root and Kernel File Systems.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted Kernel Configuration File System.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load/Save Random Seed...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Create System Users...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Enable Rockchip camera engine rkaiq.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted FUSE Control File System.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Modules.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Apply Kernel Variables...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Create System Users.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Create Static Device Nodes in /dev...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load/Save Random Seed.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in First Boot Complete being skipped.
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: New USB device found, idVendor=1b8c, idProduct=0036, bcdDevice= 1.01
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: Product: HKUST UAV NxtPX4
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: Manufacturer: Matek
+Nov 17 14:28:04 orangepi5ultra kernel: usb 4-1: SerialNumber: 0
+Nov 17 14:28:04 orangepi5ultra kernel: cdc_acm 4-1:1.0: ttyACM0: USB ACM device
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Apply Kernel Variables.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Create Static Device Nodes in /dev.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Rule-based Manager for Device Events and Files...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Set the console keyboard layout.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Preparation for Local File Systems.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting /tmp...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted /tmp.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: rkaiq_3A.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Rule-based Manager for Device Events and Files.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Created slice Slice /system/systemd-backlight.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load/Save Screen Backlight Brightness of backlight:backlight...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Coldplug All udev Devices.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Helper to synchronize boot up for ifupdown...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Show Plymouth Boot Screen...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load/Save Screen Backlight Brightness of backlight:backlight.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Helper to synchronize boot up for ifupdown.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Show Plymouth Boot Screen.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch when bootsplash is active being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Local Encrypted Volumes.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Found device /dev/disk/by-uuid/DD1B-0FDE.
+Nov 17 14:28:04 orangepi5ultra kernel: Bluetooth: Core ver 2.22
+Nov 17 14:28:04 orangepi5ultra kernel: NET: Registered protocol family 31
+Nov 17 14:28:04 orangepi5ultra kernel: Bluetooth: HCI device and connection manager initialized
+Nov 17 14:28:04 orangepi5ultra kernel: Bluetooth: HCI socket layer initialized
+Nov 17 14:28:04 orangepi5ultra kernel: Bluetooth: L2CAP socket layer initialized
+Nov 17 14:28:04 orangepi5ultra kernel: Bluetooth: SCO socket layer initialized
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting File System Check on /dev/disk/by-uuid/DD1B-0FDE...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started File System Check Daemon to report status.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Found device /dev/ttyFIQ0.
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] _dhd_module_init: in Dongle Host Driver, version 101.10.591.46.22 (20231003-3)(a5ec15e)
+                                       drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd compiled on Aug 26 2024 at 09:25:41
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] ANDROID_VERSION = 14
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_static_buf_init : 101.10.361.31 (wlan=r892223-20230427-1)
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_init_wlan_mem : prealloc ok for index 0: 6624256(6469K)
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_get_oob_irq: Enter
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] dhd_wlan_init_gpio: WL_HOST_WAKE=-1, oob_irq=197, oob_irq_flags=0x4
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] dhd_wlan_init_gpio: WL_REG_ON=-1
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] dhd_wifi_platform_load: Enter
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] Power-up adapter 'DHD generic adapter'
+Nov 17 14:28:04 orangepi5ultra kernel: pwm-fan pwm-fan: Looking up fan-supply from device tree
+Nov 17 14:28:04 orangepi5ultra kernel: pwm-fan pwm-fan: Looking up fan-supply property in node /pwm-fan failed
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch when bootsplash is active being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Module efi_pstore...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Enable Rockchip camera engine rkaiq...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished File System Check on /dev/disk/by-uuid/DD1B-0FDE.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting /boot...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Enable Rockchip camera engine rkaiq.
+Nov 17 14:28:04 orangepi5ultra kernel: FAT-fs (mmcblk1p1): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+Nov 17 14:28:04 orangepi5ultra systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Module efi_pstore.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted /boot.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Local File Systems.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Load AppArmor profiles being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Set console font and keymap...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Raise network interfaces...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Orange Pi ZRAM config...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Set Up Additional Binary Formats...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Manage USB device functions...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 519 (systemd-binfmt)
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounting Arbitrary Executable File Formats File System...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Set console font and keymap.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: rkaiq_3A.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Received SIGRTMIN+20 from PID 315 (plymouthd).
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Mounted Arbitrary Executable File Formats File System.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Set Up Additional Binary Formats.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Reached target Hardware activated USB gadget.
+Nov 17 14:28:04 orangepi5ultra kernel: zram0: detected capacity change from 0 to 8373051392
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load/Save RF Kill Switch Status...
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Raise network interfaces.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch when bootsplash is active being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Load AppArmor profiles being skipped.
+Nov 17 14:28:04 orangepi5ultra kernel: Adding 8176804k swap on /dev/zram0.  Priority:5 extents:1 across:8176804k SS
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Load Kernel Module efi_pstore...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Enable Rockchip camera engine rkaiq...
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+Nov 17 14:28:04 orangepi5ultra kernel: zram: Added device: zram1
+Nov 17 14:28:04 orangepi5ultra systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Load Kernel Module efi_pstore.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: ENABLE UART_RTS
+Nov 17 14:28:04 orangepi5ultra systemd[1]: rkaiq_3A.service: Deactivated successfully.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Enable Rockchip camera engine rkaiq.
+Nov 17 14:28:04 orangepi5ultra kernel: zram1: detected capacity change from 0 to 209715200
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: DISABLE UART_RTS
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: bt turn on power
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: Request irq for bt wakeup host
+Nov 17 14:28:04 orangepi5ultra kernel: [BT_RFKILL]: ** disable irq
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Load/Save RF Kill Switch Status.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Orange Pi ZRAM config.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Orange Pi memory supported logging...
+Nov 17 14:28:04 orangepi5ultra kernel: EXT4-fs (zram1): mounted filesystem without journal. Opts: discard
+Nov 17 14:28:04 orangepi5ultra kernel: file system registered
+Nov 17 14:28:04 orangepi5ultra kernel: read descriptors
+Nov 17 14:28:04 orangepi5ultra kernel: read strings
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Manage USB device functions.
+Nov 17 14:28:04 orangepi5ultra kernel: android_work: did not send uevent (0 0 0000000000000000)
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Finished Orange Pi memory supported logging.
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Starting Journal Service...
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] dummy_probe: enter
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] dummy_probe: enter
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] wifi_platform_set_power = 1, delay: 200 msec
+Nov 17 14:28:04 orangepi5ultra kernel: [dhd] ======== PULL WL_REG_ON(-1) HIGH! ========
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: 1
+Nov 17 14:28:04 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+Nov 17 14:28:04 orangepi5ultra systemd[1]: Started Journal Service.
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: wifi turn on power [GPIO85-1]
+Nov 17 14:28:05 orangepi5ultra kernel: dwc3 fc000000.usb: request ffffff8102951900 was not queued to ep0out
+Nov 17 14:28:05 orangepi5ultra kernel: android_work: did not send uevent (0 0 0000000000000000)
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] wifi_platform_set_power = 1, sleep done: 200 msec
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] wifi_platform_bus_enumerate device present 1
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] ======== Card detection to detect SDIO card! ========
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] bcmsdh_register: register client driver
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] bcmsdh_sdmmc_probe: Enter num=1
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] bcmsdh_sdmmc_probe: Enter num=2
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] bus num (host idx)=2, slot num (rca)=1
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] found adapter info 'DHD generic adapter'
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 3, size 139264
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] succeed to alloc static buf
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 4, size 0
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] sdioh_attach: set sd_f2_blocksize 256
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] sdioh_attach: sd clock rate = 150000000
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhdsdio_probe : no mutex held
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhdsdio_probe : set mutex lock
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] F1 signature read @0x18000000=0x1040aabf
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] F1 signature OK, socitype:0x1 chip:0xaabf rev:0x0 pkg:0x4
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] DHD: dongle ram size is set to 1310720(orig 1310720) at 0x170000
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 7, size 43224
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_conf_set_chiprev : devid=0xaabf, chip=0xaabf, chiprev=0
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 0, size 10320
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 5, size 65536
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 19, size 65712
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_log_dump_init: kernel log buf size = 256KB; logdump_prsrv_tailsize = 80KB; limit prsrv tail size to = 38KB
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 15, size 4194304
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 16, size 8192
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_attach(): thread:dhd_watchdog_thread:453 started
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_attach(): thread:dhd_dpc:454 started
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_dpc_thread: set dhd_dpc_prio 98
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_attach(): thread:dhd_rxf:456 started
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_deferred_work_init: work queue initialized
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_tcpack_suppress_set: TCP ACK Suppress mode 0 -> mode 2
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_tcpack_suppress_set: TCPACK_INFO_MAXNUM=40, TCPDATA_INFO_MAXNUM=40
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_get_memdump_info: MEMDUMP ENABLED = 3
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] sdioh_cis_read: func_cis_ptr[0]=0x10ac
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 1, size 10300
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 2, size 65536
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhdsdio_probe_init: making DHD_BUS_DOWN
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] Dongle Host Driver, version 101.10.591.46.22 (20231003-3)(a5ec15e)
+                                       drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd compiled on Aug 26 2024 at 09:25:41
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] Register interface [wlan0]  MAC: 40:fd:f3:04:1f:c6
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] [wlan0] wl_android_wifi_off :  g_wifi_on=1 force_off=1
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_bus_devreset: == Power OFF ==
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_bus_stop: making DHD_BUS_DOWN
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] bcmsdh_oob_intr_unregister: Enter
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] bcmsdh_oob_intr_unregister: irq is not registered
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_bus_devreset: making dhdpub up FALSE
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_txglom_enable: enable 0
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_bus_devreset: making DHD_BUS_DOWN
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] wifi_platform_set_power = 0, delay: 0 msec
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] ======== PULL WL_REG_ON(-1) LOW! ========
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: 0
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+Nov 17 14:28:05 orangepi5ultra kernel: wifi power off
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+Nov 17 14:28:05 orangepi5ultra kernel: Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Nov 17 14:28:05 orangepi5ultra kernel: Bluetooth: BNEP filters: protocol multicast
+Nov 17 14:28:05 orangepi5ultra kernel: Bluetooth: BNEP socket layer initialized
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: ENABLE UART_RTS
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: xHCI Host Controller
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: new USB bus registered, assigned bus number 7
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000202002010010
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: irq 148, io mem 0xfc000000
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb7: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb7: Product: xHCI Host Controller
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb7: Manufacturer: Linux 5.10.160-rockchip-rk3588 xhci-hcd
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb7: SerialNumber: xhci-hcd.11.auto
+Nov 17 14:28:05 orangepi5ultra kernel: hub 7-0:1.0: USB hub found
+Nov 17 14:28:05 orangepi5ultra kernel: hub 7-0:1.0: 1 port detected
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: xHCI Host Controller
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: new USB bus registered, assigned bus number 8
+Nov 17 14:28:05 orangepi5ultra kernel: xhci-hcd xhci-hcd.11.auto: Host supports USB 3.0 SuperSpeed
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb8: We don't know the algorithms for LPM for this host, disabling LPM.
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb8: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb8: Product: xHCI Host Controller
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb8: Manufacturer: Linux 5.10.160-rockchip-rk3588 xhci-hcd
+Nov 17 14:28:05 orangepi5ultra kernel: usb usb8: SerialNumber: xhci-hcd.11.auto
+Nov 17 14:28:05 orangepi5ultra kernel: hub 8-0:1.0: USB hub found
+Nov 17 14:28:05 orangepi5ultra kernel: hub 8-0:1.0: 1 port detected
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: wifi shut off power [GPIO85-0]
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] [wlan0] wl_android_wifi_off : out
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] wl_android_post_init: 0
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhdsdio_probe : mutex is released.
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] _dhd_module_init: Exit err=0
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: DISABLE UART_RTS
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: bt turn on power
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: Request irq for bt wakeup host
+Nov 17 14:28:05 orangepi5ultra kernel: [BT_RFKILL]: ** disable irq
+Nov 17 14:28:05 orangepi5ultra kernel: enP3p49s0: 0xffffffc00c720000, c0:74:2b:f9:c0:d8, IRQ 150
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_pri_open : no mutex held
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_pri_open : set mutex lock
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] [wlan0] dhd_open : Enter
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] Dongle Host Driver, version 101.10.591.46.22 (20231003-3)(a5ec15e)
+                                       drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd compiled on Aug 26 2024 at 09:25:41
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] dhd_open: ######### called for ifidx=0 #########
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] [wlan0] wl_android_wifi_on : in g_wifi_on=0
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] wifi_platform_set_power = 1, delay: 200 msec
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] ======== PULL WL_REG_ON(-1) HIGH! ========
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: 1
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+Nov 17 14:28:05 orangepi5ultra kernel: [WLAN_RFKILL]: wifi turn on power [GPIO85-1]
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] wifi_platform_set_power = 1, sleep done: 200 msec
+Nov 17 14:28:05 orangepi5ultra kernel: [dhd] sdio_sw_reset: call mmc_hw_reset
+Nov 17 14:28:06 orangepi5ultra kernel: mali fb000000.gpu: Loading Mali firmware 0x1010000
+Nov 17 14:28:06 orangepi5ultra kernel: mali fb000000.gpu: Mali firmware git_sha: ee476db42870778306fa8d559a605a73f13e455c 
+Nov 17 14:28:06 orangepi5ultra kernel: mmc_host mmc2: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+Nov 17 14:28:06 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+Nov 17 14:28:06 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+Nov 17 14:28:06 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+Nov 17 14:28:06 orangepi5ultra kernel: mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+Nov 17 14:28:06 orangepi5ultra kernel: mmc_host mmc2: Bus speed (slot 0) = 150000000Hz (slot req 150000000Hz, actual 150000000HZ div = 0)
+Nov 17 14:28:06 orangepi5ultra kernel: dwmmc_rockchip fe2d0000.mmc: Successfully tuned phase to 117
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] sdioh_start: set sd_f2_blocksize 256
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_bus_devreset: == Power ON ==
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] F1 signature read @0x18000000=0x1040aabf
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] F1 signature OK, socitype:0x1 chip:0xaabf rev:0x0 pkg:0x4
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] DHD: dongle ram size is set to 1310720(orig 1310720) at 0x170000
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_bus_devreset: making DHD_BUS_DOWN
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhdsdio_probe_init: making DHD_BUS_DOWN
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_path_params : Final fw_path=/fw_syn43711a0_sdio.bin
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_path_params : Final nv_path=/nvram_ap6611s.txt
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_path_params : Final clm_path=/clm_syn43711a0.blob
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_path_params : Final conf_path=/config.txt
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_os_get_img_fwreq: /config.txt (240 bytes) open success
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_pm_params : PM = 0
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_pm_params : pm_in_suspend = 2
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_others : keep_alive_period = 120000
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_others : garp = 1
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_pm_params : suspend_bcn_li_dtim = 10
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_others : wl_preinit = pm2_sleep_ret=20
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_pkt_filter : pkt_filter_del id = 100 102 103 104 105 107 
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_read_pkt_filter : pkt_filter_add[0][] = 142 0 0 77 0xffffffffffffffffffffffffffffff 0x2F6465766963652F77616B6575702F
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_os_get_img_fwreq: /fw_syn43711a0_sdio.bin (752242 bytes) open success
+Nov 17 14:28:06 orangepi5ultra kernel: ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_os_get_img_fwreq: /nvram_ap6611s.txt (6871 bytes) open success
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] # AP6611S_NVRAM_V0.1_20231016
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+Nov 17 14:28:06 orangepi5ultra kernel: usb 8-1: new SuperSpeed Gen 1 USB device number 2 using xhci-hcd
+Nov 17 14:28:06 orangepi5ultra kernel: usb 8-1: New USB device found, idVendor=2bc5, idProduct=0804, bcdDevice= 0.01
+Nov 17 14:28:06 orangepi5ultra kernel: usb 8-1: New USB device strings: Mfr=1, Product=2, SerialNumber=10
+Nov 17 14:28:06 orangepi5ultra kernel: usb 8-1: Product: Orbbec Gemini 335L
+Nov 17 14:28:06 orangepi5ultra kernel: usb 8-1: Manufacturer: Orbbec(R)
+Nov 17 14:28:06 orangepi5ultra kernel: usb 8-1: SerialNumber: CP253530009G
+Nov 17 14:28:06 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 14:28:06 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_bus_init: enable 0x06, ready 0x06 (waited 0us)
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] bcmsdh_oob_intr_register: HW_OOB irq=197 flags=0x4
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_get_memdump_info: MEMDUMP ENABLED = 3
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_dpc_thread: set dhd_dpc_prio 98
+Nov 17 14:28:06 orangepi5ultra kernel: hid-generic 0003:2BC5:0804.0001: hiddev96,hidraw0: USB HID v1.11 Device [Orbbec(R) Orbbec Gemini 335L] on usb-xhci-hcd.11.auto-1/input6
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] wlc_ver_major 12, wlc_ver_minor 2
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_bus_check_srmemsize : srmem_size no need to change.
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_tcpack_suppress_set: TCP ACK Suppress mode 2 -> mode 1
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_tcpack_suppress_set: TCPACK_INFO_MAXNUM=40, TCPDATA_INFO_MAXNUM=40
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_legacy_preinit_ioctls: use firmware generated mac_address 40:fd:f3:04:1f:c6
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_os_get_img_fwreq: /clm_syn43711a0.blob (20121 bytes) open success
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_check_current_clm_data: ----- This FW is not included CLM data -----
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_apply_default_clm: CLM download succeeded 
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_check_current_clm_data: ----- This FW is included CLM data -----
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] Firmware up: op_mode=0x0005, MAC=40:fd:f3:04:1f:c6
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_legacy_preinit_ioctls: event_log_max_sets: 26 ret: 0
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] arp_enable:1 arp_ol:0
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_add_pkt_filter : 142 0 0 77 0xffffffffffffffffffffffffffffff 0x2F6465766963652F77616B6575702F
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd]   Driver: 101.10.591.46.22 (20231003-3)
+                                       [dhd]   Firmware: wl0: Oct 12 2023 23:28:29 version 18.42.23 (g32f7eb26) FWID 01-c6370cb4
+                                       [dhd]   CLM: syna43711a0.master (2023-08-22 06:06:08) 
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_txglom_enable: enable 1
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_txglom_params : txglom_mode=copy
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_txglom_params : txglomsize=36, deferred_tx_len=0
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_txglom_params : txinrx_thres=128, dhd_txminmax=-1
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_set_txglom_params : tx_max_offset=0, txctl_tmo_fix=300
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_get_disable_proptx : fw_proptx=1, disable_proptx=-1
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_wlfc_hostreorder_init(): successful bdcv2 tlv signaling, 64
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_pno_init: Support Android Location Service
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_rtt_init : FTM is supported
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_rtt_init EXIT, err = 0
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_ecounter_autoconfig Ecounter autoconfig in FW not supported
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] failed to start ecounters
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_ecounter_configure Ecounters start failed
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_legacy_preinit_ioctls: d3_hostwake_delay IOVAR not present, proceed
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] CFG80211-ERROR) wl_cfg80211_event : Event handler is not created (WLC_E_ALLOW_CREDIT_BORROW)
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_conf_same_country : country code = US/0 is already configured
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] [wlan0] wl_android_wifi_on : Success
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] CFG80211-ERROR) __wl_update_wiphybands : error reading txbf_bfe_cap (-23)
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] CFG80211-ERROR) __wl_update_wiphybands : error reading txbf_bfr_cap (-23)
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] [wlan0] wl_cfg80211_up : Roam channel cache enabled
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] [wlan0] dhd_open : Exit ret=0
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] [wlan0] dhd_pri_open : tx queue started
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] dhd_pri_open : mutex is released.
+Nov 17 14:28:06 orangepi5ultra kernel: [dhd] P2P interface registered
+Nov 17 14:28:07 orangepi5ultra kernel: [dhd] P2P interface started
+Nov 17 14:28:07 orangepi5ultra kernel: [dhd] [wlan0] wl_run_escan : LEGACY_SCAN sync ID: 0, bssidx: 0
+Nov 17 14:28:07 orangepi5ultra kernel: of_dma_request_slave_channel: dma-names property of node '/serial@feba0000' missing or empty
+Nov 17 14:28:07 orangepi5ultra kernel: dw-apb-uart feba0000.serial: failed to request DMA, use interrupt mode
+Nov 17 14:28:08 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: hdmirx_audio_startup: device is no connected or audio is off
+Nov 17 14:28:08 orangepi5ultra kernel: hdmi-audio-codec hdmi-audio-codec.9.auto: ASoC: error at snd_soc_dai_startup on i2s-hifi: -19
+Nov 17 14:28:08 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: hdmirx_audio_startup: device is no connected or audio is off
+Nov 17 14:28:08 orangepi5ultra kernel: hdmi-audio-codec hdmi-audio-codec.9.auto: ASoC: error at snd_soc_dai_startup on i2s-hifi: -19
+Nov 17 14:28:08 orangepi5ultra kernel: rk_hdmirx fdee0000.hdmirx-controller: hdmirx_audio_startup: device is no connected or audio is off
+Nov 17 14:28:08 orangepi5ultra kernel: hdmi-audio-codec hdmi-audio-codec.9.auto: ASoC: error at snd_soc_dai_startup on i2s-hifi: -19
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: HCI UART driver ver 2.3
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: HCI UART protocol H4 registered
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: HCI UART protocol BCSP registered
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: HCI UART protocol ATH3K registered
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: HCI UART protocol Intel registered
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: HCI UART protocol AG6XX registered
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: RFCOMM TTY layer initialized
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: RFCOMM socket layer initialized
+Nov 17 14:28:08 orangepi5ultra kernel: Bluetooth: RFCOMM ver 1.11
+Nov 17 14:28:09 orangepi5ultra kernel: r8125: enP3p49s0: link up
+Nov 17 14:28:09 orangepi5ultra kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enP3p49s0: link becomes ready
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] do_iovar_aml_enable aml failed -23
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] [wlan0] wl_conn_debug_info : Connecting with 0c:84:08:57:3a:a4 ssid "TYKJ-5G", len (7), channel=5g-36(chan_cnt=1), sec=wpa2/psk/mfpc/tkip/aes, rssi=-52
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] [wlan0] wl_iw_event : Link UP with 0c:84:08:57:3a:a4
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] [wlan0] wl_ext_iapsta_link : [S] Link UP with 0c:84:08:57:3a:a4
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] [wlan0] wl_bss_connect_done : Report connect result - connection succeeded
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] [wlan0] wl_add_keyext : key index (0) for 0c:84:08:57:3a:a4
+Nov 17 14:28:13 orangepi5ultra kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+Nov 17 14:28:13 orangepi5ultra kernel: [dhd] [wlan0] wl_cfg80211_set_suspend_bcn_li_dtim : bcn_li_dtim:0 lpas:0 bcn_to_dly:0
+Nov 17 14:28:16 orangepi5ultra kernel: ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+Nov 17 14:28:30 orangepi5ultra kernel: vcc_3v3_sd_s0: disabling
+Nov 17 14:28:30 orangepi5ultra kernel: vcc3v3_pcie2x1l0: disabling
+Nov 17 14:28:30 orangepi5ultra kernel: vcc_mipicsi0: disabling
+Nov 17 14:28:30 orangepi5ultra kernel: vcc_mipicsi1: disabling
+Nov 17 14:28:30 orangepi5ultra kernel: vcc_mipicsi1: disabling
+Nov 17 14:37:17 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 14:37:17 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 14:40:05 orangepi5ultra kernel: usb 1-1: USB disconnect, device number 2
+Nov 17 14:40:05 orangepi5ultra kernel: usb 1-1: new high-speed USB device number 3 using ehci-platform
+Nov 17 14:40:05 orangepi5ultra kernel: usb 1-1: New USB device found, idVendor=15aa, idProduct=1555, bcdDevice= 6.01
+Nov 17 14:40:05 orangepi5ultra kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Nov 17 14:40:05 orangepi5ultra kernel: usb 1-1: Product: XCX-S8130B
+Nov 17 14:40:05 orangepi5ultra kernel: usb 1-1: Manufacturer: 0806-180602-N
+Nov 17 14:40:05 orangepi5ultra kernel: uvcvideo: Found UVC 1.00 device XCX-S8130B (15aa:1555)
+Nov 17 14:40:05 orangepi5ultra kernel: input: XCX-S8130B: XCX-S8130B as /devices/platform/fc800000.usb/usb1/1-1/1-1:1.0/input/input7
+Nov 17 14:45:00 orangepi5ultra kernel: r8125: enP3p49s0: link down
+Nov 17 14:45:03 orangepi5ultra kernel: r8125: enP3p49s0: link up
+Nov 17 14:46:38 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 14:46:38 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)

@@ -1,0 +1,69 @@
+{
+  "time": "2026-11-17T15:02:50.832421+08:00",
+  "head": {
+    "exit": 0,
+    "stdout": "e35a2f5c8915a20369842fc82725f7171d0235fe",
+    "stderr": ""
+  },
+  "status": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "sha256": {
+    "SDK": "292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3",
+    "MPP_source": "8445cd64db7a3eef1cbfce205a78a668607a48e80d13c1bc81a200a4ae9953bf",
+    "MPP_binary": "94893a7ce46d139b4f00ed228d3bbb689d60827cd724483732457e7b5bbe9817"
+  },
+  "USB": {
+    "exit": 0,
+    "stdout": "Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 005 Device 002: ID 0fe6:9900 ICS Advent USB 10/100 LAN\nBus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 008 Device 002: ID 2bc5:0804 Orbbec 3D Technology International, Inc Orbbec Gemini 335L\nBus 008 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 007 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 004 Device 003: ID 1b8c:0036 Altium Limited HKUST UAV NxtPX4\nBus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub\nBus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub\nBus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub",
+    "stderr": ""
+  },
+  "video_bindings": {
+    "usb-Orbbec_R__Orbbec_Gemini_335L_CP253530009G-video-index4": "../../video7",
+    "usb-Orbbec_R__Orbbec_Gemini_335L_CP253530009G-video-index1": "../../video2",
+    "usb-Orbbec_R__Orbbec_Gemini_335L_CP253530009G-video-index0": "../../video3",
+    "usb-Orbbec_R__Orbbec_Gemini_335L_CP253530009G-video-index5": "../../video8",
+    "usb-Orbbec_R__Orbbec_Gemini_335L_CP253530009G-video-index3": "../../video6",
+    "usb-Orbbec_R__Orbbec_Gemini_335L_CP253530009G-video-index2": "../../video5"
+  },
+  "network": {
+    "exit": 0,
+    "stdout": "lo               UNKNOWN        127.0.0.1/8 ::1/128 \nenx00e09a5af420  UP             fe80::6f96:a63f:6994:cad7/64 \nenP3p49s0        UP             192.168.1.51/32 \nwlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:c87d:107f:1470:26c0/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64",
+    "stderr": ""
+  },
+  "routes": {
+    "192.168.1.158": {
+      "exit": 0,
+      "stdout": "192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 \n    cache",
+      "stderr": ""
+    },
+    "1.1.1.1": {
+      "exit": 0,
+      "stdout": "1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 \n    cache",
+      "stderr": ""
+    }
+  },
+  "active_profiles": {
+    "exit": 0,
+    "stdout": "Wired connection 1:bdf7de49-dfe9-3b15-85b0-9cc6241c73c1:enx00e09a5af420\nROS2 installer Wi-Fi:3f0f5216-a750-48db-8139-0575c30edd2b:wlan0\nROS2 Livox:4fb850bb-6fb0-4380-aacc-7a641a3dc761:enP3p49s0",
+    "stderr": ""
+  },
+  "NoMachine": {
+    "exit": 0,
+    "stdout": "active",
+    "stderr": ""
+  },
+  "tmp_exists": {
+    "/tmp/new-camera-ground-check": false,
+    "/tmp/px4-ev-ground-check": false,
+    "/tmp/gimbal-qt-live-check": false,
+    "/tmp/mpp-shutdown-source-apply": false
+  },
+  "test_listeners": {
+    "exit": 0,
+    "stdout": "Netid State  Recv-Q Send-Q                     Local Address:Port  Peer Address:PortProcess                                                               \nudp   UNCONN 31488  0                          192.168.1.224:5353       0.0.0.0:*                                                                         \nudp   UNCONN 8448   0                           192.168.1.51:5353       0.0.0.0:*                                                                         \nudp   UNCONN 22528  0                                0.0.0.0:5353       0.0.0.0:*                                                                         \nudp   UNCONN 0      0                          127.0.0.53%lo:53         0.0.0.0:*                                                                         \nudp   UNCONN 0      0                              127.0.0.1:323        0.0.0.0:*                                                                         \nudp   UNCONN 0      0                                0.0.0.0:4000       0.0.0.0:*                                                                         \nudp   UNCONN 0      0                                  [::1]:323           [::]:*                                                                         \nudp   UNCONN 0      0      [fe80::42fd:f3ff:fe04:1fc6]%wlan0:546           [::]:*                                                                         \nudp   UNCONN 0      0                                   [::]:4000          [::]:*                                                                         \ntcp   LISTEN 0      100                              0.0.0.0:4000       0.0.0.0:*                                                                         \ntcp   LISTEN 0      100                            127.0.0.1:12001      0.0.0.0:*    users:((\"nxnode.bin\",pid=3126,fd=15))                                \ntcp   LISTEN 0      100                            127.0.0.1:25001      0.0.0.0:*    users:((\"nxrunner.bin\",pid=3159,fd=5))                               \ntcp   LISTEN 0      100                            127.0.0.1:21227      0.0.0.0:*                                                                         \ntcp   LISTEN 0      100                            127.0.0.1:21228      0.0.0.0:*    users:((\"nxrunner.bin\",pid=3159,fd=23),(\"nxnode.bin\",pid=3126,fd=23))\ntcp   LISTEN 0      4                              127.0.0.1:5037       0.0.0.0:*                                                                         \ntcp   LISTEN 0      4                                0.0.0.0:5555       0.0.0.0:*                                                                         \ntcp   LISTEN 0      4096                       127.0.0.53%lo:53         0.0.0.0:*                                                                         \ntcp   LISTEN 0      128                              0.0.0.0:22         0.0.0.0:*                                                                         \ntcp   LISTEN 0      128                            127.0.0.1:631        0.0.0.0:*                                                                         \ntcp   LISTEN 0      128                            127.0.0.1:7001       0.0.0.0:*    users:((\"nxnode.bin\",pid=3126,fd=19))                                \ntcp   LISTEN 0      2                                      *:3389             *:*                                                                         \ntcp   LISTEN 0      100                                 [::]:4000          [::]:*                                                                         \ntcp   LISTEN 0      128                                 [::]:22            [::]:*                                                                         \ntcp   LISTEN 0      2                                  [::1]:3350          [::]:*                                                                         \ntcp   LISTEN 0      128                                [::1]:631           [::]:*                                                                         \ntcp   LISTEN 0      128                                [::1]:7001          [::]:*    users:((\"nxnode.bin\",pid=3126,fd=18))",
+    "stderr": ""
+  }
+}

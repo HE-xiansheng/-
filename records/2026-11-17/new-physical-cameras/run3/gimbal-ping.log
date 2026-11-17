@@ -1,0 +1,8 @@
+PING 192.168.144.108 (192.168.144.108) from 192.168.144.100 enx00e09a5af420: 56(84) bytes of data.
+64 bytes from 192.168.144.108: icmp_seq=1 ttl=64 time=1.16 ms
+64 bytes from 192.168.144.108: icmp_seq=2 ttl=64 time=0.839 ms
+64 bytes from 192.168.144.108: icmp_seq=3 ttl=64 time=0.924 ms
+
+--- 192.168.144.108 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2018ms
+rtt min/avg/max/mdev = 0.839/0.975/1.162/0.136 ms

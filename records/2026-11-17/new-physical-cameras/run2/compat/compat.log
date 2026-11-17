@@ -1,0 +1,4 @@
+[ERROR] [1794897592.808993976] [usb_cam.capture_compat]: fixture reject
+[ERROR] [1794897594.831013072] [usb_cam.capture_compat]: native capture service timed out
+[ERROR] [1794897598.048760639] [usb_cam.capture_compat]: native capture service unavailable
+[ERROR] [1794897600.074551511] [usb_cam.capture_compat]: native capture service timed out

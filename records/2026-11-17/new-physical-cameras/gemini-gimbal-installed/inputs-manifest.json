@@ -1,0 +1,13 @@
+{
+  "test_new_cameras_ros2.py": "358028a0d63c7892d56cb402af084930580b7ae40bc1ee4ac1b9be8c954a91c1",
+  "test_usb_camera_ros2.py": "32a53f15ddb9ca887d0454fedec144678dc36468c67669a719f0b6f4e7aa1bff",
+  "test_usb_timestamp.cpp": "f68656b31f9ca279fdc65a47858e04b010b7e2d22afbfc0da6166db5e829f5c8",
+  "cleanup_livox_live_check.py": "7d365c3f815903a09c3079c65d241594135703b7c440afd24a76d5aaf48dbcf5",
+  "run_new_cameras_ground.py": "5c24af7573d25fec1ff2e76469fedeb09cca74a1ed3f1e34d156a27310c93767",
+  "observer-src/CMakeLists.txt": "399fa76a040f3e256ce166540c52e3ac6a051bb14a6d26f0b0812494a7b2092e",
+  "observer-src/observer.cpp": "816125ace3ebcb353ced44a844febf9ed0ba3cfa27a846ee8e37474e4349a205",
+  "observer-src/shm64.xml": "293e820d8983df344afc022e0c95ce168477dab634bff3fabe7f9cf97ef1966a",
+  "candidate-usb/launch/usb_camera.launch.py": "dc65ebb55ae17f095ec7b7d1779439ba43a64bb37e9c382bcfc8dfeafb72f8e7",
+  "candidate-usb/config/usb_cam.yaml": "7c62c2c5f0bd0bd0b5a97ca5428f26834a101888c9acae47ce43e938e386d50c",
+  "candidate-usb/capture_compat.py": "0e2218179fc4c14dd544a989fa10633b1ad28e4c9711c5bad8161775684ca68e"
+}

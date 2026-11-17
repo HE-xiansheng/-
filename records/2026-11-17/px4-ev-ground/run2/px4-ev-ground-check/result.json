@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "scope": "real native sensors and physical PX4, static disarmed EV ground check",
+  "error": "RuntimeError('blocked outgoing MAVROS packet HEARTBEAT')",
+  "serial_closed_and_restored": true,
+  "returncodes": {
+    "driver": 0,
+    "lio": 0,
+    "relay": 0,
+    "mavros": 0
+  },
+  "checks": {
+    "all_owned_processes_exit_normally": true,
+    "all_launched_children_exit_normally": true
+  }
+}

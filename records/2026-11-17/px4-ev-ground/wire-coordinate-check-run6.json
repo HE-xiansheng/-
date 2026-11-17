@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "sustained_real_wire_samples": true,
+    "every_wire_stamp_matches_recorded_relay": true,
+    "ENU_NED_positions_match": true,
+    "ENU_FLU_to_NED_FRD_orientation_matches": true,
+    "source_quaternions_unit": true,
+    "no_rejected_packets_reached_wire": true
+  },
+  "passed": true,
+  "packets": 1339,
+  "unmatched_stamps": [],
+  "max_position_error_m": 7.52993997016338e-10,
+  "max_orientation_error_rad": 5.9571615640408027e-08,
+  "scope": "actual relay ROS ENU/FLU to wire NED/FRD; does not establish mounting extrinsics"
+}

@@ -1,0 +1,7 @@
+Nov 17 14:50:38 orangepi5ultra kernel: vcc_3v3_sd_s0: disabling
+Nov 17 14:50:38 orangepi5ultra kernel: vcc3v3_pcie2x1l0: disabling
+Nov 17 14:50:38 orangepi5ultra kernel: vcc_mipicsi0: disabling
+Nov 17 14:50:38 orangepi5ultra kernel: vcc_mipicsi1: disabling
+Nov 17 14:50:38 orangepi5ultra kernel: vcc_mipicsi1: disabling
+Nov 17 14:55:47 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)
+Nov 17 14:55:47 orangepi5ultra kernel: uvcvideo: Found UVC 1.50 device Orbbec Gemini 335L (2bc5:0804)

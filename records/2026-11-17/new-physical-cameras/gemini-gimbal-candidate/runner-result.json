@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "cleanup_errors": [],
+  "temporary_profile": "ROS2-Gimbal-check-0984d039",
+  "prebuilt_source": "/home/tyzk/drone-migration-work/new-camera-candidate-build1",
+  "fixture_exit": 0,
+  "owned_processes_cleaned": true,
+  "evidence_retrieved": true,
+  "remote_removed": true,
+  "build_only": false
+}

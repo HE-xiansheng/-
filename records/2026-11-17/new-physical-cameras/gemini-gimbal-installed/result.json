@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "scope": "actual Gemini335L and physical gimbal only; independent USB absent/untested; no motion commands",
+  "software_paths": {
+    "usb_module": "/home/orangepi/drone_platform/02_drivers/usb_camera",
+    "usb_cam": "/home/orangepi/drone_platform/02_drivers/usb_camera/workspace/install/usb_cam",
+    "rtsp_test": "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test",
+    "orbbec_camera": "/home/orangepi/drone_platform/02_drivers/orbbec/install/orbbec_camera"
+  },
+  "streams": {
+    "reliable_stereo": {
+      "messages": 1225,
+      "stable_hz": 29.971016484949484,
+      "geometry": [
+        [
+          1280,
+          720,
+          "rgb8",
+          "camera_color_optical_frame"
+        ]
+      ],
+      "max_age_ms": 88.498229
+    },
+    "reliable_depth": {
+      "messages": 1236,
+      "stable_hz": 29.97127464680975,
+      "geometry": [
+        [
+          848,
+          480,
+          "16UC1",
+          "camera_depth_optical_frame"
+        ]
+      ],
+      "max_age_ms": 109.197761
+    },
+    "reliable_raw": {
+      "messages": 1117,
+      "stable_hz": 30.036018717750967,
+      "geometry": [
+        [
+          1920,
+          1080,
+          "mono8",
+          "gimbal_camera_optical_frame"
+        ]
+      ],
+      "max_age_ms": 35.467233
+    },
+    "best_effort_raw": {
+      "messages": 1117,
+      "stable_hz": 30.035895700012034,
+      "geometry": [
+        [
+          1920,
+          1080,
+          "mono8",
+          "gimbal_camera_optical_frame"
+        ]
+      ],
+      "max_age_ms": 36.240726
+    },
+    "reliable_color": {
+      "messages": 559,
+      "stable_hz": 15.008912534036716,
+      "geometry": [
+        [
+          960,
+          540,
+          "bgr8",
+          "gimbal_camera_optical_frame"
+        ]
+      ],
+      "max_age_ms": 81.319444
+    },
+    "best_effort_color": {
+      "messages": 559,
+      "stable_hz": 15.008917390021086,
+      "geometry": [
+        [
+          960,
+          540,
+          "bgr8",
+          "gimbal_camera_optical_frame"
+        ]
+      ],
+      "max_age_ms": 83.956088
+    }
+  },
+  "capture_actions": [],
+  "source_probe": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "avg_frame_rate": "30/1"
+  },
+  "USB_calibration": {
+    "camera_info_count": 0,
+    "K": [],
+    "tested": false,
+    "calibrated": false
+  },
+  "checks": {
+    "direct_physical_gimbal_h264": true,
+    "reliable_stereo_live_rate": true,
+    "reliable_stereo_geometry_and_fresh_stamps": true,
+    "reliable_stereo_stamps_increase": true,
+    "reliable_stereo_changing_pixels": true,
+    "reliable_depth_live_rate": true,
+    "reliable_depth_geometry_and_fresh_stamps": true,
+    "reliable_depth_stamps_increase": true,
+    "reliable_depth_changing_pixels": true,
+    "reliable_raw_live_rate": true,
+    "reliable_raw_geometry_and_fresh_stamps": true,
+    "reliable_raw_stamps_increase": true,
+    "reliable_raw_changing_pixels": true,
+    "best_effort_raw_live_rate": true,
+    "best_effort_raw_geometry_and_fresh_stamps": true,
+    "best_effort_raw_stamps_increase": true,
+    "best_effort_raw_changing_pixels": true,
+    "reliable_color_live_rate": true,
+    "reliable_color_geometry_and_fresh_stamps": true,
+    "reliable_color_stamps_increase": true,
+    "reliable_color_changing_pixels": true,
+    "best_effort_color_live_rate": true,
+    "best_effort_color_geometry_and_fresh_stamps": true,
+    "best_effort_color_stamps_increase": true,
+    "best_effort_color_changing_pixels": true,
+    "reliable_raw_all_published_frames_received": true,
+    "best_effort_raw_all_published_frames_received": true,
+    "reliable_color_all_published_frames_received": true,
+    "best_effort_color_all_published_frames_received": true,
+    "gimbal_color_source_stamps_preserved": true,
+    "all_owned_camera_processes_exit_normally": true,
+    "no_launched_camera_child_crash": true
+  },
+  "returncodes": {
+    "relay": 0,
+    "observer": 0,
+    "gemini": 0,
+    "mpp": 0
+  }
+}

@@ -391,9 +391,16 @@ bool UsbCamNode::take_and_send_image()
   }
 
   // grab the image, pass image msg buffer to fill
+  const auto previous_stamp = m_camera->get_image_timestamp();
   m_camera->get_image(reinterpret_cast<char *>(&m_image_msg->data[0]));
 
   auto stamp = m_camera->get_image_timestamp();
+  // EINTR/EAGAIN can return without dequeuing a frame. Never republish its old
+  // pixels and source stamp, including when SIGINT interrupts select().
+  if (!rclcpp::ok() || (m_parameters.io_method_name != "read" &&
+      stamp.tv_sec == previous_stamp.tv_sec && stamp.tv_nsec == previous_stamp.tv_nsec)) {
+    return false;
+  }
   m_image_msg->header.stamp.sec = stamp.tv_sec;
   m_image_msg->header.stamp.nanosec = stamp.tv_nsec;
 
@@ -412,9 +419,14 @@ bool UsbCamNode::take_and_send_image_mjpeg()
   }
 
   // grab the image, pass image msg buffer to fill
+  const auto previous_stamp = m_camera->get_image_timestamp();
   m_camera->get_image(reinterpret_cast<char *>(&m_compressed_img_msg->data[0]));
 
   auto stamp = m_camera->get_image_timestamp();
+  if (!rclcpp::ok() || (m_parameters.io_method_name != "read" &&
+      stamp.tv_sec == previous_stamp.tv_sec && stamp.tv_nsec == previous_stamp.tv_nsec)) {
+    return false;
+  }
   m_compressed_img_msg->header.stamp.sec = stamp.tv_sec;
   m_compressed_img_msg->header.stamp.nanosec = stamp.tv_nsec;
 

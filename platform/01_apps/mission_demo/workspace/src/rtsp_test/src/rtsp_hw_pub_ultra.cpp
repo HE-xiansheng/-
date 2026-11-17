@@ -11,6 +11,7 @@
 #include <opencv2/opencv.hpp>
 #include <algorithm>
 #include <cstring>
+#include <csignal>
 #include "frame_rate_gate.hpp"
 
 extern "C" {
@@ -27,6 +28,11 @@ extern "C" {
 #include "mpp_packet.h"
 
 #define mpp_err printf
+
+// A frame may be between gray/color publications when a signal arrives. Keep
+// DDS alive until that work and reliable acknowledgments have finished.
+static volatile std::sig_atomic_t stop_requested = 0;
+static void request_stop(int) { stop_requested = 1; }
 
 // ---- 解码器上下文 ----
 typedef struct {
@@ -206,7 +212,9 @@ int main(int argc, char **argv) {
         if (!std::ifstream(profile).good() || setenv("FASTRTPS_DEFAULT_PROFILES_FILE", profile.c_str(), 0) != 0)
             throw std::runtime_error("Cannot select RTSP large-image DDS profile: " + profile);
     }
-    rclcpp::init(argc, argv);
+    std::signal(SIGINT, request_stop);
+    std::signal(SIGTERM, request_stop);
+    rclcpp::init(argc, argv, rclcpp::InitOptions(), rclcpp::SignalHandlerOptions::None);
     // Small conversions only; the default 8-thread pool spins more than it helps.
     cv::setNumThreads(2);
     auto nh = std::make_shared<rclcpp::Node>("rtsp_hw_pub_ultra");
@@ -261,7 +269,7 @@ int main(int argc, char **argv) {
         if (!fmt_ctx) return false;
         fmt_ctx->interrupt_callback = {[](void* opaque) -> int {
             const auto* deadline = static_cast<Deadline*>(opaque);
-            return !rclcpp::ok() || Clock::now() >= deadline->at;
+            return stop_requested || !rclcpp::ok() || Clock::now() >= deadline->at;
         }, &io_deadline};
         AVDictionary *opts = nullptr;
         av_dict_set(&opts, "rtsp_transport", "tcp", 0);
@@ -275,7 +283,7 @@ int main(int argc, char **argv) {
         const int opened = avformat_open_input(&fmt_ctx, url.c_str(), nullptr, &opts);
         av_dict_free(&opts);
         if (opened < 0 || avformat_find_stream_info(fmt_ctx, nullptr) < 0 ||
-            !rclcpp::ok() || Clock::now() >= io_deadline.at ||
+            stop_requested || !rclcpp::ok() || Clock::now() >= io_deadline.at ||
             (fmt_ctx->pb && fmt_ctx->pb->error < 0)) {
             // FFmpeg may return partial metadata after an interrupt. Such a
             // context has a latched IO error and must not enter the read loop.
@@ -310,7 +318,7 @@ int main(int argc, char **argv) {
     executor.add_node(nh);
     auto next_connect = Clock::now();
     auto last_frame = Clock::now();
-    while (rclcpp::ok()) {
+    while (rclcpp::ok() && !stop_requested) {
         if (!fmt_ctx) {
             executor.spin_some();
             if (Clock::now() < next_connect) {
@@ -318,7 +326,7 @@ int main(int argc, char **argv) {
                 continue;
             }
             if (!open_stream()) {
-                if (rclcpp::ok()) RCLCPP_WARN(nh->get_logger(), "RTSP connect failed or timed out; retrying");
+                if (rclcpp::ok() && !stop_requested) RCLCPP_WARN(nh->get_logger(), "RTSP connect failed or timed out; retrying");
                 next_connect = after(reconnect_delay_s);
                 continue;
             }
@@ -326,7 +334,7 @@ int main(int argc, char **argv) {
         }
         io_deadline.at = after(read_timeout_s);
         if (av_read_frame(fmt_ctx, pkt) < 0) {
-            if (rclcpp::ok()) RCLCPP_WARN(nh->get_logger(), "RTSP read failed or timed out; reconnecting");
+            if (rclcpp::ok() && !stop_requested) RCLCPP_WARN(nh->get_logger(), "RTSP read failed or timed out; reconnecting");
             close_stream(); next_connect = after(reconnect_delay_s); continue;
         }
         if (pkt->stream_index == video_idx) {
@@ -429,6 +437,10 @@ int main(int argc, char **argv) {
     close_stream();
     av_packet_free(&pkt);
     avformat_network_deinit();
+    const bool gray_acked = gray_pub->wait_for_all_acked(std::chrono::seconds(1));
+    const bool color_acked = color_pub->wait_for_all_acked(std::chrono::seconds(1));
+    if (!gray_acked || !color_acked)
+        RCLCPP_WARN(nh->get_logger(), "RTSP shutdown acknowledgment timeout: gray=%d color=%d", gray_acked, color_acked);
     rclcpp::shutdown();
-    return 0;
+    return gray_acked && color_acked ? 0 : 1;
 }

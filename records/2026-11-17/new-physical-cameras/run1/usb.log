@@ -1,0 +1,38 @@
+[INFO] [launch]: All log files can be found below /tmp/new-camera-ground-check/ros-log/2026-11-17-14-36-39-018684-orangepi5ultra-7137
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [usb_cam_node_exe-1]: process started with pid [7152]
+[INFO] [python3-2]: process started with pid [7154]
+[usb_cam_node_exe-1] [INFO] [1794897399.293095048] [usb_cam.usb_cam]: camera_name value: head_camera
+[usb_cam_node_exe-1] [WARN] [1794897399.293232131] [usb_cam.usb_cam]: framerate: 25.000000
+[usb_cam_node_exe-1] [INFO] [1794897399.296686913] [usb_cam.usb_cam]: using default calibration URL
+[usb_cam_node_exe-1] [INFO] [1794897399.296749038] [usb_cam.usb_cam]: camera calibration URL: file:///home/orangepi/.ros/camera_info/head_camera.yaml
+[usb_cam_node_exe-1] [ERROR] [1794897399.297072495] [camera_calibration_parsers]: Unable to open camera calibration file [/home/orangepi/.ros/camera_info/head_camera.yaml]
+[usb_cam_node_exe-1] [WARN] [1794897399.297111870] [usb_cam.usb_cam]: Camera calibration file /home/orangepi/.ros/camera_info/head_camera.yaml not found
+[usb_cam_node_exe-1] [INFO] [1794897399.448757981] [usb_cam.usb_cam]: Starting 'head_camera' (/dev/video1) at 1280x720 via mmap (mjpeg2rgb) at 25 FPS
+[usb_cam_node_exe-1] [swscaler @ 0x559d885710] No accelerated colorspace conversion found from yuv422p to rgb24.
+[usb_cam_node_exe-1] This device supports the following formats:
+[usb_cam_node_exe-1] 	Motion-JPEG 640 x 480 (25 Hz)
+[usb_cam_node_exe-1] 	Motion-JPEG 1920 x 1080 (25 Hz)
+[usb_cam_node_exe-1] 	Motion-JPEG 1280 x 720 (25 Hz)
+[usb_cam_node_exe-1] 	Motion-JPEG 480 x 640 (25 Hz)
+[usb_cam_node_exe-1] 	YUYV 4:2:2 640 x 480 (25 Hz)
+[usb_cam_node_exe-1] 	YUYV 4:2:2 1920 x 1080 (5 Hz)
+[usb_cam_node_exe-1] 	YUYV 4:2:2 1280 x 720 (5 Hz)
+[usb_cam_node_exe-1] 	YUYV 4:2:2 480 x 640 (25 Hz)
+[usb_cam_node_exe-1] [INFO] [1794897399.503622659] [usb_cam.usb_cam]: Setting 'white_balance_temperature_auto' to 1
+[usb_cam_node_exe-1] [INFO] [1794897399.503821283] [usb_cam.usb_cam]: Setting 'exposure_auto' to 3
+[usb_cam_node_exe-1] unknown control 'exposure_auto_priority'
+[usb_cam_node_exe-1] 
+[usb_cam_node_exe-1] V4L2_CID_FOCUS_AUTO is not supported
+[usb_cam_node_exe-1] [INFO] [1794897399.541063511] [usb_cam.usb_cam]: Setting 'focus_auto' to 1
+[usb_cam_node_exe-1] unknown control 'focus_auto'
+[usb_cam_node_exe-1] 
+[usb_cam_node_exe-1] [INFO] [1794897399.556356426] [usb_cam.usb_cam]: Timer triggering every 40 ms
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [python3-2]: sending signal 'SIGINT' to process[python3-2]
+[INFO] [usb_cam_node_exe-1]: sending signal 'SIGINT' to process[usb_cam_node_exe-1]
+[usb_cam_node_exe-1] [INFO] [1794897438.685229110] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[usb_cam_node_exe-1] [WARN] [1794897438.686640783] [usb_cam.usb_cam]: Shutting down
+[ERROR] [python3-2]: process has died [pid 7154, exit code -2, cmd '/usr/bin/python3 /tmp/new-camera-ground-check/candidate-usb/capture_compat.py'].
+[usb_cam_node_exe-1] [INFO] [1794897438.724997355] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [usb_cam_node_exe-1]: process has finished cleanly [pid 7152]

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/tmp/mpp-shutdown-source-apply/apply.py", line 11, in <module>
+    assert not any(a.endswith(b'/rtsp_hw_pub_ultra') for a in args),'MPP process still active'
+AssertionError: MPP process still active

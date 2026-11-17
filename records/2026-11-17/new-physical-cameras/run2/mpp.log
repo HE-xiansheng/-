@@ -1,0 +1,2 @@
+[INFO] [1794897604.989762351] [rtsp_hw_pub_ultra]: Fast DDS profile: /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/share/rtsp_test/config/fastdds_large_images.xml
+[INFO] [1794897605.950025379] [rclcpp]: signal_handler(SIGINT/SIGTERM)

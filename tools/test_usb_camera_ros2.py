@@ -82,6 +82,15 @@ try:
     node.destroy_service(server);server=None
     status,elapsed=invoke(start)
     check(not status['success'] and 'unavailable' in status['message'] and elapsed<2.5,'missing native service is reported within bound')
+    # An in-flight service callback must also survive launch/group double SIGINT.
+    mode='slow'
+    server=node.create_service(SetBool,'/usb_cam/set_capture',capture,callback_group=ReentrantCallbackGroup())
+    count=len(calls)
+    pending=start.call_async(Empty.Request())
+    check(wait(lambda:len(calls)>count,4),'shutdown case has a real service callback in flight')
+    proc.send_signal(signal.SIGINT)
+    time.sleep(.05)
+    check(proc.poll() is None,'compatibility node is finishing its pending callback')
     proc.send_signal(signal.SIGINT);proc.wait(timeout=6)
     check(proc.returncode==0,'compatibility node shuts down normally')
 finally:

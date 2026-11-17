@@ -1,0 +1,38 @@
+api: false
+authInternalUsers:
+- ips:
+  - 127.0.0.1
+  - ::1
+  - 192.168.0.0/23
+  - 100.64.0.0/10
+  permissions:
+  - action: read
+    path: gimbal
+  user: any
+authMethod: internal
+hls: false
+logDestinations:
+- stdout
+logLevel: info
+metrics: false
+moq: false
+paths:
+  gimbal:
+    rtspTransport: tcp
+    source: rtsp://192.168.144.108:554
+    sourceOnDemand: false
+playback: false
+pprof: false
+readTimeout: 5s
+rtcpAddress: 127.0.0.1:18001
+rtmp: false
+rtpAddress: 127.0.0.1:18000
+rtsp: true
+rtspAddress: 127.0.0.1:18554
+rtspTransports:
+- tcp
+srt: false
+udpMaxPayloadSize: 1200
+webrtc: false
+writeQueueSize: 256
+writeTimeout: 5s

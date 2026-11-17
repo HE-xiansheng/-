@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Real VideoPanel buttons/render/reconnect through owned read-only tunnels."""
-import json,os,selectors,shlex,signal,socket,subprocess,sys,time
+import argparse,json,os,selectors,shlex,signal,socket,subprocess,sys,time,uuid
 from pathlib import Path
 repo=Path(__file__).resolve().parents[1]
-out=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else repo/'records/2026-11-16/gimbal-qt-live'
+parser=argparse.ArgumentParser()
+parser.add_argument('output',nargs='?',default=str(repo/'records/2026-11-16/gimbal-qt-live'))
+parser.add_argument('--physical',action='store_true',help='read the actual gimbal on .224 through a temporary NIC profile')
+args=parser.parse_args();out=Path(args.output).resolve()
 out.mkdir(parents=True,exist_ok=True)
 common=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=8','-o','ServerAliveInterval=5','-o','ExitOnForwardFailure=yes']
 reference=common+['orangepi@192.168.1.235']
@@ -12,7 +15,7 @@ owner_code=r'''import json,os,signal,subprocess,sys,time
 from pathlib import Path
 import yaml
 root=Path('/home/orangepi/drone_platform/03_tools/gimbal_relay');out=Path('/tmp/gimbal-qt-live-check')
-config=yaml.safe_load((root/'gimbal.yml').read_text());config['rtspAddress']='127.0.0.1:18554';config['rtspTransports']=['tcp'];config['rtpAddress']='127.0.0.1:18000';config['rtcpAddress']='127.0.0.1:18001';config['paths']['gimbal']['source']='rtsp://127.0.0.1:18655/gimbal'
+config=yaml.safe_load((root/'gimbal.yml').read_text());config['rtspAddress']='127.0.0.1:18554';config['rtspTransports']=['tcp'];config['rtpAddress']='127.0.0.1:18000';config['rtcpAddress']='127.0.0.1:18001';config['paths']['gimbal']['source']='rtsp://192.168.144.108:554' if sys.argv[1]=='physical' else 'rtsp://127.0.0.1:18655/gimbal'
 (out/'relay.yml').write_text(yaml.safe_dump(config))
 with (out/'relay.log').open('w') as log:
  p=subprocess.Popen(['bash',str(root/'start_relay.sh'),str(out/'relay.yml')],stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
@@ -31,6 +34,11 @@ with (out/'relay.log').open('w') as log:
   print('RELAY_STOPPED',p.returncode,flush=True)
 '''
 handles=[];processes=[];owner=None;qt=None;passed=False;retrieved=False;dropped=False;restored=False;events=[]
+network_created=False;original_network='';profile='ROS2-Gimbal-Qt-'+str(uuid.uuid4())[:8]
+
+def remote(command,name):
+ p=subprocess.run(board+[command],capture_output=True,text=True,timeout=25)
+ (out/(name+'.log')).write_text(p.stdout+p.stderr);p.check_returncode();return p.stdout
 
 def start(name,command,**kw):
  f=(out/(name+'.log')).open('w');handles.append(f)
@@ -51,18 +59,30 @@ def local_ready(port,p):
  raise RuntimeError('tunnel listener not ready')
 
 def target_tunnel(name):
- p=start(name,board[:-1]+['-N','-R','127.0.0.1:18655:127.0.0.1:21654','-L','127.0.0.1:8554:127.0.0.1:18554',board[-1]])
+ forwarding=['-L','127.0.0.1:8554:127.0.0.1:18554']
+ if not args.physical:forwarding=['-R','127.0.0.1:18655:127.0.0.1:21654']+forwarding
+ p=start(name,board[:-1]+['-N',*forwarding,board[-1]])
  local_ready(8554,p);return p
 
 try:
+ if args.physical:
+  assert remote('cat /sys/class/net/enx00e09a5af420/address','nic-identity').strip()=='00:e0:9a:5a:f4:20'
+  original_network=remote('nmcli -g GENERAL.CON-UUID device show enx00e09a5af420','original-network').strip()
+  remote('nmcli connection add save no type ethernet ifname enx00e09a5af420 con-name '+profile+' connection.autoconnect no 802-3-ethernet.mac-address 00:E0:9A:5A:F4:20 ipv4.method manual ipv4.addresses 192.168.144.100/24 ipv4.never-default yes ipv4.ignore-auto-dns yes ipv6.method disabled','network-create')
+  network_created=True
+  remote('nmcli -w 15 connection up id '+profile+' ifname enx00e09a5af420','network-up')
+  routes=remote('ip route get 192.168.144.108; ip route get 192.168.1.158; ip route get 1.1.1.1','routes')
+  assert '192.168.144.108 dev enx00e09a5af420 src 192.168.144.100' in routes
+  assert '192.168.1.158 dev enP3p49s0 src 192.168.1.51' in routes and '1.1.1.1 via 192.168.1.1 dev wlan0' in routes
  # Fail rather than take over existing listeners or phase directories.
  for port in [21654,8554]:
   with socket.socket() as s:s.bind(('127.0.0.1',port))
  subprocess.run(board+['mkdir /tmp/gimbal-qt-live-check && cat > /tmp/gimbal-qt-live-check/owner.py'],input=owner_code.encode(),check=True)
- a=start('reference-tunnel',reference[:-1]+['-N','-L','127.0.0.1:21654:127.0.0.1:8554',reference[-1]]);local_ready(21654,a)
+ if not args.physical:
+  a=start('reference-tunnel',reference[:-1]+['-N','-L','127.0.0.1:21654:127.0.0.1:8554',reference[-1]]);local_ready(21654,a)
  b=target_tunnel('target-tunnel-first')
  stderr=(out/'owner-stderr.log').open('w');handles.append(stderr)
- owner=subprocess.Popen(board+['python3 -u /tmp/gimbal-qt-live-check/owner.py'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=stderr,start_new_session=True)
+ owner=subprocess.Popen(board+['python3 -u /tmp/gimbal-qt-live-check/owner.py '+('physical' if args.physical else 'reference')],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=stderr,start_new_session=True)
  sel=selectors.DefaultSelector();sel.register(owner.stdout,selectors.EVENT_READ);buffer=b'';end=time.monotonic()+35
  while b'RELAY_READY' not in buffer:
   if time.monotonic()>end:raise RuntimeError('relay owner startup timed out')
@@ -102,6 +122,11 @@ finally:
   result_file=out/'gimbal-qt-live-check/owner-result.json'
   if result_file.exists() and json.loads(result_file.read_text())=={'relay_exit':0,'stopped':True}:
    subprocess.run(board+['rm -rf -- /tmp/gimbal-qt-live-check'],check=True)
- result={'passed':passed,'qt_exit':None if qt is None else qt.returncode,'dropped':dropped,'restored':restored,'evidence_retrieved':retrieved,'events':events,'scope':'actual VideoPanel/QImage/renderer/buttons and real camera RTSP; temporary localhost tunnels, no flight task or gimbal movement'}
+ if network_created:
+  remote('nmcli -w 5 connection down id '+profile,'network-down')
+  remote('nmcli connection delete id '+profile,'network-delete')
+  if original_network and original_network!='--':remote('nmcli -w 0 connection up uuid '+original_network+' ifname enx00e09a5af420','network-restore')
+  remote('ip -brief address; ip route get 192.168.1.158; ip route get 1.1.1.1','network-final')
+ result={'passed':passed,'qt_exit':None if qt is None else qt.returncode,'dropped':dropped,'restored':restored,'evidence_retrieved':retrieved,'events':events,'scope':'actual VideoPanel/QImage/renderer/buttons and '+('physical .224 gimbal' if args.physical else 'reference .235 camera')+' RTSP; temporary localhost tunnels, no flight task or gimbal movement'}
  (out/'result.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result));assert passed

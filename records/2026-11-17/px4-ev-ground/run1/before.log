@@ -1,0 +1,7 @@
+2026-11-17T14:23:20+08:00
+7a3c0cb71864d02a5764a22d8e004debb615232e
+292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3  /home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so
+192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 
+    cache 
+total 0
+lrwxrwxrwx 1 root root 13 Nov 17 12:17 usb-Matek_HKUST_UAV_NxtPX4_0-if00 -> ../../ttyACM0

@@ -1,0 +1,16 @@
+[INFO] [launch]: All log files can be found below /tmp/px4-ev-ground-check/ros-log/2026-11-17-14-31-09-860656-orangepi5ultra-4766
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [4780]
+[fastlio_mapping-1] [INFO] [1794897070.311866241] [factory_laserMapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1794897070.327151169] [factory_laserMapping]: Node init finished.
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1794897070.507134497] [factory_laserMapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1794897070.613644743] [factory_laserMapping]: Initialize the map kdtree
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+[fastlio_mapping-1] [INFO] [1794897148.526867263] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] [INFO] [1794897148.533853610] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-1]: process has finished cleanly [pid 4780]

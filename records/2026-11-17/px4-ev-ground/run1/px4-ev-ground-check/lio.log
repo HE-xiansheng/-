@@ -1,0 +1,10 @@
+[INFO] [launch]: All log files can be found below /tmp/px4-ev-ground-check/ros-log/2026-11-17-14-23-30-463044-orangepi5ultra-8417
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [8432]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+[fastlio_mapping-1] [INFO] [1794896610.693281530] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] [INFO] [1794896611.005772000] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
+[fastlio_mapping-1]   what():  could not create service: rcl node's context is invalid, at ./src/rcl/node.c:428
+[ERROR] [fastlio_mapping-1]: process has died [pid 8432, exit code -6, cmd '/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_0r7obhyp -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf'].
