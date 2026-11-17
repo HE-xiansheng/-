@@ -1,0 +1,89 @@
+{
+  "scope": "live .235 sensor subscription over SSH to installed .224 LIO/relay; domain183 localhost; no physical FC input, no native .224 LiDAR driver",
+  "passed": false,
+  "source": {
+    "duration_s": 30.010797416000003,
+    "received": {
+      "1": 5997,
+      "2": 300
+    },
+    "sent": {
+      "1": 5997,
+      "2": 300
+    },
+    "dropped": {
+      "1": 0,
+      "2": 0
+    },
+    "publishers_created": 0,
+    "types": {
+      "1": "sensor_msgs/Imu",
+      "2": "livox_ros_driver2/CustomMsg"
+    },
+    "errors": [],
+    "flight_commands_sent": false
+  },
+  "stream_results": {
+    "odom": {
+      "messages": 170,
+      "hz": 11.63691496257145,
+      "max_gap_s": 0.289390015,
+      "min_age_s": 0.075432191,
+      "max_age_s": 2.488747204
+    },
+    "cloud": {
+      "messages": 170,
+      "hz": 11.637699571656219,
+      "max_gap_s": 0.289260515,
+      "min_age_s": 0.076476349,
+      "max_age_s": 2.49221451
+    },
+    "vision": {
+      "messages": 110,
+      "hz": 8.646792602802961,
+      "max_gap_s": 0.543709768,
+      "min_age_s": 0.082537134,
+      "max_age_s": 0.186632289
+    }
+  },
+  "checks": {
+    "actual_lio_consumers_ready": true,
+    "source_terminal_metadata_received": true,
+    "source_observer_creates_no_publishers": true,
+    "source_bridge_queue_no_drops": true,
+    "source_observed_expected_message_types": true,
+    "all_observed_source_inputs_published": true,
+    "both_sensor_streams_present": true,
+    "source_frames_crc_and_schema_valid": true,
+    "CDR_schemas_match_reference_objects": true,
+    "/livox/imu_source_stamp_increases": true,
+    "/livox/imu_source_age_bounded": false,
+    "/livox/lidar_source_stamp_increases": true,
+    "/livox/lidar_source_age_bounded": false,
+    "odom_sustained_rate": true,
+    "odom_no_long_gap": true,
+    "odom_source_age_bounded": false,
+    "odom_source_stamp_increases": true,
+    "cloud_sustained_rate": true,
+    "cloud_no_long_gap": true,
+    "cloud_source_age_bounded": false,
+    "cloud_source_stamp_increases": true,
+    "vision_sustained_rate": true,
+    "vision_no_long_gap": true,
+    "vision_source_age_bounded": true,
+    "vision_source_stamp_increases": true,
+    "lio_valid_frames_and_pose": true,
+    "body_cloud_frames": true,
+    "relay_preserves_actual_lio_stamps": true,
+    "no_control_or_fcu_interfaces": true
+  },
+  "input_counts": {
+    "1": 5997,
+    "2": 300
+  },
+  "reader_errors": [],
+  "returncodes": {
+    "lio": 0,
+    "relay": 0
+  }
+}

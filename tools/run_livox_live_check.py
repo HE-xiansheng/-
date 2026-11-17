@@ -24,7 +24,7 @@ source_address=os.environ.get('LIVOX_LIVE_SOURCE','192.168.1.235')
 source_host=ssh+['-o','HostKeyAlias=192.168.1.235','-o','StrictHostKeyChecking=yes','orangepi@'+source_address]
 remote='/tmp/livox-live-check'
 processes=[];handles=[];result={'passed':False};consumer=None;source=None;created=False;before=None
-files=['livox_live_protocol.py','test_livox_live_ros2.py','validate_fastlio_replay.py']
+files=['livox_live_protocol.py','test_livox_live_ros2.py','validate_fastlio_replay.py','cleanup_livox_live_check.py']
 manifest={str(repo/'tools'/n):hashlib.sha256((repo/'tools'/n).read_bytes()).hexdigest()
           for n in files+['stream_ros1_livox_live.py','run_livox_live_check.py']}
 (out/'inputs-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
@@ -88,21 +88,28 @@ finally:
         try:consumer.wait(timeout=40)
         except subprocess.TimeoutExpired:stop(consumer)
     for handle in handles:handle.close()
+    result.update(source_exit=source.poll() if source else None,
+                  consumer_exit=consumer.poll() if consumer else None)
     if created:
-        # The remote test owns bounded LIO/relay children and stops them in finally.
+        # The owner may die in native code or lose its SSH session before finally.
+        cleanup=subprocess.run(target+['python3 '+remote+'/cleanup_livox_live_check.py'],
+                               capture_output=True,text=True,timeout=25)
+        (out/'remote-cleanup.log').write_text(cleanup.stdout+cleanup.stderr)
+        result['owned_processes_cleaned']=cleanup.returncode==0
         with (out/'evidence.tar.gz').open('wb') as f:
             collected=subprocess.run(target+['tar -czf - -C /tmp livox-live-check'],stdout=f,timeout=60)
         if collected.returncode==0:
             subprocess.run(['tar','-xzf',str(out/'evidence.tar.gz'),'-C',str(out)],check=True,timeout=30)
             result['evidence_retrieved']=True
-            subprocess.run(target+['rm -rf -- '+remote],check=True,timeout=15)
-            result['remote_removed']=True
+            if cleanup.returncode==0:
+                subprocess.run(target+['rm -rf -- '+remote],check=True,timeout=15)
+                result['remote_removed']=True
     after=subprocess.run(source_host+['date -Is; ps -eo pid,args | grep -E "[l]ivox_ros_driver2_node|[f]astlio_mapping|[m]ediamtx"'],capture_output=True,text=True,timeout=12)
     (out/'source-after.log').write_text(after.stdout+after.stderr)
     def original_pids(text):
         return {line.split()[0] for line in text.splitlines() if line.split() and line.split()[0].isdigit()}
     result['original_source_process_ids_unchanged']=bool(before is not None and before.returncode==0 and after.returncode==0 and original_pids(before.stdout)==original_pids(after.stdout))
     p=out/'livox-live-check/result.json'
-    result['passed']=bool(p.exists() and json.loads(p.read_text()).get('passed') and result.get('source_exit')==0 and result.get('consumer_exit')==0 and result['original_source_process_ids_unchanged'] and 'error' not in result)
+    result['passed']=bool(p.exists() and json.loads(p.read_text()).get('passed') and result.get('source_exit')==0 and result.get('consumer_exit')==0 and result.get('owned_processes_cleaned') and result['original_source_process_ids_unchanged'] and 'error' not in result)
     (out/'runner-result.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result));raise SystemExit(0 if result['passed'] else 1)

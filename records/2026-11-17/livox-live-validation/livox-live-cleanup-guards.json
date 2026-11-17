@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "registered_domain183_child_stopped": true,
+    "unregistered_other_domain_preserved": true,
+    "reused_identity_refused": true,
+    "wrong_domain_refused": true
+  },
+  "passed": true,
+  "scope": "computer-local sleep processes only; no remote/hardware"
+}

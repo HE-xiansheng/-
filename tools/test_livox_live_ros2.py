@@ -3,6 +3,7 @@
 import base64
 from collections import Counter, defaultdict
 import csv
+import faulthandler
 import hashlib
 import json
 import math
@@ -16,7 +17,7 @@ import sys
 import threading
 import time
 
-from livox_live_protocol import read_frame, TOPICS
+from livox_live_protocol import read_frame, TOPICS, ros1_sensor_to_cdr
 from validate_fastlio_replay import decode
 import rclpy
 from rclpy.signals import SignalHandlerOptions
@@ -24,8 +25,10 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu, PointCloud2
 from geometry_msgs.msg import PoseStamped
 from livox_ros_driver2.msg import CustomMsg
+from rclpy.serialization import deserialize_message
 
 out = Path(sys.argv[1])
+faulthandler.enable()
 assert out == Path('/tmp/livox-live-check')
 assert os.environ['ROS_DOMAIN_ID'] == '183' and os.environ['ROS_LOCALHOST_ONLY'] == '1'
 root = Path('/home/orangepi/drone_platform')
@@ -77,8 +80,11 @@ def check(name, ok):
 def start(name, args):
     f = (out/(name+'.log')).open('w')
     logs.append(f)
-    p = subprocess.Popen(args, stdout=f, stderr=subprocess.STDOUT, start_new_session=True, cwd=out)
+    p = subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=f, stderr=subprocess.STDOUT, start_new_session=True, cwd=out)
     processes.append((name, p))
+    (out/'owned-processes.json').write_text(json.dumps([
+        {'name': n, 'pid': child.pid, 'start_ticks': Path('/proc/'+str(child.pid)+'/stat').read_text().split()[21]}
+        for n, child in processes], indent=2)+'\n')
 
 
 def alive():
@@ -110,6 +116,7 @@ def reader():
 
 
 first = last = None
+schemas_verified = set()
 thread = None
 try:
     start('lio', ['ros2', 'launch', str(root/'01_apps/fast_lio/launch/localization.launch.py')])
@@ -127,7 +134,7 @@ try:
     if not ready:
         raise RuntimeError('actual LIO subscriptions missing')
     snapshot = subprocess.run(['ros2', 'param', 'dump', '/factory_laserMapping'],
-                            capture_output=True, text=True, timeout=15)
+                            stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=15)
     (out/'lio-parameters.yaml').write_text(snapshot.stdout+snapshot.stderr)
     if snapshot.returncode:
         raise RuntimeError('LIO parameter snapshot failed')
@@ -148,17 +155,25 @@ try:
             source = json.loads(raw)
             continue
         begin = time.monotonic_ns()
-        topic, _, message = decode({'topic': TOPICS[kind], 'receipt_offset': 0,
-                                   'serialized': base64.b64encode(raw).decode('ascii')})
+        serialized, source_stamp, _ = ros1_sensor_to_cdr(kind, raw)
+        if kind not in schemas_verified:
+            _, _, reference = decode({'topic': TOPICS[kind], 'receipt_offset': 0,
+                                      'serialized': base64.b64encode(raw).decode('ascii')})
+            # Round trip compares complete fields, including each point, against
+            # the previous independent object decoder before enabling fast input.
+            typ = Imu if kind == 1 else CustomMsg
+            if deserialize_message(serialized, typ) != reference:
+                raise ValueError('CDR conversion differs from reference decoder')
+            schemas_verified.add(kind)
         _, sec, ns, _ = struct.unpack_from('<IIII', raw)
-        if stamp(message) != sec*10**9+ns:
+        if source_stamp != sec*10**9+ns:
             raise ValueError('source header stamp changed')
-        pubs[kind].publish(message)
+        pubs[kind].publish(serialized)
         now = time.monotonic_ns()
         first = first or now
         last = now
-        input_rows.append([kind, now, stamp(message), source_receipt, time.time_ns(),
-                           (time.time_ns()-stamp(message))/1e9, (now-begin)/1e6,
+        input_rows.append([kind, now, source_stamp, source_receipt, time.time_ns(),
+                           (time.time_ns()-source_stamp)/1e9, (now-begin)/1e6,
                            pending.qsize(), len(raw), hashlib.sha256(raw).hexdigest()])
         inputs[kind] += 1
         rclpy.spin_once(node, timeout_sec=0)
@@ -177,6 +192,7 @@ try:
         inputs[k] == source['sent'][str(k)] == source['received'][str(k)] for k in TOPICS))
     check('both_sensor_streams_present', inputs[1] > 200 and inputs[2] > 30)
     check('source_frames_crc_and_schema_valid', not errors)
+    check('CDR_schemas_match_reference_objects', schemas_verified == {1, 2})
     stream_results = {}
     for kind in TOPICS:
         rows = [r for r in input_rows if r[0] == kind]

@@ -1,0 +1,6 @@
+[INFO] [1794881492.765816412] [factory_laserMapping]: p_pre->lidar_type 1
+[INFO] [1794881492.777018948] [factory_laserMapping]: Node init finished.
+[WARN] [1794881496.266479322] [factory_laserMapping]: No point, skip this scan!
+
+[INFO] [1794881496.428989732] [factory_laserMapping]: Initialize the map kdtree
+[INFO] [1794881549.320252661] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "error": "BrokenPipeError(32, 'Broken pipe')",
+  "evidence_retrieved": true,
+  "remote_removed": true,
+  "original_source_process_ids_unchanged": true
+}

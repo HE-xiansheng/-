@@ -1,0 +1,36 @@
+[
+  {
+    "report": "/var/crash/_opt_ros_humble__local_setup_util.py.1000.crash",
+    "sha256": "82171b732942f10382e7b4ddf86c5ba2b3ab75c7d869bfb8cbe6b37be9b7a820",
+    "fields": {
+      "ProblemType": "Crash",
+      "CrashCounter": "1",
+      "Date": "Mon Nov 16 22:21:05 2026",
+      "ExecutablePath": "/opt/ros/humble/_local_setup_util.py",
+      "ProcCmdline": "/usr/bin/python3 /opt/ros/humble/_local_setup_util.py sh bash",
+      "Signal": "11"
+    }
+  },
+  {
+    "report": "/var/crash/_opt_ros_humble_bin_ros2.1000.crash",
+    "sha256": "e8206701625d10897a043384b8b793704d33d54c717b75cb90506a02bb1c5056",
+    "fields": {
+      "ProblemType": "Crash",
+      "Date": "Tue Nov 17 02:53:19 2026",
+      "ExecutablePath": "/opt/ros/humble/bin/ros2",
+      "ProcCmdline": "/usr/bin/python3 /opt/ros/humble/bin/ros2 bag record -s sqlite3 -o /tmp/platform-soak-check/recording-source/flight-records/20261117-025208-5fdd90/inputs-b0a7827a9a53420d8017f9c7f4839ac6 -b 268435456 --max-cache-size 67108864 -p 1 --qos-profile-overrides-path /tmp/platform-soak-check/recording-source/flight-records/20261117-025208-5fdd90/qos.yaml --storage-config-file /tmp/platform-soak-check/recording-source/flight-records/20261117-025208-5fdd90/storage.yaml --node-name flight_bag_241139 /livox/lidar /livox/imu /factory_fastlio/cloud_world /factory_fastlio/odometry /mavros/vision_pose/pose /goal /move_base_simple/goal /mandatory_stop_to_planner /ego_planner/flight_execution /ego_planner/flight_execution/trajectory /ego_planner/manual_preview/status /ego_planner/manual_preview/trajectory /ego_planner/px4_execution/status /planning/trajectory /planning/data_display /grid_map/occupancy /grid_map/occupancy_inflate /mavros/state /mavros/extended_state /mavros/estimator_status /mavros/local_position/pose /mavros/local_position/odom /mavros/local_position/velocity_local /mavros/imu/data /mavros/rc/in /mavros/battery /mavros/setpoint_raw/local /mavros/setpoint_raw/target_local /mavros/timesync_status /mavros/statustext/recv /tf /tf_static /rosout",
+      "Signal": "11"
+    }
+  },
+  {
+    "report": "/var/crash/_usr_bin_colcon.1000.crash",
+    "sha256": "441e275fdecc90230e7d111a5d3d8aa5092acaf730fc9f03a0ad9df7ce188103",
+    "fields": {
+      "ProblemType": "Crash",
+      "Date": "Mon Nov 16 17:13:37 2026",
+      "ExecutablePath": "/usr/bin/colcon",
+      "ProcCmdline": "/usr/bin/python3 /usr/bin/colcon list --base-paths /home/orangepi/ros2_platform/humble_ws/src",
+      "Traceback": "\n Traceback (most recent call last):\n   File \"/usr/bin/colcon\", line 33, in <module>\n     sys.exit(load_entry_point('colcon-core==0.21.3', 'console_scripts', 'colcon')())\n   File \"/usr/lib/python3/dist-packages/colcon_core/command.py\", line 130, in main\n     return _main(\n   File \"/usr/lib/python3/dist-packages/colcon_core/command.py\", line 188, in _main\n     args = parser.parse_args(args=argv)\n   File \"/usr/lib/python3/dist-packages/colcon_defaults/argument_parser/defaults.py\", line 145, in parse_args\n     local_data = self._get_defaults_values(local_defaults_path)\n   File \"/usr/lib/python3/dist-packages/colcon_defaults/argument_parser/defaults.py\", line 171, in _get_defaults_values\n     if not path.is_file():\n   File \"/usr/lib/python3.10/pathlib.py\", line 1322, in is_file\n     return S_ISREG(self.stat().st_mode)\n   File \"/usr/lib/python3.10/pathlib.py\", line 1097, in stat\n     return self._accessor.stat(self, follow_symlinks=follow_symlinks)\n PermissionError: [Errno 13] Permission denied: 'colcon_defaults.yaml'"
+    }
+  }
+]

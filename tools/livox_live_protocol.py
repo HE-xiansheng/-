@@ -7,6 +7,41 @@ TOPICS = {1: '/livox/imu', 2: '/livox/lidar'}
 MAX_BYTES = 16 * 1024 * 1024
 
 
+def ros1_sensor_to_cdr(kind, raw):
+    """Encode the locked Imu/CustomMsg schemas without per-point Python objects."""
+    if kind not in TOPICS or len(raw) < 16:
+        raise ValueError('invalid sensor schema')
+    _, sec, ns, size = struct.unpack_from('<IIII', raw)
+    offset = 16+size
+    if sec > 0x7fffffff or ns >= 10**9 or offset > len(raw):
+        raise ValueError('invalid sensor header')
+    frame = raw[16:offset]
+    frame.decode('utf-8')
+    cdr = bytearray(b'\x00\x01\x00\x00')
+    cdr.extend(struct.pack('<iII', sec, ns, size+1))
+    cdr.extend(frame+b'\x00')
+    cdr.extend(b'\x00' * (-(len(cdr)-4) % 8))
+    if kind == 1:
+        if len(raw)-offset != 37*8:
+            raise ValueError('invalid Imu schema length')
+        cdr.extend(raw[offset:])
+    else:
+        if len(raw)-offset < 20:
+            raise ValueError('invalid CustomMsg schema length')
+        count = struct.unpack_from('<I', raw, offset+16)[0]
+        if len(raw)-offset-20 != count*19 or struct.unpack_from('<I', raw, offset+8)[0] != count:
+            raise ValueError('invalid CustomMsg point count')
+        cdr.extend(raw[offset:offset+20])
+        # CDR aligns each CustomPoint to four bytes; its last element has no
+        # trailing padding. ROS1 packs each element into exactly 19 bytes.
+        points = raw[offset+20:]
+        padded = bytearray(count*20)
+        for column in range(19):
+            padded[column::20] = points[column::19]
+        cdr.extend(padded[:-1] if count else padded)
+    return bytes(cdr), sec*10**9+ns, frame.decode('utf-8')
+
+
 def write_frame(stream, kind, payload, receipt_ns):
     if kind not in (1, 2, 255) or len(payload) > MAX_BYTES:
         raise ValueError('invalid frame type/size')

@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "1_frame_": true,
+    "1_frame_61": true,
+    "1_frame_616263": true,
+    "1_frame_61626364": true,
+    "1_frame_31323334353637": true,
+    "1_frame_3132333435363738": true,
+    "1_frame_313233343536373839": true,
+    "1_frame_e99bb7e8bebe": true,
+    "1_truncated_schema_rejected": true,
+    "2_frame_": true,
+    "2_frame_61": true,
+    "2_frame_616263": true,
+    "2_frame_61626364": true,
+    "2_frame_31323334353637": true,
+    "2_frame_3132333435363738": true,
+    "2_frame_313233343536373839": true,
+    "2_frame_e99bb7e8bebe": true,
+    "2_truncated_schema_rejected": true,
+    "empty_point_sequence": true,
+    "invalid_nanoseconds_rejected": true
+  },
+  "passed": true,
+  "scope": "all fields of real samples, CDR alignment variants, empty points and malformed inputs"
+}

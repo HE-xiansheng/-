@@ -1,0 +1,456 @@
+{
+  "livox-live-run2": {
+    "consumer.log": {
+      "sha256": "98e4b18297e73378fd9a9b061655dfce6a0668fee2d5b835709f3ab39550fb0c",
+      "bytes": 54
+    },
+    "evidence.tar.gz": {
+      "sha256": "562ef610763837b03f5df1a7a001b3a3c0b190851e7574c26364eca8ca0f872b",
+      "bytes": 12506
+    },
+    "inputs.tar": {
+      "sha256": "8aea01501a4c584a3311b09aa8fd96911f2333473e9d43cdcb3825c3dfb3193b",
+      "bytes": 30720
+    },
+    "runner-result.json": {
+      "sha256": "fd3179220164c4b98634f31f86fe0c894a58ba9149892165269dc97ba185cdf9",
+      "bytes": 176
+    },
+    "inputs-manifest.json": {
+      "sha256": "ed3cb3a27640ebf259229067cef5f1eb3e8db0f3b4eb4d290be8ad6bb4041f7c",
+      "bytes": 692
+    },
+    "source.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "source.stream": {
+      "sha256": "3ff0c04ff6ca1ca274c13c99e8e5a27ca8dd79145c9600d7ba27e920ed8b6ef6",
+      "bytes": 7126109
+    },
+    "source-before.log": {
+      "sha256": "299c49d8cfb37451acb2714c2cacfda9cf5e5df7d678218f764eb87ddfdb96b4",
+      "bytes": 328
+    },
+    "source-after.log": {
+      "sha256": "2c5a8dd6ac930e276163a72fd085befffe085f8d97b0d609fb6b0d1fb5437657",
+      "bytes": 328
+    },
+    "livox-live-check/lio-parameters.yaml": {
+      "sha256": "381c6e3884e3b38690f4464c7426b42f3c3d6e84f92808bef5f1421bd672bcd7",
+      "bytes": 1495
+    },
+    "livox-live-check/relay.log": {
+      "sha256": "5af96a8d854f98f5f694d815d99490fa5eb11b5373948e9369745691b603f7ab",
+      "bytes": 141
+    },
+    "livox-live-check/livox_live_protocol.py": {
+      "sha256": "306477e053de9cc535c965d3df7ac41c2e52162583c9cd602d2c218c4d3ed8aa",
+      "bytes": 1697
+    },
+    "livox-live-check/validate_fastlio_replay.py": {
+      "sha256": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+      "bytes": 7940
+    },
+    "livox-live-check/lio.log": {
+      "sha256": "d44fce1ec31bcbc82153418219c002a26ffb22721ea4548b4a0662aa5f00afaa",
+      "bytes": 737
+    },
+    "livox-live-check/test_livox_live_ros2.py": {
+      "sha256": "41657349cbf8559bb842cdbbb7109038df2428af8fcd71f1cdbad870c0a8c33f",
+      "bytes": 10153
+    },
+    "livox-live-check/ros-log/fastlio_mapping_288879_1794881373760.log": {
+      "sha256": "77a26a8ac6703adc6e7ce13e432c806412a1c10c1b00d8a2a873a1a5b987b60f",
+      "bytes": 309
+    },
+    "livox-live-check/ros-log/python3_288786_1794881372807.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/vision2mavros_288864_1794881373458.log": {
+      "sha256": "5af96a8d854f98f5f694d815d99490fa5eb11b5373948e9369745691b603f7ab",
+      "bytes": 141
+    },
+    "livox-live-check/ros-log/python3_288893_1794881374248.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/2026-11-17-10-09-33-564237-orangepi5ultra-288860/launch.log": {
+      "sha256": "f15d4c16100c3f562f2e8cf70b9e80a40e3168f41086591ff76c7f1e2fd803a5",
+      "bytes": 306
+    }
+  },
+  "livox-live-run3": {
+    "consumer.log": {
+      "sha256": "72ae61bfbf62e06671e6929d98375eeb0f877b990010c31e7bc0ee8f06ed5cef",
+      "bytes": 1093
+    },
+    "evidence.tar.gz": {
+      "sha256": "0dd04bbd3ced8786c64cfff6dbcfb154d7750825969ad6c36f785a32d97027a1",
+      "bytes": 528242
+    },
+    "inputs.tar": {
+      "sha256": "2a8e918cb48f532c4390213641b635f2b7a5c673b1afe6bbf871e347af7ad523",
+      "bytes": 30720
+    },
+    "runner-result.json": {
+      "sha256": "5e9ec45e1959d06d18182f8bf8391784430f402b2ca28e9d88c1304200377178",
+      "bytes": 204
+    },
+    "inputs-manifest.json": {
+      "sha256": "a8eb70a32514645e2f0d840845637d4c8b4734bdcbedb8640445f527088d00e7",
+      "bytes": 833
+    },
+    "source.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "remote-cleanup.log": {
+      "sha256": "72d93f915e7496fa0c6d010f6a1bc5908551f941a27ab9c77a16c9ce7447ee53",
+      "bytes": 48
+    },
+    "source.stream": {
+      "sha256": "d580dbcc9b731e40344a485e53ff3ac7dc942550502b5d9873745236d74003f2",
+      "bytes": 52101774
+    },
+    "source-before.log": {
+      "sha256": "85e9dbc00a679e546aae6a27e9de192d61cea1f41cf496e244f9e6164ef32ced",
+      "bytes": 328
+    },
+    "source-after.log": {
+      "sha256": "060153449a9fac12064e4f76cf2a1089a09a8eb9f32aff0229b8f40722903b11",
+      "bytes": 328
+    },
+    "livox-live-check/result.json": {
+      "sha256": "a075ab59477b94154bc840418ab503a9b9e57a83cd076082cb2d1fa64c735c28",
+      "bytes": 2374
+    },
+    "livox-live-check/lio-parameters.yaml": {
+      "sha256": "381c6e3884e3b38690f4464c7426b42f3c3d6e84f92808bef5f1421bd672bcd7",
+      "bytes": 1495
+    },
+    "livox-live-check/owned-processes.json": {
+      "sha256": "7c34498217865ab8c602a8fb734407741d10bd2047f1f5b9633ca2b2bb5b6269",
+      "bytes": 157
+    },
+    "livox-live-check/relay.log": {
+      "sha256": "165bb65df4573856759144d05e5f1799bc80e2799b59a5d2e521b36dddb81424",
+      "bytes": 212
+    },
+    "livox-live-check/odom-headers.jsonl": {
+      "sha256": "b4e7163d2da5e061241392e54228f43e7d63b345a3d5843af850876704562133",
+      "bytes": 69074
+    },
+    "livox-live-check/cloud-headers.jsonl": {
+      "sha256": "67664290e3295707ed13526c7a81c702af2562f7c012e3ff66edbd00a3ec0856",
+      "bytes": 19552
+    },
+    "livox-live-check/livox_live_protocol.py": {
+      "sha256": "306477e053de9cc535c965d3df7ac41c2e52162583c9cd602d2c218c4d3ed8aa",
+      "bytes": 1697
+    },
+    "livox-live-check/validate_fastlio_replay.py": {
+      "sha256": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+      "bytes": 7940
+    },
+    "livox-live-check/lio.log": {
+      "sha256": "5dd6014e85558e7397647585ea80eb5323b7d52b11b06ca54b5681765ff157d7",
+      "bytes": 1184
+    },
+    "livox-live-check/test_livox_live_ros2.py": {
+      "sha256": "8c361a4109b3d7a08163f73974a95f8b34b41505c900cef61871822bd7ff3785",
+      "bytes": 10472
+    },
+    "livox-live-check/vision-headers.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/input-headers.csv": {
+      "sha256": "7cc9a37422c3ea02ca26931a59b398a23bfdb46e903bde5819c19e8a5db4f7f4",
+      "bytes": 1095677
+    },
+    "livox-live-check/owned-cleanup.json": {
+      "sha256": "70c0fb643c3698c1a71a7468f2ebd4688532390c88ac1786c92f73fa4a6b8e65",
+      "bytes": 56
+    },
+    "livox-live-check/cleanup_livox_live_check.py": {
+      "sha256": "159a1b9932eac5752d3231893ee6abb0d53c80afc0d076b1a13cc53cdee21be1",
+      "bytes": 2119
+    },
+    "livox-live-check/ros-log/python3_289922_1794881492158.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/fastlio_mapping_290008_1794881492748.log": {
+      "sha256": "0739920ecb8be271068e381de5656319c1cfca363253dbd4d6045995de088db0",
+      "bytes": 380
+    },
+    "livox-live-check/ros-log/vision2mavros_289996_1794881492470.log": {
+      "sha256": "165bb65df4573856759144d05e5f1799bc80e2799b59a5d2e521b36dddb81424",
+      "bytes": 212
+    },
+    "livox-live-check/ros-log/python3_290022_1794881493167.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/2026-11-17-10-11-32-557055-orangepi5ultra-289994/launch.log": {
+      "sha256": "0616f1da2cee6aef92de7855b70ffe4aadf668737ed4cd3e7e2b7ce901f34d9d",
+      "bytes": 573
+    }
+  },
+  "livox-live-run4": {
+    "consumer.log": {
+      "sha256": "4cedef995a607ff3b0fd4a683ecdb78ebe2e1f251685c8c640d57ca861c117dd",
+      "bytes": 1132
+    },
+    "evidence.tar.gz": {
+      "sha256": "263fc105788856c819010cc2d6a6a3446ae5069aeb79100b1a331a81b8a29baa",
+      "bytes": 524539
+    },
+    "inputs.tar": {
+      "sha256": "dae1e0bfcd51a9e4fba8d900e5625adfb62fa8d5f9e00aac852aeb1f45e3ac0b",
+      "bytes": 40960
+    },
+    "runner-result.json": {
+      "sha256": "5e9ec45e1959d06d18182f8bf8391784430f402b2ca28e9d88c1304200377178",
+      "bytes": 204
+    },
+    "inputs-manifest.json": {
+      "sha256": "cd1a589a945dc9a9c229afffb5bd09b25d604a9e2ae2b91ddb0607f6ddbdbd99",
+      "bytes": 833
+    },
+    "source.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "remote-cleanup.log": {
+      "sha256": "72d93f915e7496fa0c6d010f6a1bc5908551f941a27ab9c77a16c9ce7447ee53",
+      "bytes": 48
+    },
+    "source.stream": {
+      "sha256": "542acb0c7c8cb37b29bbb332dd2f40c12a9d378164fe7445ab59e3eb60111e5a",
+      "bytes": 50294639
+    },
+    "source-before.log": {
+      "sha256": "bf62b0dd8f269b3b121a00fbee1409d573943884e3a4e880c6946abbb874f109",
+      "bytes": 328
+    },
+    "source-after.log": {
+      "sha256": "63928938b8907946762c71612f1149a9a00e9fff48533e1db7f5654115a0c51b",
+      "bytes": 328
+    },
+    "livox-live-check/result.json": {
+      "sha256": "1d71d1540fe3c9085d35bd8ff705cd333a9244bb4c188ec1c95a3398085866dc",
+      "bytes": 2455
+    },
+    "livox-live-check/lio-parameters.yaml": {
+      "sha256": "381c6e3884e3b38690f4464c7426b42f3c3d6e84f92808bef5f1421bd672bcd7",
+      "bytes": 1495
+    },
+    "livox-live-check/owned-processes.json": {
+      "sha256": "100e1cd8c1de65de191c6944bbbe3e7c2a9a8581edde5920b0ccceaa10fa3a7e",
+      "bytes": 157
+    },
+    "livox-live-check/relay.log": {
+      "sha256": "b88c4098b4eca230b692b0e89bd245e0f5c03a976dc6e73c260828b37872a873",
+      "bytes": 212
+    },
+    "livox-live-check/odom-headers.jsonl": {
+      "sha256": "e783389539713ee69c0218d20b0ecaa36b8eec99b283c6f71f16122a946e29c5",
+      "bytes": 68148
+    },
+    "livox-live-check/cloud-headers.jsonl": {
+      "sha256": "ef71d98d19d97305d5ebca5160c334a8ed25d753487f2e421e9baf01082c6bf0",
+      "bytes": 19258
+    },
+    "livox-live-check/livox_live_protocol.py": {
+      "sha256": "4a3574f88d40fd609caaa2e1206068e3a56701f4c8b4bc7f0e7d73cd9af30fa0",
+      "bytes": 3256
+    },
+    "livox-live-check/validate_fastlio_replay.py": {
+      "sha256": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+      "bytes": 7940
+    },
+    "livox-live-check/lio.log": {
+      "sha256": "fa12fd55a434dff1c16b50798143b71403c7941e126f9b07b1521c0121ec7ee2",
+      "bytes": 1184
+    },
+    "livox-live-check/test_livox_live_ros2.py": {
+      "sha256": "d0a7f2d356bec95b9f202b3c073e13bd444bf7cde0e03618cde3c10767e253fb",
+      "bytes": 11176
+    },
+    "livox-live-check/vision-headers.jsonl": {
+      "sha256": "b0e9454525df30bf419ba5d38c49acc84723a4bf62a0da13696e91e7ed5dfaaa",
+      "bytes": 6597
+    },
+    "livox-live-check/input-headers.csv": {
+      "sha256": "51bf6228622bc5cdf24b7119030d88c7d91312f25363ffaf49f63fa741d383f3",
+      "bytes": 1073096
+    },
+    "livox-live-check/owned-cleanup.json": {
+      "sha256": "70c0fb643c3698c1a71a7468f2ebd4688532390c88ac1786c92f73fa4a6b8e65",
+      "bytes": 56
+    },
+    "livox-live-check/cleanup_livox_live_check.py": {
+      "sha256": "159a1b9932eac5752d3231893ee6abb0d53c80afc0d076b1a13cc53cdee21be1",
+      "bytes": 2119
+    },
+    "livox-live-check/ros-log/fastlio_mapping_291278_1794881627761.log": {
+      "sha256": "9af65ab04db30d84e289a5a3e6fe2673f328f131ff671f304869e5dafe012569",
+      "bytes": 380
+    },
+    "livox-live-check/ros-log/python3_291292_1794881628192.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/vision2mavros_291266_1794881627473.log": {
+      "sha256": "b88c4098b4eca230b692b0e89bd245e0f5c03a976dc6e73c260828b37872a873",
+      "bytes": 212
+    },
+    "livox-live-check/ros-log/python3_291192_1794881627150.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/2026-11-17-10-13-47-570501-orangepi5ultra-291264/launch.log": {
+      "sha256": "8209637edd75b14d226bf076c5b0a6d580d03b62bbf094b9690baee36309770b",
+      "bytes": 573
+    }
+  },
+  "livox-live-run5": {
+    "consumer.log": {
+      "sha256": "05a6de76c61c2c9fe294037f9af32f9ea60b32f39b98303c690bbfca7e60239c",
+      "bytes": 1135
+    },
+    "evidence.tar.gz": {
+      "sha256": "c6dd288983e7371c379d018be13019274668532b5e14bbb903c4a13a6d28acd8",
+      "bytes": 1034496
+    },
+    "inputs.tar": {
+      "sha256": "dae1e0bfcd51a9e4fba8d900e5625adfb62fa8d5f9e00aac852aeb1f45e3ac0b",
+      "bytes": 40960
+    },
+    "runner-result.json": {
+      "sha256": "5e9ec45e1959d06d18182f8bf8391784430f402b2ca28e9d88c1304200377178",
+      "bytes": 204
+    },
+    "inputs-manifest.json": {
+      "sha256": "014dc92bd5ceb21df9500aaeb01905ec713a5d8487cb53f86b3ce2629c775dea",
+      "bytes": 833
+    },
+    "source.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "remote-cleanup.log": {
+      "sha256": "72d93f915e7496fa0c6d010f6a1bc5908551f941a27ab9c77a16c9ce7447ee53",
+      "bytes": 48
+    },
+    "source.stream": {
+      "sha256": "1574b9ff9d8fb70b8592a570e6840b260026ee0e5a299dd685443be5805bfbe5",
+      "bytes": 100059965
+    },
+    "source-before.log": {
+      "sha256": "b717bed8c480100ce40a7cf33cee796917c38fd72efb49da74c46ad6c922460e",
+      "bytes": 328
+    },
+    "source-after.log": {
+      "sha256": "b54325e0ac96ce1c40de506b04aac42a6a9b49e4461c3def7228e08f86f03818",
+      "bytes": 328
+    },
+    "livox-live-check/result.json": {
+      "sha256": "353e54143af0bcd72e7a50b1a09c29c5ba839050139972f0fb9243f7440ad4ec",
+      "bytes": 2811
+    },
+    "livox-live-check/lio-parameters.yaml": {
+      "sha256": "381c6e3884e3b38690f4464c7426b42f3c3d6e84f92808bef5f1421bd672bcd7",
+      "bytes": 1495
+    },
+    "livox-live-check/owned-processes.json": {
+      "sha256": "1f78113a636c933108942f2c1a45d2e9b26da357e66269ec9c1faad6ef0e5f8d",
+      "bytes": 157
+    },
+    "livox-live-check/relay.log": {
+      "sha256": "5be29d034214c9293edb2f777a5d02a8a5b4233614a9f0f0a26e9eeaef554d41",
+      "bytes": 212
+    },
+    "livox-live-check/odom-headers.jsonl": {
+      "sha256": "4b87f1ae151f7f8b48665f424e5bb99d90c671fca235c1b09a63cafb3e3a06ce",
+      "bytes": 136906
+    },
+    "livox-live-check/cloud-headers.jsonl": {
+      "sha256": "9fd1fb9f9cda372c5c6be617f1b30c3b6a235897daa6bf982a2135e22feab58b",
+      "bytes": 38750
+    },
+    "livox-live-check/livox_live_protocol.py": {
+      "sha256": "4a3574f88d40fd609caaa2e1206068e3a56701f4c8b4bc7f0e7d73cd9af30fa0",
+      "bytes": 3256
+    },
+    "livox-live-check/validate_fastlio_replay.py": {
+      "sha256": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+      "bytes": 7940
+    },
+    "livox-live-check/lio.log": {
+      "sha256": "c1fe5bd6509782f86699fdd651327ac3b88690d3fb8c7fcaf31892c945be43b7",
+      "bytes": 1184
+    },
+    "livox-live-check/test_livox_live_ros2.py": {
+      "sha256": "d0a7f2d356bec95b9f202b3c073e13bd444bf7cde0e03618cde3c10767e253fb",
+      "bytes": 11176
+    },
+    "livox-live-check/vision-headers.jsonl": {
+      "sha256": "1b08af92c56d308df43d5f703b88d0ac2f1fe1851392d5827edee8e887b8fd2a",
+      "bytes": 25285
+    },
+    "livox-live-check/input-headers.csv": {
+      "sha256": "1d053c13d520559fafbedf02d7b1b980d9cbfe73d661d270c00d3972a32fe268",
+      "bytes": 2146014
+    },
+    "livox-live-check/owned-cleanup.json": {
+      "sha256": "70c0fb643c3698c1a71a7468f2ebd4688532390c88ac1786c92f73fa4a6b8e65",
+      "bytes": 56
+    },
+    "livox-live-check/cleanup_livox_live_check.py": {
+      "sha256": "159a1b9932eac5752d3231893ee6abb0d53c80afc0d076b1a13cc53cdee21be1",
+      "bytes": 2119
+    },
+    "livox-live-check/ros-log/python3_292293_1794881720282.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/fastlio_mapping_292279_1794881719825.log": {
+      "sha256": "59a05a71220d64111b3388a4820c30921181d878645796a5e66fad817ee819bf",
+      "bytes": 380
+    },
+    "livox-live-check/ros-log/vision2mavros_292267_1794881719537.log": {
+      "sha256": "5be29d034214c9293edb2f777a5d02a8a5b4233614a9f0f0a26e9eeaef554d41",
+      "bytes": 212
+    },
+    "livox-live-check/ros-log/python3_292193_1794881719226.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "livox-live-check/ros-log/2026-11-17-10-15-19-633781-orangepi5ultra-292265/launch.log": {
+      "sha256": "d92d7011e0e0a78fbf51e61c2ee70ecdd9c1c6349f25837c059b0eef2489cfff",
+      "bytes": 573
+    }
+  },
+  "livox-cdr-validation": {
+    "result.json": {
+      "sha256": "ab1663f47b5e9c82136acb46323295d75bc125b8bbb2b0b55d38ff56e0e1fd23",
+      "bytes": 801
+    },
+    "inputs.tar": {
+      "sha256": "ca2011bb240259c1a75e406a148ec8dcaaaad33e32dc693770e198dea30a79e2",
+      "bytes": 194560
+    },
+    "sample.stream": {
+      "sha256": "71c1f7fbb89a03a32a2a7f5589a7deac645fec524a3fbf64dacc3d3f013b5b32",
+      "bytes": 165972
+    },
+    "stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

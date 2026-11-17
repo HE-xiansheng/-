@@ -28,10 +28,21 @@ def main(seconds=60):
         dropped = {'1': 0, '2': 0}
         errors = []
         types = {}
+        transport = {str(k): {'messages': 0, 'max_queue_age_s': 0., 'max_write_s': 0., 'max_queue_depth': 0} for k in (1, 2)}
         lock = threading.Lock()
         recording = True
         subscribers = []
         begin = time.monotonic()
+
+        def transmit(kind, payload, receipt_ns):
+            start = time.monotonic()
+            metrics = transport[str(kind)]
+            metrics['max_queue_age_s'] = max(metrics['max_queue_age_s'], (time.time_ns()-receipt_ns)/1e9)
+            metrics['max_queue_depth'] = max(metrics['max_queue_depth'], pending.qsize())
+            write_frame(binary, kind, payload, receipt_ns)
+            metrics['max_write_s'] = max(metrics['max_write_s'], time.monotonic()-start)
+            metrics['messages'] += 1
+            sent[str(kind)] += 1
 
         def receive(message, kind):
             with lock:
@@ -58,8 +69,7 @@ def main(seconds=60):
                     kind, payload, receipt_ns = pending.get(timeout=.1)
                 except queue.Empty:
                     continue
-                write_frame(binary, kind, payload, receipt_ns)
-                sent[str(kind)] += 1
+                transmit(kind, payload, receipt_ns)
             for subscriber in subscribers:
                 subscriber.unregister()
             subscribers.clear()
@@ -68,11 +78,10 @@ def main(seconds=60):
                 recording = False
                 while not pending.empty():
                     kind, payload, receipt_ns = pending.get_nowait()
-                    write_frame(binary, kind, payload, receipt_ns)
-                    sent[str(kind)] += 1
+                    transmit(kind, payload, receipt_ns)
             result = {'duration_s': time.monotonic()-begin, 'received': counts,
                       'sent': sent, 'dropped': dropped, 'publishers_created': 0,
-                      'types': types, 'errors': errors, 'flight_commands_sent': False}
+                      'types': types, 'errors': errors, 'transport': transport, 'flight_commands_sent': False}
             write_frame(binary, 255, json.dumps(result).encode(), time.time_ns())
         finally:
             for subscriber in subscribers:

@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-17T10:08:54.308733+08:00",
+  "scope": "TCP22 and public ECDSA host-key comparison; no login to unknown hosts",
+  "subnet": "192.168.0.0/23",
+  "ssh_candidates": [
+    "192.168.1.1",
+    "192.168.1.123",
+    "192.168.1.193",
+    "192.168.1.224",
+    "192.168.1.234",
+    "192.168.1.235",
+    "192.168.1.246",
+    "192.168.1.50",
+    "192.168.1.54",
+    "192.168.1.56",
+    "192.168.1.58",
+    "192.168.1.60",
+    "192.168.1.71",
+    "192.168.1.88"
+  ],
+  "source_235_hostkey_matches": [
+    "192.168.1.235",
+    "192.168.1.50"
+  ],
+  "target_224": {
+    "reachable": true,
+    "git_clean": true,
+    "lidar_carrier": 0,
+    "gimbal_usb_network_present": false,
+    "Gemini_and_PX4_present": true
+  },
+  "resumed_blocker_audit_round": 1
+}
