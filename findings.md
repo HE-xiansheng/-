@@ -228,3 +228,5 @@ MPP单包正式构建16.6秒成功，随后Git提交因机载未配置作者身�
 2026-11-17 正式入口现场读回补充：.224 systemctl cat Safina_sensor.service返回No files found，FragmentPath/UnitFileState为空；gimbal-rtsp-relay.service也无FragmentPath。即当前系统尚未安装这两份候选服务，不能将inactive解释为已装服务仅待启动。正式切换应按原约束确认后安装/启用，并确保云台持久网络先就绪。
 
 2026-11-17 15:25全实物并发run1严格失败：原SSH stdout证明真实云台H264和所有处理流就绪；runner缓冲导致主窗口90秒就绪超时/Qt未启动，机载SSH随后255且ARP/ICMP失联。进程/临时网络清理和原始档案回收均未确认。管理/23公钥发现无新地址，.235独立ping也失败，三轮连接复核超时；不能诊断为热/USB/内存/供电根因。已修正流式日志、补充失败原因和注册进程、准备仅限本轮身份的恢复取证工具，尚未复测。源代码不部署、不切正式入口；记录见records/2026-11-17/physical-platform-gcs。上一目标回合是实际删除/实证的progress，本轮新增实物启动与网络失效证据及工具修正也为progress；当前访问阻挡首次出现，目标保持active。
+
+2026-11-17 15:30目标blocked：连续第三个目标回合的新机访问条件未恢复；SSH255、/23公钥发现无匹配，电脑实验进程已结束。上一回合及本轮均no progress，没有活跃任务可等待或可独立完成的必要实现；update_goal返回blocked，完整目标未完成。恢复后先核查注册实验进程、回收原始日志及清理临时网络，再复测真实整链。证据见records/2026-11-17/physical-platform-gcs/access-recheck-turn3.json和goal-status.json。

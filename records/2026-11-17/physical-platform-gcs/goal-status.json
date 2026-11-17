@@ -1,0 +1,15 @@
+{
+  "objective": "把.235完整平台源码/驱动迁入.224并适配ROS2，全部迁移记录保存电脑/GitHub",
+  "status": "blocked",
+  "date": "2026-11-17T15:31:29.524317+08:00",
+  "authoritative_status_source": "update_goal returned blocked",
+  "reason": "same inability to access onboard machine observed in three consecutive goal turns; no independent required implementation/test can resolve physical access",
+  "unfinished": [
+    "recover prior experiment logs and verify owned-process/network cleanup",
+    "repeat physical processing/recording/full GCS integration",
+    "installation extrinsics and motion precision",
+    "actual visual targets and ground task integration",
+    "long-term stability",
+    "confirmed persistent gimbal network and formal runtime activation"
+  ]
+}

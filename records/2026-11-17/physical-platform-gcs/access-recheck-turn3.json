@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-17T15:30:50.282265+08:00",
+  "direct_ssh_exit": 255,
+  "direct_ssh_error": "No route to host",
+  "matching_onboard_hosts": [],
+  "ssh_hosts_found": 11,
+  "local_experiment_processes": "",
+  "previous_turn_classification": "no_progress",
+  "current_turn_classification": "no_progress",
+  "same_access_blocker_occurrence": 3,
+  "remote_experiment_state": "unknown; no authenticated access to inspect/retrieve/clean"
+}

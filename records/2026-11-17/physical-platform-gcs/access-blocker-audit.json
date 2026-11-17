@@ -1,7 +1,7 @@
 {
   "blocker": "Authenticated access to onboard .224 is unavailable; cannot recover prior physical experiment or continue physical verification",
-  "consecutive_goal_turns": 2,
-  "current_date": "2026-11-17T15:29:32.779225+08:00",
+  "consecutive_goal_turns": 3,
+  "current_date": "2026-11-17T15:31:29.524183+08:00",
   "turns": [
     {
       "turn": 1,
@@ -13,10 +13,16 @@
       "classification": "no_progress",
       "evidence": "SSH255 No route to host; current /23 SSH host-key discovery has no matching onboard key",
       "record": "access-recheck-turn2.json"
+    },
+    {
+      "turn": 3,
+      "classification": "no_progress",
+      "evidence": "SSH255 No route to host; fresh management /23 host-key discovery has no matching onboard key; no local experiment process remains",
+      "record": "access-recheck-turn3.json"
     }
   ],
   "running_local_experiment": false,
   "remote_experiment_state": "unknown; no overlapping restart permitted until access/identity/ownership checked",
   "next_action": "On restored authenticated access run the prepared ownership-constrained recovery before a new physical test",
-  "goal_status": "active; blocked threshold not yet reached"
+  "goal_status": "blocked"
 }
