@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-17T15:29:00.486355+08:00",
+  "direct_ssh_exit": 255,
+  "direct_ssh_error": "No route to host",
+  "ssh_hosts": [
+    {
+      "host": "192.168.1.1",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.50",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.54",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.56",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.58",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.60",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.71",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.88",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.123",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.193",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.234",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.235",
+      "matches_saved_onboard_key": false
+    },
+    {
+      "host": "192.168.1.246",
+      "matches_saved_onboard_key": false
+    }
+  ],
+  "matching_onboard_hosts": []
+}
