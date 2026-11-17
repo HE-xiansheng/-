@@ -1,0 +1,2402 @@
+{
+  "/camera/camera": {
+    ".left_ir.image_raw.format": {
+      "type": 4,
+      "value": "jpeg"
+    },
+    ".left_ir.image_raw.jpeg_quality": {
+      "type": 2,
+      "value": 95
+    },
+    ".left_ir.image_raw.png_level": {
+      "type": 2,
+      "value": 3
+    },
+    ".left_ir.image_raw.tiff.res_unit": {
+      "type": 4,
+      "value": "inch"
+    },
+    ".left_ir.image_raw.tiff.xdpi": {
+      "type": 2,
+      "value": -1
+    },
+    ".left_ir.image_raw.tiff.ydpi": {
+      "type": 2,
+      "value": -1
+    },
+    ".right_ir.image_raw.format": {
+      "type": 4,
+      "value": "jpeg"
+    },
+    ".right_ir.image_raw.jpeg_quality": {
+      "type": 2,
+      "value": 95
+    },
+    ".right_ir.image_raw.png_level": {
+      "type": 2,
+      "value": 3
+    },
+    ".right_ir.image_raw.tiff.res_unit": {
+      "type": 4,
+      "value": "inch"
+    },
+    ".right_ir.image_raw.tiff.xdpi": {
+      "type": 2,
+      "value": -1
+    },
+    ".right_ir.image_raw.tiff.ydpi": {
+      "type": 2,
+      "value": -1
+    },
+    "_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "_flip": {
+      "type": 1,
+      "value": false
+    },
+    "_format": {
+      "type": 4,
+      "value": ""
+    },
+    "_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "_height": {
+      "type": 2,
+      "value": 0
+    },
+    "_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "_optical_frame_id": {
+      "type": 4,
+      "value": "camera__optical_frame"
+    },
+    "_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "_width": {
+      "type": 2,
+      "value": 0
+    },
+    "accel_optical_frame_id": {
+      "type": 4,
+      "value": "camera_accel_optical_frame"
+    },
+    "accel_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "accel_range": {
+      "type": 4,
+      "value": "4g"
+    },
+    "accel_rate": {
+      "type": 4,
+      "value": "200hz"
+    },
+    "ae_reference_stream": {
+      "type": 4,
+      "value": ""
+    },
+    "ae_strategy": {
+      "type": 4,
+      "value": ""
+    },
+    "align_mode": {
+      "type": 4,
+      "value": "SW"
+    },
+    "align_target_stream": {
+      "type": 4,
+      "value": "COLOR"
+    },
+    "angular_vel_cov": {
+      "type": 3,
+      "value": 0.01
+    },
+    "bag_filename": {
+      "type": 4,
+      "value": ""
+    },
+    "bag_loop": {
+      "type": 1,
+      "value": false
+    },
+    "bag_record_compression": {
+      "type": 1,
+      "value": true
+    },
+    "bag_record_filename": {
+      "type": 4,
+      "value": ""
+    },
+    "camera__frame_id": {
+      "type": 4,
+      "value": "camera__frame"
+    },
+    "camera_accel_frame_id": {
+      "type": 4,
+      "value": "camera_accel_frame"
+    },
+    "camera_color_frame_id": {
+      "type": 4,
+      "value": "camera_color_frame"
+    },
+    "camera_depth_frame_id": {
+      "type": 4,
+      "value": "camera_depth_frame"
+    },
+    "camera_gyro_frame_id": {
+      "type": 4,
+      "value": "camera_gyro_frame"
+    },
+    "camera_ir_frame_id": {
+      "type": 4,
+      "value": "camera_ir_frame"
+    },
+    "camera_left_color_frame_id": {
+      "type": 4,
+      "value": "camera_left_color_frame"
+    },
+    "camera_left_ir_frame_id": {
+      "type": 4,
+      "value": "camera_left_ir_frame"
+    },
+    "camera_name": {
+      "type": 4,
+      "value": "camera"
+    },
+    "camera_right_color_frame_id": {
+      "type": 4,
+      "value": "camera_right_color_frame"
+    },
+    "camera_right_ir_frame_id": {
+      "type": 4,
+      "value": "camera_right_ir_frame"
+    },
+    "cloud_frame_id": {
+      "type": 4,
+      "value": ""
+    },
+    "color_ae_max_exposure": {
+      "type": 2,
+      "value": -1
+    },
+    "color_ae_max_gain": {
+      "type": 2,
+      "value": -1
+    },
+    "color_ae_roi_bottom": {
+      "type": 2,
+      "value": -1
+    },
+    "color_ae_roi_left": {
+      "type": 2,
+      "value": -1
+    },
+    "color_ae_roi_right": {
+      "type": 2,
+      "value": -1
+    },
+    "color_ae_roi_top": {
+      "type": 2,
+      "value": -1
+    },
+    "color_anti_flicker": {
+      "type": 1,
+      "value": false
+    },
+    "color_backlight_compensation": {
+      "type": 2,
+      "value": -1
+    },
+    "color_brightness": {
+      "type": 2,
+      "value": -1
+    },
+    "color_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "color_contrast": {
+      "type": 2,
+      "value": -1
+    },
+    "color_decimation_filter_scale": {
+      "type": 2,
+      "value": -1
+    },
+    "color_delay_us": {
+      "type": 2,
+      "value": 0
+    },
+    "color_denoising_level": {
+      "type": 2,
+      "value": -1
+    },
+    "color_exposure": {
+      "type": 2,
+      "value": -1
+    },
+    "color_flip": {
+      "type": 1,
+      "value": false
+    },
+    "color_format": {
+      "type": 4,
+      "value": "ANY"
+    },
+    "color_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "color_frame_queue_max_frames": {
+      "type": 2,
+      "value": 1
+    },
+    "color_gain": {
+      "type": 2,
+      "value": -1
+    },
+    "color_gamma": {
+      "type": 2,
+      "value": -1
+    },
+    "color_height": {
+      "type": 2,
+      "value": 720
+    },
+    "color_hue": {
+      "type": 2,
+      "value": -1
+    },
+    "color_info_url": {
+      "type": 4,
+      "value": ""
+    },
+    "color_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "color_mjpeg_quality": {
+      "type": 2,
+      "value": -1
+    },
+    "color_optical_frame_id": {
+      "type": 4,
+      "value": "camera_color_optical_frame"
+    },
+    "color_powerline_freq": {
+      "type": 4,
+      "value": ""
+    },
+    "color_preset": {
+      "type": 4,
+      "value": "Default"
+    },
+    "color_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "color_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "color_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "color_roi_brightness": {
+      "type": 2,
+      "value": -1
+    },
+    "color_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "color_saturation": {
+      "type": 2,
+      "value": -1
+    },
+    "color_sharpness": {
+      "type": 2,
+      "value": -1
+    },
+    "color_white_balance": {
+      "type": 2,
+      "value": -1
+    },
+    "color_width": {
+      "type": 2,
+      "value": 1280
+    },
+    "connection_delay": {
+      "type": 2,
+      "value": 10
+    },
+    "decimation_filter_scale": {
+      "type": 2,
+      "value": -1
+    },
+    "depth.image_raw.enable_pub_plugins": {
+      "type": 9,
+      "value": [
+        "image_transport/compressedDepth",
+        "image_transport/raw"
+      ]
+    },
+    "depth_ae_roi_bottom": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_ae_roi_left": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_ae_roi_right": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_ae_roi_top": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_brightness": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "depth_colorizer_mode": {
+      "type": 4,
+      "value": "none"
+    },
+    "depth_decimation_factor": {
+      "type": 2,
+      "value": 1
+    },
+    "depth_delay_us": {
+      "type": 2,
+      "value": 0
+    },
+    "depth_exposure": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_filter_config": {
+      "type": 4,
+      "value": ""
+    },
+    "depth_flip": {
+      "type": 1,
+      "value": false
+    },
+    "depth_format": {
+      "type": 4,
+      "value": "ANY"
+    },
+    "depth_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "depth_gain": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_height": {
+      "type": 2,
+      "value": 480
+    },
+    "depth_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "depth_optical_frame_id": {
+      "type": 4,
+      "value": "camera_depth_optical_frame"
+    },
+    "depth_precision": {
+      "type": 4,
+      "value": ""
+    },
+    "depth_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "depth_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "depth_registration": {
+      "type": 1,
+      "value": false
+    },
+    "depth_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "depth_width": {
+      "type": 2,
+      "value": 848
+    },
+    "depth_work_mode": {
+      "type": 4,
+      "value": ""
+    },
+    "device_access_mode": {
+      "type": 4,
+      "value": "Default"
+    },
+    "device_num": {
+      "type": 2,
+      "value": 1
+    },
+    "device_preset": {
+      "type": 4,
+      "value": "Default"
+    },
+    "device_preset_version": {
+      "type": 4,
+      "value": ""
+    },
+    "device_type": {
+      "type": 4,
+      "value": "camera"
+    },
+    "diagnostic_period": {
+      "type": 3,
+      "value": 1.0
+    },
+    "diagnostic_updater.period": {
+      "type": 3,
+      "value": 10000.0
+    },
+    "diagnostic_updater.use_fqn": {
+      "type": 1,
+      "value": false
+    },
+    "disp_outliers_filter_search_mode": {
+      "type": 4,
+      "value": ""
+    },
+    "disparity_offset_config": {
+      "type": 1,
+      "value": false
+    },
+    "disparity_range_mode": {
+      "type": 2,
+      "value": -1
+    },
+    "disparity_search_offset": {
+      "type": 2,
+      "value": -1
+    },
+    "disparity_to_depth_mode": {
+      "type": 4,
+      "value": "HW"
+    },
+    "enable_": {
+      "type": 1,
+      "value": false
+    },
+    "enable__undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_accel": {
+      "type": 1,
+      "value": false
+    },
+    "enable_accel_data_correction": {
+      "type": 1,
+      "value": true
+    },
+    "enable_color": {
+      "type": 1,
+      "value": true
+    },
+    "enable_color_auto_exposure": {
+      "type": 1,
+      "value": true
+    },
+    "enable_color_auto_exposure_priority": {
+      "type": 1,
+      "value": false
+    },
+    "enable_color_auto_white_balance": {
+      "type": 1,
+      "value": true
+    },
+    "enable_color_decimation_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_color_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_colored_point_cloud": {
+      "type": 1,
+      "value": false
+    },
+    "enable_d2c_viewer": {
+      "type": 1,
+      "value": false
+    },
+    "enable_decimation_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_depth": {
+      "type": 1,
+      "value": true
+    },
+    "enable_depth_auto_exposure_priority": {
+      "type": 1,
+      "value": false
+    },
+    "enable_depth_scale": {
+      "type": 1,
+      "value": true
+    },
+    "enable_depth_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_disp_outliers_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_disparity_to_depth": {
+      "type": 1,
+      "value": true
+    },
+    "enable_edge_noise_removal_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_enhanced_depth": {
+      "type": 1,
+      "value": false
+    },
+    "enable_false_positive_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_firmware_log": {
+      "type": 1,
+      "value": false
+    },
+    "enable_fps_boost": {
+      "type": 1,
+      "value": false
+    },
+    "enable_frame_drop_log": {
+      "type": 1,
+      "value": false
+    },
+    "enable_frame_sync": {
+      "type": 1,
+      "value": false
+    },
+    "enable_gmsl_trigger": {
+      "type": 1,
+      "value": false
+    },
+    "enable_gyro": {
+      "type": 1,
+      "value": false
+    },
+    "enable_gyro_data_correction": {
+      "type": 1,
+      "value": true
+    },
+    "enable_hardware_noise_removal_filter": {
+      "type": 1,
+      "value": true
+    },
+    "enable_hdr_merge": {
+      "type": 1,
+      "value": false
+    },
+    "enable_heartbeat": {
+      "type": 1,
+      "value": false
+    },
+    "enable_hole_filling_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_ir": {
+      "type": 1,
+      "value": false
+    },
+    "enable_ir_auto_exposure": {
+      "type": 1,
+      "value": true
+    },
+    "enable_ir_long_exposure": {
+      "type": 1,
+      "value": true
+    },
+    "enable_ir_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_laser": {
+      "type": 1,
+      "value": true
+    },
+    "enable_ldp": {
+      "type": 1,
+      "value": false
+    },
+    "enable_left_color": {
+      "type": 1,
+      "value": false
+    },
+    "enable_left_color_decimation_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_left_color_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_left_ir": {
+      "type": 1,
+      "value": true
+    },
+    "enable_left_ir_sequence_id_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_left_ir_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_lrm_obstacle_distance_publish": {
+      "type": 1,
+      "value": false
+    },
+    "enable_lut_noise_removal_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_mgc_noise_removal_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_noise_removal_filter": {
+      "type": 1,
+      "value": true
+    },
+    "enable_point_cloud": {
+      "type": 1,
+      "value": true
+    },
+    "enable_ptp_config": {
+      "type": 1,
+      "value": false
+    },
+    "enable_publish_extrinsic": {
+      "type": 1,
+      "value": false
+    },
+    "enable_right_color": {
+      "type": 1,
+      "value": false
+    },
+    "enable_right_color_decimation_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_right_color_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_right_ir": {
+      "type": 1,
+      "value": true
+    },
+    "enable_right_ir_sequence_id_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_right_ir_undistortion": {
+      "type": 1,
+      "value": false
+    },
+    "enable_sequence_id_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_spatial_fast_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_spatial_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_spatial_moderate_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_sync_host_time": {
+      "type": 1,
+      "value": false
+    },
+    "enable_sync_output_accel_gyro": {
+      "type": 1,
+      "value": false
+    },
+    "enable_temporal_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enable_threshold_filter": {
+      "type": 1,
+      "value": false
+    },
+    "enhanced_depth_confidence_threshold": {
+      "type": 2,
+      "value": 51
+    },
+    "enhanced_depth_model_path": {
+      "type": 4,
+      "value": ""
+    },
+    "enumerate_net_device": {
+      "type": 1,
+      "value": true
+    },
+    "export_config_json_file_path": {
+      "type": 4,
+      "value": ""
+    },
+    "exposure_range_mode": {
+      "type": 4,
+      "value": "default"
+    },
+    "force_ip_address": {
+      "type": 4,
+      "value": "192.168.1.10"
+    },
+    "force_ip_enable": {
+      "type": 1,
+      "value": false
+    },
+    "force_ip_gateway": {
+      "type": 4,
+      "value": "192.168.1.1"
+    },
+    "force_ip_mac": {
+      "type": 4,
+      "value": ""
+    },
+    "force_ip_subnet_mask": {
+      "type": 4,
+      "value": "255.255.255.0"
+    },
+    "frame_aggregate_mode": {
+      "type": 4,
+      "value": "ANY"
+    },
+    "frame_timestamp_csv_file": {
+      "type": 4,
+      "value": ""
+    },
+    "frames_per_trigger": {
+      "type": 2,
+      "value": 1
+    },
+    "gmsl_trigger_fps": {
+      "type": 2,
+      "value": 3000
+    },
+    "gyro_optical_frame_id": {
+      "type": 4,
+      "value": "camera_gyro_optical_frame"
+    },
+    "gyro_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "gyro_range": {
+      "type": 4,
+      "value": "1000dps"
+    },
+    "gyro_rate": {
+      "type": 4,
+      "value": "200hz"
+    },
+    "hardware_noise_removal_filter_threshold": {
+      "type": 3,
+      "value": -1.0
+    },
+    "hdr_index0_depth_exposure": {
+      "type": 2,
+      "value": 7500
+    },
+    "hdr_index0_depth_gain": {
+      "type": 2,
+      "value": 16
+    },
+    "hdr_index0_ir_ae_max_exposure": {
+      "type": 2,
+      "value": 30458
+    },
+    "hdr_index0_ir_brightness": {
+      "type": 2,
+      "value": 90
+    },
+    "hdr_index0_laser_control": {
+      "type": 2,
+      "value": 1
+    },
+    "hdr_index1_depth_exposure": {
+      "type": 2,
+      "value": 1
+    },
+    "hdr_index1_depth_gain": {
+      "type": 2,
+      "value": 16
+    },
+    "hdr_index1_ir_ae_max_exposure": {
+      "type": 2,
+      "value": 30458
+    },
+    "hdr_index1_ir_brightness": {
+      "type": 2,
+      "value": 30
+    },
+    "hdr_index1_laser_control": {
+      "type": 2,
+      "value": 1
+    },
+    "hdr_merge_exposure_1": {
+      "type": 2,
+      "value": -1
+    },
+    "hdr_merge_exposure_2": {
+      "type": 2,
+      "value": -1
+    },
+    "hdr_merge_gain_1": {
+      "type": 2,
+      "value": -1
+    },
+    "hdr_merge_gain_2": {
+      "type": 2,
+      "value": -1
+    },
+    "hole_filling_filter_mode": {
+      "type": 4,
+      "value": ""
+    },
+    "interleave_ae_mode": {
+      "type": 4,
+      "value": "laser"
+    },
+    "interleave_frame_enable": {
+      "type": 1,
+      "value": false
+    },
+    "interleave_skip_enable": {
+      "type": 1,
+      "value": false
+    },
+    "interleave_skip_index": {
+      "type": 2,
+      "value": 1
+    },
+    "intra_camera_sync_reference": {
+      "type": 4,
+      "value": ""
+    },
+    "ir_ae_max_exposure": {
+      "type": 2,
+      "value": -1
+    },
+    "ir_brightness": {
+      "type": 2,
+      "value": -1
+    },
+    "ir_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "ir_exposure": {
+      "type": 2,
+      "value": -1
+    },
+    "ir_flip": {
+      "type": 1,
+      "value": false
+    },
+    "ir_format": {
+      "type": 4,
+      "value": "Y16"
+    },
+    "ir_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "ir_gain": {
+      "type": 2,
+      "value": -1
+    },
+    "ir_height": {
+      "type": 2,
+      "value": 0
+    },
+    "ir_info_url": {
+      "type": 4,
+      "value": ""
+    },
+    "ir_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "ir_optical_frame_id": {
+      "type": 4,
+      "value": "camera_ir_optical_frame"
+    },
+    "ir_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "ir_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "ir_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "ir_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "ir_width": {
+      "type": 2,
+      "value": 0
+    },
+    "laser_energy_level": {
+      "type": 2,
+      "value": -1
+    },
+    "laser_index0_depth_exposure": {
+      "type": 2,
+      "value": 3000
+    },
+    "laser_index0_depth_gain": {
+      "type": 2,
+      "value": 16
+    },
+    "laser_index0_ir_ae_max_exposure": {
+      "type": 2,
+      "value": 30000
+    },
+    "laser_index0_ir_brightness": {
+      "type": 2,
+      "value": 60
+    },
+    "laser_index0_laser_control": {
+      "type": 2,
+      "value": 1
+    },
+    "laser_index1_depth_exposure": {
+      "type": 2,
+      "value": 3000
+    },
+    "laser_index1_depth_gain": {
+      "type": 2,
+      "value": 16
+    },
+    "laser_index1_ir_ae_max_exposure": {
+      "type": 2,
+      "value": 17000
+    },
+    "laser_index1_ir_brightness": {
+      "type": 2,
+      "value": 60
+    },
+    "laser_index1_laser_control": {
+      "type": 2,
+      "value": 0
+    },
+    "ldp_power_level": {
+      "type": 2,
+      "value": -1
+    },
+    "left_color_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "left_color_decimation_filter_scale": {
+      "type": 2,
+      "value": -1
+    },
+    "left_color_flip": {
+      "type": 1,
+      "value": false
+    },
+    "left_color_format": {
+      "type": 4,
+      "value": ""
+    },
+    "left_color_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "left_color_frame_queue_max_frames": {
+      "type": 2,
+      "value": 1
+    },
+    "left_color_height": {
+      "type": 2,
+      "value": 0
+    },
+    "left_color_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "left_color_optical_frame_id": {
+      "type": 4,
+      "value": "camera_left_color_optical_frame"
+    },
+    "left_color_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "left_color_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "left_color_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "left_color_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "left_color_width": {
+      "type": 2,
+      "value": 0
+    },
+    "left_ir.image_raw.enable_pub_plugins": {
+      "type": 9,
+      "value": [
+        "image_transport/compressed",
+        "image_transport/raw",
+        "image_transport/theora"
+      ]
+    },
+    "left_ir_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "left_ir_decimation_factor": {
+      "type": 2,
+      "value": 1
+    },
+    "left_ir_flip": {
+      "type": 1,
+      "value": false
+    },
+    "left_ir_format": {
+      "type": 4,
+      "value": "ANY"
+    },
+    "left_ir_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "left_ir_height": {
+      "type": 2,
+      "value": 0
+    },
+    "left_ir_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "left_ir_optical_frame_id": {
+      "type": 4,
+      "value": "camera_left_ir_optical_frame"
+    },
+    "left_ir_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "left_ir_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "left_ir_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "left_ir_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "left_ir_sequence_id_filter_id": {
+      "type": 2,
+      "value": -1
+    },
+    "left_ir_width": {
+      "type": 2,
+      "value": 0
+    },
+    "linear_accel_cov": {
+      "type": 3,
+      "value": 0.01
+    },
+    "load_config_json_file_path": {
+      "type": 4,
+      "value": ""
+    },
+    "log_file_name": {
+      "type": 4,
+      "value": ""
+    },
+    "log_level": {
+      "type": 4,
+      "value": "info"
+    },
+    "lrm_obstacle_distance_publish_rate": {
+      "type": 3,
+      "value": 10.0
+    },
+    "max_depth_limit": {
+      "type": 2,
+      "value": 0
+    },
+    "max_save_images_count": {
+      "type": 2,
+      "value": 10
+    },
+    "mean_intensity_set_point": {
+      "type": 2,
+      "value": -1
+    },
+    "min_depth_limit": {
+      "type": 2,
+      "value": 0
+    },
+    "monitor_poll_interval_sec": {
+      "type": 2,
+      "value": -1
+    },
+    "net_device_ip": {
+      "type": 4,
+      "value": ""
+    },
+    "net_device_port": {
+      "type": 2,
+      "value": 0
+    },
+    "noise_removal_filter_max_size": {
+      "type": 2,
+      "value": 80
+    },
+    "noise_removal_filter_min_diff": {
+      "type": 2,
+      "value": 256
+    },
+    "offset_index0": {
+      "type": 2,
+      "value": -1
+    },
+    "offset_index1": {
+      "type": 2,
+      "value": -1
+    },
+    "ordered_pc": {
+      "type": 1,
+      "value": false
+    },
+    "point_cloud_decimation_filter_factor": {
+      "type": 2,
+      "value": 1
+    },
+    "point_cloud_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "preset_resolution_config": {
+      "type": 4,
+      "value": ""
+    },
+    "publish_tf": {
+      "type": 1,
+      "value": true
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "qos_overrides./tf.publisher.depth": {
+      "type": 2,
+      "value": 100
+    },
+    "qos_overrides./tf.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./tf.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./tf.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "qos_overrides./tf_static.publisher.depth": {
+      "type": 2,
+      "value": 1
+    },
+    "qos_overrides./tf_static.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./tf_static.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "retry_on_usb3_detection_failure": {
+      "type": 1,
+      "value": false
+    },
+    "right_color_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "right_color_decimation_filter_scale": {
+      "type": 2,
+      "value": -1
+    },
+    "right_color_flip": {
+      "type": 1,
+      "value": false
+    },
+    "right_color_format": {
+      "type": 4,
+      "value": ""
+    },
+    "right_color_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "right_color_frame_queue_max_frames": {
+      "type": 2,
+      "value": 1
+    },
+    "right_color_height": {
+      "type": 2,
+      "value": 0
+    },
+    "right_color_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "right_color_optical_frame_id": {
+      "type": 4,
+      "value": "camera_right_color_optical_frame"
+    },
+    "right_color_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "right_color_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "right_color_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "right_color_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "right_color_width": {
+      "type": 2,
+      "value": 0
+    },
+    "right_ir.image_raw.enable_pub_plugins": {
+      "type": 9,
+      "value": [
+        "image_transport/compressed",
+        "image_transport/raw",
+        "image_transport/theora"
+      ]
+    },
+    "right_ir_camera_info_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "right_ir_decimation_factor": {
+      "type": 2,
+      "value": 1
+    },
+    "right_ir_flip": {
+      "type": 1,
+      "value": false
+    },
+    "right_ir_format": {
+      "type": 4,
+      "value": "ANY"
+    },
+    "right_ir_fps": {
+      "type": 2,
+      "value": 0
+    },
+    "right_ir_height": {
+      "type": 2,
+      "value": 0
+    },
+    "right_ir_mirror": {
+      "type": 1,
+      "value": false
+    },
+    "right_ir_optical_frame_id": {
+      "type": 4,
+      "value": "camera_right_ir_optical_frame"
+    },
+    "right_ir_qos": {
+      "type": 4,
+      "value": "default"
+    },
+    "right_ir_qos_depth": {
+      "type": 2,
+      "value": -1
+    },
+    "right_ir_qos_history": {
+      "type": 4,
+      "value": "default"
+    },
+    "right_ir_rotation": {
+      "type": 2,
+      "value": -1
+    },
+    "right_ir_sequence_id_filter_id": {
+      "type": 2,
+      "value": -1
+    },
+    "right_ir_width": {
+      "type": 2,
+      "value": 0
+    },
+    "sequence_id_filter_id": {
+      "type": 2,
+      "value": -1
+    },
+    "serial_number": {
+      "type": 4,
+      "value": "CP253530009G"
+    },
+    "show_fps_enable": {
+      "type": 1,
+      "value": false
+    },
+    "software_trigger_enabled": {
+      "type": 1,
+      "value": true
+    },
+    "software_trigger_period": {
+      "type": 2,
+      "value": 33
+    },
+    "spatial_fast_filter_radius": {
+      "type": 2,
+      "value": -1
+    },
+    "spatial_filter_alpha": {
+      "type": 3,
+      "value": -1.0
+    },
+    "spatial_filter_diff_threshold": {
+      "type": 2,
+      "value": -1
+    },
+    "spatial_filter_magnitude": {
+      "type": 2,
+      "value": -1
+    },
+    "spatial_filter_radius": {
+      "type": 2,
+      "value": -1
+    },
+    "spatial_moderate_filter_diff_threshold": {
+      "type": 2,
+      "value": -1
+    },
+    "spatial_moderate_filter_magnitude": {
+      "type": 2,
+      "value": -1
+    },
+    "spatial_moderate_filter_radius": {
+      "type": 2,
+      "value": -1
+    },
+    "sync_io_voltage_level": {
+      "type": 2,
+      "value": -1
+    },
+    "sync_mode": {
+      "type": 4,
+      "value": "standalone"
+    },
+    "temporal_filter_diff_threshold": {
+      "type": 3,
+      "value": -1.0
+    },
+    "temporal_filter_weight": {
+      "type": 3,
+      "value": -1.0
+    },
+    "tf_publish_rate": {
+      "type": 3,
+      "value": 0.0
+    },
+    "threshold_filter_max": {
+      "type": 2,
+      "value": -1
+    },
+    "threshold_filter_min": {
+      "type": 2,
+      "value": -1
+    },
+    "time_domain": {
+      "type": 4,
+      "value": "global"
+    },
+    "time_sync_period": {
+      "type": 3,
+      "value": 6.0
+    },
+    "timestamp_clock_type": {
+      "type": 4,
+      "value": ""
+    },
+    "trigger2image_delay_us": {
+      "type": 2,
+      "value": 0
+    },
+    "trigger_out_delay_us": {
+      "type": 2,
+      "value": 0
+    },
+    "trigger_out_enabled": {
+      "type": 1,
+      "value": true
+    },
+    "usb_port": {
+      "type": 4,
+      "value": ""
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    },
+    "uvc_backend": {
+      "type": 4,
+      "value": "libuvc"
+    }
+  },
+  "/camera/camera_container": {
+    "error": "parameter service unavailable"
+  },
+  "/dianyun_gcs_cloud_sender_2474a023": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/ego_planner_node": {
+    "fsm.emergency_time": {
+      "type": 3,
+      "value": 1.0
+    },
+    "fsm.enable_stuck_detect": {
+      "type": 1,
+      "value": true
+    },
+    "fsm.fail_safe": {
+      "type": 1,
+      "value": true
+    },
+    "fsm.flight_type": {
+      "type": 2,
+      "value": 1
+    },
+    "fsm.ground_height_measurement": {
+      "type": 1,
+      "value": false
+    },
+    "fsm.manual_arrival_hold": {
+      "type": 3,
+      "value": 1.0
+    },
+    "fsm.manual_arrival_radius": {
+      "type": 3,
+      "value": 0.25
+    },
+    "fsm.manual_arrival_speed": {
+      "type": 3,
+      "value": 0.15
+    },
+    "fsm.manual_preview": {
+      "type": 1,
+      "value": true
+    },
+    "fsm.manual_replan_period": {
+      "type": 3,
+      "value": 0.5
+    },
+    "fsm.mondify_final_goal": {
+      "type": 1,
+      "value": true
+    },
+    "fsm.odom_vel_is_body": {
+      "type": 1,
+      "value": true
+    },
+    "fsm.planning_horizon": {
+      "type": 3,
+      "value": 4.0
+    },
+    "fsm.realworld_experiment": {
+      "type": 1,
+      "value": true
+    },
+    "fsm.thresh_replan_time": {
+      "type": 3,
+      "value": 1.0
+    },
+    "fsm.waypoint_num": {
+      "type": 2,
+      "value": 0
+    },
+    "grid_map.cloud_enable_raycast": {
+      "type": 1,
+      "value": true
+    },
+    "grid_map.cloud_reliable": {
+      "type": 1,
+      "value": true
+    },
+    "grid_map.cx": {
+      "type": 3,
+      "value": 319.31427001953125
+    },
+    "grid_map.cy": {
+      "type": 3,
+      "value": 239.09725952148438
+    },
+    "grid_map.depth_filter_margin": {
+      "type": 2,
+      "value": 2
+    },
+    "grid_map.depth_filter_mindist": {
+      "type": 3,
+      "value": 0.2
+    },
+    "grid_map.depth_filter_tolerance": {
+      "type": 3,
+      "value": 0.15
+    },
+    "grid_map.depth_reliable": {
+      "type": 1,
+      "value": true
+    },
+    "grid_map.enable_virtual_wall": {
+      "type": 1,
+      "value": false
+    },
+    "grid_map.fading_time": {
+      "type": 3,
+      "value": -1.0
+    },
+    "grid_map.frame_id": {
+      "type": 4,
+      "value": "camera_init"
+    },
+    "grid_map.fx": {
+      "type": 3,
+      "value": 386.2706298828125
+    },
+    "grid_map.fy": {
+      "type": 3,
+      "value": 386.2706298828125
+    },
+    "grid_map.init_x": {
+      "type": 3,
+      "value": 0.0
+    },
+    "grid_map.init_y": {
+      "type": 3,
+      "value": 0.0
+    },
+    "grid_map.init_z": {
+      "type": 3,
+      "value": 0.0
+    },
+    "grid_map.k_depth_scaling_factor": {
+      "type": 3,
+      "value": 1000.0
+    },
+    "grid_map.lidar_p_free": {
+      "type": 3,
+      "value": 0.499
+    },
+    "grid_map.lidar_p_hit": {
+      "type": 3,
+      "value": 0.9
+    },
+    "grid_map.lidar_p_max": {
+      "type": 3,
+      "value": 0.98
+    },
+    "grid_map.lidar_p_min": {
+      "type": 3,
+      "value": 0.12
+    },
+    "grid_map.lidar_p_miss": {
+      "type": 3,
+      "value": 0.4
+    },
+    "grid_map.lidar_p_occ": {
+      "type": 3,
+      "value": 0.85
+    },
+    "grid_map.local_update_range_x": {
+      "type": 3,
+      "value": 5.5
+    },
+    "grid_map.local_update_range_y": {
+      "type": 3,
+      "value": 5.5
+    },
+    "grid_map.local_update_range_z": {
+      "type": 3,
+      "value": 2.0
+    },
+    "grid_map.min_ray_length": {
+      "type": 3,
+      "value": 0.1
+    },
+    "grid_map.obstacles_inflation": {
+      "type": 3,
+      "value": 0.35
+    },
+    "grid_map.odom_depth_timeout": {
+      "type": 3,
+      "value": 1.0
+    },
+    "grid_map.p_hit": {
+      "type": 3,
+      "value": 0.65
+    },
+    "grid_map.p_max": {
+      "type": 3,
+      "value": 0.9
+    },
+    "grid_map.p_min": {
+      "type": 3,
+      "value": 0.12
+    },
+    "grid_map.p_miss": {
+      "type": 3,
+      "value": 0.35
+    },
+    "grid_map.p_occ": {
+      "type": 3,
+      "value": 0.8
+    },
+    "grid_map.pose_type": {
+      "type": 2,
+      "value": 2
+    },
+    "grid_map.resolution": {
+      "type": 3,
+      "value": 0.1
+    },
+    "grid_map.show_occ_time": {
+      "type": 1,
+      "value": false
+    },
+    "grid_map.skip_pixel": {
+      "type": 2,
+      "value": 2
+    },
+    "grid_map.use_depth_filter": {
+      "type": 1,
+      "value": true
+    },
+    "grid_map.virtual_ceil": {
+      "type": 3,
+      "value": 2.5
+    },
+    "grid_map.virtual_ground": {
+      "type": 3,
+      "value": -0.2
+    },
+    "manager.drone_id": {
+      "type": 2,
+      "value": 0
+    },
+    "manager.feasibility_tolerance": {
+      "type": 3,
+      "value": 0.05
+    },
+    "manager.max_acc": {
+      "type": 3,
+      "value": 0.5
+    },
+    "manager.max_vel": {
+      "type": 3,
+      "value": 1.0
+    },
+    "manager.planning_horizon": {
+      "type": 3,
+      "value": 4.0
+    },
+    "manager.polyTraj_piece_length": {
+      "type": 3,
+      "value": 1.5
+    },
+    "manager.use_multitopology_trajs": {
+      "type": 1,
+      "value": false
+    },
+    "optimization.acc_tolerance": {
+      "type": 3,
+      "value": 1.0
+    },
+    "optimization.constraint_points_perPiece": {
+      "type": 2,
+      "value": 5
+    },
+    "optimization.max_acc": {
+      "type": 3,
+      "value": 0.5
+    },
+    "optimization.max_jer": {
+      "type": 3,
+      "value": 10.0
+    },
+    "optimization.max_vel": {
+      "type": 3,
+      "value": 1.0
+    },
+    "optimization.max_vel_z": {
+      "type": 3,
+      "value": 0.3
+    },
+    "optimization.obstacle_clearance": {
+      "type": 3,
+      "value": 0.1
+    },
+    "optimization.obstacle_clearance_soft": {
+      "type": 3,
+      "value": 0.5
+    },
+    "optimization.swarm_clearance": {
+      "type": 3,
+      "value": 0.15000000000000002
+    },
+    "optimization.vel_tolerance": {
+      "type": 3,
+      "value": 0.05
+    },
+    "optimization.weight_feasibility": {
+      "type": 3,
+      "value": 10000.0
+    },
+    "optimization.weight_obstacle": {
+      "type": 3,
+      "value": 10000.0
+    },
+    "optimization.weight_obstacle_soft": {
+      "type": 3,
+      "value": 5000.0
+    },
+    "optimization.weight_sqrvariance": {
+      "type": 3,
+      "value": 10000.0
+    },
+    "optimization.weight_swarm": {
+      "type": 3,
+      "value": 10000.0
+    },
+    "optimization.weight_time": {
+      "type": 3,
+      "value": 10.0
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    },
+    "visualization.frame_id": {
+      "type": 4,
+      "value": "camera_init"
+    }
+  },
+  "/factory_laserMapping": {
+    "common.imu_topic": {
+      "type": 4,
+      "value": "/livox/imu"
+    },
+    "common.lid_topic": {
+      "type": 4,
+      "value": "/livox/lidar"
+    },
+    "common.time_offset_lidar_to_imu": {
+      "type": 3,
+      "value": 0.0
+    },
+    "common.time_sync_en": {
+      "type": 1,
+      "value": true
+    },
+    "cube_side_length": {
+      "type": 3,
+      "value": 150.0
+    },
+    "feature_extract_enable": {
+      "type": 1,
+      "value": false
+    },
+    "filter_size_corner": {
+      "type": 3,
+      "value": 0.5
+    },
+    "filter_size_map": {
+      "type": 3,
+      "value": 0.3
+    },
+    "filter_size_surf": {
+      "type": 3,
+      "value": 0.5
+    },
+    "map_file_path": {
+      "type": 4,
+      "value": ""
+    },
+    "mapping.acc_cov": {
+      "type": 3,
+      "value": 0.5
+    },
+    "mapping.b_acc_cov": {
+      "type": 3,
+      "value": 0.00018
+    },
+    "mapping.b_gyr_cov": {
+      "type": 3,
+      "value": 0.000292
+    },
+    "mapping.det_range": {
+      "type": 3,
+      "value": 50.0
+    },
+    "mapping.extrinsic_R": {
+      "type": 8,
+      "value": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "mapping.extrinsic_T": {
+      "type": 8,
+      "value": [
+        -0.011,
+        -0.02329,
+        0.04412
+      ]
+    },
+    "mapping.extrinsic_est_en": {
+      "type": 1,
+      "value": false
+    },
+    "mapping.fov_degree": {
+      "type": 3,
+      "value": 360.0
+    },
+    "mapping.gyr_cov": {
+      "type": 3,
+      "value": 0.2
+    },
+    "max_iteration": {
+      "type": 2,
+      "value": 3
+    },
+    "pcd_save.interval": {
+      "type": 2,
+      "value": -1
+    },
+    "pcd_save.pcd_save_en": {
+      "type": 1,
+      "value": false
+    },
+    "point_filter_num": {
+      "type": 2,
+      "value": 3
+    },
+    "preprocess.blind": {
+      "type": 3,
+      "value": 0.3
+    },
+    "preprocess.lidar_type": {
+      "type": 2,
+      "value": 1
+    },
+    "preprocess.scan_line": {
+      "type": 2,
+      "value": 4
+    },
+    "preprocess.scan_rate": {
+      "type": 2,
+      "value": 10
+    },
+    "preprocess.timestamp_unit": {
+      "type": 2,
+      "value": 3
+    },
+    "publish.dense_publish_en": {
+      "type": 1,
+      "value": true
+    },
+    "publish.effect_map_en": {
+      "type": 1,
+      "value": false
+    },
+    "publish.map_en": {
+      "type": 1,
+      "value": false
+    },
+    "publish.path_en": {
+      "type": 1,
+      "value": false
+    },
+    "publish.scan_bodyframe_pub_en": {
+      "type": 1,
+      "value": true
+    },
+    "publish.scan_publish_en": {
+      "type": 1,
+      "value": true
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.depth": {
+      "type": 2,
+      "value": 100
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "runtime_pos_log_enable": {
+      "type": 1,
+      "value": false
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/factory_vision2mavros": {
+    "body_lidar_x": {
+      "type": 3,
+      "value": 0.0
+    },
+    "body_lidar_y": {
+      "type": 3,
+      "value": 0.0
+    },
+    "body_lidar_z": {
+      "type": 3,
+      "value": 0.0
+    },
+    "future_tolerance": {
+      "type": 3,
+      "value": 0.02
+    },
+    "max_source_age": {
+      "type": 3,
+      "value": 0.2
+    },
+    "publish_rate": {
+      "type": 3,
+      "value": 30.0
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    },
+    "vision_pose_topic": {
+      "type": 4,
+      "value": "/factory_fastlio/odometry"
+    },
+    "window_size": {
+      "type": 2,
+      "value": 50
+    }
+  },
+  "/flight_desk_readonly_0a4ba150": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/flight_desk_readonly_a0deb135": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_flight_task_manager_45df02d4": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_identity_1db831a7": {
+    "identity_topic": {
+      "type": 4,
+      "value": "/gcs_task_manager/session_32f057d181ae42629097c2cf259a1647/lio_identity"
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_person_preview": {
+    "draw_confidence": {
+      "type": 3,
+      "value": 0.5
+    },
+    "image_max_age_s": {
+      "type": 3,
+      "value": 0.5
+    },
+    "model_file": {
+      "type": 4,
+      "value": "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn"
+    },
+    "nms_threshold": {
+      "type": 3,
+      "value": 0.25
+    },
+    "object_threshold": {
+      "type": 3,
+      "value": 0.2
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_video_view_8933": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gimbal_delivery_observer": {
+    "include_camera": {
+      "type": 1,
+      "value": true
+    },
+    "output": {
+      "type": 4,
+      "value": "/tmp/platform-soak-check/gimbal-headers.csv"
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "stop_file": {
+      "type": 4,
+      "value": "/tmp/platform-soak-check/observer.stop"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/launch_ros_7110": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/livox_lidar_publisher2": {
+    "cmdline_input_bd_code": {
+      "type": 4,
+      "value": "ARMCP1V0038817"
+    },
+    "data_src": {
+      "type": 2,
+      "value": 0
+    },
+    "frame_id": {
+      "type": 4,
+      "value": "livox_frame"
+    },
+    "lvx_file_path": {
+      "type": 4,
+      "value": ""
+    },
+    "multi_topic": {
+      "type": 2,
+      "value": 0
+    },
+    "output_data_type": {
+      "type": 2,
+      "value": 0
+    },
+    "publish_freq": {
+      "type": 3,
+      "value": 10.0
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    },
+    "user_config_path": {
+      "type": 4,
+      "value": "/home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json"
+    },
+    "xfer_format": {
+      "type": 2,
+      "value": 1
+    }
+  },
+  "/platform_concurrent_observer": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/rtsp_hw_pub_ultra": {
+    "color_hz": {
+      "type": 3,
+      "value": 15.0
+    },
+    "color_width": {
+      "type": 2,
+      "value": 960
+    },
+    "connect_timeout_s": {
+      "type": 3,
+      "value": 5.0
+    },
+    "frame_id": {
+      "type": 4,
+      "value": "gimbal_camera_optical_frame"
+    },
+    "frame_timeout_s": {
+      "type": 3,
+      "value": 3.0
+    },
+    "publish_gray": {
+      "type": 1,
+      "value": true
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "read_timeout_s": {
+      "type": 3,
+      "value": 3.0
+    },
+    "reconnect_delay_s": {
+      "type": 3,
+      "value": 1.0
+    },
+    "rtsp_url": {
+      "type": 4,
+      "value": "rtsp://127.0.0.1:18554/gimbal"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  }
+}

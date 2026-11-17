@@ -1,0 +1,19 @@
+[INFO] [launch]: All log files can be found below /tmp/platform-soak-check/ros-log/2026-11-17-15-37-34-939758-orangepi5ultra-7267
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [planner_node-1]: process started with pid [7280]
+[planner_node-1] hit: 0.619039
+[planner_node-1] miss: -0.619039
+[planner_node-1] min log: -1.99243
+[planner_node-1] max: 2.19722
+[planner_node-1] thresh log: 1.38629
+[planner_node-1] lidar hit: 2.19722
+[planner_node-1] lidar miss: -0.405465
+[planner_node-1] lidar min log: -1.99243
+[planner_node-1] lidar max: 3.89182
+[planner_node-1] lidar thresh log: 1.7346
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [planner_node-1]: sending signal 'SIGINT' to process[planner_node-1]
+[planner_node-1] [INFO] [1794901154.475999074] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_node-1] [INFO] [1794901154.480694784] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[planner_node-1] des manager
+[INFO] [planner_node-1]: process has finished cleanly [pid 7280]

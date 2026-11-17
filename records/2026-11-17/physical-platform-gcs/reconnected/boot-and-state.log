@@ -1,0 +1,26 @@
+2026-11-17T15:34:23+08:00
+0de97dc1-35d4-4017-9098-634ce01a8627
+ 15:34:23 up 1 min,  3 users,  load average: 2.28, 0.86, 0.31
+ 0 0de97dc135d440179098634ce01a8627 Tue 2026-11-17 15:17:03 CST—Tue 2026-11-17 15:34:23 CST
+orangepi ttyFIQ0                       Tue Nov 17 15:17    gone - no logout
+orangepi tty1                          Tue Nov 17 15:17    gone - no logout
+orangepi tty7         :0               Tue Nov 17 15:17    gone - no logout
+runlevel (to lvl 5)   5.10.160-rockchi Tue Nov 17 15:17   still running
+reboot   system boot  5.10.160-rockchi Tue Nov 17 15:17   still running
+orangepi ttyFIQ0                       Mon Nov 16 18:28 - crash  (20:48)
+orangepi tty1                          Mon Nov 16 18:28 - crash  (20:48)
+orangepi tty7         :0               Mon Nov 16 18:28 - crash  (20:48)
+
+wtmp begins Wed Sep 11 10:04:46 2024
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enx00e09a5af420  UP             fe80::6f96:a63f:6994:cad7/64 
+enP3p49s0        UP             192.168.1.51/32 
+wlan0            UP             192.168.1.224/23 240e:3b6:3c91:d760:f215:b400:2519:f722/64 240e:3b6:3c91:d760:42fd:f3ff:fe04:1fc6/64 fe80::42fd:f3ff:fe04:1fc6/64 
+               total        used        free      shared  buff/cache   available
+Mem:           15970         685       14675          13         608       15113
+Swap:           7985           0        7985
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           7.8G   16K  7.8G   1% /tmp
+/dev/mmcblk1p2  229G   12G  215G   6% /
+active
+ls: cannot open directory '/sys/fs/pstore': Permission denied

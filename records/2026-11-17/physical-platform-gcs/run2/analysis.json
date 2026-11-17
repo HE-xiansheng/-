@@ -1,0 +1,149 @@
+{
+  "overall_passed": false,
+  "qt_passed": 24,
+  "qt_total": 24,
+  "onboard_passed": 43,
+  "onboard_total": 51,
+  "failed": [
+    "vision_sustained_rate",
+    "vision_no_long_gap",
+    "planner_stays_waiting_for_goal",
+    "/livox/lidar_all_stable_source_stamps_recorded",
+    "/livox/imu_all_stable_source_stamps_recorded",
+    "/factory_fastlio/cloud_world_all_stable_source_stamps_recorded",
+    "mpp_reliable_raw_all_source_stamps",
+    "mpp_best_effort_raw_all_source_stamps"
+  ],
+  "diagnostic_overrides": {},
+  "streams": {
+    "color": {
+      "messages": 907,
+      "hz": 25.764468626484813,
+      "max_gap_s": 0.159354026,
+      "min_age_s": 0.051215646,
+      "max_age_s": 0.65844234
+    },
+    "depth": {
+      "messages": 1033,
+      "hz": 29.349857278105574,
+      "max_gap_s": 0.22685308,
+      "min_age_s": 0.026270287,
+      "max_age_s": 0.731783953
+    },
+    "preview": {
+      "messages": 394,
+      "hz": 11.172396034599068,
+      "max_gap_s": 1.018168847,
+      "min_age_s": 0.134877003,
+      "max_age_s": 0.405444004
+    },
+    "odom": {
+      "messages": 344,
+      "hz": 9.902714611752396,
+      "max_gap_s": 0.910738606,
+      "min_age_s": 0.031299888,
+      "max_age_s": 1.392054416
+    },
+    "cloud": {
+      "messages": 349,
+      "hz": 10.105841064689454,
+      "max_gap_s": 0.792117005,
+      "min_age_s": 0.032592018,
+      "max_age_s": 0.832649563
+    },
+    "vision": {
+      "messages": 207,
+      "hz": 6.008740786121149,
+      "max_gap_s": 2.269154697,
+      "min_age_s": 0.037668059,
+      "max_age_s": 1.346998767
+    }
+  },
+  "coverage": {
+    "/livox/lidar": {
+      "expected": 289,
+      "recorded": 284,
+      "missing": 5
+    },
+    "/livox/imu": {
+      "expected": 5771,
+      "recorded": 5728,
+      "missing": 43
+    },
+    "/factory_fastlio/odometry": {
+      "expected": 289,
+      "recorded": 289,
+      "missing": 0
+    },
+    "/factory_fastlio/cloud_world": {
+      "expected": 289,
+      "recorded": 288,
+      "missing": 1
+    },
+    "/mavros/vision_pose/pose": {
+      "expected": 186,
+      "recorded": 186,
+      "missing": 0
+    }
+  },
+  "planner_phases": {
+    "WAIT_INPUT": 12,
+    "WAIT_GOAL": 286,
+    "STALE_INPUT": 96
+  },
+  "cleanup": {
+    "passed": false,
+    "physical_inputs": true,
+    "cleanup_errors": [],
+    "returncode": 1,
+    "owned_processes_cleaned": true,
+    "evidence_retrieved": true,
+    "remote_removed": true,
+    "diagnostic_process_returncodes": [
+      0
+    ]
+  },
+  "lio_self_sync_logged_s": [
+    1.2752034664
+  ],
+  "mpp_delivery": {
+    "reliable_raw": {
+      "published": 3207,
+      "received": 3206,
+      "duplicate_received": 0,
+      "missing_source_stamps": [
+        1794901147417430989
+      ],
+      "unexpected_stamps": []
+    },
+    "best_effort_raw": {
+      "published": 3207,
+      "received": 3206,
+      "duplicate_received": 0,
+      "missing_source_stamps": [
+        1794901147417430989
+      ],
+      "unexpected_stamps": []
+    },
+    "reliable_color": {
+      "published": 1316,
+      "received": 1316,
+      "duplicate_received": 0,
+      "missing_source_stamps": [],
+      "unexpected_stamps": []
+    },
+    "best_effort_color": {
+      "published": 1316,
+      "received": 1316,
+      "duplicate_received": 0,
+      "missing_source_stamps": [],
+      "unexpected_stamps": []
+    }
+  },
+  "resources": {
+    "peak_c": 79.461,
+    "min_available_gib": 12.964263916015625,
+    "oom_kill_counter_delta": 0
+  },
+  "limitations": "诊断覆盖不是正式参数验收；元数据来自独立观察器，不能代替LIO内部回调排队时间。此轮没有运行真实MAVROS/飞控或任务控制器；不证明运动精度、安装外参或整平台完成。"
+}

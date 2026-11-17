@@ -1,0 +1,10 @@
+{
+  "/home/tyzk/drone-migration-github/groundstation/main.cpp": "82e92a920d4ac823cb57d6f6a0924f675a34bd6738784f2bbf5a3d541d5bc014",
+  "/home/tyzk/drone-migration-github/groundstation/videocontroller.cpp": "fa471b861672e81311d47bc75411fa96498c7f400ef0e96339271e463c1b3436",
+  "/home/tyzk/drone-migration-github/tools/run_platform_soak_check.py": "6fdb98bd8a000c53a370f986db9efd525266c854ce2684492ad0f4849f1bee81",
+  "/home/tyzk/drone-migration-github/tools/test_platform_soak_ros2.py": "3a6cf9da5c18c2753214c7c3aaa9b10d0574b56f8ab1c19f93845c8d79408061",
+  "/home/tyzk/drone-migration-github/tools/gcs_concurrent/ssh-wrapper.py": "b98be9832736d2585ede20da741b3051252d88d0d7f14f845fac8acd5fc4232c",
+  "/home/tyzk/drone-migration-github/tools/gcs_concurrent/automation.cpp": "fb06f1898c4d2c275c92c96dac477dc02ef40a7c039ee1c71d49f41780dce573",
+  "/home/tyzk/drone-migration-github/tools/gcs_concurrent/gst-wrapper.py": "afc2acb78747d99c520d486667ad66a10b8e3b5012a0a46093c69c44e6eff07d",
+  "/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/customgeometry": "e0ad9c6ecbfe86107e5f69308b06323b53dfb58c931d71dcf5ed087e1ad82b70"
+}

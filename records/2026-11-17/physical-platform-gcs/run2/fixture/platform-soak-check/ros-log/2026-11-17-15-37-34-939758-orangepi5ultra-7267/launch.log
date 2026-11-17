@@ -1,0 +1,6 @@
+1794901054.9419498 [INFO] [launch]: All log files can be found below /tmp/platform-soak-check/ros-log/2026-11-17-15-37-34-939758-orangepi5ultra-7267
+1794901054.9424300 [INFO] [launch]: Default logging verbosity is set to INFO
+1794901055.0594118 [INFO] [planner_node-1]: process started with pid [7280]
+1794901154.4761672 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794901154.4791043 [INFO] [planner_node-1]: sending signal 'SIGINT' to process[planner_node-1]
+1794901154.7755597 [INFO] [planner_node-1]: process has finished cleanly [pid 7280]

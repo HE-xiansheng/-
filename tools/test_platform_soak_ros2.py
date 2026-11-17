@@ -22,7 +22,7 @@ from collections import defaultdict
 os.environ['RECORDING_MAX_BAG_SIZE']='33554432'
 from rclpy.signals import SignalHandlerOptions
 rclpy.init(signal_handler_options=SignalHandlerOptions.NO);node=rclpy.create_node('platform_concurrent_observer')
-processes=[];logs=[];stats=defaultdict(list);checks={};resources=[];halt=threading.Event();feed_errors=[];pubs={};sent=defaultdict(list);record_root=out/'recording-source';completed=False
+processes=[];logs=[];stats=defaultdict(list);checks={};resources=[];halt=threading.Event();feed_errors=[];pubs={};sent=defaultdict(list);record_root=out/'recording-source';completed=False;last_live_sample=0.
 
 def start(name,args,env=None):
  f=(out/(name+'.log')).open('w');logs.append(f);p=subprocess.Popen(args,stdout=f,stderr=subprocess.STDOUT,start_new_session=True,cwd=out,env=env);processes.append((name,p))
@@ -74,12 +74,16 @@ def feed():
    cycle+=1
  except Exception as exc:feed_errors.append(repr(exc))
 def pump(seconds):
+ global last_live_sample
  end=time.monotonic()+seconds
  while time.monotonic()<end:
   for name,p in processes:
    if p.poll() is not None:raise RuntimeError(name+' unexpectedly exited '+str(p.returncode))
   if feed_errors:raise RuntimeError(feed_errors)
   rclpy.spin_once(node,timeout_sec=.01)
+  if physical and time.monotonic()-last_live_sample>=1:
+   resource();last_live_sample=time.monotonic()
+   print(json.dumps({'physical_live_sample':resources[-1],'stream_counts':{k:len(v) for k,v in stats.items()}}),flush=True)
 def resource():
  mem={s.split(':')[0]:int(s.split()[1])*1024 for s in Path('/proc/meminfo').read_text().splitlines() if s.split(':')[0] in ['MemTotal','MemAvailable']}
  temps={p.parent.name:int(p.read_text())/1000 for p in Path('/sys/class/thermal').glob('thermal_zone*/temp')}
@@ -121,7 +125,21 @@ def resource():
    if (device/'name').read_text().strip()=='pwmfan':
     fans[device.name]={'pwm1':int((device/'pwm1').read_text())}
   except (OSError,ValueError):continue
- resources.append(dict(monotonic_ns=time.monotonic_ns(),wall_time_ns=time.time_ns(),cpu=list(map(int,Path('/proc/stat').read_text().splitlines()[0].split()[1:])),memory=mem,temperature_c=temps,rss=rss,orbbec_usb=usb,cpufreq=clocks,cooling_devices=cooling,fan_pwm=fans))
+ groups={p.pid:name for name,p in processes};group_rss=defaultdict(int)
+ for proc in Path('/proc').iterdir():
+  if not proc.name.isdigit():continue
+  try:
+   group=os.getpgid(int(proc.name))
+   if group not in groups:continue
+   for line in (proc/'status').read_text().splitlines():
+    if line.startswith('VmRSS:'):group_rss[groups[group]]+=int(line.split()[1])*1024
+  except (OSError,ProcessLookupError):pass
+ pressure={}
+ for name in ['cpu','memory','io']:
+  try:pressure[name]=Path('/proc/pressure',name).read_text().strip()
+  except OSError:pass
+ vmstat={key:int(value) for key,value in (line.split() for line in Path('/proc/vmstat').read_text().splitlines()) if key in ['oom_kill','pgmajfault','pswpin','pswpout']}
+ resources.append(dict(monotonic_ns=time.monotonic_ns(),wall_time_ns=time.time_ns(),cpu=list(map(int,Path('/proc/stat').read_text().splitlines()[0].split()[1:])),memory=mem,temperature_c=temps,rss=rss,group_rss=dict(group_rss),pressure=pressure,vmstat=vmstat,orbbec_usb=usb,cpufreq=clocks,cooling_devices=cooling,fan_pwm=fans))
 thread=None;observer=None;recorder=None;begin_ns=end_ns=None;failure=None
 try:
  config=yaml.safe_load((root/'03_tools/gimbal_relay/gimbal.yml').read_text());config['rtspAddress']='127.0.0.1:18554';config['rtspTransports']=['tcp'];config['paths']={'gimbal':{'source':'publisher'}};config['authInternalUsers']=[{'user':'any','ips':['127.0.0.1'],'permissions':[{'action':'publish','path':'gimbal'},{'action':'read','path':'gimbal'}]}]
@@ -140,7 +158,7 @@ try:
   p=subprocess.run(['ffmpeg','-hide_banner','-loglevel','warning','-f','lavfi','-i','testsrc2=size=1920x1080:rate=30','-t','3','-an','-c:v','libx264','-preset','ultrafast','-tune','zerolatency','-threads','2','-pix_fmt','yuv420p','-g','30','-y',str(out/'video.mp4')],capture_output=True,timeout=40);(out/'encode.log').write_bytes(p.stdout+p.stderr);assert p.returncode==0
  start('stream-server',[str(root/'03_tools/gimbal_relay/mediamtx'),str(out/'stream.yml')]);pump(.5)
  if not physical:publisher=start('video-source',['ffmpeg','-hide_banner','-loglevel','warning','-re','-stream_loop','-1','-i',str(out/'video.mp4'),'-an','-c:v','copy','-f','rtsp','-rtsp_transport','tcp','rtsp://127.0.0.1:18554/gimbal'])
- observer=start('native-observer',[str(out/'observer-build/observer'),'--ros-args','-p','output:='+str(out/'gimbal-headers.csv'),'-p','stop_file:='+str(out/'observer.stop'),'-p','include_camera:=true'])
+ observer=start('native-observer',[str(out/'observer-build/observer'),'--ros-args','-p','output:='+str(out/'gimbal-headers.csv'),'-p','stop_file:='+str(out/'observer.stop'),'-p','include_camera:=true','-p','sensor_output:='+str(out/'source-timing.csv')])
  start('mpp',['ros2','run','rtsp_test','rtsp_hw_pub_ultra','--ros-args','-p','rtsp_url:=rtsp://127.0.0.1:18554/gimbal','--log-level','rtsp_hw_pub_ultra.frames:=debug'])
  camera_env=None
  if os.environ.get('PLATFORM_SOAK_CAMERA_PROFILE')=='1':
@@ -155,7 +173,12 @@ try:
   import sensor_readiness
   start('lidar',['ros2','launch',str(root/'02_drivers/sensors/launch/livox_mid360s.launch.py')])
   (out/'sensor-readiness.json').write_text(json.dumps(sensor_readiness.wait_for_sensors(),indent=2)+'\n')
- start('lio',['ros2','launch',str(root/'01_apps/fast_lio/launch/localization.launch.py')])
+ if os.environ.get('PLATFORM_SOAK_DISABLE_SELF_SYNC_DIAG')=='1':
+  diagnostic_remaps=[('/Odometry','/factory_fastlio/odometry'),('/cloud_registered_body','/factory_fastlio/cloud_body'),('/cloud_registered','/factory_fastlio/cloud_world'),('/cloud_effected','/factory_fastlio/cloud_effected'),('/Laser_map','/factory_fastlio/map'),('/path','/factory_fastlio/path'),('/tf','/factory_fastlio/tf')]
+  command=['ros2','run','fast_lio','fastlio_mapping','--ros-args','--params-file',str(root/'01_apps/fast_lio/config/lidar.yaml'),'-p','common.time_sync_en:=false','-r','__node:=factory_laserMapping']
+  for source,target in diagnostic_remaps:command+=['-r',source+':='+target]
+  start('lio',command)
+ else:start('lio',['ros2','launch',str(root/'01_apps/fast_lio/launch/localization.launch.py')])
  start('relay',['ros2','run','to_mavros','vision2mavros'])
  if physical:start('planner',['ros2','launch',str(root/'01_apps/ego_planner/launch/manual_preview.launch.py')])
  else:thread=threading.Thread(target=feed);thread.start()
@@ -252,6 +275,7 @@ finally:
   check('all_physical_processing_children_exit_normally',all(p.returncode==0 for _,p in processes))
   check('no_launched_physical_child_crash',not any('process has died' in (out/(n+'.log')).read_text() for n,p in processes))
  result=dict(passed=completed and all(checks.values()),completed=completed,checks=checks,resources=resources,returncodes={n:p.returncode for n,p in processes},input_counts={k:len(v) for k,v in sent.items()},mpp_published_counts={k:len(v) for k,v in published.items()},scope=('actual native Livox/Gemini/gimbal -> LIO/relay/passive EGO/NPU/recorder; localhost domain83; no physical MAVROS/FC/task controllers' if physical else 'actual Gemini/NPU/LIO/relay/MPP/recorder, repeated .235 recorded LiDAR and synthetic H264, localhost domain83; no physical MAVROS/FC/task controllers'),physical_inputs=physical)
+ result['diagnostic_overrides']={'common.time_sync_en':False} if os.environ.get('PLATFORM_SOAK_DISABLE_SELF_SYNC_DIAG')=='1' else {}
  if failure:result['error']=failure
  if physical:result.update(planner_status=planner_status,grid=grid)
  for name in ['stream_results','coverage','begin_ns','end_ns','duration']:

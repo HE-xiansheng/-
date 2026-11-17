@@ -1,0 +1,6 @@
+1794901054.9467106 [INFO] [launch]: All log files can be found below /tmp/platform-soak-check/ros-log/2026-11-17-15-37-34-944526-orangepi5ultra-7265
+1794901054.9470346 [INFO] [launch]: Default logging verbosity is set to INFO
+1794901055.0638385 [INFO] [fastlio_mapping-1]: process started with pid [7282]
+1794901155.2068064 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794901155.2092450 [INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+1794901155.4873588 [INFO] [fastlio_mapping-1]: process has finished cleanly [pid 7282]

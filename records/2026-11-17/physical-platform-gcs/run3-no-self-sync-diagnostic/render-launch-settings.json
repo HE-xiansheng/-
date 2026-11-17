@@ -1,0 +1,5 @@
+{
+  "QSG_NO_VSYNC_present_in_launcher": false,
+  "LIBGL_ALWAYS_SOFTWARE": "1",
+  "QSG_INFO": "1"
+}

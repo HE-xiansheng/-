@@ -1,0 +1,5 @@
+# 完整原始档案由40MiB分片保存到GitHub；展开的大文件留在电脑供诊断。
+/run*/fixture/evidence.tar.gz
+/run*/fixture/platform-soak-check/observer-build/
+/run*/fixture/platform-soak-check/recording-source/flight-records/**/*.db3
+/run*/cache/

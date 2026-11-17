@@ -1,0 +1,40 @@
+[INFO] [1794901110.706236232] [flight_bag_9284]: Press SPACE for pausing/resuming
+[INFO] [1794901110.740351768] [rosbag2_storage]: Opened database '/tmp/platform-soak-check/recording-source/flight-records/20261117-153825-27ee46/inputs-c307bdf2be7743a5a2d22c0cfd15beea/inputs-c307bdf2be7743a5a2d22c0cfd15beea_0.db3' for READ_WRITE.
+[INFO] [1794901110.762361161] [flight_bag_9284]: Listening for topics...
+[INFO] [1794901110.764064736] [flight_bag_9284]: Overriding subscription profile for /rosout
+[INFO] [1794901110.765106247] [flight_bag_9284]: Subscribed to topic '/rosout'
+[INFO] [1794901110.765461778] [flight_bag_9284]: Overriding subscription profile for /livox/lidar
+[INFO] [1794901110.767425220] [flight_bag_9284]: Subscribed to topic '/livox/lidar'
+[INFO] [1794901110.767800001] [flight_bag_9284]: Overriding subscription profile for /livox/imu
+[INFO] [1794901110.782128579] [flight_bag_9284]: Event publisher thread: Starting
+[INFO] [1794901110.795797717] [flight_bag_9284]: Subscribed to topic '/livox/imu'
+[INFO] [1794901110.796144207] [flight_bag_9284]: Recording...
+[INFO] [1794901111.308536980] [flight_bag_9284]: Overriding subscription profile for /tf
+[INFO] [1794901111.314131273] [flight_bag_9284]: Subscribed to topic '/tf'
+[INFO] [1794901111.314843502] [flight_bag_9284]: Overriding subscription profile for /tf_static
+[INFO] [1794901111.316854193] [flight_bag_9284]: Subscribed to topic '/tf_static'
+[INFO] [1794901112.645950228] [flight_bag_9284]: Overriding subscription profile for /mavros/vision_pose/pose
+[INFO] [1794901112.647974627] [flight_bag_9284]: Subscribed to topic '/mavros/vision_pose/pose'
+[INFO] [1794901113.265776418] [flight_bag_9284]: Overriding subscription profile for /ego_planner/flight_execution/trajectory
+[INFO] [1794901113.270740146] [flight_bag_9284]: Subscribed to topic '/ego_planner/flight_execution/trajectory'
+[INFO] [1794901113.274911148] [flight_bag_9284]: Overriding subscription profile for /ego_planner/manual_preview/status
+[INFO] [1794901113.277763273] [flight_bag_9284]: Subscribed to topic '/ego_planner/manual_preview/status'
+[INFO] [1794901113.278618123] [flight_bag_9284]: Overriding subscription profile for /grid_map/occupancy_inflate
+[INFO] [1794901113.281355625] [flight_bag_9284]: Subscribed to topic '/grid_map/occupancy_inflate'
+[INFO] [1794901113.281950316] [flight_bag_9284]: Overriding subscription profile for /ego_planner/manual_preview/trajectory
+[INFO] [1794901113.283880509] [flight_bag_9284]: Subscribed to topic '/ego_planner/manual_preview/trajectory'
+[INFO] [1794901113.284762483] [flight_bag_9284]: Overriding subscription profile for /planning/trajectory
+[INFO] [1794901113.296675549] [flight_bag_9284]: Subscribed to topic '/planning/trajectory'
+[INFO] [1794901113.297320988] [flight_bag_9284]: Overriding subscription profile for /grid_map/occupancy
+[INFO] [1794901113.298909941] [flight_bag_9284]: Subscribed to topic '/grid_map/occupancy'
+[INFO] [1794901113.299537298] [flight_bag_9284]: Overriding subscription profile for /planning/data_display
+[INFO] [1794901113.304844600] [flight_bag_9284]: Subscribed to topic '/planning/data_display'
+[INFO] [1794901113.414350539] [flight_bag_9284]: Overriding subscription profile for /factory_fastlio/cloud_world
+[INFO] [1794901113.424574612] [flight_bag_9284]: Subscribed to topic '/factory_fastlio/cloud_world'
+[INFO] [1794901113.425277508] [flight_bag_9284]: Overriding subscription profile for /factory_fastlio/odometry
+[INFO] [1794901113.432594918] [flight_bag_9284]: Subscribed to topic '/factory_fastlio/odometry'
+[INFO] [1794901143.184144447] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794901143.187617155] [rosbag2_storage]: Opened database '/tmp/platform-soak-check/recording-source/flight-records/20261117-153825-27ee46/inputs-c307bdf2be7743a5a2d22c0cfd15beea/inputs-c307bdf2be7743a5a2d22c0cfd15beea_1.db3' for READ_WRITE.
+[INFO] [1794901149.137957569] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794901149.145774225] [flight_bag_9284]: Event publisher thread: Exiting
+[INFO] [1794901149.145938439] [flight_bag_9284]: Recording stopped

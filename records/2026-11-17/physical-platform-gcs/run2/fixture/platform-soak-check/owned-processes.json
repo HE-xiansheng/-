@@ -1,0 +1,57 @@
+[
+  {
+    "name": "stream-server",
+    "pid": 7099,
+    "start_ticks": "27666"
+  },
+  {
+    "name": "native-observer",
+    "pid": 7108,
+    "start_ticks": "27717"
+  },
+  {
+    "name": "mpp",
+    "pid": 7109,
+    "start_ticks": "27718"
+  },
+  {
+    "name": "camera",
+    "pid": 7110,
+    "start_ticks": "27718"
+  },
+  {
+    "name": "npu",
+    "pid": 7111,
+    "start_ticks": "27719"
+  },
+  {
+    "name": "lidar",
+    "pid": 7112,
+    "start_ticks": "27720"
+  },
+  {
+    "name": "lio",
+    "pid": 7265,
+    "start_ticks": "28216"
+  },
+  {
+    "name": "relay",
+    "pid": 7266,
+    "start_ticks": "28217"
+  },
+  {
+    "name": "planner",
+    "pid": 7267,
+    "start_ticks": "28217"
+  },
+  {
+    "name": "recorder-supervisor",
+    "pid": 9284,
+    "start_ticks": "33332"
+  },
+  {
+    "name": "rosbag2",
+    "pid": 9305,
+    "start_ticks": "33779"
+  }
+]

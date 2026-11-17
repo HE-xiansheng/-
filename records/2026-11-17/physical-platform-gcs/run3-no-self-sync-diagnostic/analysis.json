@@ -1,0 +1,402 @@
+{
+  "overall_passed": false,
+  "qt_passed": 24,
+  "qt_total": 24,
+  "onboard_passed": 48,
+  "onboard_total": 51,
+  "failed": [
+    "planner_stays_waiting_for_goal",
+    "mpp_reliable_raw_all_source_stamps",
+    "mpp_best_effort_raw_all_source_stamps"
+  ],
+  "diagnostic_overrides": {
+    "common.time_sync_en": false
+  },
+  "streams": {
+    "color": {
+      "messages": 987,
+      "hz": 28.08129978239956,
+      "max_gap_s": 0.138361468,
+      "min_age_s": 0.045324204,
+      "max_age_s": 0.43307366
+    },
+    "depth": {
+      "messages": 1054,
+      "hz": 30.042688210312278,
+      "max_gap_s": 0.162632417,
+      "min_age_s": 0.033468983,
+      "max_age_s": 0.403416146
+    },
+    "preview": {
+      "messages": 472,
+      "hz": 13.437800514725437,
+      "max_gap_s": 0.241028322,
+      "min_age_s": 0.118717896,
+      "max_age_s": 0.374980502
+    },
+    "odom": {
+      "messages": 352,
+      "hz": 10.00573971761723,
+      "max_gap_s": 0.299693347,
+      "min_age_s": 0.01889088,
+      "max_age_s": 0.29917945
+    },
+    "cloud": {
+      "messages": 352,
+      "hz": 10.004894152505724,
+      "max_gap_s": 0.300608594,
+      "min_age_s": 0.020917521,
+      "max_age_s": 0.363251838
+    },
+    "vision": {
+      "messages": 351,
+      "hz": 9.988326237029977,
+      "max_gap_s": 0.282119915,
+      "min_age_s": 0.033609265,
+      "max_age_s": 0.304983886
+    }
+  },
+  "coverage": {
+    "/livox/lidar": {
+      "expected": 295,
+      "recorded": 295,
+      "missing": 0
+    },
+    "/livox/imu": {
+      "expected": 5912,
+      "recorded": 5912,
+      "missing": 0
+    },
+    "/factory_fastlio/odometry": {
+      "expected": 295,
+      "recorded": 295,
+      "missing": 0
+    },
+    "/factory_fastlio/cloud_world": {
+      "expected": 295,
+      "recorded": 295,
+      "missing": 0
+    },
+    "/mavros/vision_pose/pose": {
+      "expected": 295,
+      "recorded": 295,
+      "missing": 0
+    }
+  },
+  "planner_phases": {
+    "WAIT_INPUT": 4,
+    "WAIT_GOAL": 288,
+    "STALE_INPUT": 30
+  },
+  "cleanup": {
+    "passed": false,
+    "physical_inputs": true,
+    "cleanup_errors": [],
+    "returncode": 1,
+    "owned_processes_cleaned": true,
+    "evidence_retrieved": true,
+    "remote_removed": true,
+    "diagnostic_process_returncodes": [
+      0
+    ]
+  },
+  "lio_self_sync_logged_s": [],
+  "mpp_delivery": {
+    "reliable_raw": {
+      "published": 2618,
+      "received": 2613,
+      "duplicate_received": 0,
+      "missing_source_stamps": [
+        1794901707137251302,
+        1794901707141565620,
+        1794901707145499023,
+        1794901707149705133,
+        1794901707154014202
+      ],
+      "unexpected_stamps": []
+    },
+    "best_effort_raw": {
+      "published": 2618,
+      "received": 2613,
+      "duplicate_received": 0,
+      "missing_source_stamps": [
+        1794901707137251302,
+        1794901707141565620,
+        1794901707145499023,
+        1794901707149705133,
+        1794901707154014202
+      ],
+      "unexpected_stamps": []
+    },
+    "reliable_color": {
+      "published": 1110,
+      "received": 1110,
+      "duplicate_received": 0,
+      "missing_source_stamps": [],
+      "unexpected_stamps": []
+    },
+    "best_effort_color": {
+      "published": 1110,
+      "received": 1110,
+      "duplicate_received": 0,
+      "missing_source_stamps": [],
+      "unexpected_stamps": []
+    }
+  },
+  "resources": {
+    "peak_c": 81.307,
+    "min_available_gib": 12.786346435546875,
+    "oom_kill_counter_delta": 0
+  },
+  "source_timing_ms": {
+    "all/imu": {
+      "messages": 17145,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 0.004667,
+        "p50": 0.098292,
+        "p95": 1.655495,
+        "p99": 1191.609895,
+        "max": 3005.245853
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.016625,
+        "p50": 0.416207,
+        "p95": 12.18462,
+        "p99": 31.305338,
+        "max": 1287.353225
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 0.067666,
+        "p50": 4.02236,
+        "p95": 524.928738,
+        "p99": 1238.291564,
+        "max": 1395.629136
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 0.210582,
+        "p50": 6.311934,
+        "p95": 864.667877,
+        "p99": 1517.943789,
+        "max": 3006.258808
+      }
+    },
+    "all/lidar": {
+      "messages": 853,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 81.556978,
+        "p50": 103.477685,
+        "p95": 114.44256,
+        "p99": 2157.342125,
+        "max": 3014.134655
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.067083,
+        "p50": 0.646331,
+        "p95": 12.184328,
+        "p99": 28.825598,
+        "max": 95.387498
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 1.098121,
+        "p50": 4.695524,
+        "p95": 19.826263,
+        "p99": 32.323542,
+        "max": 86.42228
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 86.932958,
+        "p50": 110.861818,
+        "p95": 139.918379,
+        "p99": 2177.193763,
+        "max": 3021.811295
+      }
+    },
+    "all/odom": {
+      "messages": 807,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 13.861554,
+        "p50": 42.522619,
+        "p95": 148.598064,
+        "p99": 242.724785,
+        "max": 284.014092
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.062999,
+        "p50": 0.368374,
+        "p95": 12.929825,
+        "p99": 26.377649,
+        "max": 100.655271
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 0.093041,
+        "p50": 1.595994,
+        "p95": 12.396077,
+        "p99": 22.494997,
+        "max": 35.974028
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 15.110578,
+        "p50": 46.255884,
+        "p95": 158.728192,
+        "p99": 256.596538,
+        "max": 362.108503
+      }
+    },
+    "all/vision": {
+      "messages": 678,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 27.709442,
+        "p50": 48.279054,
+        "p95": 146.054472,
+        "p99": 179.610268,
+        "max": 190.913311
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.057458,
+        "p50": 0.480081,
+        "p95": 9.79617,
+        "p99": 21.944915,
+        "max": 34.002089
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 0.099167,
+        "p50": 1.332912,
+        "p95": 12.404828,
+        "p99": 20.285047,
+        "max": 41.435757
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 28.997728,
+        "p50": 61.112864,
+        "p95": 153.962366,
+        "p99": 189.323322,
+        "max": 220.423625
+      }
+    },
+    "stable_by_dds_source_time/imu": {
+      "messages": 6312,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 0.013416,
+        "p50": 0.091292,
+        "p95": 0.673456,
+        "p99": 4.207276,
+        "max": 14.97965
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.019833,
+        "p50": 0.505748,
+        "p95": 9.719171,
+        "p99": 19.165052,
+        "max": 39.149975
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 0.067666,
+        "p50": 3.322654,
+        "p95": 49.019645,
+        "p99": 134.849523,
+        "max": 179.569726
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 0.223124,
+        "p50": 5.609311,
+        "p95": 53.137962,
+        "p99": 142.028287,
+        "max": 186.741198
+      }
+    },
+    "stable_by_dds_source_time/lidar": {
+      "messages": 315,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 81.556978,
+        "p50": 103.466019,
+        "p95": 111.716362,
+        "p99": 121.847657,
+        "max": 144.24407
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.089833,
+        "p50": 0.891913,
+        "p95": 11.150957,
+        "p99": 18.435304,
+        "max": 28.825598
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 1.176579,
+        "p50": 5.267188,
+        "p95": 20.773004,
+        "p99": 26.381732,
+        "max": 45.558158
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 91.422273,
+        "p50": 112.074819,
+        "p95": 131.497994,
+        "p99": 144.623235,
+        "max": 170.317803
+      }
+    },
+    "stable_by_dds_source_time/odom": {
+      "messages": 315,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 13.861554,
+        "p50": 39.559112,
+        "p95": 86.948757,
+        "p99": 128.399758,
+        "max": 163.309713
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.073499,
+        "p50": 0.457915,
+        "p95": 12.387911,
+        "p99": 18.699553,
+        "max": 26.377649
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 0.093041,
+        "p50": 1.751452,
+        "p95": 15.894898,
+        "p99": 22.494997,
+        "max": 28.720598
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 17.579998,
+        "p50": 45.650309,
+        "p95": 98.750422,
+        "p99": 132.590316,
+        "max": 176.417455
+      }
+    },
+    "stable_by_dds_source_time/vision": {
+      "messages": 315,
+      "dds_source_ns_minus_stamp_ns": {
+        "min": 31.41594,
+        "p50": 46.72737,
+        "p95": 112.760938,
+        "p99": 145.821506,
+        "max": 179.095195
+      },
+      "dds_received_ns_minus_dds_source_ns": {
+        "min": 0.067667,
+        "p50": 0.557664,
+        "p95": 8.764549,
+        "p99": 15.071817,
+        "max": 21.737833
+      },
+      "callback_wall_ns_minus_dds_received_ns": {
+        "min": 0.100625,
+        "p50": 1.320078,
+        "p95": 9.429547,
+        "p99": 15.357066,
+        "max": 20.285047
+      },
+      "callback_wall_ns_minus_stamp_ns": {
+        "min": 33.091267,
+        "p50": 55.979139,
+        "p95": 120.175006,
+        "p99": 150.565756,
+        "max": 204.100307
+      }
+    }
+  },
+  "limitations": "诊断覆盖不是正式参数验收；元数据来自独立观察器，不能代替LIO内部回调排队时间。此轮没有运行真实MAVROS/飞控或任务控制器；不证明运动精度、安装外参或整平台完成。"
+}

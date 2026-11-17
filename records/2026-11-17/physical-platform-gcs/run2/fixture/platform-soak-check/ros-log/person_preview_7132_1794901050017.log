@@ -1,0 +1,2 @@
+[INFO] [1794901050.128670721] [gcs_person_preview]: Person preview ready: image only, RKNN model=/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn
+[INFO] [1794901157.099755822] [rclcpp]: signal_handler(SIGINT/SIGTERM)

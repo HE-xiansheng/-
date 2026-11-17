@@ -1,0 +1,129 @@
+2026-11-17 15:48:22.960 [INFO ] 日志文件：/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/logs/customgeometry_20261117_154822.log
+2026-11-17 15:48:23.100 [INFO ] Qt Quick 3D surface format initialized
+2026-11-17 15:48:23.101 [INFO ] 启动机载地址（视频与通信）：192.168.1.224
+2026-11-17 15:48:23.207 [DEBUG] threaded render loop
+2026-11-17 15:48:23.208 [DEBUG] Using sg animation driver
+2026-11-17 15:48:23.208 [DEBUG] Animation Driver: using vsync: 10.00 ms
+2026-11-17 15:48:23.208 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 15:48:23.209 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:56000
+2026-11-17 15:48:23.209 [INFO ] 静态点云显示上限变更：400000
+2026-11-17 15:48:23.218 [INFO ] 点云监听端口变更：9004
+2026-11-17 15:48:23.240 [INFO ] 位姿 UDP 监听状态：启动
+2026-11-17 15:48:23.240 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:9001
+2026-11-17 15:48:23.241 [INFO ] 实时累计显示：开启
+2026-11-17 15:48:23.241 [INFO ] 世界坐标累计建图显示 true
+2026-11-17 15:48:23.243 [INFO ] 静态点云加载器绑定主几何：0x5650ead15e90
+2026-11-17 15:48:23.243 [INFO ] 静态点云加载器绑定预览几何：0x5650ead15fd0
+2026-11-17 15:48:23.243 [INFO ] 点云接收器绑定渲染几何：0x5650eac111e0
+2026-11-17 15:48:23.243 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 15:48:23.243 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:9004
+2026-11-17 15:48:23.243 [INFO ] 静态点云加载器绑定主几何：0x5650ead16380
+2026-11-17 15:48:23.243 [INFO ] 飞前状态仅监听本机127.0.0.1: 42347
+2026-11-17 15:48:23.243 [INFO ] 位姿监听端口变更：37932
+2026-11-17 15:48:23.243 [INFO ] 关闭位姿 UDP 监听端口：37932
+2026-11-17 15:48:23.243 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:37932
+2026-11-17 15:48:23.243 [INFO ] 点云接收器绑定渲染几何：0x5650ead15e90
+2026-11-17 15:48:23.243 [INFO ] 点云监听端口变更：42082
+2026-11-17 15:48:23.243 [INFO ] 关闭点云 UDP 监听端口：42082
+2026-11-17 15:48:23.243 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:42082
+2026-11-17 15:48:23.326 [INFO ] QML module loaded: CustomGeometryExample/Main
+2026-11-17 15:48:23.368 [DEBUG] Using sg animation driver
+2026-11-17 15:48:23.368 [DEBUG] Animation Driver: using vsync: 10.00 ms
+2026-11-17 15:48:23.369 [DEBUG] Creating QRhi with backend OpenGL for window 0x5650eab2b0f0 (wflags 0x1)
+  Graphics API debug/validation layers: 0
+  Debug markers: 0
+  Timestamps: 0
+  Prefer software device: 0
+  Shader/pipeline cache collection: 1
+2026-11-17 15:48:23.455 [DEBUG] Created OpenGL context QSurfaceFormat(version 4.3, options QFlags<QSurfaceFormat::FormatOption>(), depthBufferSize 24, redBufferSize 8, greenBufferSize 8, blueBufferSize 8, alphaBufferSize 0, stencilBufferSize 8, samples -1, swapBehavior QSurfaceFormat::DoubleBuffer, swapInterval 0, colorSpace QColorSpace(), profile  QSurfaceFormat::CoreProfile)
+2026-11-17 15:48:23.466 [DEBUG] OpenGL VENDOR: NVIDIA Corporation RENDERER: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2 VERSION: 4.3.0 NVIDIA 580.126.09
+2026-11-17 15:48:23.467 [DEBUG] Created QRhi 0x7fa8500051c0 for window 0x5650eab2b0f0
+2026-11-17 15:48:23.469 [DEBUG] Swap interval is 0, attempting to disable vsync when presenting.
+2026-11-17 15:48:23.469 [DEBUG] MSAA sample count for the swapchain is 1. Alpha channel requested = no.
+2026-11-17 15:48:23.469 [DEBUG] rhi texture atlas dimensions: 2048x1024
+2026-11-17 15:48:23.659 [INFO ] 地面站首帧就绪，启动耗时(ms) 552
+2026-11-17 15:48:24.457 [INFO ] PASS full_main_window_created
+2026-11-17 15:48:24.457 [INFO ] PASS production_controllers_found
+2026-11-17 15:48:24.457 [INFO ] PASS onboardConnect
+2026-11-17 15:48:24.457 [INFO ] PASS button_enabled
+2026-11-17 15:48:24.458 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:48:25.211 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 15:48:25.211 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 15:48:25.211 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 15:48:25.211 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 15:48:25.211 [INFO ] 关闭位姿 UDP 监听端口：37932
+2026-11-17 15:48:25.211 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:37932
+2026-11-17 15:48:25.215 [INFO ] 飞前状态仅监听本机127.0.0.1: 42347
+2026-11-17 15:48:34.108 [INFO ] PASS real_ssh_connection_and_telemetry
+2026-11-17 15:48:34.707 [INFO ] 航线整体替换：原航点 0 个，新航点 1 个
+2026-11-17 15:48:34.707 [INFO ] POS1 位姿包：序号 1，位置 [0.014, -0.019, -0.002]，四元数 [-0.000, -0.001, -0.001, 1.000]
+2026-11-17 15:48:34.819 [INFO ] POS1 位姿包：序号 2，位置 [0.014, -0.017, -0.002]，四元数 [-0.000, -0.001, -0.001, 1.000]
+2026-11-17 15:48:34.912 [INFO ] POS1 位姿包：序号 3，位置 [0.011, -0.012, -0.002]，四元数 [0.000, -0.000, -0.000, 1.000]
+2026-11-17 15:48:34.930 [INFO ] 点云几何更新：sequence=1，点数=16826，boundsMin=(0.05,-3.65,-0.65)，boundsMax=(5.85,1.95,2.25)
+2026-11-17 15:48:34.931 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1，单帧 16826 点，显示 16826 点，累计收到 1 帧，丢帧 0
+2026-11-17 15:48:35.078 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901715，单帧 2639 点，显示 1880 点，累计收到 1 帧，丢帧 0
+2026-11-17 15:48:35.440 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 2，单帧 16689 点，显示 16689 点，累计收到 2 帧，丢帧 0
+2026-11-17 15:48:35.581 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901716，单帧 2512 点，显示 3074 点，累计收到 2 帧，丢帧 0
+2026-11-17 15:48:35.934 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 3，单帧 16805 点，显示 16805 点，累计收到 3 帧，丢帧 0
+2026-11-17 15:48:36.082 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901717，单帧 2347 点，显示 3954 点，累计收到 3 帧，丢帧 0
+2026-11-17 15:48:36.341 [INFO ] 清空航线：原航点 1 个
+2026-11-17 15:48:36.434 [INFO ] 航线整体替换：原航点 0 个，新航点 1 个
+2026-11-17 15:48:37.091 [INFO ] PASS actual_lio_cloud_pose_cross_host_udp
+2026-11-17 15:48:37.091 [INFO ] PASS cloud_points_available
+2026-11-17 15:48:37.091 [INFO ] PASS toggleStereoVideo
+2026-11-17 15:48:37.091 [INFO ] PASS button_enabled
+2026-11-17 15:48:37.092 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:48:37.092 [INFO ] PASS toggleGimbalVideo
+2026-11-17 15:48:37.092 [INFO ] PASS button_enabled
+2026-11-17 15:48:37.119 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:48:42.085 [INFO ] 点云几何更新：sequence=1794901729，点数=9797，boundsMin=(-10.71,-10.36,-0.52)，boundsMax=(9.30,3.89,3.21)
+2026-11-17 15:48:43.278 [INFO ] PASS both_live_video_streams
+2026-11-17 15:48:43.278 [INFO ] PASS both_actual_qml_images_loaded
+2026-11-17 15:48:43.278 [INFO ] PASS recording_state_arrives_through_production_telemetry
+2026-11-17 15:48:43.278 [INFO ] PASS recordingStart
+2026-11-17 15:48:43.278 [INFO ] PASS button_enabled
+2026-11-17 15:48:43.278 [INFO ] 录制管理请求 "start" "192.168.1.224"
+2026-11-17 15:48:43.279 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:48:44.521 [INFO ] POS1 位姿包：序号 100，位置 [0.008, -0.017, -0.003]，四元数 [0.000, -0.001, -0.000, 1.000]
+2026-11-17 15:48:48.203 [INFO ] 录制管理返回 start 0 {"phase": "PREPARING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.04495978355407715, "stamp": 1794901728.047671, "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-154848-f0df92", "request_id": "e0d584cef8784b9b906d8f98dae46212", "requested": "start", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "UNAVAILABLE", "auto_error": "", "pending_action": "start", "duration_s": 0.0, "warnings": [], "active_bags_count": 0, "available": true}
+2026-11-17 15:48:49.601 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901744，单帧 2518 点，显示 12922 点，累计收到 30 帧，丢帧 0
+2026-11-17 15:48:49.952 [INFO ] 点云几何更新：sequence=28，点数=16971，boundsMin=(0.05,-3.65,-0.65)，boundsMax=(5.85,1.95,2.25)
+2026-11-17 15:48:51.081 [INFO ] PASS qml_record_start_confirmed_by_remote_state
+2026-11-17 15:48:51.454 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 30，单帧 16996 点，显示 16996 点，累计收到 30 帧，丢帧 0
+2026-11-17 15:48:54.489 [INFO ] POS1 位姿包：序号 200，位置 [0.005, -0.017, 0.003]，四元数 [0.000, -0.001, -0.000, 1.000]
+2026-11-17 15:48:58.114 [INFO ] 点云几何更新：sequence=1794901761，点数=15237，boundsMin=(-10.71,-10.40,-0.52)，boundsMax=(9.30,3.83,3.22)
+2026-11-17 15:49:04.510 [INFO ] POS1 位姿包：序号 300，位置 [0.008, -0.017, -0.005]，四元数 [0.000, -0.000, -0.001, 1.000]
+2026-11-17 15:49:04.622 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901774，单帧 2652 点，显示 16438 点，累计收到 60 帧，丢帧 0
+2026-11-17 15:49:06.123 [INFO ] 点云几何更新：sequence=1794901777，点数=16651，boundsMin=(-10.76,-10.40,-0.53)，boundsMax=(9.30,3.84,3.22)
+2026-11-17 15:49:08.981 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 60，单帧 17776 点，显示 17776 点，累计收到 60 帧，丢帧 0
+2026-11-17 15:49:14.152 [INFO ] 点云几何更新：sequence=1794901793，点数=17739，boundsMin=(-10.76,-10.40,-0.52)，boundsMax=(9.30,3.84,3.22)
+2026-11-17 15:49:14.645 [INFO ] POS1 位姿包：序号 401，位置 [0.011, -0.014, -0.001]，四元数 [0.000, -0.001, -0.000, 1.000]
+2026-11-17 15:49:19.665 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901804，单帧 2502 点，显示 18600 点，累计收到 90 帧，丢帧 0
+2026-11-17 15:49:21.360 [INFO ] PASS simultaneous_streams_and_recording_remain_fresh_30s
+2026-11-17 15:49:21.360 [INFO ] PASS live_cloud_pose_progress_while_recording
+2026-11-17 15:49:21.360 [INFO ] PASS both_video_streams_progress_while_recording
+2026-11-17 15:49:21.360 [INFO ] PASS recording_elapsed_and_size_update_in_main_ui
+2026-11-17 15:49:21.364 [INFO ] PASS full_main_scene_rendered
+2026-11-17 15:49:21.364 [INFO ] PASS recordingStop
+2026-11-17 15:49:21.364 [INFO ] PASS button_enabled
+2026-11-17 15:49:21.364 [INFO ] 录制管理请求 "stop" "192.168.1.224"
+2026-11-17 15:49:21.365 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:49:22.160 [INFO ] 点云几何更新：sequence=1794901809，点数=19001，boundsMin=(-11.14,-10.40,-0.53)，boundsMax=(9.30,3.86,3.22)
+2026-11-17 15:49:24.599 [INFO ] POS1 位姿包：序号 501，位置 [0.010, -0.018, -0.003]，四元数 [0.000, -0.001, -0.000, 1.000]
+2026-11-17 15:49:26.519 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 90，单帧 17489 点，显示 17489 点，累计收到 90 帧，丢帧 0
+2026-11-17 15:49:26.939 [INFO ] 录制管理返回 stop 0 {"phase": "RECORDING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.04588055610656738, "stamp": 1794901766.8593779, "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-154848-f0df92", "clip_id": "e0d584cef8784b9b906d8f98dae46212", "request_id": "f8eefa3c1cd646ad8617ff4065329a3f", "requested": "stop", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "UNAVAILABLE", "auto_error": "", "pending_action": "stop", "duration_s": 37.198743289999925, "bag_pid": 15057, "bag_bytes": 319788456, "free_bytes": 8015151104, "recording_started_wall": 1794901729.657392, "storage": "sqlite3", "missing_topics": ["/ego_planner/flight_execution", "/ego_planner/px4_execution/status", "/goal", "/mandatory_stop_to_planner", "/mavros/battery", "/mavros/estimator_status", "/mavros/extended_state", "/mavros/imu/data", "/mavros/local_position/odom", "/mavros/local_position/pose", "/mavros/local_position/velocity_local", "/mavros/rc/in", "/mavros/setpoint_raw/local", "/mavros/setpoint_raw/target_local", "/mavros/state", "/mavros/statustext/recv", "/mavros/timesync_status", "/move_base_simple/goal"], "warnings": ["缺少18个话题；详见recording-status.json"], "active_bags_count": 1, "available": true}
+2026-11-17 15:49:29.006 [INFO ] PASS qml_record_stop_normal_finalization
+2026-11-17 15:49:29.006 [INFO ] PASS toggleStereoVideo
+2026-11-17 15:49:29.006 [INFO ] PASS button_enabled
+2026-11-17 15:49:29.007 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:49:29.007 [INFO ] PASS closing_stereo_keeps_gimbal_live
+2026-11-17 15:49:29.007 [INFO ] PASS toggleGimbalVideo
+2026-11-17 15:49:29.007 [INFO ] PASS button_enabled
+2026-11-17 15:49:29.010 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:49:29.010 [INFO ] PASS both_video_buttons_stop_receivers
+{"running": false, "stopped": true}
+{"running": false, "stopped": true}
+2026-11-17 15:49:29.565 [DEBUG] Total time spent on pipeline creation during the lifetime of the QRhi 0x7fa8500051c0 was 70 ms
+2026-11-17 15:49:29.566 [DEBUG] Writing pipeline cache contents (90124 bytes) for QRhi 0x7fa8500051c0 to '/home/tyzk/drone-migration-github/records/2026-11-17/physical-platform-gcs/run3-no-self-sync-diagnostic/cache/customgeometry-ros2-staging/qtpipelinecache-x86_64-little_endian-lp64/qqpc_opengl'
+2026-11-17 15:49:29.587 [INFO ] 销毁静态点云加载器，取消未完成加载任务
+2026-11-17 15:49:29.588 [INFO ] 销毁静态点云加载器，取消未完成加载任务

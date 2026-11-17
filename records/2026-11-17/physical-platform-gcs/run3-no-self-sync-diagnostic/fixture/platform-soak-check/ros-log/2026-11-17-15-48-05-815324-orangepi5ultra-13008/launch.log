@@ -1,0 +1,6 @@
+1794901685.8169332 [INFO] [launch]: All log files can be found below /tmp/platform-soak-check/ros-log/2026-11-17-15-48-05-815324-orangepi5ultra-13008
+1794901685.8171613 [INFO] [launch]: Default logging verbosity is set to INFO
+1794901685.8971815 [INFO] [livox_ros_driver2_node-1]: process started with pid [13055]
+1794901772.6605747 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794901772.6625974 [INFO] [livox_ros_driver2_node-1]: sending signal 'SIGINT' to process[livox_ros_driver2_node-1]
+1794901773.3857496 [INFO] [livox_ros_driver2_node-1]: process has finished cleanly [pid 13055]

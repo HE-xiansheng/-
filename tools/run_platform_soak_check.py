@@ -9,6 +9,7 @@ physical=os.environ.get('PLATFORM_SOAK_PHYSICAL')=='1'
 seconds=int(os.environ.get('PLATFORM_SOAK_SECONDS','180'))
 ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=8','-o','ServerAliveInterval=15','-o','ServerAliveCountMax=3','-o','UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts','-o','HostKeyAlias=opi-ros2-emmc','orangepi@192.168.1.224']
 created=network_created=False
+diagnostics=[];diagnostic_logs=[]
 original=''
 profile='ROS2-Gimbal-soak-'+str(uuid.uuid4())[:8]
 result={'passed':False,'physical_inputs':physical,'cleanup_errors':[]}
@@ -47,8 +48,11 @@ try:
   for name,p in inputs.items():a.add(p,arcname=name)
  run('mkdir '+remote,'create');created=True
  with (out/'inputs.tar').open('rb') as f:subprocess.run(ssh+['tar -xf - -C '+remote],stdin=f,check=True,timeout=25)
+ if physical:
+  log=(out/'kernel-live.log').open('w');diagnostic_logs.append(log)
+  diagnostics.append(subprocess.Popen(ssh+['timeout --signal=TERM '+str(seconds+220)+'s journalctl -k -b -f -n 0 -o short-iso --no-pager'],stdout=log,stderr=subprocess.STDOUT,text=True,start_new_session=True))
  options={'ROS_DOMAIN_ID':'83','ROS_LOCALHOST_ONLY':'1','ROS_LOG_DIR':remote+'/ros-log','PLATFORM_SOAK_SECONDS':str(seconds)}
- for key in ['PLATFORM_SOAK_PHYSICAL','PLATFORM_SOAK_GCS','PLATFORM_SOAK_CAMERA_PROFILE']:
+ for key in ['PLATFORM_SOAK_PHYSICAL','PLATFORM_SOAK_GCS','PLATFORM_SOAK_CAMERA_PROFILE','PLATFORM_SOAK_DISABLE_SELF_SYNC_DIAG']:
   if os.environ.get(key)=='1':options[key]='1'
  if os.environ.get('PLATFORM_SOAK_CAMERA_LAUNCH_CANDIDATE')=='1':options['PLATFORM_SOAK_CAMERA_LAUNCH']=remote+'/camera-candidate/launch/gemini335l.launch.py'
  setup='source /home/orangepi/drone_platform/env.sh && '
@@ -75,6 +79,12 @@ finally:
    except Exception as exc:result['cleanup_errors'].append(repr(exc))
  try:run('date -Is; ip -brief address; ip route get 192.168.1.158; ip route get 1.1.1.1; git -C /home/orangepi/drone_platform status --porcelain; systemctl is-active nxserver','final-state')
  except Exception as exc:result['cleanup_errors'].append(repr(exc))
+ for process in diagnostics:
+  if process.poll() is None:process.terminate()
+  try:process.wait(timeout=8)
+  except subprocess.TimeoutExpired:process.kill();process.wait(timeout=5)
+ for log in diagnostic_logs:log.close()
+ result['diagnostic_process_returncodes']=[process.returncode for process in diagnostics]
  report=out/'platform-soak-check/result.json'
  result['passed']=bool(report.exists() and json.loads(report.read_text()).get('passed') is True and result.get('returncode')==0 and result.get('owned_processes_cleaned') and not result['cleanup_errors'] and 'error' not in result)
  (out/'runner-result.json').write_text(json.dumps(result,indent=2)+'\n')

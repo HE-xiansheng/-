@@ -1,0 +1,10 @@
+{
+  "pid": 61473,
+  "start_tick": "2274360",
+  "host": "192.168.1.224",
+  "pc_ip": "192.168.1.89",
+  "port": 34595,
+  "log": "/home/tyzk/drone-migration-github/records/2026-11-17/physical-platform-gcs/run2/state/sender-20261117-153754.log",
+  "with_pose": true,
+  "pose_port": 53349
+}

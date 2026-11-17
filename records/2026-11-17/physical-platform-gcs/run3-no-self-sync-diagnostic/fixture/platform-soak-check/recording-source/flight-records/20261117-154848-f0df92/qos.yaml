@@ -1,0 +1,165 @@
+/ego_planner/flight_execution:
+  depth: 100
+  durability: transient_local
+  history: keep_last
+  reliability: reliable
+/ego_planner/flight_execution/trajectory:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/ego_planner/manual_preview/status:
+  depth: 100
+  durability: transient_local
+  history: keep_last
+  reliability: reliable
+/ego_planner/manual_preview/trajectory:
+  depth: 100
+  durability: transient_local
+  history: keep_last
+  reliability: reliable
+/ego_planner/px4_execution/status:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/factory_fastlio/cloud_world:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/factory_fastlio/odometry:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/goal:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/grid_map/occupancy:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/grid_map/occupancy_inflate:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/livox/imu:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/livox/lidar:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mandatory_stop_to_planner:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/battery:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/estimator_status:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/extended_state:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/imu/data:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/local_position/odom:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/local_position/pose:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/local_position/velocity_local:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/rc/in:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/setpoint_raw/local:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/setpoint_raw/target_local:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/state:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/statustext/recv:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/timesync_status:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/mavros/vision_pose/pose:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/move_base_simple/goal:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/planning/data_display:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/planning/trajectory:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/rosout:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/tf:
+  depth: 100
+  durability: volatile
+  history: keep_last
+  reliability: best_effort
+/tf_static:
+  depth: 100
+  durability: transient_local
+  history: keep_last
+  reliability: reliable

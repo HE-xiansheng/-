@@ -1,0 +1,93 @@
+{
+  "qt_checks_passed": 24,
+  "onboard_passed": 43,
+  "onboard_total": 51,
+  "failed": [
+    "vision_sustained_rate",
+    "vision_no_long_gap",
+    "planner_stays_waiting_for_goal",
+    "/livox/lidar_all_stable_source_stamps_recorded",
+    "/livox/imu_all_stable_source_stamps_recorded",
+    "/factory_fastlio/cloud_world_all_stable_source_stamps_recorded",
+    "mpp_reliable_raw_all_source_stamps",
+    "mpp_best_effort_raw_all_source_stamps"
+  ],
+  "streams": {
+    "color": {
+      "messages": 907,
+      "hz": 25.764468626484813,
+      "max_gap_s": 0.159354026,
+      "min_age_s": 0.051215646,
+      "max_age_s": 0.65844234
+    },
+    "depth": {
+      "messages": 1033,
+      "hz": 29.349857278105574,
+      "max_gap_s": 0.22685308,
+      "min_age_s": 0.026270287,
+      "max_age_s": 0.731783953
+    },
+    "preview": {
+      "messages": 394,
+      "hz": 11.172396034599068,
+      "max_gap_s": 1.018168847,
+      "min_age_s": 0.134877003,
+      "max_age_s": 0.405444004
+    },
+    "odom": {
+      "messages": 344,
+      "hz": 9.902714611752396,
+      "max_gap_s": 0.910738606,
+      "min_age_s": 0.031299888,
+      "max_age_s": 1.392054416
+    },
+    "cloud": {
+      "messages": 349,
+      "hz": 10.105841064689454,
+      "max_gap_s": 0.792117005,
+      "min_age_s": 0.032592018,
+      "max_age_s": 0.832649563
+    },
+    "vision": {
+      "messages": 207,
+      "hz": 6.008740786121149,
+      "max_gap_s": 2.269154697,
+      "min_age_s": 0.037668059,
+      "max_age_s": 1.346998767
+    }
+  },
+  "coverage": {
+    "/livox/lidar": {
+      "expected": 289,
+      "recorded": 284,
+      "missing": 5
+    },
+    "/livox/imu": {
+      "expected": 5771,
+      "recorded": 5728,
+      "missing": 43
+    },
+    "/factory_fastlio/odometry": {
+      "expected": 289,
+      "recorded": 289,
+      "missing": 0
+    },
+    "/factory_fastlio/cloud_world": {
+      "expected": 289,
+      "recorded": 288,
+      "missing": 1
+    },
+    "/mavros/vision_pose/pose": {
+      "expected": 186,
+      "recorded": 186,
+      "missing": 0
+    }
+  },
+  "self_sync_logged_s": 1.2752034664,
+  "MPP_raw_missing_identical_in_both_QoS": 1,
+  "MPP_color_complete": true,
+  "peak_C": 79.461,
+  "min_MemAvailable_GiB": 12.964263916015625,
+  "cleaned": true,
+  "limitations": "Source of timing backlog and raw-image/recording losses still require diagnosis; current tests remain failed"
+}

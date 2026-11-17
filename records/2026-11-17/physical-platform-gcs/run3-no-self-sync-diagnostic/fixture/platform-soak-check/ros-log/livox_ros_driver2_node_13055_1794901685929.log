@@ -1,0 +1,7 @@
+[INFO] [1794901685.955804881] [livox_lidar_publisher2]: Livox Ros Driver2 Version: 1.2.6
+[INFO] [1794901685.956317629] [livox_lidar_publisher2]: Data Source is raw lidar.
+[INFO] [1794901685.956363129] [livox_lidar_publisher2]: Config file : /home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json
+[INFO] [1794901685.957485167] [livox_lidar_publisher2]: Init lds lidar success!
+[INFO] [1794901688.957982412] [livox_lidar_publisher2]: livox/imu publish use imu format
+[INFO] [1794901688.962452479] [livox_lidar_publisher2]: livox/lidar publish use livox custom format
+[INFO] [1794901772.660255569] [rclcpp]: signal_handler(SIGINT/SIGTERM)

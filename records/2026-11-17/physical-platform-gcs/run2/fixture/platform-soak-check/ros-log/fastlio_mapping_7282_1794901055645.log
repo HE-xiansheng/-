@@ -1,0 +1,32 @@
+[INFO] [1794901055.748296812] [factory_laserMapping]: p_pre->lidar_type 1
+[INFO] [1794901055.804847873] [factory_laserMapping]: Node init finished.
+[WARN] [1794901058.072724773] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.192472172] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.202447671] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.212453503] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.222538375] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.232592040] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.242507747] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.252457288] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.262423745] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.272409743] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.282428408] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.292430448] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.302428988] [factory_laserMapping]: No point, skip this scan!
+
+[WARN] [1794901058.312858900] [factory_laserMapping]: No point, skip this scan!
+
+[INFO] [1794901058.336183285] [factory_laserMapping]: Initialize the map kdtree
+[INFO] [1794901155.209838397] [rclcpp]: signal_handler(SIGINT/SIGTERM)

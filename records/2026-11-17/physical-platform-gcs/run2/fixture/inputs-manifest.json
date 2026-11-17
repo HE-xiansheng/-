@@ -1,0 +1,13 @@
+{
+  "recording-source/record_session.py": "48519ba7b654812584bc4aad3703db1118506f523763d5def3891be2a639f2b3",
+  "recording-source/recording_manage.py": "1e05eee8d7bd88b1e86c052f7d6728c711362192c3cc23987270ef7bedee6187",
+  "recording-source/recording_auto.py": "c2d915ac16b5d568ff25d2647c449cd557ba33fe44c0c770c87a25df7fa7a97e",
+  "test_platform_soak_ros2.py": "3a6cf9da5c18c2753214c7c3aaa9b10d0574b56f8ab1c19f93845c8d79408061",
+  "validate_fastlio_replay.py": "b5cdb9f658f0bde3a0037852c7fbcac164fbd732e1f87f14d93ad0bedcfadca4",
+  "analyze_soak_preview_headers.py": "55daf16536428c028316c7334bc7269ae107b3870ccd8fb0d211c8d82d19a656",
+  "cleanup_livox_live_check.py": "dc36a087f49e62ed322a990a19036de2014ef02d2b6ebe8b6de20d339ebcce5f",
+  "observer-src/CMakeLists.txt": "399fa76a040f3e256ce166540c52e3ac6a051bb14a6d26f0b0812494a7b2092e",
+  "observer-src/observer.cpp": "32f53b059aa6a16f72449a5d8eab9e91a9b739a42c16529557da4dba63147615",
+  "observer-src/shm64.xml": "293e820d8983df344afc022e0c95ce168477dab634bff3fabe7f9cf97ef1966a",
+  "sensor_readiness.py": "3c1752e109d80ed425070ad3ae61ce4b0d25c6144591d385b85e659369640434"
+}

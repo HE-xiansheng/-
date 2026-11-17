@@ -1,0 +1,205 @@
+2026-11-17 15:37:51.863 [INFO ] 日志文件：/home/tyzk/drone-migration-work/build-gcs-concurrent/gcs/logs/customgeometry_20261117_153751.log
+2026-11-17 15:37:51.967 [INFO ] Qt Quick 3D surface format initialized
+2026-11-17 15:37:51.968 [INFO ] 启动机载地址（视频与通信）：192.168.1.224
+2026-11-17 15:37:52.088 [DEBUG] threaded render loop
+2026-11-17 15:37:52.088 [DEBUG] Using sg animation driver
+2026-11-17 15:37:52.088 [DEBUG] Animation Driver: using vsync: 10.00 ms
+2026-11-17 15:37:52.089 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 15:37:52.090 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:56000
+2026-11-17 15:37:52.090 [INFO ] 静态点云显示上限变更：400000
+2026-11-17 15:37:52.105 [INFO ] 点云监听端口变更：9004
+2026-11-17 15:37:52.126 [INFO ] 位姿 UDP 监听状态：启动
+2026-11-17 15:37:52.126 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:9001
+2026-11-17 15:37:52.127 [INFO ] 实时累计显示：开启
+2026-11-17 15:37:52.127 [INFO ] 世界坐标累计建图显示 true
+2026-11-17 15:37:52.128 [INFO ] 静态点云加载器绑定主几何：0x55c9c9354250
+2026-11-17 15:37:52.129 [INFO ] 静态点云加载器绑定预览几何：0x55c9c956ea90
+2026-11-17 15:37:52.129 [INFO ] 点云接收器绑定渲染几何：0x55c9c9469ee0
+2026-11-17 15:37:52.129 [INFO ] 点云 UDP 监听状态：启动
+2026-11-17 15:37:52.129 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:9004
+2026-11-17 15:37:52.129 [INFO ] 静态点云加载器绑定主几何：0x55c9c956ee40
+2026-11-17 15:37:52.129 [INFO ] 飞前状态仅监听本机127.0.0.1: 50473
+2026-11-17 15:37:52.129 [INFO ] 位姿监听端口变更：53349
+2026-11-17 15:37:52.129 [INFO ] 关闭位姿 UDP 监听端口：53349
+2026-11-17 15:37:52.129 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:53349
+2026-11-17 15:37:52.129 [INFO ] 点云接收器绑定渲染几何：0x55c9c9354250
+2026-11-17 15:37:52.129 [INFO ] 点云监听端口变更：34595
+2026-11-17 15:37:52.129 [INFO ] 关闭点云 UDP 监听端口：34595
+2026-11-17 15:37:52.129 [INFO ] 点云 UDP 监听已绑定：0.0.0.0:34595
+2026-11-17 15:37:52.221 [INFO ] QML module loaded: CustomGeometryExample/Main
+2026-11-17 15:37:52.250 [DEBUG] Using sg animation driver
+2026-11-17 15:37:52.250 [DEBUG] Animation Driver: using vsync: 10.00 ms
+2026-11-17 15:37:52.250 [DEBUG] Creating QRhi with backend OpenGL for window 0x55c9c9561800 (wflags 0x1)
+  Graphics API debug/validation layers: 0
+  Debug markers: 0
+  Timestamps: 0
+  Prefer software device: 0
+  Shader/pipeline cache collection: 1
+2026-11-17 15:37:52.305 [DEBUG] Created OpenGL context QSurfaceFormat(version 4.3, options QFlags<QSurfaceFormat::FormatOption>(), depthBufferSize 24, redBufferSize 8, greenBufferSize 8, blueBufferSize 8, alphaBufferSize 0, stencilBufferSize 8, samples -1, swapBehavior QSurfaceFormat::DoubleBuffer, swapInterval 0, colorSpace QColorSpace(), profile  QSurfaceFormat::CoreProfile)
+2026-11-17 15:37:52.310 [DEBUG] OpenGL VENDOR: NVIDIA Corporation RENDERER: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2 VERSION: 4.3.0 NVIDIA 580.126.09
+2026-11-17 15:37:52.311 [DEBUG] Created QRhi 0x7fc0f00051c0 for window 0x55c9c9561800
+2026-11-17 15:37:52.312 [DEBUG] Swap interval is 0, attempting to disable vsync when presenting.
+2026-11-17 15:37:52.313 [DEBUG] MSAA sample count for the swapchain is 1. Alpha channel requested = no.
+2026-11-17 15:37:52.313 [DEBUG] rhi texture atlas dimensions: 2048x1024
+2026-11-17 15:37:52.511 [INFO ] 地面站首帧就绪，启动耗时(ms) 537
+2026-11-17 15:37:53.359 [INFO ] PASS full_main_window_created
+2026-11-17 15:37:53.360 [INFO ] PASS production_controllers_found
+2026-11-17 15:37:53.360 [INFO ] PASS onboardConnect
+2026-11-17 15:37:53.360 [INFO ] PASS button_enabled
+2026-11-17 15:37:53.361 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:37:54.365 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 15:37:54.365 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 15:37:54.365 [WARN ] 点云几何收到空点集：sequence=0
+2026-11-17 15:37:54.365 [INFO ] 点云几何更新：sequence=0，点数=0，boundsMin=(0.00,0.00,0.00)，boundsMax=(0.00,0.00,0.00)
+2026-11-17 15:37:54.366 [INFO ] 关闭位姿 UDP 监听端口：53349
+2026-11-17 15:37:54.366 [INFO ] 位姿 UDP 监听已绑定：0.0.0.0:53349
+2026-11-17 15:37:54.371 [INFO ] 飞前状态仅监听本机127.0.0.1: 50473
+2026-11-17 15:38:02.282 [INFO ] PASS real_ssh_connection_and_telemetry
+2026-11-17 15:38:04.677 [INFO ] 航线整体替换：原航点 0 个，新航点 1 个
+2026-11-17 15:38:04.677 [INFO ] POS1 位姿包：序号 1，位置 [-0.004, 0.065, -0.010]，四元数 [0.000, 0.001, -0.001, 1.000]
+2026-11-17 15:38:04.736 [INFO ] 点云几何更新：sequence=1，点数=17885，boundsMin=(0.05,-2.65,-0.65)，boundsMax=(3.75,2.55,2.25)
+2026-11-17 15:38:04.736 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1，单帧 17885 点，显示 17885 点，累计收到 1 帧，丢帧 0
+2026-11-17 15:38:04.998 [INFO ] 航线整体替换：原航点 1 个，新航点 2 个
+2026-11-17 15:38:04.999 [INFO ] POS1 位姿包：序号 2，位置 [-0.001, 0.024, -0.008]，四元数 [0.001, 0.001, 0.000, 1.000]
+2026-11-17 15:38:05.021 [INFO ] POS1 位姿包：序号 3，位置 [-0.000, 0.018, -0.009]，四元数 [0.000, 0.001, -0.000, 1.000]
+2026-11-17 15:38:05.129 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901085，单帧 2626 点，显示 2018 点，累计收到 1 帧，丢帧 0
+2026-11-17 15:38:05.178 [INFO ] 航线整体替换：原航点 2 个，新航点 3 个
+2026-11-17 15:38:05.215 [INFO ] 航线整体替换：原航点 3 个，新航点 4 个
+2026-11-17 15:38:05.235 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 2，单帧 9130 点，显示 9130 点，累计收到 2 帧，丢帧 0
+2026-11-17 15:38:05.302 [INFO ] 航线整体替换：原航点 4 个，新航点 5 个
+2026-11-17 15:38:05.629 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901086，单帧 2531 点，显示 3317 点，累计收到 2 帧，丢帧 0
+2026-11-17 15:38:05.644 [INFO ] 航线整体替换：原航点 5 个，新航点 6 个
+2026-11-17 15:38:05.700 [INFO ] 航线整体替换：原航点 6 个，新航点 7 个
+2026-11-17 15:38:05.733 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 3，单帧 17805 点，显示 17805 点，累计收到 3 帧，丢帧 0
+2026-11-17 15:38:06.132 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901087，单帧 2482 点，显示 4376 点，累计收到 3 帧，丢帧 0
+2026-11-17 15:38:06.458 [INFO ] 航线整体替换：原航点 7 个，新航点 8 个
+2026-11-17 15:38:06.633 [INFO ] 航线整体替换：原航点 8 个，新航点 9 个
+2026-11-17 15:38:07.020 [INFO ] 航线整体替换：原航点 9 个，新航点 10 个
+2026-11-17 15:38:07.135 [INFO ] PASS actual_lio_cloud_pose_cross_host_udp
+2026-11-17 15:38:07.135 [INFO ] PASS cloud_points_available
+2026-11-17 15:38:07.135 [INFO ] PASS toggleStereoVideo
+2026-11-17 15:38:07.135 [INFO ] PASS button_enabled
+2026-11-17 15:38:07.136 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:38:07.137 [INFO ] PASS toggleGimbalVideo
+2026-11-17 15:38:07.137 [INFO ] PASS button_enabled
+2026-11-17 15:38:07.167 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:38:12.141 [INFO ] 点云几何更新：sequence=1794901099，点数=11026，boundsMin=(-13.56,-11.08,-0.56)，boundsMax=(5.89,6.41,3.22)
+2026-11-17 15:38:14.454 [INFO ] POS1 位姿包：序号 100，位置 [-0.002, -0.013, -0.014]，四元数 [0.000, 0.002, -0.001, 1.000]
+2026-11-17 15:38:18.731 [INFO ] 航线整体替换：原航点 10 个，新航点 11 个
+2026-11-17 15:38:19.216 [INFO ] 航线整体替换：原航点 11 个，新航点 12 个
+2026-11-17 15:38:19.418 [INFO ] PASS both_live_video_streams
+2026-11-17 15:38:19.418 [INFO ] PASS both_actual_qml_images_loaded
+2026-11-17 15:38:19.418 [INFO ] PASS recording_state_arrives_through_production_telemetry
+2026-11-17 15:38:19.419 [INFO ] PASS recordingStart
+2026-11-17 15:38:19.419 [INFO ] PASS button_enabled
+2026-11-17 15:38:19.419 [INFO ] 录制管理请求 "start" "192.168.1.224"
+2026-11-17 15:38:19.420 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:38:19.652 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901114，单帧 2427 点，显示 15636 点，累计收到 30 帧，丢帧 0
+2026-11-17 15:38:20.150 [INFO ] 点云几何更新：sequence=1794901115，点数=15798，boundsMin=(-13.57,-11.35,-0.56)，boundsMax=(5.92,6.44,3.22)
+2026-11-17 15:38:20.338 [INFO ] 航线整体替换：原航点 12 个，新航点 13 个
+2026-11-17 15:38:20.393 [INFO ] 航线整体替换：原航点 13 个，新航点 14 个
+2026-11-17 15:38:20.482 [INFO ] 航线整体替换：原航点 14 个，新航点 15 个
+2026-11-17 15:38:20.954 [INFO ] 航线整体替换：原航点 15 个，新航点 16 个
+2026-11-17 15:38:21.259 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 30，单帧 9946 点，显示 9946 点，累计收到 30 帧，丢帧 0
+2026-11-17 15:38:23.203 [INFO ] 航线整体替换：原航点 16 个，新航点 17 个
+2026-11-17 15:38:23.496 [INFO ] 航线整体替换：原航点 17 个，新航点 18 个
+2026-11-17 15:38:25.191 [INFO ] POS1 位姿包：序号 200，位置 [0.003, -0.007, -0.017]，四元数 [0.000, 0.002, -0.001, 1.000]
+2026-11-17 15:38:25.656 [INFO ] 录制管理返回 start 0 {"phase": "PREPARING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.05212855339050293, "stamp": 1794901105.493222, "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-153825-27ee46", "request_id": "c307bdf2be7743a5a2d22c0cfd15beea", "requested": "start", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "UNAVAILABLE", "auto_error": "", "pending_action": "start", "duration_s": 0.0, "warnings": [], "active_bags_count": 0, "available": true}
+2026-11-17 15:38:28.662 [INFO ] 点云几何更新：sequence=1794901131，点数=18506，boundsMin=(-13.57,-11.35,-0.57)，boundsMax=(5.92,6.44,3.22)
+2026-11-17 15:38:33.811 [INFO ] PASS qml_record_start_confirmed_by_remote_state
+2026-11-17 15:38:34.480 [INFO ] 航线整体替换：原航点 18 个，新航点 19 个
+2026-11-17 15:38:34.513 [INFO ] 航线整体替换：原航点 19 个，新航点 20 个
+2026-11-17 15:38:34.986 [INFO ] POS1 位姿包：序号 300，位置 [0.001, -0.013, -0.016]，四元数 [0.001, 0.002, -0.001, 1.000]
+2026-11-17 15:38:35.671 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901144，单帧 2499 点，显示 20277 点，累计收到 60 帧，丢帧 0
+2026-11-17 15:38:36.784 [INFO ] 点云几何更新：sequence=56，点数=9772，boundsMin=(0.05,-5.75,-0.65)，boundsMax=(3.95,2.55,2.25)
+2026-11-17 15:38:39.289 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 60，单帧 9869 点，显示 9869 点，累计收到 60 帧，丢帧 0
+2026-11-17 15:38:45.052 [INFO ] POS1 位姿包：序号 401，位置 [0.001, -0.012, -0.021]，四元数 [0.000, 0.002, -0.001, 1.000]
+2026-11-17 15:38:45.182 [INFO ] 点云几何更新：sequence=1794901163，点数=21958，boundsMin=(-13.57,-11.35,-0.57)，boundsMax=(5.97,6.44,3.25)
+2026-11-17 15:38:47.102 [INFO ] 航线整体替换：原航点 20 个，新航点 21 个
+2026-11-17 15:38:47.252 [INFO ] 航线整体替换：原航点 21 个，新航点 22 个
+2026-11-17 15:38:47.491 [INFO ] 航线整体替换：原航点 22 个，新航点 23 个
+2026-11-17 15:38:47.778 [INFO ] 航线整体替换：原航点 23 个，新航点 24 个
+2026-11-17 15:38:48.515 [INFO ] 航线整体替换：原航点 24 个，新航点 25 个
+2026-11-17 15:38:48.949 [INFO ] 航线整体替换：原航点 25 个，新航点 26 个
+2026-11-17 15:38:49.089 [INFO ] 航线整体替换：原航点 26 个，新航点 27 个
+2026-11-17 15:38:50.703 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901174，单帧 2363 点，显示 22725 点，累计收到 90 帧，丢帧 0
+2026-11-17 15:38:53.704 [INFO ] 点云几何更新：sequence=1794901179，点数=23049，boundsMin=(-13.57,-11.35,-0.57)，boundsMax=(7.56,6.44,3.25)
+2026-11-17 15:38:54.925 [INFO ] 航线整体替换：原航点 27 个，新航点 28 个
+2026-11-17 15:38:54.947 [INFO ] 航线整体替换：原航点 28 个，新航点 29 个
+2026-11-17 15:38:55.364 [INFO ] 航线整体替换：原航点 29 个，新航点 30 个
+2026-11-17 15:38:55.364 [INFO ] POS1 位姿包：序号 501，位置 [0.006, 0.006, -0.026]，四元数 [0.000, 0.002, -0.000, 1.000]
+2026-11-17 15:38:55.595 [INFO ] 航线整体替换：原航点 30 个，新航点 31 个
+2026-11-17 15:38:55.891 [INFO ] 航线整体替换：原航点 31 个，新航点 32 个
+2026-11-17 15:38:55.979 [INFO ] 航线整体替换：原航点 32 个，新航点 33 个
+2026-11-17 15:38:56.185 [INFO ] 航线整体替换：原航点 33 个，新航点 34 个
+2026-11-17 15:38:56.640 [INFO ] 航线整体替换：原航点 34 个，新航点 35 个
+2026-11-17 15:38:57.016 [INFO ] 航线整体替换：原航点 35 个，新航点 36 个
+2026-11-17 15:38:57.323 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 90，单帧 10015 点，显示 10015 点，累计收到 90 帧，丢帧 0
+2026-11-17 15:38:57.344 [INFO ] 航线整体替换：原航点 36 个，新航点 37 个
+2026-11-17 15:38:59.328 [INFO ] 航线整体替换：原航点 37 个，新航点 38 个
+2026-11-17 15:38:59.491 [INFO ] 航线整体替换：原航点 38 个，新航点 39 个
+2026-11-17 15:38:59.625 [INFO ] 航线整体替换：原航点 39 个，新航点 40 个
+2026-11-17 15:38:59.654 [INFO ] 航线整体替换：原航点 40 个，新航点 41 个
+2026-11-17 15:38:59.703 [INFO ] 航线整体替换：原航点 41 个，新航点 42 个
+2026-11-17 15:39:00.507 [INFO ] 航线整体替换：原航点 42 个，新航点 43 个
+2026-11-17 15:39:00.712 [INFO ] 航线整体替换：原航点 43 个，新航点 44 个
+2026-11-17 15:39:01.066 [INFO ] 航线整体替换：原航点 44 个，新航点 45 个
+2026-11-17 15:39:01.214 [INFO ] 航线整体替换：原航点 45 个，新航点 46 个
+2026-11-17 15:39:01.826 [INFO ] 点云几何更新：sequence=97，点数=9939，boundsMin=(0.05,-5.75,-0.65)，boundsMax=(4.05,2.65,2.25)
+2026-11-17 15:39:03.360 [INFO ] PASS simultaneous_streams_and_recording_remain_fresh_30s
+2026-11-17 15:39:03.360 [INFO ] PASS live_cloud_pose_progress_while_recording
+2026-11-17 15:39:03.360 [INFO ] PASS both_video_streams_progress_while_recording
+2026-11-17 15:39:03.360 [INFO ] PASS recording_elapsed_and_size_update_in_main_ui
+2026-11-17 15:39:03.373 [INFO ] PASS full_main_scene_rendered
+2026-11-17 15:39:03.373 [INFO ] PASS recordingStop
+2026-11-17 15:39:03.373 [INFO ] PASS button_enabled
+2026-11-17 15:39:03.373 [INFO ] 录制管理请求 "stop" "192.168.1.224"
+2026-11-17 15:39:03.374 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:39:05.266 [INFO ] 航线整体替换：原航点 46 个，新航点 47 个
+2026-11-17 15:39:05.302 [INFO ] 航线整体替换：原航点 47 个，新航点 48 个
+2026-11-17 15:39:05.936 [INFO ] POS1 位姿包：序号 602，位置 [-0.000, -0.016, -0.028]，四元数 [0.000, 0.002, -0.001, 1.000]
+2026-11-17 15:39:06.032 [INFO ] 航线整体替换：原航点 48 个，新航点 49 个
+2026-11-17 15:39:06.191 [INFO ] 航线整体替换：原航点 49 个，新航点 50 个
+2026-11-17 15:39:06.511 [INFO ] 航线整体替换：原航点 50 个，新航点 51 个
+2026-11-17 15:39:06.728 [INFO ] 点云帧完成：协议 香橙派 PCD1/LZ4，序号 1794901204，单帧 2491 点，显示 24380 点，累计收到 120 帧，丢帧 0
+2026-11-17 15:39:06.778 [INFO ] 航线整体替换：原航点 51 个，新航点 52 个
+2026-11-17 15:39:06.851 [INFO ] 航线整体替换：原航点 52 个，新航点 53 个
+2026-11-17 15:39:07.007 [INFO ] 航线整体替换：原航点 53 个，新航点 54 个
+2026-11-17 15:39:07.201 [INFO ] 航线整体替换：原航点 54 个，新航点 55 个
+2026-11-17 15:39:07.496 [INFO ] 航线整体替换：原航点 55 个，新航点 56 个
+2026-11-17 15:39:07.708 [INFO ] 航线整体替换：原航点 56 个，新航点 57 个
+2026-11-17 15:39:07.889 [INFO ] 航线整体替换：原航点 57 个，新航点 58 个
+2026-11-17 15:39:08.040 [INFO ] 航线整体替换：原航点 58 个，新航点 59 个
+2026-11-17 15:39:08.214 [INFO ] 航线整体替换：原航点 59 个，新航点 60 个
+2026-11-17 15:39:08.611 [INFO ] 航线整体替换：原航点 60 个，新航点 61 个
+2026-11-17 15:39:08.678 [INFO ] 航线整体替换：原航点 61 个，新航点 62 个
+2026-11-17 15:39:08.999 [INFO ] 录制管理返回 stop 0 {"phase": "RECORDING", "policy": "manual", "running": true, "status_fresh": true, "status_age_s": 0.04404449462890625, "stamp": 1794901148.9016788, "run": "/tmp/platform-soak-check/recording-source/flight-records/20261117-153825-27ee46", "clip_id": "c307bdf2be7743a5a2d22c0cfd15beea", "request_id": "e95e03f4f3274641be4a6d4c5fa54e9b", "requested": "stop", "auto_enabled": false, "auto_running": false, "auto_fresh": false, "auto_phase": "UNAVAILABLE", "auto_error": "", "pending_action": "stop", "duration_s": 38.847570873999985, "bag_pid": 9305, "bag_bytes": 316184192, "free_bytes": 8042004480, "recording_started_wall": 1794901110.0090823, "storage": "sqlite3", "missing_topics": ["/ego_planner/flight_execution", "/ego_planner/px4_execution/status", "/goal", "/mandatory_stop_to_planner", "/mavros/battery", "/mavros/estimator_status", "/mavros/extended_state", "/mavros/imu/data", "/mavros/local_position/odom", "/mavros/local_position/pose", "/mavros/local_position/velocity_local", "/mavros/rc/in", "/mavros/setpoint_raw/local", "/mavros/setpoint_raw/target_local", "/mavros/state", "/mavros/statustext/recv", "/mavros/timesync_status", "/move_base_simple/goal"], "warnings": ["缺少18个话题；详见recording-status.json"], "active_bags_count": 1, "available": true}
+2026-11-17 15:39:09.113 [INFO ] 航线整体替换：原航点 62 个，新航点 63 个
+2026-11-17 15:39:09.337 [INFO ] 航线整体替换：原航点 63 个，新航点 64 个
+2026-11-17 15:39:09.483 [INFO ] 航线整体替换：原航点 64 个，新航点 65 个
+2026-11-17 15:39:09.548 [INFO ] 航线整体替换：原航点 65 个，新航点 66 个
+2026-11-17 15:39:09.597 [INFO ] 航线整体替换：原航点 66 个，新航点 67 个
+2026-11-17 15:39:09.791 [INFO ] 航线整体替换：原航点 67 个，新航点 68 个
+2026-11-17 15:39:09.918 [INFO ] 航线整体替换：原航点 68 个，新航点 69 个
+2026-11-17 15:39:10.006 [INFO ] 航线整体替换：原航点 69 个，新航点 70 个
+2026-11-17 15:39:10.257 [INFO ] 航线整体替换：原航点 70 个，新航点 71 个
+2026-11-17 15:39:10.333 [INFO ] 航线整体替换：原航点 71 个，新航点 72 个
+2026-11-17 15:39:10.432 [INFO ] 航线整体替换：原航点 72 个，新航点 73 个
+2026-11-17 15:39:10.727 [INFO ] 点云几何更新：sequence=1794901212，点数=26821，boundsMin=(-13.57,-11.35,-0.58)，boundsMax=(7.57,6.45,3.25)
+2026-11-17 15:39:11.139 [INFO ] 航线整体替换：原航点 73 个，新航点 74 个
+2026-11-17 15:39:11.228 [INFO ] 航线整体替换：原航点 74 个，新航点 75 个
+2026-11-17 15:39:11.274 [INFO ] PASS qml_record_stop_normal_finalization
+2026-11-17 15:39:11.274 [INFO ] PASS toggleStereoVideo
+2026-11-17 15:39:11.274 [INFO ] PASS button_enabled
+2026-11-17 15:39:11.275 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:39:11.275 [INFO ] PASS closing_stereo_keeps_gimbal_live
+2026-11-17 15:39:11.275 [INFO ] PASS toggleGimbalVideo
+2026-11-17 15:39:11.275 [INFO ] PASS button_enabled
+2026-11-17 15:39:11.278 [INFO ] PASS actual_qml_clicked_handler
+2026-11-17 15:39:11.278 [INFO ] PASS both_video_buttons_stop_receivers
+{"running": false, "stopped": true}
+{"running": false, "stopped": true}
+2026-11-17 15:39:11.821 [DEBUG] Total time spent on pipeline creation during the lifetime of the QRhi 0x7fc0f00051c0 was 103 ms
+2026-11-17 15:39:11.822 [DEBUG] Writing pipeline cache contents (99425 bytes) for QRhi 0x7fc0f00051c0 to '/home/tyzk/drone-migration-github/records/2026-11-17/physical-platform-gcs/run2/cache/customgeometry-ros2-staging/qtpipelinecache-x86_64-little_endian-lp64/qqpc_opengl'
+2026-11-17 15:39:11.888 [INFO ] 销毁静态点云加载器，取消未完成加载任务
+2026-11-17 15:39:11.888 [INFO ] 销毁静态点云加载器，取消未完成加载任务

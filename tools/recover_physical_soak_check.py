@@ -19,7 +19,9 @@ def call(command,name,timeout=30,check=True):
 result={'passed':False}
 try:
  call('date -Is; cat /proc/sys/kernel/random/boot_id; uptime; git -C /home/orangepi/drone_platform status --porcelain','before')
- exists=call('test -d '+remote,'temporary-directory',check=False).returncode==0
+ probe=call('test -d '+remote,'temporary-directory',check=False)
+ if probe.returncode not in (0,1):probe.check_returncode()
+ exists=probe.returncode==0
  result['temporary_directory_existed']=exists
  if exists:
   # Match the exact helper uploaded by this experiment before signalling anything.

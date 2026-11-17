@@ -1,0 +1,205 @@
+{
+  "/dianyun_gcs_cloud_sender_2474a023": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/ego_planner_node": {
+    "error": "list timeout"
+  },
+  "/flight_desk_readonly_a0deb135": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_identity_1db831a7": {
+    "identity_topic": {
+      "type": 4,
+      "value": "/gcs_task_manager/session_32f057d181ae42629097c2cf259a1647/lio_identity"
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_video_view_8933": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gimbal_delivery_observer": {
+    "include_camera": {
+      "type": 1,
+      "value": true
+    },
+    "output": {
+      "type": 4,
+      "value": "/tmp/platform-soak-check/gimbal-headers.csv"
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "stop_file": {
+      "type": 4,
+      "value": "/tmp/platform-soak-check/observer.stop"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/livox_lidar_publisher2": {
+    "cmdline_input_bd_code": {
+      "type": 4,
+      "value": "ARMCP1V0038817"
+    },
+    "data_src": {
+      "type": 2,
+      "value": 0
+    },
+    "frame_id": {
+      "type": 4,
+      "value": "livox_frame"
+    },
+    "lvx_file_path": {
+      "type": 4,
+      "value": ""
+    },
+    "multi_topic": {
+      "type": 2,
+      "value": 0
+    },
+    "output_data_type": {
+      "type": 2,
+      "value": 0
+    },
+    "publish_freq": {
+      "type": 3,
+      "value": 10.0
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    },
+    "user_config_path": {
+      "type": 4,
+      "value": "/home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json"
+    },
+    "xfer_format": {
+      "type": 2,
+      "value": 1
+    }
+  },
+  "/platform_concurrent_observer": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/rtsp_hw_pub_ultra": {
+    "color_hz": {
+      "type": 3,
+      "value": 15.0
+    },
+    "color_width": {
+      "type": 2,
+      "value": 960
+    },
+    "connect_timeout_s": {
+      "type": 3,
+      "value": 5.0
+    },
+    "frame_id": {
+      "type": 4,
+      "value": "gimbal_camera_optical_frame"
+    },
+    "frame_timeout_s": {
+      "type": 3,
+      "value": 3.0
+    },
+    "publish_gray": {
+      "type": 1,
+      "value": true
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "read_timeout_s": {
+      "type": 3,
+      "value": 3.0
+    },
+    "reconnect_delay_s": {
+      "type": 3,
+      "value": 1.0
+    },
+    "rtsp_url": {
+      "type": 4,
+      "value": "rtsp://127.0.0.1:18554/gimbal"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  }
+}

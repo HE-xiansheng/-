@@ -1,0 +1,314 @@
+{
+  "/dianyun_gcs_cloud_sender_6431a4f4": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/factory_laserMapping": {
+    "common.imu_topic": {
+      "type": 4,
+      "value": "/livox/imu"
+    },
+    "common.lid_topic": {
+      "type": 4,
+      "value": "/livox/lidar"
+    },
+    "common.time_offset_lidar_to_imu": {
+      "type": 3,
+      "value": 0.0
+    },
+    "common.time_sync_en": {
+      "type": 1,
+      "value": false
+    },
+    "cube_side_length": {
+      "type": 3,
+      "value": 150.0
+    },
+    "feature_extract_enable": {
+      "type": 1,
+      "value": false
+    },
+    "filter_size_corner": {
+      "type": 3,
+      "value": 0.5
+    },
+    "filter_size_map": {
+      "type": 3,
+      "value": 0.3
+    },
+    "filter_size_surf": {
+      "type": 3,
+      "value": 0.5
+    },
+    "map_file_path": {
+      "type": 4,
+      "value": ""
+    },
+    "mapping.acc_cov": {
+      "type": 3,
+      "value": 0.5
+    },
+    "mapping.b_acc_cov": {
+      "type": 3,
+      "value": 0.00018
+    },
+    "mapping.b_gyr_cov": {
+      "type": 3,
+      "value": 0.000292
+    },
+    "mapping.det_range": {
+      "type": 3,
+      "value": 50.0
+    },
+    "mapping.extrinsic_R": {
+      "type": 8,
+      "value": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "mapping.extrinsic_T": {
+      "type": 8,
+      "value": [
+        -0.011,
+        -0.02329,
+        0.04412
+      ]
+    },
+    "mapping.extrinsic_est_en": {
+      "type": 1,
+      "value": false
+    },
+    "mapping.fov_degree": {
+      "type": 3,
+      "value": 360.0
+    },
+    "mapping.gyr_cov": {
+      "type": 3,
+      "value": 0.2
+    },
+    "max_iteration": {
+      "type": 2,
+      "value": 3
+    },
+    "pcd_save.interval": {
+      "type": 2,
+      "value": -1
+    },
+    "pcd_save.pcd_save_en": {
+      "type": 1,
+      "value": false
+    },
+    "point_filter_num": {
+      "type": 2,
+      "value": 3
+    },
+    "preprocess.blind": {
+      "type": 3,
+      "value": 0.3
+    },
+    "preprocess.lidar_type": {
+      "type": 2,
+      "value": 1
+    },
+    "preprocess.scan_line": {
+      "type": 2,
+      "value": 4
+    },
+    "preprocess.scan_rate": {
+      "type": 2,
+      "value": 10
+    },
+    "preprocess.timestamp_unit": {
+      "type": 2,
+      "value": 3
+    },
+    "publish.dense_publish_en": {
+      "type": 1,
+      "value": true
+    },
+    "publish.effect_map_en": {
+      "type": 1,
+      "value": false
+    },
+    "publish.map_en": {
+      "type": 1,
+      "value": false
+    },
+    "publish.path_en": {
+      "type": 1,
+      "value": false
+    },
+    "publish.scan_bodyframe_pub_en": {
+      "type": 1,
+      "value": true
+    },
+    "publish.scan_publish_en": {
+      "type": 1,
+      "value": true
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.depth": {
+      "type": 2,
+      "value": 100
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./factory_fastlio/tf.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "runtime_pos_log_enable": {
+      "type": 1,
+      "value": false
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/factory_vision2mavros": {
+    "body_lidar_x": {
+      "type": 3,
+      "value": 0.0
+    },
+    "body_lidar_y": {
+      "type": 3,
+      "value": 0.0
+    },
+    "body_lidar_z": {
+      "type": 3,
+      "value": 0.0
+    },
+    "future_tolerance": {
+      "type": 3,
+      "value": 0.02
+    },
+    "max_source_age": {
+      "type": 3,
+      "value": 0.2
+    },
+    "publish_rate": {
+      "type": 3,
+      "value": 30.0
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    },
+    "vision_pose_topic": {
+      "type": 4,
+      "value": "/factory_fastlio/odometry"
+    },
+    "window_size": {
+      "type": 2,
+      "value": 50
+    }
+  },
+  "/flight_desk_readonly_08b2b6e4": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_flight_task_manager_074f6432": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/gcs_person_preview": {
+    "draw_confidence": {
+      "type": 3,
+      "value": 0.5
+    },
+    "image_max_age_s": {
+      "type": 3,
+      "value": 0.5
+    },
+    "model_file": {
+      "type": 4,
+      "value": "/home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/yolo_ultra_test/share/yolo_ultra_test/weights/yolov11_s_det_int.rknn"
+    },
+    "nms_threshold": {
+      "type": 3,
+      "value": 0.25
+    },
+    "object_threshold": {
+      "type": 3,
+      "value": 0.2
+    },
+    "qos_overrides./parameter_events.publisher.depth": {
+      "type": 2,
+      "value": 1000
+    },
+    "qos_overrides./parameter_events.publisher.durability": {
+      "type": 4,
+      "value": "volatile"
+    },
+    "qos_overrides./parameter_events.publisher.history": {
+      "type": 4,
+      "value": "keep_last"
+    },
+    "qos_overrides./parameter_events.publisher.reliability": {
+      "type": 4,
+      "value": "reliable"
+    },
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  },
+  "/platform_concurrent_observer": {
+    "use_sim_time": {
+      "type": 1,
+      "value": false
+    }
+  }
+}

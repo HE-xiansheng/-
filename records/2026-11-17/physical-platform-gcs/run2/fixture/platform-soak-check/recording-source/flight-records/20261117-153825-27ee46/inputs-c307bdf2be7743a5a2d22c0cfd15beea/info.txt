@@ -1,0 +1,25 @@
+
+Files:             inputs-c307bdf2be7743a5a2d22c0cfd15beea_0.db3
+                   inputs-c307bdf2be7743a5a2d22c0cfd15beea_1.db3
+Bag size:          301.8 MiB
+Storage id:        sqlite3
+Duration:          38.321615108s
+Start:             Nov 17 2026 15:38:30.806552317 (1794901110.806552317)
+End:               Nov 17 2026 15:39:09.128167425 (1794901149.128167425)
+Messages:          9569
+Topic information: Topic: /factory_fastlio/odometry | Type: nav_msgs/msg/Odometry | Count: 355 | Serialization Format: cdr
+                   Topic: /factory_fastlio/cloud_world | Type: sensor_msgs/msg/PointCloud2 | Count: 354 | Serialization Format: cdr
+                   Topic: /livox/lidar | Type: livox_ros_driver2/msg/CustomMsg | Count: 373 | Serialization Format: cdr
+                   Topic: /ego_planner/flight_execution/trajectory | Type: traj_utils/msg/PolyTraj | Count: 0 | Serialization Format: cdr
+                   Topic: /livox/imu | Type: sensor_msgs/msg/Imu | Count: 7607 | Serialization Format: cdr
+                   Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 0 | Serialization Format: cdr
+                   Topic: /planning/trajectory | Type: traj_utils/msg/PolyTraj | Count: 0 | Serialization Format: cdr
+                   Topic: /ego_planner/manual_preview/trajectory | Type: traj_utils/msg/PolyTraj | Count: 0 | Serialization Format: cdr
+                   Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 1 | Serialization Format: cdr
+                   Topic: /rosout | Type: rcl_interfaces/msg/Log | Count: 35 | Serialization Format: cdr
+                   Topic: /planning/data_display | Type: traj_utils/msg/DataDisp | Count: 0 | Serialization Format: cdr
+                   Topic: /mavros/vision_pose/pose | Type: geometry_msgs/msg/PoseStamped | Count: 217 | Serialization Format: cdr
+                   Topic: /ego_planner/manual_preview/status | Type: std_msgs/msg/String | Count: 147 | Serialization Format: cdr
+                   Topic: /grid_map/occupancy_inflate | Type: sensor_msgs/msg/PointCloud2 | Count: 241 | Serialization Format: cdr
+                   Topic: /grid_map/occupancy | Type: sensor_msgs/msg/PointCloud2 | Count: 239 | Serialization Format: cdr
+

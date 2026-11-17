@@ -1,0 +1,14 @@
+1de5c3d35e01b7fdcc5dd5443cb5c179a0087054
+292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3  /home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so
+94893a7ce46d139b4f00ed228d3bbb689d60827cd724483732457e7b5bbe9817  /home/orangepi/drone_platform/01_apps/mission_demo/workspace/install/rtsp_test/lib/rtsp_test/rtsp_hw_pub_ultra
+Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 005 Device 002: ID 0fe6:9900 ICS Advent USB 10/100 LAN
+Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 008 Device 002: ID 2bc5:0804 Orbbec 3D Technology International, Inc Orbbec Gemini 335L
+Bus 008 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 007 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 004 Device 003: ID 1b8c:0036 Altium Limited HKUST UAV NxtPX4
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub

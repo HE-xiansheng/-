@@ -1,0 +1,20 @@
+2026/11/17 15:48:04 INF MediaMTX v1.21.1, linux, arm64
+2026/11/17 15:48:04 INF configuration loaded from /tmp/platform-soak-check/stream.yml
+2026/11/17 15:48:04 INF [RTSP] started with listeners on 0.0.0.0:18554 (TCP/RTSP)
+2026/11/17 15:48:04 INF [path gimbal] [RTSP source] started
+2026/11/17 15:48:04 INF [path gimbal] stream is available and online, 1 track (H264)
+2026/11/17 15:48:05 INF [RTSP] [conn 127.0.0.1:57868] opened
+2026/11/17 15:48:05 INF [RTSP] [session 78f3285e] created by 127.0.0.1:57868
+2026/11/17 15:48:05 INF [RTSP] [session 78f3285e] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 15:48:05 INF [path gimbal] RTP packets are too big (1200 > 1188), remuxing them into smaller ones
+2026/11/17 15:48:37 INF [RTSP] [conn 192.168.1.89:44326] opened
+2026/11/17 15:48:37 INF [RTSP] [session 4f0a19c6] created by 192.168.1.89:44326
+2026/11/17 15:48:38 INF [RTSP] [session 4f0a19c6] is reading from path 'gimbal', with TCP, 1 track (H264)
+2026/11/17 15:49:29 INF [RTSP] [conn 192.168.1.89:44326] closed: read tcp4 192.168.1.224:18554->192.168.1.89:44326: read: connection reset by peer
+2026/11/17 15:49:29 INF [RTSP] [session 4f0a19c6] destroyed: not in use
+2026/11/17 15:49:35 INF [RTSP] [conn 127.0.0.1:57868] closed: read tcp4 127.0.0.1:18554->127.0.0.1:57868: read: connection reset by peer
+2026/11/17 15:49:35 INF [RTSP] [session 78f3285e] destroyed: not in use
+2026/11/17 15:49:36 INF shutting down gracefully
+2026/11/17 15:49:36 INF [RTSP] closing
+2026/11/17 15:49:36 INF [path gimbal] [RTSP source] stopped: path is closing
+2026/11/17 15:49:36 INF waiting for running hooks

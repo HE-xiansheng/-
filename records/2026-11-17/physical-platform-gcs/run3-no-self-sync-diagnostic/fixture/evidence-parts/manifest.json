@@ -1,0 +1,27 @@
+{
+  "original_file": "evidence.tar.gz",
+  "original_size": 143155808,
+  "sha256": "0cb69e0bb7243a6ad207cbd8ab8c03067f7d30925a62c0cadfdc5a6c5257f966",
+  "parts": [
+    {
+      "file": "evidence.tar.gz.part-000",
+      "size": 41943040,
+      "sha256": "6fa43b1ed9b8347c1d3c0c2c1dfd68ca6c19669afacf0d1087453f05a9da319e"
+    },
+    {
+      "file": "evidence.tar.gz.part-001",
+      "size": 41943040,
+      "sha256": "04fcb2bf72060453677231b3e684a4c37fdff60a3a1cf931bbb2e28dd4f16dd4"
+    },
+    {
+      "file": "evidence.tar.gz.part-002",
+      "size": 41943040,
+      "sha256": "06d6df215d66d40fc27a7d071372fc27740291442ee825179fbac6da26244cc2"
+    },
+    {
+      "file": "evidence.tar.gz.part-003",
+      "size": 17326688,
+      "sha256": "cfbc7a653e2505d93a849adfb7382e0cba4a4d95e4c99950a354c6c1987e9450"
+    }
+  ]
+}

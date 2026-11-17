@@ -1,0 +1,66 @@
+{
+  "ready": true,
+  "wait_s": 4.900773114000003,
+  "hold_s": 1.0,
+  "observed_counts": {
+    "lidar": 28,
+    "imu": 241
+  },
+  "startup_max_age_s": {
+    "lidar": 3.023294232,
+    "imu": 2.931307929
+  },
+  "startup_regressions": {
+    "lidar": 0,
+    "imu": 0
+  },
+  "trace": [
+    {
+      "elapsed_s": 0.020815198000036617,
+      "counts": {
+        "lidar": 0,
+        "imu": 0
+      },
+      "age_s": {}
+    },
+    {
+      "elapsed_s": 1.0343691290000265,
+      "counts": {
+        "lidar": 0,
+        "imu": 0
+      },
+      "age_s": {}
+    },
+    {
+      "elapsed_s": 2.0544184630000473,
+      "counts": {
+        "lidar": 0,
+        "imu": 0
+      },
+      "age_s": {}
+    },
+    {
+      "elapsed_s": 3.0709664100000396,
+      "counts": {
+        "lidar": 0,
+        "imu": 0
+      },
+      "age_s": {}
+    },
+    {
+      "elapsed_s": 4.074467217000006,
+      "counts": {
+        "lidar": 19,
+        "imu": 77
+      },
+      "age_s": {
+        "imu": 0.001179199,
+        "lidar": 0.181681998
+      }
+    }
+  ],
+  "final_source_age_s": {
+    "imu": 0.008022807,
+    "lidar": 0.108109415
+  }
+}
