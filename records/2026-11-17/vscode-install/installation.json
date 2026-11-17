@@ -1,0 +1,10 @@
+{
+  "version": "1.146.0",
+  "path": "/home/orangepi/.local/opt/vscode/1.146.0",
+  "command": "/home/orangepi/.local/bin/code",
+  "desktop": "/home/orangepi/.local/share/applications/code.desktop",
+  "version_output": "1.146.0\n69047191fc427f2f92828279aae1d90d8eeda7ab\narm64\n",
+  "interactive_shell_path_configured": true,
+  "dependencies_resolved": true,
+  "installation": "per-user official ARM64 archive"
+}
