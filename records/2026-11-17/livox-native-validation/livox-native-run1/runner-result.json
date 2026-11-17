@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "profile_uuid": "d4982969-d51e-4bbb-9d7b-39402c4b8339",
+  "cleanup_errors": [],
+  "error": "CalledProcessError(2, ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=3', '-o', 'UserKnownHostsFile=/home/tyzk/.planning/2026-11-16-ros2-platform-audit/emmc_known_hosts', '-o', 'HostKeyAlias=opi-ros2-emmc', 'orangepi@192.168.1.224', 'nmcli connection add save no type ethernet ifname enP3p49s0 con-name ROS2-Livox-temporary-check connection.uuid d4982969-d51e-4bbb-9d7b-39402c4b8339 connection.autoconnect no 802-3-ethernet.mac-address C0:74:2B:F9:C0:D8 ipv4.method manual ipv4.addresses 192.168.1.51/32 ipv4.routes 192.168.1.117/32 ipv4.never-default yes ipv4.ignore-auto-dns yes ipv4.dad-timeout 3000 ipv4.may-fail no ipv6.method disabled'], '', \"Error: failed to modify connection.uuid: the property can't be changed.\\n\")"
+}

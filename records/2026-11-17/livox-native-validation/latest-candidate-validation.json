@@ -1,0 +1,9 @@
+{
+  "verified": true,
+  "id": "ROS2 Livox candidate",
+  "autoconnect": true,
+  "priority": 100,
+  "route": "192.168.1.158",
+  "loaded_into_NetworkManager": false,
+  "candidate_sha256": "0e35a866723a39f8ce65999366fbf7dee3d42f602f7717733bf302d374cf880f"
+}

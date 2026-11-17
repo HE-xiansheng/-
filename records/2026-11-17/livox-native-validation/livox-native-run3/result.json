@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "scope": "physical native LiDAR -> installed FAST-LIO -> pose relay; no MAVROS/FCU or setpoints",
+  "streams": {
+    "lidar": {
+      "messages": 572,
+      "stable_messages": 450,
+      "hz": 9.999919887946922,
+      "max_gap_s": 0.115025375,
+      "min_age_s": 0.100138541,
+      "max_age_s": 1.263081354,
+      "frames": [
+        "livox_frame"
+      ]
+    },
+    "imu": {
+      "messages": 11392,
+      "stable_messages": 9001,
+      "hz": 199.99953425886235,
+      "max_gap_s": 0.028879134,
+      "min_age_s": 0.000221665,
+      "max_age_s": 1.007461275,
+      "frames": [
+        "livox_frame"
+      ]
+    },
+    "odom": {
+      "messages": 565,
+      "stable_messages": 450,
+      "hz": 9.998172574321304,
+      "max_gap_s": 0.154925126,
+      "min_age_s": 0.027716062,
+      "max_age_s": 0.568674275,
+      "frames": [
+        "camera_init"
+      ]
+    },
+    "cloud": {
+      "messages": 565,
+      "stable_messages": 450,
+      "hz": 9.998249263131784,
+      "max_gap_s": 0.154891877,
+      "min_age_s": 0.029359882,
+      "max_age_s": 0.567937531,
+      "frames": [
+        "body"
+      ]
+    },
+    "vision": {
+      "messages": 463,
+      "stable_messages": 450,
+      "hz": 10.00005090894514,
+      "max_gap_s": 0.165065125,
+      "min_age_s": 0.035900749,
+      "max_age_s": 0.10531816,
+      "frames": [
+        "map"
+      ]
+    }
+  },
+  "imu_acceleration_norm": {
+    "min": 0.8997985397737553,
+    "mean": 0.9914329586586307,
+    "max": 1.0900224513382748
+  },
+  "returncodes": {
+    "driver": 0,
+    "lio": 0,
+    "relay": 0
+  },
+  "checks": {
+    "lidar_sustained_rate": true,
+    "lidar_no_two_second_gap": true,
+    "lidar_source_age_bounded": true,
+    "lidar_source_stamps_increase": true,
+    "lidar_finite_data": true,
+    "imu_sustained_rate": true,
+    "imu_no_two_second_gap": true,
+    "imu_source_age_bounded": true,
+    "imu_source_stamps_increase": true,
+    "imu_finite_data": true,
+    "odom_sustained_rate": true,
+    "odom_no_two_second_gap": true,
+    "odom_source_age_bounded": true,
+    "odom_source_stamps_increase": true,
+    "odom_finite_data": true,
+    "cloud_sustained_rate": true,
+    "cloud_no_two_second_gap": true,
+    "cloud_source_age_bounded": true,
+    "cloud_source_stamps_increase": true,
+    "cloud_finite_data": true,
+    "vision_sustained_rate": true,
+    "vision_no_two_second_gap": true,
+    "vision_source_age_bounded": true,
+    "vision_source_stamps_increase": true,
+    "vision_finite_data": true,
+    "lidar_imu_frames": true,
+    "raw_schema_matches_ROS_deserialization": true,
+    "nonempty_body_cloud": true,
+    "lio_pose_frames_and_rotation": true,
+    "relay_preserves_actual_lio_stamps": true,
+    "no_FCU_or_setpoint_interfaces": true,
+    "lio_parameter_snapshot": true,
+    "owned_processes_exit_normally": true
+  }
+}

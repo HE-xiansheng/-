@@ -1,0 +1,91 @@
+{
+  "passed": false,
+  "scope": "physical native LiDAR -> installed FAST-LIO -> pose relay; no MAVROS/FCU or setpoints",
+  "streams": {
+    "lidar": {
+      "messages": 0,
+      "stable_messages": 0,
+      "hz": 0,
+      "max_gap_s": 999,
+      "min_age_s": null,
+      "max_age_s": null,
+      "frames": []
+    },
+    "imu": {
+      "messages": 0,
+      "stable_messages": 0,
+      "hz": 0,
+      "max_gap_s": 999,
+      "min_age_s": null,
+      "max_age_s": null,
+      "frames": []
+    },
+    "odom": {
+      "messages": 0,
+      "stable_messages": 0,
+      "hz": 0,
+      "max_gap_s": 999,
+      "min_age_s": null,
+      "max_age_s": null,
+      "frames": []
+    },
+    "cloud": {
+      "messages": 0,
+      "stable_messages": 0,
+      "hz": 0,
+      "max_gap_s": 999,
+      "min_age_s": null,
+      "max_age_s": null,
+      "frames": []
+    },
+    "vision": {
+      "messages": 0,
+      "stable_messages": 0,
+      "hz": 0,
+      "max_gap_s": 999,
+      "min_age_s": null,
+      "max_age_s": null,
+      "frames": []
+    }
+  },
+  "returncodes": {
+    "driver": 0,
+    "lio": 0,
+    "relay": 0
+  },
+  "checks": {
+    "lidar_sustained_rate": false,
+    "lidar_no_two_second_gap": false,
+    "lidar_source_age_bounded": false,
+    "lidar_source_stamps_increase": false,
+    "lidar_finite_data": false,
+    "imu_sustained_rate": false,
+    "imu_no_two_second_gap": false,
+    "imu_source_age_bounded": false,
+    "imu_source_stamps_increase": false,
+    "imu_finite_data": false,
+    "odom_sustained_rate": false,
+    "odom_no_two_second_gap": false,
+    "odom_source_age_bounded": false,
+    "odom_source_stamps_increase": false,
+    "odom_finite_data": false,
+    "cloud_sustained_rate": false,
+    "cloud_no_two_second_gap": false,
+    "cloud_source_age_bounded": false,
+    "cloud_source_stamps_increase": false,
+    "cloud_finite_data": false,
+    "vision_sustained_rate": false,
+    "vision_no_two_second_gap": false,
+    "vision_source_age_bounded": false,
+    "vision_source_stamps_increase": false,
+    "vision_finite_data": false,
+    "lidar_imu_frames": false,
+    "raw_schema_matches_ROS_deserialization": false,
+    "nonempty_body_cloud": false,
+    "lio_pose_frames_and_rotation": false,
+    "relay_preserves_actual_lio_stamps": false,
+    "no_FCU_or_setpoint_interfaces": true,
+    "lio_parameter_snapshot": true,
+    "owned_processes_exit_normally": true
+  }
+}

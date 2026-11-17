@@ -1,0 +1,21 @@
+[INFO] [launch]: All log files can be found below /tmp/livox-native-check/ros-log/2026-11-17-11-26-00-263332-orangepi5ultra-8484
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [livox_ros_driver2_node-1]: process started with pid [8501]
+[livox_ros_driver2_node-1] [INFO] [1794885960.433257404] [livox_lidar_publisher2]: Livox Ros Driver2 Version: 1.2.6
+[livox_ros_driver2_node-1] [INFO] [1794885960.433587276] [livox_lidar_publisher2]: Data Source is raw lidar.
+[livox_ros_driver2_node-1] [INFO] [1794885960.433616443] [livox_lidar_publisher2]: Config file : /home/orangepi/drone_platform/02_drivers/sensors/config/MID360s_config.json
+[livox_ros_driver2_node-1] LdsLidar *GetInstance
+[livox_ros_driver2_node-1] config lidar type: 8
+[livox_ros_driver2_node-1] successfully parse base config, counts: 1
+[livox_ros_driver2_node-1] [INFO] [1794885960.435950925] [livox_lidar_publisher2]: Init lds lidar success!
+[livox_ros_driver2_node-1] GetFreeIndex key:livox_lidar_1963043008.
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [livox_ros_driver2_node-1]: sending signal 'SIGINT' to process[livox_ros_driver2_node-1]
+[livox_ros_driver2_node-1] [INFO] [1794886022.524754410] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[livox_ros_driver2_node-1] [INFO] [1794886022.527683596] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [livox_ros_driver2_node-1]: process[livox_ros_driver2_node-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [livox_ros_driver2_node-1]: sending signal 'SIGTERM' to process[livox_ros_driver2_node-1]
+[livox_ros_driver2_node-1] [INFO] [1794886027.535292547] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [livox_ros_driver2_node-1]: process[livox_ros_driver2_node-1] failed to terminate '10.0' seconds after receiving 'SIGTERM', escalating to 'SIGKILL'
+[INFO] [livox_ros_driver2_node-1]: sending signal 'SIGKILL' to process[livox_ros_driver2_node-1]
+[ERROR] [livox_ros_driver2_node-1]: process has died [pid 8501, exit code -9, cmd '/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher2 --params-file /tmp/launch_params_zoxxvzlr'].

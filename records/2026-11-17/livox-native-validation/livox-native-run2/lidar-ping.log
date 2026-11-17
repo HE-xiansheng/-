@@ -1,0 +1,5 @@
+PING 192.168.1.117 (192.168.1.117) from 192.168.1.51 enP3p49s0: 56(84) bytes of data.
+
+--- 192.168.1.117 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2031ms
+

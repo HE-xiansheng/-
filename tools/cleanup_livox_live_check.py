@@ -4,9 +4,11 @@ import json
 import os
 from pathlib import Path
 import signal
+import sys
 import time
 
-root = Path('/tmp/livox-live-check')
+root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('/tmp/livox-live-check')
+assert root in [Path('/tmp/livox-live-check'), Path('/tmp/livox-native-check')]
 registry = root/'owned-processes.json'
 owned = json.loads(registry.read_text()) if registry.exists() else []
 groups = {int(entry['pid']) for entry in owned}
