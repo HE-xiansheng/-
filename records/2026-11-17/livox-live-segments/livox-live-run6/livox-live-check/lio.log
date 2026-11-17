@@ -1,0 +1,16 @@
+[INFO] [launch]: All log files can be found below /tmp/livox-live-check/ros-log/2026-11-17-10-49-16-063294-orangepi5ultra-294415
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fastlio_mapping-1]: process started with pid [294429]
+[fastlio_mapping-1] [INFO] [1794883756.273643519] [factory_laserMapping]: p_pre->lidar_type 1
+[fastlio_mapping-1] [INFO] [1794883756.282767651] [factory_laserMapping]: Node init finished.
+[fastlio_mapping-1] Multi thread started 
+[fastlio_mapping-1] IMU Initial Done
+[fastlio_mapping-1] [WARN] [1794883760.402296352] [factory_laserMapping]: No point, skip this scan!
+[fastlio_mapping-1] 
+[fastlio_mapping-1] [INFO] [1794883760.412934805] [factory_laserMapping]: Initialize the map kdtree
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+[fastlio_mapping-1] [INFO] [1794883833.841766877] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] [INFO] [1794883833.844164648] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[fastlio_mapping-1] Rebuild thread terminated normally
+[INFO] [fastlio_mapping-1]: process has finished cleanly [pid 294429]

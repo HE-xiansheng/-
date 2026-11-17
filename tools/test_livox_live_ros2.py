@@ -5,19 +5,21 @@ from collections import Counter, defaultdict
 import csv
 import faulthandler
 import hashlib
+import hmac
 import json
 import math
 import os
 from pathlib import Path
 import queue
 import signal
+import socket
 import struct
 import subprocess
 import sys
 import threading
 import time
 
-from livox_live_protocol import read_frame, TOPICS, ros1_sensor_to_cdr
+from livox_live_protocol import read_frame, read_exact, TOPICS, ros1_sensor_to_cdr
 from validate_fastlio_replay import decode
 import rclpy
 from rclpy.signals import SignalHandlerOptions
@@ -44,6 +46,15 @@ outputs = defaultdict(list)
 processes = []
 logs = []
 result = {'scope': 'live .235 sensor subscription over SSH to installed .224 LIO/relay; domain183 localhost; no physical FC input, no native .224 LiDAR driver', 'passed': False}
+direct = os.environ.get('LIVOX_LIVE_DIRECT') == '1'
+listener = None
+direct_peer_verified = False
+if direct:
+    result['scope'] = 'live .235 sensor subscription via temporary authenticated TCP directly to installed .224 LIO/relay; domain183 localhost; no physical FC input, no native .224 LiDAR driver'
+    listener = socket.socket()
+    listener.bind(('192.168.1.224', 24383))
+    listener.listen(1)
+    listener.settimeout(15)
 rclpy.init(signal_handler_options=SignalHandlerOptions.NO)
 node = rclpy.create_node('livox_live_validation')
 pubs = {1: node.create_publisher(Imu, TOPICS[1], 200),
@@ -94,24 +105,40 @@ def alive():
 
 
 def reader():
+    global direct_peer_verified
+    connection = None
+    stream = sys.stdin.buffer
     try:
+        if direct:
+            connection, address = listener.accept()
+            connection.settimeout(15)
+            stream = connection.makefile('rb')
+            token = os.environ['LIVOX_LIVE_TOKEN'].encode('ascii')
+            if address[0] != '192.168.1.235' or not hmac.compare_digest(read_exact(stream, len(token)), token):
+                raise ValueError('unauthorized temporary direct input')
+            direct_peer_verified = True
+            listener.close()
         while not abort.is_set():
-            frame = read_frame(sys.stdin.buffer)
+            frame = read_frame(stream)
+            received_wall = time.time_ns()
             if frame is None:
                 raise ValueError('source EOF without terminal metadata')
             while not abort.is_set():
                 try:
-                    pending.put(frame, timeout=.2)
+                    pending.put((*frame, received_wall), timeout=.2)
                     break
                 except queue.Full:
                     continue
             if frame[0] == 255:
-                if sys.stdin.buffer.read(1):
+                if stream.read(1):
                     raise ValueError('data after terminal metadata')
                 break
     except Exception as exc:
         errors.append(repr(exc))
     finally:
+        if connection is not None:
+            stream.close()
+            connection.close()
         done.set()
 
 
@@ -147,7 +174,7 @@ try:
         if errors:
             raise RuntimeError(errors)
         try:
-            kind, raw, source_receipt = pending.get(timeout=.01)
+            kind, raw, source_receipt, received_wall = pending.get(timeout=.01)
         except queue.Empty:
             rclpy.spin_once(node, timeout_sec=.001)
             continue
@@ -174,7 +201,7 @@ try:
         last = now
         input_rows.append([kind, now, source_stamp, source_receipt, time.time_ns(),
                            (time.time_ns()-source_stamp)/1e9, (now-begin)/1e6,
-                           pending.qsize(), len(raw), hashlib.sha256(raw).hexdigest()])
+                           pending.qsize(), len(raw), hashlib.sha256(raw).hexdigest(), received_wall])
         inputs[kind] += 1
         rclpy.spin_once(node, timeout_sec=0)
     if not done.is_set() or not pending.empty() or errors:
@@ -184,6 +211,8 @@ try:
         alive()
         rclpy.spin_once(node, timeout_sec=.01)
     check('source_terminal_metadata_received', source is not None)
+    if direct:
+        check('direct_source_IP_and_one_time_token_verified', direct_peer_verified)
     check('source_observer_creates_no_publishers', bool(source) and source.get('publishers_created') == 0)
     check('source_bridge_queue_no_drops', bool(source) and not any(source['dropped'].values()))
     check('source_observed_expected_message_types', bool(source) and not source.get('errors')
@@ -223,6 +252,8 @@ except Exception as exc:
     print(repr(exc), file=sys.stderr, flush=True)
 finally:
     abort.set()
+    if listener is not None:
+        listener.close()
     for name, p in reversed(processes):
         if p.poll() is None:
             os.killpg(p.pid, signal.SIGINT)
@@ -238,7 +269,7 @@ finally:
     with (out/'input-headers.csv').open('w') as f:
         writer = csv.writer(f)
         writer.writerow(['kind','monotonic_ns','source_stamp_ns','source_receipt_ns','publish_wall_ns',
-                         'source_age_s','decode_publish_ms','queue_depth','raw_bytes','raw_sha256'])
+                         'source_age_s','decode_publish_ms','queue_depth','raw_bytes','raw_sha256','receive_wall_ns'])
         writer.writerows(input_rows)
     for key, rows in outputs.items():
         with (out/(key+'-headers.jsonl')).open('w') as f:

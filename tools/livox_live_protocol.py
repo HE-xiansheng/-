@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Bounded, checksummed transport for unmodified ROS1 Livox/IMU serialization."""
 import struct
+import time
 import zlib
 HEADER = struct.Struct('!BIIQ')
 TOPICS = {1: '/livox/imu', 2: '/livox/lidar'}
@@ -45,12 +46,18 @@ def ros1_sensor_to_cdr(kind, raw):
 def write_frame(stream, kind, payload, receipt_ns):
     if kind not in (1, 2, 255) or len(payload) > MAX_BYTES:
         raise ValueError('invalid frame type/size')
+    begin = time.monotonic_ns()
+    cpu_begin = time.thread_time_ns()
     encoded = zlib.compress(payload, 1)
+    encoded_at = time.monotonic_ns()
+    encode_cpu_ns = time.thread_time_ns()-cpu_begin
     if len(encoded) > MAX_BYTES:
         raise ValueError('compressed frame too large')
     stream.write(HEADER.pack(kind, len(encoded), zlib.crc32(payload), receipt_ns))
     stream.write(encoded)
     stream.flush()
+    return {'encode_wall_ns': encoded_at-begin, 'encode_cpu_ns': encode_cpu_ns,
+            'write_wall_ns': time.monotonic_ns()-encoded_at, 'encoded_bytes': len(encoded)}
 
 
 def read_exact(stream, count, allow_eof=False):

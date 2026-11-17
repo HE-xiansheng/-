@@ -1,0 +1,276 @@
+{
+  "scope": "diagnostic only; original strict acceptance remains unchanged",
+  "path": "direct authenticated TCP",
+  "joined_inputs": 10203,
+  "source_rows": 10203,
+  "local_frames": 0,
+  "clock_note": "Cross-host wall intervals require clock-offset-bounds.json; write/read overlap and clock uncertainty can give small negative values.",
+  "streams": {
+    "1": {
+      "source_queue_s": {
+        "min": 4.3166e-05,
+        "median": 12.031587072,
+        "p95": 15.694099185,
+        "max": 16.401649653
+      },
+      "source_write_s": {
+        "min": 3.2958e-05,
+        "median": 9.3333e-05,
+        "p95": 0.025640738,
+        "max": 0.422891631
+      },
+      "target_queue_and_publish_s": {
+        "min": 0.000281747,
+        "median": 0.0149887085,
+        "p95": 0.03353847,
+        "max": 0.369485416
+      },
+      "source_age_s": {
+        "min": 0.563945024,
+        "median": 12.2663441945,
+        "p95": 16.090858873,
+        "max": 16.631633963
+      },
+      "target_decode_ms": {
+        "min": 0.035291,
+        "median": 0.109374,
+        "p95": 0.258998,
+        "max": 7.109899
+      },
+      "source_begin_to_target_read_s": {
+        "min": 0.048739256,
+        "median": 0.22493043499999998,
+        "p95": 0.509116384,
+        "max": 5.363118281
+      },
+      "source_encode_wall_s": {
+        "min": 1.9541e-05,
+        "median": 4.2583e-05,
+        "p95": 0.000195414,
+        "max": 0.010982512
+      },
+      "source_encode_cpu_s": {
+        "min": 1.9541e-05,
+        "median": 4.2e-05,
+        "p95": 0.000130666,
+        "max": 0.001170166
+      },
+      "source_pipe_write_s": {
+        "min": 8.458e-06,
+        "median": 3.0333e-05,
+        "p95": 0.025538072,
+        "max": 0.422813758
+      },
+      "source_encoded_bytes": {
+        "min": 77,
+        "median": 79.0,
+        "p95": 80,
+        "max": 81
+      }
+    },
+    "2": {
+      "source_queue_s": {
+        "min": 0.000105583,
+        "median": 11.977002589,
+        "p95": 15.631402492,
+        "max": 16.307081496
+      },
+      "source_write_s": {
+        "min": 0.011017304,
+        "median": 0.019318052,
+        "p95": 0.04237015,
+        "max": 11.547451441
+      },
+      "target_queue_and_publish_s": {
+        "min": 0.00208365,
+        "median": 0.005354955,
+        "p95": 0.013309681,
+        "max": 0.365694656
+      },
+      "source_age_s": {
+        "min": 8.801514211,
+        "median": 12.453140711,
+        "p95": 16.28171323,
+        "max": 16.728930549
+      },
+      "target_decode_ms": {
+        "min": 1.553988,
+        "median": 4.720294,
+        "p95": 12.157357,
+        "max": 365.286327
+      },
+      "source_begin_to_target_read_s": {
+        "min": 0.102008448,
+        "median": 0.320540091,
+        "p95": 0.673624724,
+        "max": 11.851360064
+      },
+      "source_encode_wall_s": {
+        "min": 0.010478893,
+        "median": 0.018347104,
+        "p95": 0.038973352,
+        "max": 0.05106106
+      },
+      "source_encode_cpu_s": {
+        "min": 0.010032749,
+        "median": 0.017277166,
+        "p95": 0.0357245,
+        "max": 0.043292291
+      },
+      "source_pipe_write_s": {
+        "min": 0.000528494,
+        "median": 0.000895699,
+        "p95": 0.001866064,
+        "max": 11.533283587
+      },
+      "source_encoded_bytes": {
+        "min": 144063,
+        "median": 164903,
+        "p95": 167458,
+        "max": 182175
+      }
+    }
+  },
+  "worst_age_inputs": [
+    {
+      "kind": 2,
+      "receipt_ns": 1794884047634195201,
+      "source_queue_s": 16.102120051,
+      "source_write_s": 0.017572154,
+      "target_queue_and_publish_s": 0.005360205,
+      "source_age_s": 16.728930549,
+      "target_decode_ms": 5.043458,
+      "source_begin_to_target_read_s": 0.514934644,
+      "source_encode_wall_s": 0.01666858,
+      "source_encode_cpu_s": 0.016625875,
+      "source_pipe_write_s": 0.000879366,
+      "source_encoded_bytes": 163593
+    },
+    {
+      "kind": 2,
+      "receipt_ns": 1794884047738229428,
+      "source_queue_s": 16.10246309,
+      "source_write_s": 0.029370241,
+      "target_queue_and_publish_s": 0.003621511,
+      "source_age_s": 16.712288575,
+      "target_decode_ms": 3.20239,
+      "source_begin_to_target_read_s": 0.495287046,
+      "source_encode_wall_s": 0.027907548,
+      "source_encode_cpu_s": 0.027798459,
+      "source_pipe_write_s": 0.001438193,
+      "source_encoded_bytes": 165388
+    },
+    {
+      "kind": 2,
+      "receipt_ns": 1794884047832350924,
+      "source_queue_s": 16.215867971,
+      "source_write_s": 0.02782559,
+      "target_queue_and_publish_s": 0.004538296,
+      "source_age_s": 16.685358904,
+      "target_decode_ms": 4.249256,
+      "source_begin_to_target_read_s": 0.360679018,
+      "source_encode_wall_s": 0.026369314,
+      "source_encode_cpu_s": 0.026355875,
+      "source_pipe_write_s": 0.00143061,
+      "source_encoded_bytes": 163055
+    },
+    {
+      "kind": 2,
+      "receipt_ns": 1794884047934465879,
+      "source_queue_s": 16.307081496,
+      "source_write_s": 0.029394449,
+      "target_queue_and_publish_s": 0.004391005,
+      "source_age_s": 16.659939531,
+      "target_decode_ms": 4.21834,
+      "source_begin_to_target_read_s": 0.241424378,
+      "source_encode_wall_s": 0.028428751,
+      "source_encode_cpu_s": 0.027120333,
+      "source_pipe_write_s": 0.000883741,
+      "source_encoded_bytes": 162750
+    },
+    {
+      "kind": 1,
+      "receipt_ns": 1794884047656228642,
+      "source_queue_s": 16.181882944,
+      "source_write_s": 8.9249e-05,
+      "target_queue_and_publish_s": 0.036036908,
+      "source_age_s": 16.631633963,
+      "target_decode_ms": 0.262789,
+      "source_begin_to_target_read_s": 0.4133136,
+      "source_encode_wall_s": 4.2e-05,
+      "source_encode_cpu_s": 4.1708e-05,
+      "source_pipe_write_s": 2.9749e-05,
+      "source_encoded_bytes": 80
+    },
+    {
+      "kind": 1,
+      "receipt_ns": 1794884047635724394,
+      "source_queue_s": 16.11822747,
+      "source_write_s": 0.082770236,
+      "target_queue_and_publish_s": 0.009105049,
+      "source_age_s": 16.628532059,
+      "target_decode_ms": 0.463747,
+      "source_begin_to_target_read_s": 0.497376781,
+      "source_encode_wall_s": 4.6667e-05,
+      "source_encode_cpu_s": 4.5208e-05,
+      "source_pipe_write_s": 0.082684195,
+      "source_encoded_bytes": 80
+    },
+    {
+      "kind": 1,
+      "receipt_ns": 1794884047661904417,
+      "source_queue_s": 16.176327626,
+      "source_write_s": 8.7791e-05,
+      "target_queue_and_publish_s": 0.036385154,
+      "source_age_s": 16.626369723,
+      "target_decode_ms": 0.111124,
+      "source_begin_to_target_read_s": 0.413215018,
+      "source_encode_wall_s": 4.1416e-05,
+      "source_encode_cpu_s": 4.0834e-05,
+      "source_pipe_write_s": 2.9458e-05,
+      "source_encoded_bytes": 79
+    },
+    {
+      "kind": 1,
+      "receipt_ns": 1794884047636525010,
+      "source_queue_s": 16.200644794,
+      "source_write_s": 0.00018579,
+      "target_queue_and_publish_s": 0.010729327,
+      "source_age_s": 16.626044486,
+      "target_decode_ms": 0.191915,
+      "source_begin_to_target_read_s": 0.414181883,
+      "source_encode_wall_s": 7.6124e-05,
+      "source_encode_cpu_s": 7.2625e-05,
+      "source_pipe_write_s": 7.3207e-05,
+      "source_encoded_bytes": 80
+    },
+    {
+      "kind": 1,
+      "receipt_ns": 1794884047666484704,
+      "source_queue_s": 16.171865754,
+      "source_write_s": 0.000115791,
+      "target_queue_and_publish_s": 0.032732935,
+      "source_age_s": 16.623577014,
+      "target_decode_ms": 0.119582,
+      "source_begin_to_target_read_s": 0.418527974,
+      "source_encode_wall_s": 6.6791e-05,
+      "source_encode_cpu_s": 6.65e-05,
+      "source_pipe_write_s": 3.1208e-05,
+      "source_encoded_bytes": 79
+    },
+    {
+      "kind": 1,
+      "receipt_ns": 1794884047641937413,
+      "source_queue_s": 16.195466305,
+      "source_write_s": 0.000407163,
+      "target_queue_and_publish_s": 0.011889567,
+      "source_age_s": 16.621779449,
+      "target_decode_ms": 0.139999,
+      "source_begin_to_target_read_s": 0.413966927,
+      "source_encode_wall_s": 0.00034183,
+      "source_encode_cpu_s": 0.000342125,
+      "source_pipe_write_s": 4.5208e-05,
+      "source_encoded_bytes": 79
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+1794883756.0652924 [INFO] [launch]: All log files can be found below /tmp/livox-live-check/ros-log/2026-11-17-10-49-16-063294-orangepi5ultra-294415
+1794883756.0655596 [INFO] [launch]: Default logging verbosity is set to INFO
+1794883756.1184585 [INFO] [fastlio_mapping-1]: process started with pid [294429]
+1794883833.8410077 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1794883833.8432949 [INFO] [fastlio_mapping-1]: sending signal 'SIGINT' to process[fastlio_mapping-1]
+1794883834.0065365 [INFO] [fastlio_mapping-1]: process has finished cleanly [pid 294429]

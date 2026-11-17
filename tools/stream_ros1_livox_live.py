@@ -4,6 +4,7 @@ import json
 import os
 import queue
 import signal
+import socket
 import sys
 import tempfile
 import threading
@@ -14,6 +15,12 @@ from livox_live_protocol import write_frame
 def main(seconds=60):
     binary = sys.stdout.buffer
     sys.stdout = sys.stderr
+    connection = None
+    if os.environ.get('LIVOX_LIVE_DIRECT') == '1':
+        connection = socket.create_connection(('192.168.1.224', 24383), timeout=15)
+        binary = connection.makefile('wb')
+        binary.write(os.environ['LIVOX_LIVE_TOKEN'].encode('ascii'))
+        binary.flush()
     stop = threading.Event()
     for sig in (signal.SIGINT, signal.SIGTERM, signal.SIGHUP):
         signal.signal(sig, lambda *_: stop.set())
@@ -29,6 +36,7 @@ def main(seconds=60):
         errors = []
         types = {}
         transport = {str(k): {'messages': 0, 'max_queue_age_s': 0., 'max_write_s': 0., 'max_queue_depth': 0} for k in (1, 2)}
+        transport_rows = []
         lock = threading.Lock()
         recording = True
         subscribers = []
@@ -36,10 +44,14 @@ def main(seconds=60):
 
         def transmit(kind, payload, receipt_ns):
             start = time.monotonic()
+            begin_wall = time.time_ns()
+            depth = pending.qsize()
             metrics = transport[str(kind)]
             metrics['max_queue_age_s'] = max(metrics['max_queue_age_s'], (time.time_ns()-receipt_ns)/1e9)
             metrics['max_queue_depth'] = max(metrics['max_queue_depth'], pending.qsize())
-            write_frame(binary, kind, payload, receipt_ns)
+            detail = write_frame(binary, kind, payload, receipt_ns)
+            transport_rows.append([kind, receipt_ns, begin_wall, time.time_ns(), depth, len(payload),
+                detail['encode_wall_ns'], detail['encode_cpu_ns'], detail['write_wall_ns'], detail['encoded_bytes']])
             metrics['max_write_s'] = max(metrics['max_write_s'], time.monotonic()-start)
             metrics['messages'] += 1
             sent[str(kind)] += 1
@@ -81,12 +93,18 @@ def main(seconds=60):
                     transmit(kind, payload, receipt_ns)
             result = {'duration_s': time.monotonic()-begin, 'received': counts,
                       'sent': sent, 'dropped': dropped, 'publishers_created': 0,
-                      'types': types, 'errors': errors, 'transport': transport, 'flight_commands_sent': False}
+                      'types': types, 'errors': errors, 'transport': transport,
+                      'transport_columns': ['kind', 'receipt_ns', 'write_begin_ns', 'write_end_ns', 'queue_depth', 'raw_bytes',
+                                            'encode_wall_ns', 'encode_cpu_ns', 'write_wall_ns', 'encoded_bytes'],
+                      'transport_rows': transport_rows, 'flight_commands_sent': False}
             write_frame(binary, 255, json.dumps(result).encode(), time.time_ns())
         finally:
             for subscriber in subscribers:
                 subscriber.unregister()
             rospy.signal_shutdown('read-only live sample finished')
+            if connection is not None:
+                binary.close()
+                connection.close()
 
 
 if __name__ == '__main__':

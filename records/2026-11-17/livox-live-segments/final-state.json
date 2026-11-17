@@ -1,0 +1,22 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "3f4a82",
+      "wall_time_seconds": 0.509919954,
+      "exit_code": 0,
+      "original_token_count": 138,
+      "output": "2026-11-17T10:55:30+08:00\nPower save: off\n\tfreq: 5180\n\tsignal: -74 dBm\n\trx bitrate: 51.6 MBit/s\n\ttx bitrate: 51.5 MBit/s\n wlan0: 13925008  126032    0  475    0     0          0     22889 618105453  473833    0    0    0     0       0          0\nactive\n1414 /usr/local/bin/mediamtx /etc/mediamtx/gimbal.yml\n4604 /home/orangepi/drone_platform/02_drivers/sensors/lib/livox_ros_driver2/livox_ros_driver2_node ARMCP1V0038817 __name:=livox_lidar_publisher2 __log:=/home/orangepi/.ros/log/3c5ab5d0-e21c-11f1-be1d-00e09a5b57c2/livox_lidar_publisher2-1.log\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "b1cb2a",
+      "wall_time_seconds": 0.464603844,
+      "exit_code": 0,
+      "original_token_count": 71,
+      "output": "2026-11-17T10:55:30+08:00\nPower save: off\n\tfreq: 5240\n\tsignal: -60 dBm\n\trx bitrate: 216.6 MBit/s\n\ttx bitrate: 172.0 MBit/s\n wlan0: 1808245787 2841278    0 7137    0     0          0    494645 8081093333 5940622    0    0    0     0       0          0\nactive\nOWNED_DIRECTORY_ABSENT\n"
+    }
+  }
+]
