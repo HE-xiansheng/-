@@ -1,0 +1,26 @@
+{
+  "utc": "2026-11-17T05:23:42.971384+00:00",
+  "installed_sdk_path": "/home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so",
+  "installed_sdk_sha256": "292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3",
+  "library_users": [],
+  "owned_processes": [],
+  "temporary_dirs": {
+    "/tmp/livox-native-check": false,
+    "/tmp/livox-sdk-symbol-check": false,
+    "/tmp/livox-shutdown-debug": false,
+    "/tmp/localization-readiness-check": false
+  },
+  "staging_file_exists": false,
+  "product_commit": "7a3c0cb71864d02a5764a22d8e004debb615232e",
+  "git_status": "",
+  "sensor_route": "192.168.1.158 dev enP3p49s0 src 192.168.1.51 uid 1000 \n    cache",
+  "default_route": "1.1.1.1 via 192.168.1.1 dev wlan0 src 192.168.1.224 uid 1000 \n    cache",
+  "sensor_profile": "ROS2 Livox\n4fb850bb-6fb0-4380-aacc-7a641a3dc761\nyes\n192.168.1.51/32\n192.168.1.158/32",
+  "nomachine": "active",
+  "driver_ros_package_xml_versions": {
+    "/home/orangepi/drone_platform/02_drivers/sensors/workspace/src/livox_ros_driver2/package.xml": "1.0.0",
+    "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/share/livox_ros_driver2/package.xml": "1.0.0"
+  },
+  "driver_runtime_version": "1.2.6",
+  "driver_runtime_version_source": "installed-run1/livox-native-check/driver.log"
+}

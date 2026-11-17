@@ -157,6 +157,7 @@ try:
     if '--deployed-config' not in sys.argv:
         driver_command.append('device_config:='+str(root/'device-config.json'))
     driver_env = None
+    sdk_dir = platform/'02_drivers/sensors/sdk2/lib'
     if '--candidate-sdk' in sys.argv:
         sdk_dir = Path('/tmp/livox-sdk-symbol-check/build/sdk_core')
         assert (sdk_dir/'liblivox_lidar_sdk_shared.so').is_file()
@@ -232,20 +233,25 @@ try:
                           capture_output=True,text=True,timeout=15)
     (root/'lio-parameters.yaml').write_text(dump.stdout+dump.stderr)
     check('lio_parameter_snapshot', dump.returncode == 0)
-    if '--candidate-sdk' in sys.argv:
-        driver_group = next(p.pid for name, p in processes if name == 'driver')
-        loaded = set()
-        for proc in Path('/proc').iterdir():
-            if not proc.name.isdigit():
-                continue
-            try:
-                if os.getpgid(int(proc.name)) == driver_group:
-                    loaded.update(line.split()[-1] for line in (proc/'maps').read_text().splitlines()
-                                  if 'liblivox_lidar_sdk_shared.so' in line)
-            except (FileNotFoundError, ProcessLookupError, PermissionError):
-                pass
-        result['loaded_sdk'] = sorted(loaded)
-        check('actual_driver_loads_candidate_sdk', bool(loaded) and all(str(sdk_dir) in path for path in loaded))
+    driver_group = next(p.pid for name, p in processes if name == 'driver')
+    loaded = set()
+    for proc in Path('/proc').iterdir():
+        if not proc.name.isdigit():
+            continue
+        try:
+            if os.getpgid(int(proc.name)) == driver_group:
+                loaded.update(os.fsdecode(line.split(maxsplit=5)[-1])
+                              for line in (proc/'maps').read_bytes().splitlines()
+                              if b'liblivox_lidar_sdk_shared.so' in line)
+        except (FileNotFoundError, ProcessLookupError, PermissionError):
+            pass
+    result['loaded_sdk'] = sorted(loaded)
+    result['loaded_sdk_sha256'] = {path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+                                   for path in loaded}
+    result['driver_preload'] = (driver_env or os.environ).get('LD_PRELOAD', '')
+    expected_sdk = str(sdk_dir/'liblivox_lidar_sdk_shared.so')
+    check('actual_driver_loads_candidate_sdk' if '--candidate-sdk' in sys.argv else
+          'actual_driver_loads_installed_sdk', loaded == {expected_sdk})
 except Exception as exc:
     result['error'] = repr(exc)
     print(repr(exc), flush=True)

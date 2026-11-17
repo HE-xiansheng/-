@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "scope": "physical native LiDAR -> installed FAST-LIO -> pose relay; no MAVROS/FCU or setpoints",
+  "passive_planner": {
+    "status_messages": 274,
+    "grid_messages": 469,
+    "world_messages": 588,
+    "stable_phases": [
+      "WAIT_GOAL"
+    ],
+    "grid_max_points": 16809
+  },
+  "streams": {
+    "lidar": {
+      "messages": 600,
+      "stable_messages": 450,
+      "hz": 9.998592918060364,
+      "max_gap_s": 0.113083303,
+      "min_age_s": 0.094301988,
+      "max_age_s": 0.29795754,
+      "frames": [
+        "livox_frame"
+      ]
+    },
+    "imu": {
+      "messages": 12005,
+      "stable_messages": 9000,
+      "hz": 199.99458900738273,
+      "max_gap_s": 0.026686247,
+      "min_age_s": 0.000210291,
+      "max_age_s": 0.198108986,
+      "frames": [
+        "livox_frame"
+      ]
+    },
+    "odom": {
+      "messages": 588,
+      "stable_messages": 450,
+      "hz": 9.99277196742269,
+      "max_gap_s": 0.150027122,
+      "min_age_s": 0.016165391,
+      "max_age_s": 0.081777917,
+      "frames": [
+        "camera_init"
+      ]
+    },
+    "cloud": {
+      "messages": 588,
+      "stable_messages": 451,
+      "hz": 10.000836442624442,
+      "max_gap_s": 0.147937607,
+      "min_age_s": 0.01817701,
+      "max_age_s": 0.087136641,
+      "frames": [
+        "body"
+      ]
+    },
+    "vision": {
+      "messages": 488,
+      "stable_messages": 450,
+      "hz": 10.007647246687508,
+      "max_gap_s": 0.169689,
+      "min_age_s": 0.04461103,
+      "max_age_s": 0.115275706,
+      "frames": [
+        "map"
+      ]
+    }
+  },
+  "imu_acceleration_norm": {
+    "min": 0.9532452968453506,
+    "mean": 0.9919326625900754,
+    "max": 1.0366938840760962
+  },
+  "loaded_sdk": [
+    "/home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so"
+  ],
+  "loaded_sdk_sha256": {
+    "/home/orangepi/drone_platform/02_drivers/sensors/sdk2/lib/liblivox_lidar_sdk_shared.so": "292c8fdd45ad82feb960ee3c6aa9708f74e2e4362dedcc5973178616a3b437b3"
+  },
+  "driver_preload": "",
+  "returncodes": {
+    "driver": 0,
+    "lio": 0,
+    "relay": 0,
+    "planner": 0
+  },
+  "checks": {
+    "lidar_sustained_rate": true,
+    "lidar_no_two_second_gap": true,
+    "lidar_source_age_bounded": true,
+    "lidar_source_stamps_increase": true,
+    "lidar_finite_data": true,
+    "imu_sustained_rate": true,
+    "imu_no_two_second_gap": true,
+    "imu_source_age_bounded": true,
+    "imu_source_stamps_increase": true,
+    "imu_finite_data": true,
+    "odom_sustained_rate": true,
+    "odom_no_two_second_gap": true,
+    "odom_source_age_bounded": true,
+    "odom_source_stamps_increase": true,
+    "odom_finite_data": true,
+    "cloud_sustained_rate": true,
+    "cloud_no_two_second_gap": true,
+    "cloud_source_age_bounded": true,
+    "cloud_source_stamps_increase": true,
+    "cloud_finite_data": true,
+    "vision_sustained_rate": true,
+    "vision_no_two_second_gap": true,
+    "vision_source_age_bounded": true,
+    "vision_source_stamps_increase": true,
+    "vision_finite_data": true,
+    "lidar_imu_frames": true,
+    "raw_schema_matches_ROS_deserialization": true,
+    "nonempty_body_cloud": true,
+    "lio_pose_frames_and_rotation": true,
+    "relay_preserves_actual_lio_stamps": true,
+    "no_FCU_or_setpoint_interfaces": true,
+    "real_planner_stays_ready_without_goal": true,
+    "planner_never_accepts_goal_or_outputs_commands": true,
+    "world_cloud_reaches_planner_frame": true,
+    "real_inflated_grid_nonempty_and_fresh": true,
+    "no_goal_publishers": true,
+    "lio_parameter_snapshot": true,
+    "actual_driver_loads_installed_sdk": true,
+    "launched_nodes_exit_normally": true,
+    "owned_processes_exit_normally": true
+  }
+}

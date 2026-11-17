@@ -1,0 +1,150 @@
+{
+  "final-state.json": {
+    "bytes": 1342,
+    "sha256": "4c0c05903cdc336241454d4384639e7a7305a508a00e793fb3dc08d7992218af"
+  },
+  "final-readback-check-attempt1.json": {
+    "bytes": 333,
+    "sha256": "c0ebbd986eeaa300a234cdb561c8d055bd59ac59c2ecc9b11322bbcbf638f066"
+  },
+  "apply_sdk_fix.py": {
+    "bytes": 6248,
+    "sha256": "8919d7dc67b9de51495de5f2d49723795ee734f8d593ca46f66d5af5d63d0a1e"
+  },
+  "attempt1-application.stderr.log": {
+    "bytes": 605,
+    "sha256": "98785bf153a911950da6ec3e8520ccf21543c17152120b11bc13e221a6ef92d3"
+  },
+  "README.md": {
+    "bytes": 4174,
+    "sha256": "66278210aef831b21e6a24761aa63ddacc71a5aae6667f5d9f14ae9058bfea4e"
+  },
+  "application.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "application.stdout.log": {
+    "bytes": 1145,
+    "sha256": "5d65c80831ea3a1763c0df67e9786c520551e93e04dd81540f854c43863dca1f"
+  },
+  "application.json": {
+    "bytes": 1121,
+    "sha256": "d2b8990a1f96cf18269c2b541aa7d165a7d2e40440ba35f53faa9520dd9bc311"
+  },
+  "final-readback.stdout.log": {
+    "bytes": 1214,
+    "sha256": "b1d6db55abdd5b235e43546a950e93b69fa7f8bd41d7beb588779d9d7921a194"
+  },
+  "final-readback.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "attempt1-application.stdout.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "installed-run1/processes-before.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "installed-run1/consumer.log": {
+    "bytes": 1457,
+    "sha256": "8b8863cf4f17d92b79bea1be75426113a8fe74c881a912115a34ba529c1bdaa4"
+  },
+  "installed-run1/final-state.log": {
+    "bytes": 2512,
+    "sha256": "1299f97f36fb23d3f0e54f0b93d0cbe844b483df3efb23eb419cf29d17d8ce2e"
+  },
+  "installed-run1/owned-cleanup.log": {
+    "bytes": 48,
+    "sha256": "72d93f915e7496fa0c6d010f6a1bc5908551f941a27ab9c77a16c9ce7447ee53"
+  },
+  "installed-run1/evidence.tar.gz": {
+    "bytes": 1820199,
+    "sha256": "c8ced301cae9a4408e7a2b5f5dbc0a765c55e2661d3e698aa9866962ce04ccd5"
+  },
+  "installed-run1/inputs.tar": {
+    "bytes": 51200,
+    "sha256": "78216a12867af4b707c220d04bb042276bf231c6a8ed9faec8656dad5116fdbd"
+  },
+  "installed-run1/deployed-device-config.log": {
+    "bytes": 764,
+    "sha256": "27478c1d1c100c1e393115ebf8562c0e422ee39e3500b6d5e75090aa232b8b6e"
+  },
+  "installed-run1/runner-result.json": {
+    "bytes": 330,
+    "sha256": "864024247eb6be5fae12e8c87c6862d08d9e6724a6e2135b3cbfe45e4638cd5d"
+  },
+  "installed-run1/network-before.log": {
+    "bytes": 2491,
+    "sha256": "6fd339082dff58a68a9dee36053c93a072e19764aa0aae1bbbf50170bca0440b"
+  },
+  "installed-run1/inputs-manifest.json": {
+    "bytes": 395,
+    "sha256": "f6da032f90a6fe264d86fdb09c4ac6f57746e4a8b46ccbb4e772851f34399c31"
+  },
+  "installed-run1/active-connections-before.log": {
+    "bytes": 90,
+    "sha256": "adfaf35b63a3c87407f5c1ba6ad755536b6e3e59ccb485beec1e24f65e3b1ca9"
+  },
+  "installed-run1/network-active.log": {
+    "bytes": 2544,
+    "sha256": "66e0eb1129c71611b1178b99edf914698fcebec734ca1d867f2fef911f8b67bd"
+  },
+  "installed-run1/device-config.json": {
+    "bytes": 764,
+    "sha256": "27478c1d1c100c1e393115ebf8562c0e422ee39e3500b6d5e75090aa232b8b6e"
+  },
+  "installed-run1/remove-remote.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "installed-run1/lidar-ping.log": {
+    "bytes": 422,
+    "sha256": "b1c25ba7b350a0cd771d55850f34f8c035d9b0f701888395b187d2f70547dbcb"
+  },
+  "installed-run1/network-after-test.log": {
+    "bytes": 2399,
+    "sha256": "2844fbeab6c1fd1f9404c81f424d7c8cd0e0be69def73288cb17f9a1dfd49549"
+  },
+  "installed-run1/livox-native-check/driver.log": {
+    "bytes": 2667,
+    "sha256": "fa9419dc008de9c56ec15c876faaa8d2f2ca1e5f7316bcba132ccf00fd5b1083"
+  },
+  "installed-run1/livox-native-check/result.json": {
+    "bytes": 3678,
+    "sha256": "560093e454118b0af8cb5629837bf6b828c1c416898a06f9442216d712577739"
+  },
+  "installed-run1/livox-native-check/lio-parameters.yaml": {
+    "bytes": 1495,
+    "sha256": "381c6e3884e3b38690f4464c7426b42f3c3d6e84f92808bef5f1421bd672bcd7"
+  },
+  "installed-run1/livox-native-check/sensor-readiness.json": {
+    "bytes": 1097,
+    "sha256": "42b4bffbc289a741622a3ad8e96a1585ee058285db6e2c6c674ad2f5a1e54bc0"
+  },
+  "installed-run1/livox-native-check/owned-processes.json": {
+    "bytes": 300,
+    "sha256": "36f4d0fcdb5773fe2d530fa1f4f12e8e8c6fe6206865571bb1d7176b1bcd6d22"
+  },
+  "installed-run1/livox-native-check/relay.log": {
+    "bytes": 212,
+    "sha256": "60e11638a07a4272a444ea8f7bb180ed5434030a09be6ba9d1583953641b7258"
+  },
+  "installed-run1/livox-native-check/device-config.json": {
+    "bytes": 764,
+    "sha256": "27478c1d1c100c1e393115ebf8562c0e422ee39e3500b6d5e75090aa232b8b6e"
+  },
+  "installed-run1/livox-native-check/lio.log": {
+    "bytes": 1180,
+    "sha256": "ccf4b2f05732f57d724d58f70a16d3e38d6eb09a78cf3d84a81c2b71bf97aab8"
+  },
+  "installed-run1/livox-native-check/planner.log": {
+    "bytes": 1008,
+    "sha256": "41788321164eecbd35c9ff7880249215b30a4a0924a5f7dd18c92ef4ed2af56e"
+  },
+  "installed-run1/livox-native-check/owned-cleanup.json": {
+    "bytes": 56,
+    "sha256": "70c0fb643c3698c1a71a7468f2ebd4688532390c88ac1786c92f73fa4a6b8e65"
+  }
+}
