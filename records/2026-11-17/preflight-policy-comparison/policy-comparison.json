@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "status_policy_identical": true,
+    "r4_deployed_policy_identical": true,
+    "r4_deployed_sampler_identical": true,
+    "per_topic_limits_identical": true
+  },
+  "sha256": {
+    "/home/tyzk/.planning/2026-11-16-ros2-platform-audit/snapshot/groundstation/tools/preflight/preflight_status.py": "6f06e6d9496b7ff5bab2006ee838e268137160782308d4aa6b924129cd5f3829",
+    "groundstation/tools/preflight/preflight_status.py": "6f06e6d9496b7ff5bab2006ee838e268137160782308d4aa6b924129cd5f3829",
+    "/home/tyzk/.planning/2026-11-16-ros2-platform-audit/snapshot/groundstation/tools/preflight/telemetry_reader.py": "1aba18561754df3cc2440d3a2fced442c1007c5c85558532a968fa04530754e6",
+    "groundstation/tools/preflight/telemetry_reader.py": "d55cdd7ab11df674a01dd72d72efe60bc5199034f445bc9a9076e125566a3dd6",
+    "/home/tyzk/\u4e0b\u8f7d/\u79d1\u7814\u98de\u884c\u5e73\u53f0-ROS2\u5730\u9762\u7ad9/drone-gcs-ros2-20261117-ros2-r4-linux-amd64/tools/preflight/preflight_status.py": "6f06e6d9496b7ff5bab2006ee838e268137160782308d4aa6b924129cd5f3829",
+    "/home/tyzk/\u4e0b\u8f7d/\u79d1\u7814\u98de\u884c\u5e73\u53f0-ROS2\u5730\u9762\u7ad9/drone-gcs-ros2-20261117-ros2-r4-linux-amd64/tools/preflight/telemetry_reader.py": "d55cdd7ab11df674a01dd72d72efe60bc5199034f445bc9a9076e125566a3dd6",
+    "/home/tyzk/\u5de5\u4f5c\u9879\u76ee/\u5730\u9762\u7ad9\u4e0e\u5e73\u53f0/dianyunGCS-review-20261026/dianyunGCS-master/tools/preflight/preflight_status.py": "6f06e6d9496b7ff5bab2006ee838e268137160782308d4aa6b924129cd5f3829",
+    "/home/tyzk/\u5de5\u4f5c\u9879\u76ee/\u5730\u9762\u7ad9\u4e0e\u5e73\u53f0/dianyunGCS-review-20261026/dianyunGCS-master/tools/preflight/telemetry_reader.py": "1aba18561754df3cc2440d3a2fced442c1007c5c85558532a968fa04530754e6"
+  },
+  "limits_s": {
+    "ROS1": {
+      "lidar": 0.4,
+      "imu": 0.4,
+      "fc_imu": 0.5,
+      "pressure": 3.0,
+      "lio": 0.4,
+      "cloud": 0.4,
+      "relay": 0.4,
+      "fc_odom": 0.4,
+      "fc": 3.0,
+      "landed": 3.0,
+      "ekf": 3.0,
+      "rc": 1.0,
+      "battery": 5.0,
+      "text": 120.0
+    },
+    "ROS2": {
+      "lidar": 0.4,
+      "imu": 0.4,
+      "fc_imu": 0.5,
+      "pressure": 3.0,
+      "lio": 0.4,
+      "cloud": 0.4,
+      "relay": 0.4,
+      "fc_odom": 0.4,
+      "fc": 3.0,
+      "landed": 3.0,
+      "ekf": 3.0,
+      "rc": 1.0,
+      "battery": 5.0,
+      "text": 120.0
+    }
+  }
+}

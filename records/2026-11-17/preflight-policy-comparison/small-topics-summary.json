@@ -1,0 +1,399 @@
+{
+  "started_wall": 1794909081.7245026,
+  "duration_s": 30.089357255999857,
+  "summary": {
+    "imu": {
+      "topic": "/livox/imu",
+      "count": 5673,
+      "received_hz": 199.61708407096566,
+      "source_age_s": {
+        "min": 0.000399001,
+        "median": 0.003324127,
+        "p95": 0.014270968,
+        "max": 0.033729815
+      },
+      "publish_measurement_age_s": {
+        "min": 2.1000000000000002e-05,
+        "median": 0.000136792,
+        "p95": 0.009157756000000001,
+        "max": 0.024625725
+      },
+      "publish_to_callback_s": {
+        "min": 0.00034795800000000005,
+        "median": 0.001773334,
+        "p95": 0.010065715000000001,
+        "max": 0.032005772
+      },
+      "publish_to_dds_receive_s": {
+        "min": 9.334e-06,
+        "median": 0.000198041,
+        "p95": 0.002945544,
+        "max": 0.016495803
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.000255209,
+        "median": 0.001272542,
+        "p95": 0.009060631000000001,
+        "max": 0.030229521000000002
+      },
+      "receipt_gap_s": {
+        "min": 0.0003704170003402396,
+        "median": 0.004182503000265569,
+        "p95": 0.012816717000532662,
+        "max": 0.03767023500040523
+      },
+      "age_over_0_2_s": 0,
+      "non_increasing_stamp": 0,
+      "values": {},
+      "display_fresh_0_4_s": 133,
+      "display_snapshots": 133,
+      "endpoints": [
+        {
+          "node": "/livox_lidar_publisher2",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE",
+          "depth": 0
+        }
+      ]
+    },
+    "lio": {
+      "topic": "/factory_fastlio/odometry",
+      "count": 298,
+      "received_hz": 10.0365488095795,
+      "source_age_s": {
+        "min": 0.067629495,
+        "median": 0.21209160100000002,
+        "p95": 0.37720838900000003,
+        "max": 0.5409843710000001
+      },
+      "publish_measurement_age_s": {
+        "min": 0.062275949000000004,
+        "median": 0.205091444,
+        "p95": 0.373744514,
+        "max": 0.5359467010000001
+      },
+      "publish_to_callback_s": {
+        "min": 0.0008050010000000001,
+        "median": 0.004850129,
+        "p95": 0.016388470000000002,
+        "max": 0.075126094
+      },
+      "publish_to_dds_receive_s": {
+        "min": 8.8084e-05,
+        "median": 0.0007650430000000001,
+        "p95": 0.007220505,
+        "max": 0.019402264000000002
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.000580709,
+        "median": 0.003098668,
+        "p95": 0.013311384,
+        "max": 0.066108337
+      },
+      "receipt_gap_s": {
+        "min": 0.0032132940004885313,
+        "median": 0.07423884300078498,
+        "p95": 0.2916896189999534,
+        "max": 0.491808091999701
+      },
+      "age_over_0_2_s": 166,
+      "non_increasing_stamp": 0,
+      "values": {},
+      "display_fresh_0_4_s": 122,
+      "display_snapshots": 133,
+      "endpoints": [
+        {
+          "node": "/factory_laserMapping",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE",
+          "depth": 0
+        }
+      ]
+    },
+    "relay": {
+      "topic": "/mavros/vision_pose/pose",
+      "count": 84,
+      "received_hz": 2.804412761658501,
+      "source_age_s": {
+        "min": 0.069298996,
+        "median": 0.170469439,
+        "p95": 0.17624160500000002,
+        "max": 0.183657027
+      },
+      "publish_measurement_age_s": {
+        "min": 0.06838374500000001,
+        "median": 0.16827103300000001,
+        "p95": 0.169702094,
+        "max": 0.17413092000000002
+      },
+      "publish_to_callback_s": {
+        "min": 0.0005763340000000001,
+        "median": 0.002718335,
+        "p95": 0.009537507,
+        "max": 0.015441428
+      },
+      "publish_to_dds_receive_s": {
+        "min": 5.3084e-05,
+        "median": 0.000249084,
+        "p95": 0.004559337,
+        "max": 0.008454547
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.00032287500000000003,
+        "median": 0.001661043,
+        "p95": 0.007988464,
+        "max": 0.015096094000000001
+      },
+      "receipt_gap_s": {
+        "min": 0.030315854999571457,
+        "median": 0.20194722400083265,
+        "p95": 0.9956786490001832,
+        "max": 1.4031285159999243
+      },
+      "age_over_0_2_s": 0,
+      "non_increasing_stamp": 0,
+      "values": {},
+      "display_fresh_0_4_s": 67,
+      "display_snapshots": 133,
+      "endpoints": [
+        {
+          "node": "/factory_vision2mavros",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE",
+          "depth": 0
+        }
+      ]
+    },
+    "fc_odom": {
+      "topic": "/mavros/local_position/odom",
+      "count": 851,
+      "received_hz": 29.998548823729042,
+      "source_age_s": {
+        "min": 0.001998479,
+        "median": 0.010260489000000001,
+        "p95": 0.019372458000000002,
+        "max": 0.037634801
+      },
+      "publish_measurement_age_s": {
+        "min": 0.0012085140000000002,
+        "median": 0.006443445000000001,
+        "p95": 0.012288961000000001,
+        "max": 0.015783391
+      },
+      "publish_to_callback_s": {
+        "min": 0.0006122090000000001,
+        "median": 0.0028175020000000004,
+        "p95": 0.010549299,
+        "max": 0.025243768000000003
+      },
+      "publish_to_dds_receive_s": {
+        "min": 4.6959e-05,
+        "median": 0.000209416,
+        "p95": 0.003184127,
+        "max": 0.013436218000000002
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.000466084,
+        "median": 0.001987418,
+        "p95": 0.009043131000000001,
+        "max": 0.024463851
+      },
+      "receipt_gap_s": {
+        "min": 0.015893802000391588,
+        "median": 0.03320889799942961,
+        "p95": 0.04101594500025385,
+        "max": 0.058753082000293944
+      },
+      "age_over_0_2_s": 0,
+      "non_increasing_stamp": 0,
+      "values": {},
+      "display_fresh_0_4_s": 133,
+      "display_snapshots": 133,
+      "endpoints": [
+        {
+          "node": "/mavros/local_position",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE",
+          "depth": 0
+        }
+      ]
+    },
+    "fc": {
+      "topic": "/mavros/state",
+      "count": 29,
+      "received_hz": 1.0001248216856649,
+      "source_age_s": {
+        "min": 0.0005550420000000001,
+        "median": 0.00208571,
+        "p95": 0.006698129000000001,
+        "max": 0.0070455050000000005
+      },
+      "publish_measurement_age_s": {
+        "min": 2.0708000000000002e-05,
+        "median": 4.3167e-05,
+        "p95": 6.241700000000001e-05,
+        "max": 7.4666e-05
+      },
+      "publish_to_callback_s": {
+        "min": 0.0005037090000000001,
+        "median": 0.0020337930000000003,
+        "p95": 0.006654962,
+        "max": 0.007007589000000001
+      },
+      "publish_to_dds_receive_s": {
+        "min": 6.2125e-05,
+        "median": 0.000258708,
+        "p95": 0.003438169,
+        "max": 0.005792504
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.00032579200000000004,
+        "median": 0.000896292,
+        "p95": 0.006464213000000001,
+        "max": 0.006530421000000001
+      },
+      "receipt_gap_s": {
+        "min": 0.9928197310000542,
+        "median": 0.9992851100005282,
+        "p95": 1.0063635740007157,
+        "max": 1.0075010740001744
+      },
+      "age_over_0_2_s": 0,
+      "non_increasing_stamp": 0,
+      "values": {
+        "{\"armed\": false, \"connected\": true, \"mode\": \"AUTO.LOITER\"}": 29
+      },
+      "endpoints": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL",
+          "depth": 0
+        }
+      ]
+    },
+    "ekf": {
+      "topic": "/mavros/estimator_status",
+      "count": 28,
+      "received_hz": 0.9999958337951346,
+      "source_age_s": {
+        "min": 0.000646917,
+        "median": 0.002576001,
+        "p95": 0.006832879,
+        "max": 0.007689213
+      },
+      "publish_measurement_age_s": {
+        "min": 1.3125e-05,
+        "median": 2.5084000000000002e-05,
+        "p95": 4.2000000000000004e-05,
+        "max": 4.2292e-05
+      },
+      "publish_to_callback_s": {
+        "min": 0.000621833,
+        "median": 0.002558793,
+        "p95": 0.006810129000000001,
+        "max": 0.007661505000000001
+      },
+      "publish_to_dds_receive_s": {
+        "min": 5.3667000000000006e-05,
+        "median": 0.00026162500000000003,
+        "p95": 0.005387379,
+        "max": 0.0061226710000000005
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.00030975,
+        "median": 0.0014227500000000002,
+        "p95": 0.0033352110000000003,
+        "max": 0.006118879000000001
+      },
+      "receipt_gap_s": {
+        "min": 0.9901664369999708,
+        "median": 0.9998372360005305,
+        "p95": 1.0052161550001983,
+        "max": 1.0091174919998593
+      },
+      "age_over_0_2_s": 0,
+      "non_increasing_stamp": 0,
+      "values": {
+        "{\"accel_error_status_flag\": false, \"attitude_status_flag\": true, \"const_pos_mode_status_flag\": true, \"gps_glitch_status_flag\": false, \"pos_horiz_abs_status_flag\": false, \"pos_horiz_rel_status_flag\": true, \"pos_vert_abs_status_flag\": false, \"pos_vert_agl_status_flag\": false, \"pred_pos_horiz_abs_status_flag\": false, \"pred_pos_horiz_rel_status_flag\": false, \"velocity_horiz_status_flag\": true, \"velocity_vert_status_flag\": true}": 11,
+        "{\"accel_error_status_flag\": false, \"attitude_status_flag\": true, \"const_pos_mode_status_flag\": true, \"gps_glitch_status_flag\": false, \"pos_horiz_abs_status_flag\": false, \"pos_horiz_rel_status_flag\": true, \"pos_vert_abs_status_flag\": true, \"pos_vert_agl_status_flag\": false, \"pred_pos_horiz_abs_status_flag\": false, \"pred_pos_horiz_rel_status_flag\": true, \"velocity_horiz_status_flag\": true, \"velocity_vert_status_flag\": true}": 9,
+        "{\"accel_error_status_flag\": false, \"attitude_status_flag\": true, \"const_pos_mode_status_flag\": false, \"gps_glitch_status_flag\": false, \"pos_horiz_abs_status_flag\": false, \"pos_horiz_rel_status_flag\": true, \"pos_vert_abs_status_flag\": true, \"pos_vert_agl_status_flag\": false, \"pred_pos_horiz_abs_status_flag\": false, \"pred_pos_horiz_rel_status_flag\": true, \"velocity_horiz_status_flag\": true, \"velocity_vert_status_flag\": true}": 3,
+        "{\"accel_error_status_flag\": false, \"attitude_status_flag\": true, \"const_pos_mode_status_flag\": false, \"gps_glitch_status_flag\": false, \"pos_horiz_abs_status_flag\": false, \"pos_horiz_rel_status_flag\": true, \"pos_vert_abs_status_flag\": false, \"pos_vert_agl_status_flag\": false, \"pred_pos_horiz_abs_status_flag\": false, \"pred_pos_horiz_rel_status_flag\": false, \"velocity_horiz_status_flag\": true, \"velocity_vert_status_flag\": true}": 5
+      },
+      "endpoints": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.TRANSIENT_LOCAL",
+          "depth": 0
+        }
+      ]
+    },
+    "rc": {
+      "topic": "/mavros/rc/in",
+      "count": 0,
+      "endpoints": [
+        {
+          "node": "/mavros/rc",
+          "reliability": "ReliabilityPolicy.RELIABLE",
+          "durability": "DurabilityPolicy.VOLATILE",
+          "depth": 0
+        }
+      ]
+    },
+    "battery": {
+      "topic": "/mavros/battery",
+      "count": 14,
+      "received_hz": 0.5000670210016571,
+      "source_age_s": {
+        "min": 0.000611042,
+        "median": 0.0017955010000000001,
+        "p95": 0.006501838,
+        "max": 0.0073777140000000005
+      },
+      "publish_measurement_age_s": {
+        "min": 2.3334e-05,
+        "median": 2.8000000000000003e-05,
+        "p95": 4.4042e-05,
+        "max": 8.6334e-05
+      },
+      "publish_to_callback_s": {
+        "min": 0.0005821670000000001,
+        "median": 0.0017651680000000001,
+        "p95": 0.006476171,
+        "max": 0.007338922
+      },
+      "publish_to_dds_receive_s": {
+        "min": 6.562500000000001e-05,
+        "median": 0.000186958,
+        "p95": 0.0038360020000000002,
+        "max": 0.004910504
+      },
+      "dds_receive_to_callback_s": {
+        "min": 0.00039725000000000003,
+        "median": 0.0015656670000000002,
+        "p95": 0.004226545,
+        "max": 0.0069652970000000005
+      },
+      "receipt_gap_s": {
+        "min": 1.9957040099998267,
+        "median": 1.9986198040005547,
+        "p95": 2.003834516000097,
+        "max": 2.0079228099993998
+      },
+      "age_over_0_2_s": 0,
+      "non_increasing_stamp": 0,
+      "values": {
+        "{\"percentage\": -0.009999999776482582, \"voltage\": 0.0}": 14
+      },
+      "endpoints": [
+        {
+          "node": "/mavros/sys",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "durability": "DurabilityPolicy.VOLATILE",
+          "depth": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "lio_frames": 298,
+  "lio_received_over_0_2_s": 166,
+  "relay_frames": 84,
+  "relay_stamp_matches_observed_lio": 84,
+  "relay_unique_stamps": 84,
+  "ekf_vertical_flag_false": 16,
+  "ekf_messages": 28,
+  "sampler_started": "2026-11-17T17:51:21.724503+08:00",
+  "note": "DDS metadata describes this independent observer, not internal FAST-LIO callback scheduling. Windows differ from the GCS snapshot sample."
+}
