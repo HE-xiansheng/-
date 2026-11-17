@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "scope": "physical native LiDAR -> installed FAST-LIO -> pose relay; no MAVROS/FCU or setpoints",
+  "error": "RuntimeError('LiDAR/IMU not fresh and aligned for a continuous second; FAST-LIO not started')",
+  "returncodes": {
+    "driver": 0
+  },
+  "checks": {
+    "owned_processes_exit_normally": true
+  }
+}

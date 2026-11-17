@@ -9,6 +9,7 @@ from pathlib import Path
 import signal
 import struct
 import subprocess
+import sys
 import time
 
 import numpy as np
@@ -20,11 +21,16 @@ from livox_ros_driver2.msg import CustomMsg
 from sensor_msgs.msg import Imu, PointCloud2
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseStamped
+from std_msgs.msg import String
+from rclpy.qos import DurabilityPolicy
 
 root = Path('/tmp/livox-native-check')
 platform = Path('/home/orangepi/drone_platform')
 assert os.environ['ROS_DOMAIN_ID'] == '183' and os.environ['ROS_LOCALHOST_ONLY'] == '1'
 rows = {k: [] for k in ['lidar', 'imu', 'odom', 'cloud', 'vision']}
+passive_planner = '--passive-planner' in sys.argv
+if passive_planner:
+    rows.update(world=[], grid=[], planner=[])
 processes = []
 logs = []
 checks = {}
@@ -72,7 +78,7 @@ def raw_receive(kind, raw):
         fields = {f.name: f for f in cloud.fields}
         if any(k not in fields or fields[k].datatype != 7 or fields[k].count != 1 for k in ['x','y','z']):
             raise ValueError('unexpected body-cloud XYZ fields')
-        if not cloud.width or not cloud.height or len(cloud.data) < cloud.row_step*cloud.height:
+        if ((not cloud.width or not cloud.height) and kind != 'grid') or len(cloud.data) < cloud.row_step*cloud.height:
             raise ValueError('empty or truncated body cloud')
         dtype = np.dtype({'names': ['x','y','z'], 'formats': [('>' if cloud.is_bigendian else '<')+'f4']*3,
                           'offsets': [fields[k].offset for k in ['x','y','z']], 'itemsize': cloud.point_step})
@@ -110,14 +116,25 @@ def pose_receive(kind, message):
         'finite': all(math.isfinite(v) for v in values), 'quaternion_norm_squared': sum(v*v for v in values[3:])})
 
 
-qos = QoSProfile(depth=200)
-subs = [node.create_subscription(typ, topic, lambda m, k=kind: raw_receive(k, m), qos, raw=True)
-    for typ, topic, kind in [(CustomMsg, '/livox/lidar', 'lidar'), (Imu, '/livox/imu', 'imu'),
-                             (PointCloud2, '/factory_fastlio/cloud_body', 'cloud')]]
-subs += [node.create_subscription(typ, topic, lambda m, k=kind: pose_receive(k, m), qos)
-    for typ, topic, kind in [(Odometry, '/factory_fastlio/odometry', 'odom'),
-                             (PoseStamped, '/mavros/vision_pose/pose', 'vision')]]
+def subscribe():
+    qos = QoSProfile(depth=200)
+    subs = [node.create_subscription(typ, topic, lambda m, k=kind: raw_receive(k, m), qos, raw=True)
+        for typ, topic, kind in [(CustomMsg, '/livox/lidar', 'lidar'), (Imu, '/livox/imu', 'imu'),
+                                 (PointCloud2, '/factory_fastlio/cloud_body', 'cloud')]]
+    subs += [node.create_subscription(typ, topic, lambda m, k=kind: pose_receive(k, m), qos)
+        for typ, topic, kind in [(Odometry, '/factory_fastlio/odometry', 'odom'),
+                                 (PoseStamped, '/mavros/vision_pose/pose', 'vision')]]
+    if passive_planner:
+        subs += [node.create_subscription(PointCloud2, topic, lambda m, k=kind: raw_receive(k, m), qos, raw=True)
+            for topic, kind in [('/factory_fastlio/cloud_world', 'world'), ('/grid_map/occupancy_inflate', 'grid')]]
+        def planner_receive(message):
+            rows['planner'].append({'receipt_monotonic_ns': time.monotonic_ns(), **json.loads(message.data)})
+        subs.append(node.create_subscription(String, '/ego_planner/manual_preview/status', planner_receive,
+            QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)))
+    return subs
 
+
+subs = [] if "--ready-start" in sys.argv else subscribe()
 
 def start(name, command):
     log = (root/(name+'.log')).open('w')
@@ -136,10 +153,19 @@ def check(name, ok):
 
 
 try:
-    start('driver', ['ros2', 'launch', str(platform/'02_drivers/sensors/launch/livox_mid360s.launch.py'),
-                     'device_config:='+str(root/'device-config.json')])
+    driver_command = ['ros2', 'launch', str(platform/'02_drivers/sensors/launch/livox_mid360s.launch.py')]
+    if '--deployed-config' not in sys.argv:
+        driver_command.append('device_config:='+str(root/'device-config.json'))
+    start('driver', driver_command)
+    if '--ready-start' in sys.argv:
+        import sensor_readiness
+        readiness = sensor_readiness.wait_for_sensors()
+        (root/'sensor-readiness.json').write_text(json.dumps(readiness, indent=2)+'\n')
+        subs = subscribe()
     start('lio', ['ros2', 'launch', str(platform/'01_apps/fast_lio/launch/localization.launch.py')])
     start('relay', ['ros2', 'run', 'to_mavros', 'vision2mavros'])
+    if passive_planner:
+        start('planner', ['ros2', 'launch', str(platform/'01_apps/ego_planner/launch/manual_preview.launch.py')])
     begin = time.monotonic_ns()
     deadline = time.monotonic()+60
     print('NATIVE_CHECK_RUNNING', flush=True)
@@ -175,6 +201,24 @@ try:
     check('no_FCU_or_setpoint_interfaces', not any(node.get_publishers_info_by_topic(t) for t in
           ['/mavros/setpoint_raw/local','/ego_planner/flight_execution','/Safina_track_stamped']) and
           not any(n in ['/mavros/cmd/arming','/mavros/set_mode'] for n,_ in node.get_service_names_and_types()))
+    if passive_planner:
+        stable_planner = [r for r in rows['planner'] if r['receipt_monotonic_ns'] >= begin+15*10**9]
+        stable_grid = [r for r in rows['grid'] if r['receipt_monotonic_ns'] >= begin+15*10**9]
+        check('real_planner_stays_ready_without_goal', len(stable_planner) >= 20 and
+              all(r['phase'] == 'WAIT_GOAL' for r in stable_planner))
+        check('planner_never_accepts_goal_or_outputs_commands', bool(rows['planner']) and
+              all(not r['has_goal'] and not r['command_output'] and r['planning_mode'] == 'measured_preview'
+                  and r['trajectory_id'] == 0 for r in rows['planner']))
+        check('world_cloud_reaches_planner_frame', len(rows['world']) > 200 and
+              all(r['frame'] == 'camera_init' and r['finite'] for r in rows['world']))
+        check('real_inflated_grid_nonempty_and_fresh', len(stable_grid) >= 100 and
+              all(r['frame'] == 'camera_init' and r['finite'] and -.05 < r['age_s'] < .5 for r in stable_grid)
+              and any(r['point_count'] > 0 for r in stable_grid))
+        check('no_goal_publishers', not any(node.get_publishers_info_by_topic(t) for t in
+              ['/goal', '/move_base_simple/goal', '/ego_planner/flight_execution']))
+        result['passive_planner'] = {'status_messages': len(rows['planner']), 'grid_messages': len(rows['grid']),
+            'world_messages': len(rows['world']), 'stable_phases': sorted({r['phase'] for r in stable_planner}),
+            'grid_max_points': max((r['point_count'] for r in rows['grid']), default=0)}
     result.update(streams=summary)
     if rows['imu']:
         norms = [r['acceleration_norm'] for r in rows['imu']]
@@ -197,6 +241,8 @@ finally:
                 p.wait(timeout=5)
     for log in logs:
         log.close()
+    check('launched_nodes_exit_normally', not any('process has died' in (root/(name+'.log')).read_text()
+          for name, _ in processes))
     result['returncodes'] = {n:p.returncode for n,p in processes}
     check('owned_processes_exit_normally', bool(processes) and all(p.returncode == 0 for _,p in processes))
     for kind, data in rows.items():

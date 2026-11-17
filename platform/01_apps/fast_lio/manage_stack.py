@@ -122,6 +122,9 @@ class ExistingStack:
   if not self.spin(4,lambda:self.executable_owned(kind)):
    raise RuntimeError('启动未确认，保留会话供检查：'+str(run))
  def start_lio(self):
+  self.gate()
+  readiness=load('localization_sensor_readiness',ROOT/'sensor_readiness.py')
+  readiness.wait_for_sensors()
   self.gate();self.spawn('localization',['ros2','launch',str(self.launch)])
  def wait_source(self):
   self.odom=None

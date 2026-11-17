@@ -1,0 +1,12 @@
+{
+  "passed": false,
+  "profile_name": "ROS2-Livox-test-7c3229ba",
+  "lidar_ip": "192.168.1.158",
+  "cleanup_errors": [],
+  "existing_network": true,
+  "original_profile_uuid": "4fb850bb-6fb0-4380-aacc-7a641a3dc761",
+  "consumer_exit": 1,
+  "owned_processes_cleaned": true,
+  "evidence_retrieved": true,
+  "remote_removed": true
+}

@@ -1,0 +1,2 @@
+RuntimeError('LiDAR/IMU not fresh and aligned for a continuous second; FAST-LIO not started')
+{"owned_processes_exit_normally": true}

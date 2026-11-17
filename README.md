@@ -4,12 +4,12 @@
 
 ## 当前状态（2026-11-17）
 
-机载`.224`已从eMMC运行Ubuntu22.04，Humble和NoMachine8.5.3已安装。当前机载候选源码版本为`d896200`（电脑/GitHub另有地面站显示调度修正）、Git干净、NoMachine正常。传感器及云台relay服务候选尚未正式安装/启用；当前网口DOWN、无雷达/云台直连，飞控与Gemini在位。
+机载`.224`已从eMMC运行Ubuntu22.04，Humble和NoMachine8.5.3已安装。当前机载候选源码版本为`7a3c0cb`（电脑/GitHub另有地面站显示调度修正）、Git干净、NoMachine正常。传感器及云台relay服务候选尚未正式安装/启用；雷达.158已直连，网口.51/32及精确路由已持久启用；云台未直连，飞控与Gemini在位。
 
 | 模块 | 已有直接证据 | 仍需验证 |
 | --- | --- | --- |
 | Gemini335L | 官方wrapper/SDK2.10.6，实际约30Hz、当前设备内部标定及相机→NPU预览；发布端64MiB DDS配置已部署并验证 | 间歇USB断连原因、机体外参、度量精度和完整任务 |
-| Livox / FAST-LIO | SDK2 1.3.0、ROS2 driver1.2.6构建；旧机实采回放实际FAST-LIO；自同步秒/ns转换修正与受控对照已部署 | 新机物理雷达采集、网络/时钟及运动精度 |
+| Livox / FAST-LIO | SDK2 1.3.0、ROS2 driver1.2.6；新雷达.158实采定位/转发约10Hz，启动就绪等待已部署、管理入口21项回归通过 | 原生联合运行38项通过但驱动退出SIGSEGV使整轮38/39失败；运动精度/外参/长时稳定性 |
 | 定位转发 / MAVROS2 | 旧二进制71条几何对照；原生100帧初始化；MAVROS2 2.16.0物理未解锁遥测和22项实际MAVLink接口检查 | 实际安装外参、真实PX4外部视觉融合与时间同步 |
 | 定位到PX4仿真 | 旧机实采回放→实际FAST-LIO/转发/MAVROS→官方PX4 1.16.0，18项；564条源戳/坐标匹配，EV融合与停流检查 | 回放与软件仿真不替代新雷达、真实飞控和轨迹精度验收 |
 | EGO规划 | 原生地图/优化/FSM及执行器；一轮实际规划→MAVROS→PX4消息38项、原执行器46项回归，支持标准ROS重映射；新增启动就绪门控两轮43项与47项回归通过 | 实物地图/任务/地面站全链、运行中端到端可靠性 |
@@ -36,7 +36,7 @@ PX4源码与ULog已证实：其自身同步收敛前会用接收时刻替代源�
 - [FAST-LIO时间单位](records/2026-11-17/fastlio-sync/README.md)、[相机DDS](records/2026-11-17/camera-dds/README.md)、[多模块并发](records/2026-11-17/platform-soak/README.md)：区分原始失败、源记录并集复核与真正重跑结果。
 - [MPP全帧交付](records/2026-11-17/gimbal-dds-delivery/README.md)、[视频断流恢复](records/2026-11-17/gimbal-reconnect/README.md)、[人物启动接收端等待](records/2026-11-17/person-consumer-ready/README.md)。
 - [真实PX4固件与EV参数只读核对](records/2026-11-17/px4-physical-readonly/README.md)：实机报告1.16.0 stable、未解锁，EV配置已读回；尚未证明实际融合或外参。
-- [传感器网络候选](candidates/network/README.md)：已按新旧机地址/路由准备，并通过新机libnm解析；未安装/激活，接线和网络切换需确认。
+- [传感器网络配置](candidates/network/README.md)：用户已授权并持久应用雷达网口.51/32→新雷达.158；云台仍为未应用候选。
 - [录制异常退出与副本恢复](records/2026-11-17/recording-crash/README.md)、[rosbag发现轮询修正](records/2026-11-17/gcs-concurrent/README.md)：SIGKILL不等于真实掉电，恢复100ms不等于修复底层库竞争。
 
 ## 证据与源码
@@ -64,3 +64,5 @@ PX4源码与ULog已证实：其自身同步收敛前会用接收时刻替代源�
 修复前[ArUco图像链→MAVROS→PX4验证](records/2026-11-17/aruco-mavros-wire/README.md)：25项图像控制/隔离功能检查通过，但严格39/42，最初5条ROS捕获未进入MAVROS内部出口/PX4，其余逐条一致。未部署产品修改，未忽略启动缺口。
 
 最新[ArUco启动就绪修正](records/2026-11-17/aruco-consumer-ready/README.md)：真实控制端点、只读插件参数响应及路由出口就绪后才预发送和允许任务启动。冷启动两轮872/872、871/871，44项严格检查通过，4组CTest和61项原生触发/取消回归通过；候选dae36a8已部署，未正式切换服务。
+
+- [新雷达持久网络、.235启动方式核对及真实联合验证](records/2026-11-17/livox-persistent-network/README.md)：保留time_sync_en=true/offset0，等待新鲜双流后启动定位；驱动退出-11仍未修复，未开启正式服务/真实FCU。

@@ -1,0 +1,13 @@
+diff --git a/02_drivers/sensors/config/MID360s_config.json b/02_drivers/sensors/config/MID360s_config.json
+index 7aea53f..e45a096 100644
+--- a/02_drivers/sensors/config/MID360s_config.json
++++ b/02_drivers/sensors/config/MID360s_config.json
+@@ -23,7 +23,7 @@
+   },
+   "lidar_configs": [
+     {
+-      "ip": "192.168.1.117",
++      "ip": "192.168.1.158",
+       "pcl_data_type": 1,
+       "pattern_mode": 0,
+       "extrinsic_parameter": {

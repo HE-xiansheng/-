@@ -1,0 +1,96 @@
+2026-11-17T11:44:04+08:00
+# /etc/systemd/system/Safina_sensor.service
+[Unit]
+Description=ROS SERVICE TEST
+After=network-online.target multi-user.target
+[Service]
+Type=simple
+User=orangepi
+ExecStart=/home/orangepi/drone_platform/02_drivers/sensors/share/livox_ros_driver2/scripts/Safina_sensor.sh
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
+#!/bin/bash
+set -e
+
+PIDS=()
+
+cleanup(){
+        for pid in "${PIDS[@]}"; do
+                if kill -0 "$pid" 2>/dev/null; then
+                        kill "$pid"
+                fi
+        done
+        wait
+}
+
+trap cleanup TERM INT HUP
+
+source "/opt/ros/noetic/setup.bash"
+source "/home/orangepi/drone_platform/02_drivers/sensors/setup.bash"
+
+# source "~/.bashrc"
+export ROS_HOSTNAME=orangepi5ultra
+export ROS_MASTER_URI=http://localhost:11311/
+
+sleep 3
+roslaunch mavros px4.launch &
+PIDS+=($!)
+
+
+sleep 13
+# --- Orbbec: identical stack/params to source (TECH_DEMO package), SDK 2.10.6 ---
+# SDK dir must come first, otherwise libOrbbecSDK.so.2 resolves to the old 2.5.5 in TECH/lib.
+for p in $(ps -eo pid,args | grep '[o]rbbec_camera_node' | sed 's/^ *//' | cut -d' ' -f1); do
+        kill -9 "$p" 2>/dev/null || true
+done
+rm -f /dev/shm/orbbec_device.lock
+source "/home/orangepi/drone_platform/02_drivers/orbbec/devel/setup.bash"
+export LD_LIBRARY_PATH=/home/orangepi/drone_platform/02_drivers/orbbec/src/OrbbecSDK_ROS1-2-main/SDK/lib/arm64:$LD_LIBRARY_PATH
+roslaunch orbbec_camera gemini_330_series.launch \
+        color_width:=1280 color_height:=720 \
+        depth_width:=848 depth_height:=480 \
+        enable_color:=true enable_depth:=true enable_point_cloud:=true \
+        enable_left_ir:=true enable_right_ir:=true \
+        enable_accel:=false enable_gyro:=false \
+        enable_frame_sync:=false &
+PIDS+=($!)
+
+sleep 3
+roslaunch usb_cam usb_cam.launch &
+PIDS+=($!)
+
+
+sleep 25
+roslaunch livox_ros_driver2 msg_MID360s.launch &
+PIDS+=($!)
+
+
+
+# sleep 10
+# roslaunch fast_lio mapping_mid360.launch &
+# PIDS+=($!)
+
+# sleep 3
+# roslaunch to_mavros vision2mavros.launch &
+# PIDS+=($!)
+
+
+source "/home/orangepi/drone_platform/01_apps/basic_demo/devel/setup.bash" --extend
+source "/home/orangepi/drone_platform/01_apps/mission_demo/devel/setup.bash" --extend
+sleep 3
+roslaunch rtsp_test rtsp_test.launch &
+PIDS+=($!)
+
+
+for pid in "${PIDS[@]}"; do
+        wait "$pid" || {
+                exit 1
+        }
+done
+2501 /bin/bash /home/orangepi/drone_platform/02_drivers/sensors/share/livox_ros_driver2/scripts/Safina_sensor.sh
+4160 /usr/bin/python3 /opt/ros/noetic/bin/roslaunch livox_ros_driver2 msg_MID360s.launch
+4214 /home/orangepi/drone_platform/02_drivers/sensors/lib/livox_ros_driver2/livox_ros_driver2_node ARMCP1V0038817 __name:=livox_lidar_publisher2 __log:=/home/orangepi/.ros/log/ffb04b16-e22c-11f1-802f-c0742bf913a5/livox_lidar_publisher2-1.log
+bash: line 3: rg: command not found
+bash: line 3: rg: command not found

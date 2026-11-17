@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "authorized": "User: 网口像.235一样固定吧",
+  "profile": "ROS2 Livox",
+  "uuid": "4fb850bb-6fb0-4380-aacc-7a641a3dc761",
+  "persistence": {
+    "uuid": "4fb850bb-6fb0-4380-aacc-7a641a3dc761",
+    "unsaved": false,
+    "autoconnect": true,
+    "priority": 100,
+    "addresses": [
+      "192.168.1.51"
+    ],
+    "routes": [
+      "192.168.1.158"
+    ]
+  }
+}

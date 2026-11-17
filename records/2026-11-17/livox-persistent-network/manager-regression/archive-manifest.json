@@ -1,0 +1,14 @@
+{
+  "/home/tyzk/drone-migration-work/localization-readiness-run1/evidence.tar.gz": {
+    "bytes": 20871610,
+    "sha256": "8ef931a0f48df961e875997408b307f51876b0c59bba166659f0c9710494f4a9"
+  },
+  "/home/tyzk/drone-migration-work/localization-readiness-run1/localization-readiness-check/livox.jsonl.gz": {
+    "bytes": 20883670,
+    "sha256": "0f849044a1371180b3c55ec61bc061fd348043bfbd0617dd47157ef063757d4f"
+  },
+  "/home/tyzk/drone-migration-github/records/2026-11-17/livox-persistent-network/manager-regression/evidence-without-duplicate-sensor-input.tar.gz": {
+    "bytes": 13468,
+    "sha256": "4ff63a99ed33dd6c736d040072ad3c5af4e51789b0489d0bbdc6420b3517f39a"
+  }
+}

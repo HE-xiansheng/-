@@ -1,0 +1,1 @@
+{"passed": true, "case": "empty isolated DDS domain refuses readiness", "error": "LiDAR/IMU not ready; FAST-LIO not started: [{\"elapsed_s\": 0.02056088200015438, \"counts\": {\"lidar\": 0, \"imu\": 0}, \"age_s\": {}}]"}

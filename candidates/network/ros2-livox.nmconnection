@@ -1,7 +1,7 @@
-# Candidate only: do not install or activate before hardware and approval checks.
+# Applied on .224 after user approval, 2026-11-17.
 [connection]
-id=ROS2 Livox candidate
-uuid=23c8f72a-4b88-4a17-a82e-2b3d44685f13
+id=ROS2 Livox
+uuid=4fb850bb-6fb0-4380-aacc-7a641a3dc761
 type=ethernet
 interface-name=enP3p49s0
 autoconnect=true
@@ -17,6 +17,7 @@ route1=192.168.1.158/32
 never-default=true
 ignore-auto-dns=true
 dad-timeout=3000
+may-fail=false
 
 [ipv6]
 method=disabled

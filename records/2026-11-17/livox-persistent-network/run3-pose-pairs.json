@@ -1,0 +1,28 @@
+{
+  "scope": "actual recorded source-stamp pairs; legacy position/RPY zeroing consistency; no external accuracy reference",
+  "matched_pairs": 463,
+  "unmatched": [],
+  "position_zero_m": [
+    -0.007368229940200279,
+    -0.005119335345276983,
+    -0.018854545000169646
+  ],
+  "position_zero_residual_max_m": 0.0,
+  "rpy_zero_rad": [
+    -0.00296426374827435,
+    2.1002952392125884e-05,
+    0.0005221779706601683
+  ],
+  "rpy_zero_residual_max_rad": 2.2664753060850664e-18,
+  "source_axis_span_m": [
+    0.03258512456400292,
+    0.014792575872616443,
+    0.026381358913148415
+  ],
+  "source_first_to_last_distance_m": 0.026028584435699303,
+  "observer_receipt_difference_s": {
+    "min": 0.003898385,
+    "max": 0.035715453
+  },
+  "passed": true
+}
