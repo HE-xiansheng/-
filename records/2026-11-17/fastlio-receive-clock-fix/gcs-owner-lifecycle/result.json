@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "preflight-owner_exit",
+      "passed": true,
+      "exit": 0,
+      "fixture_children": [
+        {
+          "pid": 84974,
+          "ticks": "3790215"
+        },
+        {
+          "pid": 84977,
+          "ticks": "3790215"
+        }
+      ]
+    },
+    {
+      "case": "preflight-owner_already_gone",
+      "passed": true,
+      "exit": 0,
+      "fixture_children": []
+    },
+    {
+      "case": "preflight-manual_cli",
+      "passed": true,
+      "exit": 0,
+      "fixture_children": [
+        {
+          "pid": 84990,
+          "ticks": "3790263"
+        },
+        {
+          "pid": 84993,
+          "ticks": "3790263"
+        }
+      ]
+    },
+    {
+      "case": "pointcloud-owner_exit",
+      "passed": true,
+      "exit": 0,
+      "fixture_children": [
+        {
+          "pid": 84997,
+          "ticks": "3790344"
+        }
+      ]
+    },
+    {
+      "case": "pointcloud-owner_already_gone",
+      "passed": true,
+      "exit": 0,
+      "fixture_children": []
+    },
+    {
+      "case": "pointcloud-manual_cli",
+      "passed": true,
+      "exit": 0,
+      "fixture_children": [
+        {
+          "pid": 85002,
+          "ticks": "3790379"
+        }
+      ]
+    }
+  ],
+  "scope": "local fixture SSH only, no ROS or onboard connection"
+}

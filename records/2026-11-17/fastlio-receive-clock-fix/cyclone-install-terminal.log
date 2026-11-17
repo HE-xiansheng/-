@@ -1,0 +1,154 @@
+[sudo] password for orangepi: 
+Reading package lists... 0%
+Reading package lists... 0%
+Reading package lists... 0%
+Reading package lists... 2%
+Reading package lists... 2%
+Reading package lists... 4%
+Reading package lists... 4%
+Reading package lists... 4%
+Reading package lists... 4%
+Reading package lists... 4%
+Reading package lists... 4%
+Reading package lists... 4%
+Reading package lists... 8%
+Reading package lists... 18%
+Reading package lists... 24%
+Reading package lists... 24%
+Reading package lists... 38%
+Reading package lists... 43%
+Reading package lists... 43%
+Reading package lists... 43%
+Reading package lists... 43%
+Reading package lists... 44%
+Reading package lists... 44%
+Reading package lists... 50%
+Reading package lists... 50%
+Reading package lists... 52%
+Reading package lists... 52%
+Reading package lists... 61%
+Reading package lists... 65%
+Reading package lists... 65%
+Reading package lists... 65%
+Reading package lists... 65%
+Reading package lists... 67%
+Reading package lists... 67%
+Reading package lists... 69%
+Reading package lists... 69%
+Reading package lists... 69%
+Reading package lists... 69%
+Reading package lists... 69%
+Reading package lists... 69%
+Reading package lists... 76%
+Reading package lists... 76%
+Reading package lists... 78%
+Reading package lists... 78%
+Reading package lists... 91%
+Reading package lists... 91%
+Reading package lists... 91%
+Reading package lists... 91%
+Reading package lists... 94%
+Reading package lists... 94%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 96%
+Reading package lists... 99%
+Reading package lists... 99%
+Reading package lists... 99%
+Reading package lists... 99%
+Reading package lists... 99%
+Reading package lists... Done
+Building dependency tree... 0%
+Building dependency tree... 0%
+Building dependency tree... 50%
+Building dependency tree... 50%
+Building dependency tree... 52%
+Building dependency tree... 96%
+Building dependency tree... Done
+Reading state information... 0% 
+Reading state information... 0%
+Reading state information... Done
+The following additional packages will be installed:
+  libacl1-dev ros-humble-cyclonedds ros-humble-iceoryx-binding-c
+  ros-humble-iceoryx-hoofs ros-humble-iceoryx-posh
+The following NEW packages will be installed:
+  libacl1-dev libattr1-dev ros-humble-cyclonedds ros-humble-iceoryx-binding-c
+  ros-humble-iceoryx-hoofs ros-humble-iceoryx-posh
+  ros-humble-rmw-cyclonedds-cpp
+0 upgraded, 7 newly installed, 0 to remove and 727 not upgraded.
+Need to get 1869 kB/1971 kB of archives.
+After this operation, 8210 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu jammy/main arm64 ros-humble-iceoryx-binding-c arm64 2.0.5-1jammy.20261027.185215 [62.8 kB]
+Get:2 http://packages.ros.org/ros2/ubuntu jammy/main arm64 ros-humble-iceoryx-hoofs arm64 2.0.5-1jammy.20261027.175359 [214 kB]
+Total output lines: 2
+Get:3 http://packages.ros.org/ros2/ubuntu jammy/main arm64 ros-humble-iceoryx-posh arm64 2.0.5-1jammy.20261027.183836 [402 kB]
+Total output lines: 2
+Get:4 http://packages.ros.org/ros2/ubuntu jammy/main arm64 ros-humble-cyclonedds arm64 0.10.5-2jammy.20261027.185433 [1…1613 tokens truncated…4 kB 44%]                  14.8 kB/s 49s
+Get:5 http://packages.ros.org/ros2/ubuntu jammy/main arm64 ros-humble-rmw-cyclonedds-cpp arm64 1.3.6-1jammy.20261106.150511 [157 kB]
+Fetched 1869 kB in 2min 57s (10.5 kB/s)
+Selecting previously unselected package ros-humble-iceoryx-binding-c.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 234094 files and directories currently installed.)
+Preparing to unpack .../0-ros-humble-iceoryx-binding-c_2.0.5-1jammy.20261027.185215_arm64.deb ...
+Unpacking ros-humble-iceoryx-binding-c (2.0.5-1jammy.20261027.185215) ...
+Selecting previously unselected package libattr1-dev:arm64.
+Preparing to unpack .../1-libattr1-dev_1%3a2.5.1-1build1_arm64.deb ...
+Unpacking libattr1-dev:arm64 (1:2.5.1-1build1) ...
+Selecting previously unselected package libacl1-dev:arm64.
+Preparing to unpack .../2-libacl1-dev_2.3.1-1_arm64.deb ...
+Unpacking libacl1-dev:arm64 (2.3.1-1) ...
+Selecting previously unselected package ros-humble-iceoryx-hoofs.
+Preparing to unpack .../3-ros-humble-iceoryx-hoofs_2.0.5-1jammy.20261027.175359_arm64.deb ...
+Unpacking ros-humble-iceoryx-hoofs (2.0.5-1jammy.20261027.175359) ...
+Selecting previously unselected package ros-humble-iceoryx-posh.
+Preparing to unpack .../4-ros-humble-iceoryx-posh_2.0.5-1jammy.20261027.183836_arm64.deb ...
+Unpacking ros-humble-iceoryx-posh (2.0.5-1jammy.20261027.183836) ...
+Selecting previously unselected package ros-humble-cyclonedds.
+Preparing to unpack .../5-ros-humble-cyclonedds_0.10.5-2jammy.20261027.185433_arm64.deb ...
+Unpacking ros-humble-cyclonedds (0.10.5-2jammy.20261027.185433) ...
+Selecting previously unselected package ros-humble-rmw-cyclonedds-cpp.
+Preparing to unpack .../6-ros-humble-rmw-cyclonedds-cpp_1.3.6-1jammy.20261106.150511_arm64.deb ...
+Unpacking ros-humble-rmw-cyclonedds-cpp (1.3.6-1jammy.20261106.150511) ...
+Setting up libattr1-dev:arm64 (1:2.5.1-1build1) ...
+Setting up ros-humble-iceoryx-binding-c (2.0.5-1jammy.20261027.185215) ...
+Setting up libacl1-dev:arm64 (2.3.1-1) ...
+Setting up ros-humble-iceoryx-hoofs (2.0.5-1jammy.20261027.175359) ...
+Setting up ros-humble-iceoryx-posh (2.0.5-1jammy.20261027.183836) ...
+Setting up ros-humble-cyclonedds (0.10.5-2jammy.20261027.185433) ...
+Setting up ros-humble-rmw-cyclonedds-cpp (1.3.6-1jammy.20261106.150511) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Connection to 192.168.1.224 closed.

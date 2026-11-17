@@ -11,6 +11,10 @@
 #include <QJsonObject>
 
 ConnectionController::ConnectionController(QObject *parent):QObject(parent) {
+#ifdef Q_OS_LINUX
+    // 本机后台遥测跟随所属窗口退出；不改变机载传感器或定位会话。
+    qputenv("GCS_GUI_OWNER_PID", QByteArray::number(QCoreApplication::applicationPid()));
+#endif
     // 与启动时的视频地址一致；命令行地址仅在认证成功后持久保存。
     const auto startupHost=QCoreApplication::instance()->property("startupOnboardHost");
     m_host=startupHost.isValid()?startupHost.toString():QSettings().value("onboard/host","192.168.1.224").toString();

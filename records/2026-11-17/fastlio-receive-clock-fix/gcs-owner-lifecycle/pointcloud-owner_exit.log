@@ -1,0 +1,3 @@
+{"phase": "CONNECTING", "host": "fixture.invalid", "destination": ["127.0.0.1", 60950], "stamp": 1794916234.801846}
+{"topics": {}, "server_monotonic": 37903.458786758, "boot_id": "fixture"}
+地面站所属窗口已退出，结束本会话只读遥测

@@ -1,0 +1,48 @@
+{
+  "read_only_preflight": true,
+  "gate": true,
+  "idle": true,
+  "inventory": [
+    true,
+    true
+  ],
+  "fc": {
+    "connected": true,
+    "armed": false,
+    "mode": "AUTO.LOITER"
+  },
+  "boot": "98055533-8b20-4466-9b95-dbffe318060f",
+  "processes": {
+    "73086": {
+      "tick": "197619",
+      "cmd": "/usr/bin/python3 /opt/ros/humble/bin/ros2 launch /home/orangepi/drone_platform/01_apps/fast_lio/launch/localization.launch.py "
+    },
+    "73150": {
+      "tick": "197662",
+      "cmd": "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_zh2armvr -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf "
+    },
+    "73273": {
+      "tick": "197826",
+      "cmd": "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros/lib/to_mavros/vision2mavros "
+    },
+    "3311": {
+      "tick": "2089",
+      "cmd": "/opt/ros/humble/lib/mavros/mavros_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_bia6c9gf --params-file /tmp/launch_params_jq9uufel --params-file /tmp/launch_params_izy9dms4 --params-file /tmp/launch_params_fk4w734l --params-file /tmp/launch_params_2vihzvf1 --params-file /opt/ros/humble/share/mavros/launch/px4_pluginlists.yaml --params-file /opt/ros/humble/share/mavros/launch/px4_config.yaml "
+    },
+    "3316": {
+      "tick": "2090",
+      "cmd": "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher2 --params-file /tmp/launch_params_y5lt251p "
+    }
+  },
+  "files": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": "2c3f080533595144f0494d2df70efae00f24c2ee41a8ccce443b2b3a54963e9d",
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd"
+  },
+  "git_head": "7dd15a5be69148d4b124583f843d4bdfbe49fe46",
+  "git_status": "",
+  "services": {
+    "Safina_sensor.service": "active",
+    "gimbal-rtsp-relay.service": "active"
+  },
+  "actions_performed": []
+}

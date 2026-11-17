@@ -1,0 +1,7 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "old_git": "7dd15a5be69148d4b124583f843d4bdfbe49fe46",
+  "original_mapping_pid": 73150,
+  "original_relay_pid": 73273,
+  "scope": "private candidate build and real-input output validation; source computer .235 read-only"
+}

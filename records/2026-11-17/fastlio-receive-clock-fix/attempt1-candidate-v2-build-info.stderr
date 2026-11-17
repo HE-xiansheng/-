@@ -1,0 +1,4 @@
+  File "<stdin>", line 7
+    print(json.dumps({'all_candidate_sources_verified':len(actual),'files':actual,'binary_sha256':hashlib.sha256((r/'install-v2/lib/fast_lio/fastlio_mapping').read_bytes()).hexdigest(),'cache':[s for s in cache if s.startswith(('CMAKE_BUILD_TYPE:','CMAKE_INSTALL_PREFIX:','FASTLIO_'/tmp/fastlio-receive-clock-fix-184504-792c7c'_DIR:','CMAKE_CXX_FLAGS:'))],'compiler':subprocess.check_output(['g++','--version'],text=True),'uname':subprocess.check_output(['uname','-a'],text=True)},indent=2))
+                                                                                                                                                                                                                                                                                                                                  ^
+SyntaxError: invalid decimal literal

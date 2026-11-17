@@ -25,7 +25,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'pointcloud-only'))
 from cloud_sender import Lz4,packets
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'communication'))
 from ssh_session import background_ssh
-from runtime_paths import state_directory
+from runtime_paths import state_directory,watch_gui_owner
 
 ROOT=Path(__file__).resolve().parents[3]
 STATE=state_directory()
@@ -92,6 +92,7 @@ def run(args):
                 if child and child.poll() is None:child.terminate()
             except ProcessLookupError:pass
     signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGINT,stop)
+    watch_gui_owner(stopped,stop)
     udp=local_udp_socket();udp.connect(('127.0.0.1',args.port))
     output_lock = threading.Lock()
     last_send_error = float('-inf')

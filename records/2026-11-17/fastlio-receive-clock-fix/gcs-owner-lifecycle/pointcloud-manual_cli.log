@@ -1,0 +1,2 @@
+{"phase": "CONNECTING", "host": "fixture.invalid", "destination": ["127.0.0.1", 34764], "stamp": 1794916235.1534507}
+{"topics": {}, "server_monotonic": 37903.810340133, "boot_id": "fixture"}

@@ -17,7 +17,7 @@ import time
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'communication'))
 from ssh_session import background_ssh
-from runtime_paths import state_directory
+from runtime_paths import state_directory, watch_gui_owner
 
 ROOT = Path(__file__).resolve().parents[3]
 STATE = state_directory()
@@ -80,6 +80,7 @@ def run(args):
 
     signal.signal(signal.SIGTERM, stop)
     signal.signal(signal.SIGINT, stop)
+    watch_gui_owner(stopped, stop)
     source = Path(__file__).with_name('cloud_sender.py').read_bytes()
     remote = ('source ~/drone_platform/env.sh && '
               'exec /usr/bin/python3 -u - '+shlex.join(['--pc-ip',args.pc_ip,'--port',str(args.port)]+

@@ -1,0 +1,10 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-test-192539-5ae370",
+  "candidate_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "binary": "/tmp/fastlio-receive-clock-fix-184504-792c7c/install-v2/lib/fast_lio/fastlio_mapping",
+  "binary_sha256": "1797640cccb95516c32be1b5e610806dede3e744abd7675d1587845bc656e847",
+  "candidate_rmw": "rmw_cyclonedds_cpp",
+  "source_archive": "candidate-v2-source.tar.gz",
+  "purpose": "same v2 binary, source, QoS and reliable consumers as run5; change only the private child RMW",
+  "observer_sha256": "96b4a1242f6cf84b2d35309b87baee5a38716888e4b3b08690302b6ade8f687e"
+}

@@ -1,0 +1,698 @@
+{
+  "wall": 1794915121.695285,
+  "elapsed_s": 2.033654868000667,
+  "threads": [
+    {
+      "task": "/proc/73150/task/73150",
+      "comm": "fastlio_mapping",
+      "cpu": 4,
+      "cpu_percent": 87.03541726035981
+    },
+    {
+      "task": "/proc/42956/task/43422",
+      "comm": "python3",
+      "cpu": 2,
+      "cpu_percent": 73.26710266550063
+    },
+    {
+      "task": "/proc/71847/task/72186",
+      "comm": "python3",
+      "cpu": 7,
+      "cpu_percent": 72.28365162301068
+    },
+    {
+      "task": "/proc/3316/task/3345",
+      "comm": "livox_ros_drive",
+      "cpu": 3,
+      "cpu_percent": 70.80847505927576
+    },
+    {
+      "task": "/proc/3314/task/4355",
+      "comm": "component_conta",
+      "cpu": 1,
+      "cpu_percent": 32.94560992341303
+    },
+    {
+      "task": "/proc/73150/task/73235",
+      "comm": "fastlio_mapping",
+      "cpu": 7,
+      "cpu_percent": 30.978707838433152
+    },
+    {
+      "task": "/proc/73150/task/73242",
+      "comm": "fastlio_mapping",
+      "cpu": 0,
+      "cpu_percent": 28.02835471096332
+    },
+    {
+      "task": "/proc/3311/task/3400",
+      "comm": "uas-exec/1.191",
+      "cpu": 6,
+      "cpu_percent": 22.61937397726865
+    },
+    {
+      "task": "/proc/3311/task/3401",
+      "comm": "uas-exec/1.191",
+      "cpu": 0,
+      "cpu_percent": 21.144197413533735
+    },
+    {
+      "task": "/proc/71847/task/72175",
+      "comm": "python3",
+      "cpu": 6,
+      "cpu_percent": 20.160746371043796
+    },
+    {
+      "task": "/proc/42956/task/43418",
+      "comm": "python3",
+      "cpu": 3,
+      "cpu_percent": 19.669020849798827
+    },
+    {
+      "task": "/proc/3311/task/3399",
+      "comm": "uas-exec/1.191",
+      "cpu": 6,
+      "cpu_percent": 19.177295328553857
+    },
+    {
+      "task": "/proc/3311/task/3392",
+      "comm": "uas-exec/1.191",
+      "cpu": 6,
+      "cpu_percent": 18.685569807308884
+    },
+    {
+      "task": "/proc/3314/task/3474",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 18.19384428606391
+    },
+    {
+      "task": "/proc/3316/task/3358",
+      "comm": "livox_ros_drive",
+      "cpu": 0,
+      "cpu_percent": 9.834510424899413
+    },
+    {
+      "task": "/proc/3311/task/3311",
+      "comm": "mavros_node",
+      "cpu": 6,
+      "cpu_percent": 5.900706254939648
+    },
+    {
+      "task": "/proc/3311/task/3388",
+      "comm": "mavros_node",
+      "cpu": 6,
+      "cpu_percent": 5.408980733694676
+    },
+    {
+      "task": "/proc/3316/task/3361",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 5.408980733694676
+    },
+    {
+      "task": "/proc/42956/task/42956",
+      "comm": "python3",
+      "cpu": 2,
+      "cpu_percent": 4.917255212449707
+    },
+    {
+      "task": "/proc/3316/task/3362",
+      "comm": "livox_ros_drive",
+      "cpu": 0,
+      "cpu_percent": 3.4420786487147947
+    },
+    {
+      "task": "/proc/3316/task/3363",
+      "comm": "livox_ros_drive",
+      "cpu": 0,
+      "cpu_percent": 3.4420786487147947
+    },
+    {
+      "task": "/proc/3314/task/4463",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 3.4420786487147947
+    },
+    {
+      "task": "/proc/73150/task/73239",
+      "comm": "fastlio_mapping",
+      "cpu": 0,
+      "cpu_percent": 3.4420786487147947
+    },
+    {
+      "task": "/proc/3311/task/3371",
+      "comm": "mavros_node",
+      "cpu": 7,
+      "cpu_percent": 2.4586276062248533
+    },
+    {
+      "task": "/proc/3316/task/3338",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 2.4586276062248533
+    },
+    {
+      "task": "/proc/71847/task/71847",
+      "comm": "python3",
+      "cpu": 0,
+      "cpu_percent": 2.4586276062248533
+    },
+    {
+      "task": "/proc/3316/task/3331",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 1.9669020849798824
+    },
+    {
+      "task": "/proc/3311/task/3342",
+      "comm": "mavros_node",
+      "cpu": 4,
+      "cpu_percent": 1.475176563734912
+    },
+    {
+      "task": "/proc/71847/task/72169",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 1.475176563734912
+    },
+    {
+      "task": "/proc/3314/task/4340",
+      "comm": "component_conta",
+      "cpu": 3,
+      "cpu_percent": 0.9834510424899412
+    },
+    {
+      "task": "/proc/3314/task/4342",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.9834510424899412
+    },
+    {
+      "task": "/proc/3311/task/3337",
+      "comm": "mavros_node",
+      "cpu": 0,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3311/task/3341",
+      "comm": "mavros_node",
+      "cpu": 6,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3316/task/3332",
+      "comm": "livox_ros_drive",
+      "cpu": 2,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3316/task/3356",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/3314",
+      "comm": "component_conta",
+      "cpu": 4,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/3350",
+      "comm": "component_conta",
+      "cpu": 6,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/3353",
+      "comm": "component_conta",
+      "cpu": 2,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/4338",
+      "comm": "component_conta",
+      "cpu": 6,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/4341",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/4345",
+      "comm": "component_conta",
+      "cpu": 7,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/4347",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/4353",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3314/task/4354",
+      "comm": "component_conta",
+      "cpu": 7,
+      "cpu_percent": 0.4917255212449706
+    },
+    {
+      "task": "/proc/3311/task/3333",
+      "comm": "mavros_node",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3334",
+      "comm": "mavros_node",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3336",
+      "comm": "mavros_node",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3339",
+      "comm": "mavros_node",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3343",
+      "comm": "mavros_node",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3344",
+      "comm": "mavros_node",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3346",
+      "comm": "mavros_node",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3311/task/3385",
+      "comm": "mavros_node",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3316",
+      "comm": "livox_ros_drive",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3324",
+      "comm": "livox_ros_drive",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3325",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3330",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3335",
+      "comm": "livox_ros_drive",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3340",
+      "comm": "livox_ros_drive",
+      "cpu": 1,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3349",
+      "comm": "livox_ros_drive",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3357",
+      "comm": "livox_ros_drive",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3316/task/3360",
+      "comm": "livox_ros_drive",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3322",
+      "comm": "component_conta",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3323",
+      "comm": "component_conta",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3326",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3351",
+      "comm": "component_conta",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3352",
+      "comm": "component_conta",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3354",
+      "comm": "component_conta",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3355",
+      "comm": "component_conta",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3359",
+      "comm": "component_conta",
+      "cpu": 1,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3468",
+      "comm": "component_conta",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3473",
+      "comm": "libusb_event",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3479",
+      "comm": "component_conta",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3486",
+      "comm": "component_conta",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3487",
+      "comm": "component_conta",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3765",
+      "comm": "component_conta",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3766",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3788",
+      "comm": "component_conta",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3789",
+      "comm": "component_conta",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/3846",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/4337",
+      "comm": "component_conta",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/4339",
+      "comm": "component_conta",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/4344",
+      "comm": "component_conta",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/344843",
+      "comm": "component_conta",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/345378",
+      "comm": "component_conta",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/345752",
+      "comm": "component_conta",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/3314/task/345755",
+      "comm": "component_conta",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73236",
+      "comm": "fastlio_mapping",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73237",
+      "comm": "fastlio_mapping",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73238",
+      "comm": "fastlio_mapping",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73240",
+      "comm": "fastlio_mapping",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73241",
+      "comm": "fastlio_mapping",
+      "cpu": 0,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73243",
+      "comm": "fastlio_mapping",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73244",
+      "comm": "fastlio_mapping",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/73150/task/73246",
+      "comm": "fastlio_mapping",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72164",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72165",
+      "comm": "python3",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72168",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72170",
+      "comm": "python3",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72171",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72177",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72178",
+      "comm": "python3",
+      "cpu": 3,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/71847/task/72180",
+      "comm": "python3",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43412",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43413",
+      "comm": "python3",
+      "cpu": 2,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43414",
+      "comm": "python3",
+      "cpu": 6,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43415",
+      "comm": "python3",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43416",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43417",
+      "comm": "python3",
+      "cpu": 5,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43419",
+      "comm": "python3",
+      "cpu": 4,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43420",
+      "comm": "python3",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    },
+    {
+      "task": "/proc/42956/task/43421",
+      "comm": "python3",
+      "cpu": 7,
+      "cpu_percent": 0.0
+    }
+  ],
+  "cpufreq": {
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_governor": "ondemand",
+    "/sys/devices/system/cpu/cpufreq/policy6/cpuinfo_max_freq": "2400000",
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq": "1800000",
+    "/sys/devices/system/cpu/cpufreq/policy6/affected_cpus": "6 7",
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq": "1800000",
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_governor": "ondemand",
+    "/sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq": "2400000",
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq": "2016000",
+    "/sys/devices/system/cpu/cpufreq/policy4/affected_cpus": "4 5",
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq": "2016000",
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor": "ondemand",
+    "/sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq": "1800000",
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": "1200000",
+    "/sys/devices/system/cpu/cpufreq/policy0/affected_cpus": "0 1 2 3",
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq": "1200000"
+  },
+  "temperatures": {
+    "/sys/class/thermal/thermal_zone2/temp": "85888",
+    "/sys/class/thermal/thermal_zone0/temp": "84076",
+    "/sys/class/thermal/thermal_zone5/temp": "82230",
+    "/sys/class/thermal/thermal_zone3/temp": "85000",
+    "/sys/class/thermal/thermal_zone1/temp": "85888",
+    "/sys/class/thermal/thermal_zone6/temp": "83153",
+    "/sys/class/thermal/thermal_zone4/temp": "83153"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-test-185646-c60a65",
+  "candidate_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "binary_sha256": "17af7094f3191be589c8f04132ee86e46035f6f6fc7b51c7f25ad698c9750a97",
+  "verifier_change": "metadata and simultaneous best effort / reliable odometry readers distinguish source lateness from observer reliable ingress"
+}

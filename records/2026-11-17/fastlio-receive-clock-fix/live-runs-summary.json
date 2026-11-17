@@ -1,0 +1,2343 @@
+{
+  "1": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort depth 400 installed in graph": false,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": true,
+        "stable receipt gaps below 0.4s display and PX4 timeout": true,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 849,
+      "ages_s": {
+        "min": 0.01739347,
+        "median": 0.037691101000000005,
+        "p95": 0.076596657,
+        "max": 0.148501603
+      },
+      "gaps_s": {
+        "min": 0.025665817000117386,
+        "median": 0.10013947500010545,
+        "p95": 0.1390201390004222,
+        "max": 0.22248763900006452
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "returncode": 0
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort depth 400 installed in graph": false,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": true,
+        "stable receipt gaps below 0.4s display and PX4 timeout": true,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": true
+      },
+      "count": 497,
+      "ages_s": {
+        "min": 0.017777118,
+        "median": 0.035524639000000004,
+        "p95": 0.072505442,
+        "max": 0.145711789
+      },
+      "gaps_s": {
+        "min": 0.01614785000037955,
+        "median": 0.10007647600014025,
+        "p95": 0.14155793400004768,
+        "max": 0.19802669900036562
+      },
+      "recovery_s": 0.27007659600040057,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "returncode": 0
+    }
+  },
+  "2": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 847,
+      "ages_s": {
+        "min": 0.019254979000000002,
+        "median": 0.112911675,
+        "p95": 0.373163988,
+        "max": 1.3431080770000001
+      },
+      "gaps_s": {
+        "min": 0.0014714600001752842,
+        "median": 0.08340420900003664,
+        "p95": 0.2517605850007385,
+        "max": 1.1469301060005819
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": false
+      },
+      "count": 496,
+      "ages_s": {
+        "min": 0.019887525,
+        "median": 0.13372783700000002,
+        "p95": 0.5220004580000001,
+        "max": 0.728025845
+      },
+      "gaps_s": {
+        "min": 0.0008105429997158353,
+        "median": 0.07893841200075258,
+        "p95": 0.25386225399961404,
+        "max": 0.6174642010000753
+      },
+      "recovery_s": 1.0880830399997663,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0
+    }
+  },
+  "3": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 842,
+      "ages_s": {
+        "min": 0.026083769000000003,
+        "median": 0.156579138,
+        "p95": 0.472355891,
+        "max": 1.06578963
+      },
+      "gaps_s": {
+        "min": 0.008330300000125135,
+        "median": 0.07551915899966843,
+        "p95": 0.26775976800036005,
+        "max": 0.7683492689993727
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "streams": {
+        "odometry": {
+          "count": 842,
+          "age_s": {
+            "min": 0.026083769000000003,
+            "median": 0.156579138,
+            "p95": 0.472355891,
+            "max": 1.06578963
+          },
+          "prepublish_age_s": {
+            "min": 0.023652067000000002,
+            "median": 0.14721536600000001,
+            "p95": 0.46374675600000004,
+            "max": 1.05397041
+          },
+          "publish_to_callback_s": {
+            "min": 0.000725667,
+            "median": 0.006573590000000001,
+            "p95": 0.017715851,
+            "max": 0.10236022800000001
+          }
+        },
+        "odometry_reliable": {
+          "count": 850,
+          "age_s": {
+            "min": 0.026661561,
+            "median": 0.16916724900000002,
+            "p95": 0.7619888140000001,
+            "max": 2.117164519
+          },
+          "prepublish_age_s": {
+            "min": 0.023652067000000002,
+            "median": 0.14739764300000002,
+            "p95": 0.468121457,
+            "max": 1.05397041
+          },
+          "publish_to_callback_s": {
+            "min": 0.001068668,
+            "median": 0.009895969000000001,
+            "p95": 0.262580971,
+            "max": 1.9914492840000002
+          }
+        },
+        "cloud_world": {
+          "count": 850,
+          "age_s": {
+            "min": 0.027551437,
+            "median": 0.163589595,
+            "p95": 0.48813579500000004,
+            "max": 1.0768855160000002
+          },
+          "prepublish_age_s": {
+            "min": 0.024557693000000002,
+            "median": 0.149730321,
+            "p95": 0.469825376,
+            "max": 1.058262289
+          },
+          "publish_to_callback_s": {
+            "min": 0.0007880840000000001,
+            "median": 0.011050094,
+            "p95": 0.027770486,
+            "max": 0.103860562
+          }
+        },
+        "cloud_body": {
+          "count": 850,
+          "age_s": {
+            "min": 0.027778938000000003,
+            "median": 0.164681249,
+            "p95": 0.49351282700000004,
+            "max": 1.097711686
+          },
+          "prepublish_age_s": {
+            "min": 0.025735445000000003,
+            "median": 0.151052813,
+            "p95": 0.470891127,
+            "max": 1.060303374
+          },
+          "publish_to_callback_s": {
+            "min": 0.0007224590000000001,
+            "median": 0.01189972,
+            "p95": 0.028981779000000003,
+            "max": 0.10421872900000001
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": true
+      },
+      "count": 500,
+      "ages_s": {
+        "min": 0.023148493000000003,
+        "median": 0.156379718,
+        "p95": 0.365356879,
+        "max": 0.49227424700000005
+      },
+      "gaps_s": {
+        "min": 0.008726092000870267,
+        "median": 0.07724799400057236,
+        "p95": 0.2710712300013256,
+        "max": 0.5436004599996522
+      },
+      "recovery_s": 0.892020301999402,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "streams": {
+        "odometry": {
+          "count": 500,
+          "age_s": {
+            "min": 0.023148493000000003,
+            "median": 0.156379718,
+            "p95": 0.365356879,
+            "max": 0.49227424700000005
+          },
+          "prepublish_age_s": {
+            "min": 0.017688486,
+            "median": 0.151212798,
+            "p95": 0.35845226500000005,
+            "max": 0.48570853300000005
+          },
+          "publish_to_callback_s": {
+            "min": 0.000671418,
+            "median": 0.005565589,
+            "p95": 0.016503392000000002,
+            "max": 0.032037032
+          }
+        },
+        "odometry_reliable": {
+          "count": 502,
+          "age_s": {
+            "min": 0.024066077,
+            "median": 0.167084482,
+            "p95": 0.46974810100000003,
+            "max": 1.744478478
+          },
+          "prepublish_age_s": {
+            "min": 0.017688486,
+            "median": 0.151212798,
+            "p95": 0.35845226500000005,
+            "max": 0.48570853300000005
+          },
+          "publish_to_callback_s": {
+            "min": 0.0010115010000000002,
+            "median": 0.008341966000000001,
+            "p95": 0.075117367,
+            "max": 1.5034668800000002
+          }
+        },
+        "cloud_world": {
+          "count": 502,
+          "age_s": {
+            "min": 0.025615704000000003,
+            "median": 0.162746732,
+            "p95": 0.37476913700000003,
+            "max": 0.501586783
+          },
+          "prepublish_age_s": {
+            "min": 0.018595279000000003,
+            "median": 0.152185216,
+            "p95": 0.36169501800000003,
+            "max": 0.48853916000000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.000893959,
+            "median": 0.010375760000000001,
+            "p95": 0.025107276,
+            "max": 0.048643632000000006
+          }
+        },
+        "cloud_body": {
+          "count": 502,
+          "age_s": {
+            "min": 0.026369663,
+            "median": 0.166328959,
+            "p95": 0.375740679,
+            "max": 0.506840095
+          },
+          "prepublish_age_s": {
+            "min": 0.018991363,
+            "median": 0.15368246700000002,
+            "p95": 0.36287087500000004,
+            "max": 0.490727538
+          },
+          "publish_to_callback_s": {
+            "min": 0.001149168,
+            "median": 0.011777512,
+            "p95": 0.026762486000000002,
+            "max": 0.06511581500000001
+          }
+        }
+      }
+    }
+  },
+  "4": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 844,
+      "ages_s": {
+        "min": 0.02667829,
+        "median": 0.220327603,
+        "p95": 0.7399916950000001,
+        "max": 0.9796328390000001
+      },
+      "gaps_s": {
+        "min": 0.0014901270005793776,
+        "median": 0.07280748999983189,
+        "p95": 0.2997157989993866,
+        "max": 0.9776231450014166
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "ASYNCHRONOUS",
+      "streams": {
+        "odometry": {
+          "count": 844,
+          "age_s": {
+            "min": 0.02667829,
+            "median": 0.220327603,
+            "p95": 0.7399916950000001,
+            "max": 0.9796328390000001
+          },
+          "prepublish_age_s": {
+            "min": 0.022505701000000003,
+            "median": 0.204884944,
+            "p95": 0.718502512,
+            "max": 0.950173518
+          },
+          "publish_to_callback_s": {
+            "min": 0.000713126,
+            "median": 0.010622344,
+            "p95": 0.041111458000000003,
+            "max": 0.067094442
+          }
+        },
+        "odometry_reliable": {
+          "count": 848,
+          "age_s": {
+            "min": 0.0282985,
+            "median": 0.22438716500000003,
+            "p95": 0.743012781,
+            "max": 0.980088131
+          },
+          "prepublish_age_s": {
+            "min": 0.022505701000000003,
+            "median": 0.205619363,
+            "p95": 0.718502512,
+            "max": 0.950173518
+          },
+          "publish_to_callback_s": {
+            "min": 0.0011967100000000001,
+            "median": 0.014062056000000002,
+            "p95": 0.046866005,
+            "max": 0.10056685100000001
+          }
+        },
+        "cloud_world": {
+          "count": 848,
+          "age_s": {
+            "min": 0.032161401,
+            "median": 0.22822093400000001,
+            "p95": 0.7467376600000001,
+            "max": 0.9803415900000001
+          },
+          "prepublish_age_s": {
+            "min": 0.023235452,
+            "median": 0.214416938,
+            "p95": 0.726738573,
+            "max": 0.964068323
+          },
+          "publish_to_callback_s": {
+            "min": 0.00058275,
+            "median": 0.01328118,
+            "p95": 0.036373203,
+            "max": 0.065669899
+          }
+        },
+        "cloud_body": {
+          "count": 848,
+          "age_s": {
+            "min": 0.032363526000000004,
+            "median": 0.23272673000000002,
+            "p95": 0.747116827,
+            "max": 0.980531173
+          },
+          "prepublish_age_s": {
+            "min": 0.023514577000000002,
+            "median": 0.216390192,
+            "p95": 0.7302547490000001,
+            "max": 0.9652740750000001
+          },
+          "publish_to_callback_s": {
+            "min": 0.00085196,
+            "median": 0.013334722,
+            "p95": 0.037392829,
+            "max": 0.068172402
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": false
+      },
+      "count": 503,
+      "ages_s": {
+        "min": 0.017575226000000003,
+        "median": 0.228160732,
+        "p95": 0.8107535680000001,
+        "max": 1.5207104
+      },
+      "gaps_s": {
+        "min": 0.00803046699911647,
+        "median": 0.06950657000015781,
+        "p95": 0.2956105459998071,
+        "max": 0.9909700749994954
+      },
+      "recovery_s": 1.3566269750004736,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "ASYNCHRONOUS",
+      "streams": {
+        "odometry": {
+          "count": 503,
+          "age_s": {
+            "min": 0.017575226000000003,
+            "median": 0.228160732,
+            "p95": 0.8107535680000001,
+            "max": 1.5207104
+          },
+          "prepublish_age_s": {
+            "min": 0.016423141000000002,
+            "median": 0.217025241,
+            "p95": 0.785323788,
+            "max": 1.489295035
+          },
+          "publish_to_callback_s": {
+            "min": 0.000569334,
+            "median": 0.012890805,
+            "p95": 0.040646416000000005,
+            "max": 0.061077602
+          }
+        },
+        "odometry_reliable": {
+          "count": 506,
+          "age_s": {
+            "min": 0.018010101,
+            "median": 0.231647755,
+            "p95": 0.813966862,
+            "max": 1.521126608
+          },
+          "prepublish_age_s": {
+            "min": 0.016423141000000002,
+            "median": 0.217025241,
+            "p95": 0.785323788,
+            "max": 1.489295035
+          },
+          "publish_to_callback_s": {
+            "min": 0.001099876,
+            "median": 0.016621225,
+            "p95": 0.045072587000000004,
+            "max": 0.158423283
+          }
+        },
+        "cloud_world": {
+          "count": 506,
+          "age_s": {
+            "min": 0.019124852,
+            "median": 0.23684655500000001,
+            "p95": 0.8267972870000001,
+            "max": 1.533352996
+          },
+          "prepublish_age_s": {
+            "min": 0.017095142,
+            "median": 0.22051826400000002,
+            "p95": 0.791723465,
+            "max": 1.520102566
+          },
+          "publish_to_callback_s": {
+            "min": 0.000941793,
+            "median": 0.014381806,
+            "p95": 0.037678996,
+            "max": 0.064177523
+          }
+        },
+        "cloud_body": {
+          "count": 506,
+          "age_s": {
+            "min": 0.020703937000000002,
+            "median": 0.240450411,
+            "p95": 0.830567083,
+            "max": 1.5341676210000001
+          },
+          "prepublish_age_s": {
+            "min": 0.017302517,
+            "median": 0.22352554200000002,
+            "p95": 0.7995498430000001,
+            "max": 1.5203898580000001
+          },
+          "publish_to_callback_s": {
+            "min": 0.001065751,
+            "median": 0.016069391000000002,
+            "p95": 0.040302082,
+            "max": 0.067845526
+          }
+        }
+      }
+    }
+  },
+  "5": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 840,
+      "ages_s": {
+        "min": 0.032339261,
+        "median": 0.309698631,
+        "p95": 1.143498729,
+        "max": 2.0261249120000002
+      },
+      "gaps_s": {
+        "min": 0.0023668779995205114,
+        "median": 0.05336517800060392,
+        "p95": 0.3378673789993627,
+        "max": 1.113878531001319
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "streams": {
+        "odometry": {
+          "count": 840,
+          "age_s": {
+            "min": 0.032339261,
+            "median": 0.309698631,
+            "p95": 1.143498729,
+            "max": 2.0261249120000002
+          },
+          "prepublish_age_s": {
+            "min": 0.026855395,
+            "median": 0.29876175,
+            "p95": 1.1420275610000001,
+            "max": 2.013713608
+          },
+          "publish_to_callback_s": {
+            "min": 0.0007968340000000001,
+            "median": 0.00886405,
+            "p95": 0.027342027,
+            "max": 0.08376087600000001
+          }
+        },
+        "odometry_reliable": {
+          "count": 851,
+          "age_s": {
+            "min": 0.03285172,
+            "median": 0.34583908700000004,
+            "p95": 1.3813275310000002,
+            "max": 2.101169664
+          },
+          "prepublish_age_s": {
+            "min": 0.026855395,
+            "median": 0.29876175,
+            "p95": 1.1434434370000002,
+            "max": 2.013713608
+          },
+          "publish_to_callback_s": {
+            "min": 0.001323876,
+            "median": 0.013178680000000002,
+            "p95": 0.488565572,
+            "max": 1.7567256740000001
+          }
+        },
+        "cloud_world": {
+          "count": 851,
+          "age_s": {
+            "min": 0.03398718,
+            "median": 0.315973198,
+            "p95": 1.161665071,
+            "max": 2.033783795
+          },
+          "prepublish_age_s": {
+            "min": 0.028141646000000003,
+            "median": 0.30074565400000003,
+            "p95": 1.158936527,
+            "max": 2.014503442
+          },
+          "publish_to_callback_s": {
+            "min": 0.000857793,
+            "median": 0.013842806000000001,
+            "p95": 0.037594704,
+            "max": 0.091822467
+          }
+        },
+        "cloud_body": {
+          "count": 851,
+          "age_s": {
+            "min": 0.034803847,
+            "median": 0.31935437,
+            "p95": 1.161894322,
+            "max": 2.066838953
+          },
+          "prepublish_age_s": {
+            "min": 0.028902897,
+            "median": 0.30169571900000003,
+            "p95": 1.159387152,
+            "max": 2.0150039420000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.0008828760000000001,
+            "median": 0.014703515,
+            "p95": 0.041001499000000004,
+            "max": 0.09267296700000001
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": false
+      },
+      "count": 506,
+      "ages_s": {
+        "min": 0.038482468000000006,
+        "median": 0.49791486300000004,
+        "p95": 1.3261060580000001,
+        "max": 2.2078267730000003
+      },
+      "gaps_s": {
+        "min": 0.004761754000355722,
+        "median": 0.04752575600105047,
+        "p95": 0.37625858499995957,
+        "max": 1.2234483909996925
+      },
+      "recovery_s": 5.245860951000942,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "streams": {
+        "odometry": {
+          "count": 506,
+          "age_s": {
+            "min": 0.038482468000000006,
+            "median": 0.49791486300000004,
+            "p95": 1.3261060580000001,
+            "max": 2.2078267730000003
+          },
+          "prepublish_age_s": {
+            "min": 0.027201175,
+            "median": 0.47525059000000003,
+            "p95": 1.303770786,
+            "max": 2.1901077140000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.001022876,
+            "median": 0.011953095,
+            "p95": 0.06475939900000001,
+            "max": 0.11837391000000001
+          }
+        },
+        "odometry_reliable": {
+          "count": 514,
+          "age_s": {
+            "min": 0.039118302,
+            "median": 0.541889421,
+            "p95": 1.492326142,
+            "max": 2.213896363
+          },
+          "prepublish_age_s": {
+            "min": 0.027201175,
+            "median": 0.492506058,
+            "p95": 1.3066089120000002,
+            "max": 2.1901077140000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.001519001,
+            "median": 0.017636226,
+            "p95": 0.195681821,
+            "max": 0.995144495
+          }
+        },
+        "cloud_world": {
+          "count": 516,
+          "age_s": {
+            "min": 0.040853428000000004,
+            "median": 0.514091093,
+            "p95": 1.384776655,
+            "max": 2.221681245
+          },
+          "prepublish_age_s": {
+            "min": 0.028146176000000002,
+            "median": 0.48805450600000005,
+            "p95": 1.3076189550000001,
+            "max": 2.200370599
+          },
+          "publish_to_callback_s": {
+            "min": 0.001432085,
+            "median": 0.018561893,
+            "p95": 0.083909959,
+            "max": 0.173411173
+          }
+        },
+        "cloud_body": {
+          "count": 515,
+          "age_s": {
+            "min": 0.041112137,
+            "median": 0.516522137,
+            "p95": 1.3902809930000002,
+            "max": 2.225163166
+          },
+          "prepublish_age_s": {
+            "min": 0.028569677,
+            "median": 0.48848354800000005,
+            "p95": 1.308465373,
+            "max": 2.20282381
+          },
+          "publish_to_callback_s": {
+            "min": 0.0009919590000000002,
+            "median": 0.020410645,
+            "p95": 0.086030378,
+            "max": 0.175722343
+          }
+        }
+      }
+    }
+  },
+  "6": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": false,
+        "original timing parameters unchanged": false,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 847,
+      "ages_s": {
+        "min": 0.022662601,
+        "median": 0.121639621,
+        "p95": 0.38375098300000005,
+        "max": 0.7255721660000001
+      },
+      "gaps_s": {
+        "min": 0.007807632000549347,
+        "median": 0.08723487899987958,
+        "p95": 0.24748708100014483,
+        "max": 0.6132540720009274
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {},
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_cyclonedds_cpp",
+      "streams": {
+        "odometry": {
+          "count": 847,
+          "age_s": {
+            "min": 0.022662601,
+            "median": 0.121639621,
+            "p95": 0.38375098300000005,
+            "max": 0.7255721660000001
+          },
+          "prepublish_age_s": {
+            "min": 0.020654950000000002,
+            "median": 0.11156139400000001,
+            "p95": 0.37628091300000005,
+            "max": 0.717548991
+          },
+          "publish_to_callback_s": {
+            "min": 0.0007627090000000001,
+            "median": 0.008643842,
+            "p95": 0.025413900000000003,
+            "max": 0.09928109900000001
+          }
+        },
+        "odometry_reliable": {
+          "count": 847,
+          "age_s": {
+            "min": 0.023216476,
+            "median": 0.12469832700000001,
+            "p95": 0.386956799,
+            "max": 0.727516126
+          },
+          "prepublish_age_s": {
+            "min": 0.020654950000000002,
+            "median": 0.11156139400000001,
+            "p95": 0.37628091300000005,
+            "max": 0.717548991
+          },
+          "publish_to_callback_s": {
+            "min": 0.001140126,
+            "median": 0.01220947,
+            "p95": 0.031153364000000003,
+            "max": 0.10128835100000001
+          }
+        },
+        "cloud_world": {
+          "count": 845,
+          "age_s": {
+            "min": 0.03199361,
+            "median": 0.22100398100000002,
+            "p95": 0.534607554,
+            "max": 0.85829734
+          },
+          "prepublish_age_s": {
+            "min": 0.021851951,
+            "median": 0.11369401600000001,
+            "p95": 0.37898204100000005,
+            "max": 0.718464242
+          },
+          "publish_to_callback_s": {
+            "min": 0.0016429600000000002,
+            "median": 0.042984918000000004,
+            "p95": 0.341222175,
+            "max": 0.7556497980000001
+          }
+        },
+        "cloud_body": {
+          "count": 845,
+          "age_s": {
+            "min": 0.032539283,
+            "median": 0.21693714200000003,
+            "p95": 0.5531319060000001,
+            "max": 1.332285312
+          },
+          "prepublish_age_s": {
+            "min": 0.022488368,
+            "median": 0.11835174500000001,
+            "p95": 0.38077212800000004,
+            "max": 0.719119034
+          },
+          "publish_to_callback_s": {
+            "min": 0.001356543,
+            "median": 0.038655997000000004,
+            "p95": 0.358171067,
+            "max": 1.179063763
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": false,
+        "original timing parameters unchanged": false,
+        "sustained new source measurements": true,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": false
+      },
+      "count": 515,
+      "ages_s": {
+        "min": 0.026724421,
+        "median": 0.120601177,
+        "p95": 3.3447114210000004,
+        "max": 4.15241795
+      },
+      "gaps_s": {
+        "min": 0.010172468000746449,
+        "median": 0.08189191600104095,
+        "p95": 0.21741646699956618,
+        "max": 1.2132666309989872
+      },
+      "recovery_s": 4.359461980000198,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {},
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_cyclonedds_cpp",
+      "streams": {
+        "odometry": {
+          "count": 515,
+          "age_s": {
+            "min": 0.026724421,
+            "median": 0.120601177,
+            "p95": 3.3447114210000004,
+            "max": 4.15241795
+          },
+          "prepublish_age_s": {
+            "min": 0.022464662,
+            "median": 0.110569651,
+            "p95": 3.321343648,
+            "max": 4.1213420020000004
+          },
+          "publish_to_callback_s": {
+            "min": 0.00070525,
+            "median": 0.008217841,
+            "p95": 0.020503312000000003,
+            "max": 0.036592411000000005
+          }
+        },
+        "odometry_reliable": {
+          "count": 516,
+          "age_s": {
+            "min": 0.027207129,
+            "median": 0.12318050000000001,
+            "p95": 3.345968489,
+            "max": 4.159104998
+          },
+          "prepublish_age_s": {
+            "min": 0.022464662,
+            "median": 0.110569651,
+            "p95": 3.321343648,
+            "max": 4.1213420020000004
+          },
+          "publish_to_callback_s": {
+            "min": 0.0010876260000000002,
+            "median": 0.011352844,
+            "p95": 0.02459965,
+            "max": 0.068189027
+          }
+        },
+        "cloud_world": {
+          "count": 518,
+          "age_s": {
+            "min": 0.028573105,
+            "median": 0.20652329000000003,
+            "p95": 3.4294642750000004,
+            "max": 4.221972979
+          },
+          "prepublish_age_s": {
+            "min": 0.024841194,
+            "median": 0.11274697800000001,
+            "p95": 3.322341149,
+            "max": 4.128819759000001
+          },
+          "publish_to_callback_s": {
+            "min": 0.0018946680000000002,
+            "median": 0.034184534,
+            "p95": 0.25567454700000003,
+            "max": 0.497962832
+          }
+        },
+        "cloud_body": {
+          "count": 513,
+          "age_s": {
+            "min": 0.038146749,
+            "median": 0.239638433,
+            "p95": 3.4259033320000003,
+            "max": 4.176803057
+          },
+          "prepublish_age_s": {
+            "min": 0.025363278000000003,
+            "median": 0.11632019800000001,
+            "p95": 3.2933389600000003,
+            "max": 4.138181102
+          },
+          "publish_to_callback_s": {
+            "min": 0.001950085,
+            "median": 0.044619295,
+            "p95": 0.33359566700000004,
+            "max": 0.7021393690000001
+          }
+        }
+      }
+    }
+  },
+  "7": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "lidar best effort endpoint and runtime configured depth 20": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": false,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 413,
+      "ages_s": {
+        "min": 0.018096552000000002,
+        "median": 0.089113493,
+        "p95": 0.32783489000000005,
+        "max": 0.6282739860000001
+      },
+      "gaps_s": {
+        "min": 0.012769761999152252,
+        "median": 0.14704152299964335,
+        "p95": 0.5873022539999511,
+        "max": 1.3477689730007114
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "lidar_endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.lidar_queue_depth": {
+          "type": 2,
+          "integer": 20,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "streams": {
+        "odometry": {
+          "count": 413,
+          "age_s": {
+            "min": 0.018096552000000002,
+            "median": 0.089113493,
+            "p95": 0.32783489000000005,
+            "max": 0.6282739860000001
+          },
+          "prepublish_age_s": {
+            "min": 0.016211216,
+            "median": 0.076741455,
+            "p95": 0.316614512,
+            "max": 0.614174222
+          },
+          "publish_to_callback_s": {
+            "min": 0.000786625,
+            "median": 0.00982101,
+            "p95": 0.027421069000000003,
+            "max": 0.045942213
+          }
+        },
+        "odometry_reliable": {
+          "count": 416,
+          "age_s": {
+            "min": 0.019242511,
+            "median": 0.099936965,
+            "p95": 0.477842058,
+            "max": 3.0093727990000003
+          },
+          "prepublish_age_s": {
+            "min": 0.016211216,
+            "median": 0.076741455,
+            "p95": 0.316614512,
+            "max": 0.614174222
+          },
+          "publish_to_callback_s": {
+            "min": 0.0013330850000000001,
+            "median": 0.014014889,
+            "p95": 0.052537386000000005,
+            "max": 2.919921297
+          }
+        },
+        "cloud_world": {
+          "count": 416,
+          "age_s": {
+            "min": 0.026875435000000003,
+            "median": 0.10208117300000001,
+            "p95": 0.34299940900000003,
+            "max": 0.647800506
+          },
+          "prepublish_age_s": {
+            "min": 0.017778926,
+            "median": 0.080124495,
+            "p95": 0.321136225,
+            "max": 0.620748395
+          },
+          "publish_to_callback_s": {
+            "min": 0.001543501,
+            "median": 0.016706392,
+            "p95": 0.038227621,
+            "max": 0.18817623
+          }
+        },
+        "cloud_body": {
+          "count": 416,
+          "age_s": {
+            "min": 0.027709895000000002,
+            "median": 0.105723839,
+            "p95": 0.350965126,
+            "max": 0.6537070530000001
+          },
+          "prepublish_age_s": {
+            "min": 0.01820826,
+            "median": 0.081182049,
+            "p95": 0.327530148,
+            "max": 0.624435649
+          },
+          "publish_to_callback_s": {
+            "min": 0.001073334,
+            "median": 0.019142103,
+            "p95": 0.044768919000000004,
+            "max": 0.20870812500000002
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "lidar best effort endpoint and runtime configured depth 20": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": false,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": true
+      },
+      "count": 248,
+      "ages_s": {
+        "min": 0.0286209,
+        "median": 0.068503363,
+        "p95": 0.17591014800000002,
+        "max": 0.321196886
+      },
+      "gaps_s": {
+        "min": 0.015080056999067892,
+        "median": 0.14672727099969052,
+        "p95": 0.5507815929995559,
+        "max": 0.8792384210009914
+      },
+      "recovery_s": 0.4394753080010574,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "lidar_endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.lidar_queue_depth": {
+          "type": 2,
+          "integer": 20,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "streams": {
+        "odometry": {
+          "count": 248,
+          "age_s": {
+            "min": 0.0286209,
+            "median": 0.068503363,
+            "p95": 0.17591014800000002,
+            "max": 0.321196886
+          },
+          "prepublish_age_s": {
+            "min": 0.022859075000000003,
+            "median": 0.058519239,
+            "p95": 0.164703702,
+            "max": 0.309327583
+          },
+          "publish_to_callback_s": {
+            "min": 0.001062543,
+            "median": 0.007834467000000001,
+            "p95": 0.01812681,
+            "max": 0.060548477
+          }
+        },
+        "odometry_reliable": {
+          "count": 248,
+          "age_s": {
+            "min": 0.029102734,
+            "median": 0.072540688,
+            "p95": 0.17996371700000002,
+            "max": 0.325218974
+          },
+          "prepublish_age_s": {
+            "min": 0.022859075000000003,
+            "median": 0.058519239,
+            "p95": 0.164703702,
+            "max": 0.309327583
+          },
+          "publish_to_callback_s": {
+            "min": 0.0015618770000000001,
+            "median": 0.010467343,
+            "p95": 0.024827691000000002,
+            "max": 0.06926990300000001
+          }
+        },
+        "cloud_world": {
+          "count": 248,
+          "age_s": {
+            "min": 0.031809944,
+            "median": 0.07789694400000001,
+            "p95": 0.193728169,
+            "max": 0.333949732
+          },
+          "prepublish_age_s": {
+            "min": 0.025894839000000003,
+            "median": 0.062346039000000006,
+            "p95": 0.169194476,
+            "max": 0.32285093000000004
+          },
+          "publish_to_callback_s": {
+            "min": 0.001117668,
+            "median": 0.012145887000000001,
+            "p95": 0.029131863,
+            "max": 0.065391898
+          }
+        },
+        "cloud_body": {
+          "count": 248,
+          "age_s": {
+            "min": 0.033098331,
+            "median": 0.08282333600000001,
+            "p95": 0.194796836,
+            "max": 0.336514652
+          },
+          "prepublish_age_s": {
+            "min": 0.026376381,
+            "median": 0.063431915,
+            "p95": 0.17120785300000002,
+            "max": 0.32462630600000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.0012075010000000001,
+            "median": 0.014340973000000002,
+            "p95": 0.032995242,
+            "max": 0.090702591
+          }
+        }
+      }
+    }
+  },
+  "8": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "lidar best effort endpoint and runtime configured depth 20": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": false,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 365,
+      "ages_s": {
+        "min": 0.029579723000000002,
+        "median": 0.076793634,
+        "p95": 0.20559185500000002,
+        "max": 0.33619012200000004
+      },
+      "gaps_s": {
+        "min": 0.012989388000278268,
+        "median": 0.17751776100158168,
+        "p95": 0.6523169030006102,
+        "max": 1.3498119760006375
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "lidar_endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.lidar_queue_depth": {
+          "type": 2,
+          "integer": 20,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "candidate_fastdds_profile": "/tmp/fastlio-receive-clock-fix-184504-792c7c/config/fastdds_localization.xml",
+      "streams": {
+        "odometry": {
+          "count": 365,
+          "age_s": {
+            "min": 0.029579723000000002,
+            "median": 0.076793634,
+            "p95": 0.20559185500000002,
+            "max": 0.33619012200000004
+          },
+          "prepublish_age_s": {
+            "min": 0.022271716,
+            "median": 0.06490873900000001,
+            "p95": 0.200812353,
+            "max": 0.32524998600000005
+          },
+          "publish_to_callback_s": {
+            "min": 0.000777,
+            "median": 0.008603300000000001,
+            "p95": 0.019322186,
+            "max": 0.042605834
+          }
+        },
+        "odometry_reliable": {
+          "count": 365,
+          "age_s": {
+            "min": 0.030816532,
+            "median": 0.080900523,
+            "p95": 0.207773816,
+            "max": 0.33976129200000005
+          },
+          "prepublish_age_s": {
+            "min": 0.022271716,
+            "median": 0.06490873900000001,
+            "p95": 0.200812353,
+            "max": 0.32524998600000005
+          },
+          "publish_to_callback_s": {
+            "min": 0.001241335,
+            "median": 0.011727637,
+            "p95": 0.026744819000000003,
+            "max": 0.044898628
+          }
+        },
+        "cloud_world": {
+          "count": 365,
+          "age_s": {
+            "min": 0.032956492000000004,
+            "median": 0.0832204,
+            "p95": 0.21546846800000002,
+            "max": 0.344229921
+          },
+          "prepublish_age_s": {
+            "min": 0.025035844,
+            "median": 0.069809313,
+            "p95": 0.204511134,
+            "max": 0.32623698700000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.0009327510000000001,
+            "median": 0.01361268,
+            "p95": 0.031474824000000005,
+            "max": 0.063166605
+          }
+        },
+        "cloud_body": {
+          "count": 365,
+          "age_s": {
+            "min": 0.03375041,
+            "median": 0.08799269300000001,
+            "p95": 0.227421272,
+            "max": 0.348466967
+          },
+          "prepublish_age_s": {
+            "min": 0.026425345000000003,
+            "median": 0.071340595,
+            "p95": 0.209306861,
+            "max": 0.32677307
+          },
+          "publish_to_callback_s": {
+            "min": 0.000761251,
+            "median": 0.015727557,
+            "p95": 0.035117494,
+            "max": 0.07020198700000001
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "lidar best effort endpoint and runtime configured depth 20": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": false,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": true,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": true
+      },
+      "count": 235,
+      "ages_s": {
+        "min": 0.026829492000000003,
+        "median": 0.08102877800000001,
+        "p95": 0.19516238200000002,
+        "max": 0.33767660600000005
+      },
+      "gaps_s": {
+        "min": 0.02225839800121321,
+        "median": 0.1515122769997106,
+        "p95": 0.5196944780000194,
+        "max": 1.1775437619999138
+      },
+      "recovery_s": 0.23384043599944704,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "lidar_endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.lidar_queue_depth": {
+          "type": 2,
+          "integer": 20,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "candidate_fastdds_profile": "/tmp/fastlio-receive-clock-fix-184504-792c7c/config/fastdds_localization.xml",
+      "streams": {
+        "odometry": {
+          "count": 235,
+          "age_s": {
+            "min": 0.026829492000000003,
+            "median": 0.08102877800000001,
+            "p95": 0.19516238200000002,
+            "max": 0.33767660600000005
+          },
+          "prepublish_age_s": {
+            "min": 0.020408152000000002,
+            "median": 0.071157001,
+            "p95": 0.185538045,
+            "max": 0.330128849
+          },
+          "publish_to_callback_s": {
+            "min": 0.0008992090000000001,
+            "median": 0.008855009,
+            "p95": 0.019250311000000003,
+            "max": 0.039495497000000004
+          }
+        },
+        "odometry_reliable": {
+          "count": 235,
+          "age_s": {
+            "min": 0.028903244,
+            "median": 0.083765168,
+            "p95": 0.19937078200000002,
+            "max": 0.338324982
+          },
+          "prepublish_age_s": {
+            "min": 0.020408152000000002,
+            "median": 0.071157001,
+            "p95": 0.185538045,
+            "max": 0.330128849
+          },
+          "publish_to_callback_s": {
+            "min": 0.001405543,
+            "median": 0.012140929,
+            "p95": 0.025328359,
+            "max": 0.060309436
+          }
+        },
+        "cloud_world": {
+          "count": 235,
+          "age_s": {
+            "min": 0.035764272,
+            "median": 0.08836574900000001,
+            "p95": 0.210170656,
+            "max": 0.34454507100000004
+          },
+          "prepublish_age_s": {
+            "min": 0.021194778,
+            "median": 0.07218046,
+            "p95": 0.189521885,
+            "max": 0.33918744100000003
+          },
+          "publish_to_callback_s": {
+            "min": 0.000830084,
+            "median": 0.013372055,
+            "p95": 0.029607113,
+            "max": 0.06259856200000001
+          }
+        },
+        "cloud_body": {
+          "count": 235,
+          "age_s": {
+            "min": 0.036025314,
+            "median": 0.09154503300000001,
+            "p95": 0.21429246400000002,
+            "max": 0.35889758600000005
+          },
+          "prepublish_age_s": {
+            "min": 0.021602237,
+            "median": 0.077129401,
+            "p95": 0.19320577,
+            "max": 0.34203498600000004
+          },
+          "publish_to_callback_s": {
+            "min": 0.0007717510000000001,
+            "median": 0.015249516000000001,
+            "p95": 0.03470066,
+            "max": 0.084786835
+          }
+        }
+      }
+    }
+  },
+  "9": {
+    "baseline": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "lidar best effort endpoint and runtime configured depth 20": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": false,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true
+      },
+      "count": 417,
+      "ages_s": {
+        "min": 0.021919559,
+        "median": 0.073130158,
+        "p95": 0.190970835,
+        "max": 0.40891460900000004
+      },
+      "gaps_s": {
+        "min": 0.017095766999773332,
+        "median": 0.15136931800043385,
+        "p95": 0.5846373349995702,
+        "max": 1.1202214950008056
+      },
+      "recovery_s": null,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "lidar_endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.lidar_queue_depth": {
+          "type": 2,
+          "integer": 20,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "candidate_fastdds_profile": "/tmp/fastlio-receive-clock-fix-184504-792c7c/config/fastdds_localization.xml",
+      "streams": {
+        "odometry": {
+          "count": 417,
+          "age_s": {
+            "min": 0.021919559,
+            "median": 0.073130158,
+            "p95": 0.190970835,
+            "max": 0.40891460900000004
+          },
+          "prepublish_age_s": {
+            "min": 0.019912849,
+            "median": 0.063076435,
+            "p95": 0.183259516,
+            "max": 0.399209391
+          },
+          "publish_to_callback_s": {
+            "min": 0.000665584,
+            "median": 0.008647342,
+            "p95": 0.01885181,
+            "max": 0.07671103500000001
+          }
+        },
+        "odometry_reliable": {
+          "count": 417,
+          "age_s": {
+            "min": 0.022586310000000002,
+            "median": 0.078091121,
+            "p95": 0.19764821300000002,
+            "max": 0.412661946
+          },
+          "prepublish_age_s": {
+            "min": 0.019912849,
+            "median": 0.063076435,
+            "p95": 0.183259516,
+            "max": 0.399209391
+          },
+          "publish_to_callback_s": {
+            "min": 0.001049126,
+            "median": 0.012249721000000002,
+            "p95": 0.025866484000000002,
+            "max": 0.095567887
+          }
+        },
+        "cloud_world": {
+          "count": 417,
+          "age_s": {
+            "min": 0.023903728000000003,
+            "median": 0.08233918400000001,
+            "p95": 0.199879465,
+            "max": 0.41959224500000003
+          },
+          "prepublish_age_s": {
+            "min": 0.020641725,
+            "median": 0.065802527,
+            "p95": 0.185559877,
+            "max": 0.40599881400000004
+          },
+          "publish_to_callback_s": {
+            "min": 0.0009464590000000001,
+            "median": 0.013704847000000001,
+            "p95": 0.030228530000000003,
+            "max": 0.113982281
+          }
+        },
+        "cloud_body": {
+          "count": 417,
+          "age_s": {
+            "min": 0.024090686,
+            "median": 0.086177692,
+            "p95": 0.20183742600000001,
+            "max": 0.426120626
+          },
+          "prepublish_age_s": {
+            "min": 0.020960808,
+            "median": 0.068041582,
+            "p95": 0.18964840000000002,
+            "max": 0.412387779
+          },
+          "publish_to_callback_s": {
+            "min": 0.001467668,
+            "median": 0.015061098,
+            "p95": 0.034913119,
+            "max": 0.11652153300000001
+          }
+        }
+      }
+    },
+    "stall_recovery": {
+      "passed": false,
+      "checks": {
+        "clock alignment locked without fabricated shift": true,
+        "best effort endpoint and runtime configured depth 400": true,
+        "lidar best effort endpoint and runtime configured depth 20": true,
+        "original timing parameters unchanged": true,
+        "sustained new source measurements": false,
+        "stable output meets original 0.2s relay gate": false,
+        "stable receipt gaps below 0.4s display and PX4 timeout": false,
+        "measurement stamps strictly increase": true,
+        "finite poses and original coordinate frames": true,
+        "both cloud streams match odometry source stamps": true,
+        "both cloud streams meet original 0.4s display age": false,
+        "clean exit": true,
+        "no malformed raw cloud headers": true,
+        "fresh output recovers within 1 second after private SIGCONT": true
+      },
+      "count": 236,
+      "ages_s": {
+        "min": 0.025008582,
+        "median": 0.066777007,
+        "p95": 0.18163156300000002,
+        "max": 0.578807689
+      },
+      "gaps_s": {
+        "min": 0.019003269000677392,
+        "median": 0.14632318800067878,
+        "p95": 0.5383849560003,
+        "max": 1.5460673379984655
+      },
+      "recovery_s": 0.2392306909983759,
+      "endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "lidar_endpoints": [
+        {
+          "node": "receive_mapping",
+          "namespace": "/gcs_receive_fix",
+          "reliability": "ReliabilityPolicy.BEST_EFFORT",
+          "depth": 0
+        }
+      ],
+      "parameters": {
+        "common.imu_queue_depth": {
+          "type": 2,
+          "integer": 400,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.lidar_queue_depth": {
+          "type": 2,
+          "integer": 20,
+          "boolean": false,
+          "double": 0.0
+        },
+        "common.time_sync_en": {
+          "type": 1,
+          "integer": 0,
+          "boolean": true,
+          "double": 0.0
+        },
+        "common.time_offset_lidar_to_imu": {
+          "type": 3,
+          "integer": 0,
+          "boolean": false,
+          "double": 0.0
+        }
+      },
+      "returncode": 0,
+      "publication_mode": "unset",
+      "candidate_rmw": "rmw_fastrtps_cpp",
+      "candidate_fastdds_profile": "/tmp/fastlio-receive-clock-fix-184504-792c7c/config/fastdds_localization.xml",
+      "streams": {
+        "odometry": {
+          "count": 236,
+          "age_s": {
+            "min": 0.025008582,
+            "median": 0.066777007,
+            "p95": 0.18163156300000002,
+            "max": 0.578807689
+          },
+          "prepublish_age_s": {
+            "min": 0.017626938,
+            "median": 0.054728739000000005,
+            "p95": 0.174356222,
+            "max": 0.5708524730000001
+          },
+          "publish_to_callback_s": {
+            "min": 0.00104271,
+            "median": 0.009679843,
+            "p95": 0.021244438,
+            "max": 0.037487079
+          }
+        },
+        "odometry_reliable": {
+          "count": 236,
+          "age_s": {
+            "min": 0.025527512000000002,
+            "median": 0.068873128,
+            "p95": 0.190712512,
+            "max": 0.582714568
+          },
+          "prepublish_age_s": {
+            "min": 0.017626938,
+            "median": 0.054728739000000005,
+            "p95": 0.174356222,
+            "max": 0.5708524730000001
+          },
+          "publish_to_callback_s": {
+            "min": 0.001469126,
+            "median": 0.013122096000000001,
+            "p95": 0.027279902,
+            "max": 0.048136715000000004
+          }
+        },
+        "cloud_world": {
+          "count": 236,
+          "age_s": {
+            "min": 0.026665889,
+            "median": 0.07378114300000001,
+            "p95": 0.198530967,
+            "max": 0.5925075780000001
+          },
+          "prepublish_age_s": {
+            "min": 0.018369814,
+            "median": 0.057433658000000005,
+            "p95": 0.177070695,
+            "max": 0.576857896
+          },
+          "publish_to_callback_s": {
+            "min": 0.0014262510000000001,
+            "median": 0.015756724,
+            "p95": 0.034121826,
+            "max": 0.073399448
+          }
+        },
+        "cloud_body": {
+          "count": 236,
+          "age_s": {
+            "min": 0.026871222,
+            "median": 0.078168689,
+            "p95": 0.20938145000000002,
+            "max": 0.598978501
+          },
+          "prepublish_age_s": {
+            "min": 0.018781356000000003,
+            "median": 0.058550552000000006,
+            "p95": 0.17797369600000001,
+            "max": 0.579372065
+          },
+          "publish_to_callback_s": {
+            "min": 0.001063126,
+            "median": 0.018505394,
+            "p95": 0.04030429,
+            "max": 0.07590632600000001
+          }
+        }
+      }
+    }
+  }
+}

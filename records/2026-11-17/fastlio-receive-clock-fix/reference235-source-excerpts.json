@@ -1,0 +1,33 @@
+{
+  "source_sha256": "87d38041d0b1e8348bcae5ff3b2e4367fe3e3376b547fd8e9295568901ab3cef",
+  "excerpts": [
+    {
+      "line": 323,
+      "text": "        timediff_lidar_wrt_imu = last_timestamp_lidar + 0.1 - last_timestamp_imu;"
+    },
+    {
+      "line": 324,
+      "text": "        printf(\"Self sync IMU and LiDAR, time diff is %.10lf \\n\", timediff_lidar_wrt_imu);"
+    },
+    {
+      "line": 851,
+      "text": "        nh.subscribe(lid_topic, 200000, livox_pcl_cbk) : \\"
+    },
+    {
+      "line": 852,
+      "text": "        nh.subscribe(lid_topic, 200000, standard_pcl_cbk);"
+    },
+    {
+      "line": 853,
+      "text": "    ros::Subscriber sub_imu = nh.subscribe(imu_topic, 200000, imu_cbk);"
+    },
+    {
+      "line": 868,
+      "text": "    ros::Rate rate(5000);"
+    },
+    {
+      "line": 873,
+      "text": "        ros::spinOnce();"
+    }
+  ]
+}

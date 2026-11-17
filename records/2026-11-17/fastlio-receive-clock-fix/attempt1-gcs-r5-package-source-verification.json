@@ -1,0 +1,9 @@
+{
+  "communication/runtime_paths.py": true,
+  "preflight/bridge.py": true,
+  "pointcloud-only/manage.py": true,
+  "built_binary_identical": false,
+  "owner_variable_in_production_binary": true,
+  "owner_6_cases": true,
+  "portable_7_checks": true
+}

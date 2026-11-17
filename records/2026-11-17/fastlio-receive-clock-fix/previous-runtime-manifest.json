@@ -1,0 +1,22 @@
+{
+  "files": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": {
+      "sha256": "2c3f080533595144f0494d2df70efae00f24c2ee41a8ccce443b2b3a54963e9d",
+      "mode": 436
+    },
+    "01_apps/fast_lio/workspace/src/fast_lio/include/source_clock_alignment.hpp": null,
+    "01_apps/fast_lio/workspace/src/fast_lio/CMakeLists.txt": {
+      "sha256": "311a153175fad04adb8ce55b2a1b45ec9f556add64318a40b3e547912ea8e806",
+      "mode": 436
+    },
+    "01_apps/fast_lio/config/lidar.yaml": {
+      "sha256": "447aebf3ef449da3c37c6bf0a6bdcc824c083a8d112b94e99ebf29cdfb2d3b85",
+      "mode": 436
+    },
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": {
+      "sha256": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd",
+      "mode": 493
+    }
+  },
+  "git": "7dd15a5be69148d4b124583f843d4bdfbe49fe46"
+}

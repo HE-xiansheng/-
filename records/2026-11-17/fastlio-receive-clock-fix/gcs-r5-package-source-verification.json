@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": {
+    "communication/runtime_paths.py": true,
+    "preflight/bridge.py": true,
+    "pointcloud-only/manage.py": true,
+    "owner_variable_in_production_binary": true,
+    "owner_6_cases": true,
+    "portable_7_checks": true,
+    "production_text_rodata_identical_to_build": true
+  },
+  "bundle": "/home/tyzk/下载/科研飞行平台-ROS2地面站/drone-gcs-ros2-20261117-ros2-r5-linux-amd64",
+  "binary_sha256": "db09fd8381f9c414b268b23540ce8bc9d0a529a4fd74d3adaccbc7860e27b85e",
+  "sections": {
+    "build": {
+      ".text": "bd1434ac0d12381e4febb25522840a2ef22d5284686d7d8fc00ffb62ffaa0ce0",
+      ".rodata": "565c4dea834dd6309910c234c8c9386dcd8549404f9811cddd034670885f7747"
+    },
+    "bundle": {
+      ".text": "bd1434ac0d12381e4febb25522840a2ef22d5284686d7d8fc00ffb62ffaa0ce0",
+      ".rodata": "565c4dea834dd6309910c234c8c9386dcd8549404f9811cddd034670885f7747"
+    }
+  },
+  "rpath": {
+    "build": "\nDynamic section at offset 0x36e8a8 contains 42 entries:\n  标记        类型                         名称/值\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Quick3D.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[liblz4.so.1]\n 0x0000000000000001 (NEEDED)             共享库：[libbz2.so.1.0]\n 0x0000000000000001 (NEEDED)             共享库：[libsqlite3.so.0]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Quick.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Gui.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libGLX.so.0]\n 0x0000000000000001 (NEEDED)             共享库：[libOpenGL.so.0]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Qml.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Network.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Core.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libm.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             共享库：[libc.so.6]\n 0x000000000000001d (RUNPATH)            Library runpath: [/home/tyzk/dianyunGCS-review-20261026/.deps/Qt/lib:]\n 0x000000000000000c (INIT)               0x1f000\n 0x000000000000000d (FINI)               0x12c5c8\n 0x0000000000000019 (INIT_ARRAY)         0x368b88\n 0x000000000000001b (INIT_ARRAYSZ)       112 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x368bf8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x3a0\n 0x0000000000000005 (STRTAB)             0x41b0\n 0x0000000000000006 (SYMTAB)             0x580\n 0x000000000000000a (STRSZ)              25593 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0x36fb88\n 0x0000000000000002 (PLTRELSZ)           12120 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1bd08\n 0x0000000000000007 (RELA)               0xac80\n 0x0000000000000008 (RELASZ)             69768 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            标志： NOW PIE\n 0x000000006ffffffe (VERNEED)            0xaab0\n 0x000000006fffffff (VERNEEDNUM)         10\n 0x000000006ffffff0 (VERSYM)             0xa5aa\n 0x000000006ffffff9 (RELACOUNT)          2274\n 0x0000000000000000 (NULL)               0x0\n",
+    "bundle": "\nDynamic section at offset 0x36e8a8 contains 42 entries:\n  标记        类型                         名称/值\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Quick3D.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[liblz4.so.1]\n 0x0000000000000001 (NEEDED)             共享库：[libbz2.so.1.0]\n 0x0000000000000001 (NEEDED)             共享库：[libsqlite3.so.0]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Quick.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Gui.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libGLX.so.0]\n 0x0000000000000001 (NEEDED)             共享库：[libOpenGL.so.0]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Qml.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Network.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libQt6Core.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libm.so.6]\n 0x0000000000000001 (NEEDED)             共享库：[libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             共享库：[libc.so.6]\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN:$ORIGIN/../lib]\n 0x000000000000000c (INIT)               0x1f000\n 0x000000000000000d (FINI)               0x12c5c8\n 0x0000000000000019 (INIT_ARRAY)         0x368b88\n 0x000000000000001b (INIT_ARRAYSZ)       112 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x368bf8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x3a0\n 0x0000000000000005 (STRTAB)             0x41b0\n 0x0000000000000006 (SYMTAB)             0x580\n 0x000000000000000a (STRSZ)              25593 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0x36fb88\n 0x0000000000000002 (PLTRELSZ)           12120 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1bd08\n 0x0000000000000007 (RELA)               0xac80\n 0x0000000000000008 (RELASZ)             69768 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            标志： NOW PIE\n 0x000000006ffffffe (VERNEED)            0xaab0\n 0x000000006fffffff (VERNEEDNUM)         10\n 0x000000006ffffff0 (VERSYM)             0xa5aa\n 0x000000006ffffff9 (RELACOUNT)          2274\n 0x0000000000000000 (NULL)               0x0\n"
+  },
+  "formally_installed": false,
+  "old_gui_untouched": true
+}

@@ -69,8 +69,16 @@ r3独立包位于电脑下载目录 `科研飞行平台-ROS2地面站/drone-gcs-
 
 ## 2026-11-17 当前窗口的管理接口修复
 
-早期独立副本使用内嵌的空modules配置，定位按钮会返回“需要api_version=1”；仅改磁盘上的Python配置无法更新已运行的Qt资源。当前r4包由本仓库canonical源码重新构建，定位直接委托机载fast_lio/manage_stack.py，任务状态直接读取原生gcs_task_manager.py。当前已运行的r4窗口与旧窗口使用独立端口和状态目录。
+早期独立副本使用内嵌的空modules配置，定位按钮会返回“需要api_version=1”；仅改磁盘上的Python配置无法更新已运行的Qt资源。r4包由本仓库canonical源码重新构建，定位直接委托机载fast_lio/manage_stack.py，任务状态直接读取原生gcs_task_manager.py。该窗口曾与旧窗口使用独立端口和状态目录，现已关闭。
 
-电脑入口为仓库tools/launch_ros2_repaired_gcs.sh，默认使用下载目录中的20261117-ros2-r4包；可用GCS_BUNDLE_DIR指定同布局包。运行`bash /home/tyzk/drone-migration-github/tools/launch_ros2_repaired_gcs.sh`。未替换原桌面快捷方式。r4端口为点云9100、位姿9101、飞前状态9103、机载遥测19115，ROS域0。
+电脑入口为仓库tools/launch_ros2_repaired_gcs.sh，默认使用下载目录中的20261117-ros2-r5包；可用GCS_BUNDLE_DIR指定同布局包。运行`bash /home/tyzk/drone-migration-github/tools/launch_ros2_repaired_gcs.sh`。未替换原桌面快捷方式。独立端口为点云9100、位姿9101、飞前状态9103、机载遥测19115，ROS域0；r5使用独立设置和桥接状态目录。
 
 机载任务监视的退出现已处理Humble提前关闭context与重复清理，修复只改变生命周期，不准备任务或发送控制命令。真实只读候选/安装版本各12项退出检查及原生定位复用检查见records/2026-11-17/gcs-manager-integration。定位源时效与全负载仍独立验收，接口成功不等于定位健康。
+
+## Linux 关窗后的只读桥接回收
+
+2026-11-17 发现 r4 窗口已关闭，其后台飞前桥接和两个机载只读订阅仍持续重连。其中一个读者持续占用机载 CPU。核对窗口退出、端口、PID/启动时间及 stream_id 后已精确结束这组孤立桥接，原定位与基础服务的 PID/启动时间保持。
+
+新版本由 Qt 为子进程设置所属窗口 PID；Linux 桥接核对 `/proc` 启动时间，窗口退出或 PID 被复用时结束自己的 SSH 会话。独立 CLI 未设置所属窗口时继续沿用原管理方式。两类桥接各覆盖窗口退出、窗口已退出后延迟启动、独立 CLI 三种场景，共六项本机 fixture 验证通过；fixture 未连接机载或 ROS。此修复不代表当前定位积压已解决，定位仍按原时效门槛单独验证。记录见 `records/2026-11-17/fastlio-receive-clock-fix/gcs-owner-lifecycle`。
+
+r5包已完成生产Qt Release构建。真实压缩包解压到中文/空格路径后，清单、依赖、Qt重定位及完整主窗口首帧七项通过；SHA256为 `1cde222d315f847ade6ced848b2c45f2cb0b9e696c9619aaeb5723e49011b1ae`。未关闭现有旧窗口或切换正式桌面入口。r5首次连接现场、正式定位新鲜度及真实融合仍需后续验收。

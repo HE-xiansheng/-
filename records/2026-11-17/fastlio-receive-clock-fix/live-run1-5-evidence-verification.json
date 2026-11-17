@@ -1,0 +1,27 @@
+{
+  "1": {
+    "files": 4,
+    "match": true,
+    "archive_sha256": "3a629ddd45e13f0a923bcd9a99d4eefa362c6cacf619066ece1199c760d7b251"
+  },
+  "2": {
+    "files": 4,
+    "match": true,
+    "archive_sha256": "4431c1d6cd548b10cea2a73d82786078b8434108100da66bb7001e8da108609f"
+  },
+  "3": {
+    "files": 4,
+    "match": true,
+    "archive_sha256": "3923f4c2c8a94aa5f1d0e445128c67d50c26dbf72848e6b80b621f2626b38365"
+  },
+  "4": {
+    "files": 4,
+    "match": true,
+    "archive_sha256": "d8a02bb2bbd7cd22573cf1725bf8aa3fe79ed0ba337d95318e5742342116b950"
+  },
+  "5": {
+    "files": 4,
+    "match": true,
+    "archive_sha256": "b0eafcd9721755e96175484c138144a6510cb67bbae84907a04d60366b988183"
+  }
+}

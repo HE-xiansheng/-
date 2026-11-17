@@ -1,0 +1,21 @@
+{
+  "monitors": [],
+  "protected": {
+    "3311": {
+      "ticks": "2089",
+      "comm": "mavros_node"
+    },
+    "3316": {
+      "ticks": "2090",
+      "comm": "livox_ros_drive"
+    },
+    "73150": {
+      "ticks": "197662",
+      "comm": "fastlio_mapping"
+    },
+    "73273": {
+      "ticks": "197826",
+      "comm": "vision2mavros"
+    }
+  }
+}

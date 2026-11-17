@@ -1,0 +1,26 @@
+{
+  "73086": {
+    "tick": "197619",
+    "cmd": "/usr/bin/python3 /opt/ros/humble/bin/ros2 launch /home/orangepi/drone_platform/01_apps/fast_lio/launch/localization.launch.py "
+  },
+  "73150": {
+    "tick": "197662",
+    "cmd": "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_zh2armvr -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf "
+  },
+  "73273": {
+    "tick": "197826",
+    "cmd": "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros/lib/to_mavros/vision2mavros "
+  },
+  "3311": {
+    "tick": "2089",
+    "cmd": "/opt/ros/humble/lib/mavros/mavros_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_bia6c9gf --params-file /tmp/launch_params_jq9uufel --params-file /tmp/launch_params_izy9dms4 --params-file /tmp/launch_params_fk4w734l --params-file /tmp/launch_params_2vihzvf1 --params-file /opt/ros/humble/share/mavros/launch/px4_pluginlists.yaml --params-file /opt/ros/humble/share/mavros/launch/px4_config.yaml "
+  },
+  "3316": {
+    "tick": "2090",
+    "cmd": "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node --ros-args -r __node:=livox_lidar_publisher2 --params-file /tmp/launch_params_y5lt251p "
+  },
+  "71919": {
+    "tick": "195153",
+    "cmd": "/usr/bin/python3 -u - --pc-ip 192.168.1.89 --port 9100 --pose-port 9101 "
+  }
+}

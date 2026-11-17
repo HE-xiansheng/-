@@ -1,0 +1,183 @@
+{
+  "passed": false,
+  "checks": {
+    "imu sustained measurements": false,
+    "imu source freshness": true,
+    "imu monotonic source stamps": true,
+    "imu no 0.4 second receipt gap": true,
+    "lio sustained measurements": false,
+    "lio source freshness": false,
+    "lio monotonic source stamps": true,
+    "lio no 0.4 second receipt gap": false,
+    "relay sustained measurements": false,
+    "relay source freshness": false,
+    "relay monotonic source stamps": false,
+    "relay no 0.4 second receipt gap": false,
+    "fc_odom sustained measurements": true,
+    "fc_odom source freshness": true,
+    "fc_odom monotonic source stamps": true,
+    "fc_odom no 0.4 second receipt gap": true,
+    "relay preserves actual LIO source stamps": false,
+    "lio finite normalized pose and frame": true,
+    "relay finite normalized pose and frame": false,
+    "FCU stays connected and disarmed": true,
+    "fresh sustained EKF status": true,
+    "EKF attitude_status_flag": true,
+    "EKF pos_horiz_rel_status_flag": false,
+    "EKF pos_vert_abs_status_flag": false
+  },
+  "summary": {
+    "imu": {
+      "count": 4150,
+      "age_s": {
+        "min": 0.000517125,
+        "median": 0.012306596000000001,
+        "p95": 0.028600029000000003,
+        "max": 0.077542869
+      },
+      "prepublish_age_s": {
+        "min": 2.4500000000000003e-05,
+        "median": 0.000494084,
+        "p95": 0.009245551000000001,
+        "max": 0.056862224
+      },
+      "publish_to_callback_s": {
+        "min": 0.00044275,
+        "median": 0.009715718,
+        "p95": 0.027177819000000002,
+        "max": 0.058299558
+      },
+      "gaps_s": {
+        "min": 0.00040075099968817085,
+        "median": 0.004805795999345719,
+        "p95": 0.015044764999402105,
+        "max": 0.06028785200032871
+      },
+      "hz": 165.9775813678335
+    },
+    "lio": {
+      "count": 24,
+      "age_s": {
+        "min": 35.598346952,
+        "median": 45.591826058,
+        "p95": 53.429340137000004,
+        "max": 53.849360161
+      },
+      "prepublish_age_s": {
+        "min": 35.592151071,
+        "median": 45.581793881,
+        "p95": 53.426277926000004,
+        "max": 53.842737279000005
+      },
+      "publish_to_callback_s": {
+        "min": 0.0028691280000000003,
+        "median": 0.007904758000000001,
+        "p95": 0.02902932,
+        "max": 0.037098579
+      },
+      "gaps_s": {
+        "min": 0.12346312400040915,
+        "median": 0.5879177549995802,
+        "p95": 2.737014113999976,
+        "max": 3.3039348059992335
+      },
+      "hz": 0.9494577614318978
+    },
+    "relay": {
+      "count": 0,
+      "age_s": null,
+      "prepublish_age_s": null,
+      "publish_to_callback_s": null,
+      "gaps_s": null,
+      "hz": null
+    },
+    "fc_odom": {
+      "count": 750,
+      "age_s": {
+        "min": 0.003047838,
+        "median": 0.015491860000000001,
+        "p95": 0.029420881000000003,
+        "max": 0.050036969
+      },
+      "prepublish_age_s": {
+        "min": 0.0008503470000000001,
+        "median": 0.007960493,
+        "p95": 0.013394592,
+        "max": 0.025118794
+      },
+      "publish_to_callback_s": {
+        "min": 0.000751626,
+        "median": 0.007144674,
+        "p95": 0.019469645,
+        "max": 0.04139425
+      },
+      "gaps_s": {
+        "min": 0.004930338000121992,
+        "median": 0.03321795000010752,
+        "p95": 0.044938004000869114,
+        "max": 0.06968069499998819
+      },
+      "hz": 29.999693966673803
+    },
+    "state": {
+      "count": 25,
+      "age_s": {
+        "min": 0.001626627,
+        "median": 0.010440218000000001,
+        "p95": 0.028152862,
+        "max": 0.048681257000000006
+      },
+      "prepublish_age_s": {
+        "min": 2.1583e-05,
+        "median": 5.8625e-05,
+        "p95": 0.001080042,
+        "max": 0.001862293
+      },
+      "publish_to_callback_s": {
+        "min": 0.001578502,
+        "median": 0.010376343000000001,
+        "p95": 0.028079654000000003,
+        "max": 0.047601215
+      },
+      "gaps_s": {
+        "min": 0.9656296749999456,
+        "median": 1.000984376998531,
+        "p95": 1.021868023000934,
+        "max": 1.046429296999122
+      },
+      "hz": 0.9999338492095385
+    },
+    "ekf": {
+      "count": 25,
+      "age_s": {
+        "min": 0.001118834,
+        "median": 0.006618215,
+        "p95": 0.033086117000000005,
+        "max": 0.041730542
+      },
+      "prepublish_age_s": {
+        "min": 1.0500000000000001e-05,
+        "median": 1.3417e-05,
+        "p95": 4.0834e-05,
+        "max": 0.000590626
+      },
+      "publish_to_callback_s": {
+        "min": 0.001084709,
+        "median": 0.006591673,
+        "p95": 0.033061033000000004,
+        "max": 0.041689708000000006
+      },
+      "gaps_s": {
+        "min": 0.9627112549987942,
+        "median": 1.0007805009990989,
+        "p95": 1.0353599530008069,
+        "max": 1.0363452460005647
+      },
+      "hz": 1.0000764879749588,
+      "flags": {
+        "{\"accel_error_status_flag\": false, \"attitude_status_flag\": true, \"const_pos_mode_status_flag\": true, \"gps_glitch_status_flag\": false, \"pos_horiz_abs_status_flag\": false, \"pos_horiz_rel_status_flag\": false, \"pos_vert_abs_status_flag\": false, \"pos_vert_agl_status_flag\": false, \"pred_pos_horiz_abs_status_flag\": false, \"pred_pos_horiz_rel_status_flag\": false, \"velocity_horiz_status_flag\": false, \"velocity_vert_status_flag\": false}": 25
+      }
+    }
+  },
+  "scope": "existing ROS2 ground session, passive subscriptions only; battery and RC excluded"
+}

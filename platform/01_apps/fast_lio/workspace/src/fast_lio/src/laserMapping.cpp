@@ -34,6 +34,7 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 #include <omp.h>
+#include <atomic>
 #include <mutex>
 #include <math.h>
 #include <thread>
@@ -93,7 +94,8 @@ double last_timestamp_lidar = 0, last_timestamp_imu = -1.0;
 double gyr_cov = 0.1, acc_cov = 0.1, b_gyr_cov = 0.0001, b_acc_cov = 0.0001;
 double filter_size_corner_min = 0, filter_size_surf_min = 0, filter_size_map_min = 0, fov_deg = 0;
 double cube_len = 0, HALF_FOV_COS = 0, FOV_DEG = 0, total_distance = 0, lidar_end_time = 0, first_lidar_time = 0.0;
-int    effct_feat_num = 0, time_log_counter = 0, scan_count = 0, publish_count = 0;
+int    effct_feat_num = 0, time_log_counter = 0, scan_count = 0;
+std::atomic<int> publish_count{0};
 int    iterCount = 0, feats_down_size = 0, NUM_MAX_ITERATIONS = 0, laserCloudValidNum = 0, pcd_save_interval = -1, pcd_index = 0;
 bool   point_selected_surf[100000] = {0};
 bool   lidar_pushed, flg_first_scan = true, flg_exit = false, flg_EKF_inited;
@@ -404,6 +406,10 @@ double lidar_mean_scantime = 0.0;
 int    scan_num = 0;
 bool sync_packages(MeasureGroup &meas)
 {
+    // Input callbacks may run while the previous scan is being solved. Transfer
+    // each complete measurement group under the same lock used by the inputs;
+    // release it before IMU integration, mapping and output publication.
+    std::lock_guard<std::mutex> lock(mtx_buffer);
     if (lidar_buffer.empty() || imu_buffer.empty()) {
         return false;
     }
@@ -836,6 +842,8 @@ public:
         this->declare_parameter<string>("map_file_path", "");
         this->declare_parameter<string>("common.lid_topic", "/livox/lidar");
         this->declare_parameter<string>("common.imu_topic", "/livox/imu");
+        this->declare_parameter<int>("common.lidar_queue_depth", 20);
+        this->declare_parameter<int>("common.imu_queue_depth", 400);
         this->declare_parameter<bool>("common.time_sync_en", false);
         this->declare_parameter<double>("common.time_offset_lidar_to_imu", 0.0);
         this->declare_parameter<double>("filter_size_corner", 0.5);
@@ -937,15 +945,39 @@ public:
         if (!fp) throw std::runtime_error("Cannot open diagnostic sink");
 
         /*** ROS subscribe initialization ***/
+        // Keep the two input callbacks serial with one another (including clock
+        // alignment and preprocessing), but let them drain during a LIO update.
+        // Otherwise a long timer callback can starve the 200 Hz IMU in the
+        // single-threaded executor even when DDS has already received its data.
+        sensor_callback_group_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+        rclcpp::SubscriptionOptions sensor_options;
+        sensor_options.callback_group = sensor_callback_group_;
+        const int lidar_queue_depth = this->get_parameter("common.lidar_queue_depth").as_int();
+        if (lidar_queue_depth <= 0)
+            throw std::invalid_argument("common.lidar_queue_depth must be positive");
+        // LiDAR is also a live sensor input. Keep its two-second bounded queue,
+        // but avoid delaying new scans behind reliable history retransmission.
+        auto lidar_qos = rclcpp::SensorDataQoS().keep_last(lidar_queue_depth);
         if (p_pre->lidar_type == AVIA)
         {
-            sub_pcl_livox_ = this->create_subscription<livox_ros_driver2::msg::CustomMsg>(lid_topic, 20, livox_pcl_cbk);
+            sub_pcl_livox_ = this->create_subscription<livox_ros_driver2::msg::CustomMsg>(lid_topic, lidar_qos, livox_pcl_cbk, sensor_options);
         }
         else
         {
-            sub_pcl_pc_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, rclcpp::SensorDataQoS(), standard_pcl_cbk);
+            sub_pcl_pc_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, lidar_qos, standard_pcl_cbk, sensor_options);
         }
-        sub_imu_ = this->create_subscription<sensor_msgs::msg::Imu>(imu_topic, 10, imu_cbk);
+        RCLCPP_INFO(this->get_logger(), "LiDAR sensor QoS: best_effort, keep_last %d", lidar_queue_depth);
+        const int imu_queue_depth = this->get_parameter("common.imu_queue_depth").as_int();
+        if (imu_queue_depth <= 0)
+            throw std::invalid_argument("common.imu_queue_depth must be positive");
+        // IMU samples are continuous sensor measurements. Avoid reliable history
+        // recovery holding newer samples behind old ones after a consumer stall.
+        // At 200 Hz, 400 entries retain two seconds without an unbounded queue;
+        // depth 10 retains only 50 ms and can lose samples during one LIO update.
+        auto imu_qos = rclcpp::SensorDataQoS().keep_last(imu_queue_depth);
+        sub_imu_ = this->create_subscription<sensor_msgs::msg::Imu>(imu_topic, imu_qos, imu_cbk, sensor_options);
+        RCLCPP_INFO(this->get_logger(), "IMU sensor QoS: best_effort, keep_last %d", imu_queue_depth);
+        RCLCPP_INFO(this->get_logger(), "Sensor inputs and estimator use separate mutually exclusive callback groups");
         pubLaserCloudFull_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered", 20);
         pubLaserCloudFull_body_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered_body", 20);
         pubLaserCloudEffect_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_effected", 20);
@@ -1148,6 +1180,7 @@ private:
     }
 
 private:
+    rclcpp::CallbackGroup::SharedPtr sensor_callback_group_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudFull_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudFull_body_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudEffect_;
@@ -1179,7 +1212,12 @@ int main(int argc, char** argv)
 
     // Keep rclcpp signal handling so spin exits cleanly on SIGINT.
 
-    rclcpp::spin(std::make_shared<LaserMappingNode>());
+    auto node = std::make_shared<LaserMappingNode>();
+    rclcpp::executors::MultiThreadedExecutor executor(rclcpp::ExecutorOptions(), 2);
+    executor.add_node(node);
+    executor.spin();
+    executor.remove_node(node);
+    node.reset();
 
     if (rclcpp::ok())
         rclcpp::shutdown();

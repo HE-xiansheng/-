@@ -33,7 +33,8 @@ try:
     env.update(XDG_CONFIG_HOME=str(work/'private-config'),XDG_DATA_HOME=str(work/'private-data'),XDG_CACHE_HOME=str(work/'private-cache'),GCS_STATE_DIR=str(work/'private-state'),QT_DEBUG_PLUGINS='1')
     log=out/'application.log'
     with log.open('w') as f:
-        p=subprocess.Popen([str(bundle/'start-groundstation.sh'),'--no-splash','--cloud-port','20100'],cwd='/tmp',env=env,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
+        p=subprocess.Popen([str(bundle/'start-groundstation.sh'),'--no-splash','--cloud-port','20100',
+                            '--pose-port','20101','--preflight-port','20103'],cwd='/tmp',env=env,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
         deadline=time.monotonic()+35
         while time.monotonic()<deadline:
             content=log.read_text(errors='replace')

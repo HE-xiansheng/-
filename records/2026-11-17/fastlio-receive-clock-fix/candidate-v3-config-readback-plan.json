@@ -1,0 +1,12 @@
+{
+  "reason": "fixed YAML nesting before any v3 execution; cpp and binary build unchanged",
+  "config_sha256": "c6e24a89d3951bd0017d522b1d897ed65b9e299195bede34300fc674a1dad063",
+  "common": {
+    "lid_topic": "/livox/lidar",
+    "imu_topic": "/livox/imu",
+    "lidar_queue_depth": 20,
+    "imu_queue_depth": 400,
+    "time_sync_en": true,
+    "time_offset_lidar_to_imu": 0.0
+  }
+}

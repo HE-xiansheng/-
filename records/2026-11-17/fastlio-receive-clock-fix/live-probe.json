@@ -1,0 +1,9 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-test-191354-5865ac",
+  "candidate_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "binary": "/tmp/fastlio-receive-clock-fix-184504-792c7c/fastlio_mapping-probe",
+  "baseline_seconds": 45,
+  "skip_stall": true,
+  "purpose": "diagnostic only; same BE/reliable odometry and reliable world/body cloud readers; per-callback and publish timings",
+  "observer_sha256": "96b4a1242f6cf84b2d35309b87baee5a38716888e4b3b08690302b6ade8f687e"
+}

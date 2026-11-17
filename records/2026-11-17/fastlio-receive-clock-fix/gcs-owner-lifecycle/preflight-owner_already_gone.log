@@ -1,0 +1,9 @@
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/tyzk/drone-migration-github/groundstation/tools/preflight/bridge.py", line 185, in read_status_udp
+    sock.bind(('0.0.0.0',getattr(args,'raw_udp_port',9015)));sock.settimeout(.25);expected=socket.gethostbyname(args.host)
+socket.gaierror: [Errno -3] Temporary failure in name resolution

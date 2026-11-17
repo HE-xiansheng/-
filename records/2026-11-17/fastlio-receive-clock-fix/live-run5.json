@@ -1,0 +1,9 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-test-191807-52d782",
+  "candidate_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "binary": "/tmp/fastlio-receive-clock-fix-184504-792c7c/install-v2/lib/fast_lio/fastlio_mapping",
+  "candidate_rmw": "rmw_fastrtps_cpp",
+  "source_archive": "candidate-v2-source.tar.gz",
+  "purpose": "same reliable cloud consumers with separate input and estimator callback groups; full baseline and private SIGSTOP recovery",
+  "observer_sha256": "96b4a1242f6cf84b2d35309b87baee5a38716888e4b3b08690302b6ade8f687e"
+}

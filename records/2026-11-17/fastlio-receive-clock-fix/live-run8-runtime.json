@@ -1,0 +1,39 @@
+{
+  "pid": 359458,
+  "shared_memory": {
+    "/dev/shm/fastrtps_353e4cd8ffb851b6": 67133984,
+    "/dev/shm/fastrtps_port7431": 52416,
+    "/dev/shm/fastrtps_port7419": 52416,
+    "/dev/shm/fastrtps_port7427": 52416,
+    "/dev/shm/fastrtps_083d7e310801b864": 549408,
+    "/dev/shm/fastrtps_port7423": 52416,
+    "/dev/shm/fastrtps_port7429": 52416,
+    "/dev/shm/fastrtps_port7415": 52416,
+    "/dev/shm/fastrtps_16567a15ad1de22e": 549408,
+    "/dev/shm/fastrtps_port7441": 52416,
+    "/dev/shm/fastrtps_24f03e988758da1b": 549408,
+    "/dev/shm/fastrtps_ec35e35fa69a0c1a": 549408,
+    "/dev/shm/fastrtps_port7413": 52416,
+    "/dev/shm/fastrtps_02ce77fafd12946a": 549408,
+    "/dev/shm/fastrtps_7c7aec18b2679977": 549408,
+    "/dev/shm/fastrtps_e496e8aa0f2db7a4": 549408,
+    "/dev/shm/fastrtps_port7417": 52416,
+    "/dev/shm/fastrtps_36289f4dd2179f18": 67133984,
+    "/dev/shm/fastrtps_c39c0bf23594cfed": 549408,
+    "/dev/shm/fastrtps_port7435": 52416,
+    "/dev/shm/fastrtps_port7421": 52416,
+    "/dev/shm/fastrtps_97ecf00b3b55906c": 549408,
+    "/dev/shm/fastrtps_cdda4517cc5f08c6": 549408,
+    "/dev/shm/fastrtps_5ab28aee167b606f": 67133984,
+    "/dev/shm/fastrtps_port7411": 52416,
+    "/dev/shm/fastrtps_port7433": 52416,
+    "/dev/shm/fastrtps_9cfe4eaef27421b5": 67133984,
+    "/dev/shm/fastrtps_port7425": 52416,
+    "/dev/shm/fastrtps_port7439": 52416,
+    "/dev/shm/fastrtps_c47ce9e8236b58ab": 549408
+  },
+  "environment": {
+    "RMW_IMPLEMENTATION": "rmw_fastrtps_cpp",
+    "FASTRTPS_DEFAULT_PROFILES_FILE": "/tmp/fastlio-receive-clock-fix-184504-792c7c/config/fastdds_localization.xml"
+  }
+}

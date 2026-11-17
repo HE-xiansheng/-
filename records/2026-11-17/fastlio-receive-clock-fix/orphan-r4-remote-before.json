@@ -1,0 +1,65 @@
+{
+  "monitors": [
+    {
+      "pid": 71834,
+      "ticks": "195123",
+      "ppid": "71809",
+      "args": [
+        "/usr/bin/python3",
+        "-u",
+        "-",
+        "--cloud-topic",
+        "/factory_fastlio/cloud_world",
+        "--no-rosout",
+        "--planner",
+        "--grid-only",
+        "--udp-host",
+        "192.168.1.89",
+        "--udp-port",
+        "19115",
+        "--stream-id",
+        "74aac62af4d545db9e0d4ac0842ed4ef",
+        ""
+      ]
+    },
+    {
+      "pid": 71847,
+      "ticks": "195125",
+      "ppid": "71819",
+      "args": [
+        "/usr/bin/python3",
+        "-u",
+        "-",
+        "--cloud-topic",
+        "/factory_fastlio/cloud_world",
+        "--no-rosout",
+        "--planner",
+        "--udp-host",
+        "192.168.1.89",
+        "--udp-port",
+        "19115",
+        "--stream-id",
+        "da9fc620184d444bb1014a98f9521004",
+        ""
+      ]
+    }
+  ],
+  "protected": {
+    "3311": {
+      "ticks": "2089",
+      "comm": "mavros_node"
+    },
+    "3316": {
+      "ticks": "2090",
+      "comm": "livox_ros_drive"
+    },
+    "73150": {
+      "ticks": "197662",
+      "comm": "fastlio_mapping"
+    },
+    "73273": {
+      "ticks": "197826",
+      "comm": "vision2mavros"
+    }
+  }
+}

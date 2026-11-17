@@ -3,6 +3,8 @@
     common:
       lid_topic: /livox/lidar
       imu_topic: /livox/imu
+      lidar_queue_depth: 20
+      imu_queue_depth: 400
       time_sync_en: true
       time_offset_lidar_to_imu: 0.0
     preprocess:

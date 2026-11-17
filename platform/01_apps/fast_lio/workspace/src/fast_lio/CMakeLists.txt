@@ -9,7 +9,8 @@ ADD_COMPILE_OPTIONS(-std=c++14)
 ADD_COMPILE_OPTIONS(-std=c++14)
 set(CMAKE_CXX_FLAGS "-std=c++14 -O3")
 
-add_definitions(-DROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/\")
+set(FASTLIO_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}" CACHE PATH "Permanent FAST-LIO data root")
+add_definitions(-DROOT_DIR=\"${FASTLIO_ROOT_DIR}/\")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fexceptions")
 set(CMAKE_CXX_STANDARD 14)

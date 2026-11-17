@@ -1,0 +1,35 @@
+{
+  "uid": 1000,
+  "paths": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": {
+      "parent_writable": true,
+      "parent_uid": 1000,
+      "parent_gid": 1000,
+      "uid": 1000
+    },
+    "01_apps/fast_lio/workspace/src/fast_lio/include/source_clock_alignment.hpp": {
+      "parent_writable": true,
+      "parent_uid": 1000,
+      "parent_gid": 1000,
+      "uid": null
+    },
+    "01_apps/fast_lio/workspace/src/fast_lio/CMakeLists.txt": {
+      "parent_writable": true,
+      "parent_uid": 1000,
+      "parent_gid": 1000,
+      "uid": 1000
+    },
+    "01_apps/fast_lio/config/lidar.yaml": {
+      "parent_writable": true,
+      "parent_uid": 1000,
+      "parent_gid": 1000,
+      "uid": 1000
+    },
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": {
+      "parent_writable": true,
+      "parent_uid": 1000,
+      "parent_gid": 1000,
+      "uid": 1000
+    }
+  }
+}

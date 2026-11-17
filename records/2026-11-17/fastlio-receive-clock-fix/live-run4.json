@@ -1,0 +1,8 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-test-190025-336993",
+  "candidate_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "binary_sha256": "17af7094f3191be589c8f04132ee86e46035f6f6fc7b51c7f25ad698c9750a97",
+  "publication_mode": "ASYNCHRONOUS",
+  "candidate_code_unchanged": true,
+  "scope": "same reliable cloud consumers and paired odometry readers; mode affects only private observer and child clone"
+}

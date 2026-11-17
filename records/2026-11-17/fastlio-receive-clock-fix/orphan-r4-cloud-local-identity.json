@@ -1,0 +1,31 @@
+{
+  "state": {
+    "pid": 69631,
+    "start_tick": "2853941",
+    "host": "192.168.1.224",
+    "pc_ip": "192.168.1.89",
+    "port": 9100,
+    "log": "/home/tyzk/.local/share/drone-gcs-ros2-r4/sender-20261117-171430.log",
+    "with_pose": true,
+    "pose_port": 9101
+  },
+  "args": [
+    "/usr/bin/python3",
+    "/home/tyzk/下载/科研飞行平台-ROS2地面站/drone-gcs-ros2-20261117-ros2-r4-linux-amd64/tools/pointcloud-only/manage.py",
+    "run",
+    "--host",
+    "192.168.1.224",
+    "--user",
+    "orangepi",
+    "--pc-ip",
+    "192.168.1.89",
+    "--port",
+    "9100",
+    "--with-pose",
+    "--pose-port",
+    "9101",
+    ""
+  ],
+  "tick": "2853941",
+  "sockets": "State  Recv-Q Send-Q                    Local Address:Port    Peer Address:Port Process                                                                         \nUNCONN 0      0                               0.0.0.0:9000         0.0.0.0:*     users:((\"customgeometry\",pid=64096,fd=57))                                     \nUNCONN 0      0                               0.0.0.0:9001         0.0.0.0:*     users:((\"customgeometry\",pid=64096,fd=58))                                     \nUNCONN 0      0                             127.0.0.1:9003         0.0.0.0:*     users:((\"customgeometry\",pid=64096,fd=60))                                     \nUNCONN 0      0                               0.0.0.0:9004         0.0.0.0:*     users:((\"customgeometry\",pid=64096,fd=59))                                     \nUNCONN 0      0                               0.0.0.0:9005         0.0.0.0:*     users:((\"python3\",pid=67848,fd=4))                                             \nUNCONN 0      0                               0.0.0.0:33904        0.0.0.0:*                                                                                    \nUNCONN 0      0                               0.0.0.0:4000         0.0.0.0:*                                                                                    \nUNCONN 0      0                           224.0.0.251:5353         0.0.0.0:*     users:((\"chrome\",pid=21987,fd=83))                                             \nUNCONN 0      0                           224.0.0.251:5353         0.0.0.0:*     users:((\"chrome\",pid=21987,fd=82))                                             \nUNCONN 8448   0                            172.17.0.1:5353         0.0.0.0:*                                                                                    \nUNCONN 8448   0                         192.168.1.125:5353         0.0.0.0:*                                                                                    \nUNCONN 8448   0                          192.168.1.89:5353         0.0.0.0:*                                                                                    \nUNCONN 0      0                               0.0.0.0:5353         0.0.0.0:*                                                                                    \nUNCONN 0      0                               0.0.0.0:5353         0.0.0.0:*                                                                                    \nUNCONN 0      0                             127.0.0.1:7890         0.0.0.0:*                                                                                    \nUNCONN 0      0                             127.0.0.1:7891         0.0.0.0:*                                                                                    \nUNCONN 0      0                         127.0.0.53%lo:53           0.0.0.0:*                                                                                    \nUNCONN 0      0      [fe80::4eba:160a:1d30:9ae1]%wlo1:546             [::]:*                                                                                    \nUNCONN 0      0      [fe80::bb5b:2750:e34c:d24b]%eno1:546             [::]:*                                                                                    \nUNCONN 0      0                                     *:1716               *:*     users:((\"kdeconnectd\",pid=4361,fd=20))                                         \nUNCONN 0      0                                  [::]:4000            [::]:*                                                                                    \nUNCONN 0      0                                  [::]:5353            [::]:*                                                                                    \nUNCONN 0      0                                  [::]:47777           [::]:*                                                                                    \n"
+}

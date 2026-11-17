@@ -1,0 +1,9 @@
+{
+  "remote_root": "/tmp/fastlio-receive-clock-test-193121-b9a136",
+  "candidate_root": "/tmp/fastlio-receive-clock-fix-184504-792c7c",
+  "binary": "/tmp/fastlio-receive-clock-fix-184504-792c7c/install-v3/lib/fast_lio/fastlio_mapping",
+  "candidate_rmw": "rmw_fastrtps_cpp",
+  "source_archive": "candidate-v3-source.tar.gz",
+  "purpose": "both sensor inputs Best Effort (IMU400/LiDAR20), separate callback groups, same reliable cloud consumers and recovery schedule",
+  "observer_sha256": "01d6791dbde6430c6565e913259ad015bd0d0f07cf2829caaa8874e935a46728"
+}

@@ -1,0 +1,12 @@
+{
+  "init.cpp": {
+    "url": "https://raw.githubusercontent.com/ros/ros_comm/noetic-devel/clients/roscpp/src/libros/init.cpp",
+    "sha256": "bf3324a0ffe90b8a3e165f54ad03360bf9a0047923f27c15d18fe03d02443a64",
+    "bytes": 15850
+  },
+  "callback_queue.cpp": {
+    "url": "https://raw.githubusercontent.com/ros/ros_comm/noetic-devel/clients/roscpp/src/libros/callback_queue.cpp",
+    "sha256": "6b6042f6d3e4b7dd8acbd0fd99678e8f264fc0cc363d7d31ba7ad4950559969c",
+    "bytes": 10380
+  }
+}

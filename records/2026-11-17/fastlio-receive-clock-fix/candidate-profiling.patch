@@ -1,0 +1,108 @@
+--- candidate/laserMapping.cpp
++++ probe/laserMapping.cpp
+@@ -309,11 +309,36 @@
+ 
+ #include "source_clock_alignment.hpp"
+ SourceClockAlignment source_clock_alignment;
++static double probe_wall() {
++    return std::chrono::duration<double>(std::chrono::system_clock::now().time_since_epoch()).count();
++}
++static double probe_imu_raw = 0., probe_imu_published = 0.;
++static uint64_t probe_imu_count = 0;
++struct ProbeScope {
++    const char *name; double began;
++    explicit ProbeScope(const char *n): name(n), began(omp_get_wtime()) {}
++    ~ProbeScope() {
++        const double duration = omp_get_wtime()-began;
++        if (duration > .025) {
++            printf("PROBE {\"kind\":\"span\",\"name\":\"%s\",\"wall\":%.9f,\"duration\":%.9f}\n", name, probe_wall(), duration);
++            fflush(stdout);
++        }
++    }
++};
+ double timediff_lidar_wrt_imu = 0.0;
+ bool   timediff_set_flg = false;
+ void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::UniquePtr msg,
+                    const rclcpp::MessageInfo &message_info)
+ {
++    ProbeScope probe_scope("lidar_callback");
++    static double probe_last = 0.;
++    const double now = probe_wall();
++    if (now-probe_last >= .5) {
++        uint32_t duration = 0;
++        for (const auto &point : msg->points) duration = std::max(duration, point.offset_time);
++        printf("PROBE {\"kind\":\"lidar\",\"wall\":%.9f,\"raw_end\":%.9f,\"published\":%.9f,\"received\":%.9f,\"imu_raw\":%.9f,\"imu_count\":%llu}\n",now,get_time_sec(msg->header.stamp)+duration*1e-9,message_info.get_rmw_message_info().source_timestamp*1e-9,message_info.get_rmw_message_info().received_timestamp*1e-9,probe_imu_raw,(unsigned long long)probe_imu_count);
++        fflush(stdout); probe_last=now;
++    }
+     mtx_buffer.lock();
+     double cur_time = get_time_sec(msg->header.stamp);
+     double preprocess_start_time = omp_get_wtime();
+@@ -368,6 +393,16 @@
+ void imu_cbk(const sensor_msgs::msg::Imu::UniquePtr msg_in,
+              const rclcpp::MessageInfo &message_info)
+ {
++    ProbeScope probe_scope("imu_callback");
++    probe_imu_raw = get_time_sec(msg_in->header.stamp);
++    probe_imu_published = message_info.get_rmw_message_info().source_timestamp*1e-9;
++    ++probe_imu_count;
++    static double probe_last = 0.;
++    const double now = probe_wall();
++    if (now-probe_last >= .5) {
++        printf("PROBE {\"kind\":\"imu\",\"wall\":%.9f,\"raw\":%.9f,\"published\":%.9f,\"received\":%.9f,\"count\":%llu}\n",now,probe_imu_raw,probe_imu_published,message_info.get_rmw_message_info().received_timestamp*1e-9,(unsigned long long)probe_imu_count);
++        fflush(stdout); probe_last=now;
++    }
+     publish_count ++;
+     if (time_sync_en && !timediff_set_flg)
+         source_clock_alignment.imu(rclcpp::Time(msg_in->header.stamp).nanoseconds(),
+@@ -459,6 +494,7 @@
+ int process_increments = 0;
+ void map_incremental()
+ {
++    ProbeScope probe_scope("map_incremental");
+     PointVector PointToAdd;
+     PointVector PointNoNeedDownsample;
+     PointToAdd.reserve(feats_down_size);
+@@ -528,7 +564,7 @@
+         // laserCloudmsg.header.stamp = ros::Time().fromSec(lidar_end_time);
+         laserCloudmsg.header.stamp = get_ros_time(lidar_end_time);
+         laserCloudmsg.header.frame_id = "camera_init";
+-        pubLaserCloudFull->publish(laserCloudmsg);
++        { ProbeScope probe_scope("world_write"); pubLaserCloudFull->publish(laserCloudmsg); }
+         publish_count -= PUBFRAME_PERIOD;
+     }
+ 
+@@ -580,7 +616,7 @@
+     pcl::toROSMsg(*laserCloudIMUBody, laserCloudmsg);
+     laserCloudmsg.header.stamp = get_ros_time(lidar_end_time);
+     laserCloudmsg.header.frame_id = "body";
+-    pubLaserCloudFull_body->publish(laserCloudmsg);
++    { ProbeScope probe_scope("body_write"); pubLaserCloudFull_body->publish(laserCloudmsg); }
+     publish_count -= PUBFRAME_PERIOD;
+ }
+ 
+@@ -670,7 +706,7 @@
+         odomAftMapped.pose.covariance[i*6 + 5] = P(k, 2);
+     }
+ 
+-    pubOdomAftMapped->publish(odomAftMapped);
++    { ProbeScope probe_scope("odometry_write"); pubOdomAftMapped->publish(odomAftMapped); }
+ 
+     geometry_msgs::msg::TransformStamped trans;
+     trans.header.frame_id = "camera_init";
+@@ -986,6 +1022,7 @@
+ private:
+     void timer_callback()
+     {
++        ProbeScope probe_scope("timer");
+         if(sync_packages(Measures))
+         {
+             if (flg_first_scan)
+@@ -1089,6 +1126,8 @@
+ 
+             double t_update_end = omp_get_wtime();
+ 
++            printf("PROBE {\"kind\":\"solve\",\"wall\":%.9f,\"source_end\":%.9f,\"compute\":%.9f,\"imu_raw\":%.9f,\"imu_published\":%.9f,\"imu_count\":%llu}\n",probe_wall(),lidar_end_time,t_update_end-t0,probe_imu_raw,probe_imu_published,(unsigned long long)probe_imu_count);
++            fflush(stdout);
+             /******* Publish odometry *******/
+             publish_odometry(pubOdomAftMapped_, tf_broadcaster_);
+ 

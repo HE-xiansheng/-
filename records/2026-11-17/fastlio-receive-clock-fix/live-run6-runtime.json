@@ -1,0 +1,41 @@
+{
+  "pid": 335648,
+  "cmdline": [
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/install-v2/lib/fast_lio/fastlio_mapping",
+    "--ros-args",
+    "--params-file",
+    "/tmp/fastlio-receive-clock-fix-184504-792c7c/config/lidar.yaml",
+    "-r",
+    "__ns:=/gcs_receive_fix",
+    "-r",
+    "__node:=receive_mapping",
+    "-r",
+    "/Odometry:=/gcs_receive_fix/odometry",
+    "-r",
+    "/cloud_registered:=/gcs_receive_fix/cloud_world",
+    "-r",
+    "/cloud_registered_body:=/gcs_receive_fix/cloud_body",
+    "-r",
+    "/cloud_effected:=/gcs_receive_fix/effect",
+    "-r",
+    "/Laser_map:=/gcs_receive_fix/map",
+    "-r",
+    "/path:=/gcs_receive_fix/path",
+    "-r",
+    "/tf:=/gcs_receive_fix/tf",
+    "-r",
+    "/tf_static:=/gcs_receive_fix/tf_static",
+    ""
+  ],
+  "rmw_libraries": [
+    "/opt/ros/humble/lib/librmw_cyclonedds_cpp.so",
+    "/opt/ros/humble/lib/librmw_dds_common.so",
+    "/opt/ros/humble/lib/librmw_dds_common__rosidl_typesupport_cpp.so",
+    "/opt/ros/humble/lib/librmw_dds_common__rosidl_typesupport_introspection_cpp.so",
+    "/opt/ros/humble/lib/librmw_implementation.so"
+  ],
+  "environment": {
+    "ROS_LOCALHOST_ONLY": "0",
+    "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp"
+  }
+}

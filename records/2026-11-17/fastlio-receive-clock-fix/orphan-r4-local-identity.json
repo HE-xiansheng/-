@@ -1,0 +1,21 @@
+{
+  "pid": 69620,
+  "ticks": "2853906",
+  "args": [
+    "/usr/bin/python3",
+    "/home/tyzk/下载/科研飞行平台-ROS2地面站/drone-gcs-ros2-20261117-ros2-r4-linux-amd64/tools/preflight/bridge.py",
+    "run",
+    "--host",
+    "192.168.1.224",
+    "--user",
+    "orangepi",
+    "--port",
+    "9103",
+    "--raw-udp-port",
+    "19115",
+    ""
+  ],
+  "no_gui_pid69447": true,
+  "no_listener9103": true,
+  "action": "SIGTERM only this orphan read-only bridge; its own stop handler closes its two SSH children"
+}
