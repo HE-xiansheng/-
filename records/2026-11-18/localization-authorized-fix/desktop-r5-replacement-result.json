@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "old_shortcut_moved_to_trash": "/home/tyzk/.local/share/Trash/files/科研飞行平台-地面站ROS2.desktop.old-20261118",
+  "new_shortcut": "/home/tyzk/桌面/科研飞行平台-地面站ROS2.desktop",
+  "exec": "/home/tyzk/drone-migration-github/tools/launch_ros2_repaired_gcs.sh",
+  "old_local_processes_stopped": true,
+  "old_remote_readers_stopped": true,
+  "formal_session_present": true,
+  "ros1_shortcut_preserved": true,
+  "source_preserved": true
+}
