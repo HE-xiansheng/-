@@ -1,0 +1,37 @@
+{
+  "boot": "98055533-8b20-4466-9b95-dbffe318060f",
+  "processes": [
+    {
+      "pid": 1760834,
+      "tick": "5982002",
+      "cmd": "/usr/bin/python3 /opt/ros/humble/bin/ros2 launch /home/orangepi/drone_platform/01_apps/fast_lio/launch/localization.launch.py ",
+      "rss": "VmRSS:\t   34316 kB"
+    },
+    {
+      "pid": 1760835,
+      "tick": "5982064",
+      "cmd": "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping --ros-args -r __node:=factory_laserMapping --params-file /home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml --params-file /tmp/launch_params_tals351k -r /Odometry:=/factory_fastlio/odometry -r /cloud_registered_body:=/factory_fastlio/cloud_body -r /cloud_registered:=/factory_fastlio/cloud_world -r /cloud_effected:=/factory_fastlio/cloud_effected -r /Laser_map:=/factory_fastlio/map -r /path:=/factory_fastlio/path -r /tf:=/factory_fastlio/tf ",
+      "rss": "VmRSS:\t  161968 kB"
+    },
+    {
+      "pid": 1764424,
+      "tick": "5989573",
+      "cmd": "/home/orangepi/drone_platform/02_drivers/sensors/workspace/install/to_mavros/lib/to_mavros/vision2mavros ",
+      "rss": "VmRSS:\t   28020 kB"
+    }
+  ],
+  "sha256": {
+    "01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": "a29207cf657c71c0bae5bcc4264ac2a85b645532ff77cae3e8692e11a0fde2ba",
+    "01_apps/fast_lio/workspace/src/fast_lio/include/source_clock_alignment.hpp": "0c4d759277d651e06cd5a2ce09b74dbb6162ff502734689522df2a203b2a96d8",
+    "01_apps/fast_lio/workspace/src/fast_lio/CMakeLists.txt": "3b8df3ef3c1e0fee062d50178edd9716d5b8c4d163f1e3fa2e9f42cef2513f72",
+    "01_apps/fast_lio/config/lidar.yaml": "c6e24a89d3951bd0017d522b1d897ed65b9e299195bede34300fc674a1dad063",
+    "01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": "06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3"
+  },
+  "manage_status": "{\"ok\": true, \"lio_running\": true, \"relay_running\": true, \"ros_version\": 2}\n",
+  "git_head": "7dd15a5be69148d4b124583f843d4bdfbe49fe46",
+  "git_status": " M 01_apps/fast_lio/config/lidar.yaml\n M 01_apps/fast_lio/workspace/src/fast_lio/CMakeLists.txt\n M 01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp\n?? 01_apps/fast_lio/workspace/src/fast_lio/include/source_clock_alignment.hpp\n",
+  "services": {
+    "Safina_sensor.service": "active",
+    "gimbal-rtsp-relay.service": "active"
+  }
+}

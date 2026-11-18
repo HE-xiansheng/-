@@ -1,0 +1,46 @@
+{
+  "preflight_samples": 396,
+  "preflight_last": {
+    "rows": {
+      "lidar": "正常",
+      "imu": "正常",
+      "lio": "正常",
+      "cloud": "正常",
+      "relay": "正常",
+      "fc_odom": "正常",
+      "fc": "正常",
+      "landed": "正常",
+      "ekf": "正常",
+      "rc": "缺失/过期",
+      "battery": "电量未知"
+    },
+    "issues": [
+      "遥控输入:缺失/过期",
+      "电池:电量未知"
+    ],
+    "localization": {
+      "lio_running": true,
+      "relay_running": true,
+      "session_id": "98055533-8b20-4466-9b95-dbffe318060f:0:010f477d43deb6ee00000000000018030000000000000000",
+      "identity_source": "ros2_graph",
+      "graph_fresh": true
+    }
+  },
+  "expected_ignored_issues": [
+    "遥控输入:缺失/过期",
+    "电池:电量未知"
+  ],
+  "pointcloud_bridge_samples": 40,
+  "pointcloud_bridge_errors": 0,
+  "pointcloud_last": {
+    "frames_sent": 157,
+    "poses_sent": 782,
+    "source_age_s": 0.03489542007446289,
+    "errors": 0
+  },
+  "gui_first_frame": true,
+  "gui_cloud_frames": 8,
+  "gui_incomplete_fragments": 1,
+  "gui_log_sha256": "f4240e3e705fb4c6a0f72418860fb38e9d261fe98aee2d2adeb4aef544c65b44",
+  "scope": "r5 package live bridge against formal v3 session; no task/control action"
+}

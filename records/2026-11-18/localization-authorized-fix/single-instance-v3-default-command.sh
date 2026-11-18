@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ssh -T -o BatchMode=yes -o ConnectTimeout=6 orangepi@192.168.1.224 'source /home/orangepi/drone_platform/env.sh && exec python3 - --root /tmp/fastlio-receive-clock-test-20261118-default-fffa90 --binary /tmp/fastlio-receive-clock-fix-20261118-v3/install-v3/lib/fast_lio/fastlio_mapping --config /tmp/fastlio-receive-clock-fix-20261118-v3/config/lidar.yaml --require-formal-stopped' < records/2026-11-18/localization-authorized-fix/single-instance-v3-default-test.py > records/2026-11-18/localization-authorized-fix/single-instance-v3-default-stdout.jsonl 2> records/2026-11-18/localization-authorized-fix/single-instance-v3-default-stderr.log

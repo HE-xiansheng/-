@@ -1,6 +1,6 @@
 # 定位积压与地面站生命周期修复记录
 
-**当前：地面站关窗回收修复已验证并打成r5独立包；FAST-LIO联合候选未通过完整实物时效验收，未安装。** 原定位launch/mapping/relay为73086/73150/73273，本轮未启停。`apply-candidate.py`与`installation-manifest.json`仅对应初版，现已过期，不能用于v3安装。以下先列最新结果，文末保留前期诊断历史。
+**当前：地面站关窗回收修复已验证并打成r5独立包；FAST-LIO v3已安装到正式路径并通过实物与PX4被动验收。** 当前正式launch/mapping/relay为1760834/1760835/1764424。`apply-candidate.py`与`installation-manifest.json`仅对应初版，现已过期，不能用于v3回退或安装；v3正式安装记录见`../2026-11-18/localization-authorized-fix/`。以下先列最新结果，文末保留前期诊断历史。
 
 ## 本轮已完成
 
@@ -14,7 +14,7 @@ r5实际Qt Release构建完成，下载目录包为`科研飞行平台-ROS2地�
 
 ## 最新FAST-LIO候选和严格结果
 
-v3保留源时间对齐、IMU Best Effort/400，加入两个互斥callback group和两线程executor，完整测量组转移共用buffer mutex，publish_count原子化；LiDAR改Best Effort/20。保持标定、TF、真实源戳、可靠输出及0.2秒转发/0.4秒显示门槛。v3二进制SHA256 `06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3`，cpp SHA256 `a29207cf657c71c0bae5bcc4264ac2a85b645532ff77cae3e8692e11a0fde2ba`。源包、逐文件清单、构建日志和压缩二进制已取回；机载暂存`/tmp/fastlio-receive-clock-fix-184504-792c7c`，正式文件仍旧版。
+v3保留源时间对齐、IMU Best Effort/400，加入两个互斥callback group和两线程executor，完整测量组转移共用buffer mutex，publish_count原子化；LiDAR改Best Effort/20。保持标定、TF、真实源戳、可靠输出及0.2秒转发/0.4秒显示门槛。v3二进制SHA256 `06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3`，cpp SHA256 `a29207cf657c71c0bae5bcc4264ac2a85b645532ff77cae3e8692e11a0fde2ba`。源包、逐文件清单、构建日志和压缩二进制已取回；临时机载候选已在正式安装后清理，正式文件已使用该SHA。
 
 | 轮次 | 对照 | 严格结果 |
 | --- | --- | --- |
@@ -37,17 +37,29 @@ v3在独立DDS184/localhost回放：启动IMU停流不产生假偏移；真实IM
 | 默认FastDDS | 6.77Hz，源戳最大空档0.906s | 10.47Hz，publish→callback最大1.852s | 1.00Hz，源龄26.8–53.6s |
 | 仅观察器UDP-only | 5.96Hz，源戳最大空档0.602s | 10.05Hz，publish→callback最大0.651s | 0.434Hz，源龄53.6–61.9s |
 
-见`raw-source-delivery{,-udp}-summary.json`和完整`.json.gz`。两轮观察器均正常退出，无畸形CDR；Reliable保存的源戳约0.1秒连续，BE有缺帧。单帧约184–735KB，默认512KiB SHM、系统212992字节UDP缓存上限是待鉴别因素；UDP-only也未解决，不能宣称其中任一项为唯一根因。正式旧LIO持续积压且RSS已超过4GB，尚未获准停止，继续叠加副本不能代替单实例验收。未改sysctl或现有驱动。
+见`raw-source-delivery{,-udp}-summary.json`和完整`.json.gz`。两轮观察器均正常退出，无畸形CDR；Reliable保存的源戳约0.1秒连续，BE有缺帧。单帧约184–735KB，默认512KiB SHM、系统212992字节UDP缓存上限曾是待鉴别因素；UDP-only也未解决，不能宣称其中任一项为唯一根因。旧LIO随后被内核OOM杀死；停止旧会话后输入恢复正常，v3正式路径已通过单实例和长时验收。未改sysctl或Livox驱动。
 
 .235同样包含脆弱同步公式，但ROS1 IMU/LiDAR队列为200000、spinOnce批处理，没有此次DDS可靠历史交付与大消息传输路径；.224迁移版原IMU队列10在200Hz仅约50ms。实际源码及官方资料见`REFERENCE235.md`。当前.235无FAST-LIO运行、无可比较历史LIO日志，不能声称其历史上从不触发。地面站ROS1/ROS2健康判定已核对，仍为显示0.4秒/转发0.2秒，频率不直接决定正常；正式定位落后几十秒是实际故障。电量和RC按用户要求暂不排查。
 
-## 下一必要操作与确认边界
+## 回退与后续边界
 
-在飞控新鲜已连接、未解锁、非OFFBOARD且无控制发布者/规划执行器的门控下，停止所属故障定位和位姿转发，再做原始源交付与单个私有候选的对照。雷达、相机、MAVROS和视频基础服务继续运行。测试工具新增`--require-formal-stopped`，只在确认停定位后使用：拒绝残留正式会话，并持续检查正式输出未被另一个窗口重新启动；不自动停止任何程序。
+正式v3已经完成门控、安装和验收。若以后回退，仍须在飞控新鲜已连接、未解锁、非OFFBOARD且无控制发布者/规划执行器的门控下停止所属定位和位姿转发；雷达、相机、MAVROS和视频基础服务可继续运行。测试工具的`--require-formal-stopped`用于防止多实例混入。
 
-候选通过后才重生成固定SHA安装清单，再做正式位姿接收/融合/GCS持续验证。**停止/重建定位会重建原点，旧地图选点与航点须重新选择；按用户最初要求明确确认后执行。** 原四文件备份为`previous-runtime.tar.gz`，恢复时须移除新增header；仅在定位已停、门控通过后恢复。GCS可使用保留r4或原程序，r4仍有已知关窗遗留问题。
+正式v3已完成位姿接收、PX4被动融合和GCS范围验收。**停止/重建定位会重建原点，旧地图选点与航点须重新选择。** 原四文件备份为`previous-runtime.tar.gz`，本次五文件正式安装回退包为`../2026-11-18/localization-authorized-fix/fastlio-v3-preinstall.tar.gz`；恢复时须移除新增header，并先停止所属定位/转发。GCS可使用r5独立包；正式桌面入口仍未替换。
 
-代码与原始证据已推送GitHub `0e5748e49f8621b3ba755304218bff332f0bf526`并独立读回。之后逐个重核49个原始文件SHA、确认所属实验已退出，精确删除run1–9/probe目录及v3回放结果；保留必要候选供后续单实例验证，正式五PID启动时间保持。见`cleanup-result.json`。第一次清理在预检阶段拒绝了本机档案中额外生成、机载不存在的`SHA256.json`，没有删除；原失败与诊断保留。现已通过异步问题请求下一步确认，未获答复，不执行停止/部署/重启。
+代码与原始证据已推送GitHub `0e5748e49f8621b3ba755304218bff332f0bf526`并独立读回。之后逐个重核49个原始文件SHA、确认所属实验已退出，精确删除run1–9/probe目录及v3回放结果；保留必要候选供后续单实例验证，正式五PID启动时间保持。见`cleanup-result.json`。第一次清理在预检阶段拒绝了本机档案中额外生成、机载不存在的`SHA256.json`，没有删除；原失败与诊断保留。2026-11-18用户明确继续后，原FAST-LIO已被内核OOM杀死，单实例v3默认Fast DDS和64MiB profile均通过；正式路径已安装并通过120秒、300秒验收。详见`../2026-11-18/localization-authorized-fix/`。
+
+## 2026-11-18 正式安装与验收
+
+旧定位在21:53因内存耗尽被内核杀死：`fastlio_mapping`当时匿名RSS约13.5GiB，日志还出现`VoxelGrid`整数索引溢出和`No Effective Points`。这是旧会话长期积压后的直接退出证据；不能据此把所有内存问题归结为单一DDS函数。管理器随后在飞控已连接、未解锁、非OFFBOARD、无控制发布者和无规划执行器门控下停止残留转发。
+
+v3固定安装内容：源时间对齐、IMU Best Effort/400、LiDAR Best Effort/20、输入独立互斥回调组、两线程executor、共享buffer锁和原子计数；保留真实测量戳、原标定/TF和0.2秒转发、0.4秒显示门槛。正式SHA为cpp `a29207cf657c71c0bae5bcc4264ac2a85b645532ff77cae3e8692e11a0fde2ba`、header `0c4d759277d651e06cd5a2ce09b74dbb6162ff502734689522df2a203b2a96d8`、YAML `c6e24a89d3951bd0017d522b1d897ed65b9e299195bede34300fc674a1dad063`、binary `06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3`。机载提交为`2ebe64fb4d5e208f2758a2d47499e88c981ed816`，电脑回退包和日志已保存。
+
+无旧LIO时原始输入恢复为LiDAR BE/Reliable均约10Hz、最大源龄约26ms，IMU约200Hz、最大龄约17ms。v3默认Fast DDS和64MiB profile两组私有单实例测试都通过90秒稳定段和60秒私有暂停恢复段；默认配置恢复耗时约57ms，所有输出、TF、源戳和原门槛通过。
+
+正式启动后120秒和300秒被动验收均通过：LIO约10Hz、转发约10Hz、飞控里程计30Hz、IMU约200Hz；300秒段LIO最大龄106ms、转发最大龄106ms、最大间断167/169ms，姿态/相对水平/绝对高度EKF标志持续有效，飞控始终连接且未解锁。约10分钟资源采样中FAST-LIO RSS 159876–162012kB、HWM 162276kB，未出现旧版GB级增长。当前正式进程为launch1760834、mapping1760835、relay1764424，基础服务仍active。
+
+r5地面站对正式v3实流也通过范围内检查：396个PFS1飞前快照中雷达、IMU、LIO、点云、转发、飞控里程计、飞控连接和EKF均为正常；仅遥控器和电量两项按用户要求保留缺失提示。点云桥接40个采样无发送错误，r5窗口首帧正常；关闭窗口后其桥接和机载读者自动退出，旧窗口和旧读者保持。一次本机UDP点云分片不完整已原样记录，未将其改判为通过。摘要见`r5-gcs-live-summary.json`、`r5-gcs-owner-result.json`。
 
 ## 前期记录（按当时版本保留）
 

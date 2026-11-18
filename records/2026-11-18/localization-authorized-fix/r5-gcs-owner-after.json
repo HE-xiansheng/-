@@ -1,0 +1,18 @@
+{
+  "gui_exited": true,
+  "bridge_exited": {
+    "124398": false,
+    "124399": false
+  },
+  "remote_before_selected": [
+    "1790032 /usr/bin/python3 -u - --pc-ip 192.168.1.89 --port 9100 --pose-port 9101",
+    "1790039 /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner --grid-only --udp-host 192.168.1.89 --udp-port 19115 --stream-id b02e0e036f2f43b58cf6280cc0824e41",
+    "1790045 /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner --udp-host 192.168.1.89 --udp-port 19115 --stream-id c4b09f9a2a1c4d82b1a2ecc784fe2a5f"
+  ],
+  "remote_after_selected": [],
+  "old_remote_kept": [
+    "  42958 /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner --grid-only --udp-host 192.168.1.89 --udp-port 9005 --stream-id 9b2fd2ecb634454c96eae1e6386a1a67",
+    "  43043 /usr/bin/python3 -u - --pc-ip 192.168.1.89 --port 9000 --pose-port 9001",
+    "1293184 /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner --udp-host 192.168.1.89 --udp-port 9005 --stream-id fb00edc0bc80449fa5aa1254860c079c"
+  ]
+}

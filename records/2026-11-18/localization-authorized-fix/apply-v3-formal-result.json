@@ -1,0 +1,48 @@
+{
+  "installed": true,
+  "old": {
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": {
+      "sha256": "2c3f080533595144f0494d2df70efae00f24c2ee41a8ccce443b2b3a54963e9d",
+      "mode": 436
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/src/fast_lio/include/source_clock_alignment.hpp": null,
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/src/fast_lio/CMakeLists.txt": {
+      "sha256": "311a153175fad04adb8ce55b2a1b45ec9f556add64318a40b3e547912ea8e806",
+      "mode": 436
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml": {
+      "sha256": "447aebf3ef449da3c37c6bf0a6bdcc824c083a8d112b94e99ebf29cdfb2d3b85",
+      "mode": 436
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": {
+      "sha256": "7707f011a357aa241b11eb098ce86fdbe6e9a73de762c36a960db6937810cbcd",
+      "mode": 493
+    }
+  },
+  "new": {
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/src/fast_lio/src/laserMapping.cpp": {
+      "sha256": "a29207cf657c71c0bae5bcc4264ac2a85b645532ff77cae3e8692e11a0fde2ba",
+      "mode": 436
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/src/fast_lio/include/source_clock_alignment.hpp": {
+      "sha256": "0c4d759277d651e06cd5a2ce09b74dbb6162ff502734689522df2a203b2a96d8",
+      "mode": 420
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/src/fast_lio/CMakeLists.txt": {
+      "sha256": "3b8df3ef3c1e0fee062d50178edd9716d5b8c4d163f1e3fa2e9f42cef2513f72",
+      "mode": 436
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/config/lidar.yaml": {
+      "sha256": "c6e24a89d3951bd0017d522b1d897ed65b9e299195bede34300fc674a1dad063",
+      "mode": 436
+    },
+    "/home/orangepi/drone_platform/01_apps/fast_lio/workspace/install/fast_lio/lib/fast_lio/fastlio_mapping": {
+      "sha256": "06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3",
+      "mode": 493
+    }
+  },
+  "services_changed": false,
+  "session_started": false,
+  "candidate": "v3",
+  "binary_sha256": "06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3"
+}

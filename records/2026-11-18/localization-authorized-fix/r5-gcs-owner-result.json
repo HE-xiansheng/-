@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "gui_pid": 124280,
+  "bridge_pids": [
+    124398,
+    124399
+  ],
+  "gui_exited": true,
+  "bridges_exited": true,
+  "remote_selected_after": [],
+  "old_remote_readers_kept": [
+    "  42958 /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner --grid-only --udp-host 192.168.1.89 --udp-port 9005 --stream-id 9b2fd2ecb634454c96eae1e6386a1a67",
+    "  43043 /usr/bin/python3 -u - --pc-ip 192.168.1.89 --port 9000 --pose-port 9001",
+    "1293184 /usr/bin/python3 -u - --cloud-topic /factory_fastlio/cloud_world --no-rosout --planner --udp-host 192.168.1.89 --udp-port 9005 --stream-id fb00edc0bc80449fa5aa1254860c079c"
+  ],
+  "formal_session_untouched": true
+}

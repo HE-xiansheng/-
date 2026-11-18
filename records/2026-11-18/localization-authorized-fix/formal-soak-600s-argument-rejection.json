@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "executed": false,
+  "reason": "tool precondition rejected --seconds 600 because this validator allows 30..300 seconds",
+  "product_impact": "none; no remote validation process started"
+}

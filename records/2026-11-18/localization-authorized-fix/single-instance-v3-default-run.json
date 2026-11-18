@@ -1,0 +1,10 @@
+{
+  "root": "/tmp/fastlio-receive-clock-test-20261118-default-fffa90",
+  "candidate": "/tmp/fastlio-receive-clock-fix-20261118-v3",
+  "binary": "/tmp/fastlio-receive-clock-fix-20261118-v3/install-v3/lib/fast_lio/fastlio_mapping",
+  "binary_sha256": "06ff7402efd5030939f216d002ce6196f3827f564c92fa5e0b6ce45022e958c3",
+  "observer_sha256": "27b09818622a952dcf23b2c79e10c021cbe181d590ddda6323e89eb9d3afc7f9",
+  "formal_stopped": true,
+  "profile": null,
+  "baseline_seconds": 90
+}
